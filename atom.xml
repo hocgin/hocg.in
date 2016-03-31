@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Hocgin (๑`灬´๑)</title>
+  <subtitle>Great minds have purpose, others have wishes.</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://hocg.in/"/>
+  <updated>2016-03-29T09:30:22.067Z</updated>
+  <id>http://hocg.in/</id>
+  
+  <author>
+    <name>Hocgin</name>
+    <email>admin@hocg.in</email>
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>安装完Ubuntu后,我该做什么</title>
+    <link href="http://hocg.in/2016/03/29/%E5%AE%89%E8%A3%85%E5%AE%8CUbuntu%E5%90%8E,%E6%88%91%E8%AF%A5%E5%81%9A%E4%BB%80%E4%B9%88/"/>
+    <id>http://hocg.in/2016/03/29/安装完Ubuntu后,我该做什么/</id>
+    <published>2016-03-29T09:30:22.075Z</published>
+    <updated>2016-03-29T09:30:22.067Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;安装完Ubuntu后-我该做什么&quot;&gt;&lt;a href=&quot;#安装完Ubuntu后-我该做什么&quot; class=&quot;headerlink&quot; title=&quot;安装完Ubuntu后,我该做什么&quot;&gt;&lt;/a&gt;安装完Ubuntu后,我该做什么&lt;/h1&gt;&lt;h2 id=&quot;yuan获取&quot;&gt;&lt;a href=&quot;#yuan获取&quot; class=&quot;headerlink&quot; title=&quot;yuan获取&quot;&gt;&lt;/a&gt;yuan获取&lt;/h2&gt;&lt;p&gt;官方列表： &lt;a href=&quot;http://wiki.ubuntu.org.cn/%E6%BA%90%E5%88%97%E8%A1%A8&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://wiki.ubuntu.org.cn/%E6%BA%90%E5%88%97%E8%A1%A8&lt;/a&gt;&lt;br&gt;网易163： &lt;a href=&quot;http://mirrors.163.com/.help/ubuntu.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://mirrors.163.com/.help/ubuntu.html&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;移除&quot;&gt;&lt;a href=&quot;#移除&quot; class=&quot;headerlink&quot; title=&quot;移除&quot;&gt;&lt;/a&gt;移除&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;删除libreoffice&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get remove libreoffice-common&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;p&gt;删除Amazon的链接s&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get remove unity-webapps-common&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;p&gt;删掉基本不用的自带软件&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get remove thunderbird totem rhythmbox empathy brasero simple-scan gnome-mahjongg aisleriot gnome-mines cheese transmission-common gnome-orca webbrowser-app gnome-sudoku  landscape-client-ui-install&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get remove onboard deja-dup&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;p&gt;shang xia zuoyou&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get remove vim-common&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get install vim&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;字体&quot;&gt;&lt;a href=&quot;#字体&quot; class=&quot;headerlink&quot; title=&quot;字体&quot;&gt;&lt;/a&gt;字体&lt;/h2&gt;&lt;p&gt;monaco&lt;br&gt;&lt;a href=&quot;https://github.com/cstrap/monaco-font&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/cstrap/monaco-font&lt;/a&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;curl -kL https://raw.github.com/cstrap/monaco-font/master/install-font-ubuntu.sh | bash&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;consolas&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;Gnome3&quot;&gt;&lt;a href=&quot;#Gnome3&quot; class=&quot;headerlink&quot; title=&quot;Gnome3&quot;&gt;&lt;/a&gt;Gnome3&lt;/h2&gt;&lt;h3 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h3&gt;&lt;h4 id=&quot;1-安装Gnome3桌面&quot;&gt;&lt;a href=&quot;#1-安装Gnome3桌面&quot; class=&quot;headerlink&quot; title=&quot;1.安装Gnome3桌面&quot;&gt;&lt;/a&gt;1.安装Gnome3桌面&lt;/h4&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# 安装&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo add-apt-repository ppa:gnome3-team/gnome3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get update&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get install ppa-purge&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo ppa-purge ppa:gnome3-team/gnome3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get dist-upgrade&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get install gnome-themes-standard ubuntu-desktop gnome-shell&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 删除&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get install ppa-purge&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo ppa-purge ppa:gnome3-team/gnome3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;2-Gnome3系统&quot;&gt;&lt;a href=&quot;#2-Gnome3系统&quot; class=&quot;headerlink&quot; title=&quot;2.Gnome3系统&quot;&gt;&lt;/a&gt;2.Gnome3系统&lt;/h4&gt;&lt;p&gt;&lt;a href=&quot;!https://ubuntugnome.org/download/&quot;&gt;下载&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;主题&quot;&gt;&lt;a href=&quot;#主题&quot; class=&quot;headerlink&quot; title=&quot;主题&quot;&gt;&lt;/a&gt;主题&lt;/h3&gt;&lt;p&gt;&lt;code&gt;主题文件位置：~/.themes 或 /usr/share/themes&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&quot;1-Paper&quot;&gt;&lt;a href=&quot;#1-Paper&quot; class=&quot;headerlink&quot; title=&quot;1.Paper&quot;&gt;&lt;/a&gt;1.Paper&lt;/h4&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# 下拉git&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;git clone https://github.com/snwh/paper-gtk-theme.git&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 运行安装脚本&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sh ./install-gtk-theme.sh&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;2-Numix-Circle&quot;&gt;&lt;a href=&quot;#2-Numix-Circle&quot; class=&quot;headerlink&quot; title=&quot;2.Numix-Circle&quot;&gt;&lt;/a&gt;2.Numix-Circle&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;很赞&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# 安装&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-add-repository ppa:numix/ppa&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get update &amp;amp;&amp;amp; sudo apt-get install numix-icon-theme-circle&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;插件支持&quot;&gt;&lt;a href=&quot;#插件支持&quot; class=&quot;headerlink&quot; title=&quot;插件支持&quot;&gt;&lt;/a&gt;插件支持&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;gnome-tweak-tool Gnome3的调节软件&lt;br&gt;可直接管理插件&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get install gnome-tweak-tool&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;code&gt;插件下载网站: https://extensions.gnome.org/&lt;/code&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;使用Chrome 插件&lt;/li&gt;
+&lt;li&gt;系统安装chrome-gnome-shell&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ sudo add-apt-repository ppa:ne0sight/chrome-gnome-shell&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# trusty&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ sudo apt-get update &amp;amp;&amp;amp; sudo apt-get install chrome-gnome-shell&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt;插件列表&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;描述&lt;/th&gt;
+&lt;th&gt;推荐&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Autohide battery&lt;/td&gt;
+&lt;td&gt;可以在电池充满的情况下隐藏电池图标&lt;/td&gt;
+&lt;td&gt;推荐&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Battery status&lt;/td&gt;
+&lt;td&gt;可以显示当前电池电量以及可以使用的时间&lt;/td&gt;
+&lt;td&gt;推荐&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Dash to dock&lt;/td&gt;
+&lt;td&gt;在屏幕左边显示一个快速启动条&lt;/td&gt;
+&lt;td&gt;推荐&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Freon&lt;/td&gt;
+&lt;td&gt;显示当前磁盘，显卡，CPU等等温度&lt;/td&gt;
+&lt;td&gt;不推荐，推荐SysPeek&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Lock Keys&lt;/td&gt;
+&lt;td&gt;显示当前的 Num Lock, Caps Lock 的状态&lt;/td&gt;
+&lt;td&gt;推荐&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Refesh wifi connections&lt;/td&gt;
+&lt;td&gt;在 wifi 列表上显示一个刷新图标&lt;/td&gt;
+&lt;td&gt;推荐&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;status title bar&lt;/td&gt;
+&lt;td&gt;讲状态条上的标题改为当前窗口的标题&lt;/td&gt;
+&lt;td&gt;推荐&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Coverflow Alt-Tab&lt;/td&gt;
+&lt;td&gt;类似WIN 7切换特效&lt;/td&gt;
+&lt;td&gt;太显眼，不推荐&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;OpenWeather&lt;/td&gt;
+&lt;td&gt;天气预报&lt;/td&gt;
+&lt;td&gt;推荐&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;NetSpeed&lt;/td&gt;
+&lt;td&gt;显示网速&lt;/td&gt;
+&lt;td&gt;不推荐，推荐SysPeek&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;system-monitor&lt;/td&gt;
+&lt;td&gt;显示当前系统信息&lt;/td&gt;
+&lt;td&gt;太显眼，不推荐&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Dynamic Top Bar&lt;/td&gt;
+&lt;td&gt;在当前没有最大化窗口时使顶栏透明&lt;/td&gt;
+&lt;td&gt;推荐&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Impatience&lt;/td&gt;
+&lt;td&gt;Gnome Shell 动画提速&lt;/td&gt;
+&lt;td&gt;推荐&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Better Volume Indicator&lt;/td&gt;
+&lt;td&gt;透过鼠标滚轮操作更便捷地调整音量&lt;/td&gt;
+&lt;td&gt;推荐&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Media player indicator&lt;/td&gt;
+&lt;td&gt;显示音乐播放器的状态&lt;/td&gt;
+&lt;td&gt;推荐&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Workspaces-to-dock&lt;/td&gt;
+&lt;td&gt;将工作区转变为一个可自动隐藏的停靠栏&lt;/td&gt;
+&lt;td&gt;推荐&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Panel OSD&lt;/td&gt;
+&lt;td&gt;修改通知显示位置&lt;/td&gt;
+&lt;td&gt;推荐&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Clipboard Indicator&lt;/td&gt;
+&lt;td&gt;剪贴板指示器&lt;/td&gt;
+&lt;td&gt;推荐&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Caffeine&lt;/td&gt;
+&lt;td&gt;禁止自动挂起或锁屏&lt;/td&gt;
+&lt;td&gt;推荐&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Transmission Daemon Indicator&lt;/td&gt;
+&lt;td&gt;Transmission面板指示器&lt;/td&gt;
+&lt;td&gt;推荐，需要Transmission Daemon&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Icon Hider&lt;/td&gt;
+&lt;td&gt;显示/隐藏顶栏图标&lt;/td&gt;
+&lt;td&gt;推荐&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Top Panel Workspace Scroll&lt;/td&gt;
+&lt;td&gt;在顶栏上滚动鼠标中键来快速切换工作区。在topbar按住shift+滚轮&lt;/td&gt;
+&lt;td&gt;推荐&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Drop Down Terminal&lt;/td&gt;
+&lt;td&gt;终端快捷方式&lt;/td&gt;
+&lt;td&gt;推荐&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Windows Blur Effects&lt;/td&gt;
+&lt;td&gt;给未激活的窗口添加模糊效果&lt;/td&gt;
+&lt;td&gt;不推荐&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Modern Calc&lt;/td&gt;
+&lt;td&gt;功能齐全的计算器扩展&lt;/td&gt;
+&lt;td&gt;没找到&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EasyScreenCast&lt;/td&gt;
+&lt;td&gt;录屏工具&lt;/td&gt;
+&lt;td&gt;推荐&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Place status indicator&lt;/td&gt;
+&lt;td&gt;快速访问一些文件夹&lt;/td&gt;
+&lt;td&gt;推荐，没装上&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Removable drive menu&lt;/td&gt;
+&lt;td&gt;显示连接到电脑的usb设备&lt;/td&gt;
+&lt;td&gt;推荐&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;User themes&lt;/td&gt;
+&lt;td&gt;用来启用自定义的shell主题&lt;/td&gt;
+&lt;td&gt;推荐，没装上&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Workspace indicator&lt;/td&gt;
+&lt;td&gt;在顶栏显示当前示工作区的序号&lt;/td&gt;
+&lt;td&gt;推荐&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;壁纸&quot;&gt;&lt;a href=&quot;#壁纸&quot; class=&quot;headerlink&quot; title=&quot;壁纸&quot;&gt;&lt;/a&gt;壁纸&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# 1.安装archibold&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;curl -L -O http://archibold.io/sh/archibold&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;chmod +x archibold&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo mv archibold /usr/bin&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 2.执行&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;archibold login-background [壁纸的位置]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;此外还可以让桌面和锁屏界面使用动态壁纸，动态壁纸由一个xml文件构成，就像这样：&lt;br&gt;&lt;figure class=&quot;highlight xml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;background&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;starttime&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;year&lt;/span&gt;&amp;gt;&lt;/span&gt;2011&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;year&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;month&lt;/span&gt;&amp;gt;&lt;/span&gt;11&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;month&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;day&lt;/span&gt;&amp;gt;&lt;/span&gt;24&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;day&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;hour&lt;/span&gt;&amp;gt;&lt;/span&gt;7&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;hour&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;minute&lt;/span&gt;&amp;gt;&lt;/span&gt;00&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;minute&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;second&lt;/span&gt;&amp;gt;&lt;/span&gt;00&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;second&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;starttime&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;static&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;duration&lt;/span&gt;&amp;gt;&lt;/span&gt;3600.0&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;duration&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;file&lt;/span&gt;&amp;gt;&lt;/span&gt;picture1.jpg&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;file&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;static&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;transition&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;type&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;overlay&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;duration&lt;/span&gt;&amp;gt;&lt;/span&gt;18000.0&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;duration&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;from&lt;/span&gt;&amp;gt;&lt;/span&gt;picture1.jpg&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;from&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;to&lt;/span&gt;&amp;gt;&lt;/span&gt;/picture2.jpg&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;to&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;transition&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;static&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;duration&lt;/span&gt;&amp;gt;&lt;/span&gt;18000.0&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;duration&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;file&lt;/span&gt;&amp;gt;&lt;/span&gt;picture2.jpg&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;file&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;static&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;transition&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;type&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;overlay&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;duration&lt;/span&gt;&amp;gt;&lt;/span&gt;21600.0&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;duration&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;from&lt;/span&gt;&amp;gt;&lt;/span&gt;picture2.jpg&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;from&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;to&lt;/span&gt;&amp;gt;&lt;/span&gt;picture1.jpg&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;to&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;transition&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;background&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;简单解释以下这个xml文件的含义：&lt;/p&gt;
+&lt;p&gt;starttime ：这个部分规定了壁纸切换起始时间，设置成过去的某个时间即可(设置成2020年就要等到2020年才会有效果)&lt;br&gt;static ：这个部分表示在duration规定的时间(以秒为单位)中壁纸都是file中给定的那张图片&lt;br&gt;transition ：这个部分表示在duration规定的时间内壁纸从from中的图片切换到to中的图片你可以添加任意多个static+transition的组合，只需要最后一个transition切换回最初的static那张图片就可以循环更换壁纸了。&lt;/p&gt;
+&lt;p&gt;那么如何启用这样的xml文件呢，单凭系统设置无法办到，我们需要使用dconf系统配置编辑器。&lt;br&gt;首先打开dconf编辑器，展开org–gnome–desktop–background这一项，可以看到其中的picture-uri修这一项的默认值是file:///usr/share/backgrounds/gnome/adwaita-timed.xml，这个就是你刚装好桌面是的默认壁纸啦，将其改成你的xml文件就可以了。锁屏界面的壁纸更换方法也一样，只不过把org–gnome–desktop–background改成org–gnome–desktop–screensaver而已&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;开机自启-gnome-session&quot;&gt;&lt;a href=&quot;#开机自启-gnome-session&quot; class=&quot;headerlink&quot; title=&quot;开机自启(gnome-session)&quot;&gt;&lt;/a&gt;开机自启(gnome-session)&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;ss-qt5 &lt;code&gt;/usr/bin/ss-qt5&lt;/code&gt;&lt;br&gt;2.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;软件安装&quot;&gt;&lt;a href=&quot;#软件安装&quot; class=&quot;headerlink&quot; title=&quot;软件安装&quot;&gt;&lt;/a&gt;软件安装&lt;/h2&gt;&lt;h3 id=&quot;指令安装&quot;&gt;&lt;a href=&quot;#指令安装&quot; class=&quot;headerlink&quot; title=&quot;指令安装&quot;&gt;&lt;/a&gt;指令安装&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;科学上网 Client-SS (未完成)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# 安装&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo add-apt-repository ppa:hzwhuang/ss-qt5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get update &amp;amp;&amp;amp; sudo apt-get install shadowsocks-qt5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 安装 pip&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo pip install genpac&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 下载自动翻墙列表&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;genpac -p &amp;quot;SOCKS5 127.0.0.1:1080&amp;quot; --gfwlist-proxy=&amp;quot;SOCKS5 127.0.0.1:1080&amp;quot; --output=&amp;quot;~/Documents/autoproxy.pac&amp;quot; --gfwlist-url=&amp;quot;https://autoproxy-gfwlist.googlecode.com/svn/trunk/gfwlist.txt&amp;quot; --user-rule-from=&amp;quot;user-rules.txt&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;p&gt;屏幕截图 Shutter&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# 安装&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get install Shutter&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 打开&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 搜索 Shutter&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;p&gt;音视频解码 ubuntu-restricted extras&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# 安装&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get install ubuntu-restricted-extras&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;p&gt;GNOME MPV 代替VLC播放器&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# 安装&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo add-apt-repository ppa:xuzhen666/gnome-mpv&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get update &amp;amp;&amp;amp; sudo apt-get install gnome-mpv&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;p&gt;视频播放 VLC播放器&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# 安装&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo add-apt-repository ppa:videolan/master-daily&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get update&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get install vlc&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 使用&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 搜索 vlc&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Grub引导 Grub Customizer&lt;br&gt;可配置启动界面，启动项等&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# 安装&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo add-apt-repository ppa:danielrichter2007/grub-customizer&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get update &amp;amp;&amp;amp; sudo apt-get install grub-customizer&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 使用&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 搜索 Grub Customizer&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Office WPS&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# 安装&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get install wps-office&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[小插件]指示器性能 SysPeek&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# 安装&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo add-apt-repository ppa:nilarimogard/webupd8  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get update &amp;amp;&amp;amp; sudo apt-get install syspeeka&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;软件包安装&quot;&gt;&lt;a href=&quot;#软件包安装&quot; class=&quot;headerlink&quot; title=&quot;软件包安装&quot;&gt;&lt;/a&gt;软件包安装&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;系统管理 UbuntuTweak&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;地址：&lt;a href=&quot;!http://ubuntu-tweak.com/&quot;&gt;下载&lt;/a&gt;&lt;br&gt;打开：搜索 Ubuntu Tweak&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;同步软件 坚果云&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;地址：&lt;a href=&quot;!https://www.jianguoyun.com&quot;&gt;下载&lt;/a&gt;&lt;br&gt;打开：搜索 Nutstore&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;待续&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Chrome&lt;br&gt;&lt;a href=&quot;!http://www.google.cn/chrome/browser/&quot;&gt;anz&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Genymotion&lt;/li&gt;
+&lt;li&gt;BCloud&lt;/li&gt;
+&lt;li&gt;Atom&lt;/li&gt;
+&lt;li&gt;Android Studio&lt;/li&gt;
+&lt;li&gt;Idea&lt;/li&gt;
+&lt;li&gt;VMwareWorkstation&lt;/li&gt;
+&lt;li&gt;git&lt;/li&gt;
+&lt;li&gt;有道词典&lt;/li&gt;
+&lt;li&gt;搜狗输入法&lt;/li&gt;
+&lt;li&gt;jdk&lt;/li&gt;
+&lt;li&gt;Clion&lt;/li&gt;
+&lt;li&gt;Tomcat&lt;/li&gt;
+&lt;li&gt;nodejs&lt;/li&gt;
+&lt;li&gt;doker&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;!https://launchpad.net/indicator-stickynotes&quot;&gt;便签&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;wireshark&lt;/li&gt;
+&lt;li&gt;curl&lt;/li&gt;
+&lt;li&gt;axel&lt;/li&gt;
+&lt;li&gt;area2&lt;/li&gt;
+&lt;li&gt;keepass2&lt;/li&gt;
+&lt;li&gt;nginx&lt;/li&gt;
+&lt;li&gt;MarkDown编辑软件 HarooPad  &lt;a href=&quot;http://pad.haroopress.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://pad.haroopress.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;KW音乐 在线播放音乐,视频,有桌面歌词&lt;/li&gt;
+&lt;li&gt;思维导图工具xmind&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;听起来不错&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;BCloud 极出色的百度网盘桌面客户端。&lt;/li&gt;
+&lt;li&gt;Comix漫画浏览软件&lt;/li&gt;
+&lt;li&gt;KeepPassX 密码管理工具&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Synapse 快速启动器 &lt;strong&gt;推荐&lt;/strong&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sudo add-apt-repository ppa:synapse-core/testing&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get update &amp;amp;&amp;amp; sudo apt-get install synapse&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Catfish 一款优雅迅捷的文件搜索工具&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Go For It 一款整合了待办事项与计时器的生产力应用。&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sudo add-apt-repository ppa:mank319/go-for-it &amp;amp;&amp;amp; sudo apt-get update &amp;amp;&amp;amp; sudo apt-get install go-for-it&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Deluge Bittorrent 客户端&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;Nutty网络监测工具。&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Y ppa Manager图形化 ppa 管理工具。&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sudo add-apt-repository ppa:webupd8team/y-ppa-manager&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get update&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get install y-ppa-manager&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Synaptic 新立得软件包管理器&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Uget一款下载工具，配合 aria2 插件使用效果出色。&lt;br&gt;&lt;a href=&quot;http://baike.renwuyi.com/2014-11/2153.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://baike.renwuyi.com/2014-11/2153.html&lt;/a&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sudo add-apt-repository ppa:plushuang-tw/uget-stable&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get update&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get install uget&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;UNetbootin启动盘制作工具&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;Gpick拾色器。&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;redshift类似 f.lux 的屏幕色温调整工具。 推荐&lt;br&gt;sudo apt-get install redshift-gtk&lt;br&gt;将’start applications’中的 redshift部分的’command’修改为 redshift-gtk -l 39.92:116.46 -t 5500:4500&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;preload + prelink两款出色的系统提速、优化工具。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;网易云音乐插件 【elementaryOS】&lt;br&gt;源码地址：&lt;a href=&quot;https://github.com/Simpleyyt/noise-neteasemusic&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/Simpleyyt/noise-neteasemusic&lt;/a&gt;&lt;br&gt;安装方法：&lt;br&gt;sudo add-apt-repository ppa:simpleyyt/ppa&lt;br&gt;sudo apt-get update &amp;amp;&amp;amp; sudo apt-get install noise-neteasemusic&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;网易音乐 推荐&lt;br&gt;&lt;a href=&quot;https://github.com/cosven/FeelUOwn&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/cosven/FeelUOwn&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;gpaint 微软画图&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;ddm 驱动管理器&lt;/li&gt;
+&lt;li&gt;Navicat&lt;h2 id=&quot;其他&quot;&gt;&lt;a href=&quot;#其他&quot; class=&quot;headerlink&quot; title=&quot;其他&quot;&gt;&lt;/a&gt;其他&lt;/h2&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;关闭系统检测报告&lt;br&gt;sudo gedit /etc/default/apport&lt;br&gt;修改enabled=0&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;开机自动开启数字键&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;sudo apt-get install numlockx&lt;/li&gt;
+&lt;li&gt;sudo vim /etc/gdm/Init/Default在文件最后exit 0的前面添加：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;if [ -x /usr/bin/numlockx ]; then&lt;br&gt;    numlockx on&lt;br&gt;fi&lt;br&gt;3.重启即可&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;插入鼠标时自动使触摸板失效&lt;br&gt;安装Touchpad Indicator (触摸板开关）&lt;br&gt;sudo add-apt-repository ppa:atareao/atareao&lt;br&gt;sudo apt-get update&lt;br&gt;sudo apt-get install touchpad-indicator&lt;br&gt;// 搜索 touchpad indicator&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;遇到显示俩个输入法图标情况&lt;br&gt;检查自启项&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;黑屏&lt;br&gt;95% 是和显卡驱动有关&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Chrome 每次打开都要求输入密码&lt;br&gt;一 删除现在的密钥环&lt;br&gt;视图-&amp;gt;根据密码环 在密码区会有一个“登录”为名字的密钥环，右击将其删除。&lt;br&gt;二、添加新的密钥环&lt;br&gt;终端输入seahorse打开管理密钥环的软件，文件-&amp;gt;新建-&amp;gt;密码和密钥-&amp;gt;输入名字(这里是以”chrome”为例)。密码设置为空&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+    
+    <summary type="html">
+    
+      安装完Ubuntu后,我该做什么..
+    
+    </summary>
+    
+      <category term="学习" scheme="http://hocg.in/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="小记" scheme="http://hocg.in/tags/%E5%B0%8F%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo 使用小记</title>
+    <link href="http://hocg.in/2016/03/29/hexo-%E4%BD%BF%E7%94%A8/"/>
+    <id>http://hocg.in/2016/03/29/hexo-使用/</id>
+    <published>2016-03-29T02:14:57.092Z</published>
+    <updated>2016-03-29T02:14:57.092Z</updated>
+    
+    <content type="html">&lt;p&gt;  这是一篇关于如何使用hexo的收集Box &amp;gt; 不定期更新吧！&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;参照 &lt;a href=&quot;!https://hexo.io/zh-cn/docs/tag-plugins.html&quot;&gt;hexo 官方文档&lt;/a&gt;&lt;br&gt;参照 &lt;a href=&quot;!http://theme-next.iissnan.com/theme-settings.html&quot;&gt;next 主题&lt;/a&gt;&lt;br&gt;参照 &lt;a href=&quot;!https://github.com/iissnan/hexo-theme-next/wiki/%E5%88%9B%E5%BB%BA%E5%88%86%E7%B1%BB%E9%A1%B5%E9%9D%A2&quot;&gt;next 主题 for github&lt;/a&gt;&lt;br&gt;参照 &lt;a href=&quot;!http://www.tuicool.com/articles/AfQnQjy/&quot;&gt;更多扩展使用&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;md文档头部&quot;&gt;&lt;a href=&quot;#md文档头部&quot; class=&quot;headerlink&quot; title=&quot;md文档头部&quot;&gt;&lt;/a&gt;md文档头部&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;参数&lt;/th&gt;
+&lt;th&gt;描述&lt;/th&gt;
+&lt;th&gt;默认值&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;layout&lt;/td&gt;
+&lt;td&gt;布局&lt;/td&gt;
+&lt;td&gt;有哪些layout呢，请到 scaffolds 目录下查看，这些文件名称就是layout名称&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;title&lt;/td&gt;
+&lt;td&gt;标题&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;date&lt;/td&gt;
+&lt;td&gt;建立日期&lt;/td&gt;
+&lt;td&gt;文件建立日期&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;updated&lt;/td&gt;
+&lt;td&gt;更新日期&lt;/td&gt;
+&lt;td&gt;文件更新日期&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;comments&lt;/td&gt;
+&lt;td&gt;开启文章的评论功能&lt;/td&gt;
+&lt;td&gt;true&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;tags&lt;/td&gt;
+&lt;td&gt;标签（不适用于分页）&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;categories&lt;/td&gt;
+&lt;td&gt;分类（不适用于分页）&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;permalink&lt;/td&gt;
+&lt;td&gt;覆盖文章网址&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;description&lt;/td&gt;
+&lt;td&gt;添加本页描述&lt;/td&gt;
+&lt;td&gt;默认所有&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;photos&lt;/td&gt;
+&lt;td&gt;添加图片&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&quot;hexo-基础命令&quot;&gt;&lt;a href=&quot;#hexo-基础命令&quot; class=&quot;headerlink&quot; title=&quot;hexo 基础命令&quot;&gt;&lt;/a&gt;hexo 基础命令&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# 清除&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ hexo clean&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 上传 GitHub&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ hexo deploy&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 新建文章&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ hexo new &amp;quot;postName&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 新建页面&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;hexo new page &amp;quot;pageName&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 生成静态页面至public目录&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;hexo generate&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 开启预览访问端口（默认端口4000，&amp;apos;ctrl + c&amp;apos;关闭server）&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;hexo server&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 将.deploy目录部署到GitHub&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;hexo deploy&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;md-扩展&quot;&gt;&lt;a href=&quot;#md-扩展&quot; class=&quot;headerlink&quot; title=&quot;.md 扩展&quot;&gt;&lt;/a&gt;.md 扩展&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;扩大图片宽度&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% fi /image-url, alt, title %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;显示 更多按钮&lt;/p&gt;
+&lt;figure class=&quot;highlight md&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;以上是摘要&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;!--more--&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;以下是余下全文&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;使用标签别名&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% cq %&amp;#125; 标签别名 &amp;#123;% endcq %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;End&quot;&gt;&lt;a href=&quot;#End&quot; class=&quot;headerlink&quot; title=&quot;End&quot;&gt;&lt;/a&gt;End&lt;/h2&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;  这是一篇关于如何使用hexo的收集Box &amp;gt; 不定期更新吧！&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;参照 &lt;a href=&quot;!https://hexo.io/zh-cn/docs/tag-plugins.html&quot;&gt;hexo 官方文档&lt;/a&gt;&lt;br&gt;参照 &lt;a href=&quot;!http://theme-next.iissnan.com/theme-settings.html&quot;&gt;next 主题&lt;/a&gt;&lt;br&gt;参照 &lt;a href=&quot;!https://github.com/iissnan/hexo-theme-next/wiki/%E5%88%9B%E5%BB%BA%E5%88%86%E7%B1%BB%E9%A1%B5%E9%9D%A2&quot;&gt;next 主题 for github&lt;/a&gt;&lt;br&gt;参照 &lt;a href=&quot;!http://www.tuicool.com/articles/AfQnQjy/&quot;&gt;更多扩展使用&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="学习" scheme="http://hocg.in/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="小记" scheme="http://hocg.in/tags/%E5%B0%8F%E8%AE%B0/"/>
+    
+  </entry>
+  
+</feed>
