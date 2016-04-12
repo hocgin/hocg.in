@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hocg.in/"/>
-  <updated>2016-04-12T09:50:05.489Z</updated>
+  <updated>2016-04-12T09:53:29.725Z</updated>
   <id>http://hocg.in/</id>
   
   <author>
@@ -19,8 +19,8 @@
     <title>安装完Ubuntu后,我该做什么</title>
     <link href="http://hocg.in/2016/04/12/%E5%AE%89%E8%A3%85%E5%AE%8CUbuntu%E5%90%8E,%E6%88%91%E8%AF%A5%E5%81%9A%E4%BB%80%E4%B9%88/"/>
     <id>http://hocg.in/2016/04/12/安装完Ubuntu后,我该做什么/</id>
-    <published>2016-04-12T09:50:05.489Z</published>
-    <updated>2016-04-12T09:50:05.489Z</updated>
+    <published>2016-04-12T09:53:29.725Z</published>
+    <updated>2016-04-12T09:53:29.725Z</updated>
     
     <content type="html">&lt;h2 id=&quot;yuan获取&quot;&gt;&lt;a href=&quot;#yuan获取&quot; class=&quot;headerlink&quot; title=&quot;yuan获取&quot;&gt;&lt;/a&gt;yuan获取&lt;/h2&gt;&lt;p&gt;官方列表： &lt;a href=&quot;http://wiki.ubuntu.org.cn/%E6%BA%90%E5%88%97%E8%A1%A8&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://wiki.ubuntu.org.cn/%E6%BA%90%E5%88%97%E8%A1%A8&lt;/a&gt;&lt;br&gt;网易163： &lt;a href=&quot;http://mirrors.163.com/.help/ubuntu.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://mirrors.163.com/.help/ubuntu.html&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
@@ -363,7 +363,7 @@
 &lt;li&gt;&lt;p&gt;添加源安装后，not fount XX&lt;br&gt;一、 试着访问该链接&lt;br&gt;二、如果可以手动找到该路径，那便可以修改&lt;code&gt;/etc/apt/source.list.d/&lt;/code&gt;目录下你添加的安装源文件&lt;br&gt;&lt;strong&gt;例如&lt;/strong&gt;&lt;/p&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;vim /etc/apt/sources.list.d/sogoupinyin.list&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 显示内容&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# deb http://archive.ubuntukylin.com:10006/ubuntukylin trusty main&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 可修改链接部分。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;网卡驱动&lt;code&gt;Realtek RTL8723AE 无线网卡驱动&lt;/code&gt;&lt;br&gt;第一种(闭源驱动)：&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;网卡驱动 &lt;code&gt;Realtek RTL8723AE 无线网卡驱动&lt;/code&gt;&lt;br&gt;第一种(闭源驱动)：  &lt;/p&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get install linux-firmware-nonfree&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
@@ -464,7 +464,7 @@
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% fi /image-url, alt, title %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;显示 更多按钮&lt;/p&gt;
-&lt;figure class=&quot;highlight md&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;以上是摘要&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;xml&quot;&gt;&lt;span class=&quot;comment&quot;&gt;&amp;lt;!--more--&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;以下是余下全文&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight md&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;以上是摘要&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;!--more--&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;以下是余下全文&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;使用标签别名&lt;/p&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% cq %&amp;#125; 标签别名 &amp;#123;% endcq %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
