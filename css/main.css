@@ -1512,7 +1512,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #3bffff;
+  background: #ff382a;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2478,19 +2478,31 @@ hr {
     -webkit-box-shadow: 0 1px 1px 1px #efefef;
     box-shadow: 0 1px 1px 1px #efefef;
     border: 1px solid #e6e6e6;
-    z-index: 10;
 }
 
 .hocgin-money > .money-reward:hover > .money-pay {
     visibility: visible;
     opacity: 1;
 }
+.hocgin-money > .money-reward:active > .money-pay {
+    visibility: visible;
+    opacity: 1;
+}
+
+.hocgin-money > .money-reward:active > .money-pay:nth-child(1) {
+    top: calc(50% - 250px);
+}
 
 .hocgin-money > .money-reward:hover > .money-pay:nth-child(1) {
     top: calc(50% - 250px);
 }
 
+.hocgin-money > .money-reward:active > .money-pay:nth-child(2) {
+    top: calc(50% + 50px);
+}
+
 .hocgin-money > .money-reward:hover > .money-pay:nth-child(2) {
     top: calc(50% + 50px);
 }
+
 
