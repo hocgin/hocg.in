@@ -1512,7 +1512,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #6e4aee;
+  background: #624617;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2423,10 +2423,6 @@ hr {
 }
 .hocgin-container > .folder:hover > .paper {
   top: calc(50% - 150px);
-}
-.hocgin-container > .folder.opened > .paper {
-  top: calc(-250px);
-  opacity: .9;
 }
 .hocgin-description {
   text-align: center;
