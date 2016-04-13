@@ -1512,7 +1512,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff382a;
+  background: #ff34ff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2484,12 +2484,12 @@ hr {
     visibility: visible;
     opacity: 1;
 }
-.hocgin-money > .money-reward:active > .money-pay {
+.hocgin-money > .money-reward > .a:active > .money-pay {
     visibility: visible;
     opacity: 1;
 }
 
-.hocgin-money > .money-reward:active > .money-pay:nth-child(1) {
+.hocgin-money > .money-reward > .a:active > .money-pay:nth-child(1) {
     top: calc(50% - 250px);
 }
 
@@ -2497,7 +2497,7 @@ hr {
     top: calc(50% - 250px);
 }
 
-.hocgin-money > .money-reward:active > .money-pay:nth-child(2) {
+.hocgin-money > .money-reward > .a:active > .money-pay:nth-child(2) {
     top: calc(50% + 50px);
 }
 
