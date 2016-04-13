@@ -1512,7 +1512,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #daffbe;
+  background: #ffa1c8;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2384,3 +2384,53 @@ hr {
     text-align: center;
   }
 }
+.hocgin-container *, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.hocgin-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.hocgin-container > .folder {
+  width: 220px;
+  height: 180px;
+  left: calc(50% - 110px);
+  top: calc(70% - 90px);
+  position: relative;
+}
+.hocgin-container > .folder > .paper {
+  opacity: 1;
+  position: absolute;
+  overflow: hidden;
+  width: 200px;
+  height: 200px;
+  top: calc(50% - 111px);
+  left: calc(50% - 100px);
+  transition: top 0.5s, opacity 0.4s;
+  font-family: Verdana, Tahoma, sans-serif;
+  font-size: 0.1em;
+  padding: 1em;
+  color: #644812;
+  background-color: #fde1ab;
+  -moz-box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+.hocgin-container > .folder:hover > .paper {
+  top: calc(50% - 150px);
+}
+.hocgin-container > .folder.opened > .paper {
+  top: calc(-250px);
+  opacity: .9;
+}
+.hocgin-description {
+  text-align: center;
+  margin-top: 4px;
+
+}
+
