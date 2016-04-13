@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hocg.in/"/>
-  <updated>2016-04-12T10:30:01.442Z</updated>
+  <updated>2016-04-13T01:14:57.296Z</updated>
   <id>http://hocg.in/</id>
   
   <author>
@@ -17,10 +17,10 @@
   
   <entry>
     <title>安装完Ubuntu后,我该做什么</title>
-    <link href="http://hocg.in/2016/04/12/%E5%AE%89%E8%A3%85%E5%AE%8CUbuntu%E5%90%8E,%E6%88%91%E8%AF%A5%E5%81%9A%E4%BB%80%E4%B9%88/"/>
-    <id>http://hocg.in/2016/04/12/安装完Ubuntu后,我该做什么/</id>
-    <published>2016-04-12T10:30:01.442Z</published>
-    <updated>2016-04-12T10:30:01.442Z</updated>
+    <link href="http://hocg.in/2016/04/13/%E5%AE%89%E8%A3%85%E5%AE%8CUbuntu%E5%90%8E,%E6%88%91%E8%AF%A5%E5%81%9A%E4%BB%80%E4%B9%88/"/>
+    <id>http://hocg.in/2016/04/13/安装完Ubuntu后,我该做什么/</id>
+    <published>2016-04-13T01:14:57.296Z</published>
+    <updated>2016-04-13T01:14:57.296Z</updated>
     
     <content type="html">&lt;img src=&quot;http://7xs6lq.com1.z0.glb.clouddn.com/img/un/ubuntu.png&quot; class=&quot;full-image&quot; alt=&quot;Ubuntu&quot; title=&quot;Ubuntu&quot;&gt;
 &lt;p&gt;安装完Ubuntu后,我该做什么..(借鉴和整理，还有一些平时遇到的， &lt;strong&gt;不定期更新&lt;/strong&gt;)&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
@@ -273,15 +273,19 @@
 &lt;blockquote&gt;
 &lt;p&gt;Uget一款下载工具，配合 aria2 插件使用效果出色&lt;br&gt;curl + area2 + axel&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;地址：&lt;a href=&quot;!http://baike.renwuyi.com/2014-11/2153.html&quot;&gt;参考&lt;/a&gt;&lt;br&gt;安装：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sudo add-apt-repository ppa:plushuang-tw/uget-stable&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get update&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get install uget&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;地址：&lt;a href=&quot;!http://baike.renwuyi.com/2014-11/2153.html&quot;&gt;参考&lt;/a&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# 安装&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo add-apt-repository ppa:plushuang-tw/uget-stable&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get update&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get install uget&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;blockquote&gt;
 &lt;p&gt;redshift类似 f.lux 的屏幕色温调整工具&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;安装：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get install redshift-gtk&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# 安装&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get install redshift-gtk&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;&lt;strong&gt;添加开机启动&lt;/strong&gt;&lt;br&gt;command：&lt;code&gt;redshift-gtk -l 39.92:116.46 -t 5500:4500&lt;/code&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Go For It 一款整合了待办事项与计时器的生产力应用。&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sudo add-apt-repository ppa:mank319/go-for-it&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get update&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get install go-for-it&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;Catfish 一款优雅迅捷的文件搜索工具&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get install catfish&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;Go For It 一款整合了待办事项与计时器的生产力应用。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# 安装&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo add-apt-repository ppa:mank319/go-for-it&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get update&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get install go-for-it&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Catfish 一款优雅迅捷的文件搜索工具&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# 安装&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get install catfish&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3 id=&quot;软件包安装&quot;&gt;&lt;a href=&quot;#软件包安装&quot; class=&quot;headerlink&quot; title=&quot;软件包安装&quot;&gt;&lt;/a&gt;软件包安装&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;!http://ubuntu-tweak.com/&quot;&gt;系统管理 UbuntuTweak&lt;/a&gt;&lt;br&gt;&lt;code&gt;打开：搜索 Ubuntu Tweak&lt;/code&gt;&lt;br&gt;&lt;a href=&quot;!https://www.jianguoyun.com&quot;&gt;同步软件 坚果云&lt;/a&gt;&lt;br&gt;&lt;code&gt;打开：搜索 Nutstore&lt;/code&gt;&lt;br&gt;&lt;a href=&quot;!https://github.com/LiuLang/bcloud-packages&quot;&gt;百度网盘桌面客户端 BCloud&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;!https://launchpad.net/indicator-stickynotes&quot;&gt;便签&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;!http://keepass.info/&quot;&gt;MarkDown编辑软件 HarooPad&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;!http://pad.haroopress.com/&quot;&gt;密码管理器 keepass2&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;!http://pinyin.sogou.com/linux/?r=pinyin&quot;&gt;搜狗输入法&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;!http://cidian.youdao.com/multi.html#linuxAll&quot;&gt;有道词典&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;!http://www.vmware.com/products/workstation/&quot;&gt;VMware Workstation&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;!http://www.google.cn/chrome/browser/&quot;&gt;Chrome&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;!https://github.com/cosven/FeelUOwn&quot;&gt;网易音乐&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
