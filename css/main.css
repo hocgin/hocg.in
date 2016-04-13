@@ -1512,7 +1512,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #b0ffff;
+  background: #6e4aee;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2483,6 +2483,7 @@ hr {
 .hocgin-money > .money-reward:hover > .money-pay {
     visibility: visible;
     opacity: 1;
+    z-index: 10;
 }
 
 .hocgin-money > .money-reward:hover > .money-pay:nth-child(1) {
