@@ -4,12 +4,36 @@
 
     
   <url>
+    <loc>http://hocg.in/2016/04/15/%E5%AE%89%E8%A3%85%E5%AE%8CUbuntu%E5%90%8E_%E6%88%91%E8%AF%A5%E5%81%9A%E4%BB%80%E4%B9%88/</loc>
+    <lastmod>2016-04-15T01:53:45.123Z</lastmod>
+    <data>
+        <display>
+        <title>安装完Ubuntu后,我该做什么</title>
+        <pubTime>2016-04-15T01:53:45.123Z</pubTime>
+        
+        <tag>开发手册</tag>
+         
+        <tag>Ubuntu</tag>
+         
+        <tag>折腾</tag>
+         
+         
+           
+             
+              <breadCrumb title="学习" url="http://hocg.in/categories/%E5%AD%A6%E4%B9%A0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://hocg.in/2016/04/15/hexo%20%E5%8A%9F%E8%83%BD%E6%89%A9%E5%B1%95/</loc>
-    <lastmod>2016-04-15T01:49:43.958Z</lastmod>
+    <lastmod>2016-04-15T01:53:07.728Z</lastmod>
     <data>
         <display>
         <title>hexo 功能扩展</title>
-        <pubTime>2016-04-15T01:49:43.962Z</pubTime>
+        <pubTime>2016-04-15T01:53:07.728Z</pubTime>
         
         <tag>小记</tag>
          
@@ -19,6 +43,9 @@
            
              
               <breadCrumb title="学习" url="http://hocg.in/categories/%E5%AD%A6%E4%B9%A0/"/>
+          
+             
+              <breadCrumb title="折腾" url="http://hocg.in/categories/%E5%AD%A6%E4%B9%A0/%E6%8A%98%E8%85%BE/"/>
           
         </display>
     </data>
@@ -45,28 +72,6 @@
     </url>
 
     
-    
-  <url>
-    <loc>http://hocg.in/2016/04/15/%E5%AE%89%E8%A3%85%E5%AE%8CUbuntu%E5%90%8E_%E6%88%91%E8%AF%A5%E5%81%9A%E4%BB%80%E4%B9%88/</loc>
-    <lastmod>2016-04-13T01:14:57.296Z</lastmod>
-    <data>
-        <display>
-        <title>安装完Ubuntu后,我该做什么</title>
-        <pubTime>2016-04-15T01:39:52.648Z</pubTime>
-        
-        <tag>开发手册</tag>
-         
-        <tag>Ubuntu</tag>
-         
-         
-           
-             
-              <breadCrumb title="学习" url="http://hocg.in/categories/%E5%AD%A6%E4%B9%A0/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
     
     
