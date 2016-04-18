@@ -3,33 +3,14 @@
 
 
     
-  <url>
-    <loc>http://hocg.in/2016/04/15/hexo-%E4%BD%BF%E7%94%A8/</loc>
-    <lastmod>2016-04-15T01:59:35.349Z</lastmod>
-    <data>
-        <display>
-        <title>hexo 使用小记</title>
-        <pubTime>2016-04-15T01:59:35.353Z</pubTime>
-        
-        <tag>小记</tag>
-         
-         
-           
-             
-              <breadCrumb title="学习" url="http://hocg.in/categories/%E5%AD%A6%E4%B9%A0/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
   <url>
-    <loc>http://hocg.in/2016/04/15/hexo%20%E5%8A%9F%E8%83%BD%E6%89%A9%E5%B1%95/</loc>
-    <lastmod>2016-04-15T01:57:45.826Z</lastmod>
+    <loc>http://hocg.in/2016/03/26/hexo%20%E5%8A%9F%E8%83%BD%E6%89%A9%E5%B1%95/</loc>
+    <lastmod>2016-04-18T06:25:22.882Z</lastmod>
     <data>
         <display>
         <title>hexo 功能扩展</title>
-        <pubTime>2016-04-15T01:57:45.826Z</pubTime>
+        <pubTime>2016-03-26T05:44:28.000Z</pubTime>
         
         <tag>小记</tag>
          
@@ -48,12 +29,12 @@
 
     
   <url>
-    <loc>http://hocg.in/2016/04/15/%E5%AE%89%E8%A3%85%E5%AE%8CUbuntu%E5%90%8E_%E6%88%91%E8%AF%A5%E5%81%9A%E4%BB%80%E4%B9%88/</loc>
-    <lastmod>2016-04-15T01:53:45.123Z</lastmod>
+    <loc>http://hocg.in/2016/03/20/%E5%AE%89%E8%A3%85%E5%AE%8CUbuntu%E5%90%8E_%E6%88%91%E8%AF%A5%E5%81%9A%E4%BB%80%E4%B9%88/</loc>
+    <lastmod>2016-04-18T06:25:14.722Z</lastmod>
     <data>
         <display>
         <title>安装完Ubuntu后,我该做什么</title>
-        <pubTime>2016-04-15T01:53:45.123Z</pubTime>
+        <pubTime>2016-03-20T06:34:20.000Z</pubTime>
         
         <tag>折腾</tag>
          
@@ -71,6 +52,25 @@
     </url>
 
     
+  <url>
+    <loc>http://hocg.in/2016/03/15/hexo-%E4%BD%BF%E7%94%A8/</loc>
+    <lastmod>2016-04-18T06:24:08.787Z</lastmod>
+    <data>
+        <display>
+        <title>hexo 使用小记</title>
+        <pubTime>2016-03-15T13:31:42.000Z</pubTime>
+        
+        <tag>小记</tag>
+         
+         
+           
+             
+              <breadCrumb title="学习" url="http://hocg.in/categories/%E5%AD%A6%E4%B9%A0/"/>
+          
+        </display>
+    </data>
+    </url>
+
     
     
     

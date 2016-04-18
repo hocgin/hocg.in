@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hocg.in/"/>
-  <updated>2016-04-15T01:59:35.349Z</updated>
+  <updated>2016-04-18T06:25:22.882Z</updated>
   <id>http://hocg.in/</id>
   
   <author>
@@ -16,116 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>hexo 使用小记</title>
-    <link href="http://hocg.in/2016/04/15/hexo-%E4%BD%BF%E7%94%A8/"/>
-    <id>http://hocg.in/2016/04/15/hexo-使用/</id>
-    <published>2016-04-15T01:59:35.353Z</published>
-    <updated>2016-04-15T01:59:35.349Z</updated>
-    
-    <content type="html">&lt;p&gt;  这是一篇关于如何使用hexo的收集Box &lt;strong&gt;&amp;gt;&lt;/strong&gt; 不定期更新吧！&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;参照 &lt;a href=&quot;!https://hexo.io/zh-cn/docs/tag-plugins.html&quot;&gt;hexo 官方文档&lt;/a&gt;&lt;br&gt;参照 &lt;a href=&quot;!http://theme-next.iissnan.com/theme-settings.html&quot;&gt;next 主题&lt;/a&gt;&lt;br&gt;参照 &lt;a href=&quot;!https://github.com/iissnan/hexo-theme-next/wiki/%E5%88%9B%E5%BB%BA%E5%88%86%E7%B1%BB%E9%A1%B5%E9%9D%A2&quot;&gt;next 主题 for github&lt;/a&gt;&lt;br&gt;参照 &lt;a href=&quot;!http://www.tuicool.com/articles/AfQnQjy/&quot;&gt;更多扩展使用&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;md文档头部&quot;&gt;&lt;a href=&quot;#md文档头部&quot; class=&quot;headerlink&quot; title=&quot;md文档头部&quot;&gt;&lt;/a&gt;md文档头部&lt;/h2&gt;&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;参数&lt;/th&gt;
-&lt;th&gt;描述&lt;/th&gt;
-&lt;th&gt;默认值&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;layout&lt;/td&gt;
-&lt;td&gt;布局&lt;/td&gt;
-&lt;td&gt;有哪些layout呢，请到 scaffolds 目录下查看，这些文件名称就是layout名称&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;title&lt;/td&gt;
-&lt;td&gt;标题&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;date&lt;/td&gt;
-&lt;td&gt;建立日期&lt;/td&gt;
-&lt;td&gt;文件建立日期&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;updated&lt;/td&gt;
-&lt;td&gt;更新日期&lt;/td&gt;
-&lt;td&gt;文件更新日期&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;comments&lt;/td&gt;
-&lt;td&gt;开启文章的评论功能&lt;/td&gt;
-&lt;td&gt;true&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;tags&lt;/td&gt;
-&lt;td&gt;标签（不适用于分页）&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;categories&lt;/td&gt;
-&lt;td&gt;分类（不适用于分页）&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;permalink&lt;/td&gt;
-&lt;td&gt;覆盖文章网址&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;description&lt;/td&gt;
-&lt;td&gt;添加本页描述&lt;/td&gt;
-&lt;td&gt;默认所有&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;photos&lt;/td&gt;
-&lt;td&gt;添加图片&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2 id=&quot;hexo-基础命令&quot;&gt;&lt;a href=&quot;#hexo-基础命令&quot; class=&quot;headerlink&quot; title=&quot;hexo 基础命令&quot;&gt;&lt;/a&gt;hexo 基础命令&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# 清除&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ hexo clean&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 上传 GitHub&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ hexo deploy&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 新建文章&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ hexo new &amp;quot;postName&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 新建页面&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;hexo new page &amp;quot;pageName&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 生成静态页面至public目录&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;hexo generate&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 开启预览访问端口（默认端口4000，&amp;apos;ctrl + c&amp;apos;关闭server）&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;hexo server&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 将.deploy目录部署到GitHub&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;hexo deploy&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&quot;md-扩展&quot;&gt;&lt;a href=&quot;#md-扩展&quot; class=&quot;headerlink&quot; title=&quot;.md 扩展&quot;&gt;&lt;/a&gt;.md 扩展&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;扩大图片宽度&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% fi image-url, alt, title %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;显示 更多按钮&lt;/p&gt;
-&lt;figure class=&quot;highlight md&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;以上是摘要&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;!--more--&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;以下是余下全文&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;使用标签别名&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% cq %&amp;#125; 标签别名 &amp;#123;% endcq %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&quot;可能遇到的问题&quot;&gt;&lt;a href=&quot;#可能遇到的问题&quot; class=&quot;headerlink&quot; title=&quot;可能遇到的问题&quot;&gt;&lt;/a&gt;可能遇到的问题&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;当你发布的&lt;code&gt;.md&lt;/code&gt;文件中携带逗号&lt;code&gt;,&lt;/code&gt;(已知)，在&lt;code&gt;多说&lt;/code&gt;评论插件中将无法识别评论条数(就是文章顶部那个)&lt;blockquote&gt;
-&lt;p&gt;借鉴办法：替换文件命名，将逗号已&lt;code&gt;_&lt;/code&gt;或&lt;code&gt; &lt;/code&gt;分隔&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&quot;End&quot;&gt;&lt;a href=&quot;#End&quot; class=&quot;headerlink&quot; title=&quot;End&quot;&gt;&lt;/a&gt;End&lt;/h2&gt;</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;  这是一篇关于如何使用hexo的收集Box &lt;strong&gt;&amp;gt;&lt;/strong&gt; 不定期更新吧！&lt;br&gt;
-    
-    </summary>
-    
-      <category term="学习" scheme="http://hocg.in/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="小记" scheme="http://hocg.in/tags/%E5%B0%8F%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
     <title>hexo 功能扩展</title>
-    <link href="http://hocg.in/2016/04/15/hexo%20%E5%8A%9F%E8%83%BD%E6%89%A9%E5%B1%95/"/>
-    <id>http://hocg.in/2016/04/15/hexo 功能扩展/</id>
-    <published>2016-04-15T01:57:45.826Z</published>
-    <updated>2016-04-15T01:57:45.826Z</updated>
+    <link href="http://hocg.in/2016/03/26/hexo%20%E5%8A%9F%E8%83%BD%E6%89%A9%E5%B1%95/"/>
+    <id>http://hocg.in/2016/03/26/hexo 功能扩展/</id>
+    <published>2016-03-26T05:44:28.000Z</published>
+    <updated>2016-04-18T06:25:22.882Z</updated>
     
     <content type="html">&lt;h2 id=&quot;须知&quot;&gt;&lt;a href=&quot;#须知&quot; class=&quot;headerlink&quot; title=&quot;须知&quot;&gt;&lt;/a&gt;须知&lt;/h2&gt;&lt;p&gt;&lt;code&gt;站点目录&lt;/code&gt;: /&lt;br&gt;&lt;code&gt;主题目录&lt;/code&gt;: /themes/[主题名]&lt;br&gt;&lt;code&gt;主题配置文件&lt;/code&gt;: /themes/[主题名]/_config.yml&lt;br&gt;&lt;code&gt;站点配置文件&lt;/code&gt;: /_config.yml  &lt;/p&gt;
 &lt;h2 id=&quot;添加微信公众号二维码&quot;&gt;&lt;a href=&quot;#添加微信公众号二维码&quot; class=&quot;headerlink&quot; title=&quot;添加微信公众号二维码&quot;&gt;&lt;/a&gt;添加微信公众号二维码&lt;/h2&gt;&lt;p&gt;首先，打开&lt;code&gt;主题目录&lt;/code&gt;下的 &lt;code&gt;layout/_macro/post.swig&lt;/code&gt;&lt;br&gt;然后，找到节点&lt;code&gt;footer&lt;/code&gt;加入以下代码&lt;br&gt;&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;!&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;--&lt;/span&gt; 添加微信图标 &lt;span class=&quot;attr&quot;&gt;start&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;--&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;#123;% if theme.wechat_subscriber.enable %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#123;% if !is_home() %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;hocgin-container&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;          &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;folder&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;           &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;paper&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        	&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;img&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;width&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;100%&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;src&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;&amp;#123;&amp;#123; theme.wechat_subscriber.qcode &amp;#125;&amp;#125;&quot;&lt;/span&gt;/&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;          &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	      &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;hocgin-description&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&amp;#123;&amp;#123; theme.wechat_subscriber.description &amp;#125;&amp;#125;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#123;% endif %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;#123;% endif %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;!&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;--&lt;/span&gt; 添加微信图标 &lt;span class=&quot;attr&quot;&gt;end&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;--&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
@@ -168,10 +63,10 @@
   
   <entry>
     <title>安装完Ubuntu后,我该做什么</title>
-    <link href="http://hocg.in/2016/04/15/%E5%AE%89%E8%A3%85%E5%AE%8CUbuntu%E5%90%8E_%E6%88%91%E8%AF%A5%E5%81%9A%E4%BB%80%E4%B9%88/"/>
-    <id>http://hocg.in/2016/04/15/安装完Ubuntu后_我该做什么/</id>
-    <published>2016-04-15T01:53:45.123Z</published>
-    <updated>2016-04-15T01:53:45.123Z</updated>
+    <link href="http://hocg.in/2016/03/20/%E5%AE%89%E8%A3%85%E5%AE%8CUbuntu%E5%90%8E_%E6%88%91%E8%AF%A5%E5%81%9A%E4%BB%80%E4%B9%88/"/>
+    <id>http://hocg.in/2016/03/20/安装完Ubuntu后_我该做什么/</id>
+    <published>2016-03-20T06:34:20.000Z</published>
+    <updated>2016-04-18T06:25:14.722Z</updated>
     
     <content type="html">&lt;img src=&quot;http://7xs6lq.com1.z0.glb.clouddn.com/img/un/ubuntu.png&quot; class=&quot;full-image&quot; alt=&quot;Ubuntu&quot; title=&quot;Ubuntu&quot;&gt;
 &lt;p&gt;安装完Ubuntu后,我该做什么..(借鉴和整理，还有一些平时遇到的， &lt;strong&gt;不定期更新&lt;/strong&gt;)&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
@@ -198,7 +93,7 @@
 &lt;p&gt;consolas&lt;code&gt;微软字体&lt;/code&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&quot;Gnome3&quot;&gt;&lt;a href=&quot;#Gnome3&quot; class=&quot;headerlink&quot; title=&quot;Gnome3&quot;&gt;&lt;/a&gt;Gnome3&lt;/h2&gt;&lt;h3 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h3&gt;&lt;h4 id=&quot;1-安装Gnome3桌面&quot;&gt;&lt;a href=&quot;#1-安装Gnome3桌面&quot; class=&quot;headerlink&quot; title=&quot;1.安装Gnome3桌面&quot;&gt;&lt;/a&gt;1.安装Gnome3桌面&lt;/h4&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# 安装&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo add-apt-repository ppa:gnome3-team/gnome3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get update&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get install ppa-purge&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo ppa-purge ppa:gnome3-team/gnome3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get dist-upgrade&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get install gnome-themes-standard ubuntu-desktop gnome-shell&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 删除&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get install ppa-purge&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo ppa-purge ppa:gnome3-team/gnome3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h4 id=&quot;2-Gnome3系统&quot;&gt;&lt;a href=&quot;#2-Gnome3系统&quot; class=&quot;headerlink&quot; title=&quot;2.Gnome3系统&quot;&gt;&lt;/a&gt;2.Gnome3系统&lt;/h4&gt;&lt;p&gt;&lt;a href=&quot;!https://ubuntugnome.org/download/&quot;&gt;下载&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&quot;2-Gnome3系统&quot;&gt;&lt;a href=&quot;#2-Gnome3系统&quot; class=&quot;headerlink&quot; title=&quot;2.Gnome3系统&quot;&gt;&lt;/a&gt;2.Gnome3系统&lt;/h4&gt;&lt;p&gt;&lt;a href=&quot;https://ubuntugnome.org/download/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;下载&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&quot;主题&quot;&gt;&lt;a href=&quot;#主题&quot; class=&quot;headerlink&quot; title=&quot;主题&quot;&gt;&lt;/a&gt;主题&lt;/h3&gt;&lt;p&gt;&lt;code&gt;主题文件位置：~/.themes 或 /usr/share/themes&lt;/code&gt;&lt;/p&gt;
 &lt;h4 id=&quot;1-Paper&quot;&gt;&lt;a href=&quot;#1-Paper&quot; class=&quot;headerlink&quot; title=&quot;1.Paper&quot;&gt;&lt;/a&gt;1.Paper&lt;/h4&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# 下拉git&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;git clone https://github.com/snwh/paper-gtk-theme.git&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 运行安装脚本&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sh ./install-gtk-theme.sh&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h4 id=&quot;2-Numix-Circle&quot;&gt;&lt;a href=&quot;#2-Numix-Circle&quot; class=&quot;headerlink&quot; title=&quot;2.Numix-Circle&quot;&gt;&lt;/a&gt;2.Numix-Circle&lt;/h4&gt;&lt;blockquote&gt;
@@ -424,7 +319,7 @@
 &lt;blockquote&gt;
 &lt;p&gt;Uget一款下载工具，配合 aria2 插件使用效果出色&lt;br&gt;curl + area2 + axel&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;地址：&lt;a href=&quot;!http://baike.renwuyi.com/2014-11/2153.html&quot;&gt;参考&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;地址：&lt;a href=&quot;http://baike.renwuyi.com/2014-11/2153.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;参考&lt;/a&gt;&lt;/p&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# 安装&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo add-apt-repository ppa:plushuang-tw/uget-stable&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get update&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get install uget&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;blockquote&gt;
 &lt;p&gt;redshift类似 f.lux 的屏幕色温调整工具&lt;/p&gt;
@@ -438,7 +333,7 @@
 &lt;blockquote&gt;
 &lt;p&gt;Catfish 一款优雅迅捷的文件搜索工具&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# 安装&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get install catfish&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h3 id=&quot;软件包安装&quot;&gt;&lt;a href=&quot;#软件包安装&quot; class=&quot;headerlink&quot; title=&quot;软件包安装&quot;&gt;&lt;/a&gt;软件包安装&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;!http://ubuntu-tweak.com/&quot;&gt;系统管理 UbuntuTweak&lt;/a&gt;&lt;br&gt;&lt;code&gt;打开：搜索 Ubuntu Tweak&lt;/code&gt;&lt;br&gt;&lt;a href=&quot;!https://www.jianguoyun.com&quot;&gt;同步软件 坚果云&lt;/a&gt;&lt;br&gt;&lt;code&gt;打开：搜索 Nutstore&lt;/code&gt;&lt;br&gt;&lt;a href=&quot;!https://github.com/LiuLang/bcloud-packages&quot;&gt;百度网盘桌面客户端 BCloud&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;!https://launchpad.net/indicator-stickynotes&quot;&gt;便签&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;!http://keepass.info/&quot;&gt;MarkDown编辑软件 HarooPad&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;!http://pad.haroopress.com/&quot;&gt;密码管理器 keepass2&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;!http://pinyin.sogou.com/linux/?r=pinyin&quot;&gt;搜狗输入法&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;!http://cidian.youdao.com/multi.html#linuxAll&quot;&gt;有道词典&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;!http://www.vmware.com/products/workstation/&quot;&gt;VMware Workstation&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;!http://www.google.cn/chrome/browser/&quot;&gt;Chrome&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;!https://github.com/cosven/FeelUOwn&quot;&gt;网易音乐&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;软件包安装&quot;&gt;&lt;a href=&quot;#软件包安装&quot; class=&quot;headerlink&quot; title=&quot;软件包安装&quot;&gt;&lt;/a&gt;软件包安装&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;http://ubuntu-tweak.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;系统管理 UbuntuTweak&lt;/a&gt;&lt;br&gt;&lt;code&gt;打开：搜索 Ubuntu Tweak&lt;/code&gt;&lt;br&gt;&lt;a href=&quot;https://www.jianguoyun.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;同步软件 坚果云&lt;/a&gt;&lt;br&gt;&lt;code&gt;打开：搜索 Nutstore&lt;/code&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/LiuLang/bcloud-packages&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;百度网盘桌面客户端 BCloud&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://launchpad.net/indicator-stickynotes&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;便签&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://keepass.info/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;MarkDown编辑软件 HarooPad&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://pad.haroopress.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;密码管理器 keepass2&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://pinyin.sogou.com/linux/?r=pinyin&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;搜狗输入法&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://cidian.youdao.com/multi.html#linuxAll&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;有道词典&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.vmware.com/products/workstation/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;VMware Workstation&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.google.cn/chrome/browser/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Chrome&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/cosven/FeelUOwn&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;网易音乐&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h3 id=&quot;听起来不错&quot;&gt;&lt;a href=&quot;#听起来不错&quot; class=&quot;headerlink&quot; title=&quot;听起来不错&quot;&gt;&lt;/a&gt;听起来不错&lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;Deluge Bittorrent 客户端&lt;/li&gt;
@@ -495,6 +390,111 @@
       <category term="开发手册" scheme="http://hocg.in/tags/%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C/"/>
     
       <category term="Ubuntu" scheme="http://hocg.in/tags/Ubuntu/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo 使用小记</title>
+    <link href="http://hocg.in/2016/03/15/hexo-%E4%BD%BF%E7%94%A8/"/>
+    <id>http://hocg.in/2016/03/15/hexo-使用/</id>
+    <published>2016-03-15T13:31:42.000Z</published>
+    <updated>2016-04-18T06:24:08.787Z</updated>
+    
+    <content type="html">&lt;p&gt;  这是一篇关于如何使用hexo的收集Box &lt;strong&gt;&amp;gt;&lt;/strong&gt; 不定期更新吧！&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;参照 &lt;a href=&quot;https://hexo.io/zh-cn/docs/tag-plugins.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;hexo 官方文档&lt;/a&gt;&lt;br&gt;参照 &lt;a href=&quot;http://theme-next.iissnan.com/theme-settings.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;next 主题&lt;/a&gt;&lt;br&gt;参照 &lt;a href=&quot;https://github.com/iissnan/hexo-theme-next/wiki/%E5%88%9B%E5%BB%BA%E5%88%86%E7%B1%BB%E9%A1%B5%E9%9D%A2&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;next 主题 for github&lt;/a&gt;&lt;br&gt;参照 &lt;a href=&quot;http://www.tuicool.com/articles/AfQnQjy/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;更多扩展使用&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;md文档头部&quot;&gt;&lt;a href=&quot;#md文档头部&quot; class=&quot;headerlink&quot; title=&quot;md文档头部&quot;&gt;&lt;/a&gt;md文档头部&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;参数&lt;/th&gt;
+&lt;th&gt;描述&lt;/th&gt;
+&lt;th&gt;默认值&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;layout&lt;/td&gt;
+&lt;td&gt;布局&lt;/td&gt;
+&lt;td&gt;有哪些layout呢，请到 scaffolds 目录下查看，这些文件名称就是layout名称&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;title&lt;/td&gt;
+&lt;td&gt;标题&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;date&lt;/td&gt;
+&lt;td&gt;建立日期&lt;/td&gt;
+&lt;td&gt;文件建立日期&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;updated&lt;/td&gt;
+&lt;td&gt;更新日期&lt;/td&gt;
+&lt;td&gt;文件更新日期&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;comments&lt;/td&gt;
+&lt;td&gt;开启文章的评论功能&lt;/td&gt;
+&lt;td&gt;true&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;tags&lt;/td&gt;
+&lt;td&gt;标签（不适用于分页）&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;categories&lt;/td&gt;
+&lt;td&gt;分类（不适用于分页）&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;permalink&lt;/td&gt;
+&lt;td&gt;覆盖文章网址&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;description&lt;/td&gt;
+&lt;td&gt;添加本页描述&lt;/td&gt;
+&lt;td&gt;默认所有&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;photos&lt;/td&gt;
+&lt;td&gt;添加图片&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&quot;hexo-基础命令&quot;&gt;&lt;a href=&quot;#hexo-基础命令&quot; class=&quot;headerlink&quot; title=&quot;hexo 基础命令&quot;&gt;&lt;/a&gt;hexo 基础命令&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# 清除&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ hexo clean&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 上传 GitHub&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ hexo deploy&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 新建文章&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ hexo new &amp;quot;postName&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 新建页面&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;hexo new page &amp;quot;pageName&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 生成静态页面至public目录&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;hexo generate&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 开启预览访问端口（默认端口4000，&amp;apos;ctrl + c&amp;apos;关闭server）&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;hexo server&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 将.deploy目录部署到GitHub&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;hexo deploy&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;md-扩展&quot;&gt;&lt;a href=&quot;#md-扩展&quot; class=&quot;headerlink&quot; title=&quot;.md 扩展&quot;&gt;&lt;/a&gt;.md 扩展&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;扩大图片宽度&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% fi image-url, alt, title %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;显示 更多按钮&lt;/p&gt;
+&lt;figure class=&quot;highlight md&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;以上是摘要&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;!--more--&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;以下是余下全文&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;使用标签别名&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% cq %&amp;#125; 标签别名 &amp;#123;% endcq %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;可能遇到的问题&quot;&gt;&lt;a href=&quot;#可能遇到的问题&quot; class=&quot;headerlink&quot; title=&quot;可能遇到的问题&quot;&gt;&lt;/a&gt;可能遇到的问题&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;当你发布的&lt;code&gt;.md&lt;/code&gt;文件中携带逗号&lt;code&gt;,&lt;/code&gt;(已知)，在&lt;code&gt;多说&lt;/code&gt;评论插件中将无法识别评论条数(就是文章顶部那个)&lt;blockquote&gt;
+&lt;p&gt;借鉴办法：替换文件命名，将逗号已&lt;code&gt;_&lt;/code&gt;或&lt;code&gt; &lt;/code&gt;分隔&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;End&quot;&gt;&lt;a href=&quot;#End&quot; class=&quot;headerlink&quot; title=&quot;End&quot;&gt;&lt;/a&gt;End&lt;/h2&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;  这是一篇关于如何使用hexo的收集Box &lt;strong&gt;&amp;gt;&lt;/strong&gt; 不定期更新吧！&lt;br&gt;
+    
+    </summary>
+    
+      <category term="学习" scheme="http://hocg.in/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="小记" scheme="http://hocg.in/tags/%E5%B0%8F%E8%AE%B0/"/>
     
   </entry>
   
