@@ -45,7 +45,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="小记," />
+  <meta name="keywords" content="Ubuntu,Maven," />
 
 
 
@@ -63,16 +63,16 @@
 
 
 
-<meta name="description" content="这是一篇关于如何使用hexo的收集Box &amp;gt; 不定期更新吧！">
+<meta name="description" content="当一个jar包只提供Maven的配置方法时怎么办？～">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo 使用小记">
-<meta property="og:url" content="http://hocg.in/2016/03/15/hexo-使用/index.html">
+<meta property="og:title" content="绿化NodeJS for linux版">
+<meta property="og:url" content="http://hocg.in/2016/04/25/使用Maven下载jar包_linux版/index.html">
 <meta property="og:site_name" content="Hocgin (๑`灬´๑)">
-<meta property="og:description" content="这是一篇关于如何使用hexo的收集Box &amp;gt; 不定期更新吧！">
-<meta property="og:updated_time" content="2016-04-18T06:24:08.787Z">
+<meta property="og:description" content="当一个jar包只提供Maven的配置方法时怎么办？～">
+<meta property="og:updated_time" content="2016-04-25T03:22:13.052Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hexo 使用小记">
-<meta name="twitter:description" content="这是一篇关于如何使用hexo的收集Box &amp;gt; 不定期更新吧！">
+<meta name="twitter:title" content="绿化NodeJS for linux版">
+<meta name="twitter:description" content="当一个jar包只提供Maven的配置方法时怎么办？～">
 
 
 
@@ -90,7 +90,7 @@
   };
 </script>
 
-  <title> hexo 使用小记 | Hocgin (๑`灬´๑) </title>
+  <title> 绿化NodeJS for linux版 | Hocgin (๑`灬´๑) </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -239,7 +239,7 @@
             
             
               
-                hexo 使用小记
+                绿化NodeJS for linux版
               
             
           </h1>
@@ -251,8 +251,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-03-15T21:31:42+08:00" content="2016-03-15">
-              2016-03-15
+            <time itemprop="dateCreated" datetime="2016-04-25T09:38:49+08:00" content="2016-04-25">
+              2016-04-25
             </time>
           </span>
 
@@ -272,6 +272,18 @@
 
                 
                 
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/学习/Shell脚本/" itemprop="url" rel="index">
+                    <span itemprop="name">Shell脚本</span>
+                  </a>
+                </span>
+
+                
+                
 
               
             </span>
@@ -281,8 +293,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/03/15/hexo-使用/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/15/hexo-使用/" itemprop="commentsCount"></span>
+                <a href="/2016/04/25/使用Maven下载jar包_linux版/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/25/使用Maven下载jar包_linux版/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -292,7 +304,7 @@
 
           
           
-             <span id="/2016/03/15/hexo-使用/" class="leancloud_visitors" data-flag-title="hexo 使用小记">
+             <span id="/2016/04/25/使用Maven下载jar包_linux版/" class="leancloud_visitors" data-flag-title="绿化NodeJS for linux版">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -312,90 +324,18 @@
       
 
       
-        <p>  这是一篇关于如何使用hexo的收集Box <strong>&gt;</strong> 不定期更新吧！<br><a id="more"></a></p>
+        <p>当一个jar包只提供Maven的配置方法时怎么办？～<br><a id="more"></a></p>
+<h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Green4nodeJS</span><br><span class="line">├── down.sh // 下载shell，o(╯□╰)o其实就是一条shell</span><br><span class="line">└── pom.xml // 正常maven配置</span><br></pre></td></tr></table></figure>
+<h2 id="文件内容"><a href="#文件内容" class="headerlink" title="文件内容"></a>文件内容</h2><p><code>down.sh</code> 内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/sh</span><br><span class="line"># Author: hocgin@gmail.com</span><br><span class="line"># -------------Use--------------</span><br><span class="line"># sh down.sh</span><br><span class="line"># ------------------------------</span><br><span class="line"># 运行pom.xml 下载jar</span><br><span class="line">NOW_PATH=$(cd &quot;$(dirname &quot;$0&quot;)&quot;; pwd)</span><br><span class="line">POM_XML=$NOW_PATH&quot;/pom.xml&quot;</span><br><span class="line">TARGET_DIR=$NOW_PATH&quot;/target&quot;</span><br><span class="line">mvn -f $POM_XML dependency:copy-dependencies</span><br><span class="line">sudo chmod -R 777 $TARGET_DIR</span><br></pre></td></tr></table></figure></p>
+<p><code>pom.xml</code> 内容：</p>
 <blockquote>
-<p>参照 <a href="https://hexo.io/zh-cn/docs/tag-plugins.html" target="_blank" rel="external">hexo 官方文档</a><br>参照 <a href="http://theme-next.iissnan.com/theme-settings.html" target="_blank" rel="external">next 主题</a><br>参照 <a href="https://github.com/iissnan/hexo-theme-next/wiki/%E5%88%9B%E5%BB%BA%E5%88%86%E7%B1%BB%E9%A1%B5%E9%9D%A2" target="_blank" rel="external">next 主题 for github</a><br>参照 <a href="http://www.tuicool.com/articles/AfQnQjy/" target="_blank" rel="external">更多扩展使用</a></p>
+<p>正常maven的pom.xml内容</p>
 </blockquote>
-<h2 id="md文档头部"><a href="#md文档头部" class="headerlink" title="md文档头部"></a>md文档头部</h2><table>
-<thead>
-<tr>
-<th>参数</th>
-<th>描述</th>
-<th>默认值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>layout</td>
-<td>布局</td>
-<td>有哪些layout呢，请到 scaffolds 目录下查看，这些文件名称就是layout名称</td>
-</tr>
-<tr>
-<td>title</td>
-<td>标题</td>
-<td></td>
-</tr>
-<tr>
-<td>date</td>
-<td>建立日期</td>
-<td>文件建立日期</td>
-</tr>
-<tr>
-<td>updated</td>
-<td>更新日期</td>
-<td>文件更新日期</td>
-</tr>
-<tr>
-<td>comments</td>
-<td>开启文章的评论功能</td>
-<td>true</td>
-</tr>
-<tr>
-<td>tags</td>
-<td>标签（不适用于分页）</td>
-<td></td>
-</tr>
-<tr>
-<td>categories</td>
-<td>分类（不适用于分页）</td>
-<td></td>
-</tr>
-<tr>
-<td>permalink</td>
-<td>覆盖文章网址</td>
-<td></td>
-</tr>
-<tr>
-<td>description</td>
-<td>添加本页描述</td>
-<td>默认所有</td>
-</tr>
-<tr>
-<td>photos</td>
-<td>添加图片</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h2 id="hexo-基础命令"><a href="#hexo-基础命令" class="headerlink" title="hexo 基础命令"></a>hexo 基础命令</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"># 清除</span><br><span class="line">$ hexo clean</span><br><span class="line"># 上传 GitHub</span><br><span class="line">$ hexo deploy</span><br><span class="line"># 新建文章</span><br><span class="line">$ hexo new &quot;postName&quot;</span><br><span class="line"># 新建页面</span><br><span class="line">hexo new page &quot;pageName&quot;</span><br><span class="line"># 生成静态页面至public目录</span><br><span class="line">hexo generate</span><br><span class="line"># 开启预览访问端口（默认端口4000，&apos;ctrl + c&apos;关闭server）</span><br><span class="line">hexo server</span><br><span class="line"># 将.deploy目录部署到GitHub</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
-<h2 id="md-扩展"><a href="#md-扩展" class="headerlink" title=".md 扩展"></a>.md 扩展</h2><ol>
-<li><p>扩大图片宽度</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% fi image-url, alt, title %&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>显示 更多按钮</p>
-<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">以上是摘要</span><br><span class="line"><span class="xml"><span class="comment">&lt;!--more--&gt;</span></span></span><br><span class="line">以下是余下全文</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>使用标签别名</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% cq %&#125; 标签别名 &#123;% endcq %&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h2 id="可能遇到的问题"><a href="#可能遇到的问题" class="headerlink" title="可能遇到的问题"></a>可能遇到的问题</h2><ol>
-<li>当你发布的<code>.md</code>文件中携带逗号<code>,</code>(已知)，在<code>多说</code>评论插件中将无法识别评论条数(就是文章顶部那个)<blockquote>
-<p>借鉴办法：替换文件命名，将逗号已<code>_</code>或<code> </code>分隔</p>
-</blockquote>
-</li>
-</ol>
-<h2 id="End"><a href="#End" class="headerlink" title="End"></a>End</h2>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">project</span> <span class="attr">xmlns</span>=<span class="string">"http://maven.apache.org/POM/4.0.0"</span> <span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></span><br><span class="line">  <span class="attr">xsi:schemaLocation</span>=<span class="string">"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- 项目的名称 start --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">modelVersion</span>&gt;</span>4.0.0<span class="tag">&lt;/<span class="name">modelVersion</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>temp.download<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>temp-download<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 项目的名称 end --&gt;</span></span><br><span class="line"></span><br><span class="line">	<span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">      <span class="comment">&lt;!-- 要下载的jar start --&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.json<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>json<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">version</span>&gt;</span>20160212<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">     <span class="comment">&lt;!-- 要下载的jar end --&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">project</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>完成</p>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">source init.sh</span><br><span class="line"># Or</span><br><span class="line">. init.sh</span><br><span class="line"></span><br><span class="line">cd hocgin.github.io</span><br><span class="line"># 尽情hexo吧</span><br></pre></td></tr></table></figure>
+<p>End</p>
+
       
     </div>
 
@@ -444,7 +384,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/小记/" rel="tag">#小记</a>
+            <a href="/tags/Ubuntu/" rel="tag">#Ubuntu</a>
+          
+            <a href="/tags/Maven/" rel="tag">#Maven</a>
           
         </div>
       
@@ -453,13 +395,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/04/25/绿化nodejs_for_linux版/" rel="next" title="绿化NodeJS for linux版">
+                <i class="fa fa-chevron-left"></i> 绿化NodeJS for linux版
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/03/20/安装完Ubuntu后_我该做什么/" rel="prev" title="安装完Ubuntu后,我该做什么">
-                安装完Ubuntu后,我该做什么 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -474,10 +416,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/03/15/hexo-使用/"
-     data-title="hexo 使用小记"
+        <div class="ds-share flat" data-thread-key="2016/04/25/使用Maven下载jar包_linux版/"
+     data-title="绿化NodeJS for linux版"
      data-content=""
-     data-url="http://hocg.in/2016/03/15/hexo-使用/">
+     data-url="http://hocg.in/2016/04/25/使用Maven下载jar包_linux版/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -504,8 +446,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/03/15/hexo-使用/"
-           data-title="hexo 使用小记" data-url="http://hocg.in/2016/03/15/hexo-使用/">
+      <div class="ds-thread" data-thread-key="2016/04/25/使用Maven下载jar包_linux版/"
+           data-title="绿化NodeJS for linux版" data-url="http://hocg.in/2016/04/25/使用Maven下载jar包_linux版/">
       </div>
     
   </div>
@@ -626,7 +568,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#md文档头部"><span class="nav-number">1.</span> <span class="nav-text">md文档头部</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo-基础命令"><span class="nav-number">2.</span> <span class="nav-text">hexo 基础命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#md-扩展"><span class="nav-number">3.</span> <span class="nav-text">.md 扩展</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#可能遇到的问题"><span class="nav-number">4.</span> <span class="nav-text">可能遇到的问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#End"><span class="nav-number">5.</span> <span class="nav-text">End</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#目录结构"><span class="nav-number">1.</span> <span class="nav-text">目录结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文件内容"><span class="nav-number">2.</span> <span class="nav-text">文件内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用方法"><span class="nav-number">3.</span> <span class="nav-text">使用方法</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">

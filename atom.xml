@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hocg.in/"/>
-  <updated>2016-04-18T06:25:22.882Z</updated>
+  <updated>2016-04-25T03:22:13.052Z</updated>
   <id>http://hocg.in/</id>
   
   <author>
@@ -14,6 +14,80 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>绿化NodeJS for linux版</title>
+    <link href="http://hocg.in/2016/04/25/%E4%BD%BF%E7%94%A8Maven%E4%B8%8B%E8%BD%BDjar%E5%8C%85_linux%E7%89%88/"/>
+    <id>http://hocg.in/2016/04/25/使用Maven下载jar包_linux版/</id>
+    <published>2016-04-25T01:38:49.000Z</published>
+    <updated>2016-04-25T03:22:13.052Z</updated>
+    
+    <content type="html">&lt;p&gt;当一个jar包只提供Maven的配置方法时怎么办？～&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;目录结构&quot;&gt;&lt;a href=&quot;#目录结构&quot; class=&quot;headerlink&quot; title=&quot;目录结构&quot;&gt;&lt;/a&gt;目录结构&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Green4nodeJS&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;├── down.sh // 下载shell，o(╯□╰)o其实就是一条shell&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;└── pom.xml // 正常maven配置&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;文件内容&quot;&gt;&lt;a href=&quot;#文件内容&quot; class=&quot;headerlink&quot; title=&quot;文件内容&quot;&gt;&lt;/a&gt;文件内容&lt;/h2&gt;&lt;p&gt;&lt;code&gt;down.sh&lt;/code&gt; 内容：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;#!/bin/sh&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# Author: hocgin@gmail.com&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# -------------Use--------------&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# sh down.sh&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# ------------------------------&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 运行pom.xml 下载jar&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;NOW_PATH=$(cd &amp;quot;$(dirname &amp;quot;$0&amp;quot;)&amp;quot;; pwd)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;POM_XML=$NOW_PATH&amp;quot;/pom.xml&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;TARGET_DIR=$NOW_PATH&amp;quot;/target&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;mvn -f $POM_XML dependency:copy-dependencies&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo chmod -R 777 $TARGET_DIR&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pom.xml&lt;/code&gt; 内容：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;正常maven的pom.xml内容&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight xml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;project&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;xmlns&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;http://maven.apache.org/POM/4.0.0&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;xmlns:xsi&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;attr&quot;&gt;xsi:schemaLocation&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;comment&quot;&gt;&amp;lt;!-- 项目的名称 start --&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;modelVersion&lt;/span&gt;&amp;gt;&lt;/span&gt;4.0.0&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;modelVersion&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;groupId&lt;/span&gt;&amp;gt;&lt;/span&gt;temp.download&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;groupId&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;artifactId&lt;/span&gt;&amp;gt;&lt;/span&gt;temp-download&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;artifactId&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;version&lt;/span&gt;&amp;gt;&lt;/span&gt;1.0-SNAPSHOT&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;version&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;&amp;lt;!-- 项目的名称 end --&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;dependencies&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;comment&quot;&gt;&amp;lt;!-- 要下载的jar start --&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;dependency&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;groupId&lt;/span&gt;&amp;gt;&lt;/span&gt;org.json&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;groupId&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;artifactId&lt;/span&gt;&amp;gt;&lt;/span&gt;json&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;artifactId&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;version&lt;/span&gt;&amp;gt;&lt;/span&gt;20160212&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;version&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;dependency&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     &lt;span class=&quot;comment&quot;&gt;&amp;lt;!-- 要下载的jar end --&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;dependencies&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;project&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;完成&lt;/p&gt;
+&lt;h2 id=&quot;使用方法&quot;&gt;&lt;a href=&quot;#使用方法&quot; class=&quot;headerlink&quot; title=&quot;使用方法&quot;&gt;&lt;/a&gt;使用方法&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;source init.sh&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# Or&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;. init.sh&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;cd hocgin.github.io&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 尽情hexo吧&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;End&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;当一个jar包只提供Maven的配置方法时怎么办？～&lt;br&gt;
+    
+    </summary>
+    
+      <category term="学习" scheme="http://hocg.in/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="Shell脚本" scheme="http://hocg.in/categories/%E5%AD%A6%E4%B9%A0/Shell%E8%84%9A%E6%9C%AC/"/>
+    
+    
+      <category term="Ubuntu" scheme="http://hocg.in/tags/Ubuntu/"/>
+    
+      <category term="Maven" scheme="http://hocg.in/tags/Maven/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>绿化NodeJS for linux版</title>
+    <link href="http://hocg.in/2016/04/25/%E7%BB%BF%E5%8C%96nodejs_for_linux%E7%89%88/"/>
+    <id>http://hocg.in/2016/04/25/绿化nodejs_for_linux版/</id>
+    <published>2016-04-25T01:38:49.000Z</published>
+    <updated>2016-04-25T02:07:10.085Z</updated>
+    
+    <content type="html">&lt;p&gt;起因，为了方便hexo发布博客，所以想把NodeJS绿化在U盘上..&lt;br&gt;谁叫网上只有win版的呢！自己码起来～&lt;br&gt;绿化 o(╯□╰)o&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;目录结构&quot;&gt;&lt;a href=&quot;#目录结构&quot; class=&quot;headerlink&quot; title=&quot;目录结构&quot;&gt;&lt;/a&gt;目录结构&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Green4nodeJS&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;├── hocgin.github.io // github博客目录&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;├── node // nodejs基本目录&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;│   ├── node-linux // nodejs源文件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;│   ├── cache // 创建一个空文件夹，即可&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;│   ├── init-module // 创建一个空文件夹，即可&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;│   └── userconfig // 创建一个空文件夹，即可&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;└── init.sh // 初始化shell文件 *重要&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;初始化文件&quot;&gt;&lt;a href=&quot;#初始化文件&quot; class=&quot;headerlink&quot; title=&quot;初始化文件&quot;&gt;&lt;/a&gt;初始化文件&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;主要是加载配置环境，初始化变量&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;init.sh&lt;/code&gt; 内容&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;#!/bin/bash&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# Author: hocgin@gmail.com&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# -------------Use--------------&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# source init.sh or . init.sh&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# ------------------------------&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;NOW_PATH=$(cd &amp;quot;$(dirname &amp;quot;$0&amp;quot;)&amp;quot;; pwd)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;NODE_NAME=&amp;quot;node-linux&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;NODE_HOME=$NOW_PATH&amp;quot;/node/&amp;quot;$NODE_NAME&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;NODE_PATH=$NODE_HOME&amp;quot;/bin&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;export PATH=$PATH:$NODE_PATH&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# &amp;quot;/home/hocgin/.npmrc&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;npm set userconfig $NOW_PATH&amp;quot;/node/userconfig&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# &amp;quot;/home/hocgin/.npm-init.js&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;npm set init-module $NOW_PATH&amp;quot;/node/init-module&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# &amp;quot;/home/hocgin/.npm&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;npm set cache  $NOW_PATH&amp;quot;/node/cache&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;完成&lt;/p&gt;
+&lt;h2 id=&quot;使用方法&quot;&gt;&lt;a href=&quot;#使用方法&quot; class=&quot;headerlink&quot; title=&quot;使用方法&quot;&gt;&lt;/a&gt;使用方法&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;source init.sh&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# Or&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;. init.sh&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;cd hocgin.github.io&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 尽情hexo吧&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;End&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;起因，为了方便hexo发布博客，所以想把NodeJS绿化在U盘上..&lt;br&gt;谁叫网上只有win版的呢！自己码起来～&lt;br&gt;绿化 o(╯□╰)o&lt;br&gt;
+    
+    </summary>
+    
+      <category term="学习" scheme="http://hocg.in/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="NodeJS" scheme="http://hocg.in/categories/%E5%AD%A6%E4%B9%A0/NodeJS/"/>
+    
+    
+      <category term="折腾" scheme="http://hocg.in/tags/%E6%8A%98%E8%85%BE/"/>
+    
+      <category term="Ubuntu" scheme="http://hocg.in/tags/Ubuntu/"/>
+    
+      <category term="NodeJS" scheme="http://hocg.in/tags/NodeJS/"/>
+    
+  </entry>
   
   <entry>
     <title>hexo 功能扩展</title>
@@ -66,10 +140,9 @@
     <link href="http://hocg.in/2016/03/20/%E5%AE%89%E8%A3%85%E5%AE%8CUbuntu%E5%90%8E_%E6%88%91%E8%AF%A5%E5%81%9A%E4%BB%80%E4%B9%88/"/>
     <id>http://hocg.in/2016/03/20/安装完Ubuntu后_我该做什么/</id>
     <published>2016-03-20T06:34:20.000Z</published>
-    <updated>2016-04-18T06:25:14.722Z</updated>
+    <updated>2016-04-25T01:38:18.746Z</updated>
     
-    <content type="html">&lt;img src=&quot;http://7xs6lq.com1.z0.glb.clouddn.com/img/un/ubuntu.png&quot; class=&quot;full-image&quot; alt=&quot;Ubuntu&quot; title=&quot;Ubuntu&quot;&gt;
-&lt;p&gt;安装完Ubuntu后,我该做什么..(借鉴和整理，还有一些平时遇到的， &lt;strong&gt;不定期更新&lt;/strong&gt;)&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+    <content type="html">&lt;p&gt;安装完Ubuntu后,我该做什么..(借鉴和整理，还有一些平时遇到的， &lt;strong&gt;不定期更新&lt;/strong&gt;)&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;yuan获取&quot;&gt;&lt;a href=&quot;#yuan获取&quot; class=&quot;headerlink&quot; title=&quot;yuan获取&quot;&gt;&lt;/a&gt;yuan获取&lt;/h2&gt;&lt;p&gt;官方列表： &lt;a href=&quot;http://wiki.ubuntu.org.cn/%E6%BA%90%E5%88%97%E8%A1%A8&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://wiki.ubuntu.org.cn/%E6%BA%90%E5%88%97%E8%A1%A8&lt;/a&gt;&lt;br&gt;网易163： &lt;a href=&quot;http://mirrors.163.com/.help/ubuntu.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://mirrors.163.com/.help/ubuntu.html&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&quot;移除&quot;&gt;&lt;a href=&quot;#移除&quot; class=&quot;headerlink&quot; title=&quot;移除&quot;&gt;&lt;/a&gt;移除&lt;/h2&gt;&lt;blockquote&gt;
@@ -377,8 +450,7 @@
     
     <summary type="html">
     
-      &lt;img src=&quot;http://7xs6lq.com1.z0.glb.clouddn.com/img/un/ubuntu.png&quot; class=&quot;full-image&quot; alt=&quot;Ubuntu&quot; title=&quot;Ubuntu&quot; /&gt;
-&lt;p&gt;安装完Ubuntu后,我该做什么..(借鉴和整理，还有一些平时遇到的， &lt;strong&gt;不定期更新&lt;/strong&gt;)&lt;br&gt;
+      &lt;p&gt;安装完Ubuntu后,我该做什么..(借鉴和整理，还有一些平时遇到的， &lt;strong&gt;不定期更新&lt;/strong&gt;)&lt;br&gt;
     
     </summary>
     
@@ -471,7 +543,7 @@
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% fi image-url, alt, title %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;显示 更多按钮&lt;/p&gt;
-&lt;figure class=&quot;highlight md&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;以上是摘要&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;!--more--&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;以下是余下全文&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight md&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;以上是摘要&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;xml&quot;&gt;&lt;span class=&quot;comment&quot;&gt;&amp;lt;!--more--&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;以下是余下全文&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;使用标签别名&lt;/p&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% cq %&amp;#125; 标签别名 &amp;#123;% endcq %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;

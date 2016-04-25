@@ -3,6 +3,82 @@
 
 
     
+  <url>
+    <loc>http://hocg.in/2016/04/25/%E4%BD%BF%E7%94%A8Maven%E4%B8%8B%E8%BD%BDjar%E5%8C%85_linux%E7%89%88/</loc>
+    <lastmod>2016-04-25T03:22:13.052Z</lastmod>
+    <data>
+        <display>
+        <title>绿化NodeJS for linux版</title>
+        <pubTime>2016-04-25T01:38:49.000Z</pubTime>
+        
+        <tag>Ubuntu</tag>
+         
+        <tag>Maven</tag>
+         
+         
+           
+             
+              <breadCrumb title="学习" url="http://hocg.in/categories/%E5%AD%A6%E4%B9%A0/"/>
+          
+             
+              <breadCrumb title="Shell脚本" url="http://hocg.in/categories/%E5%AD%A6%E4%B9%A0/Shell%E8%84%9A%E6%9C%AC/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://hocg.in/2016/04/25/%E7%BB%BF%E5%8C%96nodejs_for_linux%E7%89%88/</loc>
+    <lastmod>2016-04-25T02:07:10.085Z</lastmod>
+    <data>
+        <display>
+        <title>绿化NodeJS for linux版</title>
+        <pubTime>2016-04-25T01:38:49.000Z</pubTime>
+        
+        <tag>折腾</tag>
+         
+        <tag>Ubuntu</tag>
+         
+        <tag>NodeJS</tag>
+         
+         
+           
+             
+              <breadCrumb title="学习" url="http://hocg.in/categories/%E5%AD%A6%E4%B9%A0/"/>
+          
+             
+              <breadCrumb title="NodeJS" url="http://hocg.in/categories/%E5%AD%A6%E4%B9%A0/NodeJS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://hocg.in/2016/03/20/%E5%AE%89%E8%A3%85%E5%AE%8CUbuntu%E5%90%8E_%E6%88%91%E8%AF%A5%E5%81%9A%E4%BB%80%E4%B9%88/</loc>
+    <lastmod>2016-04-25T01:38:18.746Z</lastmod>
+    <data>
+        <display>
+        <title>安装完Ubuntu后,我该做什么</title>
+        <pubTime>2016-03-20T06:34:20.000Z</pubTime>
+        
+        <tag>折腾</tag>
+         
+        <tag>开发手册</tag>
+         
+        <tag>Ubuntu</tag>
+         
+         
+           
+             
+              <breadCrumb title="学习" url="http://hocg.in/categories/%E5%AD%A6%E4%B9%A0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>http://hocg.in/2016/03/26/hexo%20%E5%8A%9F%E8%83%BD%E6%89%A9%E5%B1%95/</loc>
@@ -17,30 +93,6 @@
         <tag>hexo</tag>
          
         <tag>折腾</tag>
-         
-         
-           
-             
-              <breadCrumb title="学习" url="http://hocg.in/categories/%E5%AD%A6%E4%B9%A0/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://hocg.in/2016/03/20/%E5%AE%89%E8%A3%85%E5%AE%8CUbuntu%E5%90%8E_%E6%88%91%E8%AF%A5%E5%81%9A%E4%BB%80%E4%B9%88/</loc>
-    <lastmod>2016-04-18T06:25:14.722Z</lastmod>
-    <data>
-        <display>
-        <title>安装完Ubuntu后,我该做什么</title>
-        <pubTime>2016-03-20T06:34:20.000Z</pubTime>
-        
-        <tag>折腾</tag>
-         
-        <tag>开发手册</tag>
-         
-        <tag>Ubuntu</tag>
          
          
            
