@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hocg.in/"/>
-  <updated>2016-04-25T03:22:13.052Z</updated>
+  <updated>2016-04-25T04:56:16.513Z</updated>
   <id>http://hocg.in/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>绿化NodeJS for linux版</title>
+    <title>使用Maven下载jar包 linux版</title>
     <link href="http://hocg.in/2016/04/25/%E4%BD%BF%E7%94%A8Maven%E4%B8%8B%E8%BD%BDjar%E5%8C%85_linux%E7%89%88/"/>
     <id>http://hocg.in/2016/04/25/使用Maven下载jar包_linux版/</id>
     <published>2016-04-25T01:38:49.000Z</published>
-    <updated>2016-04-25T03:22:13.052Z</updated>
+    <updated>2016-04-25T04:56:16.513Z</updated>
     
     <content type="html">&lt;p&gt;当一个jar包只提供Maven的配置方法时怎么办？～&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;目录结构&quot;&gt;&lt;a href=&quot;#目录结构&quot; class=&quot;headerlink&quot; title=&quot;目录结构&quot;&gt;&lt;/a&gt;目录结构&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Green4nodeJS&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;├── down.sh // 下载shell，o(╯□╰)o其实就是一条shell&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;└── pom.xml // 正常maven配置&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
@@ -46,9 +46,9 @@
       <category term="Shell脚本" scheme="http://hocg.in/categories/%E5%AD%A6%E4%B9%A0/Shell%E8%84%9A%E6%9C%AC/"/>
     
     
-      <category term="Ubuntu" scheme="http://hocg.in/tags/Ubuntu/"/>
-    
       <category term="Maven" scheme="http://hocg.in/tags/Maven/"/>
+    
+      <category term="Ubuntu" scheme="http://hocg.in/tags/Ubuntu/"/>
     
   </entry>
   
@@ -459,9 +459,9 @@
     
       <category term="折腾" scheme="http://hocg.in/tags/%E6%8A%98%E8%85%BE/"/>
     
-      <category term="开发手册" scheme="http://hocg.in/tags/%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C/"/>
-    
       <category term="Ubuntu" scheme="http://hocg.in/tags/Ubuntu/"/>
+    
+      <category term="开发手册" scheme="http://hocg.in/tags/%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C/"/>
     
   </entry>
   
