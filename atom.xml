@@ -46,9 +46,9 @@
       <category term="Shell脚本" scheme="http://hocg.in/categories/%E5%AD%A6%E4%B9%A0/Shell%E8%84%9A%E6%9C%AC/"/>
     
     
-      <category term="Maven" scheme="http://hocg.in/tags/Maven/"/>
-    
       <category term="Ubuntu" scheme="http://hocg.in/tags/Ubuntu/"/>
+    
+      <category term="Maven" scheme="http://hocg.in/tags/Maven/"/>
     
   </entry>
   
@@ -459,9 +459,9 @@
     
       <category term="折腾" scheme="http://hocg.in/tags/%E6%8A%98%E8%85%BE/"/>
     
-      <category term="Ubuntu" scheme="http://hocg.in/tags/Ubuntu/"/>
-    
       <category term="开发手册" scheme="http://hocg.in/tags/%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C/"/>
+    
+      <category term="Ubuntu" scheme="http://hocg.in/tags/Ubuntu/"/>
     
   </entry>
   
