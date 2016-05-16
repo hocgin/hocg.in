@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hocg.in/"/>
-  <updated>2016-04-25T04:56:16.513Z</updated>
+  <updated>2016-05-16T09:44:57.843Z</updated>
   <id>http://hocg.in/</id>
   
   <author>
@@ -14,6 +14,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>复习、考试</title>
+    <link href="http://hocg.in/2016/05/16/%E5%A4%8D%E4%B9%A0%E3%80%81%E8%80%83%E8%AF%95/"/>
+    <id>http://hocg.in/2016/05/16/复习、考试/</id>
+    <published>2016-05-16T09:44:57.843Z</published>
+    <updated>2016-05-16T09:44:57.843Z</updated>
+    
+    <content type="html">&lt;p&gt;复习一周，就上考场 o(╯□╰)o&lt;br&gt;但是总算考完了，思想折磨了我5个月..&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;br&gt;等分数把。。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;复习一周，就上考场 o(╯□╰)o&lt;br&gt;但是总算考完了，思想折磨了我5个月..&lt;br&gt;
+    
+    </summary>
+    
+      <category term="琐事" scheme="http://hocg.in/categories/%E7%90%90%E4%BA%8B/"/>
+    
+    
+      <category term="考试" scheme="http://hocg.in/tags/%E8%80%83%E8%AF%95/"/>
+    
+      <category term="感悟" scheme="http://hocg.in/tags/%E6%84%9F%E6%82%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>使用Maven下载jar包 linux版</title>
