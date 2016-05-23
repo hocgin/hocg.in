@@ -4,79 +4,8 @@
 
     
   <url>
-    <loc>http://hocg.in/2016/05/16/%E5%A4%8D%E4%B9%A0%E3%80%81%E8%80%83%E8%AF%95/</loc>
-    <lastmod>2016-05-16T09:44:57.843Z</lastmod>
-    <data>
-        <display>
-        <title>复习、考试</title>
-        <pubTime>2016-05-16T09:44:57.843Z</pubTime>
-        
-        <tag>考试</tag>
-         
-        <tag>感悟</tag>
-         
-         
-           
-             
-              <breadCrumb title="琐事" url="http://hocg.in/categories/%E7%90%90%E4%BA%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://hocg.in/2016/03/20/%E5%AE%89%E8%A3%85%E5%AE%8CUbuntu%E5%90%8E_%E6%88%91%E8%AF%A5%E5%81%9A%E4%BB%80%E4%B9%88/</loc>
-    <lastmod>2016-05-16T02:29:54.890Z</lastmod>
-    <data>
-        <display>
-        <title>安装完Ubuntu后,我该做什么</title>
-        <pubTime>2016-03-20T06:34:20.000Z</pubTime>
-        
-        <tag>折腾</tag>
-         
-        <tag>Ubuntu</tag>
-         
-        <tag>开发手册</tag>
-         
-         
-           
-             
-              <breadCrumb title="学习" url="http://hocg.in/categories/%E5%AD%A6%E4%B9%A0/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://hocg.in/2016/04/25/%E4%BD%BF%E7%94%A8Maven%E4%B8%8B%E8%BD%BDjar%E5%8C%85_linux%E7%89%88/</loc>
-    <lastmod>2016-04-25T04:56:16.513Z</lastmod>
-    <data>
-        <display>
-        <title>使用Maven下载jar包 linux版</title>
-        <pubTime>2016-04-25T01:38:49.000Z</pubTime>
-        
-        <tag>Maven</tag>
-         
-        <tag>Ubuntu</tag>
-         
-         
-           
-             
-              <breadCrumb title="学习" url="http://hocg.in/categories/%E5%AD%A6%E4%B9%A0/"/>
-          
-             
-              <breadCrumb title="Shell脚本" url="http://hocg.in/categories/%E5%AD%A6%E4%B9%A0/Shell%E8%84%9A%E6%9C%AC/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://hocg.in/2016/04/25/%E7%BB%BF%E5%8C%96nodejs_for_linux%E7%89%88/</loc>
-    <lastmod>2016-04-25T02:07:10.085Z</lastmod>
+    <lastmod>2016-05-20T12:40:46.517Z</lastmod>
     <data>
         <display>
         <title>绿化NodeJS for linux版</title>
@@ -101,10 +30,81 @@
     </url>
 
     
+  <url>
+    <loc>http://hocg.in/2016/05/17/%E5%A4%8D%E4%B9%A0%E3%80%81%E8%80%83%E8%AF%95/</loc>
+    <lastmod>2016-05-16T09:44:57.000Z</lastmod>
+    <data>
+        <display>
+        <title>复习、考试</title>
+        <pubTime>2016-05-17T11:14:04.650Z</pubTime>
+        
+        <tag>考试</tag>
+         
+        <tag>感悟</tag>
+         
+         
+           
+             
+              <breadCrumb title="琐事" url="http://hocg.in/categories/%E7%90%90%E4%BA%8B/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://hocg.in/2016/03/20/%E5%AE%89%E8%A3%85%E5%AE%8CUbuntu%E5%90%8E_%E6%88%91%E8%AF%A5%E5%81%9A%E4%BB%80%E4%B9%88/</loc>
+    <lastmod>2016-05-16T02:29:54.000Z</lastmod>
+    <data>
+        <display>
+        <title>安装完Ubuntu后,我该做什么</title>
+        <pubTime>2016-03-20T06:34:20.000Z</pubTime>
+        
+        <tag>折腾</tag>
+         
+        <tag>Ubuntu</tag>
+         
+        <tag>开发手册</tag>
+         
+         
+           
+             
+              <breadCrumb title="学习" url="http://hocg.in/categories/%E5%AD%A6%E4%B9%A0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://hocg.in/2016/04/25/%E4%BD%BF%E7%94%A8Maven%E4%B8%8B%E8%BD%BDjar%E5%8C%85_linux%E7%89%88/</loc>
+    <lastmod>2016-04-25T04:56:16.000Z</lastmod>
+    <data>
+        <display>
+        <title>使用Maven下载jar包 linux版</title>
+        <pubTime>2016-04-25T01:38:49.000Z</pubTime>
+        
+        <tag>Maven</tag>
+         
+        <tag>Ubuntu</tag>
+         
+         
+           
+             
+              <breadCrumb title="学习" url="http://hocg.in/categories/%E5%AD%A6%E4%B9%A0/"/>
+          
+             
+              <breadCrumb title="Shell脚本" url="http://hocg.in/categories/%E5%AD%A6%E4%B9%A0/Shell%E8%84%9A%E6%9C%AC/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>http://hocg.in/2016/03/26/hexo%20%E5%8A%9F%E8%83%BD%E6%89%A9%E5%B1%95/</loc>
-    <lastmod>2016-04-18T06:25:22.882Z</lastmod>
+    <lastmod>2016-04-18T06:25:22.000Z</lastmod>
     <data>
         <display>
         <title>hexo 功能扩展</title>
@@ -128,7 +128,7 @@
     
   <url>
     <loc>http://hocg.in/2016/03/15/hexo-%E4%BD%BF%E7%94%A8/</loc>
-    <lastmod>2016-04-18T06:24:08.787Z</lastmod>
+    <lastmod>2016-04-18T06:24:08.000Z</lastmod>
     <data>
         <display>
         <title>hexo 使用小记</title>
