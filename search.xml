@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+    
+    <entry>
+      <title><![CDATA[个人博客HTTPS 签证]]></title>
+      <url>http://hocg.in/2016/06/02/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2HTTPS-%E7%AD%BE%E8%AF%81/</url>
+      <content type="html"><![CDATA[<h3 id="关于https"><a href="#关于https" class="headerlink" title="关于https"></a>关于https</h3><p><a href="https://en.wikipedia.org/wiki/HTTPS" target="_blank" rel="external">wiki</a></p>
+<blockquote>
+<p>通俗的讲： 高大上</p>
+</blockquote>
+<h3 id="GitHub-page-使用https"><a href="#GitHub-page-使用https" class="headerlink" title="GitHub page 使用https"></a>GitHub page 使用https</h3><p>主要是使用 <a href="https://kloudsec.com/github-pages/new" target="_blank" rel="external">Kloudsec</a></p>
+<ol>
+<li>申请账号，填入待解析的域名</li>
+<li>把<code>DNS解析</code>转到该网站提供的地址</li>
+<li>验证邮箱并填入<code>GitHub page IP</code></li>
+<li>开启相关服务</li>
+</ol>
+<ul>
+<li><code>PROTECTION</code> -&gt; <code>SSL Encryption</code></li>
+<li><code>PLUGIN STORE</code><br><a href="https://hocg.in/">成品</a></li>
+</ul>
+<h3 id="自己搭建的blog"><a href="#自己搭建的blog" class="headerlink" title="自己搭建的blog"></a>自己搭建的blog</h3><p>免费的使用 <a href="https://www.startssl.com/" target="_blank" rel="external">Startssl</a><br><a href="https://blog.lutty.me/" target="_blank" rel="external">成品</a></p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[复习、考试]]></title>
+      <url>http://hocg.in/2016/05/17/%E5%A4%8D%E4%B9%A0%E3%80%81%E8%80%83%E8%AF%95/</url>
+      <content type="html"><![CDATA[<p>复习一周，就上考场 o(╯□╰)o<br>但是总算考完了，思想折磨了我5个月..<br><a id="more"></a><br>等分数把。。</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[使用Maven下载jar包 linux版]]></title>
+      <url>http://hocg.in/2016/04/25/%E4%BD%BF%E7%94%A8Maven%E4%B8%8B%E8%BD%BDjar%E5%8C%85_linux%E7%89%88/</url>
+      <content type="html"><![CDATA[<p>当一个jar包只提供Maven的配置方法时怎么办？～<br><a id="more"></a></p>
+<h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Green4nodeJS</span><br><span class="line">├── down.sh // 下载shell，o(╯□╰)o其实就是一条shell</span><br><span class="line">└── pom.xml // 正常maven配置</span><br></pre></td></tr></table></figure>
+<h2 id="文件内容"><a href="#文件内容" class="headerlink" title="文件内容"></a>文件内容</h2><p><code>down.sh</code> 内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/sh</span><br><span class="line"># Author: hocgin@gmail.com</span><br><span class="line"># -------------Use--------------</span><br><span class="line"># sh down.sh</span><br><span class="line"># ------------------------------</span><br><span class="line"># 运行pom.xml 下载jar</span><br><span class="line">NOW_PATH=$(cd &quot;$(dirname &quot;$0&quot;)&quot;; pwd)</span><br><span class="line">POM_XML=$NOW_PATH&quot;/pom.xml&quot;</span><br><span class="line">TARGET_DIR=$NOW_PATH&quot;/target&quot;</span><br><span class="line">mvn -f $POM_XML dependency:copy-dependencies</span><br><span class="line">sudo chmod -R 777 $TARGET_DIR</span><br></pre></td></tr></table></figure></p>
+<p><code>pom.xml</code> 内容：</p>
+<blockquote>
+<p>正常maven的pom.xml内容</p>
+</blockquote>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">project</span> <span class="attr">xmlns</span>=<span class="string">"http://maven.apache.org/POM/4.0.0"</span> <span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></span><br><span class="line">  <span class="attr">xsi:schemaLocation</span>=<span class="string">"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- 项目的名称 start --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">modelVersion</span>&gt;</span>4.0.0<span class="tag">&lt;/<span class="name">modelVersion</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>temp.download<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>temp-download<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 项目的名称 end --&gt;</span></span><br><span class="line"></span><br><span class="line">	<span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">      <span class="comment">&lt;!-- 要下载的jar start --&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.json<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>json<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">version</span>&gt;</span>20160212<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">     <span class="comment">&lt;!-- 要下载的jar end --&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">project</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>完成</p>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">source init.sh</span><br><span class="line"># Or</span><br><span class="line">. init.sh</span><br><span class="line"></span><br><span class="line">cd hocgin.github.io</span><br><span class="line"># 尽情hexo吧</span><br></pre></td></tr></table></figure>
+<p>End</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[绿化NodeJS for linux版]]></title>
+      <url>http://hocg.in/2016/04/25/%E7%BB%BF%E5%8C%96nodejs_for_linux%E7%89%88/</url>
+      <content type="html"><![CDATA[<p>起因，为了方便hexo发布博客，所以想把NodeJS绿化在U盘上..<br>谁叫网上只有win版的呢！自己码起来～<br>绿化 o(╯□╰)o<br><a id="more"></a></p>
+<h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Green4nodeJS</span><br><span class="line">├── hocgin.github.io // github博客目录</span><br><span class="line">├── node // nodejs基本目录</span><br><span class="line">│   ├── node-linux // nodejs源文件</span><br><span class="line">│   ├── cache // 创建一个空文件夹，即可</span><br><span class="line">│   ├── init-module // 创建一个空文件夹，即可</span><br><span class="line">│   └── userconfig // 创建一个空文件夹，即可</span><br><span class="line">└── init.sh // 初始化shell文件 *重要</span><br></pre></td></tr></table></figure>
+<h2 id="初始化文件"><a href="#初始化文件" class="headerlink" title="初始化文件"></a>初始化文件</h2><blockquote>
+<p>主要是加载配置环境，初始化变量</p>
+</blockquote>
+<p><code>init.sh</code> 内容<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line"># Author: hocgin@gmail.com</span><br><span class="line"># -------------Use--------------</span><br><span class="line"># source init.sh or . init.sh</span><br><span class="line"># ------------------------------</span><br><span class="line">NOW_PATH=$(cd &quot;$(dirname &quot;$0&quot;)&quot;; pwd)</span><br><span class="line">NODE_NAME=&quot;node-linux&quot;</span><br><span class="line">NODE_HOME=$NOW_PATH&quot;/node/&quot;$NODE_NAME</span><br><span class="line">NODE_PATH=$NODE_HOME&quot;/bin&quot;</span><br><span class="line">NPM_PATH=$NODE_HOME&quot;/lib/node_modules/npm/bin&quot;</span><br><span class="line">sudo chmod +x -R $NPM_PATH&quot;/.&quot;</span><br><span class="line">export PATH=$PATH:$NODE_PATH:$NPM_PATH</span><br><span class="line"># &quot;/home/hocgin/.npmrc&quot;</span><br><span class="line">npm set userconfig $NOW_PATH&quot;/node/userconfig&quot;</span><br><span class="line"># &quot;/home/hocgin/.npm-init.js&quot;</span><br><span class="line">npm set init-module $NOW_PATH&quot;/node/init-module&quot;</span><br><span class="line"># &quot;/home/hocgin/.npm&quot;</span><br><span class="line">npm set cache  $NOW_PATH&quot;/node/cache&quot;</span><br></pre></td></tr></table></figure></p>
+<p>修改 <code>/node/node-linux/lib/node_modules/npm/bin/npm</code> 文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># NPM_CLI_JS=&quot;$basedir/node_modules/npm/bin/npm-cli.js&quot;</span><br><span class="line">NPM_CLI_JS=&quot;$basedir/npm-cli.js&quot;</span><br></pre></td></tr></table></figure></p>
+<p>完成</p>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">source init.sh</span><br><span class="line"># Or</span><br><span class="line">. init.sh</span><br><span class="line"></span><br><span class="line">cd hocgin.github.io</span><br><span class="line"># 尽情hexo吧</span><br></pre></td></tr></table></figure>
+<p><code>注: 安装module时请加上 -g</code></p>
+<p>End</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[hexo 功能扩展]]></title>
+      <url>http://hocg.in/2016/03/26/hexo%20%E5%8A%9F%E8%83%BD%E6%89%A9%E5%B1%95/</url>
+      <content type="html"><![CDATA[<h2 id="须知"><a href="#须知" class="headerlink" title="须知"></a>须知</h2><p><code>站点目录</code>: /<br><code>主题目录</code>: /themes/[主题名]<br><code>主题配置文件</code>: /themes/[主题名]/_config.yml<br><code>站点配置文件</code>: /_config.yml  </p>
+<h2 id="添加微信公众号二维码"><a href="#添加微信公众号二维码" class="headerlink" title="添加微信公众号二维码"></a>添加微信公众号二维码</h2><p>首先，打开<code>主题目录</code>下的 <code>layout/_macro/post.swig</code><br>然后，找到节点<code>footer</code>加入以下代码<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">!</span> <span class="attr">--</span> 添加微信图标 <span class="attr">start</span> <span class="attr">--</span>&gt;</span></span><br><span class="line">      &#123;% if theme.wechat_subscriber.enable %&#125;</span><br><span class="line">        &#123;% if !is_home() %&#125;</span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"hocgin-container"</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"folder"</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"paper"</span>&gt;</span></span><br><span class="line">        	<span class="tag">&lt;<span class="name">img</span> <span class="attr">width</span>=<span class="string">"100%"</span> <span class="attr">src</span>=<span class="string">"&#123;&#123; theme.wechat_subscriber.qcode &#125;&#125;"</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"hocgin-description"</span>&gt;</span>&#123;&#123; theme.wechat_subscriber.description &#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        &#123;% endif %&#125;</span><br><span class="line">      &#123;% endif %&#125;</span><br><span class="line"><span class="tag">&lt;<span class="name">!</span> <span class="attr">--</span> 添加微信图标 <span class="attr">end</span> <span class="attr">--</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>其次，到<code>主题目录</code>下的<code>source/css</code>创建文件夹<code>_hocgin</code>并在它之下创建css文件<code>customize-hocgin.css</code>以下是文件内容：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.hocgin-container</span> *, *<span class="selector-pseudo">:before</span>, *<span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">  <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.hocgin-container</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.hocgin-container</span> &gt; <span class="selector-class">.folder</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">220px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">180px</span>;</span><br><span class="line">  <span class="attribute">left</span>: <span class="built_in">calc</span>(50% - 110px);</span><br><span class="line">  <span class="attribute">top</span>: <span class="built_in">calc</span>(70% - 90px);</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.hocgin-container</span> &gt; <span class="selector-class">.folder</span> &gt; <span class="selector-class">.paper</span> &#123;</span><br><span class="line">  <span class="attribute">opacity</span>: <span class="number">1</span>;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">overflow</span>: hidden;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">top</span>: <span class="built_in">calc</span>(50% - 111px);</span><br><span class="line">  <span class="attribute">left</span>: <span class="built_in">calc</span>(50% - 100px);</span><br><span class="line">  <span class="attribute">transition</span>: top <span class="number">0.5s</span>, opacity <span class="number">0.4s</span>;</span><br><span class="line">  <span class="attribute">font-family</span>: Verdana, Tahoma, sans-serif;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">0.1em</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">1em</span>;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#644812</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#fde1ab</span>;</span><br><span class="line">  <span class="attribute">-moz-box-shadow</span>: <span class="number">10px</span> <span class="number">10px</span> <span class="built_in">rgba</span>(0, 0, 0, 0.2);</span><br><span class="line">  <span class="attribute">-webkit-box-shadow</span>: <span class="number">10px</span> <span class="number">10px</span> <span class="built_in">rgba</span>(0, 0, 0, 0.2);</span><br><span class="line">  <span class="attribute">box-shadow</span>: <span class="number">10px</span> <span class="number">10px</span> <span class="built_in">rgba</span>(0, 0, 0, 0.2);</span><br><span class="line">  <span class="attribute">-moz-border-radius</span>: <span class="number">5px</span>;</span><br><span class="line">  <span class="attribute">-webkit-border-radius</span>: <span class="number">5px</span>;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">5px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.hocgin-container</span> &gt; <span class="selector-class">.folder</span><span class="selector-pseudo">:hover</span> &gt; <span class="selector-class">.paper</span> &#123;</span><br><span class="line">  <span class="attribute">top</span>: <span class="built_in">calc</span>(50% - 150px);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.hocgin-container</span> &gt; <span class="selector-class">.folder</span><span class="selector-class">.opened</span> &gt; <span class="selector-class">.paper</span> &#123;</span><br><span class="line">  <span class="attribute">top</span>: <span class="built_in">calc</span>(-250px);</span><br><span class="line">  <span class="attribute">opacity</span>: .<span class="number">9</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.hocgin-description</span> &#123;</span><br><span class="line">  <span class="attribute">text-align</span>: center;</span><br><span class="line">  <span class="attribute">margin-top</span>: <span class="number">4px</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>保存后，找到<code>主题目录</code>下<code>source/css/main.styl</code><strong>(注：别的主题可能不一样)</strong> 追加<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// --------------------------------------------------</span><br><span class="line">@import "_hocgin/customize-hocgin.css";</span><br></pre></td></tr></table></figure></p>
+<p>最后，修改<code>主题配置文件</code> 追加<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Customize args -- Hocgin</span><br><span class="line">wechat_subscriber:</span><br><span class="line">  enable: true</span><br><span class="line">  qcode: [url]</span><br><span class="line">  description: 欢迎您扫一扫上面的微信公众号，订阅我的博客！</span><br></pre></td></tr></table></figure></p>
+<h3 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h3><p><a href="http://hocg.in">http://hocg.in</a></p>
+<hr>
+<h2 id="底部加入打赏功能"><a href="#底部加入打赏功能" class="headerlink" title="底部加入打赏功能"></a>底部加入打赏功能</h2><p>首先，打开<code>主题目录</code>下的 <code>layout/_macro/post.swig</code><br>然后，找到节点<code>footer</code>加入以下代码<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">    <span class="tag">&lt;<span class="name">!</span> <span class="attr">--</span> 添加打赏图标 <span class="attr">start</span> <span class="attr">--</span>&gt;</span></span><br><span class="line">    &#123;% if theme.pay_money.enable %&#125;</span><br><span class="line">      &#123;% if !is_home() %&#125;</span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"hocgin-money"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"money-reward"</span>&gt;</span></span><br><span class="line">    赏</span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"money-pay"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">img</span> <span class="attr">width</span>=<span class="string">"100%"</span> <span class="attr">src</span>=<span class="string">"&#123;&#123; theme.pay_money.weixin_qcode &#125;&#125;"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"money-pay"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">img</span> <span class="attr">width</span>=<span class="string">"100%"</span> <span class="attr">src</span>=<span class="string">"&#123;&#123; theme.pay_money.alipay_qcode &#125;&#125;"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">      &#123;% endif %&#125;</span><br><span class="line">    &#123;% endif %&#125;</span><br><span class="line">    <span class="tag">&lt;<span class="name">!</span> <span class="attr">--</span> 添加打赏图标 <span class="attr">end</span> <span class="attr">--</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>其次，到<code>主题目录</code>下的<code>source/css</code>创建文件夹<code>_hocgin</code>并在它之下创建css文件<code>money-customize-hocgin.css</code>以下是文件内容：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.hocgin-money</span> *, *<span class="selector-pseudo">:before</span>, *<span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">    <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.hocgin-money</span> &gt; <span class="selector-class">.money-reward</span> &#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">2.4rem</span>;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">4.6rem</span>;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">4.6rem</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">4.6rem</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">-webkit-user-select</span>: none;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">    <span class="attribute">vertical-align</span>: middle;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#fff</span>;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#f1b60e</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#fccd60</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">-webkit-gradient</span>(linear, left top, left bottom, color-stop(0, #fccd60), <span class="built_in">color-stop</span>(100%, #fbae12), <span class="built_in">color-stop</span>(100%, #2989d8), <span class="built_in">color-stop</span>(100%, #207cca));</span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">-webkit-linear-gradient</span>(top, #fccd60 0, #fbae12 100%, #2989d8 100%, #207cca 100%);</span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">linear-gradient</span>(to bottom, #fccd60 0, #fbae12 100%, #2989d8 100%, #207cca 100%);</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.hocgin-money</span> &gt; <span class="selector-class">.money-reward</span> &gt; <span class="selector-class">.money-pay</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">overflow</span>: hidden;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">visibility</span>: hidden;</span><br><span class="line">    <span class="attribute">top</span>: <span class="built_in">calc</span>(50% - 100px);</span><br><span class="line">    <span class="attribute">left</span>: <span class="built_in">calc</span>(50% - 100px);</span><br><span class="line">    <span class="attribute">opacity</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">transition</span>: top <span class="number">0.5s</span>, opacity <span class="number">0.4s</span>;</span><br><span class="line">    <span class="attribute">font-family</span>: Verdana, Tahoma, sans-serif;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">0.1em</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">1em</span>;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#644812</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#fff</span>;</span><br><span class="line">    <span class="attribute">-moz-box-shadow</span>: <span class="number">0</span> <span class="number">1px</span> <span class="number">1px</span> <span class="number">1px</span> <span class="number">#efefef</span>;</span><br><span class="line">    <span class="attribute">-webkit-box-shadow</span>: <span class="number">0</span> <span class="number">1px</span> <span class="number">1px</span> <span class="number">1px</span> <span class="number">#efefef</span>;</span><br><span class="line">    <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">1px</span> <span class="number">1px</span> <span class="number">1px</span> <span class="number">#efefef</span>;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#e6e6e6</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.hocgin-money</span> &gt; <span class="selector-class">.money-reward</span><span class="selector-pseudo">:hover</span> &gt; <span class="selector-class">.money-pay</span> &#123;</span><br><span class="line">    <span class="attribute">visibility</span>: visible;</span><br><span class="line">    <span class="attribute">opacity</span>: <span class="number">1</span>;</span><br><span class="line">    <span class="attribute">z-index</span>: <span class="number">10</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.hocgin-money</span> &gt; <span class="selector-class">.money-reward</span><span class="selector-pseudo">:hover</span> &gt; <span class="selector-class">.money-pay</span><span class="selector-pseudo">:nth-child(1)</span> &#123;</span><br><span class="line">    <span class="attribute">top</span>: <span class="built_in">calc</span>(50% - 250px);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.hocgin-money</span> &gt; <span class="selector-class">.money-reward</span><span class="selector-pseudo">:hover</span> &gt; <span class="selector-class">.money-pay</span><span class="selector-pseudo">:nth-child(2)</span> &#123;</span><br><span class="line">    <span class="attribute">top</span>: <span class="built_in">calc</span>(50% + 50px);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>保存后，找到<code>主题目录</code>下<code>source/css/main.styl</code><strong>(注：别的主题可能不一样)</strong> 追加<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// --------------------------------------------------</span><br><span class="line">@import "_hocgin/money-customize-hocgin.css";</span><br></pre></td></tr></table></figure></p>
+<p>最后，修改<code>主题配置文件</code> 追加<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Customize args -- Hocgin</span><br><span class="line">pay_money:</span><br><span class="line">  enable: true</span><br><span class="line">  weixin_qcode: http://7xs6lq.com1.z0.glb.clouddn.com/img/un/ali.pay.500.png</span><br><span class="line">  alipay_qcode: http://7xs6lq.com1.z0.glb.clouddn.com/img/un/ali.pay.500.png</span><br></pre></td></tr></table></figure></p>
+<h3 id="已知bug"><a href="#已知bug" class="headerlink" title="已知bug"></a>已知bug</h3><ol>
+<li>因为没使用js(也不想使用)，安卓设备需要<code>长按</code>才能出现效果，而苹果设备无法显示效果，欢迎大家修复。┌|*´∀｀|┘</li>
+</ol>
+<h3 id="效果-1"><a href="#效果-1" class="headerlink" title="效果"></a>效果</h3><p><a href="http://hocg.in">http://hocg.in</a></p>
+<hr>
+<h3 id="防止百度转码"><a href="#防止百度转码" class="headerlink" title="防止百度转码"></a>防止百度转码</h3><p><code>主题目录</code>下 <code>\layout\_partials\head.swig</code><br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">”Cache-Control”</span> <span class="attr">content</span>=<span class="string">”no-transform”</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">”Cache-Control”</span> <span class="attr">content</span>=<span class="string">”no-siteapp”</span> /&gt;</span></span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>待续ing</p>
+</blockquote>
+<h3 id="添加搜索功能"><a href="#添加搜索功能" class="headerlink" title="添加搜索功能"></a>添加搜索功能</h3><h3 id="结合服务器，实现自动部署"><a href="#结合服务器，实现自动部署" class="headerlink" title="结合服务器，实现自动部署"></a>结合服务器，实现自动部署</h3><h3 id="多说css美化"><a href="#多说css美化" class="headerlink" title="多说css美化"></a>多说css美化</h3>]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[安装完Ubuntu后,我该做什么]]></title>
+      <url>http://hocg.in/2016/03/20/%E5%AE%89%E8%A3%85%E5%AE%8CUbuntu%E5%90%8E_%E6%88%91%E8%AF%A5%E5%81%9A%E4%BB%80%E4%B9%88/</url>
+      <content type="html"><![CDATA[<p>安装完Ubuntu后,我该做什么..(借鉴和整理，还有一些平时遇到的， <strong>不定期更新</strong>)<br><a id="more"></a></p>
+<h2 id="yuan获取"><a href="#yuan获取" class="headerlink" title="yuan获取"></a>yuan获取</h2><p>官方列表： <a href="http://wiki.ubuntu.org.cn/%E6%BA%90%E5%88%97%E8%A1%A8" target="_blank" rel="external">http://wiki.ubuntu.org.cn/%E6%BA%90%E5%88%97%E8%A1%A8</a><br>网易163： <a href="http://mirrors.163.com/.help/ubuntu.html" target="_blank" rel="external">http://mirrors.163.com/.help/ubuntu.html</a></p>
+<hr>
+<h2 id="移除"><a href="#移除" class="headerlink" title="移除"></a>移除</h2><blockquote>
+<p>删除libreoffice</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get remove libreoffice-common</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>删除Amazon的链接s</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get remove unity-webapps-common</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>删掉基本不用的自带软件</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get remove thunderbird totem rhythmbox empathy brasero simple-scan gnome-mahjongg aisleriot gnome-mines cheese transmission-common gnome-orca webbrowser-app gnome-sudoku  landscape-client-ui-install</span><br><span class="line">sudo apt-get remove onboard deja-dup</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>shang xia zuoyou</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get remove vim-common</span><br><span class="line">sudo apt-get install vim</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><p>monaco<code>苹果字体</code><br><a href="https://github.com/cstrap/monaco-font" target="_blank" rel="external">https://github.com/cstrap/monaco-font</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -kL https://raw.github.com/cstrap/monaco-font/master/install-font-ubuntu.sh | bash</span><br></pre></td></tr></table></figure></p>
+<p>consolas<code>微软字体</code></p>
+<hr>
+<h2 id="Gnome3"><a href="#Gnome3" class="headerlink" title="Gnome3"></a>Gnome3</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><h4 id="1-安装Gnome3桌面"><a href="#1-安装Gnome3桌面" class="headerlink" title="1.安装Gnome3桌面"></a>1.安装Gnome3桌面</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># 安装</span><br><span class="line">sudo add-apt-repository ppa:gnome3-team/gnome3</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install ppa-purge</span><br><span class="line">sudo ppa-purge ppa:gnome3-team/gnome3</span><br><span class="line">sudo apt-get dist-upgrade</span><br><span class="line">sudo apt-get install gnome-themes-standard ubuntu-desktop gnome-shell</span><br><span class="line"># 删除</span><br><span class="line">sudo apt-get install ppa-purge</span><br><span class="line">sudo ppa-purge ppa:gnome3-team/gnome3</span><br></pre></td></tr></table></figure>
+<h4 id="2-Gnome3系统"><a href="#2-Gnome3系统" class="headerlink" title="2.Gnome3系统"></a>2.Gnome3系统</h4><p><a href="https://ubuntugnome.org/download/" target="_blank" rel="external">下载</a></p>
+<h3 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h3><p><code>主题文件位置：~/.themes 或 /usr/share/themes</code></p>
+<h4 id="1-Paper"><a href="#1-Paper" class="headerlink" title="1.Paper"></a>1.Paper</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 下拉git</span><br><span class="line">git clone https://github.com/snwh/paper-gtk-theme.git</span><br><span class="line"># 运行安装脚本</span><br><span class="line">sh ./install-gtk-theme.sh</span><br></pre></td></tr></table></figure>
+<h4 id="2-Numix-Circle"><a href="#2-Numix-Circle" class="headerlink" title="2.Numix-Circle"></a>2.Numix-Circle</h4><blockquote>
+<p>很赞</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 安装</span><br><span class="line">sudo apt-add-repository ppa:numix/ppa</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install numix-icon-theme-circle</span><br></pre></td></tr></table></figure>
+<h3 id="插件支持"><a href="#插件支持" class="headerlink" title="插件支持"></a>插件支持</h3><blockquote>
+<p>gnome-tweak-tool Gnome3的调节软件<br>可直接管理插件</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install gnome-tweak-tool</span><br></pre></td></tr></table></figure>
+<p><code>插件下载网站: https://extensions.gnome.org/</code></p>
+<ol>
+<li>使用Chrome 插件</li>
+<li>系统安装chrome-gnome-shell</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:ne0sight/chrome-gnome-shell</span><br><span class="line"># trusty</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install chrome-gnome-shell</span><br></pre></td></tr></table></figure>
+<p><strong>插件列表</strong></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>描述</th>
+<th>推荐</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Autohide battery</td>
+<td>可以在电池充满的情况下隐藏电池图标</td>
+<td>推荐</td>
+</tr>
+<tr>
+<td>Battery status</td>
+<td>可以显示当前电池电量以及可以使用的时间</td>
+<td>推荐</td>
+</tr>
+<tr>
+<td>Dash to dock</td>
+<td>在屏幕左边显示一个快速启动条</td>
+<td>推荐</td>
+</tr>
+<tr>
+<td>Freon</td>
+<td>显示当前磁盘，显卡，CPU等等温度</td>
+<td>不推荐，推荐SysPeek</td>
+</tr>
+<tr>
+<td>Lock Keys</td>
+<td>显示当前的 Num Lock, Caps Lock 的状态</td>
+<td>推荐</td>
+</tr>
+<tr>
+<td>Refesh wifi connections</td>
+<td>在 wifi 列表上显示一个刷新图标</td>
+<td>推荐</td>
+</tr>
+<tr>
+<td>status title bar</td>
+<td>讲状态条上的标题改为当前窗口的标题</td>
+<td>推荐</td>
+</tr>
+<tr>
+<td>Coverflow Alt-Tab</td>
+<td>类似WIN 7切换特效</td>
+<td>太显眼，不推荐</td>
+</tr>
+<tr>
+<td>OpenWeather</td>
+<td>天气预报</td>
+<td>推荐</td>
+</tr>
+<tr>
+<td>NetSpeed</td>
+<td>显示网速</td>
+<td>不推荐，推荐SysPeek</td>
+</tr>
+<tr>
+<td>system-monitor</td>
+<td>显示当前系统信息</td>
+<td>太显眼，不推荐</td>
+</tr>
+<tr>
+<td>Dynamic Top Bar</td>
+<td>在当前没有最大化窗口时使顶栏透明</td>
+<td>推荐</td>
+</tr>
+<tr>
+<td>Impatience</td>
+<td>Gnome Shell 动画提速</td>
+<td>推荐</td>
+</tr>
+<tr>
+<td>Better Volume Indicator</td>
+<td>透过鼠标滚轮操作更便捷地调整音量</td>
+<td>推荐</td>
+</tr>
+<tr>
+<td>Media player indicator</td>
+<td>显示音乐播放器的状态</td>
+<td>推荐</td>
+</tr>
+<tr>
+<td>Workspaces-to-dock</td>
+<td>将工作区转变为一个可自动隐藏的停靠栏</td>
+<td>推荐</td>
+</tr>
+<tr>
+<td>Panel OSD</td>
+<td>修改通知显示位置</td>
+<td>推荐</td>
+</tr>
+<tr>
+<td>Clipboard Indicator</td>
+<td>剪贴板指示器</td>
+<td>推荐</td>
+</tr>
+<tr>
+<td>Caffeine</td>
+<td>禁止自动挂起或锁屏</td>
+<td>推荐</td>
+</tr>
+<tr>
+<td>Transmission Daemon Indicator</td>
+<td>Transmission面板指示器</td>
+<td>推荐，需要Transmission Daemon</td>
+</tr>
+<tr>
+<td>Icon Hider</td>
+<td>显示/隐藏顶栏图标</td>
+<td>推荐</td>
+</tr>
+<tr>
+<td>Top Panel Workspace Scroll</td>
+<td>在顶栏上滚动鼠标中键来快速切换工作区。在topbar按住shift+滚轮</td>
+<td>推荐</td>
+</tr>
+<tr>
+<td>Drop Down Terminal</td>
+<td>终端快捷方式</td>
+<td>推荐</td>
+</tr>
+<tr>
+<td>Windows Blur Effects</td>
+<td>给未激活的窗口添加模糊效果</td>
+<td>不推荐</td>
+</tr>
+<tr>
+<td>Modern Calc</td>
+<td>功能齐全的计算器扩展</td>
+<td>没找到</td>
+</tr>
+<tr>
+<td>EasyScreenCast</td>
+<td>录屏工具</td>
+<td>推荐</td>
+</tr>
+<tr>
+<td>Place status indicator</td>
+<td>快速访问一些文件夹</td>
+<td>推荐，没装上</td>
+</tr>
+<tr>
+<td>Removable drive menu</td>
+<td>显示连接到电脑的usb设备</td>
+<td>推荐</td>
+</tr>
+<tr>
+<td>User themes</td>
+<td>用来启用自定义的shell主题</td>
+<td>推荐，没装上</td>
+</tr>
+<tr>
+<td>Workspace indicator</td>
+<td>在顶栏显示当前示工作区的序号</td>
+<td>推荐</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="壁纸"><a href="#壁纸" class="headerlink" title="壁纸"></a>壁纸</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># 1.安装archibold</span><br><span class="line">curl -L -O http://archibold.io/sh/archibold</span><br><span class="line">chmod +x archibold</span><br><span class="line">sudo mv archibold /usr/bin</span><br><span class="line"></span><br><span class="line"># 2.执行</span><br><span class="line">archibold login-background [壁纸的位置]</span><br></pre></td></tr></table></figure>
+<p>此外还可以让桌面和锁屏界面使用动态壁纸，动态壁纸由一个xml文件构成，就像这样：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">background</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">starttime</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">year</span>&gt;</span>2011<span class="tag">&lt;/<span class="name">year</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">month</span>&gt;</span>11<span class="tag">&lt;/<span class="name">month</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">day</span>&gt;</span>24<span class="tag">&lt;/<span class="name">day</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">hour</span>&gt;</span>7<span class="tag">&lt;/<span class="name">hour</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">minute</span>&gt;</span>00<span class="tag">&lt;/<span class="name">minute</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">second</span>&gt;</span>00<span class="tag">&lt;/<span class="name">second</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">starttime</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">static</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">duration</span>&gt;</span>3600.0<span class="tag">&lt;/<span class="name">duration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">file</span>&gt;</span>picture1.jpg<span class="tag">&lt;/<span class="name">file</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">static</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">transition</span> <span class="attr">type</span>=<span class="string">"overlay"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">duration</span>&gt;</span>18000.0<span class="tag">&lt;/<span class="name">duration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">from</span>&gt;</span>picture1.jpg<span class="tag">&lt;/<span class="name">from</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">to</span>&gt;</span>/picture2.jpg<span class="tag">&lt;/<span class="name">to</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">transition</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">static</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">duration</span>&gt;</span>18000.0<span class="tag">&lt;/<span class="name">duration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">file</span>&gt;</span>picture2.jpg<span class="tag">&lt;/<span class="name">file</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">static</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">transition</span> <span class="attr">type</span>=<span class="string">"overlay"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">duration</span>&gt;</span>21600.0<span class="tag">&lt;/<span class="name">duration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">from</span>&gt;</span>picture2.jpg<span class="tag">&lt;/<span class="name">from</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">to</span>&gt;</span>picture1.jpg<span class="tag">&lt;/<span class="name">to</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">transition</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">background</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>简单解释以下这个xml文件的含义：</p>
+<p><code>starttime</code>：这个部分规定了壁纸切换起始时间，设置成过去的某个时间即可(设置成2020年就要等到2020年才会有效果)<br><code>static</code>：这个部分表示在duration规定的时间(以秒为单位)中壁纸都是file中给定的那张图片<br><code>transition</code>：这个部分表示在duration规定的时间内壁纸从from中的图片切换到to中的图片你可以添加任意多个static+transition的组合，只需要最后一个transition切换回最初的static那张图片就可以循环更换壁纸了。  </p>
+<p>那么如何启用这样的xml文件呢，单凭系统设置无法办到，我们需要使用dconf系统配置编辑器。<br>首先打开dconf编辑器，展开<code>org–gnome–desktop–background</code>这一项，可以看到其中的<code>picture-uri</code>修这一项的默认值是<code>file:///usr/share/backgrounds/gnome/adwaita-timed.xml</code>，这个就是你刚装好桌面是的默认壁纸啦，将其改成你的xml文件就可以了。<br>锁屏界面的壁纸更换方法也一样，只不过把<code>org–gnome–desktop–background</code>改成<code>org–gnome–desktop–screensaver</code>而已</p>
+<hr>
+<h2 id="软件安装"><a href="#软件安装" class="headerlink" title="软件安装"></a>软件安装</h2><h3 id="指令安装"><a href="#指令安装" class="headerlink" title="指令安装"></a>指令安装</h3><blockquote>
+<p>科学上网 Client-SS</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># 安装</span><br><span class="line">sudo add-apt-repository ppa:hzwhuang/ss-qt5</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install shadowsocks-qt5</span><br><span class="line"># 安装 pip</span><br><span class="line">sudo pip install genpac</span><br><span class="line"></span><br><span class="line"># 下载自动翻墙列表</span><br><span class="line">genpac -p &quot;SOCKS5 127.0.0.1:1080&quot; --gfwlist-proxy=&quot;SOCKS5 127.0.0.1:1080&quot; --output=&quot;~/Documents/autoproxy.pac&quot; --gfwlist-url=&quot;https://autoproxy-gfwlist.googlecode.com/svn/trunk/gfwlist.txt&quot; --user-rule-from=&quot;user-rules.txt&quot;</span><br></pre></td></tr></table></figure>
+<p><strong>添加开机启动</strong><br>command：<code>/usr/bin/ss-qt5</code></p>
+<blockquote>
+<p>屏幕截图 Shutter</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 安装</span><br><span class="line">sudo apt-get install Shutter</span><br><span class="line"></span><br><span class="line"># 打开</span><br><span class="line"># 搜索 Shutter</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>音视频解码 ubuntu-restricted extras</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 安装</span><br><span class="line">sudo apt-get install ubuntu-restricted-extras</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>GNOME MPV 代替VLC播放器</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 安装</span><br><span class="line">sudo add-apt-repository ppa:xuzhen666/gnome-mpv</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install gnome-mpv</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>视频播放 VLC播放器</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 安装</span><br><span class="line">sudo add-apt-repository ppa:videolan/master-daily</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install vlc</span><br><span class="line"># 使用</span><br><span class="line"># 搜索 vlc</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Grub引导 Grub Customizer<br>可配置启动界面，启动项等</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 安装</span><br><span class="line">sudo add-apt-repository ppa:danielrichter2007/grub-customizer</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install grub-customizer</span><br><span class="line"># 使用</span><br><span class="line"># 搜索 Grub Customizer</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Office WPS</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 安装</span><br><span class="line">sudo apt-get install wps-office</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>[小插件]指示器性能 SysPeek</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 安装</span><br><span class="line">sudo add-apt-repository ppa:nilarimogard/webupd8  </span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install syspeeka</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Synapse 快速启动器</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:synapse-core/testing</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install synapse</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Uget一款下载工具，配合 aria2 插件使用效果出色<br>curl + area2 + axel</p>
+</blockquote>
+<p>地址：<a href="http://baike.renwuyi.com/2014-11/2153.html" target="_blank" rel="external">参考</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 安装</span><br><span class="line">sudo add-apt-repository ppa:plushuang-tw/uget-stable</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install uget</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>redshift类似 f.lux 的屏幕色温调整工具</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 安装</span><br><span class="line">sudo apt-get install redshift-gtk</span><br></pre></td></tr></table></figure>
+<p><strong>添加开机启动</strong><br>command：<code>redshift-gtk -l 39.92:116.46 -t 5500:4500</code></p>
+<blockquote>
+<p>Go For It 一款整合了待办事项与计时器的生产力应用。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 安装</span><br><span class="line">sudo add-apt-repository ppa:mank319/go-for-it</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install go-for-it</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Catfish 一款优雅迅捷的文件搜索工具<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 安装</span><br><span class="line">sudo apt-get install catfish</span><br></pre></td></tr></table></figure></p>
+<p>神级命令行软件 Tmux <a href="http://www.wushxin.top/2016/03/28/%E4%BD%BF%E7%94%A8tmux.html" target="_blank" rel="external">说明</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install tmux</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h3 id="软件包安装"><a href="#软件包安装" class="headerlink" title="软件包安装"></a>软件包安装</h3><p><a href="http://ubuntu-tweak.com/" target="_blank" rel="external">系统管理 UbuntuTweak</a><br><code>打开：搜索 Ubuntu Tweak</code><br><a href="https://www.jianguoyun.com" target="_blank" rel="external">同步软件 坚果云</a><br><code>打开：搜索 Nutstore</code><br><a href="https://github.com/LiuLang/bcloud-packages" target="_blank" rel="external">百度网盘桌面客户端 BCloud</a><br><a href="https://launchpad.net/indicator-stickynotes" target="_blank" rel="external">便签</a><br><a href="http://keepass.info/" target="_blank" rel="external">MarkDown编辑软件 HarooPad</a><br><a href="http://pad.haroopress.com/" target="_blank" rel="external">密码管理器 keepass2</a><br><a href="http://pinyin.sogou.com/linux/?r=pinyin" target="_blank" rel="external">搜狗输入法</a><br><a href="http://cidian.youdao.com/multi.html#linuxAll" target="_blank" rel="external">有道词典</a><br><a href="http://www.vmware.com/products/workstation/" target="_blank" rel="external">VMware Workstation</a><br><a href="http://www.google.cn/chrome/browser/" target="_blank" rel="external">Chrome</a><br><a href="https://github.com/cosven/FeelUOwn" target="_blank" rel="external">网易音乐</a></p>
+<hr>
+<h3 id="听起来不错"><a href="#听起来不错" class="headerlink" title="听起来不错"></a>听起来不错</h3><ol>
+<li>Deluge Bittorrent 客户端</li>
+<li>Nutty网络监测工具。</li>
+<li>Synaptic 新立得软件包管理器</li>
+<li>UNetbootin启动盘制作工具</li>
+<li>Gpick拾色器。</li>
+<li>gpaint 微软画图</li>
+<li>ddm 驱动管理器</li>
+<li>Navicat <code>o(╯□╰)o 竟然是wine的</code></li>
+</ol>
+<h2 id="小技巧"><a href="#小技巧" class="headerlink" title="小技巧"></a>小技巧</h2><ol>
+<li><p>关闭系统检测报告</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo gedit /etc/default/apport</span><br><span class="line"># 修改enabled=0</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>开机自动开启数字键</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install numlockx</span><br><span class="line">sudo vim /etc/gdm/Init/Default</span><br><span class="line"># -----------</span><br><span class="line"># 在文件最后exit 0的前面添加：</span><br><span class="line">  if [ -x /usr/bin/numlockx ]; then</span><br><span class="line">      numlockx on</span><br><span class="line">  fi</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>重启即可</p>
+<ol>
+<li><p>插入鼠标时自动使触摸板失效<br>安装Touchpad Indicator (触摸板开关）  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:atareao/atareao  </span><br><span class="line">sudo apt-get update  </span><br><span class="line">sudo apt-get install touchpad-indicator</span><br></pre></td></tr></table></figure>
+<p>搜索 touchpad indicator</p>
+</li>
+<li><p>遇到显示俩个输入法图标情况<br><code>有一定原因是自启项启动了一个</code></p>
+</li>
+<li><p>黑屏<br><code>95% 是和显卡驱动有关</code></p>
+</li>
+<li><p>Chrome 每次打开都要求输入密码<br>一、删除现在的密钥环<br>视图-&gt;根据密码环 在密码区会有一个“登录”为名字的密钥环，右击将其删除。<br>二、添加新的密钥环<br>终端输入seahorse打开管理密钥环的软件，文件-&gt;新建-&gt;密码和密钥-&gt;输入名字(这里是以”chrome”为例)。密码设置为空</p>
+</li>
+<li><p>添加源安装后，not fount XX<br>一、 试着访问该链接<br>二、如果可以手动找到该路径，那便可以修改<code>/etc/apt/source.list.d/</code>目录下你添加的安装源文件<br><strong>例如</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/apt/sources.list.d/sogoupinyin.list</span><br><span class="line"># 显示内容</span><br><span class="line"># deb http://archive.ubuntukylin.com:10006/ubuntukylin trusty main</span><br><span class="line"># 可修改链接部分。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>网卡驱动 <code>Realtek RTL8723AE 无线网卡驱动</code><br>第一种(闭源驱动)：  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install linux-firmware-nonfree</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>第二种(第三方驱动，PPA安装)：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:hanipouspilot/rtlwifi</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install rtlwifi-new-dkms</span><br></pre></td></tr></table></figure></p>
+<ol>
+<li>当遇到产品无法输入中文的时候<br>先尝试卸载ibus，如果还是不可以试试在xxx.sh的启动脚本中添加如下：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">XMODIFIERS=&quot;@im=fcitx&quot;</span><br><span class="line">export XMODIFIERS</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>到<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># ---------------------------------------------------------------------</span><br><span class="line"># Run the IDE.</span><br><span class="line"># ---------------------------------------------------------------------</span><br></pre></td></tr></table></figure></p>
+<p>之前。</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[hexo 使用小记]]></title>
+      <url>http://hocg.in/2016/03/15/hexo-%E4%BD%BF%E7%94%A8/</url>
+      <content type="html"><![CDATA[<p>  这是一篇关于如何使用hexo的收集Box <strong>&gt;</strong> 不定期更新吧！<br><a id="more"></a></p>
+<blockquote>
+<p>参照 <a href="https://hexo.io/zh-cn/docs/tag-plugins.html" target="_blank" rel="external">hexo 官方文档</a><br>参照 <a href="http://theme-next.iissnan.com/theme-settings.html" target="_blank" rel="external">next 主题</a><br>参照 <a href="https://github.com/iissnan/hexo-theme-next/wiki/%E5%88%9B%E5%BB%BA%E5%88%86%E7%B1%BB%E9%A1%B5%E9%9D%A2" target="_blank" rel="external">next 主题 for github</a><br>参照 <a href="http://www.tuicool.com/articles/AfQnQjy/" target="_blank" rel="external">更多扩展使用</a></p>
+</blockquote>
+<h2 id="md文档头部"><a href="#md文档头部" class="headerlink" title="md文档头部"></a>md文档头部</h2><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>layout</td>
+<td>布局</td>
+<td>有哪些layout呢，请到 scaffolds 目录下查看，这些文件名称就是layout名称</td>
+</tr>
+<tr>
+<td>title</td>
+<td>标题</td>
+<td></td>
+</tr>
+<tr>
+<td>date</td>
+<td>建立日期</td>
+<td>文件建立日期</td>
+</tr>
+<tr>
+<td>updated</td>
+<td>更新日期</td>
+<td>文件更新日期</td>
+</tr>
+<tr>
+<td>comments</td>
+<td>开启文章的评论功能</td>
+<td>true</td>
+</tr>
+<tr>
+<td>tags</td>
+<td>标签（不适用于分页）</td>
+<td></td>
+</tr>
+<tr>
+<td>categories</td>
+<td>分类（不适用于分页）</td>
+<td></td>
+</tr>
+<tr>
+<td>permalink</td>
+<td>覆盖文章网址</td>
+<td></td>
+</tr>
+<tr>
+<td>description</td>
+<td>添加本页描述</td>
+<td>默认所有</td>
+</tr>
+<tr>
+<td>photos</td>
+<td>添加图片</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="hexo-基础命令"><a href="#hexo-基础命令" class="headerlink" title="hexo 基础命令"></a>hexo 基础命令</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"># 清除</span><br><span class="line">$ hexo clean</span><br><span class="line"># 上传 GitHub</span><br><span class="line">$ hexo deploy</span><br><span class="line"># 新建文章</span><br><span class="line">$ hexo new &quot;postName&quot;</span><br><span class="line"># 新建页面</span><br><span class="line">hexo new page &quot;pageName&quot;</span><br><span class="line"># 生成静态页面至public目录</span><br><span class="line">hexo generate</span><br><span class="line"># 开启预览访问端口（默认端口4000，&apos;ctrl + c&apos;关闭server）</span><br><span class="line">hexo server</span><br><span class="line"># 将.deploy目录部署到GitHub</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+<h2 id="md-扩展"><a href="#md-扩展" class="headerlink" title=".md 扩展"></a>.md 扩展</h2><ol>
+<li><p>扩大图片宽度</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% fi image-url, alt, title %&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>显示 更多按钮</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">以上是摘要</span><br><span class="line"><span class="xml"><span class="comment">&lt;!--more--&gt;</span></span></span><br><span class="line">以下是余下全文</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用标签别名</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% cq %&#125; 标签别名 &#123;% endcq %&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="可能遇到的问题"><a href="#可能遇到的问题" class="headerlink" title="可能遇到的问题"></a>可能遇到的问题</h2><ol>
+<li>当你发布的<code>.md</code>文件中携带逗号<code>,</code>(已知)，在<code>多说</code>评论插件中将无法识别评论条数(就是文章顶部那个)<blockquote>
+<p>借鉴办法：替换文件命名，将逗号已<code>_</code>或<code> </code>分隔</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="End"><a href="#End" class="headerlink" title="End"></a>End</h2>]]></content>
+    </entry>
+    
+  
+  
+</search>

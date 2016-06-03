@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hocg.in/"/>
-  <updated>2016-06-02T03:54:45.604Z</updated>
+  <updated>2016-06-02T03:54:45.000Z</updated>
   <id>http://hocg.in/</id>
   
   <author>
@@ -19,8 +19,8 @@
     <title>个人博客HTTPS 签证</title>
     <link href="http://hocg.in/2016/06/02/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2HTTPS-%E7%AD%BE%E8%AF%81/"/>
     <id>http://hocg.in/2016/06/02/个人博客HTTPS-签证/</id>
-    <published>2016-06-02T03:54:45.608Z</published>
-    <updated>2016-06-02T03:54:45.604Z</updated>
+    <published>2016-06-02T14:40:25.701Z</published>
+    <updated>2016-06-02T03:54:45.000Z</updated>
     
     <content type="html">&lt;h3 id=&quot;关于https&quot;&gt;&lt;a href=&quot;#关于https&quot; class=&quot;headerlink&quot; title=&quot;关于https&quot;&gt;&lt;/a&gt;关于https&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/HTTPS&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;wiki&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
@@ -55,9 +55,9 @@
   
   <entry>
     <title>复习、考试</title>
-    <link href="http://hocg.in/2016/05/23/%E5%A4%8D%E4%B9%A0%E3%80%81%E8%80%83%E8%AF%95/"/>
-    <id>http://hocg.in/2016/05/23/复习、考试/</id>
-    <published>2016-05-23T01:07:41.497Z</published>
+    <link href="http://hocg.in/2016/05/17/%E5%A4%8D%E4%B9%A0%E3%80%81%E8%80%83%E8%AF%95/"/>
+    <id>http://hocg.in/2016/05/17/复习、考试/</id>
+    <published>2016-05-17T11:14:04.650Z</published>
     <updated>2016-05-16T09:44:57.000Z</updated>
     
     <content type="html">&lt;p&gt;复习一周，就上考场 o(╯□╰)o&lt;br&gt;但是总算考完了，思想折磨了我5个月..&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;br&gt;等分数把。。&lt;/p&gt;
@@ -109,9 +109,9 @@
       <category term="Shell脚本" scheme="http://hocg.in/categories/%E5%AD%A6%E4%B9%A0/Shell%E8%84%9A%E6%9C%AC/"/>
     
     
-      <category term="Maven" scheme="http://hocg.in/tags/Maven/"/>
-    
       <category term="Ubuntu" scheme="http://hocg.in/tags/Ubuntu/"/>
+    
+      <category term="Maven" scheme="http://hocg.in/tags/Maven/"/>
     
   </entry>
   
@@ -120,7 +120,7 @@
     <link href="http://hocg.in/2016/04/25/%E7%BB%BF%E5%8C%96nodejs_for_linux%E7%89%88/"/>
     <id>http://hocg.in/2016/04/25/绿化nodejs_for_linux版/</id>
     <published>2016-04-25T01:38:49.000Z</published>
-    <updated>2016-05-20T12:40:46.000Z</updated>
+    <updated>2016-05-20T12:40:46.517Z</updated>
     
     <content type="html">&lt;p&gt;起因，为了方便hexo发布博客，所以想把NodeJS绿化在U盘上..&lt;br&gt;谁叫网上只有win版的呢！自己码起来～&lt;br&gt;绿化 o(╯□╰)o&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;目录结构&quot;&gt;&lt;a href=&quot;#目录结构&quot; class=&quot;headerlink&quot; title=&quot;目录结构&quot;&gt;&lt;/a&gt;目录结构&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Green4nodeJS&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;├── hocgin.github.io // github博客目录&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;├── node // nodejs基本目录&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;│   ├── node-linux // nodejs源文件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;│   ├── cache // 创建一个空文件夹，即可&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;│   ├── init-module // 创建一个空文件夹，即可&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;│   └── userconfig // 创建一个空文件夹，即可&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;└── init.sh // 初始化shell文件 *重要&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
@@ -205,7 +205,7 @@
     <link href="http://hocg.in/2016/03/20/%E5%AE%89%E8%A3%85%E5%AE%8CUbuntu%E5%90%8E_%E6%88%91%E8%AF%A5%E5%81%9A%E4%BB%80%E4%B9%88/"/>
     <id>http://hocg.in/2016/03/20/安装完Ubuntu后_我该做什么/</id>
     <published>2016-03-20T06:34:20.000Z</published>
-    <updated>2016-05-20T13:57:32.000Z</updated>
+    <updated>2016-05-20T13:57:32.119Z</updated>
     
     <content type="html">&lt;p&gt;安装完Ubuntu后,我该做什么..(借鉴和整理，还有一些平时遇到的， &lt;strong&gt;不定期更新&lt;/strong&gt;)&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;yuan获取&quot;&gt;&lt;a href=&quot;#yuan获取&quot; class=&quot;headerlink&quot; title=&quot;yuan获取&quot;&gt;&lt;/a&gt;yuan获取&lt;/h2&gt;&lt;p&gt;官方列表： &lt;a href=&quot;http://wiki.ubuntu.org.cn/%E6%BA%90%E5%88%97%E8%A1%A8&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://wiki.ubuntu.org.cn/%E6%BA%90%E5%88%97%E8%A1%A8&lt;/a&gt;&lt;br&gt;网易163： &lt;a href=&quot;http://mirrors.163.com/.help/ubuntu.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://mirrors.163.com/.help/ubuntu.html&lt;/a&gt;&lt;/p&gt;
@@ -531,9 +531,9 @@
     
       <category term="折腾" scheme="http://hocg.in/tags/%E6%8A%98%E8%85%BE/"/>
     
-      <category term="Ubuntu" scheme="http://hocg.in/tags/Ubuntu/"/>
-    
       <category term="开发手册" scheme="http://hocg.in/tags/%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C/"/>
+    
+      <category term="Ubuntu" scheme="http://hocg.in/tags/Ubuntu/"/>
     
   </entry>
   
