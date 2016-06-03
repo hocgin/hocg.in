@@ -86,10 +86,22 @@
 <h3 id="效果-1"><a href="#效果-1" class="headerlink" title="效果"></a>效果</h3><p><a href="http://hocg.in">http://hocg.in</a></p>
 <hr>
 <h3 id="防止百度转码"><a href="#防止百度转码" class="headerlink" title="防止百度转码"></a>防止百度转码</h3><p><code>主题目录</code>下 <code>\layout\_partials\head.swig</code><br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">”Cache-Control”</span> <span class="attr">content</span>=<span class="string">”no-transform”</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">”Cache-Control”</span> <span class="attr">content</span>=<span class="string">”no-siteapp”</span> /&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="添加搜索功能-2016年06月04日"><a href="#添加搜索功能-2016年06月04日" class="headerlink" title="添加搜索功能 2016年06月04日"></a>添加搜索功能 <code>2016年06月04日</code></h3><ol>
+<li>安装hexo数据生成插件<blockquote>
+<p>Json格式的，有利于自主编写(暂时只介绍原生支持的，如果想自己编写下面的可以不用看)<br><a href="https://github.com/alexbruno/hexo-generator-json-content" target="_blank" rel="external">hexo-generator-json-content</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm i -S hexo-generator-json-content</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ol>
+<blockquote>
+<p>NexT 原生支持，不想折腾的可以使用<br><a href="https://github.com/PaicHyperionDev/hexo-generator-search" target="_blank" rel="external">hexo-generator-search</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-search --save</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p> 和 hexo-generator-search<br><code>站点配置文件</code> 新增<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Search</span><br><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br></pre></td></tr></table></figure></p>
+<p>OK！</p>
 <blockquote>
 <p>待续ing</p>
 </blockquote>
-<h3 id="添加搜索功能"><a href="#添加搜索功能" class="headerlink" title="添加搜索功能"></a>添加搜索功能</h3><h3 id="结合服务器，实现自动部署"><a href="#结合服务器，实现自动部署" class="headerlink" title="结合服务器，实现自动部署"></a>结合服务器，实现自动部署</h3><h3 id="多说css美化"><a href="#多说css美化" class="headerlink" title="多说css美化"></a>多说css美化</h3>]]></content>
+<h3 id="结合服务器，实现自动部署"><a href="#结合服务器，实现自动部署" class="headerlink" title="结合服务器，实现自动部署"></a>结合服务器，实现自动部署</h3><h3 id="多说css美化"><a href="#多说css美化" class="headerlink" title="多说css美化"></a>多说css美化</h3>]]></content>
     </entry>
     
     <entry>

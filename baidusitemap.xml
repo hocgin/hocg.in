@@ -4,6 +4,30 @@
 
     
   <url>
+    <loc>http://hocg.in/2016/03/26/hexo%20%E5%8A%9F%E8%83%BD%E6%89%A9%E5%B1%95/</loc>
+    <lastmod>2016-06-03T16:08:28.944Z</lastmod>
+    <data>
+        <display>
+        <title>hexo 功能扩展</title>
+        <pubTime>2016-03-26T05:44:28.000Z</pubTime>
+        
+        <tag>小记</tag>
+         
+        <tag>hexo</tag>
+         
+        <tag>折腾</tag>
+         
+         
+           
+             
+              <breadCrumb title="学习" url="http://hocg.in/categories/%E5%AD%A6%E4%B9%A0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://hocg.in/2016/06/02/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2HTTPS-%E7%AD%BE%E8%AF%81/</loc>
     <lastmod>2016-06-02T03:54:45.000Z</lastmod>
     <data>
@@ -34,9 +58,9 @@
         
         <tag>折腾</tag>
          
-        <tag>开发手册</tag>
-         
         <tag>Ubuntu</tag>
+         
+        <tag>开发手册</tag>
          
          
            
@@ -105,9 +129,9 @@
         <title>使用Maven下载jar包 linux版</title>
         <pubTime>2016-04-25T01:38:49.000Z</pubTime>
         
-        <tag>Ubuntu</tag>
-         
         <tag>Maven</tag>
+         
+        <tag>Ubuntu</tag>
          
          
            
@@ -122,30 +146,6 @@
     </url>
 
     
-    
-  <url>
-    <loc>http://hocg.in/2016/03/26/hexo%20%E5%8A%9F%E8%83%BD%E6%89%A9%E5%B1%95/</loc>
-    <lastmod>2016-04-18T06:25:22.000Z</lastmod>
-    <data>
-        <display>
-        <title>hexo 功能扩展</title>
-        <pubTime>2016-03-26T05:44:28.000Z</pubTime>
-        
-        <tag>小记</tag>
-         
-        <tag>hexo</tag>
-         
-        <tag>折腾</tag>
-         
-         
-           
-             
-              <breadCrumb title="学习" url="http://hocg.in/categories/%E5%AD%A6%E4%B9%A0/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
   <url>
     <loc>http://hocg.in/2016/03/15/hexo-%E4%BD%BF%E7%94%A8/</loc>
