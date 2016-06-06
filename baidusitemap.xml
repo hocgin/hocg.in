@@ -4,8 +4,32 @@
 
     
   <url>
+    <loc>http://hocg.in/2016/03/20/%E5%AE%89%E8%A3%85%E5%AE%8CUbuntu%E5%90%8E_%E6%88%91%E8%AF%A5%E5%81%9A%E4%BB%80%E4%B9%88/</loc>
+    <lastmod>2016-06-06T04:01:53.080Z</lastmod>
+    <data>
+        <display>
+        <title>安装完Ubuntu后,我该做什么</title>
+        <pubTime>2016-03-20T06:34:20.000Z</pubTime>
+        
+        <tag>折腾</tag>
+         
+        <tag>Ubuntu</tag>
+         
+        <tag>开发手册</tag>
+         
+         
+           
+             
+              <breadCrumb title="学习" url="http://hocg.in/categories/%E5%AD%A6%E4%B9%A0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://hocg.in/2016/03/26/hexo%20%E5%8A%9F%E8%83%BD%E6%89%A9%E5%B1%95/</loc>
-    <lastmod>2016-06-03T16:13:11.433Z</lastmod>
+    <lastmod>2016-06-03T16:13:11.000Z</lastmod>
     <data>
         <display>
         <title>hexo 功能扩展</title>
@@ -29,11 +53,11 @@
     
   <url>
     <loc>http://hocg.in/2016/06/02/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2HTTPS-%E7%AD%BE%E8%AF%81/</loc>
-    <lastmod>2016-06-02T03:54:45.000Z</lastmod>
+    <lastmod>2016-06-02T03:54:45.604Z</lastmod>
     <data>
         <display>
         <title>个人博客HTTPS 签证</title>
-        <pubTime>2016-06-02T14:40:25.701Z</pubTime>
+        <pubTime>2016-06-02T03:54:45.608Z</pubTime>
         
         <tag>小记</tag>
          
@@ -49,32 +73,8 @@
     
     
   <url>
-    <loc>http://hocg.in/2016/03/20/%E5%AE%89%E8%A3%85%E5%AE%8CUbuntu%E5%90%8E_%E6%88%91%E8%AF%A5%E5%81%9A%E4%BB%80%E4%B9%88/</loc>
-    <lastmod>2016-05-20T13:57:32.119Z</lastmod>
-    <data>
-        <display>
-        <title>安装完Ubuntu后,我该做什么</title>
-        <pubTime>2016-03-20T06:34:20.000Z</pubTime>
-        
-        <tag>折腾</tag>
-         
-        <tag>Ubuntu</tag>
-         
-        <tag>开发手册</tag>
-         
-         
-           
-             
-              <breadCrumb title="学习" url="http://hocg.in/categories/%E5%AD%A6%E4%B9%A0/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://hocg.in/2016/04/25/%E7%BB%BF%E5%8C%96nodejs_for_linux%E7%89%88/</loc>
-    <lastmod>2016-05-20T12:40:46.517Z</lastmod>
+    <lastmod>2016-05-20T12:40:46.000Z</lastmod>
     <data>
         <display>
         <title>绿化NodeJS for linux版</title>
@@ -100,12 +100,12 @@
 
     
   <url>
-    <loc>http://hocg.in/2016/05/17/%E5%A4%8D%E4%B9%A0%E3%80%81%E8%80%83%E8%AF%95/</loc>
+    <loc>http://hocg.in/2016/05/23/%E5%A4%8D%E4%B9%A0%E3%80%81%E8%80%83%E8%AF%95/</loc>
     <lastmod>2016-05-16T09:44:57.000Z</lastmod>
     <data>
         <display>
         <title>复习、考试</title>
-        <pubTime>2016-05-17T11:14:04.650Z</pubTime>
+        <pubTime>2016-05-23T01:07:41.497Z</pubTime>
         
         <tag>考试</tag>
          
