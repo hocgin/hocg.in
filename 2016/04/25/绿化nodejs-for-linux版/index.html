@@ -45,7 +45,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Maven,Ubuntu," />
+  <meta name="keywords" content="折腾,Ubuntu,NodeJS," />
 
 
 
@@ -63,16 +63,16 @@
 
 
 
-<meta name="description" content="当一个jar包只提供Maven的配置方法时怎么办？～">
+<meta name="description" content="起因，为了方便hexo发布博客，所以想把NodeJS绿化在U盘上..谁叫网上只有win版的呢！自己码起来～绿化 o(╯□╰)o">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用Maven下载jar包 linux版">
-<meta property="og:url" content="http://hocg.in/2016/04/25/使用Maven下载jar包_linux版/index.html">
+<meta property="og:title" content="绿化NodeJS for linux版">
+<meta property="og:url" content="http://hocg.in/2016/04/25/绿化nodejs-for-linux版/index.html">
 <meta property="og:site_name" content="Hocgin (๑`灬´๑)">
-<meta property="og:description" content="当一个jar包只提供Maven的配置方法时怎么办？～">
-<meta property="og:updated_time" content="2016-04-25T04:56:16.000Z">
+<meta property="og:description" content="起因，为了方便hexo发布博客，所以想把NodeJS绿化在U盘上..谁叫网上只有win版的呢！自己码起来～绿化 o(╯□╰)o">
+<meta property="og:updated_time" content="2016-05-20T12:40:46.517Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用Maven下载jar包 linux版">
-<meta name="twitter:description" content="当一个jar包只提供Maven的配置方法时怎么办？～">
+<meta name="twitter:title" content="绿化NodeJS for linux版">
+<meta name="twitter:description" content="起因，为了方便hexo发布博客，所以想把NodeJS绿化在U盘上..谁叫网上只有win版的呢！自己码起来～绿化 o(╯□╰)o">
 
 
 
@@ -90,7 +90,7 @@
   };
 </script>
 
-  <title> 使用Maven下载jar包 linux版 | Hocgin (๑`灬´๑) </title>
+  <title> 绿化NodeJS for linux版 | Hocgin (๑`灬´๑) </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -262,7 +262,7 @@
             
             
               
-                使用Maven下载jar包 linux版
+                绿化NodeJS for linux版
               
             
           </h1>
@@ -300,8 +300,8 @@
 
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/学习/Shell脚本/" itemprop="url" rel="index">
-                    <span itemprop="name">Shell脚本</span>
+                  <a href="/categories/学习/NodeJS/" itemprop="url" rel="index">
+                    <span itemprop="name">NodeJS</span>
                   </a>
                 </span>
 
@@ -316,8 +316,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/04/25/使用Maven下载jar包_linux版/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/25/使用Maven下载jar包_linux版/" itemprop="commentsCount"></span>
+                <a href="/2016/04/25/绿化nodejs-for-linux版/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/25/绿化nodejs-for-linux版/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -327,7 +327,7 @@
 
           
           
-             <span id="/2016/04/25/使用Maven下载jar包_linux版/" class="leancloud_visitors" data-flag-title="使用Maven下载jar包 linux版">
+             <span id="/2016/04/25/绿化nodejs-for-linux版/" class="leancloud_visitors" data-flag-title="绿化NodeJS for linux版">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -347,16 +347,16 @@
       
 
       
-        <p>当一个jar包只提供Maven的配置方法时怎么办？～<br><a id="more"></a></p>
-<h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Green4nodeJS</span><br><span class="line">├── down.sh // 下载shell，o(╯□╰)o其实就是一条shell</span><br><span class="line">└── pom.xml // 正常maven配置</span><br></pre></td></tr></table></figure>
-<h2 id="文件内容"><a href="#文件内容" class="headerlink" title="文件内容"></a>文件内容</h2><p><code>down.sh</code> 内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/sh</span><br><span class="line"># Author: hocgin@gmail.com</span><br><span class="line"># -------------Use--------------</span><br><span class="line"># sh down.sh</span><br><span class="line"># ------------------------------</span><br><span class="line"># 运行pom.xml 下载jar</span><br><span class="line">NOW_PATH=$(cd &quot;$(dirname &quot;$0&quot;)&quot;; pwd)</span><br><span class="line">POM_XML=$NOW_PATH&quot;/pom.xml&quot;</span><br><span class="line">TARGET_DIR=$NOW_PATH&quot;/target&quot;</span><br><span class="line">mvn -f $POM_XML dependency:copy-dependencies</span><br><span class="line">sudo chmod -R 777 $TARGET_DIR</span><br></pre></td></tr></table></figure></p>
-<p><code>pom.xml</code> 内容：</p>
-<blockquote>
-<p>正常maven的pom.xml内容</p>
+        <p>起因，为了方便hexo发布博客，所以想把NodeJS绿化在U盘上..<br>谁叫网上只有win版的呢！自己码起来～<br>绿化 o(╯□╰)o<br><a id="more"></a></p>
+<h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Green4nodeJS</span><br><span class="line">├── hocgin.github.io // github博客目录</span><br><span class="line">├── node // nodejs基本目录</span><br><span class="line">│   ├── node-linux // nodejs源文件</span><br><span class="line">│   ├── cache // 创建一个空文件夹，即可</span><br><span class="line">│   ├── init-module // 创建一个空文件夹，即可</span><br><span class="line">│   └── userconfig // 创建一个空文件夹，即可</span><br><span class="line">└── init.sh // 初始化shell文件 *重要</span><br></pre></td></tr></table></figure>
+<h2 id="初始化文件"><a href="#初始化文件" class="headerlink" title="初始化文件"></a>初始化文件</h2><blockquote>
+<p>主要是加载配置环境，初始化变量</p>
 </blockquote>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">project</span> <span class="attr">xmlns</span>=<span class="string">"http://maven.apache.org/POM/4.0.0"</span> <span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></span><br><span class="line">  <span class="attr">xsi:schemaLocation</span>=<span class="string">"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- 项目的名称 start --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">modelVersion</span>&gt;</span>4.0.0<span class="tag">&lt;/<span class="name">modelVersion</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>temp.download<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>temp-download<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 项目的名称 end --&gt;</span></span><br><span class="line"></span><br><span class="line">	<span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">      <span class="comment">&lt;!-- 要下载的jar start --&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.json<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>json<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">version</span>&gt;</span>20160212<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">     <span class="comment">&lt;!-- 要下载的jar end --&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">project</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><code>init.sh</code> 内容<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line"># Author: hocgin@gmail.com</span><br><span class="line"># -------------Use--------------</span><br><span class="line"># source init.sh or . init.sh</span><br><span class="line"># ------------------------------</span><br><span class="line">NOW_PATH=$(cd &quot;$(dirname &quot;$0&quot;)&quot;; pwd)</span><br><span class="line">NODE_NAME=&quot;node-linux&quot;</span><br><span class="line">NODE_HOME=$NOW_PATH&quot;/node/&quot;$NODE_NAME</span><br><span class="line">NODE_PATH=$NODE_HOME&quot;/bin&quot;</span><br><span class="line">NPM_PATH=$NODE_HOME&quot;/lib/node_modules/npm/bin&quot;</span><br><span class="line">sudo chmod +x -R $NPM_PATH&quot;/.&quot;</span><br><span class="line">export PATH=$PATH:$NODE_PATH:$NPM_PATH</span><br><span class="line"># &quot;/home/hocgin/.npmrc&quot;</span><br><span class="line">npm set userconfig $NOW_PATH&quot;/node/userconfig&quot;</span><br><span class="line"># &quot;/home/hocgin/.npm-init.js&quot;</span><br><span class="line">npm set init-module $NOW_PATH&quot;/node/init-module&quot;</span><br><span class="line"># &quot;/home/hocgin/.npm&quot;</span><br><span class="line">npm set cache  $NOW_PATH&quot;/node/cache&quot;</span><br></pre></td></tr></table></figure></p>
+<p>修改 <code>/node/node-linux/lib/node_modules/npm/bin/npm</code> 文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># NPM_CLI_JS=&quot;$basedir/node_modules/npm/bin/npm-cli.js&quot;</span><br><span class="line">NPM_CLI_JS=&quot;$basedir/npm-cli.js&quot;</span><br></pre></td></tr></table></figure></p>
 <p>完成</p>
 <h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">source init.sh</span><br><span class="line"># Or</span><br><span class="line">. init.sh</span><br><span class="line"></span><br><span class="line">cd hocgin.github.io</span><br><span class="line"># 尽情hexo吧</span><br></pre></td></tr></table></figure>
+<p><code>注: 安装module时请加上 -g</code></p>
 <p>End</p>
 
       
@@ -391,9 +391,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Maven/" rel="tag">#Maven</a>
+            <a href="/tags/折腾/" rel="tag">#折腾</a>
           
             <a href="/tags/Ubuntu/" rel="tag">#Ubuntu</a>
+          
+            <a href="/tags/NodeJS/" rel="tag">#NodeJS</a>
           
         </div>
       
@@ -402,16 +404,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/04/25/绿化nodejs_for_linux版/" rel="next" title="绿化NodeJS for linux版">
-                <i class="fa fa-chevron-left"></i> 绿化NodeJS for linux版
+              <a href="/2016/03/26/hexo-功能扩展/" rel="next" title="hexo 功能扩展">
+                <i class="fa fa-chevron-left"></i> hexo 功能扩展
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/05/17/复习、考试/" rel="prev" title="复习、考试">
-                复习、考试 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/04/25/使用Maven下载jar包-linux版/" rel="prev" title="使用Maven下载jar包 linux版">
+                使用Maven下载jar包 linux版 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -427,10 +429,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/04/25/使用Maven下载jar包_linux版/"
-     data-title="使用Maven下载jar包 linux版"
+        <div class="ds-share flat" data-thread-key="2016/04/25/绿化nodejs-for-linux版/"
+     data-title="绿化NodeJS for linux版"
      data-content=""
-     data-url="http://hocg.in/2016/04/25/使用Maven下载jar包_linux版/">
+     data-url="http://hocg.in/2016/04/25/绿化nodejs-for-linux版/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -457,8 +459,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/04/25/使用Maven下载jar包_linux版/"
-           data-title="使用Maven下载jar包 linux版" data-url="http://hocg.in/2016/04/25/使用Maven下载jar包_linux版/">
+      <div class="ds-thread" data-thread-key="2016/04/25/绿化nodejs-for-linux版/"
+           data-title="绿化NodeJS for linux版" data-url="http://hocg.in/2016/04/25/绿化nodejs-for-linux版/">
       </div>
     
   </div>
@@ -596,7 +598,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#目录结构"><span class="nav-number">1.</span> <span class="nav-text">目录结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文件内容"><span class="nav-number">2.</span> <span class="nav-text">文件内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用方法"><span class="nav-number">3.</span> <span class="nav-text">使用方法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#目录结构"><span class="nav-number">1.</span> <span class="nav-text">目录结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化文件"><span class="nav-number">2.</span> <span class="nav-text">初始化文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用方法"><span class="nav-number">3.</span> <span class="nav-text">使用方法</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">

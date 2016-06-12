@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hocg.in/"/>
-  <updated>2016-06-12T11:58:12.540Z</updated>
+  <updated>2016-05-16T09:44:57.000Z</updated>
   <id>http://hocg.in/</id>
   
   <author>
@@ -14,6 +14,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>复习、考试</title>
+    <link href="http://hocg.in/2016/06/12/%E5%A4%8D%E4%B9%A0-%E8%80%83%E8%AF%95/"/>
+    <id>http://hocg.in/2016/06/12/复习-考试/</id>
+    <published>2016-06-12T11:59:00.215Z</published>
+    <updated>2016-05-16T09:44:57.000Z</updated>
+    
+    <content type="html">&lt;p&gt;复习一周，就上考场 o(╯□╰)o&lt;br&gt;但是总算考完了，思想折磨了我5个月..&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;br&gt;等分数把。。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;复习一周，就上考场 o(╯□╰)o&lt;br&gt;但是总算考完了，思想折磨了我5个月..&lt;br&gt;
+    
+    </summary>
+    
+      <category term="琐事" scheme="http://hocg.in/categories/%E7%90%90%E4%BA%8B/"/>
+    
+    
+      <category term="考试" scheme="http://hocg.in/tags/%E8%80%83%E8%AF%95/"/>
+    
+      <category term="感悟" scheme="http://hocg.in/tags/%E6%84%9F%E6%82%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>谈JVM，字节码</title>
@@ -249,34 +274,9 @@
   </entry>
   
   <entry>
-    <title>复习、考试</title>
-    <link href="http://hocg.in/2016/05/17/%E5%A4%8D%E4%B9%A0%E3%80%81%E8%80%83%E8%AF%95/"/>
-    <id>http://hocg.in/2016/05/17/复习、考试/</id>
-    <published>2016-05-17T11:14:04.650Z</published>
-    <updated>2016-05-16T09:44:57.000Z</updated>
-    
-    <content type="html">&lt;p&gt;复习一周，就上考场 o(╯□╰)o&lt;br&gt;但是总算考完了，思想折磨了我5个月..&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;br&gt;等分数把。。&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;复习一周，就上考场 o(╯□╰)o&lt;br&gt;但是总算考完了，思想折磨了我5个月..&lt;br&gt;
-    
-    </summary>
-    
-      <category term="琐事" scheme="http://hocg.in/categories/%E7%90%90%E4%BA%8B/"/>
-    
-    
-      <category term="考试" scheme="http://hocg.in/tags/%E8%80%83%E8%AF%95/"/>
-    
-      <category term="感悟" scheme="http://hocg.in/tags/%E6%84%9F%E6%82%9F/"/>
-    
-  </entry>
-  
-  <entry>
     <title>使用Maven下载jar包 linux版</title>
-    <link href="http://hocg.in/2016/04/25/%E4%BD%BF%E7%94%A8Maven%E4%B8%8B%E8%BD%BDjar%E5%8C%85_linux%E7%89%88/"/>
-    <id>http://hocg.in/2016/04/25/使用Maven下载jar包_linux版/</id>
+    <link href="http://hocg.in/2016/04/25/%E4%BD%BF%E7%94%A8Maven%E4%B8%8B%E8%BD%BDjar%E5%8C%85-linux%E7%89%88/"/>
+    <id>http://hocg.in/2016/04/25/使用Maven下载jar包-linux版/</id>
     <published>2016-04-25T01:38:49.000Z</published>
     <updated>2016-04-25T04:56:16.000Z</updated>
     
@@ -312,8 +312,8 @@
   
   <entry>
     <title>绿化NodeJS for linux版</title>
-    <link href="http://hocg.in/2016/04/25/%E7%BB%BF%E5%8C%96nodejs_for_linux%E7%89%88/"/>
-    <id>http://hocg.in/2016/04/25/绿化nodejs_for_linux版/</id>
+    <link href="http://hocg.in/2016/04/25/%E7%BB%BF%E5%8C%96nodejs-for-linux%E7%89%88/"/>
+    <id>http://hocg.in/2016/04/25/绿化nodejs-for-linux版/</id>
     <published>2016-04-25T01:38:49.000Z</published>
     <updated>2016-05-20T12:40:46.517Z</updated>
     
@@ -351,8 +351,8 @@
   
   <entry>
     <title>hexo 功能扩展</title>
-    <link href="http://hocg.in/2016/03/26/hexo%20%E5%8A%9F%E8%83%BD%E6%89%A9%E5%B1%95/"/>
-    <id>http://hocg.in/2016/03/26/hexo 功能扩展/</id>
+    <link href="http://hocg.in/2016/03/26/hexo-%E5%8A%9F%E8%83%BD%E6%89%A9%E5%B1%95/"/>
+    <id>http://hocg.in/2016/03/26/hexo-功能扩展/</id>
     <published>2016-03-26T05:44:28.000Z</published>
     <updated>2016-06-03T16:13:11.433Z</updated>
     
@@ -413,8 +413,8 @@
   
   <entry>
     <title>安装完Ubuntu后,我该做什么</title>
-    <link href="http://hocg.in/2016/03/20/%E5%AE%89%E8%A3%85%E5%AE%8CUbuntu%E5%90%8E_%E6%88%91%E8%AF%A5%E5%81%9A%E4%BB%80%E4%B9%88/"/>
-    <id>http://hocg.in/2016/03/20/安装完Ubuntu后_我该做什么/</id>
+    <link href="http://hocg.in/2016/03/20/%E5%AE%89%E8%A3%85%E5%AE%8CUbuntu%E5%90%8E-%E6%88%91%E8%AF%A5%E5%81%9A%E4%BB%80%E4%B9%88/"/>
+    <id>http://hocg.in/2016/03/20/安装完Ubuntu后-我该做什么/</id>
     <published>2016-03-20T06:34:20.000Z</published>
     <updated>2016-06-12T02:31:00.000Z</updated>
     
@@ -810,7 +810,7 @@
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% fi image-url, alt, title %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;显示 更多按钮&lt;/p&gt;
-&lt;figure class=&quot;highlight md&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;以上是摘要&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;xml&quot;&gt;&lt;span class=&quot;comment&quot;&gt;&amp;lt;!--more--&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;以下是余下全文&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight md&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;以上是摘要&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;!--more--&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;以下是余下全文&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;使用标签别名&lt;/p&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% cq %&amp;#125; 标签别名 &amp;#123;% endcq %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
