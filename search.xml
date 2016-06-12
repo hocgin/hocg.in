@@ -4,7 +4,7 @@
   
     
     <entry>
-      <title><![CDATA[谈JVM，各种过程]]></title>
+      <title><![CDATA[谈JVM,字节码]]></title>
       <url>http://hocg.in/2016/06/12/%E8%B0%88JVM-%E5%AD%97%E8%8A%82%E7%A0%81/</url>
       <content type="html"><![CDATA[<p>谈谈JVM，最近在研究破解jar，有这方面经验的麻烦指导一下思路..<br><a id="more"></a></p>
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://www.yangyong.me/java-class%E6%96%87%E4%BB%B6%E5%92%8C%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AD%97%E8%8A%82%E7%A0%81%E6%8C%87%E4%BB%A4-%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8Bclass%E6%96%87%E4%BB%B6/#viewclass" target="_blank" rel="external">http://www.yangyong.me/java-class%E6%96%87%E4%BB%B6%E5%92%8C%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AD%97%E8%8A%82%E7%A0%81%E6%8C%87%E4%BB%A4-%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8Bclass%E6%96%87%E4%BB%B6/#viewclass</a><br><a href="http://blog.csdn.net/sprayabc/article/details/8576605" target="_blank" rel="external">指令整理</a></p>
