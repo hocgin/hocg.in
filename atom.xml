@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hocg.in/"/>
-  <updated>2016-06-12T06:33:44.515Z</updated>
+  <updated>2016-06-12T11:40:02.311Z</updated>
   <id>http://hocg.in/</id>
   
   <author>
@@ -16,11 +16,205 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>谈JVM，各种过程</title>
+    <link href="http://hocg.in/2016/06/12/%E8%B0%88JVM-%E5%AD%97%E8%8A%82%E7%A0%81/"/>
+    <id>http://hocg.in/2016/06/12/谈JVM-字节码/</id>
+    <published>2016-06-12T11:40:02.327Z</published>
+    <updated>2016-06-12T11:40:02.311Z</updated>
+    
+    <content type="html">&lt;p&gt;谈谈JVM，最近在研究破解jar，有这方面经验的麻烦指导一下思路..&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;参考&quot;&gt;&lt;a href=&quot;#参考&quot; class=&quot;headerlink&quot; title=&quot;参考&quot;&gt;&lt;/a&gt;参考&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://www.yangyong.me/java-class%E6%96%87%E4%BB%B6%E5%92%8C%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AD%97%E8%8A%82%E7%A0%81%E6%8C%87%E4%BB%A4-%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8Bclass%E6%96%87%E4%BB%B6/#viewclass&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.yangyong.me/java-class%E6%96%87%E4%BB%B6%E5%92%8C%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AD%97%E8%8A%82%E7%A0%81%E6%8C%87%E4%BB%A4-%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8Bclass%E6%96%87%E4%BB%B6/#viewclass&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://blog.csdn.net/sprayabc/article/details/8576605&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;指令整理&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;常用指令&quot;&gt;&lt;a href=&quot;#常用指令&quot; class=&quot;headerlink&quot; title=&quot;常用指令&quot;&gt;&lt;/a&gt;常用指令&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 反编译查看`类文件`所有信息&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;javap -verbose [class]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;局部变量类型&quot;&gt;&lt;a href=&quot;#局部变量类型&quot; class=&quot;headerlink&quot; title=&quot;局部变量类型&quot;&gt;&lt;/a&gt;局部变量类型&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;特殊字符表示&lt;/th&gt;
+&lt;th&gt;类型&lt;/th&gt;
+&lt;th&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;c&lt;/td&gt;
+&lt;td&gt;char&lt;/td&gt;
+&lt;td&gt;char类型&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;i&lt;/td&gt;
+&lt;td&gt;int&lt;/td&gt;
+&lt;td&gt;int类型&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;l&lt;/td&gt;
+&lt;td&gt;long&lt;/td&gt;
+&lt;td&gt;long类型&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;s&lt;/td&gt;
+&lt;td&gt;short&lt;/td&gt;
+&lt;td&gt;short类型&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;b&lt;/td&gt;
+&lt;td&gt;byte&lt;/td&gt;
+&lt;td&gt;byte类型&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;f&lt;/td&gt;
+&lt;td&gt;float&lt;/td&gt;
+&lt;td&gt;float类型&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;z&lt;/td&gt;
+&lt;td&gt;boolean&lt;/td&gt;
+&lt;td&gt;布尔类型&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;a&lt;/td&gt;
+&lt;td&gt;reference&lt;/td&gt;
+&lt;td&gt;引用&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&quot;方法信息&quot;&gt;&lt;a href=&quot;#方法信息&quot; class=&quot;headerlink&quot; title=&quot;方法信息&quot;&gt;&lt;/a&gt;方法信息&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;L1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    LOCALVARIABLE this LMain; L0 L1 0&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    LOCALVARIABLE a I L0 L1 1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    MAXSTACK = 0&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    MAXLOCALS = 2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;局部变量参数 LOCALVARIABLE&lt;br&gt;局部表大小 MAXLOCALS&lt;br&gt;操作数栈大小 MAXSTACK&lt;/p&gt;
+&lt;h2 id=&quot;指令&quot;&gt;&lt;a href=&quot;#指令&quot; class=&quot;headerlink&quot; title=&quot;指令&quot;&gt;&lt;/a&gt;指令&lt;/h2&gt;&lt;h3 id=&quot;运算指令&quot;&gt;&lt;a href=&quot;#运算指令&quot; class=&quot;headerlink&quot; title=&quot;运算指令&quot;&gt;&lt;/a&gt;运算指令&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;算术指令用于对两个&lt;code&gt;操作数栈&lt;/code&gt;上的值进行某种特定运算，并把结果重新存入到&lt;code&gt;操作栈&lt;/code&gt;顶。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;加法指令:iadd,ladd,fadd,dadd&lt;/li&gt;
+&lt;li&gt;减法指令:isub,lsub,fsub,dsub&lt;/li&gt;
+&lt;li&gt;乘法指令:imul,lmul,fmul,dmul&lt;/li&gt;
+&lt;li&gt;除法指令:idiv,ldiv,fdiv,ddiv&lt;/li&gt;
+&lt;li&gt;求余指令:irem,lrem,frem,drem&lt;/li&gt;
+&lt;li&gt;取反指令:ineg,leng,fneg,dneg&lt;/li&gt;
+&lt;li&gt;位移指令:ishl,ishr,iushr,lshl,lshr,lushr&lt;/li&gt;
+&lt;li&gt;按位或指令:ior,lor&lt;/li&gt;
+&lt;li&gt;按位与指令:iand,land&lt;/li&gt;
+&lt;li&gt;按位异或指令:ixor,lxor&lt;/li&gt;
+&lt;li&gt;局部变量自增指令:iinc&lt;/li&gt;
+&lt;li&gt;比较指令:dcmpg,dcmpl,fcmpg,fcmpl,lcmp&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;加载和存储指令&quot;&gt;&lt;a href=&quot;#加载和存储指令&quot; class=&quot;headerlink&quot; title=&quot;加载和存储指令&quot;&gt;&lt;/a&gt;加载和存储指令&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;用于&lt;code&gt;局部变量表&lt;/code&gt;和&lt;code&gt;操作数栈&lt;/code&gt;之间来回传输&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;将一个局部变量加载到操作数栈的指令包括：iload,iload&lt;em&gt;&lt;n&gt;，lload、lload&lt;/n&gt;&lt;/em&gt;&lt;n&gt;、float、fload&lt;em&gt;&lt;n&gt;、dload、dload&lt;/n&gt;&lt;/em&gt;&lt;n&gt;，aload、aload_&lt;n&gt;。&lt;/n&gt;&lt;/n&gt;&lt;/n&gt;&lt;/li&gt;
+&lt;li&gt;将一个数值从操作数栈存储到局部变量标的指令：istore,istore&lt;em&gt;&lt;n&gt;,lstore,lstore&lt;/n&gt;&lt;/em&gt;&lt;n&gt;,fstore,fstore&lt;em&gt;&lt;n&gt;,dstore,dstore&lt;/n&gt;&lt;/em&gt;&lt;n&gt;,astore,astore_&lt;n&gt;&lt;/n&gt;&lt;/n&gt;&lt;/n&gt;&lt;/li&gt;
+&lt;li&gt;将常量加载到操作数栈的指令：bipush,sipush,ldc,ldc_w,ldc2_w,aconst_null,iconst&lt;em&gt;ml,iconst&lt;/em&gt;&lt;i&gt;,lconst&lt;em&gt;&lt;l&gt;,fconst&lt;/l&gt;&lt;/em&gt;&lt;f&gt;,dconst_&lt;d&gt;&lt;/d&gt;&lt;/f&gt;&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;局部变量表的访问索引指令:wide&lt;br&gt;  一部分以尖括号结尾的指令代表了一组指令，如iload_&lt;i&gt;，代表了iload_0,iload_1等，这几组指令都是带有一个操作数的通用指令。&lt;/i&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;运算指令-1&quot;&gt;&lt;a href=&quot;#运算指令-1&quot; class=&quot;headerlink&quot; title=&quot;运算指令&quot;&gt;&lt;/a&gt;运算指令&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;对两个&lt;code&gt;操作数栈&lt;/code&gt;上的值进行某种特定运算，并把结果重新存入到&lt;code&gt;操作栈&lt;/code&gt;顶&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;加法指令:iadd,ladd,fadd,dadd&lt;/li&gt;
+&lt;li&gt;减法指令:isub,lsub,fsub,dsub&lt;/li&gt;
+&lt;li&gt;乘法指令:imul,lmul,fmul,dmul&lt;/li&gt;
+&lt;li&gt;除法指令:idiv,ldiv,fdiv,ddiv&lt;/li&gt;
+&lt;li&gt;求余指令:irem,lrem,frem,drem&lt;/li&gt;
+&lt;li&gt;取反指令:ineg,leng,fneg,dneg&lt;/li&gt;
+&lt;li&gt;位移指令:ishl,ishr,iushr,lshl,lshr,lushr&lt;/li&gt;
+&lt;li&gt;按位或指令:ior,lor&lt;/li&gt;
+&lt;li&gt;按位与指令:iand,land&lt;/li&gt;
+&lt;li&gt;按位异或指令:ixor,lxor&lt;/li&gt;
+&lt;li&gt;局部变量自增指令:iinc&lt;/li&gt;
+&lt;li&gt;比较指令:dcmpg,dcmpl,fcmpg,fcmpl,lcmp&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;类型转换指令&quot;&gt;&lt;a href=&quot;#类型转换指令&quot; class=&quot;headerlink&quot; title=&quot;类型转换指令&quot;&gt;&lt;/a&gt;类型转换指令&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;将两种Java虚拟机数值类型相互转换&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;JVM支持宽化类型转换(小范围类型向大范围类型转换)：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;int类型到long,float,double类型&lt;/li&gt;
+&lt;li&gt;long类型到float,double类型&lt;/li&gt;
+&lt;li&gt;float到double类型&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;对象创建与操作&quot;&gt;&lt;a href=&quot;#对象创建与操作&quot; class=&quot;headerlink&quot; title=&quot;对象创建与操作&quot;&gt;&lt;/a&gt;对象创建与操作&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;虽然类实例和数组都是对象，Java虚拟机对类实例和数组的创建与操作使用了不同的字节码指令。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;创建实例的指令:new&lt;/li&gt;
+&lt;li&gt;创建数组的指令:newarray,anewarray,multianewarray&lt;/li&gt;
+&lt;li&gt;访问字段指令:getfield,putfield,getstatic,putstatic&lt;/li&gt;
+&lt;li&gt;把数组元素加载到操作数栈指令:baload,caload,saload,iaload,laload,faload,daload,aaload&lt;/li&gt;
+&lt;li&gt;将操作数栈的数值存储到数组元素中执行:bastore,castore,castore,sastore,iastore,fastore,dastore,aastore&lt;/li&gt;
+&lt;li&gt;取数组长度指令:arraylength&lt;/li&gt;
+&lt;li&gt;检查实例类型指令:instanceof,checkcast&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;操作数栈管理指令&quot;&gt;&lt;a href=&quot;#操作数栈管理指令&quot; class=&quot;headerlink&quot; title=&quot;操作数栈管理指令&quot;&gt;&lt;/a&gt;操作数栈管理指令&lt;/h3&gt;&lt;p&gt;直接操作操作数栈的指令：pop,pop2,dup,dup2,dup_x1,dup2_x1,dup_x2,dup2_x2和swap&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;NOTE: 压入栈顶(DUP)/弹出栈顶(POP)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;控制转移指令&quot;&gt;&lt;a href=&quot;#控制转移指令&quot; class=&quot;headerlink&quot; title=&quot;控制转移指令&quot;&gt;&lt;/a&gt;控制转移指令&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;条件分支:ifeq,iflt,ifle,ifne,ifgt,ifge,ifnull,ifnotnull,if_cmpeq,if_icmpne,if_icmlt,if_icmpgt等&lt;/li&gt;
+&lt;li&gt;复合条件分支:tableswitch,lookupswitch&lt;/li&gt;
+&lt;li&gt;无条件分支:goto,goto_w,jsr,jsr_w,ret&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;方法调用和返回指令&quot;&gt;&lt;a href=&quot;#方法调用和返回指令&quot; class=&quot;headerlink&quot; title=&quot;方法调用和返回指令&quot;&gt;&lt;/a&gt;方法调用和返回指令&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;invokevirtual指令:调用对象的实例方法，根据对象的实际类型进行分派(虚拟机分派)。&lt;/li&gt;
+&lt;li&gt;invokeinterface指令:调用接口方法，在运行时搜索一个实现这个接口方法的对象，找出合适的方法进行调用。&lt;/li&gt;
+&lt;li&gt;invokespecial:调用需要特殊处理的实例方法，包括实例初始化方法，私有方法和父类方法&lt;/li&gt;
+&lt;li&gt;invokestatic:调用类方法(static)&lt;/li&gt;
+&lt;li&gt;方法返回指令是根据返回值的类型区分的，包括ireturn(返回值是boolean,byte,char,short和int),lreturn,freturn,drturn和areturn，另外一个return供void方法，实例初始化方法，类和接口的类初始化i方法使用。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;同步&quot;&gt;&lt;a href=&quot;#同步&quot; class=&quot;headerlink&quot; title=&quot;同步&quot;&gt;&lt;/a&gt;同步&lt;/h3&gt;&lt;h2 id=&quot;Eg&quot;&gt;&lt;a href=&quot;#Eg&quot; class=&quot;headerlink&quot; title=&quot;Eg:&quot;&gt;&lt;/a&gt;Eg:&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;48&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;49&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;50&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;51&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;52&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;53&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;54&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;55&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;56&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;57&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;58&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;59&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;60&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;61&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;62&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;63&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;64&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;65&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;66&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;// class version 52.0 (52)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;// access flags 0x21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;public class Main &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  // compiled from: Main.java&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  // access flags 0x11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  public final I simpleField = 100&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  // access flags 0x0&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;lt;init&amp;gt;()V&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   L0&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    LINENUMBER 12 L0&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    ALOAD 0&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    INVOKESPECIAL java/lang/Object.&amp;lt;init&amp;gt; ()V&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   L1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    LINENUMBER 10 L1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    ALOAD 0&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    BIPUSH 100&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    PUTFIELD Main.simpleField : I&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   L2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    LINENUMBER 13 L2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    GETSTATIC java/lang/System.out : Ljava/io/PrintStream;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    BIPUSH 100&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    INVOKEVIRTUAL java/io/PrintStream.print (I)V&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   L3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    LINENUMBER 14 L3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    RETURN&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   L4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    LOCALVARIABLE this LMain; L0 L4 0&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    MAXSTACK = 2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    MAXLOCALS = 1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  // access flags 0x9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  public static main([Ljava/lang/String;)V&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   L0&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    LINENUMBER 16 L0&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    NEW Main&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    DUP&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    INVOKESPECIAL Main.&amp;lt;init&amp;gt; ()V&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    ASTORE 1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   L1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    LINENUMBER 17 L1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    GETSTATIC java/lang/System.out : Ljava/io/PrintStream;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    LDC &amp;quot;--&amp;gt;&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    INVOKEVIRTUAL java/io/PrintStream.println (Ljava/lang/String;)V&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   L2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    LINENUMBER 19 L2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    RETURN&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   L3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    LOCALVARIABLE args [Ljava/lang/String; L0 L3 0&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    LOCALVARIABLE main LMain; L1 L3 1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    MAXSTACK = 2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    MAXLOCALS = 2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  // access flags 0x21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  public synchronized a(I)V throws java/lang/Exception &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   L0&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    LINENUMBER 23 L0&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    RETURN&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   L1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    LOCALVARIABLE this LMain; L0 L1 0&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    LOCALVARIABLE a I L0 L1 1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    MAXSTACK = 0&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    MAXLOCALS = 2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;谈谈JVM，最近在研究破解jar，有这方面经验的麻烦指导一下思路..&lt;br&gt;
+    
+    </summary>
+    
+      <category term="学习" scheme="http://hocg.in/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="JVM" scheme="http://hocg.in/tags/JVM/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>谈JVM，各种过程</title>
+    <link href="http://hocg.in/2016/06/12/%E8%B0%88JVM-%E5%90%84%E7%A7%8D%E8%BF%87%E7%A8%8B/"/>
+    <id>http://hocg.in/2016/06/12/谈JVM-各种过程/</id>
+    <published>2016-06-12T11:38:05.765Z</published>
+    <updated>2016-06-12T11:38:05.737Z</updated>
+    
+    <content type="html">&lt;p&gt;谈谈JVM 各种过程， XMind等我整理一下，稍后贴出 囧～&lt;br&gt;欢迎指教..&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;总思路&quot;&gt;&lt;a href=&quot;#总思路&quot; class=&quot;headerlink&quot; title=&quot;总思路&quot;&gt;&lt;/a&gt;总思路&lt;/h3&gt;&lt;p&gt;编译过程 -&amp;gt; 运行过程[类加载器过程(类的装载过程) -&amp;gt; 执行过程]&lt;/p&gt;
+&lt;h3 id=&quot;编译过程&quot;&gt;&lt;a href=&quot;#编译过程&quot; class=&quot;headerlink&quot; title=&quot;编译过程&quot;&gt;&lt;/a&gt;编译过程&lt;/h3&gt;&lt;p&gt;.java文件 -javac编译-&amp;gt; .class文件       {-JIT编译(转化+优化)-&amp;gt; 本地方法}[执行过程，当方法执行频率高]&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;运行过程&quot;&gt;&lt;a href=&quot;#运行过程&quot; class=&quot;headerlink&quot; title=&quot;运行过程&quot;&gt;&lt;/a&gt;运行过程&lt;/h3&gt;&lt;p&gt;类加载器 -&amp;gt; (执行引擎 -&amp;gt; 本地库接口)[Java 运行时数据区] -&amp;gt; 本地方法库&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;类加载器过程&quot;&gt;&lt;a href=&quot;#类加载器过程&quot; class=&quot;headerlink&quot; title=&quot;类加载器过程&quot;&gt;&lt;/a&gt;&lt;strong&gt;类加载器&lt;/strong&gt;过程&lt;/h3&gt;&lt;p&gt;[启动]类加载器(JNI) -&amp;gt; [扩展]类加载器 -&amp;gt; [系统]类加载器 -&amp;gt; [自定义]类加载器&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;类装载过程&quot;&gt;&lt;a href=&quot;#类装载过程&quot; class=&quot;headerlink&quot; title=&quot;类装载过程&quot;&gt;&lt;/a&gt;&lt;strong&gt;类&lt;/strong&gt;装载过程&lt;/h3&gt;&lt;p&gt;加载文件到JVM内存 -&amp;gt; (校验语言规范 -&amp;gt; 分配结构存储类的信息 -&amp;gt; 该类常量池中符号更改为直接引用)[Linking] -&amp;gt; 类初始化&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;执行引擎执行过程-逐行读取指令&quot;&gt;&lt;a href=&quot;#执行引擎执行过程-逐行读取指令&quot; class=&quot;headerlink&quot; title=&quot;执行引擎执行过程(逐行读取指令)&quot;&gt;&lt;/a&gt;&lt;strong&gt;执行引擎&lt;/strong&gt;执行过程(逐行读取指令)&lt;/h3&gt;&lt;p&gt;Thread启动 -生成-&amp;gt; JVM栈 -执行方法-&amp;gt; 压入栈帧(包含 局部变量数组&amp;amp;操作数栈&amp;amp;运行时常量池) -&amp;gt; 逐行读取指令&amp;amp;&amp;amp;解释(JVM栈帧 程序计数器存放下一条指令) -&amp;gt; {JIT(转化+优化)-&amp;gt; 本地方法}[当方法执行频率高] -执行&amp;amp;运算-&amp;gt; 结果(存放 操作数栈中) -&amp;gt; 推出栈帧&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;Java-运行时数据区-贯穿整个执行过程&quot;&gt;&lt;a href=&quot;#Java-运行时数据区-贯穿整个执行过程&quot; class=&quot;headerlink&quot; title=&quot;Java 运行时数据区(贯穿整个执行过程)&quot;&gt;&lt;/a&gt;Java 运行时数据区(贯穿整个执行过程)&lt;/h3&gt;&lt;p&gt;共享型数据区：方法区(含运行时常量池[存放方法&amp;amp;变量的实际&lt;strong&gt;地址&lt;/strong&gt;])、堆(存放对象实例)&lt;br&gt;隔离型数据区：JVM 栈、本地方法栈(JNI)、程序计数器&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;谈谈JVM 各种过程， XMind等我整理一下，稍后贴出 囧～&lt;br&gt;欢迎指教..&lt;br&gt;
+    
+    </summary>
+    
+      <category term="原创" scheme="http://hocg.in/categories/%E5%8E%9F%E5%88%9B/"/>
+    
+    
+      <category term="JVM" scheme="http://hocg.in/tags/JVM/"/>
+    
+  </entry>
+  
+  <entry>
     <title>HTTPS 签证</title>
     <link href="http://hocg.in/2016/06/12/HTTPS-%E7%AD%BE%E8%AF%81/"/>
     <id>http://hocg.in/2016/06/12/HTTPS-签证/</id>
-    <published>2016-06-12T06:33:44.519Z</published>
-    <updated>2016-06-12T06:33:44.515Z</updated>
+    <published>2016-06-12T10:40:21.710Z</published>
+    <updated>2016-06-12T06:33:44.000Z</updated>
     
     <content type="html">&lt;h3 id=&quot;关于https&quot;&gt;&lt;a href=&quot;#关于https&quot; class=&quot;headerlink&quot; title=&quot;关于https&quot;&gt;&lt;/a&gt;关于https&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/HTTPS&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;wiki&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
@@ -56,9 +250,9 @@
   
   <entry>
     <title>复习、考试</title>
-    <link href="http://hocg.in/2016/05/23/%E5%A4%8D%E4%B9%A0%E3%80%81%E8%80%83%E8%AF%95/"/>
-    <id>http://hocg.in/2016/05/23/复习、考试/</id>
-    <published>2016-05-23T01:07:41.497Z</published>
+    <link href="http://hocg.in/2016/05/17/%E5%A4%8D%E4%B9%A0%E3%80%81%E8%80%83%E8%AF%95/"/>
+    <id>http://hocg.in/2016/05/17/复习、考试/</id>
+    <published>2016-05-17T11:14:04.650Z</published>
     <updated>2016-05-16T09:44:57.000Z</updated>
     
     <content type="html">&lt;p&gt;复习一周，就上考场 o(╯□╰)o&lt;br&gt;但是总算考完了，思想折磨了我5个月..&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;br&gt;等分数把。。&lt;/p&gt;
@@ -121,7 +315,7 @@
     <link href="http://hocg.in/2016/04/25/%E7%BB%BF%E5%8C%96nodejs_for_linux%E7%89%88/"/>
     <id>http://hocg.in/2016/04/25/绿化nodejs_for_linux版/</id>
     <published>2016-04-25T01:38:49.000Z</published>
-    <updated>2016-05-20T12:40:46.000Z</updated>
+    <updated>2016-05-20T12:40:46.517Z</updated>
     
     <content type="html">&lt;p&gt;起因，为了方便hexo发布博客，所以想把NodeJS绿化在U盘上..&lt;br&gt;谁叫网上只有win版的呢！自己码起来～&lt;br&gt;绿化 o(╯□╰)o&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;目录结构&quot;&gt;&lt;a href=&quot;#目录结构&quot; class=&quot;headerlink&quot; title=&quot;目录结构&quot;&gt;&lt;/a&gt;目录结构&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Green4nodeJS&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;├── hocgin.github.io // github博客目录&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;├── node // nodejs基本目录&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;│   ├── node-linux // nodejs源文件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;│   ├── cache // 创建一个空文件夹，即可&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;│   ├── init-module // 创建一个空文件夹，即可&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;│   └── userconfig // 创建一个空文件夹，即可&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;└── init.sh // 初始化shell文件 *重要&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
@@ -160,7 +354,7 @@
     <link href="http://hocg.in/2016/03/26/hexo%20%E5%8A%9F%E8%83%BD%E6%89%A9%E5%B1%95/"/>
     <id>http://hocg.in/2016/03/26/hexo 功能扩展/</id>
     <published>2016-03-26T05:44:28.000Z</published>
-    <updated>2016-06-03T16:13:11.000Z</updated>
+    <updated>2016-06-03T16:13:11.433Z</updated>
     
     <content type="html">&lt;h2 id=&quot;须知&quot;&gt;&lt;a href=&quot;#须知&quot; class=&quot;headerlink&quot; title=&quot;须知&quot;&gt;&lt;/a&gt;须知&lt;/h2&gt;&lt;p&gt;&lt;code&gt;站点目录&lt;/code&gt;: /&lt;br&gt;&lt;code&gt;主题目录&lt;/code&gt;: /themes/[主题名]&lt;br&gt;&lt;code&gt;主题配置文件&lt;/code&gt;: /themes/[主题名]/_config.yml&lt;br&gt;&lt;code&gt;站点配置文件&lt;/code&gt;: /_config.yml  &lt;/p&gt;
 &lt;h2 id=&quot;添加微信公众号二维码&quot;&gt;&lt;a href=&quot;#添加微信公众号二维码&quot; class=&quot;headerlink&quot; title=&quot;添加微信公众号二维码&quot;&gt;&lt;/a&gt;添加微信公众号二维码&lt;/h2&gt;&lt;p&gt;首先，打开&lt;code&gt;主题目录&lt;/code&gt;下的 &lt;code&gt;layout/_macro/post.swig&lt;/code&gt;&lt;br&gt;然后，找到节点&lt;code&gt;footer&lt;/code&gt;加入以下代码&lt;br&gt;&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;!&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;--&lt;/span&gt; 添加微信图标 &lt;span class=&quot;attr&quot;&gt;start&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;--&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;#123;% if theme.wechat_subscriber.enable %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#123;% if !is_home() %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;hocgin-container&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;          &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;folder&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;           &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;paper&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        	&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;img&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;width&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;100%&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;src&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;&amp;#123;&amp;#123; theme.wechat_subscriber.qcode &amp;#125;&amp;#125;&quot;&lt;/span&gt;/&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;          &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	      &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;hocgin-description&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&amp;#123;&amp;#123; theme.wechat_subscriber.description &amp;#125;&amp;#125;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#123;% endif %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;#123;% endif %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;!&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;--&lt;/span&gt; 添加微信图标 &lt;span class=&quot;attr&quot;&gt;end&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;--&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
@@ -222,7 +416,7 @@
     <link href="http://hocg.in/2016/03/20/%E5%AE%89%E8%A3%85%E5%AE%8CUbuntu%E5%90%8E_%E6%88%91%E8%AF%A5%E5%81%9A%E4%BB%80%E4%B9%88/"/>
     <id>http://hocg.in/2016/03/20/安装完Ubuntu后_我该做什么/</id>
     <published>2016-03-20T06:34:20.000Z</published>
-    <updated>2016-06-12T02:31:00.952Z</updated>
+    <updated>2016-06-12T02:31:00.000Z</updated>
     
     <content type="html">&lt;p&gt;安装完Ubuntu后,我该做什么..(借鉴和整理，还有一些平时遇到的， &lt;strong&gt;不定期更新&lt;/strong&gt;)&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;yuan获取&quot;&gt;&lt;a href=&quot;#yuan获取&quot; class=&quot;headerlink&quot; title=&quot;yuan获取&quot;&gt;&lt;/a&gt;yuan获取&lt;/h2&gt;&lt;p&gt;官方列表： &lt;a href=&quot;http://wiki.ubuntu.org.cn/%E6%BA%90%E5%88%97%E8%A1%A8&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://wiki.ubuntu.org.cn/%E6%BA%90%E5%88%97%E8%A1%A8&lt;/a&gt;&lt;br&gt;网易163： &lt;a href=&quot;http://mirrors.163.com/.help/ubuntu.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://mirrors.163.com/.help/ubuntu.html&lt;/a&gt;&lt;/p&gt;
