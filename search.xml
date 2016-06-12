@@ -4,8 +4,8 @@
   
     
     <entry>
-      <title><![CDATA[个人博客HTTPS 签证]]></title>
-      <url>http://hocg.in/2016/06/02/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2HTTPS-%E7%AD%BE%E8%AF%81/</url>
+      <title><![CDATA[HTTPS 签证]]></title>
+      <url>http://hocg.in/2016/06/12/HTTPS-%E7%AD%BE%E8%AF%81/</url>
       <content type="html"><![CDATA[<h3 id="关于https"><a href="#关于https" class="headerlink" title="关于https"></a>关于https</h3><p><a href="https://en.wikipedia.org/wiki/HTTPS" target="_blank" rel="external">wiki</a></p>
 <blockquote>
 <p>通俗的讲： 高大上</p>
@@ -22,6 +22,7 @@
 <li><code>PLUGIN STORE</code><br><a href="https://hocg.in/">成品</a></li>
 </ul>
 <h3 id="自己搭建的blog"><a href="#自己搭建的blog" class="headerlink" title="自己搭建的blog"></a>自己搭建的blog</h3><p>免费的使用 <a href="https://www.startssl.com/" target="_blank" rel="external">Startssl</a><br><a href="https://blog.lutty.me/" target="_blank" rel="external">成品</a></p>
+<h3 id="TOMCAT-配置https环境"><a href="#TOMCAT-配置https环境" class="headerlink" title="TOMCAT 配置https环境"></a>TOMCAT 配置https环境</h3><p><a href="http://blog.csdn.net/small____fish/article/details/8214938" target="_blank" rel="external"> keytool 教程</a><br>外网回调可尝试使用<a href="http://www.nat123.com" target="_blank" rel="external">nat123</a></p>
 ]]></content>
     </entry>
     
@@ -376,7 +377,7 @@
 <p>Catfish 一款优雅迅捷的文件搜索工具<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 安装</span><br><span class="line">sudo apt-get install catfish</span><br></pre></td></tr></table></figure></p>
 <p>神级命令行软件 Tmux <a href="http://www.wushxin.top/2016/03/28/%E4%BD%BF%E7%94%A8tmux.html" target="_blank" rel="external">说明</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install tmux</span><br></pre></td></tr></table></figure></p>
 </blockquote>
-<h3 id="软件包安装"><a href="#软件包安装" class="headerlink" title="软件包安装"></a>软件包安装</h3><p><a href="http://ubuntu-tweak.com/" target="_blank" rel="external">系统管理 UbuntuTweak</a><br><code>打开：搜索 Ubuntu Tweak</code><br><a href="https://www.jianguoyun.com" target="_blank" rel="external">同步软件 坚果云</a><br><code>打开：搜索 Nutstore</code><br><a href="https://github.com/LiuLang/bcloud-packages" target="_blank" rel="external">百度网盘桌面客户端 BCloud</a><br><a href="https://launchpad.net/indicator-stickynotes" target="_blank" rel="external">便签</a><br><a href="http://keepass.info/" target="_blank" rel="external">MarkDown编辑软件 HarooPad</a><br><a href="http://pad.haroopress.com/" target="_blank" rel="external">密码管理器 keepass2</a><br><a href="http://pinyin.sogou.com/linux/?r=pinyin" target="_blank" rel="external">搜狗输入法</a><br><a href="http://cidian.youdao.com/multi.html#linuxAll" target="_blank" rel="external">有道词典</a><br><a href="http://www.vmware.com/products/workstation/" target="_blank" rel="external">VMware Workstation</a><br><a href="http://www.google.cn/chrome/browser/" target="_blank" rel="external">Chrome</a><br><a href="https://github.com/cosven/FeelUOwn" target="_blank" rel="external">网易音乐</a></p>
+<h3 id="软件包安装"><a href="#软件包安装" class="headerlink" title="软件包安装"></a>软件包安装</h3><p><a href="http://ubuntu-tweak.com/" target="_blank" rel="external">系统管理 UbuntuTweak</a><br><code>打开：搜索 Ubuntu Tweak</code><br><a href="https://www.jianguoyun.com" target="_blank" rel="external">同步软件 坚果云</a><br><code>打开：搜索 Nutstore</code><br><a href="https://github.com/LiuLang/bcloud-packages" target="_blank" rel="external">百度网盘桌面客户端 BCloud</a><br><a href="https://launchpad.net/indicator-stickynotes" target="_blank" rel="external">便签</a><br><a href="http://keepass.info/" target="_blank" rel="external">MarkDown编辑软件 HarooPad</a><br><a href="http://pad.haroopress.com/" target="_blank" rel="external">密码管理器 keepass2</a><br><a href="http://pinyin.sogou.com/linux/?r=pinyin" target="_blank" rel="external">搜狗输入法</a><br><a href="http://cidian.youdao.com/multi.html#linuxAll" target="_blank" rel="external">有道词典</a><br><a href="http://www.vmware.com/products/workstation/" target="_blank" rel="external">VMware Workstation</a><br><a href="http://www.google.cn/chrome/browser/" target="_blank" rel="external">Chrome</a><br><a href="https://github.com/cosven/FeelUOwn" target="_blank" rel="external">网易音乐</a><br><a href="http://fabforce.net/dbdesigner4/" target="_blank" rel="external">数据库设计软件 DBdesigner4</a></p>
 <hr>
 <h3 id="听起来不错"><a href="#听起来不错" class="headerlink" title="听起来不错"></a>听起来不错</h3><ol>
 <li>Deluge Bittorrent 客户端</li>

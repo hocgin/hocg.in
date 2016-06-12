@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hocg.in/"/>
-  <updated>2016-06-02T03:54:45.604Z</updated>
+  <updated>2016-06-12T06:33:44.515Z</updated>
   <id>http://hocg.in/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>个人博客HTTPS 签证</title>
-    <link href="http://hocg.in/2016/06/02/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2HTTPS-%E7%AD%BE%E8%AF%81/"/>
-    <id>http://hocg.in/2016/06/02/个人博客HTTPS-签证/</id>
-    <published>2016-06-02T03:54:45.608Z</published>
-    <updated>2016-06-02T03:54:45.604Z</updated>
+    <title>HTTPS 签证</title>
+    <link href="http://hocg.in/2016/06/12/HTTPS-%E7%AD%BE%E8%AF%81/"/>
+    <id>http://hocg.in/2016/06/12/HTTPS-签证/</id>
+    <published>2016-06-12T06:33:44.519Z</published>
+    <updated>2016-06-12T06:33:44.515Z</updated>
     
     <content type="html">&lt;h3 id=&quot;关于https&quot;&gt;&lt;a href=&quot;#关于https&quot; class=&quot;headerlink&quot; title=&quot;关于https&quot;&gt;&lt;/a&gt;关于https&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/HTTPS&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;wiki&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
@@ -38,6 +38,7 @@
 &lt;li&gt;&lt;code&gt;PLUGIN STORE&lt;/code&gt;&lt;br&gt;&lt;a href=&quot;https://hocg.in/&quot;&gt;成品&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&quot;自己搭建的blog&quot;&gt;&lt;a href=&quot;#自己搭建的blog&quot; class=&quot;headerlink&quot; title=&quot;自己搭建的blog&quot;&gt;&lt;/a&gt;自己搭建的blog&lt;/h3&gt;&lt;p&gt;免费的使用 &lt;a href=&quot;https://www.startssl.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Startssl&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://blog.lutty.me/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;成品&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;TOMCAT-配置https环境&quot;&gt;&lt;a href=&quot;#TOMCAT-配置https环境&quot; class=&quot;headerlink&quot; title=&quot;TOMCAT 配置https环境&quot;&gt;&lt;/a&gt;TOMCAT 配置https环境&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/small____fish/article/details/8214938&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt; keytool 教程&lt;/a&gt;&lt;br&gt;外网回调可尝试使用&lt;a href=&quot;http://www.nat123.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;nat123&lt;/a&gt;&lt;/p&gt;
 </content>
     
     <summary type="html">
@@ -221,7 +222,7 @@
     <link href="http://hocg.in/2016/03/20/%E5%AE%89%E8%A3%85%E5%AE%8CUbuntu%E5%90%8E_%E6%88%91%E8%AF%A5%E5%81%9A%E4%BB%80%E4%B9%88/"/>
     <id>http://hocg.in/2016/03/20/安装完Ubuntu后_我该做什么/</id>
     <published>2016-03-20T06:34:20.000Z</published>
-    <updated>2016-06-06T04:04:21.317Z</updated>
+    <updated>2016-06-12T02:31:00.952Z</updated>
     
     <content type="html">&lt;p&gt;安装完Ubuntu后,我该做什么..(借鉴和整理，还有一些平时遇到的， &lt;strong&gt;不定期更新&lt;/strong&gt;)&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;yuan获取&quot;&gt;&lt;a href=&quot;#yuan获取&quot; class=&quot;headerlink&quot; title=&quot;yuan获取&quot;&gt;&lt;/a&gt;yuan获取&lt;/h2&gt;&lt;p&gt;官方列表： &lt;a href=&quot;http://wiki.ubuntu.org.cn/%E6%BA%90%E5%88%97%E8%A1%A8&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://wiki.ubuntu.org.cn/%E6%BA%90%E5%88%97%E8%A1%A8&lt;/a&gt;&lt;br&gt;网易163： &lt;a href=&quot;http://mirrors.163.com/.help/ubuntu.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://mirrors.163.com/.help/ubuntu.html&lt;/a&gt;&lt;/p&gt;
@@ -488,7 +489,7 @@
 &lt;p&gt;Catfish 一款优雅迅捷的文件搜索工具&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# 安装&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get install catfish&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;神级命令行软件 Tmux &lt;a href=&quot;http://www.wushxin.top/2016/03/28/%E4%BD%BF%E7%94%A8tmux.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;说明&lt;/a&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get install tmux&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h3 id=&quot;软件包安装&quot;&gt;&lt;a href=&quot;#软件包安装&quot; class=&quot;headerlink&quot; title=&quot;软件包安装&quot;&gt;&lt;/a&gt;软件包安装&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;http://ubuntu-tweak.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;系统管理 UbuntuTweak&lt;/a&gt;&lt;br&gt;&lt;code&gt;打开：搜索 Ubuntu Tweak&lt;/code&gt;&lt;br&gt;&lt;a href=&quot;https://www.jianguoyun.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;同步软件 坚果云&lt;/a&gt;&lt;br&gt;&lt;code&gt;打开：搜索 Nutstore&lt;/code&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/LiuLang/bcloud-packages&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;百度网盘桌面客户端 BCloud&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://launchpad.net/indicator-stickynotes&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;便签&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://keepass.info/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;MarkDown编辑软件 HarooPad&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://pad.haroopress.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;密码管理器 keepass2&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://pinyin.sogou.com/linux/?r=pinyin&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;搜狗输入法&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://cidian.youdao.com/multi.html#linuxAll&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;有道词典&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.vmware.com/products/workstation/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;VMware Workstation&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.google.cn/chrome/browser/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Chrome&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/cosven/FeelUOwn&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;网易音乐&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;软件包安装&quot;&gt;&lt;a href=&quot;#软件包安装&quot; class=&quot;headerlink&quot; title=&quot;软件包安装&quot;&gt;&lt;/a&gt;软件包安装&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;http://ubuntu-tweak.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;系统管理 UbuntuTweak&lt;/a&gt;&lt;br&gt;&lt;code&gt;打开：搜索 Ubuntu Tweak&lt;/code&gt;&lt;br&gt;&lt;a href=&quot;https://www.jianguoyun.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;同步软件 坚果云&lt;/a&gt;&lt;br&gt;&lt;code&gt;打开：搜索 Nutstore&lt;/code&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/LiuLang/bcloud-packages&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;百度网盘桌面客户端 BCloud&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://launchpad.net/indicator-stickynotes&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;便签&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://keepass.info/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;MarkDown编辑软件 HarooPad&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://pad.haroopress.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;密码管理器 keepass2&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://pinyin.sogou.com/linux/?r=pinyin&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;搜狗输入法&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://cidian.youdao.com/multi.html#linuxAll&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;有道词典&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.vmware.com/products/workstation/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;VMware Workstation&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.google.cn/chrome/browser/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Chrome&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/cosven/FeelUOwn&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;网易音乐&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://fabforce.net/dbdesigner4/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;数据库设计软件 DBdesigner4&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h3 id=&quot;听起来不错&quot;&gt;&lt;a href=&quot;#听起来不错&quot; class=&quot;headerlink&quot; title=&quot;听起来不错&quot;&gt;&lt;/a&gt;听起来不错&lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;Deluge Bittorrent 客户端&lt;/li&gt;
