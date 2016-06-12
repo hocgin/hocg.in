@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hocg.in/"/>
-  <updated>2016-05-16T09:44:57.000Z</updated>
+  <updated>2016-06-12T12:02:47.847Z</updated>
   <id>http://hocg.in/</id>
   
   <author>
@@ -16,27 +16,37 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>复习、考试</title>
-    <link href="http://hocg.in/2016/06/12/%E5%A4%8D%E4%B9%A0-%E8%80%83%E8%AF%95/"/>
-    <id>http://hocg.in/2016/06/12/复习-考试/</id>
-    <published>2016-06-12T11:59:00.215Z</published>
-    <updated>2016-05-16T09:44:57.000Z</updated>
+    <title>谈JVM，各种过程</title>
+    <link href="http://hocg.in/2016/06/12/%E8%B0%88JVM-%E5%90%84%E7%A7%8D%E8%BF%87%E7%A8%8B/"/>
+    <id>http://hocg.in/2016/06/12/谈JVM-各种过程/</id>
+    <published>2016-06-12T11:37:49.000Z</published>
+    <updated>2016-06-12T12:02:47.847Z</updated>
     
-    <content type="html">&lt;p&gt;复习一周，就上考场 o(╯□╰)o&lt;br&gt;但是总算考完了，思想折磨了我5个月..&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;br&gt;等分数把。。&lt;/p&gt;
+    <content type="html">&lt;p&gt;谈谈JVM 各种过程， XMind等我整理一下，稍后贴出 囧～&lt;br&gt;欢迎指教..&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;总思路&quot;&gt;&lt;a href=&quot;#总思路&quot; class=&quot;headerlink&quot; title=&quot;总思路&quot;&gt;&lt;/a&gt;总思路&lt;/h3&gt;&lt;p&gt;编译过程 -&amp;gt; 运行过程[类加载器过程(类的装载过程) -&amp;gt; 执行过程]&lt;/p&gt;
+&lt;h3 id=&quot;编译过程&quot;&gt;&lt;a href=&quot;#编译过程&quot; class=&quot;headerlink&quot; title=&quot;编译过程&quot;&gt;&lt;/a&gt;编译过程&lt;/h3&gt;&lt;p&gt;.java文件 -javac编译-&amp;gt; .class文件       {-JIT编译(转化+优化)-&amp;gt; 本地方法}[执行过程，当方法执行频率高]&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;运行过程&quot;&gt;&lt;a href=&quot;#运行过程&quot; class=&quot;headerlink&quot; title=&quot;运行过程&quot;&gt;&lt;/a&gt;运行过程&lt;/h3&gt;&lt;p&gt;类加载器 -&amp;gt; (执行引擎 -&amp;gt; 本地库接口)[Java 运行时数据区] -&amp;gt; 本地方法库&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;类加载器过程&quot;&gt;&lt;a href=&quot;#类加载器过程&quot; class=&quot;headerlink&quot; title=&quot;类加载器过程&quot;&gt;&lt;/a&gt;&lt;strong&gt;类加载器&lt;/strong&gt;过程&lt;/h3&gt;&lt;p&gt;[启动]类加载器(JNI) -&amp;gt; [扩展]类加载器 -&amp;gt; [系统]类加载器 -&amp;gt; [自定义]类加载器&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;类装载过程&quot;&gt;&lt;a href=&quot;#类装载过程&quot; class=&quot;headerlink&quot; title=&quot;类装载过程&quot;&gt;&lt;/a&gt;&lt;strong&gt;类&lt;/strong&gt;装载过程&lt;/h3&gt;&lt;p&gt;加载文件到JVM内存 -&amp;gt; (校验语言规范 -&amp;gt; 分配结构存储类的信息 -&amp;gt; 该类常量池中符号更改为直接引用)[Linking] -&amp;gt; 类初始化&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;执行引擎执行过程-逐行读取指令&quot;&gt;&lt;a href=&quot;#执行引擎执行过程-逐行读取指令&quot; class=&quot;headerlink&quot; title=&quot;执行引擎执行过程(逐行读取指令)&quot;&gt;&lt;/a&gt;&lt;strong&gt;执行引擎&lt;/strong&gt;执行过程(逐行读取指令)&lt;/h3&gt;&lt;p&gt;Thread启动 -生成-&amp;gt; JVM栈 -执行方法-&amp;gt; 压入栈帧(包含 局部变量数组&amp;amp;操作数栈&amp;amp;运行时常量池) -&amp;gt; 逐行读取指令&amp;amp;&amp;amp;解释(JVM栈帧 程序计数器存放下一条指令) -&amp;gt; {JIT(转化+优化)-&amp;gt; 本地方法}[当方法执行频率高] -执行&amp;amp;运算-&amp;gt; 结果(存放 操作数栈中) -&amp;gt; 推出栈帧&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;Java-运行时数据区-贯穿整个执行过程&quot;&gt;&lt;a href=&quot;#Java-运行时数据区-贯穿整个执行过程&quot; class=&quot;headerlink&quot; title=&quot;Java 运行时数据区(贯穿整个执行过程)&quot;&gt;&lt;/a&gt;Java 运行时数据区(贯穿整个执行过程)&lt;/h3&gt;&lt;p&gt;共享型数据区：方法区(含运行时常量池[存放方法&amp;amp;变量的实际&lt;strong&gt;地址&lt;/strong&gt;])、堆(存放对象实例)&lt;br&gt;隔离型数据区：JVM 栈、本地方法栈(JNI)、程序计数器&lt;/p&gt;
 </content>
     
     <summary type="html">
     
-      &lt;p&gt;复习一周，就上考场 o(╯□╰)o&lt;br&gt;但是总算考完了，思想折磨了我5个月..&lt;br&gt;
+      &lt;p&gt;谈谈JVM 各种过程， XMind等我整理一下，稍后贴出 囧～&lt;br&gt;欢迎指教..&lt;br&gt;
     
     </summary>
     
-      <category term="琐事" scheme="http://hocg.in/categories/%E7%90%90%E4%BA%8B/"/>
+      <category term="原创" scheme="http://hocg.in/categories/%E5%8E%9F%E5%88%9B/"/>
     
     
-      <category term="考试" scheme="http://hocg.in/tags/%E8%80%83%E8%AF%95/"/>
-    
-      <category term="感悟" scheme="http://hocg.in/tags/%E6%84%9F%E6%82%9F/"/>
+      <category term="JVM" scheme="http://hocg.in/tags/JVM/"/>
     
   </entry>
   
@@ -44,8 +54,8 @@
     <title>谈JVM，字节码</title>
     <link href="http://hocg.in/2016/06/12/%E8%B0%88JVM-%E5%AD%97%E8%8A%82%E7%A0%81/"/>
     <id>http://hocg.in/2016/06/12/谈JVM-字节码/</id>
-    <published>2016-06-12T11:58:12.552Z</published>
-    <updated>2016-06-12T11:58:12.540Z</updated>
+    <published>2016-06-12T11:37:49.000Z</published>
+    <updated>2016-06-12T12:02:27.032Z</updated>
     
     <content type="html">&lt;p&gt;谈谈JVM，最近在研究破解jar，有这方面经验的麻烦指导一下思路..&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;参考&quot;&gt;&lt;a href=&quot;#参考&quot; class=&quot;headerlink&quot; title=&quot;参考&quot;&gt;&lt;/a&gt;参考&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://www.yangyong.me/java-class%E6%96%87%E4%BB%B6%E5%92%8C%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AD%97%E8%8A%82%E7%A0%81%E6%8C%87%E4%BB%A4-%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8Bclass%E6%96%87%E4%BB%B6/#viewclass&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;参考1&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://blog.csdn.net/sprayabc/article/details/8576605&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;指令整理&lt;/a&gt;&lt;/p&gt;
@@ -200,46 +210,11 @@
   </entry>
   
   <entry>
-    <title>谈JVM，各种过程</title>
-    <link href="http://hocg.in/2016/06/12/%E8%B0%88JVM-%E5%90%84%E7%A7%8D%E8%BF%87%E7%A8%8B/"/>
-    <id>http://hocg.in/2016/06/12/谈JVM-各种过程/</id>
-    <published>2016-06-12T11:38:05.765Z</published>
-    <updated>2016-06-12T11:38:05.737Z</updated>
-    
-    <content type="html">&lt;p&gt;谈谈JVM 各种过程， XMind等我整理一下，稍后贴出 囧～&lt;br&gt;欢迎指教..&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&quot;总思路&quot;&gt;&lt;a href=&quot;#总思路&quot; class=&quot;headerlink&quot; title=&quot;总思路&quot;&gt;&lt;/a&gt;总思路&lt;/h3&gt;&lt;p&gt;编译过程 -&amp;gt; 运行过程[类加载器过程(类的装载过程) -&amp;gt; 执行过程]&lt;/p&gt;
-&lt;h3 id=&quot;编译过程&quot;&gt;&lt;a href=&quot;#编译过程&quot; class=&quot;headerlink&quot; title=&quot;编译过程&quot;&gt;&lt;/a&gt;编译过程&lt;/h3&gt;&lt;p&gt;.java文件 -javac编译-&amp;gt; .class文件       {-JIT编译(转化+优化)-&amp;gt; 本地方法}[执行过程，当方法执行频率高]&lt;/p&gt;
-&lt;hr&gt;
-&lt;h3 id=&quot;运行过程&quot;&gt;&lt;a href=&quot;#运行过程&quot; class=&quot;headerlink&quot; title=&quot;运行过程&quot;&gt;&lt;/a&gt;运行过程&lt;/h3&gt;&lt;p&gt;类加载器 -&amp;gt; (执行引擎 -&amp;gt; 本地库接口)[Java 运行时数据区] -&amp;gt; 本地方法库&lt;/p&gt;
-&lt;hr&gt;
-&lt;h3 id=&quot;类加载器过程&quot;&gt;&lt;a href=&quot;#类加载器过程&quot; class=&quot;headerlink&quot; title=&quot;类加载器过程&quot;&gt;&lt;/a&gt;&lt;strong&gt;类加载器&lt;/strong&gt;过程&lt;/h3&gt;&lt;p&gt;[启动]类加载器(JNI) -&amp;gt; [扩展]类加载器 -&amp;gt; [系统]类加载器 -&amp;gt; [自定义]类加载器&lt;/p&gt;
-&lt;hr&gt;
-&lt;h3 id=&quot;类装载过程&quot;&gt;&lt;a href=&quot;#类装载过程&quot; class=&quot;headerlink&quot; title=&quot;类装载过程&quot;&gt;&lt;/a&gt;&lt;strong&gt;类&lt;/strong&gt;装载过程&lt;/h3&gt;&lt;p&gt;加载文件到JVM内存 -&amp;gt; (校验语言规范 -&amp;gt; 分配结构存储类的信息 -&amp;gt; 该类常量池中符号更改为直接引用)[Linking] -&amp;gt; 类初始化&lt;/p&gt;
-&lt;hr&gt;
-&lt;h3 id=&quot;执行引擎执行过程-逐行读取指令&quot;&gt;&lt;a href=&quot;#执行引擎执行过程-逐行读取指令&quot; class=&quot;headerlink&quot; title=&quot;执行引擎执行过程(逐行读取指令)&quot;&gt;&lt;/a&gt;&lt;strong&gt;执行引擎&lt;/strong&gt;执行过程(逐行读取指令)&lt;/h3&gt;&lt;p&gt;Thread启动 -生成-&amp;gt; JVM栈 -执行方法-&amp;gt; 压入栈帧(包含 局部变量数组&amp;amp;操作数栈&amp;amp;运行时常量池) -&amp;gt; 逐行读取指令&amp;amp;&amp;amp;解释(JVM栈帧 程序计数器存放下一条指令) -&amp;gt; {JIT(转化+优化)-&amp;gt; 本地方法}[当方法执行频率高] -执行&amp;amp;运算-&amp;gt; 结果(存放 操作数栈中) -&amp;gt; 推出栈帧&lt;/p&gt;
-&lt;hr&gt;
-&lt;h3 id=&quot;Java-运行时数据区-贯穿整个执行过程&quot;&gt;&lt;a href=&quot;#Java-运行时数据区-贯穿整个执行过程&quot; class=&quot;headerlink&quot; title=&quot;Java 运行时数据区(贯穿整个执行过程)&quot;&gt;&lt;/a&gt;Java 运行时数据区(贯穿整个执行过程)&lt;/h3&gt;&lt;p&gt;共享型数据区：方法区(含运行时常量池[存放方法&amp;amp;变量的实际&lt;strong&gt;地址&lt;/strong&gt;])、堆(存放对象实例)&lt;br&gt;隔离型数据区：JVM 栈、本地方法栈(JNI)、程序计数器&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;谈谈JVM 各种过程， XMind等我整理一下，稍后贴出 囧～&lt;br&gt;欢迎指教..&lt;br&gt;
-    
-    </summary>
-    
-      <category term="原创" scheme="http://hocg.in/categories/%E5%8E%9F%E5%88%9B/"/>
-    
-    
-      <category term="JVM" scheme="http://hocg.in/tags/JVM/"/>
-    
-  </entry>
-  
-  <entry>
     <title>HTTPS 签证</title>
-    <link href="http://hocg.in/2016/06/12/HTTPS-%E7%AD%BE%E8%AF%81/"/>
-    <id>http://hocg.in/2016/06/12/HTTPS-签证/</id>
-    <published>2016-06-12T10:40:21.710Z</published>
-    <updated>2016-06-12T06:33:44.000Z</updated>
+    <link href="http://hocg.in/2016/06/02/HTTPS-%E7%AD%BE%E8%AF%81/"/>
+    <id>http://hocg.in/2016/06/02/HTTPS-签证/</id>
+    <published>2016-06-02T03:22:43.000Z</published>
+    <updated>2016-06-12T12:02:39.660Z</updated>
     
     <content type="html">&lt;h3 id=&quot;关于https&quot;&gt;&lt;a href=&quot;#关于https&quot; class=&quot;headerlink&quot; title=&quot;关于https&quot;&gt;&lt;/a&gt;关于https&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/HTTPS&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;wiki&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
@@ -270,6 +245,31 @@
     
     
       <category term="小记" scheme="http://hocg.in/tags/%E5%B0%8F%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>复习、考试</title>
+    <link href="http://hocg.in/2016/05/01/%E5%A4%8D%E4%B9%A0-%E8%80%83%E8%AF%95/"/>
+    <id>http://hocg.in/2016/05/01/复习-考试/</id>
+    <published>2016-05-01T09:38:10.000Z</published>
+    <updated>2016-06-12T12:03:09.890Z</updated>
+    
+    <content type="html">&lt;p&gt;复习一周，就上考场 o(╯□╰)o&lt;br&gt;但是总算考完了，思想折磨了我5个月..&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;br&gt;等分数把。。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;复习一周，就上考场 o(╯□╰)o&lt;br&gt;但是总算考完了，思想折磨了我5个月..&lt;br&gt;
+    
+    </summary>
+    
+      <category term="琐事" scheme="http://hocg.in/categories/%E7%90%90%E4%BA%8B/"/>
+    
+    
+      <category term="考试" scheme="http://hocg.in/tags/%E8%80%83%E8%AF%95/"/>
+    
+      <category term="感悟" scheme="http://hocg.in/tags/%E6%84%9F%E6%82%9F/"/>
     
   </entry>
   
@@ -341,9 +341,9 @@
       <category term="NodeJS" scheme="http://hocg.in/categories/%E5%AD%A6%E4%B9%A0/NodeJS/"/>
     
     
-      <category term="折腾" scheme="http://hocg.in/tags/%E6%8A%98%E8%85%BE/"/>
-    
       <category term="Ubuntu" scheme="http://hocg.in/tags/Ubuntu/"/>
+    
+      <category term="折腾" scheme="http://hocg.in/tags/%E6%8A%98%E8%85%BE/"/>
     
       <category term="NodeJS" scheme="http://hocg.in/tags/NodeJS/"/>
     
@@ -724,9 +724,9 @@
       <category term="学习" scheme="http://hocg.in/categories/%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="折腾" scheme="http://hocg.in/tags/%E6%8A%98%E8%85%BE/"/>
-    
       <category term="Ubuntu" scheme="http://hocg.in/tags/Ubuntu/"/>
+    
+      <category term="折腾" scheme="http://hocg.in/tags/%E6%8A%98%E8%85%BE/"/>
     
       <category term="开发手册" scheme="http://hocg.in/tags/%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C/"/>
     
