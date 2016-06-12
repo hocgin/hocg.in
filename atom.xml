@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hocg.in/"/>
-  <updated>2016-06-12T11:43:05.991Z</updated>
+  <updated>2016-06-12T11:56:33.151Z</updated>
   <id>http://hocg.in/</id>
   
   <author>
@@ -19,8 +19,8 @@
     <title>谈JVM,字节码</title>
     <link href="http://hocg.in/2016/06/12/%E8%B0%88JVM-%E5%AD%97%E8%8A%82%E7%A0%81/"/>
     <id>http://hocg.in/2016/06/12/谈JVM-字节码/</id>
-    <published>2016-06-12T11:43:06.003Z</published>
-    <updated>2016-06-12T11:43:05.991Z</updated>
+    <published>2016-06-12T11:56:33.163Z</published>
+    <updated>2016-06-12T11:56:33.151Z</updated>
     
     <content type="html">&lt;p&gt;谈谈JVM，最近在研究破解jar，有这方面经验的麻烦指导一下思路..&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;参考&quot;&gt;&lt;a href=&quot;#参考&quot; class=&quot;headerlink&quot; title=&quot;参考&quot;&gt;&lt;/a&gt;参考&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://www.yangyong.me/java-class%E6%96%87%E4%BB%B6%E5%92%8C%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AD%97%E8%8A%82%E7%A0%81%E6%8C%87%E4%BB%A4-%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8Bclass%E6%96%87%E4%BB%B6/#viewclass&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;参考1&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://blog.csdn.net/sprayabc/article/details/8576605&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;指令整理&lt;/a&gt;&lt;/p&gt;
@@ -99,10 +99,10 @@
 &lt;p&gt;用于&lt;code&gt;局部变量表&lt;/code&gt;和&lt;code&gt;操作数栈&lt;/code&gt;之间来回传输&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;ul&gt;
-&lt;li&gt;将一个局部变量加载到操作数栈的指令包括：iload,iload&lt;em&gt;&lt;n&gt;，lload、lload&lt;/n&gt;&lt;/em&gt;&lt;n&gt;、float、fload&lt;em&gt;&lt;n&gt;、dload、dload&lt;/n&gt;&lt;/em&gt;&lt;n&gt;，aload、aload_&lt;n&gt;。&lt;/n&gt;&lt;/n&gt;&lt;/n&gt;&lt;/li&gt;
-&lt;li&gt;将一个数值从操作数栈存储到局部变量标的指令：istore,istore&lt;em&gt;&lt;n&gt;,lstore,lstore&lt;/n&gt;&lt;/em&gt;&lt;n&gt;,fstore,fstore&lt;em&gt;&lt;n&gt;,dstore,dstore&lt;/n&gt;&lt;/em&gt;&lt;n&gt;,astore,astore_&lt;n&gt;&lt;/n&gt;&lt;/n&gt;&lt;/n&gt;&lt;/li&gt;
-&lt;li&gt;将常量加载到操作数栈的指令：bipush,sipush,ldc,ldc_w,ldc2_w,aconst_null,iconst&lt;em&gt;ml,iconst&lt;/em&gt;&lt;i&gt;,lconst&lt;em&gt;&lt;l&gt;,fconst&lt;/l&gt;&lt;/em&gt;&lt;f&gt;,dconst_&lt;d&gt;&lt;/d&gt;&lt;/f&gt;&lt;/i&gt;&lt;/li&gt;
-&lt;li&gt;局部变量表的访问索引指令:wide&lt;br&gt;  一部分以尖括号结尾的指令代表了一组指令，如iload_&lt;i&gt;，代表了iload_0,iload_1等，这几组指令都是带有一个操作数的通用指令。&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;将一个局部变量加载到操作数栈的指令包括：iload,iload_&amp;lt;n&amp;gt;，lload、lload_&amp;lt;n&amp;gt;、float、fload_&amp;lt;n&amp;gt;、dload、dload_&amp;lt;n&amp;gt;，aload、aload_&amp;lt;n&amp;gt;。&lt;/li&gt;
+&lt;li&gt;将一个数值从操作数栈存储到局部变量标的指令：istore,istore_&amp;lt;n&amp;gt;,lstore,lstore_&amp;lt;n&amp;gt;,fstore,fstore_&amp;lt;n&amp;gt;,dstore,dstore_&amp;lt;n&amp;gt;,astore,astore_&amp;lt;n&amp;gt;&lt;/li&gt;
+&lt;li&gt;将常量加载到操作数栈的指令：bipush,sipush,ldc,ldc_w,ldc2_w,aconst_null,iconst_ml,iconst_&amp;lt;i&amp;gt;,lconst_&amp;lt;l&amp;gt;,fconst_&amp;lt;f&amp;gt;,dconst_&amp;lt;d&amp;gt;&lt;/li&gt;
+&lt;li&gt;局部变量表的访问索引指令:wide&lt;br&gt;  一部分以尖括号结尾的指令代表了一组指令，如iload_&amp;lt;i&amp;gt;，代表了iload_0,iload_1等，这几组指令都是带有一个操作数的通用指令。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&quot;运算指令-1&quot;&gt;&lt;a href=&quot;#运算指令-1&quot; class=&quot;headerlink&quot; title=&quot;运算指令&quot;&gt;&lt;/a&gt;运算指令&lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;对两个&lt;code&gt;操作数栈&lt;/code&gt;上的值进行某种特定运算，并把结果重新存入到&lt;code&gt;操作栈&lt;/code&gt;顶&lt;/p&gt;
