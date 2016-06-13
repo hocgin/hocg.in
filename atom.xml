@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hocg.in/"/>
-  <updated>2016-06-12T12:02:47.847Z</updated>
+  <updated>2016-06-12T12:02:47.000Z</updated>
   <id>http://hocg.in/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://hocg.in/2016/06/12/%E8%B0%88JVM-%E5%90%84%E7%A7%8D%E8%BF%87%E7%A8%8B/"/>
     <id>http://hocg.in/2016/06/12/谈JVM-各种过程/</id>
     <published>2016-06-12T11:37:49.000Z</published>
-    <updated>2016-06-12T12:02:47.847Z</updated>
+    <updated>2016-06-12T12:02:47.000Z</updated>
     
     <content type="html">&lt;p&gt;谈谈JVM 各种过程， XMind等我整理一下，稍后贴出 囧～&lt;br&gt;欢迎指教..&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&quot;总思路&quot;&gt;&lt;a href=&quot;#总思路&quot; class=&quot;headerlink&quot; title=&quot;总思路&quot;&gt;&lt;/a&gt;总思路&lt;/h3&gt;&lt;p&gt;编译过程 -&amp;gt; 运行过程[类加载器过程(类的装载过程) -&amp;gt; 执行过程]&lt;/p&gt;
@@ -55,7 +55,7 @@
     <link href="http://hocg.in/2016/06/12/%E8%B0%88JVM-%E5%AD%97%E8%8A%82%E7%A0%81/"/>
     <id>http://hocg.in/2016/06/12/谈JVM-字节码/</id>
     <published>2016-06-12T11:37:49.000Z</published>
-    <updated>2016-06-12T12:02:27.032Z</updated>
+    <updated>2016-06-12T12:02:27.000Z</updated>
     
     <content type="html">&lt;p&gt;谈谈JVM，最近在研究破解jar，有这方面经验的麻烦指导一下思路..&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;参考&quot;&gt;&lt;a href=&quot;#参考&quot; class=&quot;headerlink&quot; title=&quot;参考&quot;&gt;&lt;/a&gt;参考&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://www.yangyong.me/java-class%E6%96%87%E4%BB%B6%E5%92%8C%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AD%97%E8%8A%82%E7%A0%81%E6%8C%87%E4%BB%A4-%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8Bclass%E6%96%87%E4%BB%B6/#viewclass&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;参考1&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://blog.csdn.net/sprayabc/article/details/8576605&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;指令整理&lt;/a&gt;&lt;/p&gt;
@@ -214,7 +214,7 @@
     <link href="http://hocg.in/2016/06/02/HTTPS-%E7%AD%BE%E8%AF%81/"/>
     <id>http://hocg.in/2016/06/02/HTTPS-签证/</id>
     <published>2016-06-02T03:22:43.000Z</published>
-    <updated>2016-06-12T12:02:39.660Z</updated>
+    <updated>2016-06-12T12:02:39.000Z</updated>
     
     <content type="html">&lt;h3 id=&quot;关于https&quot;&gt;&lt;a href=&quot;#关于https&quot; class=&quot;headerlink&quot; title=&quot;关于https&quot;&gt;&lt;/a&gt;关于https&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/HTTPS&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;wiki&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
@@ -253,7 +253,7 @@
     <link href="http://hocg.in/2016/05/01/%E5%A4%8D%E4%B9%A0-%E8%80%83%E8%AF%95/"/>
     <id>http://hocg.in/2016/05/01/复习-考试/</id>
     <published>2016-05-01T09:38:10.000Z</published>
-    <updated>2016-06-12T12:03:09.890Z</updated>
+    <updated>2016-06-12T12:03:09.000Z</updated>
     
     <content type="html">&lt;p&gt;复习一周，就上考场 o(╯□╰)o&lt;br&gt;但是总算考完了，思想折磨了我5个月..&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;br&gt;等分数把。。&lt;/p&gt;
 </content>
@@ -315,7 +315,7 @@
     <link href="http://hocg.in/2016/04/25/%E7%BB%BF%E5%8C%96nodejs-for-linux%E7%89%88/"/>
     <id>http://hocg.in/2016/04/25/绿化nodejs-for-linux版/</id>
     <published>2016-04-25T01:38:49.000Z</published>
-    <updated>2016-05-20T12:40:46.517Z</updated>
+    <updated>2016-05-20T12:40:46.000Z</updated>
     
     <content type="html">&lt;p&gt;起因，为了方便hexo发布博客，所以想把NodeJS绿化在U盘上..&lt;br&gt;谁叫网上只有win版的呢！自己码起来～&lt;br&gt;绿化 o(╯□╰)o&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;目录结构&quot;&gt;&lt;a href=&quot;#目录结构&quot; class=&quot;headerlink&quot; title=&quot;目录结构&quot;&gt;&lt;/a&gt;目录结构&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Green4nodeJS&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;├── hocgin.github.io // github博客目录&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;├── node // nodejs基本目录&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;│   ├── node-linux // nodejs源文件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;│   ├── cache // 创建一个空文件夹，即可&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;│   ├── init-module // 创建一个空文件夹，即可&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;│   └── userconfig // 创建一个空文件夹，即可&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;└── init.sh // 初始化shell文件 *重要&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
@@ -354,7 +354,7 @@
     <link href="http://hocg.in/2016/03/26/hexo-%E5%8A%9F%E8%83%BD%E6%89%A9%E5%B1%95/"/>
     <id>http://hocg.in/2016/03/26/hexo-功能扩展/</id>
     <published>2016-03-26T05:44:28.000Z</published>
-    <updated>2016-06-03T16:13:11.433Z</updated>
+    <updated>2016-06-03T16:13:11.000Z</updated>
     
     <content type="html">&lt;h2 id=&quot;须知&quot;&gt;&lt;a href=&quot;#须知&quot; class=&quot;headerlink&quot; title=&quot;须知&quot;&gt;&lt;/a&gt;须知&lt;/h2&gt;&lt;p&gt;&lt;code&gt;站点目录&lt;/code&gt;: /&lt;br&gt;&lt;code&gt;主题目录&lt;/code&gt;: /themes/[主题名]&lt;br&gt;&lt;code&gt;主题配置文件&lt;/code&gt;: /themes/[主题名]/_config.yml&lt;br&gt;&lt;code&gt;站点配置文件&lt;/code&gt;: /_config.yml  &lt;/p&gt;
 &lt;h2 id=&quot;添加微信公众号二维码&quot;&gt;&lt;a href=&quot;#添加微信公众号二维码&quot; class=&quot;headerlink&quot; title=&quot;添加微信公众号二维码&quot;&gt;&lt;/a&gt;添加微信公众号二维码&lt;/h2&gt;&lt;p&gt;首先，打开&lt;code&gt;主题目录&lt;/code&gt;下的 &lt;code&gt;layout/_macro/post.swig&lt;/code&gt;&lt;br&gt;然后，找到节点&lt;code&gt;footer&lt;/code&gt;加入以下代码&lt;br&gt;&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;!&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;--&lt;/span&gt; 添加微信图标 &lt;span class=&quot;attr&quot;&gt;start&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;--&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;#123;% if theme.wechat_subscriber.enable %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#123;% if !is_home() %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;hocgin-container&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;          &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;folder&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;           &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;paper&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        	&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;img&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;width&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;100%&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;src&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;&amp;#123;&amp;#123; theme.wechat_subscriber.qcode &amp;#125;&amp;#125;&quot;&lt;/span&gt;/&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;          &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	      &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;hocgin-description&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&amp;#123;&amp;#123; theme.wechat_subscriber.description &amp;#125;&amp;#125;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#123;% endif %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;#123;% endif %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;!&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;--&lt;/span&gt; 添加微信图标 &lt;span class=&quot;attr&quot;&gt;end&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;--&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
