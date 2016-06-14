@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hocg.in/"/>
-  <updated>2016-06-12T12:02:47.000Z</updated>
+  <updated>2016-06-12T12:02:27.000Z</updated>
   <id>http://hocg.in/</id>
   
   <author>
@@ -14,41 +14,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>谈JVM，各种过程</title>
-    <link href="http://hocg.in/2016/06/12/%E8%B0%88JVM-%E5%90%84%E7%A7%8D%E8%BF%87%E7%A8%8B/"/>
-    <id>http://hocg.in/2016/06/12/谈JVM-各种过程/</id>
-    <published>2016-06-12T11:37:49.000Z</published>
-    <updated>2016-06-12T12:02:47.000Z</updated>
-    
-    <content type="html">&lt;p&gt;谈谈JVM 各种过程， XMind等我整理一下，稍后贴出 囧～&lt;br&gt;欢迎指教..&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&quot;总思路&quot;&gt;&lt;a href=&quot;#总思路&quot; class=&quot;headerlink&quot; title=&quot;总思路&quot;&gt;&lt;/a&gt;总思路&lt;/h3&gt;&lt;p&gt;编译过程 -&amp;gt; 运行过程[类加载器过程(类的装载过程) -&amp;gt; 执行过程]&lt;/p&gt;
-&lt;h3 id=&quot;编译过程&quot;&gt;&lt;a href=&quot;#编译过程&quot; class=&quot;headerlink&quot; title=&quot;编译过程&quot;&gt;&lt;/a&gt;编译过程&lt;/h3&gt;&lt;p&gt;.java文件 -javac编译-&amp;gt; .class文件       {-JIT编译(转化+优化)-&amp;gt; 本地方法}[执行过程，当方法执行频率高]&lt;/p&gt;
-&lt;hr&gt;
-&lt;h3 id=&quot;运行过程&quot;&gt;&lt;a href=&quot;#运行过程&quot; class=&quot;headerlink&quot; title=&quot;运行过程&quot;&gt;&lt;/a&gt;运行过程&lt;/h3&gt;&lt;p&gt;类加载器 -&amp;gt; (执行引擎 -&amp;gt; 本地库接口)[Java 运行时数据区] -&amp;gt; 本地方法库&lt;/p&gt;
-&lt;hr&gt;
-&lt;h3 id=&quot;类加载器过程&quot;&gt;&lt;a href=&quot;#类加载器过程&quot; class=&quot;headerlink&quot; title=&quot;类加载器过程&quot;&gt;&lt;/a&gt;&lt;strong&gt;类加载器&lt;/strong&gt;过程&lt;/h3&gt;&lt;p&gt;[启动]类加载器(JNI) -&amp;gt; [扩展]类加载器 -&amp;gt; [系统]类加载器 -&amp;gt; [自定义]类加载器&lt;/p&gt;
-&lt;hr&gt;
-&lt;h3 id=&quot;类装载过程&quot;&gt;&lt;a href=&quot;#类装载过程&quot; class=&quot;headerlink&quot; title=&quot;类装载过程&quot;&gt;&lt;/a&gt;&lt;strong&gt;类&lt;/strong&gt;装载过程&lt;/h3&gt;&lt;p&gt;加载文件到JVM内存 -&amp;gt; (校验语言规范 -&amp;gt; 分配结构存储类的信息 -&amp;gt; 该类常量池中符号更改为直接引用)[Linking] -&amp;gt; 类初始化&lt;/p&gt;
-&lt;hr&gt;
-&lt;h3 id=&quot;执行引擎执行过程-逐行读取指令&quot;&gt;&lt;a href=&quot;#执行引擎执行过程-逐行读取指令&quot; class=&quot;headerlink&quot; title=&quot;执行引擎执行过程(逐行读取指令)&quot;&gt;&lt;/a&gt;&lt;strong&gt;执行引擎&lt;/strong&gt;执行过程(逐行读取指令)&lt;/h3&gt;&lt;p&gt;Thread启动 -生成-&amp;gt; JVM栈 -执行方法-&amp;gt; 压入栈帧(包含 局部变量数组&amp;amp;操作数栈&amp;amp;运行时常量池) -&amp;gt; 逐行读取指令&amp;amp;&amp;amp;解释(JVM栈帧 程序计数器存放下一条指令) -&amp;gt; {JIT(转化+优化)-&amp;gt; 本地方法}[当方法执行频率高] -执行&amp;amp;运算-&amp;gt; 结果(存放 操作数栈中) -&amp;gt; 推出栈帧&lt;/p&gt;
-&lt;hr&gt;
-&lt;h3 id=&quot;Java-运行时数据区-贯穿整个执行过程&quot;&gt;&lt;a href=&quot;#Java-运行时数据区-贯穿整个执行过程&quot; class=&quot;headerlink&quot; title=&quot;Java 运行时数据区(贯穿整个执行过程)&quot;&gt;&lt;/a&gt;Java 运行时数据区(贯穿整个执行过程)&lt;/h3&gt;&lt;p&gt;共享型数据区：方法区(含运行时常量池[存放方法&amp;amp;变量的实际&lt;strong&gt;地址&lt;/strong&gt;])、堆(存放对象实例)&lt;br&gt;隔离型数据区：JVM 栈、本地方法栈(JNI)、程序计数器&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;谈谈JVM 各种过程， XMind等我整理一下，稍后贴出 囧～&lt;br&gt;欢迎指教..&lt;br&gt;
-    
-    </summary>
-    
-      <category term="原创" scheme="http://hocg.in/categories/%E5%8E%9F%E5%88%9B/"/>
-    
-    
-      <category term="JVM" scheme="http://hocg.in/tags/JVM/"/>
-    
-  </entry>
   
   <entry>
     <title>谈JVM，字节码</title>
@@ -210,6 +175,41 @@
   </entry>
   
   <entry>
+    <title>谈JVM，各种过程</title>
+    <link href="http://hocg.in/2016/06/12/%E8%B0%88JVM-%E5%90%84%E7%A7%8D%E8%BF%87%E7%A8%8B/"/>
+    <id>http://hocg.in/2016/06/12/谈JVM-各种过程/</id>
+    <published>2016-06-12T11:37:49.000Z</published>
+    <updated>2016-06-12T12:02:47.000Z</updated>
+    
+    <content type="html">&lt;p&gt;谈谈JVM 各种过程， XMind等我整理一下，稍后贴出 囧～&lt;br&gt;欢迎指教..&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;总思路&quot;&gt;&lt;a href=&quot;#总思路&quot; class=&quot;headerlink&quot; title=&quot;总思路&quot;&gt;&lt;/a&gt;总思路&lt;/h3&gt;&lt;p&gt;编译过程 -&amp;gt; 运行过程[类加载器过程(类的装载过程) -&amp;gt; 执行过程]&lt;/p&gt;
+&lt;h3 id=&quot;编译过程&quot;&gt;&lt;a href=&quot;#编译过程&quot; class=&quot;headerlink&quot; title=&quot;编译过程&quot;&gt;&lt;/a&gt;编译过程&lt;/h3&gt;&lt;p&gt;.java文件 -javac编译-&amp;gt; .class文件       {-JIT编译(转化+优化)-&amp;gt; 本地方法}[执行过程，当方法执行频率高]&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;运行过程&quot;&gt;&lt;a href=&quot;#运行过程&quot; class=&quot;headerlink&quot; title=&quot;运行过程&quot;&gt;&lt;/a&gt;运行过程&lt;/h3&gt;&lt;p&gt;类加载器 -&amp;gt; (执行引擎 -&amp;gt; 本地库接口)[Java 运行时数据区] -&amp;gt; 本地方法库&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;类加载器过程&quot;&gt;&lt;a href=&quot;#类加载器过程&quot; class=&quot;headerlink&quot; title=&quot;类加载器过程&quot;&gt;&lt;/a&gt;&lt;strong&gt;类加载器&lt;/strong&gt;过程&lt;/h3&gt;&lt;p&gt;[启动]类加载器(JNI) -&amp;gt; [扩展]类加载器 -&amp;gt; [系统]类加载器 -&amp;gt; [自定义]类加载器&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;类装载过程&quot;&gt;&lt;a href=&quot;#类装载过程&quot; class=&quot;headerlink&quot; title=&quot;类装载过程&quot;&gt;&lt;/a&gt;&lt;strong&gt;类&lt;/strong&gt;装载过程&lt;/h3&gt;&lt;p&gt;加载文件到JVM内存 -&amp;gt; (校验语言规范 -&amp;gt; 分配结构存储类的信息 -&amp;gt; 该类常量池中符号更改为直接引用)[Linking] -&amp;gt; 类初始化&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;执行引擎执行过程-逐行读取指令&quot;&gt;&lt;a href=&quot;#执行引擎执行过程-逐行读取指令&quot; class=&quot;headerlink&quot; title=&quot;执行引擎执行过程(逐行读取指令)&quot;&gt;&lt;/a&gt;&lt;strong&gt;执行引擎&lt;/strong&gt;执行过程(逐行读取指令)&lt;/h3&gt;&lt;p&gt;Thread启动 -生成-&amp;gt; JVM栈 -执行方法-&amp;gt; 压入栈帧(包含 局部变量数组&amp;amp;操作数栈&amp;amp;运行时常量池) -&amp;gt; 逐行读取指令&amp;amp;&amp;amp;解释(JVM栈帧 程序计数器存放下一条指令) -&amp;gt; {JIT(转化+优化)-&amp;gt; 本地方法}[当方法执行频率高] -执行&amp;amp;运算-&amp;gt; 结果(存放 操作数栈中) -&amp;gt; 推出栈帧&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;Java-运行时数据区-贯穿整个执行过程&quot;&gt;&lt;a href=&quot;#Java-运行时数据区-贯穿整个执行过程&quot; class=&quot;headerlink&quot; title=&quot;Java 运行时数据区(贯穿整个执行过程)&quot;&gt;&lt;/a&gt;Java 运行时数据区(贯穿整个执行过程)&lt;/h3&gt;&lt;p&gt;共享型数据区：方法区(含运行时常量池[存放方法&amp;amp;变量的实际&lt;strong&gt;地址&lt;/strong&gt;])、堆(存放对象实例)&lt;br&gt;隔离型数据区：JVM 栈、本地方法栈(JNI)、程序计数器&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;谈谈JVM 各种过程， XMind等我整理一下，稍后贴出 囧～&lt;br&gt;欢迎指教..&lt;br&gt;
+    
+    </summary>
+    
+      <category term="原创" scheme="http://hocg.in/categories/%E5%8E%9F%E5%88%9B/"/>
+    
+    
+      <category term="JVM" scheme="http://hocg.in/tags/JVM/"/>
+    
+  </entry>
+  
+  <entry>
     <title>HTTPS 签证</title>
     <link href="http://hocg.in/2016/06/02/HTTPS-%E7%AD%BE%E8%AF%81/"/>
     <id>http://hocg.in/2016/06/02/HTTPS-签证/</id>
@@ -341,9 +341,9 @@
       <category term="NodeJS" scheme="http://hocg.in/categories/%E5%AD%A6%E4%B9%A0/NodeJS/"/>
     
     
-      <category term="折腾" scheme="http://hocg.in/tags/%E6%8A%98%E8%85%BE/"/>
-    
       <category term="Ubuntu" scheme="http://hocg.in/tags/Ubuntu/"/>
+    
+      <category term="折腾" scheme="http://hocg.in/tags/%E6%8A%98%E8%85%BE/"/>
     
       <category term="NodeJS" scheme="http://hocg.in/tags/NodeJS/"/>
     
@@ -416,7 +416,7 @@
     <link href="http://hocg.in/2016/03/20/%E5%AE%89%E8%A3%85%E5%AE%8CUbuntu%E5%90%8E-%E6%88%91%E8%AF%A5%E5%81%9A%E4%BB%80%E4%B9%88/"/>
     <id>http://hocg.in/2016/03/20/安装完Ubuntu后-我该做什么/</id>
     <published>2016-03-20T06:34:20.000Z</published>
-    <updated>2016-06-12T02:31:00.000Z</updated>
+    <updated>2016-06-14T01:47:08.185Z</updated>
     
     <content type="html">&lt;p&gt;安装完Ubuntu后,我该做什么..(借鉴和整理，还有一些平时遇到的， &lt;strong&gt;不定期更新&lt;/strong&gt;)&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;yuan获取&quot;&gt;&lt;a href=&quot;#yuan获取&quot; class=&quot;headerlink&quot; title=&quot;yuan获取&quot;&gt;&lt;/a&gt;yuan获取&lt;/h2&gt;&lt;p&gt;官方列表： &lt;a href=&quot;http://wiki.ubuntu.org.cn/%E6%BA%90%E5%88%97%E8%A1%A8&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://wiki.ubuntu.org.cn/%E6%BA%90%E5%88%97%E8%A1%A8&lt;/a&gt;&lt;br&gt;网易163： &lt;a href=&quot;http://mirrors.163.com/.help/ubuntu.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://mirrors.163.com/.help/ubuntu.html&lt;/a&gt;&lt;/p&gt;
@@ -683,7 +683,7 @@
 &lt;p&gt;Catfish 一款优雅迅捷的文件搜索工具&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# 安装&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get install catfish&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;神级命令行软件 Tmux &lt;a href=&quot;http://www.wushxin.top/2016/03/28/%E4%BD%BF%E7%94%A8tmux.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;说明&lt;/a&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get install tmux&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h3 id=&quot;软件包安装&quot;&gt;&lt;a href=&quot;#软件包安装&quot; class=&quot;headerlink&quot; title=&quot;软件包安装&quot;&gt;&lt;/a&gt;软件包安装&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;http://ubuntu-tweak.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;系统管理 UbuntuTweak&lt;/a&gt;&lt;br&gt;&lt;code&gt;打开：搜索 Ubuntu Tweak&lt;/code&gt;&lt;br&gt;&lt;a href=&quot;https://www.jianguoyun.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;同步软件 坚果云&lt;/a&gt;&lt;br&gt;&lt;code&gt;打开：搜索 Nutstore&lt;/code&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/LiuLang/bcloud-packages&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;百度网盘桌面客户端 BCloud&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://launchpad.net/indicator-stickynotes&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;便签&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://keepass.info/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;MarkDown编辑软件 HarooPad&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://pad.haroopress.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;密码管理器 keepass2&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://pinyin.sogou.com/linux/?r=pinyin&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;搜狗输入法&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://cidian.youdao.com/multi.html#linuxAll&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;有道词典&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.vmware.com/products/workstation/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;VMware Workstation&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.google.cn/chrome/browser/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Chrome&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/cosven/FeelUOwn&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;网易音乐&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://fabforce.net/dbdesigner4/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;数据库设计软件 DBdesigner4&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;软件包安装&quot;&gt;&lt;a href=&quot;#软件包安装&quot; class=&quot;headerlink&quot; title=&quot;软件包安装&quot;&gt;&lt;/a&gt;软件包安装&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;http://ubuntu-tweak.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;系统管理 UbuntuTweak&lt;/a&gt;&lt;br&gt;&lt;code&gt;打开：搜索 Ubuntu Tweak&lt;/code&gt;&lt;br&gt;&lt;a href=&quot;https://www.jianguoyun.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;同步软件 坚果云&lt;/a&gt;&lt;br&gt;&lt;code&gt;打开：搜索 Nutstore&lt;/code&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/LiuLang/bcloud-packages&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;百度网盘桌面客户端 BCloud&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://launchpad.net/indicator-stickynotes&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;便签&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://keepass.info/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;MarkDown编辑软件 HarooPad&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://pad.haroopress.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;密码管理器 keepass2&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://pinyin.sogou.com/linux/?r=pinyin&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;搜狗输入法&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://cidian.youdao.com/multi.html#linuxAll&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;有道词典&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.vmware.com/products/workstation/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;VMware Workstation&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.google.cn/chrome/browser/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Chrome&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/cosven/FeelUOwn&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;网易音乐&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://fabforce.net/dbdesigner4/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;数据库设计软件 DBdesigner4&lt;/a&gt; - &lt;a href=&quot;http://josemarfuregattideabreusilva.blogspot.com/2015/04/installing-dbdesigner-405-on-ubuntu.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;问题1&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h3 id=&quot;听起来不错&quot;&gt;&lt;a href=&quot;#听起来不错&quot; class=&quot;headerlink&quot; title=&quot;听起来不错&quot;&gt;&lt;/a&gt;听起来不错&lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;Deluge Bittorrent 客户端&lt;/li&gt;
@@ -694,6 +694,7 @@
 &lt;li&gt;gpaint 微软画图&lt;/li&gt;
 &lt;li&gt;ddm 驱动管理器&lt;/li&gt;
 &lt;li&gt;Navicat &lt;code&gt;o(╯□╰)o 竟然是wine的&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;XMind&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&quot;小技巧&quot;&gt;&lt;a href=&quot;#小技巧&quot; class=&quot;headerlink&quot; title=&quot;小技巧&quot;&gt;&lt;/a&gt;小技巧&lt;/h2&gt;&lt;h3 id=&quot;关闭系统检测报告&quot;&gt;&lt;a href=&quot;#关闭系统检测报告&quot; class=&quot;headerlink&quot; title=&quot;关闭系统检测报告&quot;&gt;&lt;/a&gt;关闭系统检测报告&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sudo gedit /etc/default/apport&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 修改enabled=0&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h3 id=&quot;开机自动开启数字键&quot;&gt;&lt;a href=&quot;#开机自动开启数字键&quot; class=&quot;headerlink&quot; title=&quot;开机自动开启数字键&quot;&gt;&lt;/a&gt;开机自动开启数字键&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get install numlockx&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo vim /etc/gdm/Init/Default&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# -----------&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 在文件最后exit 0的前面添加：&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  if [ -x /usr/bin/numlockx ]; then&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      numlockx on&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  fi&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
@@ -724,9 +725,9 @@
       <category term="学习" scheme="http://hocg.in/categories/%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="折腾" scheme="http://hocg.in/tags/%E6%8A%98%E8%85%BE/"/>
-    
       <category term="Ubuntu" scheme="http://hocg.in/tags/Ubuntu/"/>
+    
+      <category term="折腾" scheme="http://hocg.in/tags/%E6%8A%98%E8%85%BE/"/>
     
       <category term="开发手册" scheme="http://hocg.in/tags/%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C/"/>
     
