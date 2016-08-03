@@ -4,6 +4,91 @@
   
     
     <entry>
+      <title><![CDATA[模块设计之对接同步订单模块]]></title>
+      <url>http://hocg.in/2016/08/02/%E6%A8%A1%E5%9D%97%E8%AE%BE%E8%AE%A1%E4%B9%8B%E5%AF%B9%E6%8E%A5%E5%90%8C%E6%AD%A5%E8%AE%A2%E5%8D%95%E6%A8%A1%E5%9D%97/</url>
+      <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
+<p><strong>#对接同步订单模块#</strong> 该部分是我入职后自主设计的一个模块，因为初期预计对接5家平台的订单，并考虑到后期可能对接更多平台和平台订单数量等，所以扩展性和性能方面是很值得深思的问题。</p>
+</blockquote>
+<h4 id="开发周期-20day"><a href="#开发周期-20day" class="headerlink" title="开发周期 (20day)"></a>开发周期 (20day)</h4><blockquote>
+<p>前期需求的多次变更，大大的浪费了开发周期.</p>
+</blockquote>
+<ul>
+<li>库表设计</li>
+<li>接口整理和整合设计(主要是对接平台的接口整合等)</li>
+<li>代码编写</li>
+</ul>
+<h2 id="业务流程图"><a href="#业务流程图" class="headerlink" title="业务流程图"></a>业务流程图</h2><h4 id="表"><a href="#表" class="headerlink" title="表"></a>表</h4><ul>
+<li>商品表,<strong>存储商品信息, 主要配合方案匹配</strong></li>
+<li>授权表,<strong>存储用户授权信息，主要用于token管理</strong></li>
+<li>平台配置表,<strong>存储平台key信息</strong></li>
+<li>方案表,<strong>已存在，存储方案信息</strong></li>
+</ul>
+<p>###v1版</p>
+<h4 id="总思路图"><a href="#总思路图" class="headerlink" title="总思路图"></a>总思路图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/总体思路-v1-op.png" alt="总体思路-v1-op.png"></p>
+<h4 id="业务图"><a href="#业务图" class="headerlink" title="业务图"></a>业务图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/业务-v1-op.png" alt="总体思路-v1-now.png"></p>
+<p>原先，该部分设计是不考虑对订单数据进行缓存处理的，但后期需求多次变更被迫进行数据缓存，因此再原先的基础上建立了线程池并对同步订单部分进行异步线程处理，因此增加了一张订单缓存表和事件队列表。</p>
+<hr>
+<p>###v2版</p>
+<h4 id="总思路图-1"><a href="#总思路图-1" class="headerlink" title="总思路图"></a>总思路图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/总体思路-v2-now.png" alt="总体思路-v2-op.png"></p>
+<h2 id="业务图-1"><a href="#业务图-1" class="headerlink" title="业务图"></a>业务图</h2><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/业务-v2-now.png" alt="总体思路-v2-now.png"></p>
+<blockquote>
+<p>后面又对缓存表进行了数据去重防止表数据爆炸性增长。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul>
+<li>把公共抽离出来，中间新增转化层可以很好的解决代码复用的问题.</li>
+</ul>
+</blockquote>
+<blockquote class="blockquote-center"><p>Ծ‸Ծ 多运动,保持60kg. </p>
+</blockquote>]]></content>
+    </entry>
+    
+    <entry>
+      <title></title>
+      <url>http://hocg.in/2016/07/31/Mac-%E4%BD%BF%E7%94%A8/</url>
+      <content type="html"><![CDATA[<h3 id="小技巧"><a href="#小技巧" class="headerlink" title="小技巧"></a>小技巧</h3><ul>
+<li>在Dock 隐藏 iTerm2<br>隐藏:<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/libexec/PlistBuddy -c &quot;Add :LSUIElement bool true&quot; /Applications/iTerm.app/Contents/Info.plist</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>显示:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/libexec/PlistBuddy -c &quot;Delete :LSUIElement&quot; /Applications/iTerm.app/Contents/Info.plist</span><br></pre></td></tr></table></figure></p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[模块设计之消息模块]]></title>
+      <url>http://hocg.in/2016/07/30/%E6%A8%A1%E5%9D%97%E8%AE%BE%E8%AE%A1%E4%B9%8B%E6%B6%88%E6%81%AF%E6%A8%A1%E5%9D%97/</url>
+      <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
+<p><strong>#消息模块#</strong> 这是我刚入职时所接触的第一个模块，也算是比较大的模块了。这个模块的业务是负责整个项目所有的消息出入口，包含短信发送，APP推送，邮件发送以及前后端人员站内消息。当时设计的时候需求架构比较简单而且时间紧迫(π__π)，没有从根本理清业务和功能后期存在的扩展。因此，这篇文章是记录当时架构的思路和需要改善的地方。</p>
+</blockquote>
+<h4 id="开发周期-10day"><a href="#开发周期-10day" class="headerlink" title="开发周期 (10day)"></a>开发周期 (10day)</h4><ul>
+<li>库表设计</li>
+<li>接口整理和整合设计(短信&amp;友盟&amp;邮件等)</li>
+<li>代码编写</li>
+</ul>
+<h2 id="业务流程图"><a href="#业务流程图" class="headerlink" title="业务流程图"></a>业务流程图</h2><h4 id="表"><a href="#表" class="headerlink" title="表"></a>表</h4><ul>
+<li>消息记录表, <strong>主要负责消息出入口记录</strong></li>
+<li>事件触发表, <strong>主要对消息进行控制，例如: 触发订单变更推送到用户/运营人员 and so on</strong></li>
+<li>消息状态表, <strong>主要负责消息发送的状态，包含定时发送，撤销发送 and so on</strong></li>
+</ul>
+<h4 id="图"><a href="#图" class="headerlink" title="图"></a>图</h4><p><img src="img/业务-now.png" alt="当前业务流程图"></p>
+<h2 id="类流程图"><a href="#类流程图" class="headerlink" title="类流程图"></a>类流程图</h2><p><img src="img/类-now.png" alt="当前类流程图"></p>
+<p>如图，此模式主要是利用工厂模式, 提供多种消息通道实例，由不同的消息通道对自身通道消息进行处理，类似于把西瓜，牛肉，白菜等送入不同的工厂进行加工，但是又由食品质量控制中心对其进行记录和检验。<br><strong>优点</strong>: 后期便于扩展更多的通道模式<br><strong>缺点</strong>: 各个模式是靠类型区别的，不便于进行细节化处理(例如，对某部分APP推送进行定制化，进入某个Activity等细节化定制)</p>
+<h3 id="进一步优化类流程图"><a href="#进一步优化类流程图" class="headerlink" title="进一步优化类流程图"></a>进一步优化类流程图</h3><blockquote>
+<p>使用Route进行更细节的定制化处理<br>更多实战，<a href="https://github.com/chanjarster/weixin-java-tools" target="_blank" rel="external">推荐</a></p>
+</blockquote>
+<h4 id="图-1"><a href="#图-1" class="headerlink" title="图"></a>图</h4><p><img src="img/类-op.png" alt="当前类流程图"></p>
+<blockquote>
+<p>囧，单看图可能细分不出两者的差别，附上一段代码实例<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 路由规则初始化，用于定义匹配规则</span></span><br><span class="line">NoticeRouter router = <span class="keyword">new</span> NoticeRouter();</span><br><span class="line">route.rule()</span><br><span class="line">    .noticeType(Notice.SMS)</span><br><span class="line">    <span class="comment">// ... 更多细节规则匹配</span></span><br><span class="line">    .handler(smsHandler)</span><br><span class="line">    .end()</span><br><span class="line">    .rule()</span><br><span class="line">    .noticeType(Notice.EMail)</span><br><span class="line">    <span class="comment">// ... 更多细节规则匹配</span></span><br><span class="line">    .handler(emailHandler)</span><br><span class="line">    .end()</span><br><span class="line"></span><br><span class="line"><span class="comment">// 将通知实体通知路由处理</span></span><br><span class="line">router.route(message)</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul>
+<li>充分考虑后期业务需求 (就算非必须的业务需求)<blockquote>
+<p>不要妄想需求是恒久不变的，需求=小三，扩展=真爱</p>
+</blockquote>
+</li>
+</ul>
+<blockquote class="blockquote-center"><p>Ծ‸Ծ 多喝水,保持良好的状态. </p>
+</blockquote>]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[谈JVM，各种过程]]></title>
       <url>http://hocg.in/2016/06/12/%E8%B0%88JVM-%E5%90%84%E7%A7%8D%E8%BF%87%E7%A8%8B/</url>
       <content type="html"><![CDATA[<p>谈谈JVM 各种过程， XMind等我整理一下，稍后贴出 囧～<br>欢迎指教..<br><a id="more"></a></p>
@@ -185,13 +270,6 @@
 </ul>
 <h3 id="自己搭建的blog"><a href="#自己搭建的blog" class="headerlink" title="自己搭建的blog"></a>自己搭建的blog</h3><p>免费的使用 <a href="https://www.startssl.com/" target="_blank" rel="external">Startssl</a><br><a href="https://blog.lutty.me/" target="_blank" rel="external">成品</a></p>
 <h3 id="TOMCAT-配置https环境"><a href="#TOMCAT-配置https环境" class="headerlink" title="TOMCAT 配置https环境"></a>TOMCAT 配置https环境</h3><p><a href="http://blog.csdn.net/small____fish/article/details/8214938" target="_blank" rel="external"> keytool 教程</a><br>外网回调可尝试使用<a href="http://www.nat123.com" target="_blank" rel="external">nat123</a></p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[复习、考试]]></title>
-      <url>http://hocg.in/2016/05/01/%E5%A4%8D%E4%B9%A0-%E8%80%83%E8%AF%95/</url>
-      <content type="html"><![CDATA[<p>复习一周，就上考场 o(╯□╰)o<br>但是总算考完了，思想折磨了我5个月..<br><a id="more"></a><br>等分数把。。</p>
 ]]></content>
     </entry>
     
