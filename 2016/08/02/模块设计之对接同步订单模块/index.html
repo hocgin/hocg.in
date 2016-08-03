@@ -73,7 +73,7 @@
 <meta property="og:image" content="http://7xs6lq.com1.z0.glb.clouddn.com/业务-v1-op.png">
 <meta property="og:image" content="http://7xs6lq.com1.z0.glb.clouddn.com/总体思路-v2-now.png">
 <meta property="og:image" content="http://7xs6lq.com1.z0.glb.clouddn.com/业务-v2-now.png">
-<meta property="og:updated_time" content="2016-08-03T02:56:54.916Z">
+<meta property="og:updated_time" content="2016-08-03T03:05:58.869Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="模块设计之对接同步订单模块">
 <meta name="twitter:description" content="一个关于设计模块的故事。">
@@ -344,7 +344,7 @@
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
 <p><strong>#对接同步订单模块#</strong> 该部分是我入职后自主设计的一个模块，因为初期预计对接5家平台的订单，并考虑到后期可能对接更多平台和平台订单数量等，所以扩展性和性能方面是很值得深思的问题。</p>
 </blockquote>
-<h4 id="开发周期-20day"><a href="#开发周期-20day" class="headerlink" title="开发周期 (20day)"></a>开发周期 (20day)</h4><blockquote>
+<h2 id="开发周期-20day"><a href="#开发周期-20day" class="headerlink" title="开发周期 (20day)"></a>开发周期 (20day)</h2><blockquote>
 <p>前期需求的多次变更，大大的浪费了开发周期.</p>
 </blockquote>
 <ul>
@@ -352,18 +352,18 @@
 <li>接口整理和整合设计(主要是对接平台的接口整合等)</li>
 <li>代码编写</li>
 </ul>
-<h2 id="业务流程图"><a href="#业务流程图" class="headerlink" title="业务流程图"></a>业务流程图</h2><h4 id="表"><a href="#表" class="headerlink" title="表"></a>表</h4><ul>
+<h2 id="业务流程图"><a href="#业务流程图" class="headerlink" title="业务流程图"></a>业务流程图</h2><h3 id="表"><a href="#表" class="headerlink" title="表"></a>表</h3><ul>
 <li>商品表,<strong>存储商品信息, 主要配合方案匹配</strong></li>
 <li>授权表,<strong>存储用户授权信息，主要用于token管理</strong></li>
 <li>平台配置表,<strong>存储平台key信息</strong></li>
 <li>方案表,<strong>已存在，存储方案信息</strong></li>
 </ul>
-<h3 id="v1版"><a href="#v1版" class="headerlink" title="v1版"></a>v1版</h3><h4 id="总思路图"><a href="#总思路图" class="headerlink" title="总思路图"></a>总思路图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/总体思路-v1-op.png" alt="总体思路-v1-op.png"></p>
+<h3 id="v1版"><a href="#v1版" class="headerlink" title="v1版"></a>v1版</h3><h4 id="思路图"><a href="#思路图" class="headerlink" title="思路图"></a>思路图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/总体思路-v1-op.png" alt="总体思路-v1-op.png"></p>
 <h4 id="业务图"><a href="#业务图" class="headerlink" title="业务图"></a>业务图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/业务-v1-op.png" alt="总体思路-v1-now.png"></p>
 <p>原先，该部分设计是不考虑对订单数据进行缓存处理的，但后期需求多次变更被迫进行数据缓存，因此再原先的基础上建立了线程池并对同步订单部分进行异步线程处理，因此增加了一张订单缓存表和事件队列表。</p>
 <hr>
-<h3 id="v2版"><a href="#v2版" class="headerlink" title="v2版"></a>v2版</h3><h4 id="总思路图-1"><a href="#总思路图-1" class="headerlink" title="总思路图"></a>总思路图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/总体思路-v2-now.png" alt="总体思路-v2-op.png"></p>
-<h2 id="业务图-1"><a href="#业务图-1" class="headerlink" title="业务图"></a>业务图</h2><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/业务-v2-now.png" alt="总体思路-v2-now.png"></p>
+<h3 id="v2版"><a href="#v2版" class="headerlink" title="v2版"></a>v2版</h3><h4 id="思路图-1"><a href="#思路图-1" class="headerlink" title="思路图"></a>思路图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/总体思路-v2-now.png" alt="总体思路-v2-op.png"></p>
+<h4 id="业务图-1"><a href="#业务图-1" class="headerlink" title="业务图"></a>业务图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/业务-v2-now.png" alt="总体思路-v2-now.png"></p>
 <blockquote>
 <p>后面又对缓存表进行了数据去重防止表数据爆炸性增长。</p>
 </blockquote>
@@ -604,7 +604,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#开发周期-20day"><span class="nav-number">1.0.1.</span> <span class="nav-text">开发周期 (20day)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#业务流程图"><span class="nav-number">2.</span> <span class="nav-text">业务流程图</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#表"><span class="nav-number">2.0.1.</span> <span class="nav-text">表</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#v1版"><span class="nav-number">2.1.</span> <span class="nav-text">v1版</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#总思路图"><span class="nav-number">2.1.1.</span> <span class="nav-text">总思路图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#业务图"><span class="nav-number">2.1.2.</span> <span class="nav-text">业务图</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#v2版"><span class="nav-number">2.2.</span> <span class="nav-text">v2版</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#总思路图-1"><span class="nav-number">2.2.1.</span> <span class="nav-text">总思路图</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#业务图-1"><span class="nav-number">3.</span> <span class="nav-text">业务图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开发周期-20day"><span class="nav-number">2.</span> <span class="nav-text">开发周期 (20day)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#业务流程图"><span class="nav-number">3.</span> <span class="nav-text">业务流程图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#表"><span class="nav-number">3.1.</span> <span class="nav-text">表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#v1版"><span class="nav-number">3.2.</span> <span class="nav-text">v1版</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#思路图"><span class="nav-number">3.2.1.</span> <span class="nav-text">思路图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#业务图"><span class="nav-number">3.2.2.</span> <span class="nav-text">业务图</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#v2版"><span class="nav-number">3.3.</span> <span class="nav-text">v2版</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#思路图-1"><span class="nav-number">3.3.1.</span> <span class="nav-text">思路图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#业务图-1"><span class="nav-number">3.3.2.</span> <span class="nav-text">业务图</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">

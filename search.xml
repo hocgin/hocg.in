@@ -10,7 +10,7 @@
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
 <p><strong>#对接同步订单模块#</strong> 该部分是我入职后自主设计的一个模块，因为初期预计对接5家平台的订单，并考虑到后期可能对接更多平台和平台订单数量等，所以扩展性和性能方面是很值得深思的问题。</p>
 </blockquote>
-<h4 id="开发周期-20day"><a href="#开发周期-20day" class="headerlink" title="开发周期 (20day)"></a>开发周期 (20day)</h4><blockquote>
+<h2 id="开发周期-20day"><a href="#开发周期-20day" class="headerlink" title="开发周期 (20day)"></a>开发周期 (20day)</h2><blockquote>
 <p>前期需求的多次变更，大大的浪费了开发周期.</p>
 </blockquote>
 <ul>
@@ -18,18 +18,18 @@
 <li>接口整理和整合设计(主要是对接平台的接口整合等)</li>
 <li>代码编写</li>
 </ul>
-<h2 id="业务流程图"><a href="#业务流程图" class="headerlink" title="业务流程图"></a>业务流程图</h2><h4 id="表"><a href="#表" class="headerlink" title="表"></a>表</h4><ul>
+<h2 id="业务流程图"><a href="#业务流程图" class="headerlink" title="业务流程图"></a>业务流程图</h2><h3 id="表"><a href="#表" class="headerlink" title="表"></a>表</h3><ul>
 <li>商品表,<strong>存储商品信息, 主要配合方案匹配</strong></li>
 <li>授权表,<strong>存储用户授权信息，主要用于token管理</strong></li>
 <li>平台配置表,<strong>存储平台key信息</strong></li>
 <li>方案表,<strong>已存在，存储方案信息</strong></li>
 </ul>
-<h3 id="v1版"><a href="#v1版" class="headerlink" title="v1版"></a>v1版</h3><h4 id="总思路图"><a href="#总思路图" class="headerlink" title="总思路图"></a>总思路图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/总体思路-v1-op.png" alt="总体思路-v1-op.png"></p>
+<h3 id="v1版"><a href="#v1版" class="headerlink" title="v1版"></a>v1版</h3><h4 id="思路图"><a href="#思路图" class="headerlink" title="思路图"></a>思路图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/总体思路-v1-op.png" alt="总体思路-v1-op.png"></p>
 <h4 id="业务图"><a href="#业务图" class="headerlink" title="业务图"></a>业务图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/业务-v1-op.png" alt="总体思路-v1-now.png"></p>
 <p>原先，该部分设计是不考虑对订单数据进行缓存处理的，但后期需求多次变更被迫进行数据缓存，因此再原先的基础上建立了线程池并对同步订单部分进行异步线程处理，因此增加了一张订单缓存表和事件队列表。</p>
 <hr>
-<h3 id="v2版"><a href="#v2版" class="headerlink" title="v2版"></a>v2版</h3><h4 id="总思路图-1"><a href="#总思路图-1" class="headerlink" title="总思路图"></a>总思路图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/总体思路-v2-now.png" alt="总体思路-v2-op.png"></p>
-<h2 id="业务图-1"><a href="#业务图-1" class="headerlink" title="业务图"></a>业务图</h2><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/业务-v2-now.png" alt="总体思路-v2-now.png"></p>
+<h3 id="v2版"><a href="#v2版" class="headerlink" title="v2版"></a>v2版</h3><h4 id="思路图-1"><a href="#思路图-1" class="headerlink" title="思路图"></a>思路图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/总体思路-v2-now.png" alt="总体思路-v2-op.png"></p>
+<h4 id="业务图-1"><a href="#业务图-1" class="headerlink" title="业务图"></a>业务图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/业务-v2-now.png" alt="总体思路-v2-now.png"></p>
 <blockquote>
 <p>后面又对缓存表进行了数据去重防止表数据爆炸性增长。</p>
 </blockquote>
@@ -48,24 +48,24 @@
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
 <p><strong>#消息模块#</strong> 这是我刚入职时所接触的第一个模块，也算是比较大的模块了。这个模块的业务是负责整个项目所有的消息出入口，包含短信发送，APP推送，邮件发送以及前后端人员站内消息。当时设计的时候需求架构比较简单而且时间紧迫(π__π)，没有从根本理清业务和功能后期存在的扩展。因此，这篇文章是记录当时架构的思路和需要改善的地方。</p>
 </blockquote>
-<h4 id="开发周期-10day"><a href="#开发周期-10day" class="headerlink" title="开发周期 (10day)"></a>开发周期 (10day)</h4><ul>
+<h2 id="开发周期-10day"><a href="#开发周期-10day" class="headerlink" title="开发周期 (10day)"></a>开发周期 (10day)</h2><ul>
 <li>库表设计</li>
 <li>接口整理和整合设计(短信&amp;友盟&amp;邮件等)</li>
 <li>代码编写</li>
 </ul>
-<h2 id="业务流程图"><a href="#业务流程图" class="headerlink" title="业务流程图"></a>业务流程图</h2><h4 id="表"><a href="#表" class="headerlink" title="表"></a>表</h4><ul>
+<h2 id="业务流程图"><a href="#业务流程图" class="headerlink" title="业务流程图"></a>业务流程图</h2><h3 id="表"><a href="#表" class="headerlink" title="表"></a>表</h3><ul>
 <li>消息记录表, <strong>主要负责消息出入口记录</strong></li>
 <li>事件触发表, <strong>主要对消息进行控制，例如: 触发订单变更推送到用户/运营人员 and so on</strong></li>
 <li>消息状态表, <strong>主要负责消息发送的状态，包含定时发送，撤销发送 and so on</strong></li>
 </ul>
-<h4 id="图"><a href="#图" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/业务-now.png" alt="当前业务流程图"></p>
+<h3 id="图"><a href="#图" class="headerlink" title="图"></a>图</h3><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/业务-now.png" alt="当前业务流程图"></p>
 <h2 id="类流程图"><a href="#类流程图" class="headerlink" title="类流程图"></a>类流程图</h2><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/类-now.png" alt="当前类流程图"></p>
 <p>如图，此模式主要是利用工厂模式, 提供多种消息通道实例，由不同的消息通道对自身通道消息进行处理，类似于把西瓜，牛肉，白菜等送入不同的工厂进行加工，但是又由食品质量控制中心对其进行记录和检验。</p>
 <p><strong>优点</strong>: 后期便于扩展更多的通道模式<br><strong>缺点</strong>: 各个模式是靠类型区别的，不便于进行细节化处理(例如，对某部分APP推送进行定制化，进入某个Activity等细节化定制)</p>
-<h3 id="进一步优化类流程图"><a href="#进一步优化类流程图" class="headerlink" title="进一步优化类流程图"></a>进一步优化类流程图</h3><blockquote>
+<h2 id="进一步优化类流程图"><a href="#进一步优化类流程图" class="headerlink" title="进一步优化类流程图"></a>进一步优化类流程图</h2><blockquote>
 <p>使用Route进行更细节的定制化处理<br>更多实战，<a href="https://github.com/chanjarster/weixin-java-tools" target="_blank" rel="external">推荐</a></p>
 </blockquote>
-<h4 id="图-1"><a href="#图-1" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/类-op.png" alt="当前类流程图"></p>
+<h3 id="图-1"><a href="#图-1" class="headerlink" title="图"></a>图</h3><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/类-op.png" alt="当前类流程图"></p>
 <blockquote>
 <p>囧，单看图可能细分不出两者的差别，附上一段代码实例</p>
 </blockquote>

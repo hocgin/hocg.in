@@ -72,7 +72,7 @@
 <meta property="og:image" content="http://7xs6lq.com1.z0.glb.clouddn.com/业务-now.png">
 <meta property="og:image" content="http://7xs6lq.com1.z0.glb.clouddn.com/类-now.png">
 <meta property="og:image" content="http://7xs6lq.com1.z0.glb.clouddn.com/类-op.png">
-<meta property="og:updated_time" content="2016-08-03T02:58:10.962Z">
+<meta property="og:updated_time" content="2016-08-03T03:03:12.399Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="模块设计之消息模块">
 <meta name="twitter:description" content="新手上路，小心撞车..">
@@ -343,24 +343,24 @@
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
 <p><strong>#消息模块#</strong> 这是我刚入职时所接触的第一个模块，也算是比较大的模块了。这个模块的业务是负责整个项目所有的消息出入口，包含短信发送，APP推送，邮件发送以及前后端人员站内消息。当时设计的时候需求架构比较简单而且时间紧迫(π__π)，没有从根本理清业务和功能后期存在的扩展。因此，这篇文章是记录当时架构的思路和需要改善的地方。</p>
 </blockquote>
-<h4 id="开发周期-10day"><a href="#开发周期-10day" class="headerlink" title="开发周期 (10day)"></a>开发周期 (10day)</h4><ul>
+<h2 id="开发周期-10day"><a href="#开发周期-10day" class="headerlink" title="开发周期 (10day)"></a>开发周期 (10day)</h2><ul>
 <li>库表设计</li>
 <li>接口整理和整合设计(短信&amp;友盟&amp;邮件等)</li>
 <li>代码编写</li>
 </ul>
-<h2 id="业务流程图"><a href="#业务流程图" class="headerlink" title="业务流程图"></a>业务流程图</h2><h4 id="表"><a href="#表" class="headerlink" title="表"></a>表</h4><ul>
+<h2 id="业务流程图"><a href="#业务流程图" class="headerlink" title="业务流程图"></a>业务流程图</h2><h3 id="表"><a href="#表" class="headerlink" title="表"></a>表</h3><ul>
 <li>消息记录表, <strong>主要负责消息出入口记录</strong></li>
 <li>事件触发表, <strong>主要对消息进行控制，例如: 触发订单变更推送到用户/运营人员 and so on</strong></li>
 <li>消息状态表, <strong>主要负责消息发送的状态，包含定时发送，撤销发送 and so on</strong></li>
 </ul>
-<h4 id="图"><a href="#图" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/业务-now.png" alt="当前业务流程图"></p>
+<h3 id="图"><a href="#图" class="headerlink" title="图"></a>图</h3><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/业务-now.png" alt="当前业务流程图"></p>
 <h2 id="类流程图"><a href="#类流程图" class="headerlink" title="类流程图"></a>类流程图</h2><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/类-now.png" alt="当前类流程图"></p>
 <p>如图，此模式主要是利用工厂模式, 提供多种消息通道实例，由不同的消息通道对自身通道消息进行处理，类似于把西瓜，牛肉，白菜等送入不同的工厂进行加工，但是又由食品质量控制中心对其进行记录和检验。</p>
 <p><strong>优点</strong>: 后期便于扩展更多的通道模式<br><strong>缺点</strong>: 各个模式是靠类型区别的，不便于进行细节化处理(例如，对某部分APP推送进行定制化，进入某个Activity等细节化定制)</p>
-<h3 id="进一步优化类流程图"><a href="#进一步优化类流程图" class="headerlink" title="进一步优化类流程图"></a>进一步优化类流程图</h3><blockquote>
+<h2 id="进一步优化类流程图"><a href="#进一步优化类流程图" class="headerlink" title="进一步优化类流程图"></a>进一步优化类流程图</h2><blockquote>
 <p>使用Route进行更细节的定制化处理<br>更多实战，<a href="https://github.com/chanjarster/weixin-java-tools" target="_blank" rel="external">推荐</a></p>
 </blockquote>
-<h4 id="图-1"><a href="#图-1" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/类-op.png" alt="当前类流程图"></p>
+<h3 id="图-1"><a href="#图-1" class="headerlink" title="图"></a>图</h3><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/类-op.png" alt="当前类流程图"></p>
 <blockquote>
 <p>囧，单看图可能细分不出两者的差别，附上一段代码实例</p>
 </blockquote>
@@ -609,7 +609,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#开发周期-10day"><span class="nav-number">1.0.1.</span> <span class="nav-text">开发周期 (10day)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#业务流程图"><span class="nav-number">2.</span> <span class="nav-text">业务流程图</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#表"><span class="nav-number">2.0.1.</span> <span class="nav-text">表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#图"><span class="nav-number">2.0.2.</span> <span class="nav-text">图</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类流程图"><span class="nav-number">3.</span> <span class="nav-text">类流程图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#进一步优化类流程图"><span class="nav-number">3.1.</span> <span class="nav-text">进一步优化类流程图</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#图-1"><span class="nav-number">3.1.1.</span> <span class="nav-text">图</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开发周期-10day"><span class="nav-number">2.</span> <span class="nav-text">开发周期 (10day)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#业务流程图"><span class="nav-number">3.</span> <span class="nav-text">业务流程图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#表"><span class="nav-number">3.1.</span> <span class="nav-text">表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#图"><span class="nav-number">3.2.</span> <span class="nav-text">图</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类流程图"><span class="nav-number">4.</span> <span class="nav-text">类流程图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#进一步优化类流程图"><span class="nav-number">5.</span> <span class="nav-text">进一步优化类流程图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#图-1"><span class="nav-number">5.1.</span> <span class="nav-text">图</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">6.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
