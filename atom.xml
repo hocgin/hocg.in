@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hocg.in/"/>
-  <updated>2016-08-03T02:47:29.305Z</updated>
+  <updated>2016-08-03T02:51:20.340Z</updated>
   <id>http://hocg.in/</id>
   
   <author>
@@ -20,9 +20,10 @@
     <link href="http://hocg.in/2016/08/02/%E6%A8%A1%E5%9D%97%E8%AE%BE%E8%AE%A1%E4%B9%8B%E5%AF%B9%E6%8E%A5%E5%90%8C%E6%AD%A5%E8%AE%A2%E5%8D%95%E6%A8%A1%E5%9D%97/"/>
     <id>http://hocg.in/2016/08/02/模块设计之对接同步订单模块/</id>
     <published>2016-08-02T02:47:06.000Z</published>
-    <updated>2016-08-03T02:47:29.305Z</updated>
+    <updated>2016-08-03T02:51:20.340Z</updated>
     
-    <content type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;blockquote&gt;
+    <content type="html">&lt;p&gt;  一个关于设计模块的故事。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;#对接同步订单模块#&lt;/strong&gt; 该部分是我入职后自主设计的一个模块，因为初期预计对接5家平台的订单，并考虑到后期可能对接更多平台和平台订单数量等，所以扩展性和性能方面是很值得深思的问题。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h4 id=&quot;开发周期-20day&quot;&gt;&lt;a href=&quot;#开发周期-20day&quot; class=&quot;headerlink&quot; title=&quot;开发周期 (20day)&quot;&gt;&lt;/a&gt;开发周期 (20day)&lt;/h4&gt;&lt;blockquote&gt;
@@ -54,12 +55,12 @@
 &lt;/ul&gt;
 &lt;/blockquote&gt;
 &lt;blockquote class=&quot;blockquote-center&quot;&gt;&lt;p&gt;Ծ‸Ծ 多运动,保持60kg. &lt;/p&gt;
-&lt;/blockquote&gt;</content>
+&lt;/blockquote&gt;
+</content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;#对接同步订单模块#&lt;/strong&gt; 该部分是我入职后自主设计的一个模块，因为初期预计对接5家平
+      &lt;p&gt;  一个关于设计模块的故事。&lt;br&gt;
     
     </summary>
     
@@ -71,37 +72,14 @@
   </entry>
   
   <entry>
-    <title></title>
-    <link href="http://hocg.in/2016/07/31/Mac-%E4%BD%BF%E7%94%A8/"/>
-    <id>http://hocg.in/2016/07/31/Mac-使用/</id>
-    <published>2016-07-31T15:58:25.788Z</published>
-    <updated>2016-07-25T09:55:15.000Z</updated>
-    
-    <content type="html">&lt;h3 id=&quot;小技巧&quot;&gt;&lt;a href=&quot;#小技巧&quot; class=&quot;headerlink&quot; title=&quot;小技巧&quot;&gt;&lt;/a&gt;小技巧&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;在Dock 隐藏 iTerm2&lt;br&gt;隐藏:&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;/usr/libexec/PlistBuddy -c &amp;quot;Add :LSUIElement bool true&amp;quot; /Applications/iTerm.app/Contents/Info.plist&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;显示:&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;/usr/libexec/PlistBuddy -c &amp;quot;Delete :LSUIElement&amp;quot; /Applications/iTerm.app/Contents/Info.plist&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;小技巧&quot;&gt;&lt;a href=&quot;#小技巧&quot; class=&quot;headerlink&quot; title=&quot;小技巧&quot;&gt;&lt;/a&gt;小技巧&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;在Dock 隐藏 iTerm2&lt;br&gt;隐藏:&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>模块设计之消息模块</title>
     <link href="http://hocg.in/2016/07/30/%E6%A8%A1%E5%9D%97%E8%AE%BE%E8%AE%A1%E4%B9%8B%E6%B6%88%E6%81%AF%E6%A8%A1%E5%9D%97/"/>
     <id>http://hocg.in/2016/07/30/模块设计之消息模块/</id>
     <published>2016-07-30T11:25:56.000Z</published>
-    <updated>2016-08-03T02:48:37.630Z</updated>
+    <updated>2016-08-03T02:52:04.427Z</updated>
     
-    <content type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;blockquote&gt;
+    <content type="html">&lt;p&gt;  新手上路，小心撞车..&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;#消息模块#&lt;/strong&gt; 这是我刚入职时所接触的第一个模块，也算是比较大的模块了。这个模块的业务是负责整个项目所有的消息出入口，包含短信发送，APP推送，邮件发送以及前后端人员站内消息。当时设计的时候需求架构比较简单而且时间紧迫(π__π)，没有从根本理清业务和功能后期存在的扩展。因此，这篇文章是记录当时架构的思路和需要改善的地方。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h4 id=&quot;开发周期-10day&quot;&gt;&lt;a href=&quot;#开发周期-10day&quot; class=&quot;headerlink&quot; title=&quot;开发周期 (10day)&quot;&gt;&lt;/a&gt;开发周期 (10day)&lt;/h4&gt;&lt;ul&gt;
@@ -131,12 +109,12 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;blockquote class=&quot;blockquote-center&quot;&gt;&lt;p&gt;Ծ‸Ծ 多喝水,保持良好的状态. &lt;/p&gt;
-&lt;/blockquote&gt;</content>
+&lt;/blockquote&gt;
+</content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;#消息模块#&lt;/strong&gt; 这是我刚入职时所接触的第一个模块，也算是比较大的模块了。这个模块的
+      &lt;p&gt;  新手上路，小心撞车..&lt;br&gt;
     
     </summary>
     
@@ -148,37 +126,30 @@
   </entry>
   
   <entry>
-    <title>谈JVM，各种过程</title>
-    <link href="http://hocg.in/2016/06/12/%E8%B0%88JVM-%E5%90%84%E7%A7%8D%E8%BF%87%E7%A8%8B/"/>
-    <id>http://hocg.in/2016/06/12/谈JVM-各种过程/</id>
-    <published>2016-06-12T11:37:49.000Z</published>
-    <updated>2016-06-12T12:02:47.847Z</updated>
+    <title>Mac的使用</title>
+    <link href="http://hocg.in/2016/07/02/Mac-%E4%BD%BF%E7%94%A8/"/>
+    <id>http://hocg.in/2016/07/02/Mac-使用/</id>
+    <published>2016-07-02T02:47:06.000Z</published>
+    <updated>2016-08-03T02:53:50.575Z</updated>
     
-    <content type="html">&lt;p&gt;谈谈JVM 各种过程， XMind等我整理一下，稍后贴出 囧～&lt;br&gt;欢迎指教..&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&quot;总思路&quot;&gt;&lt;a href=&quot;#总思路&quot; class=&quot;headerlink&quot; title=&quot;总思路&quot;&gt;&lt;/a&gt;总思路&lt;/h3&gt;&lt;p&gt;编译过程 -&amp;gt; 运行过程[类加载器过程(类的装载过程) -&amp;gt; 执行过程]&lt;/p&gt;
-&lt;h3 id=&quot;编译过程&quot;&gt;&lt;a href=&quot;#编译过程&quot; class=&quot;headerlink&quot; title=&quot;编译过程&quot;&gt;&lt;/a&gt;编译过程&lt;/h3&gt;&lt;p&gt;.java文件 -javac编译-&amp;gt; .class文件       {-JIT编译(转化+优化)-&amp;gt; 本地方法}[执行过程，当方法执行频率高]&lt;/p&gt;
-&lt;hr&gt;
-&lt;h3 id=&quot;运行过程&quot;&gt;&lt;a href=&quot;#运行过程&quot; class=&quot;headerlink&quot; title=&quot;运行过程&quot;&gt;&lt;/a&gt;运行过程&lt;/h3&gt;&lt;p&gt;类加载器 -&amp;gt; (执行引擎 -&amp;gt; 本地库接口)[Java 运行时数据区] -&amp;gt; 本地方法库&lt;/p&gt;
-&lt;hr&gt;
-&lt;h3 id=&quot;类加载器过程&quot;&gt;&lt;a href=&quot;#类加载器过程&quot; class=&quot;headerlink&quot; title=&quot;类加载器过程&quot;&gt;&lt;/a&gt;&lt;strong&gt;类加载器&lt;/strong&gt;过程&lt;/h3&gt;&lt;p&gt;[启动]类加载器(JNI) -&amp;gt; [扩展]类加载器 -&amp;gt; [系统]类加载器 -&amp;gt; [自定义]类加载器&lt;/p&gt;
-&lt;hr&gt;
-&lt;h3 id=&quot;类装载过程&quot;&gt;&lt;a href=&quot;#类装载过程&quot; class=&quot;headerlink&quot; title=&quot;类装载过程&quot;&gt;&lt;/a&gt;&lt;strong&gt;类&lt;/strong&gt;装载过程&lt;/h3&gt;&lt;p&gt;加载文件到JVM内存 -&amp;gt; (校验语言规范 -&amp;gt; 分配结构存储类的信息 -&amp;gt; 该类常量池中符号更改为直接引用)[Linking] -&amp;gt; 类初始化&lt;/p&gt;
-&lt;hr&gt;
-&lt;h3 id=&quot;执行引擎执行过程-逐行读取指令&quot;&gt;&lt;a href=&quot;#执行引擎执行过程-逐行读取指令&quot; class=&quot;headerlink&quot; title=&quot;执行引擎执行过程(逐行读取指令)&quot;&gt;&lt;/a&gt;&lt;strong&gt;执行引擎&lt;/strong&gt;执行过程(逐行读取指令)&lt;/h3&gt;&lt;p&gt;Thread启动 -生成-&amp;gt; JVM栈 -执行方法-&amp;gt; 压入栈帧(包含 局部变量数组&amp;amp;操作数栈&amp;amp;运行时常量池) -&amp;gt; 逐行读取指令&amp;amp;&amp;amp;解释(JVM栈帧 程序计数器存放下一条指令) -&amp;gt; {JIT(转化+优化)-&amp;gt; 本地方法}[当方法执行频率高] -执行&amp;amp;运算-&amp;gt; 结果(存放 操作数栈中) -&amp;gt; 推出栈帧&lt;/p&gt;
-&lt;hr&gt;
-&lt;h3 id=&quot;Java-运行时数据区-贯穿整个执行过程&quot;&gt;&lt;a href=&quot;#Java-运行时数据区-贯穿整个执行过程&quot; class=&quot;headerlink&quot; title=&quot;Java 运行时数据区(贯穿整个执行过程)&quot;&gt;&lt;/a&gt;Java 运行时数据区(贯穿整个执行过程)&lt;/h3&gt;&lt;p&gt;共享型数据区：方法区(含运行时常量池[存放方法&amp;amp;变量的实际&lt;strong&gt;地址&lt;/strong&gt;])、堆(存放对象实例)&lt;br&gt;隔离型数据区：JVM 栈、本地方法栈(JNI)、程序计数器&lt;/p&gt;
+    <content type="html">&lt;p&gt;  留坑，刚刚起步，梳理中ing。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;小技巧&quot;&gt;&lt;a href=&quot;#小技巧&quot; class=&quot;headerlink&quot; title=&quot;小技巧&quot;&gt;&lt;/a&gt;小技巧&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;在Dock 隐藏 iTerm2&lt;br&gt;隐藏:&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;/usr/libexec/PlistBuddy -c &amp;quot;Add :LSUIElement bool true&amp;quot; /Applications/iTerm.app/Contents/Info.plist&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;显示:&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;/usr/libexec/PlistBuddy -c &amp;quot;Delete :LSUIElement&amp;quot; /Applications/iTerm.app/Contents/Info.plist&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 </content>
     
     <summary type="html">
     
-      &lt;p&gt;谈谈JVM 各种过程， XMind等我整理一下，稍后贴出 囧～&lt;br&gt;欢迎指教..&lt;br&gt;
+      &lt;p&gt;  留坑，刚刚起步，梳理中ing。&lt;br&gt;
     
     </summary>
     
-      <category term="原创" scheme="http://hocg.in/categories/%E5%8E%9F%E5%88%9B/"/>
+      <category term="折腾" scheme="http://hocg.in/categories/%E6%8A%98%E8%85%BE/"/>
     
     
-      <category term="JVM" scheme="http://hocg.in/tags/JVM/"/>
+      <category term="Mac" scheme="http://hocg.in/tags/Mac/"/>
     
   </entry>
   
@@ -335,6 +306,41 @@
     </summary>
     
       <category term="学习" scheme="http://hocg.in/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="JVM" scheme="http://hocg.in/tags/JVM/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>谈JVM，各种过程</title>
+    <link href="http://hocg.in/2016/06/12/%E8%B0%88JVM-%E5%90%84%E7%A7%8D%E8%BF%87%E7%A8%8B/"/>
+    <id>http://hocg.in/2016/06/12/谈JVM-各种过程/</id>
+    <published>2016-06-12T11:37:49.000Z</published>
+    <updated>2016-06-12T12:02:47.847Z</updated>
+    
+    <content type="html">&lt;p&gt;谈谈JVM 各种过程， XMind等我整理一下，稍后贴出 囧～&lt;br&gt;欢迎指教..&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;总思路&quot;&gt;&lt;a href=&quot;#总思路&quot; class=&quot;headerlink&quot; title=&quot;总思路&quot;&gt;&lt;/a&gt;总思路&lt;/h3&gt;&lt;p&gt;编译过程 -&amp;gt; 运行过程[类加载器过程(类的装载过程) -&amp;gt; 执行过程]&lt;/p&gt;
+&lt;h3 id=&quot;编译过程&quot;&gt;&lt;a href=&quot;#编译过程&quot; class=&quot;headerlink&quot; title=&quot;编译过程&quot;&gt;&lt;/a&gt;编译过程&lt;/h3&gt;&lt;p&gt;.java文件 -javac编译-&amp;gt; .class文件       {-JIT编译(转化+优化)-&amp;gt; 本地方法}[执行过程，当方法执行频率高]&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;运行过程&quot;&gt;&lt;a href=&quot;#运行过程&quot; class=&quot;headerlink&quot; title=&quot;运行过程&quot;&gt;&lt;/a&gt;运行过程&lt;/h3&gt;&lt;p&gt;类加载器 -&amp;gt; (执行引擎 -&amp;gt; 本地库接口)[Java 运行时数据区] -&amp;gt; 本地方法库&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;类加载器过程&quot;&gt;&lt;a href=&quot;#类加载器过程&quot; class=&quot;headerlink&quot; title=&quot;类加载器过程&quot;&gt;&lt;/a&gt;&lt;strong&gt;类加载器&lt;/strong&gt;过程&lt;/h3&gt;&lt;p&gt;[启动]类加载器(JNI) -&amp;gt; [扩展]类加载器 -&amp;gt; [系统]类加载器 -&amp;gt; [自定义]类加载器&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;类装载过程&quot;&gt;&lt;a href=&quot;#类装载过程&quot; class=&quot;headerlink&quot; title=&quot;类装载过程&quot;&gt;&lt;/a&gt;&lt;strong&gt;类&lt;/strong&gt;装载过程&lt;/h3&gt;&lt;p&gt;加载文件到JVM内存 -&amp;gt; (校验语言规范 -&amp;gt; 分配结构存储类的信息 -&amp;gt; 该类常量池中符号更改为直接引用)[Linking] -&amp;gt; 类初始化&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;执行引擎执行过程-逐行读取指令&quot;&gt;&lt;a href=&quot;#执行引擎执行过程-逐行读取指令&quot; class=&quot;headerlink&quot; title=&quot;执行引擎执行过程(逐行读取指令)&quot;&gt;&lt;/a&gt;&lt;strong&gt;执行引擎&lt;/strong&gt;执行过程(逐行读取指令)&lt;/h3&gt;&lt;p&gt;Thread启动 -生成-&amp;gt; JVM栈 -执行方法-&amp;gt; 压入栈帧(包含 局部变量数组&amp;amp;操作数栈&amp;amp;运行时常量池) -&amp;gt; 逐行读取指令&amp;amp;&amp;amp;解释(JVM栈帧 程序计数器存放下一条指令) -&amp;gt; {JIT(转化+优化)-&amp;gt; 本地方法}[当方法执行频率高] -执行&amp;amp;运算-&amp;gt; 结果(存放 操作数栈中) -&amp;gt; 推出栈帧&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;Java-运行时数据区-贯穿整个执行过程&quot;&gt;&lt;a href=&quot;#Java-运行时数据区-贯穿整个执行过程&quot; class=&quot;headerlink&quot; title=&quot;Java 运行时数据区(贯穿整个执行过程)&quot;&gt;&lt;/a&gt;Java 运行时数据区(贯穿整个执行过程)&lt;/h3&gt;&lt;p&gt;共享型数据区：方法区(含运行时常量池[存放方法&amp;amp;变量的实际&lt;strong&gt;地址&lt;/strong&gt;])、堆(存放对象实例)&lt;br&gt;隔离型数据区：JVM 栈、本地方法栈(JNI)、程序计数器&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;谈谈JVM 各种过程， XMind等我整理一下，稍后贴出 囧～&lt;br&gt;欢迎指教..&lt;br&gt;
+    
+    </summary>
+    
+      <category term="原创" scheme="http://hocg.in/categories/%E5%8E%9F%E5%88%9B/"/>
     
     
       <category term="JVM" scheme="http://hocg.in/tags/JVM/"/>
