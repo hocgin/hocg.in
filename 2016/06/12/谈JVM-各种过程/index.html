@@ -45,7 +45,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="JVM," />
+  <meta name="keywords" content="JVM,Java," />
 
 
 
@@ -63,16 +63,24 @@
 
 
 
-<meta name="description" content="谈谈JVM 各种过程， XMind等我整理一下，稍后贴出 囧～欢迎指教..">
+<meta name="description" content="谈谈JVM 各种过程， XMind等我整理一下，稍后贴出 囧～欢迎指教..update: 2016-08-03 14:44:12 更新了图">
 <meta property="og:type" content="article">
 <meta property="og:title" content="谈JVM，各种过程">
 <meta property="og:url" content="http://hocg.in/2016/06/12/谈JVM-各种过程/index.html">
 <meta property="og:site_name" content="Hocgin (๑`灬´๑)">
-<meta property="og:description" content="谈谈JVM 各种过程， XMind等我整理一下，稍后贴出 囧～欢迎指教..">
-<meta property="og:updated_time" content="2016-06-12T12:02:47.847Z">
+<meta property="og:description" content="谈谈JVM 各种过程， XMind等我整理一下，稍后贴出 囧～欢迎指教..update: 2016-08-03 14:44:12 更新了图">
+<meta property="og:image" content="http://7xs6lq.com1.z0.glb.clouddn.com/总思路-v1.png">
+<meta property="og:image" content="http://7xs6lq.com1.z0.glb.clouddn.com/编译过程.png">
+<meta property="og:image" content="http://7xs6lq.com1.z0.glb.clouddn.com/运行过程.png">
+<meta property="og:image" content="http://7xs6lq.com1.z0.glb.clouddn.com/类加载器过程.png">
+<meta property="og:image" content="http://7xs6lq.com1.z0.glb.clouddn.com/类装载过程.png">
+<meta property="og:image" content="http://7xs6lq.com1.z0.glb.clouddn.com/执行引擎执行过程.png">
+<meta property="og:image" content="http://7xs6lq.com1.z0.glb.clouddn.com/运行时数据图.png">
+<meta property="og:updated_time" content="2016-08-03T06:48:12.644Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="谈JVM，各种过程">
-<meta name="twitter:description" content="谈谈JVM 各种过程， XMind等我整理一下，稍后贴出 囧～欢迎指教..">
+<meta name="twitter:description" content="谈谈JVM 各种过程， XMind等我整理一下，稍后贴出 囧～欢迎指教..update: 2016-08-03 14:44:12 更新了图">
+<meta name="twitter:image" content="http://7xs6lq.com1.z0.glb.clouddn.com/总思路-v1.png">
 
 
 
@@ -288,8 +296,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/原创/" itemprop="url" rel="index">
-                    <span itemprop="name">原创</span>
+                  <a href="/categories/学习/" itemprop="url" rel="index">
+                    <span itemprop="name">学习</span>
                   </a>
                 </span>
 
@@ -335,19 +343,26 @@
       
 
       
-        <p>谈谈JVM 各种过程， XMind等我整理一下，稍后贴出 囧～<br>欢迎指教..<br><a id="more"></a></p>
+        <p>谈谈JVM 各种过程， XMind等我整理一下，稍后贴出 囧～<br>欢迎指教..<br><strong>update:</strong> 2016-08-03 14:44:12 更新了图<br><a id="more"></a></p>
 <h3 id="总思路"><a href="#总思路" class="headerlink" title="总思路"></a>总思路</h3><p>编译过程 -&gt; 运行过程[类加载器过程(类的装载过程) -&gt; 执行过程]</p>
+<h4 id="图"><a href="#图" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/总思路-v1.png" alt="总思路-v1.png"></p>
 <h3 id="编译过程"><a href="#编译过程" class="headerlink" title="编译过程"></a>编译过程</h3><p>.java文件 -javac编译-&gt; .class文件       {-JIT编译(转化+优化)-&gt; 本地方法}[执行过程，当方法执行频率高]</p>
+<h4 id="图-1"><a href="#图-1" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/编译过程.png" alt="编译过程.png"></p>
 <hr>
 <h3 id="运行过程"><a href="#运行过程" class="headerlink" title="运行过程"></a>运行过程</h3><p>类加载器 -&gt; (执行引擎 -&gt; 本地库接口)[Java 运行时数据区] -&gt; 本地方法库</p>
+<h4 id="图-2"><a href="#图-2" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/运行过程.png" alt="运行过程.png"></p>
 <hr>
 <h3 id="类加载器过程"><a href="#类加载器过程" class="headerlink" title="类加载器过程"></a><strong>类加载器</strong>过程</h3><p>[启动]类加载器(JNI) -&gt; [扩展]类加载器 -&gt; [系统]类加载器 -&gt; [自定义]类加载器</p>
+<h4 id="图-3"><a href="#图-3" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/类加载器过程.png" alt="类加载器过程.png"></p>
 <hr>
 <h3 id="类装载过程"><a href="#类装载过程" class="headerlink" title="类装载过程"></a><strong>类</strong>装载过程</h3><p>加载文件到JVM内存 -&gt; (校验语言规范 -&gt; 分配结构存储类的信息 -&gt; 该类常量池中符号更改为直接引用)[Linking] -&gt; 类初始化</p>
+<h4 id="图-4"><a href="#图-4" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/类装载过程.png" alt="类装载过程.png"></p>
 <hr>
 <h3 id="执行引擎执行过程-逐行读取指令"><a href="#执行引擎执行过程-逐行读取指令" class="headerlink" title="执行引擎执行过程(逐行读取指令)"></a><strong>执行引擎</strong>执行过程(逐行读取指令)</h3><p>Thread启动 -生成-&gt; JVM栈 -执行方法-&gt; 压入栈帧(包含 局部变量数组&amp;操作数栈&amp;运行时常量池) -&gt; 逐行读取指令&amp;&amp;解释(JVM栈帧 程序计数器存放下一条指令) -&gt; {JIT(转化+优化)-&gt; 本地方法}[当方法执行频率高] -执行&amp;运算-&gt; 结果(存放 操作数栈中) -&gt; 推出栈帧</p>
+<h4 id="图-5"><a href="#图-5" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/执行引擎执行过程.png" alt="执行引擎执行过程.png"></p>
 <hr>
 <h3 id="Java-运行时数据区-贯穿整个执行过程"><a href="#Java-运行时数据区-贯穿整个执行过程" class="headerlink" title="Java 运行时数据区(贯穿整个执行过程)"></a>Java 运行时数据区(贯穿整个执行过程)</h3><p>共享型数据区：方法区(含运行时常量池[存放方法&amp;变量的实际<strong>地址</strong>])、堆(存放对象实例)<br>隔离型数据区：JVM 栈、本地方法栈(JNI)、程序计数器</p>
+<h4 id="图-6"><a href="#图-6" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/运行时数据图.png" alt="运行时数据图.png"></p>
 
       
     </div>
@@ -382,6 +397,8 @@
         <div class="post-tags">
           
             <a href="/tags/JVM/" rel="tag">#JVM</a>
+          
+            <a href="/tags/Java/" rel="tag">#Java</a>
           
         </div>
       
@@ -499,7 +516,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -508,7 +525,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-count">11</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -584,7 +601,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#总思路"><span class="nav-number">1.</span> <span class="nav-text">总思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编译过程"><span class="nav-number">2.</span> <span class="nav-text">编译过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运行过程"><span class="nav-number">3.</span> <span class="nav-text">运行过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#类加载器过程"><span class="nav-number">4.</span> <span class="nav-text">类加载器过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#类装载过程"><span class="nav-number">5.</span> <span class="nav-text">类装载过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#执行引擎执行过程-逐行读取指令"><span class="nav-number">6.</span> <span class="nav-text">执行引擎执行过程(逐行读取指令)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Java-运行时数据区-贯穿整个执行过程"><span class="nav-number">7.</span> <span class="nav-text">Java 运行时数据区(贯穿整个执行过程)</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#总思路"><span class="nav-number">1.</span> <span class="nav-text">总思路</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#图"><span class="nav-number">1.1.</span> <span class="nav-text">图</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编译过程"><span class="nav-number">2.</span> <span class="nav-text">编译过程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#图-1"><span class="nav-number">2.1.</span> <span class="nav-text">图</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运行过程"><span class="nav-number">3.</span> <span class="nav-text">运行过程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#图-2"><span class="nav-number">3.1.</span> <span class="nav-text">图</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#类加载器过程"><span class="nav-number">4.</span> <span class="nav-text">类加载器过程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#图-3"><span class="nav-number">4.1.</span> <span class="nav-text">图</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#类装载过程"><span class="nav-number">5.</span> <span class="nav-text">类装载过程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#图-4"><span class="nav-number">5.1.</span> <span class="nav-text">图</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#执行引擎执行过程-逐行读取指令"><span class="nav-number">6.</span> <span class="nav-text">执行引擎执行过程(逐行读取指令)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#图-5"><span class="nav-number">6.1.</span> <span class="nav-text">图</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Java-运行时数据区-贯穿整个执行过程"><span class="nav-number">7.</span> <span class="nav-text">Java 运行时数据区(贯穿整个执行过程)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#图-6"><span class="nav-number">7.1.</span> <span class="nav-text">图</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
