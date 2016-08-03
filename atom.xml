@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hocg.in/"/>
-  <updated>2016-08-03T02:51:20.340Z</updated>
+  <updated>2016-08-03T02:56:54.916Z</updated>
   <id>http://hocg.in/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://hocg.in/2016/08/02/%E6%A8%A1%E5%9D%97%E8%AE%BE%E8%AE%A1%E4%B9%8B%E5%AF%B9%E6%8E%A5%E5%90%8C%E6%AD%A5%E8%AE%A2%E5%8D%95%E6%A8%A1%E5%9D%97/"/>
     <id>http://hocg.in/2016/08/02/模块设计之对接同步订单模块/</id>
     <published>2016-08-02T02:47:06.000Z</published>
-    <updated>2016-08-03T02:51:20.340Z</updated>
+    <updated>2016-08-03T02:56:54.916Z</updated>
     
     <content type="html">&lt;p&gt;  一个关于设计模块的故事。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;blockquote&gt;
@@ -40,20 +40,18 @@
 &lt;li&gt;平台配置表,&lt;strong&gt;存储平台key信息&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;方案表,&lt;strong&gt;已存在，存储方案信息&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;###v1版&lt;/p&gt;
-&lt;h4 id=&quot;总思路图&quot;&gt;&lt;a href=&quot;#总思路图&quot; class=&quot;headerlink&quot; title=&quot;总思路图&quot;&gt;&lt;/a&gt;总思路图&lt;/h4&gt;&lt;p&gt;&lt;img src=&quot;http://7xs6lq.com1.z0.glb.clouddn.com/总体思路-v1-op.png&quot; alt=&quot;总体思路-v1-op.png&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;v1版&quot;&gt;&lt;a href=&quot;#v1版&quot; class=&quot;headerlink&quot; title=&quot;v1版&quot;&gt;&lt;/a&gt;v1版&lt;/h3&gt;&lt;h4 id=&quot;总思路图&quot;&gt;&lt;a href=&quot;#总思路图&quot; class=&quot;headerlink&quot; title=&quot;总思路图&quot;&gt;&lt;/a&gt;总思路图&lt;/h4&gt;&lt;p&gt;&lt;img src=&quot;http://7xs6lq.com1.z0.glb.clouddn.com/总体思路-v1-op.png&quot; alt=&quot;总体思路-v1-op.png&quot;&gt;&lt;/p&gt;
 &lt;h4 id=&quot;业务图&quot;&gt;&lt;a href=&quot;#业务图&quot; class=&quot;headerlink&quot; title=&quot;业务图&quot;&gt;&lt;/a&gt;业务图&lt;/h4&gt;&lt;p&gt;&lt;img src=&quot;http://7xs6lq.com1.z0.glb.clouddn.com/业务-v1-op.png&quot; alt=&quot;总体思路-v1-now.png&quot;&gt;&lt;/p&gt;
 &lt;p&gt;原先，该部分设计是不考虑对订单数据进行缓存处理的，但后期需求多次变更被迫进行数据缓存，因此再原先的基础上建立了线程池并对同步订单部分进行异步线程处理，因此增加了一张订单缓存表和事件队列表。&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;###v2版&lt;/p&gt;
-&lt;h4 id=&quot;总思路图-1&quot;&gt;&lt;a href=&quot;#总思路图-1&quot; class=&quot;headerlink&quot; title=&quot;总思路图&quot;&gt;&lt;/a&gt;总思路图&lt;/h4&gt;&lt;p&gt;&lt;img src=&quot;http://7xs6lq.com1.z0.glb.clouddn.com/总体思路-v2-now.png&quot; alt=&quot;总体思路-v2-op.png&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;v2版&quot;&gt;&lt;a href=&quot;#v2版&quot; class=&quot;headerlink&quot; title=&quot;v2版&quot;&gt;&lt;/a&gt;v2版&lt;/h3&gt;&lt;h4 id=&quot;总思路图-1&quot;&gt;&lt;a href=&quot;#总思路图-1&quot; class=&quot;headerlink&quot; title=&quot;总思路图&quot;&gt;&lt;/a&gt;总思路图&lt;/h4&gt;&lt;p&gt;&lt;img src=&quot;http://7xs6lq.com1.z0.glb.clouddn.com/总体思路-v2-now.png&quot; alt=&quot;总体思路-v2-op.png&quot;&gt;&lt;/p&gt;
 &lt;h2 id=&quot;业务图-1&quot;&gt;&lt;a href=&quot;#业务图-1&quot; class=&quot;headerlink&quot; title=&quot;业务图&quot;&gt;&lt;/a&gt;业务图&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;http://7xs6lq.com1.z0.glb.clouddn.com/业务-v2-now.png&quot; alt=&quot;总体思路-v2-now.png&quot;&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;后面又对缓存表进行了数据去重防止表数据爆炸性增长。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h2 id=&quot;总结&quot;&gt;&lt;a href=&quot;#总结&quot; class=&quot;headerlink&quot; title=&quot;总结&quot;&gt;&lt;/a&gt;总结&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;把公共抽离出来，中间新增转化层可以很好的解决代码复用的问题.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/blockquote&gt;
 &lt;blockquote class=&quot;blockquote-center&quot;&gt;&lt;p&gt;Ծ‸Ծ 多运动,保持60kg. &lt;/p&gt;
 &lt;/blockquote&gt;
 </content>
@@ -76,7 +74,7 @@
     <link href="http://hocg.in/2016/07/30/%E6%A8%A1%E5%9D%97%E8%AE%BE%E8%AE%A1%E4%B9%8B%E6%B6%88%E6%81%AF%E6%A8%A1%E5%9D%97/"/>
     <id>http://hocg.in/2016/07/30/模块设计之消息模块/</id>
     <published>2016-07-30T11:25:56.000Z</published>
-    <updated>2016-08-03T02:52:04.427Z</updated>
+    <updated>2016-08-03T02:58:10.962Z</updated>
     
     <content type="html">&lt;p&gt;  新手上路，小心撞车..&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;blockquote&gt;
@@ -92,16 +90,18 @@
 &lt;li&gt;事件触发表, &lt;strong&gt;主要对消息进行控制，例如: 触发订单变更推送到用户/运营人员 and so on&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;消息状态表, &lt;strong&gt;主要负责消息发送的状态，包含定时发送，撤销发送 and so on&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&quot;图&quot;&gt;&lt;a href=&quot;#图&quot; class=&quot;headerlink&quot; title=&quot;图&quot;&gt;&lt;/a&gt;图&lt;/h4&gt;&lt;p&gt;&lt;img src=&quot;img/业务-now.png&quot; alt=&quot;当前业务流程图&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;类流程图&quot;&gt;&lt;a href=&quot;#类流程图&quot; class=&quot;headerlink&quot; title=&quot;类流程图&quot;&gt;&lt;/a&gt;类流程图&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;img/类-now.png&quot; alt=&quot;当前类流程图&quot;&gt;&lt;/p&gt;
-&lt;p&gt;如图，此模式主要是利用工厂模式, 提供多种消息通道实例，由不同的消息通道对自身通道消息进行处理，类似于把西瓜，牛肉，白菜等送入不同的工厂进行加工，但是又由食品质量控制中心对其进行记录和检验。&lt;br&gt;&lt;strong&gt;优点&lt;/strong&gt;: 后期便于扩展更多的通道模式&lt;br&gt;&lt;strong&gt;缺点&lt;/strong&gt;: 各个模式是靠类型区别的，不便于进行细节化处理(例如，对某部分APP推送进行定制化，进入某个Activity等细节化定制)&lt;/p&gt;
+&lt;h4 id=&quot;图&quot;&gt;&lt;a href=&quot;#图&quot; class=&quot;headerlink&quot; title=&quot;图&quot;&gt;&lt;/a&gt;图&lt;/h4&gt;&lt;p&gt;&lt;img src=&quot;http://7xs6lq.com1.z0.glb.clouddn.com/业务-now.png&quot; alt=&quot;当前业务流程图&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;类流程图&quot;&gt;&lt;a href=&quot;#类流程图&quot; class=&quot;headerlink&quot; title=&quot;类流程图&quot;&gt;&lt;/a&gt;类流程图&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;http://7xs6lq.com1.z0.glb.clouddn.com/类-now.png&quot; alt=&quot;当前类流程图&quot;&gt;&lt;/p&gt;
+&lt;p&gt;如图，此模式主要是利用工厂模式, 提供多种消息通道实例，由不同的消息通道对自身通道消息进行处理，类似于把西瓜，牛肉，白菜等送入不同的工厂进行加工，但是又由食品质量控制中心对其进行记录和检验。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;优点&lt;/strong&gt;: 后期便于扩展更多的通道模式&lt;br&gt;&lt;strong&gt;缺点&lt;/strong&gt;: 各个模式是靠类型区别的，不便于进行细节化处理(例如，对某部分APP推送进行定制化，进入某个Activity等细节化定制)&lt;/p&gt;
 &lt;h3 id=&quot;进一步优化类流程图&quot;&gt;&lt;a href=&quot;#进一步优化类流程图&quot; class=&quot;headerlink&quot; title=&quot;进一步优化类流程图&quot;&gt;&lt;/a&gt;进一步优化类流程图&lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;使用Route进行更细节的定制化处理&lt;br&gt;更多实战，&lt;a href=&quot;https://github.com/chanjarster/weixin-java-tools&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;推荐&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h4 id=&quot;图-1&quot;&gt;&lt;a href=&quot;#图-1&quot; class=&quot;headerlink&quot; title=&quot;图&quot;&gt;&lt;/a&gt;图&lt;/h4&gt;&lt;p&gt;&lt;img src=&quot;img/类-op.png&quot; alt=&quot;当前类流程图&quot;&gt;&lt;/p&gt;
+&lt;h4 id=&quot;图-1&quot;&gt;&lt;a href=&quot;#图-1&quot; class=&quot;headerlink&quot; title=&quot;图&quot;&gt;&lt;/a&gt;图&lt;/h4&gt;&lt;p&gt;&lt;img src=&quot;http://7xs6lq.com1.z0.glb.clouddn.com/类-op.png&quot; alt=&quot;当前类流程图&quot;&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;囧，单看图可能细分不出两者的差别，附上一段代码实例&lt;br&gt;&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 路由规则初始化，用于定义匹配规则&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;NoticeRouter router = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; NoticeRouter();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;route.rule()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    .noticeType(Notice.SMS)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// ... 更多细节规则匹配&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    .handler(smsHandler)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    .end()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    .rule()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    .noticeType(Notice.EMail)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// ... 更多细节规则匹配&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    .handler(emailHandler)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    .end()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 将通知实体通知路由处理&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;router.route(message)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;囧，单看图可能细分不出两者的差别，附上一段代码实例&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 路由规则初始化，用于定义匹配规则&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;NoticeRouter router = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; NoticeRouter();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;route.rule()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    .noticeType(Notice.SMS)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// ... 更多细节规则匹配&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    .handler(smsHandler)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    .end()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    .rule()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    .noticeType(Notice.EMail)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// ... 更多细节规则匹配&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    .handler(emailHandler)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    .end()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 将通知实体通知路由处理&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;router.route(message)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h2 id=&quot;总结&quot;&gt;&lt;a href=&quot;#总结&quot; class=&quot;headerlink&quot; title=&quot;总结&quot;&gt;&lt;/a&gt;总结&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;充分考虑后期业务需求 (就算非必须的业务需求)&lt;blockquote&gt;
 &lt;p&gt;不要妄想需求是恒久不变的，需求=小三，扩展=真爱&lt;/p&gt;
@@ -348,11 +348,11 @@
   </entry>
   
   <entry>
-    <title>HTTPS 签证</title>
-    <link href="http://hocg.in/2016/06/02/HTTPS-%E7%AD%BE%E8%AF%81/"/>
-    <id>http://hocg.in/2016/06/02/HTTPS-签证/</id>
+    <title>Https 签证</title>
+    <link href="http://hocg.in/2016/06/02/Https-%E7%AD%BE%E8%AF%81/"/>
+    <id>http://hocg.in/2016/06/02/Https-签证/</id>
     <published>2016-06-02T03:22:43.000Z</published>
-    <updated>2016-06-12T12:02:39.660Z</updated>
+    <updated>2016-08-03T02:55:25.179Z</updated>
     
     <content type="html">&lt;h3 id=&quot;关于https&quot;&gt;&lt;a href=&quot;#关于https&quot; class=&quot;headerlink&quot; title=&quot;关于https&quot;&gt;&lt;/a&gt;关于https&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/HTTPS&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;wiki&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
