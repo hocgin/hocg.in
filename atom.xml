@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hocg.in/"/>
-  <updated>2016-08-03T03:05:58.869Z</updated>
+  <updated>2016-08-07T11:30:02.073Z</updated>
   <id>http://hocg.in/</id>
   
   <author>
@@ -14,6 +14,58 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Android L 及以上版本Rom包中提取apk</title>
+    <link href="http://hocg.in/2016/08/07/Android-L-%E5%8F%8A%E4%BB%A5%E4%B8%8A%E7%89%88%E6%9C%ACRom%E5%8C%85%E4%B8%AD%E6%8F%90%E5%8F%96apk/"/>
+    <id>http://hocg.in/2016/08/07/Android-L-及以上版本Rom包中提取apk/</id>
+    <published>2016-08-07T11:19:29.000Z</published>
+    <updated>2016-08-07T11:30:02.073Z</updated>
+    
+    <content type="html">&lt;p&gt;提取想要的apk， 例如CM ROM包中的含天气的时钟不错！&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;以往版本&quot;&gt;&lt;a href=&quot;#以往版本&quot; class=&quot;headerlink&quot; title=&quot;以往版本&quot;&gt;&lt;/a&gt;以往版本&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;Android Rom包只需解压后，取出system包即可取出内部apk&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;Now&quot;&gt;&lt;a href=&quot;#Now&quot; class=&quot;headerlink&quot; title=&quot;Now&quot;&gt;&lt;/a&gt;Now&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;解压后可以发现，文件发生了改变并且&lt;code&gt;system.new.dat&lt;/code&gt;此文件是不支持直接解压的。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;环境&quot;&gt;&lt;a href=&quot;#环境&quot; class=&quot;headerlink&quot; title=&quot;环境&quot;&gt;&lt;/a&gt;环境&lt;/h3&gt;&lt;p&gt;系统: win10&lt;br&gt;工具: &lt;a href=&quot;http://7xs6lq.com1.z0.glb.clouddn.com/Extractor%20and%20Repacker%204.0.rar&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;下载&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;环境自备&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;操作步骤&quot;&gt;&lt;a href=&quot;#操作步骤&quot; class=&quot;headerlink&quot; title=&quot;操作步骤&quot;&gt;&lt;/a&gt;操作步骤&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;普通方式解压ROM&lt;/li&gt;
+&lt;li&gt;运行下载工具中.bat文件&lt;code&gt;Extractor.bat&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;根据提示选择&lt;code&gt;1&lt;/code&gt;，并复制&lt;code&gt;system.new.dat&lt;/code&gt;, &lt;code&gt;system.transfer.list&lt;/code&gt;，&lt;code&gt;file_contexts&lt;/code&gt;三个文件到bat文件所在目录&lt;/li&gt;
+&lt;li&gt;按任意键继续&lt;/li&gt;
+&lt;li&gt;完成后可以得到一个&lt;code&gt;system&lt;/code&gt;文件夹&lt;/li&gt;
+&lt;li&gt;嘿嘿嘿..&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&quot;问题&quot;&gt;&lt;a href=&quot;#问题&quot; class=&quot;headerlink&quot; title=&quot;问题!&quot;&gt;&lt;/a&gt;问题!&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;有可能在你安装apk的时候出现&lt;code&gt;应用未安装&lt;/code&gt;的情况&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;可以尝试重新对apk进行签名&lt;/li&gt;
+&lt;li&gt;检查是否已经安装过该apk&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;End&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;提取想要的apk， 例如CM ROM包中的含天气的时钟不错！&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Android" scheme="http://hocg.in/categories/Android/"/>
+    
+    
+      <category term="Android" scheme="http://hocg.in/tags/Android/"/>
+    
+      <category term="折腾" scheme="http://hocg.in/tags/%E6%8A%98%E8%85%BE/"/>
+    
+  </entry>
   
   <entry>
     <title>模块设计之对接同步订单模块</title>
@@ -428,9 +480,9 @@
       <category term="Shell脚本" scheme="http://hocg.in/categories/%E5%AD%A6%E4%B9%A0/Shell%E8%84%9A%E6%9C%AC/"/>
     
     
-      <category term="Maven" scheme="http://hocg.in/tags/Maven/"/>
-    
       <category term="Ubuntu" scheme="http://hocg.in/tags/Ubuntu/"/>
+    
+      <category term="Maven" scheme="http://hocg.in/tags/Maven/"/>
     
   </entry>
   
@@ -527,11 +579,11 @@
       <category term="学习" scheme="http://hocg.in/categories/%E5%AD%A6%E4%B9%A0/"/>
     
     
+      <category term="折腾" scheme="http://hocg.in/tags/%E6%8A%98%E8%85%BE/"/>
+    
       <category term="小记" scheme="http://hocg.in/tags/%E5%B0%8F%E8%AE%B0/"/>
     
       <category term="hexo" scheme="http://hocg.in/tags/hexo/"/>
-    
-      <category term="折腾" scheme="http://hocg.in/tags/%E6%8A%98%E8%85%BE/"/>
     
   </entry>
   
@@ -540,9 +592,9 @@
     <link href="http://hocg.in/2016/03/20/%E5%AE%89%E8%A3%85%E5%AE%8CUbuntu%E5%90%8E-%E6%88%91%E8%AF%A5%E5%81%9A%E4%BB%80%E4%B9%88/"/>
     <id>http://hocg.in/2016/03/20/安装完Ubuntu后-我该做什么/</id>
     <published>2016-03-20T06:34:20.000Z</published>
-    <updated>2016-07-09T03:34:21.794Z</updated>
+    <updated>2016-08-17T08:33:53.273Z</updated>
     
-    <content type="html">&lt;p&gt;安装完Ubuntu后,我该做什么..(借鉴和整理，还有一些平时遇到的， &lt;strong&gt;不定期更新&lt;/strong&gt;)&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+    <content type="html">&lt;p&gt;安装完Ubuntu后,我该做什么..(借鉴和整理，还有一些平时遇到的， &lt;strong&gt;不定期更新&lt;/strong&gt;)&lt;br&gt;&lt;strong&gt;update&lt;/strong&gt;: 新增&lt;code&gt;undistract-me&lt;/code&gt;终端命令完成提醒插件&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;yuan获取&quot;&gt;&lt;a href=&quot;#yuan获取&quot; class=&quot;headerlink&quot; title=&quot;yuan获取&quot;&gt;&lt;/a&gt;yuan获取&lt;/h2&gt;&lt;p&gt;官方列表： &lt;a href=&quot;http://wiki.ubuntu.org.cn/%E6%BA%90%E5%88%97%E8%A1%A8&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://wiki.ubuntu.org.cn/%E6%BA%90%E5%88%97%E8%A1%A8&lt;/a&gt;&lt;br&gt;网易163： &lt;a href=&quot;http://mirrors.163.com/.help/ubuntu.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://mirrors.163.com/.help/ubuntu.html&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&quot;移除&quot;&gt;&lt;a href=&quot;#移除&quot; class=&quot;headerlink&quot; title=&quot;移除&quot;&gt;&lt;/a&gt;移除&lt;/h2&gt;&lt;blockquote&gt;
@@ -766,6 +818,10 @@
 &lt;/blockquote&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# 安装&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get install ubuntu-restricted-extras&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;blockquote&gt;
+&lt;p&gt;终端命令执行完成提醒&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# 安装&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get install undistract-me&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 配置&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;vim ~/.bashrc&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 新增如下两行&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# . /usr/share/undistract-me/long-running.bash&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# notify_when_long_running_commands_finish_install&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 生效&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;source ~/.bashrc&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 测试&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sleep 11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
 &lt;p&gt;GNOME MPV 代替VLC播放器&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# 安装&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo add-apt-repository ppa:xuzhen666/gnome-mpv&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get update&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get install gnome-mpv&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
@@ -844,7 +900,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;安装完Ubuntu后,我该做什么..(借鉴和整理，还有一些平时遇到的， &lt;strong&gt;不定期更新&lt;/strong&gt;)&lt;br&gt;
+      &lt;p&gt;安装完Ubuntu后,我该做什么..(借鉴和整理，还有一些平时遇到的， &lt;strong&gt;不定期更新&lt;/strong&gt;)&lt;br&gt;&lt;strong&gt;update&lt;/strong&gt;: 新增&lt;code&gt;undistract-me&lt;/code&gt;终端命令完成提醒插件&lt;br&gt;
     
     </summary>
     
@@ -853,9 +909,9 @@
     
       <category term="折腾" scheme="http://hocg.in/tags/%E6%8A%98%E8%85%BE/"/>
     
-      <category term="Ubuntu" scheme="http://hocg.in/tags/Ubuntu/"/>
-    
       <category term="开发手册" scheme="http://hocg.in/tags/%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C/"/>
+    
+      <category term="Ubuntu" scheme="http://hocg.in/tags/Ubuntu/"/>
     
   </entry>
   
