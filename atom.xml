@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hocg.in/"/>
-  <updated>2016-08-24T12:41:17.161Z</updated>
+  <updated>2016-08-24T12:45:25.387Z</updated>
   <id>http://hocg.in/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://hocg.in/2016/08/24/Nexus%E5%85%A5%E9%97%A8/"/>
     <id>http://hocg.in/2016/08/24/Nexus入门/</id>
     <published>2016-08-24T11:03:01.000Z</published>
-    <updated>2016-08-24T12:41:17.161Z</updated>
+    <updated>2016-08-24T12:45:25.387Z</updated>
     
     <content type="html">&lt;p&gt;适合&lt;code&gt;nexus&lt;/code&gt;入门，不是手机，不是手机，不是手机　．．ｏ（╯□╰）ｏ&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;环境&quot;&gt;&lt;a href=&quot;#环境&quot; class=&quot;headerlink&quot; title=&quot;环境&quot;&gt;&lt;/a&gt;环境&lt;/h2&gt;&lt;ul&gt;
@@ -48,7 +48,7 @@
 &lt;h3 id=&quot;如何创建用户&quot;&gt;&lt;a href=&quot;#如何创建用户&quot; class=&quot;headerlink&quot; title=&quot;如何创建用户&quot;&gt;&lt;/a&gt;如何创建用户&lt;/h3&gt;&lt;p&gt;登陆系统后，左侧&lt;code&gt;Security &amp;gt; Users&lt;/code&gt;中创建&lt;/p&gt;
 &lt;h3 id=&quot;如何使用构建账号&quot;&gt;&lt;a href=&quot;#如何使用构建账号&quot; class=&quot;headerlink&quot; title=&quot;如何使用构建账号&quot;&gt;&lt;/a&gt;如何使用&lt;code&gt;构建账号&lt;/code&gt;&lt;/h3&gt;&lt;p&gt;修改&lt;code&gt;Settings.xml&lt;/code&gt;文件 (&lt;strong&gt;Maven&lt;/strong&gt;)&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;servers&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;lt;server&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;lt;id&amp;gt;nexus.hocg.in&amp;lt;/id&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;lt;username&amp;gt;admin&amp;lt;/username&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;lt;password&amp;gt;admin123&amp;lt;/password&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;lt;/server&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/servers&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;h3 id=&quot;如何修改用户密码&quot;&gt;&lt;a href=&quot;#如何修改用户密码&quot; class=&quot;headerlink&quot; title=&quot;如何修改用户密码&quot;&gt;&lt;/a&gt;如何修改用户密码&lt;/h3&gt;&lt;p&gt;登陆系统后，顶部&lt;code&gt;点击用户名 &amp;gt; Profile&lt;/code&gt;中修改&lt;/p&gt;
-&lt;h3 id=&quot;如何建立与中央仓库的索引&quot;&gt;&lt;a href=&quot;#如何建立与中央仓库的索引&quot; class=&quot;headerlink&quot; title=&quot;如何建立与中央仓库的索引&quot;&gt;&lt;/a&gt;如何建立与中央仓库的索引&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;/i/如何建立与中央仓库的索引.png&quot; alt=&quot;image&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;如何建立与中央仓库的索引&quot;&gt;&lt;a href=&quot;#如何建立与中央仓库的索引&quot; class=&quot;headerlink&quot; title=&quot;如何建立与中央仓库的索引&quot;&gt;&lt;/a&gt;如何建立与中央仓库的索引&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;https://hocg.in/i/如何建立与中央仓库的索引.png&quot; alt=&quot;image&quot;&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; Nexus会自动建立任务计划,一般远程仓库都比较大，构建会比较多，因此索引文件会很大，请确保磁盘大小充足.&lt;/p&gt;
 &lt;/blockquote&gt;
