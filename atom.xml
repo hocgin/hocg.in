@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hocg.in/"/>
-  <updated>2016-08-24T12:45:25.387Z</updated>
+  <updated>2016-08-27T05:31:22.981Z</updated>
   <id>http://hocg.in/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://hocg.in/2016/08/24/Nexus%E5%85%A5%E9%97%A8/"/>
     <id>http://hocg.in/2016/08/24/Nexus入门/</id>
     <published>2016-08-24T11:03:01.000Z</published>
-    <updated>2016-08-24T12:45:25.387Z</updated>
+    <updated>2016-08-27T05:31:22.981Z</updated>
     
     <content type="html">&lt;p&gt;适合&lt;code&gt;nexus&lt;/code&gt;入门，不是手机，不是手机，不是手机　．．ｏ（╯□╰）ｏ&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;环境&quot;&gt;&lt;a href=&quot;#环境&quot; class=&quot;headerlink&quot; title=&quot;环境&quot;&gt;&lt;/a&gt;环境&lt;/h2&gt;&lt;ul&gt;
@@ -63,12 +63,12 @@
     
     </summary>
     
-      <category term="经验" scheme="http://hocg.in/categories/%E7%BB%8F%E9%AA%8C/"/>
+      <category term="Server" scheme="http://hocg.in/categories/Server/"/>
     
     
-      <category term="服务端" scheme="http://hocg.in/tags/%E6%9C%8D%E5%8A%A1%E7%AB%AF/"/>
+      <category term="Tips" scheme="http://hocg.in/tags/Tips/"/>
     
-      <category term="记录" scheme="http://hocg.in/tags/%E8%AE%B0%E5%BD%95/"/>
+      <category term="Nexus" scheme="http://hocg.in/tags/Nexus/"/>
     
   </entry>
   
@@ -77,7 +77,7 @@
     <link href="http://hocg.in/2016/08/07/Android-L-%E5%8F%8A%E4%BB%A5%E4%B8%8A%E7%89%88%E6%9C%ACRom%E5%8C%85%E4%B8%AD%E6%8F%90%E5%8F%96apk/"/>
     <id>http://hocg.in/2016/08/07/Android-L-及以上版本Rom包中提取apk/</id>
     <published>2016-08-07T11:19:29.000Z</published>
-    <updated>2016-08-07T11:30:02.073Z</updated>
+    <updated>2016-08-27T05:39:29.119Z</updated>
     
     <content type="html">&lt;p&gt;提取想要的apk， 例如CM ROM包中的含天气的时钟不错！&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -115,12 +115,12 @@
     
     </summary>
     
-      <category term="Android" scheme="http://hocg.in/categories/Android/"/>
+      <category term="Mobile" scheme="http://hocg.in/categories/Mobile/"/>
     
     
       <category term="Android" scheme="http://hocg.in/tags/Android/"/>
     
-      <category term="折腾" scheme="http://hocg.in/tags/%E6%8A%98%E8%85%BE/"/>
+      <category term="Tips" scheme="http://hocg.in/tags/Tips/"/>
     
   </entry>
   
@@ -129,7 +129,7 @@
     <link href="http://hocg.in/2016/08/02/%E6%A8%A1%E5%9D%97%E8%AE%BE%E8%AE%A1%E4%B9%8B%E5%AF%B9%E6%8E%A5%E5%90%8C%E6%AD%A5%E8%AE%A2%E5%8D%95%E6%A8%A1%E5%9D%97/"/>
     <id>http://hocg.in/2016/08/02/模块设计之对接同步订单模块/</id>
     <published>2016-08-02T02:47:06.000Z</published>
-    <updated>2016-08-03T03:05:58.869Z</updated>
+    <updated>2016-08-27T05:34:17.738Z</updated>
     
     <content type="html">&lt;p&gt;  一个关于设计模块的故事。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;blockquote&gt;
@@ -171,10 +171,12 @@
     
     </summary>
     
-      <category term="经验" scheme="http://hocg.in/categories/%E7%BB%8F%E9%AA%8C/"/>
+      <category term="Coder" scheme="http://hocg.in/categories/Coder/"/>
     
     
-      <category term="设计" scheme="http://hocg.in/tags/%E8%AE%BE%E8%AE%A1/"/>
+      <category term="设计思路" scheme="http://hocg.in/tags/%E8%AE%BE%E8%AE%A1%E6%80%9D%E8%B7%AF/"/>
+    
+      <category term="Java" scheme="http://hocg.in/tags/Java/"/>
     
   </entry>
   
@@ -183,7 +185,7 @@
     <link href="http://hocg.in/2016/07/30/%E6%A8%A1%E5%9D%97%E8%AE%BE%E8%AE%A1%E4%B9%8B%E6%B6%88%E6%81%AF%E6%A8%A1%E5%9D%97/"/>
     <id>http://hocg.in/2016/07/30/模块设计之消息模块/</id>
     <published>2016-07-30T11:25:56.000Z</published>
-    <updated>2016-08-03T03:03:12.399Z</updated>
+    <updated>2016-08-27T05:34:33.358Z</updated>
     
     <content type="html">&lt;p&gt;  新手上路，小心撞车..&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;blockquote&gt;
@@ -227,10 +229,12 @@
     
     </summary>
     
-      <category term="经验" scheme="http://hocg.in/categories/%E7%BB%8F%E9%AA%8C/"/>
+      <category term="Coder" scheme="http://hocg.in/categories/Coder/"/>
     
     
-      <category term="设计" scheme="http://hocg.in/tags/%E8%AE%BE%E8%AE%A1/"/>
+      <category term="设计思路" scheme="http://hocg.in/tags/%E8%AE%BE%E8%AE%A1%E6%80%9D%E8%B7%AF/"/>
+    
+      <category term="Java" scheme="http://hocg.in/tags/Java/"/>
     
   </entry>
   
@@ -239,7 +243,7 @@
     <link href="http://hocg.in/2016/07/02/Mac-%E4%BD%BF%E7%94%A8/"/>
     <id>http://hocg.in/2016/07/02/Mac-使用/</id>
     <published>2016-07-02T02:47:06.000Z</published>
-    <updated>2016-08-03T02:53:50.575Z</updated>
+    <updated>2016-08-27T05:29:43.104Z</updated>
     
     <content type="html">&lt;p&gt;  留坑，刚刚起步，梳理中ing。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&quot;小技巧&quot;&gt;&lt;a href=&quot;#小技巧&quot; class=&quot;headerlink&quot; title=&quot;小技巧&quot;&gt;&lt;/a&gt;小技巧&lt;/h3&gt;&lt;ul&gt;
@@ -255,8 +259,10 @@
     
     </summary>
     
-      <category term="折腾" scheme="http://hocg.in/categories/%E6%8A%98%E8%85%BE/"/>
+      <category term="OS" scheme="http://hocg.in/categories/OS/"/>
     
+    
+      <category term="Tips" scheme="http://hocg.in/tags/Tips/"/>
     
       <category term="Mac" scheme="http://hocg.in/tags/Mac/"/>
     
@@ -267,7 +273,7 @@
     <link href="http://hocg.in/2016/06/12/%E8%B0%88JVM-%E5%AD%97%E8%8A%82%E7%A0%81/"/>
     <id>http://hocg.in/2016/06/12/谈JVM-字节码/</id>
     <published>2016-06-12T11:37:49.000Z</published>
-    <updated>2016-08-03T03:11:09.862Z</updated>
+    <updated>2016-08-27T05:35:58.971Z</updated>
     
     <content type="html">&lt;p&gt;谈谈JVM，最近在研究破解jar，有这方面经验的麻烦指导一下思路..&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;参考&quot;&gt;&lt;a href=&quot;#参考&quot; class=&quot;headerlink&quot; title=&quot;参考&quot;&gt;&lt;/a&gt;参考&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://www.yangyong.me/java-class%E6%96%87%E4%BB%B6%E5%92%8C%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AD%97%E8%8A%82%E7%A0%81%E6%8C%87%E4%BB%A4-%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8Bclass%E6%96%87%E4%BB%B6/#viewclass&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;参考1&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://blog.csdn.net/sprayabc/article/details/8576605&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;指令整理&lt;/a&gt;&lt;/p&gt;
@@ -414,12 +420,12 @@
     
     </summary>
     
-      <category term="学习" scheme="http://hocg.in/categories/%E5%AD%A6%E4%B9%A0/"/>
+      <category term="Coder" scheme="http://hocg.in/categories/Coder/"/>
     
-    
-      <category term="JVM" scheme="http://hocg.in/tags/JVM/"/>
     
       <category term="Java" scheme="http://hocg.in/tags/Java/"/>
+    
+      <category term="JVM" scheme="http://hocg.in/tags/JVM/"/>
     
   </entry>
   
@@ -428,7 +434,7 @@
     <link href="http://hocg.in/2016/06/12/%E8%B0%88JVM-%E5%90%84%E7%A7%8D%E8%BF%87%E7%A8%8B/"/>
     <id>http://hocg.in/2016/06/12/谈JVM-各种过程/</id>
     <published>2016-06-12T11:37:49.000Z</published>
-    <updated>2016-08-03T06:48:12.644Z</updated>
+    <updated>2016-08-27T05:35:49.555Z</updated>
     
     <content type="html">&lt;p&gt;谈谈JVM 各种过程， XMind等我整理一下，稍后贴出 囧～&lt;br&gt;欢迎指教..&lt;br&gt;&lt;strong&gt;update:&lt;/strong&gt; 2016-08-03 14:44:12 更新了图&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&quot;总思路&quot;&gt;&lt;a href=&quot;#总思路&quot; class=&quot;headerlink&quot; title=&quot;总思路&quot;&gt;&lt;/a&gt;总思路&lt;/h3&gt;&lt;p&gt;编译过程 -&amp;gt; 运行过程[类加载器过程(类的装载过程) -&amp;gt; 执行过程]&lt;/p&gt;
@@ -458,21 +464,21 @@
     
     </summary>
     
-      <category term="学习" scheme="http://hocg.in/categories/%E5%AD%A6%E4%B9%A0/"/>
+      <category term="Coder" scheme="http://hocg.in/categories/Coder/"/>
     
-    
-      <category term="JVM" scheme="http://hocg.in/tags/JVM/"/>
     
       <category term="Java" scheme="http://hocg.in/tags/Java/"/>
+    
+      <category term="JVM" scheme="http://hocg.in/tags/JVM/"/>
     
   </entry>
   
   <entry>
-    <title>Https 签证</title>
+    <title>HTTPS 签证</title>
     <link href="http://hocg.in/2016/06/02/Https-%E7%AD%BE%E8%AF%81/"/>
     <id>http://hocg.in/2016/06/02/Https-签证/</id>
     <published>2016-06-02T03:22:43.000Z</published>
-    <updated>2016-08-03T02:55:25.179Z</updated>
+    <updated>2016-08-27T05:28:18.299Z</updated>
     
     <content type="html">&lt;h3 id=&quot;关于https&quot;&gt;&lt;a href=&quot;#关于https&quot; class=&quot;headerlink&quot; title=&quot;关于https&quot;&gt;&lt;/a&gt;关于https&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/HTTPS&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;wiki&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
@@ -495,14 +501,14 @@
     
     <summary type="html">
     
-      高大上的HTTPS-签证
+      高大上的HTTPS 签证
     
     </summary>
     
-      <category term="维护" scheme="http://hocg.in/categories/%E7%BB%B4%E6%8A%A4/"/>
+      <category term="Server" scheme="http://hocg.in/categories/Server/"/>
     
     
-      <category term="小记" scheme="http://hocg.in/tags/%E5%B0%8F%E8%AE%B0/"/>
+      <category term="HTTPS" scheme="http://hocg.in/tags/HTTPS/"/>
     
   </entry>
   
@@ -511,7 +517,7 @@
     <link href="http://hocg.in/2016/04/25/%E7%BB%BF%E5%8C%96nodejs-for-linux%E7%89%88/"/>
     <id>http://hocg.in/2016/04/25/绿化nodejs-for-linux版/</id>
     <published>2016-04-25T01:38:49.000Z</published>
-    <updated>2016-05-20T12:40:46.517Z</updated>
+    <updated>2016-08-27T05:35:32.660Z</updated>
     
     <content type="html">&lt;p&gt;起因，为了方便hexo发布博客，所以想把NodeJS绿化在U盘上..&lt;br&gt;谁叫网上只有win版的呢！自己码起来～&lt;br&gt;绿化 o(╯□╰)o&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;目录结构&quot;&gt;&lt;a href=&quot;#目录结构&quot; class=&quot;headerlink&quot; title=&quot;目录结构&quot;&gt;&lt;/a&gt;目录结构&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Green4nodeJS&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;├── hocgin.github.io // github博客目录&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;├── node // nodejs基本目录&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;│   ├── node-linux // nodejs源文件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;│   ├── cache // 创建一个空文件夹，即可&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;│   ├── init-module // 创建一个空文件夹，即可&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;│   └── userconfig // 创建一个空文件夹，即可&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;└── init.sh // 初始化shell文件 *重要&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
@@ -532,12 +538,10 @@
     
     </summary>
     
-      <category term="学习" scheme="http://hocg.in/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-      <category term="NodeJS" scheme="http://hocg.in/categories/%E5%AD%A6%E4%B9%A0/NodeJS/"/>
+      <category term="Coder" scheme="http://hocg.in/categories/Coder/"/>
     
     
-      <category term="折腾" scheme="http://hocg.in/tags/%E6%8A%98%E8%85%BE/"/>
+      <category term="Tips" scheme="http://hocg.in/tags/Tips/"/>
     
       <category term="Ubuntu" scheme="http://hocg.in/tags/Ubuntu/"/>
     
@@ -550,7 +554,7 @@
     <link href="http://hocg.in/2016/04/25/%E4%BD%BF%E7%94%A8Maven%E4%B8%8B%E8%BD%BDjar%E5%8C%85-linux%E7%89%88/"/>
     <id>http://hocg.in/2016/04/25/使用Maven下载jar包-linux版/</id>
     <published>2016-04-25T01:38:49.000Z</published>
-    <updated>2016-04-25T04:56:16.000Z</updated>
+    <updated>2016-08-27T05:32:02.319Z</updated>
     
     <content type="html">&lt;p&gt;当一个jar包只提供Maven的配置方法时怎么办？～&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;目录结构&quot;&gt;&lt;a href=&quot;#目录结构&quot; class=&quot;headerlink&quot; title=&quot;目录结构&quot;&gt;&lt;/a&gt;目录结构&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Green4nodeJS&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;├── down.sh // 下载shell，o(╯□╰)o其实就是一条shell&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;└── pom.xml // 正常maven配置&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
@@ -571,14 +575,14 @@
     
     </summary>
     
-      <category term="学习" scheme="http://hocg.in/categories/%E5%AD%A6%E4%B9%A0/"/>
+      <category term="Coder" scheme="http://hocg.in/categories/Coder/"/>
     
-      <category term="Shell脚本" scheme="http://hocg.in/categories/%E5%AD%A6%E4%B9%A0/Shell%E8%84%9A%E6%9C%AC/"/>
     
+      <category term="Tips" scheme="http://hocg.in/tags/Tips/"/>
     
       <category term="Maven" scheme="http://hocg.in/tags/Maven/"/>
     
-      <category term="Ubuntu" scheme="http://hocg.in/tags/Ubuntu/"/>
+      <category term="Shell" scheme="http://hocg.in/tags/Shell/"/>
     
   </entry>
   
@@ -587,7 +591,7 @@
     <link href="http://hocg.in/2016/03/26/hexo-%E5%8A%9F%E8%83%BD%E6%89%A9%E5%B1%95/"/>
     <id>http://hocg.in/2016/03/26/hexo-功能扩展/</id>
     <published>2016-03-26T05:44:28.000Z</published>
-    <updated>2016-06-03T16:13:11.433Z</updated>
+    <updated>2016-08-27T05:24:59.866Z</updated>
     
     <content type="html">&lt;h2 id=&quot;须知&quot;&gt;&lt;a href=&quot;#须知&quot; class=&quot;headerlink&quot; title=&quot;须知&quot;&gt;&lt;/a&gt;须知&lt;/h2&gt;&lt;p&gt;&lt;code&gt;站点目录&lt;/code&gt;: /&lt;br&gt;&lt;code&gt;主题目录&lt;/code&gt;: /themes/[主题名]&lt;br&gt;&lt;code&gt;主题配置文件&lt;/code&gt;: /themes/[主题名]/_config.yml&lt;br&gt;&lt;code&gt;站点配置文件&lt;/code&gt;: /_config.yml  &lt;/p&gt;
 &lt;h2 id=&quot;添加微信公众号二维码&quot;&gt;&lt;a href=&quot;#添加微信公众号二维码&quot; class=&quot;headerlink&quot; title=&quot;添加微信公众号二维码&quot;&gt;&lt;/a&gt;添加微信公众号二维码&lt;/h2&gt;&lt;p&gt;首先，打开&lt;code&gt;主题目录&lt;/code&gt;下的 &lt;code&gt;layout/_macro/post.swig&lt;/code&gt;&lt;br&gt;然后，找到节点&lt;code&gt;footer&lt;/code&gt;加入以下代码&lt;br&gt;&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;!&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;--&lt;/span&gt; 添加微信图标 &lt;span class=&quot;attr&quot;&gt;start&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;--&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;#123;% if theme.wechat_subscriber.enable %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#123;% if !is_home() %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;hocgin-container&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;          &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;folder&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;           &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;paper&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        	&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;img&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;width&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;100%&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;src&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;&amp;#123;&amp;#123; theme.wechat_subscriber.qcode &amp;#125;&amp;#125;&quot;&lt;/span&gt;/&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;          &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	      &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;hocgin-description&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&amp;#123;&amp;#123; theme.wechat_subscriber.description &amp;#125;&amp;#125;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#123;% endif %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;#123;% endif %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;!&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;--&lt;/span&gt; 添加微信图标 &lt;span class=&quot;attr&quot;&gt;end&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;--&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
@@ -633,14 +637,14 @@
     
     </summary>
     
-      <category term="学习" scheme="http://hocg.in/categories/%E5%AD%A6%E4%B9%A0/"/>
+      <category term="Web" scheme="http://hocg.in/categories/Web/"/>
     
     
-      <category term="折腾" scheme="http://hocg.in/tags/%E6%8A%98%E8%85%BE/"/>
+      <category term="Hexo" scheme="http://hocg.in/tags/Hexo/"/>
     
-      <category term="小记" scheme="http://hocg.in/tags/%E5%B0%8F%E8%AE%B0/"/>
+      <category term="HTML5" scheme="http://hocg.in/tags/HTML5/"/>
     
-      <category term="hexo" scheme="http://hocg.in/tags/hexo/"/>
+      <category term="CSS3" scheme="http://hocg.in/tags/CSS3/"/>
     
   </entry>
   
@@ -649,7 +653,7 @@
     <link href="http://hocg.in/2016/03/20/%E5%AE%89%E8%A3%85%E5%AE%8CUbuntu%E5%90%8E-%E6%88%91%E8%AF%A5%E5%81%9A%E4%BB%80%E4%B9%88/"/>
     <id>http://hocg.in/2016/03/20/安装完Ubuntu后-我该做什么/</id>
     <published>2016-03-20T06:34:20.000Z</published>
-    <updated>2016-08-17T08:33:53.273Z</updated>
+    <updated>2016-08-27T05:40:14.158Z</updated>
     
     <content type="html">&lt;p&gt;安装完Ubuntu后,我该做什么..(借鉴和整理，还有一些平时遇到的， &lt;strong&gt;不定期更新&lt;/strong&gt;)&lt;br&gt;&lt;strong&gt;update&lt;/strong&gt;: 新增&lt;code&gt;undistract-me&lt;/code&gt;终端命令完成提醒插件&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;yuan获取&quot;&gt;&lt;a href=&quot;#yuan获取&quot; class=&quot;headerlink&quot; title=&quot;yuan获取&quot;&gt;&lt;/a&gt;yuan获取&lt;/h2&gt;&lt;p&gt;官方列表： &lt;a href=&quot;http://wiki.ubuntu.org.cn/%E6%BA%90%E5%88%97%E8%A1%A8&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://wiki.ubuntu.org.cn/%E6%BA%90%E5%88%97%E8%A1%A8&lt;/a&gt;&lt;br&gt;网易163： &lt;a href=&quot;http://mirrors.163.com/.help/ubuntu.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://mirrors.163.com/.help/ubuntu.html&lt;/a&gt;&lt;/p&gt;
@@ -961,14 +965,14 @@
     
     </summary>
     
-      <category term="学习" scheme="http://hocg.in/categories/%E5%AD%A6%E4%B9%A0/"/>
+      <category term="OS" scheme="http://hocg.in/categories/OS/"/>
     
     
-      <category term="折腾" scheme="http://hocg.in/tags/%E6%8A%98%E8%85%BE/"/>
+      <category term="Tips" scheme="http://hocg.in/tags/Tips/"/>
     
       <category term="Ubuntu" scheme="http://hocg.in/tags/Ubuntu/"/>
     
-      <category term="开发手册" scheme="http://hocg.in/tags/%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C/"/>
+      <category term="Gnome" scheme="http://hocg.in/tags/Gnome/"/>
     
   </entry>
   
@@ -977,7 +981,7 @@
     <link href="http://hocg.in/2016/03/15/hexo-%E4%BD%BF%E7%94%A8/"/>
     <id>http://hocg.in/2016/03/15/hexo-使用/</id>
     <published>2016-03-15T13:31:42.000Z</published>
-    <updated>2016-04-18T06:24:08.000Z</updated>
+    <updated>2016-08-27T05:28:40.726Z</updated>
     
     <content type="html">&lt;p&gt;  这是一篇关于如何使用hexo的收集Box &lt;strong&gt;&amp;gt;&lt;/strong&gt; 不定期更新吧！&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
@@ -1070,10 +1074,10 @@
     
     </summary>
     
-      <category term="学习" scheme="http://hocg.in/categories/%E5%AD%A6%E4%B9%A0/"/>
+      <category term="Other" scheme="http://hocg.in/categories/Other/"/>
     
     
-      <category term="小记" scheme="http://hocg.in/tags/%E5%B0%8F%E8%AE%B0/"/>
+      <category term="Hexo" scheme="http://hocg.in/tags/Hexo/"/>
     
   </entry>
   

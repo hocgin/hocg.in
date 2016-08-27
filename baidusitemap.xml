@@ -4,45 +4,23 @@
 
     
   <url>
-    <loc>http://hocg.in/2016/08/24/Nexus%E5%85%A5%E9%97%A8/</loc>
-    <lastmod>2016-08-24T12:45:25.387Z</lastmod>
-    <data>
-        <display>
-        <title>Nexus 入门</title>
-        <pubTime>2016-08-24T11:03:01.000Z</pubTime>
-        
-        <tag>服务端</tag>
-         
-        <tag>记录</tag>
-         
-         
-           
-             
-              <breadCrumb title="经验" url="http://hocg.in/categories/%E7%BB%8F%E9%AA%8C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://hocg.in/2016/03/20/%E5%AE%89%E8%A3%85%E5%AE%8CUbuntu%E5%90%8E-%E6%88%91%E8%AF%A5%E5%81%9A%E4%BB%80%E4%B9%88/</loc>
-    <lastmod>2016-08-17T08:33:53.273Z</lastmod>
+    <lastmod>2016-08-27T05:40:14.158Z</lastmod>
     <data>
         <display>
         <title>安装完Ubuntu后,我该做什么</title>
         <pubTime>2016-03-20T06:34:20.000Z</pubTime>
         
-        <tag>折腾</tag>
+        <tag>Tips</tag>
          
         <tag>Ubuntu</tag>
          
-        <tag>开发手册</tag>
+        <tag>Gnome</tag>
          
          
            
              
-              <breadCrumb title="学习" url="http://hocg.in/categories/%E5%AD%A6%E4%B9%A0/"/>
+              <breadCrumb title="OS" url="http://hocg.in/categories/OS/"/>
           
         </display>
     </data>
@@ -51,7 +29,7 @@
     
   <url>
     <loc>http://hocg.in/2016/08/07/Android-L-%E5%8F%8A%E4%BB%A5%E4%B8%8A%E7%89%88%E6%9C%ACRom%E5%8C%85%E4%B8%AD%E6%8F%90%E5%8F%96apk/</loc>
-    <lastmod>2016-08-07T11:30:02.073Z</lastmod>
+    <lastmod>2016-08-27T05:39:29.119Z</lastmod>
     <data>
         <display>
         <title>Android L 及以上版本Rom包中提取apk</title>
@@ -59,34 +37,12 @@
         
         <tag>Android</tag>
          
-        <tag>折腾</tag>
+        <tag>Tips</tag>
          
          
            
              
-              <breadCrumb title="Android" url="http://hocg.in/categories/Android/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://hocg.in/2016/06/12/%E8%B0%88JVM-%E5%90%84%E7%A7%8D%E8%BF%87%E7%A8%8B/</loc>
-    <lastmod>2016-08-03T06:48:12.644Z</lastmod>
-    <data>
-        <display>
-        <title>谈JVM，各种过程</title>
-        <pubTime>2016-06-12T11:37:49.000Z</pubTime>
-        
-        <tag>JVM</tag>
-         
-        <tag>Java</tag>
-         
-         
-           
-             
-              <breadCrumb title="学习" url="http://hocg.in/categories/%E5%AD%A6%E4%B9%A0/"/>
+              <breadCrumb title="Mobile" url="http://hocg.in/categories/Mobile/"/>
           
         </display>
     </data>
@@ -95,20 +51,20 @@
     
   <url>
     <loc>http://hocg.in/2016/06/12/%E8%B0%88JVM-%E5%AD%97%E8%8A%82%E7%A0%81/</loc>
-    <lastmod>2016-08-03T03:11:09.862Z</lastmod>
+    <lastmod>2016-08-27T05:35:58.971Z</lastmod>
     <data>
         <display>
         <title>谈JVM，字节码</title>
         <pubTime>2016-06-12T11:37:49.000Z</pubTime>
         
-        <tag>JVM</tag>
-         
         <tag>Java</tag>
          
+        <tag>JVM</tag>
+         
          
            
              
-              <breadCrumb title="学习" url="http://hocg.in/categories/%E5%AD%A6%E4%B9%A0/"/>
+              <breadCrumb title="Coder" url="http://hocg.in/categories/Coder/"/>
           
         </display>
     </data>
@@ -116,119 +72,36 @@
 
     
   <url>
-    <loc>http://hocg.in/2016/08/02/%E6%A8%A1%E5%9D%97%E8%AE%BE%E8%AE%A1%E4%B9%8B%E5%AF%B9%E6%8E%A5%E5%90%8C%E6%AD%A5%E8%AE%A2%E5%8D%95%E6%A8%A1%E5%9D%97/</loc>
-    <lastmod>2016-08-03T03:05:58.869Z</lastmod>
+    <loc>http://hocg.in/2016/06/12/%E8%B0%88JVM-%E5%90%84%E7%A7%8D%E8%BF%87%E7%A8%8B/</loc>
+    <lastmod>2016-08-27T05:35:49.555Z</lastmod>
     <data>
         <display>
-        <title>模块设计之对接同步订单模块</title>
-        <pubTime>2016-08-02T02:47:06.000Z</pubTime>
+        <title>谈JVM，各种过程</title>
+        <pubTime>2016-06-12T11:37:49.000Z</pubTime>
         
-        <tag>设计</tag>
+        <tag>Java</tag>
+         
+        <tag>JVM</tag>
          
          
            
              
-              <breadCrumb title="经验" url="http://hocg.in/categories/%E7%BB%8F%E9%AA%8C/"/>
+              <breadCrumb title="Coder" url="http://hocg.in/categories/Coder/"/>
           
         </display>
     </data>
     </url>
 
-    
-  <url>
-    <loc>http://hocg.in/2016/07/30/%E6%A8%A1%E5%9D%97%E8%AE%BE%E8%AE%A1%E4%B9%8B%E6%B6%88%E6%81%AF%E6%A8%A1%E5%9D%97/</loc>
-    <lastmod>2016-08-03T03:03:12.399Z</lastmod>
-    <data>
-        <display>
-        <title>模块设计之消息模块</title>
-        <pubTime>2016-07-30T11:25:56.000Z</pubTime>
-        
-        <tag>设计</tag>
-         
-         
-           
-             
-              <breadCrumb title="经验" url="http://hocg.in/categories/%E7%BB%8F%E9%AA%8C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://hocg.in/2016/06/02/Https-%E7%AD%BE%E8%AF%81/</loc>
-    <lastmod>2016-08-03T02:55:25.179Z</lastmod>
-    <data>
-        <display>
-        <title>Https 签证</title>
-        <pubTime>2016-06-02T03:22:43.000Z</pubTime>
-        
-        <tag>小记</tag>
-         
-         
-           
-             
-              <breadCrumb title="维护" url="http://hocg.in/categories/%E7%BB%B4%E6%8A%A4/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://hocg.in/2016/07/02/Mac-%E4%BD%BF%E7%94%A8/</loc>
-    <lastmod>2016-08-03T02:53:50.575Z</lastmod>
-    <data>
-        <display>
-        <title>Mac的使用</title>
-        <pubTime>2016-07-02T02:47:06.000Z</pubTime>
-        
-        <tag>Mac</tag>
-         
-         
-           
-             
-              <breadCrumb title="折腾" url="http://hocg.in/categories/%E6%8A%98%E8%85%BE/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://hocg.in/2016/03/26/hexo-%E5%8A%9F%E8%83%BD%E6%89%A9%E5%B1%95/</loc>
-    <lastmod>2016-06-03T16:13:11.433Z</lastmod>
-    <data>
-        <display>
-        <title>hexo 功能扩展</title>
-        <pubTime>2016-03-26T05:44:28.000Z</pubTime>
-        
-        <tag>折腾</tag>
-         
-        <tag>小记</tag>
-         
-        <tag>hexo</tag>
-         
-         
-           
-             
-              <breadCrumb title="学习" url="http://hocg.in/categories/%E5%AD%A6%E4%B9%A0/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
     
   <url>
     <loc>http://hocg.in/2016/04/25/%E7%BB%BF%E5%8C%96nodejs-for-linux%E7%89%88/</loc>
-    <lastmod>2016-05-20T12:40:46.517Z</lastmod>
+    <lastmod>2016-08-27T05:35:32.660Z</lastmod>
     <data>
         <display>
         <title>绿化NodeJS for linux版</title>
         <pubTime>2016-04-25T01:38:49.000Z</pubTime>
         
-        <tag>折腾</tag>
+        <tag>Tips</tag>
          
         <tag>Ubuntu</tag>
          
@@ -237,10 +110,51 @@
          
            
              
-              <breadCrumb title="学习" url="http://hocg.in/categories/%E5%AD%A6%E4%B9%A0/"/>
+              <breadCrumb title="Coder" url="http://hocg.in/categories/Coder/"/>
           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://hocg.in/2016/07/30/%E6%A8%A1%E5%9D%97%E8%AE%BE%E8%AE%A1%E4%B9%8B%E6%B6%88%E6%81%AF%E6%A8%A1%E5%9D%97/</loc>
+    <lastmod>2016-08-27T05:34:33.358Z</lastmod>
+    <data>
+        <display>
+        <title>模块设计之消息模块</title>
+        <pubTime>2016-07-30T11:25:56.000Z</pubTime>
+        
+        <tag>设计思路</tag>
+         
+        <tag>Java</tag>
+         
+         
+           
              
-              <breadCrumb title="NodeJS" url="http://hocg.in/categories/%E5%AD%A6%E4%B9%A0/NodeJS/"/>
+              <breadCrumb title="Coder" url="http://hocg.in/categories/Coder/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://hocg.in/2016/08/02/%E6%A8%A1%E5%9D%97%E8%AE%BE%E8%AE%A1%E4%B9%8B%E5%AF%B9%E6%8E%A5%E5%90%8C%E6%AD%A5%E8%AE%A2%E5%8D%95%E6%A8%A1%E5%9D%97/</loc>
+    <lastmod>2016-08-27T05:34:17.738Z</lastmod>
+    <data>
+        <display>
+        <title>模块设计之对接同步订单模块</title>
+        <pubTime>2016-08-02T02:47:06.000Z</pubTime>
+        
+        <tag>设计思路</tag>
+         
+        <tag>Java</tag>
+         
+         
+           
+             
+              <breadCrumb title="Coder" url="http://hocg.in/categories/Coder/"/>
           
         </display>
     </data>
@@ -249,49 +163,137 @@
     
   <url>
     <loc>http://hocg.in/2016/04/25/%E4%BD%BF%E7%94%A8Maven%E4%B8%8B%E8%BD%BDjar%E5%8C%85-linux%E7%89%88/</loc>
-    <lastmod>2016-04-25T04:56:16.000Z</lastmod>
+    <lastmod>2016-08-27T05:32:02.319Z</lastmod>
     <data>
         <display>
         <title>使用Maven下载jar包 linux版</title>
         <pubTime>2016-04-25T01:38:49.000Z</pubTime>
         
+        <tag>Tips</tag>
+         
         <tag>Maven</tag>
          
-        <tag>Ubuntu</tag>
+        <tag>Shell</tag>
          
          
            
              
-              <breadCrumb title="学习" url="http://hocg.in/categories/%E5%AD%A6%E4%B9%A0/"/>
-          
-             
-              <breadCrumb title="Shell脚本" url="http://hocg.in/categories/%E5%AD%A6%E4%B9%A0/Shell%E8%84%9A%E6%9C%AC/"/>
+              <breadCrumb title="Coder" url="http://hocg.in/categories/Coder/"/>
           
         </display>
     </data>
     </url>
 
     
+  <url>
+    <loc>http://hocg.in/2016/08/24/Nexus%E5%85%A5%E9%97%A8/</loc>
+    <lastmod>2016-08-27T05:31:22.981Z</lastmod>
+    <data>
+        <display>
+        <title>Nexus 入门</title>
+        <pubTime>2016-08-24T11:03:01.000Z</pubTime>
+        
+        <tag>Tips</tag>
+         
+        <tag>Nexus</tag>
+         
+         
+           
+             
+              <breadCrumb title="Server" url="http://hocg.in/categories/Server/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://hocg.in/2016/07/02/Mac-%E4%BD%BF%E7%94%A8/</loc>
+    <lastmod>2016-08-27T05:29:43.104Z</lastmod>
+    <data>
+        <display>
+        <title>Mac的使用</title>
+        <pubTime>2016-07-02T02:47:06.000Z</pubTime>
+        
+        <tag>Tips</tag>
+         
+        <tag>Mac</tag>
+         
+         
+           
+             
+              <breadCrumb title="OS" url="http://hocg.in/categories/OS/"/>
+          
+        </display>
+    </data>
+    </url>
+
     
   <url>
     <loc>http://hocg.in/2016/03/15/hexo-%E4%BD%BF%E7%94%A8/</loc>
-    <lastmod>2016-04-18T06:24:08.000Z</lastmod>
+    <lastmod>2016-08-27T05:28:40.726Z</lastmod>
     <data>
         <display>
         <title>hexo 使用小记</title>
         <pubTime>2016-03-15T13:31:42.000Z</pubTime>
         
-        <tag>小记</tag>
+        <tag>Hexo</tag>
          
          
            
              
-              <breadCrumb title="学习" url="http://hocg.in/categories/%E5%AD%A6%E4%B9%A0/"/>
+              <breadCrumb title="Other" url="http://hocg.in/categories/Other/"/>
           
         </display>
     </data>
     </url>
 
+    
+  <url>
+    <loc>http://hocg.in/2016/06/02/Https-%E7%AD%BE%E8%AF%81/</loc>
+    <lastmod>2016-08-27T05:28:18.299Z</lastmod>
+    <data>
+        <display>
+        <title>HTTPS 签证</title>
+        <pubTime>2016-06-02T03:22:43.000Z</pubTime>
+        
+        <tag>HTTPS</tag>
+         
+         
+           
+             
+              <breadCrumb title="Server" url="http://hocg.in/categories/Server/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://hocg.in/2016/03/26/hexo-%E5%8A%9F%E8%83%BD%E6%89%A9%E5%B1%95/</loc>
+    <lastmod>2016-08-27T05:24:59.866Z</lastmod>
+    <data>
+        <display>
+        <title>hexo 功能扩展</title>
+        <pubTime>2016-03-26T05:44:28.000Z</pubTime>
+        
+        <tag>Hexo</tag>
+         
+        <tag>HTML5</tag>
+         
+        <tag>CSS3</tag>
+         
+         
+           
+             
+              <breadCrumb title="Web" url="http://hocg.in/categories/Web/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
     
     
     
