@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hocg.in/"/>
-  <updated>2016-08-27T05:31:22.981Z</updated>
+  <updated>2016-09-02T06:51:32.445Z</updated>
   <id>http://hocg.in/</id>
   
   <author>
@@ -14,6 +14,90 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Ngrok使用指南</title>
+    <link href="http://hocg.in/2016/08/31/Ngrok%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/"/>
+    <id>http://hocg.in/2016/08/31/Ngrok使用指南/</id>
+    <published>2016-08-30T23:15:24.000Z</published>
+    <updated>2016-09-02T06:51:32.445Z</updated>
+    
+    <content type="html">&lt;p&gt;只是Ngrok的使用, 源文件后续上传..&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;根域名: &lt;code&gt;web.hocg.in&lt;/code&gt;,即生成的域名为&lt;code&gt;*.web.hocg.in&lt;/code&gt;&lt;br&gt;文件结构:&lt;br&gt;ngrok&lt;br&gt;  ├── bin&lt;br&gt;  │   └── ngrok.cfg&lt;br&gt;  ├── client.sh&lt;br&gt;  ├── code.sh&lt;br&gt;  └── server.sh&lt;br&gt;&lt;strong&gt;部署环境:&lt;/strong&gt;&lt;br&gt;服务器OS: Ubuntu-15&lt;br&gt;客户端OS: Ubuntu-16&lt;/p&gt;
+&lt;h2 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h2&gt;&lt;h3 id=&quot;环境依赖及源码下载&quot;&gt;&lt;a href=&quot;#环境依赖及源码下载&quot; class=&quot;headerlink&quot; title=&quot;环境依赖及源码下载&quot;&gt;&lt;/a&gt;环境依赖及源码下载&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;以下命令根目录统一在&lt;code&gt;/opt&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# 环境依赖 &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get install build-essential golang mercurial git&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 获取 ngrok 源码&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;git clone https://github.com/tutumcloud/ngrok.git ngrok&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;cd ngrok&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;生成证书-amp-amp-编译&quot;&gt;&lt;a href=&quot;#生成证书-amp-amp-编译&quot; class=&quot;headerlink&quot; title=&quot;生成证书 &amp;amp;&amp;amp; 编译&quot;&gt;&lt;/a&gt;生成证书 &amp;amp;&amp;amp; 编译&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;以下命令根目录统一在&lt;code&gt;/opt/ngrok&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;code.sh&lt;/code&gt;文件&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;生成证书 &amp;amp;&amp;amp; 编译服务端和客户端.&lt;br&gt;&lt;code&gt;DOMAIN&lt;/code&gt; 为配置的&lt;code&gt;根域名&lt;/code&gt;, 用于签名.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;#!/bin/bash&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;echo &amp;quot;开始清除..&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;rm -rf assets/client/tls/ngrokroot.crt&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;rm -rf assets/server/tls/snakeoil.crt&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;rm -rf assets/server/tls/snakeoil.key&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;rm -rf device.*&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;rm -rf rootCA.*&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;DOMAIN=web.hocg.in&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;echo &amp;quot;设置域名为[*.$DOMAIN]&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;echo &amp;quot;开始生成秘钥..&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;openssl genrsa -out rootCA.key 2048&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;openssl req -x509 -new -nodes -key rootCA.key -subj &amp;quot;/CN=$DOMAIN&amp;quot; -days 5000 -out rootCA.pem&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;openssl genrsa -out device.key 2048&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;openssl req -new -key device.key -subj &amp;quot;/CN=$DOMAIN&amp;quot; -out device.csr&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;openssl x509 -req -in device.csr -CA rootCA.pem -CAkey rootCA.key -CAcreateserial -out device.crt -days 5000&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;echo &amp;quot;开始迁移秘钥..&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;cp -rf rootCA.pem assets/client/tls/ngrokroot.crt&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;cp -rf device.crt assets/server/tls/snakeoil.crt&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;cp -rf device.key assets/server/tls/snakeoil.key&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;echo &amp;quot;开始编译..&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;make release-server release-client&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; 关于编译macOS客户端 &lt;code&gt;GOOS=darwin GOARCH=amd64 make release-client&lt;/code&gt;&lt;br&gt;关于Windows客户端 &lt;code&gt;GOOS=windows GOARCH=amd64 make release-client&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;配置文件&quot;&gt;&lt;a href=&quot;#配置文件&quot; class=&quot;headerlink&quot; title=&quot;配置文件&quot;&gt;&lt;/a&gt;配置文件&lt;/h3&gt;&lt;p&gt;&lt;code&gt;ngrok.cfg&lt;/code&gt;文件&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;server_addr&lt;/code&gt; 为配置的&lt;code&gt;根域名&lt;/code&gt;， &lt;code&gt;4443&lt;/code&gt;为默认端口&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;server_addr: web.hocg.in:4443&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;trust_host_root_certs: false&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;运行文件&quot;&gt;&lt;a href=&quot;#运行文件&quot; class=&quot;headerlink&quot; title=&quot;运行文件&quot;&gt;&lt;/a&gt;运行文件&lt;/h3&gt;&lt;p&gt;&lt;code&gt;server.sh&lt;/code&gt;文件&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;服务器运行&lt;br&gt;&lt;code&gt;DOMAIN&lt;/code&gt; 为配置的&lt;code&gt;根域名&lt;/code&gt;.&lt;br&gt;注释的那一句用于后台运行&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;#!/bin/bash&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# $1 HTTP&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# $2 HTTPS&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;killall ngrokd&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;DOMAIN=web.hocg.in&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# nohup ./bin/ngrokd -domain=&amp;quot;$DOMAIN&amp;quot; -httpAddr=&amp;quot;:$1&amp;quot; -httpsAddr=&amp;quot;:$2&amp;quot; &amp;gt;/tmp/ngrok.log 2&amp;gt;&amp;amp;1 &amp;amp;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;./bin/ngrokd -domain=&amp;quot;$DOMAIN&amp;quot; -httpAddr=&amp;quot;:$1&amp;quot; -httpsAddr=&amp;quot;:$2&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;code&gt;client.sh&lt;/code&gt;文件&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;客户端运行&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;#!/bin/bash&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# $1 Port&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# $2 domain&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;./bin/ngrok -subdomain $2 -proto=http -config=./bin/ngrok.cfg $1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;使用&quot;&gt;&lt;a href=&quot;#使用&quot; class=&quot;headerlink&quot; title=&quot;使用&quot;&gt;&lt;/a&gt;使用&lt;/h2&gt;&lt;h3 id=&quot;编译&quot;&gt;&lt;a href=&quot;#编译&quot; class=&quot;headerlink&quot; title=&quot;编译&quot;&gt;&lt;/a&gt;编译&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sh code.sh&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;成功&lt;/strong&gt; 检查&lt;code&gt;ngrok/bin&lt;/code&gt;文件夹是否存在&lt;code&gt;ngrok&lt;/code&gt; and &lt;code&gt;ngrokd&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;服务端&quot;&gt;&lt;a href=&quot;#服务端&quot; class=&quot;headerlink&quot; title=&quot;服务端&quot;&gt;&lt;/a&gt;服务端&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sh server.sh 8888 9999&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;客户端&quot;&gt;&lt;a href=&quot;#客户端&quot; class=&quot;headerlink&quot; title=&quot;客户端&quot;&gt;&lt;/a&gt;客户端&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sh client.sh 8080 dm&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;检验&quot;&gt;&lt;a href=&quot;#检验&quot; class=&quot;headerlink&quot; title=&quot;检验&quot;&gt;&lt;/a&gt;检验&lt;/h3&gt;&lt;p&gt;访问:&lt;code&gt;http://dm.web.hocg.in:8888&lt;/code&gt;&lt;br&gt;&lt;img src=&quot;https://hocg.in/i/Ngrok使用指南.png&quot; alt=&quot;image&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;重要&quot;&gt;&lt;a href=&quot;#重要&quot; class=&quot;headerlink&quot; title=&quot;重要&quot;&gt;&lt;/a&gt;重要&lt;/h2&gt;&lt;h3 id=&quot;关于域名解析&quot;&gt;&lt;a href=&quot;#关于域名解析&quot; class=&quot;headerlink&quot; title=&quot;关于域名解析&quot;&gt;&lt;/a&gt;关于域名解析&lt;/h3&gt;&lt;p&gt;eg. &lt;code&gt;*.web.hocg.in&lt;/code&gt;&lt;br&gt;路径解析需配置&lt;code&gt;*.web&lt;/code&gt; and &lt;code&gt;web&lt;/code&gt; 两个A记录&lt;/p&gt;
+&lt;h3 id=&quot;关于签名&quot;&gt;&lt;a href=&quot;#关于签名&quot; class=&quot;headerlink&quot; title=&quot;关于签名&quot;&gt;&lt;/a&gt;关于签名&lt;/h3&gt;&lt;p&gt;最好在同一环境进行&lt;code&gt;服务端&lt;/code&gt;和&lt;code&gt;客户端&lt;/code&gt;的编译&lt;/p&gt;
+&lt;h2 id=&quot;可能遇到的异常&quot;&gt;&lt;a href=&quot;#可能遇到的异常&quot; class=&quot;headerlink&quot; title=&quot;可能遇到的异常&quot;&gt;&lt;/a&gt;可能遇到的异常&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Go-1.2.1语言版本不支持&lt;code&gt;go version&lt;/code&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# github.com/gorilla/websocket&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;src/github.com/gorilla/websocket/client.go:361: unknown tls.Config field &amp;apos;GetCertificate&amp;apos; in struct literal&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;src/github.com/gorilla/websocket/client.go:370: unknown tls.Config field &amp;apos;ClientSessionCache&amp;apos; in struct literal&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;src/github.com/gorilla/websocket/client.go:373: unknown tls.Config field &amp;apos;CurvePreferences&amp;apos; in struct literal&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;make: *** [client] Error 2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&quot;https://golang.org/doc/install?download=go1.7.linux-amd64.tar.gz&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;官方Go-64的安装&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Go编译器找不到&lt;code&gt;go-bindata&lt;/code&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;GOOS=&amp;quot;&amp;quot; GOARCH=&amp;quot;&amp;quot; go get github.com/jteeuwen/go-bindata/go-bindata&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;/bin/sh: 1: go: not found&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;make: *** [bin/go-bindata] Error 127&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;请注意配置好&lt;code&gt;GOROOT&lt;/code&gt;和&lt;code&gt;GOPATH&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;GOROOT&lt;/code&gt;为安装GO的目录&lt;br&gt;&lt;code&gt;GOPATH&lt;/code&gt;自定义一个GO插件下载目录&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;执行以下shell下载插件&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;go get -u github.com/jteeuwen/go-bindata/...&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;只是Ngrok的使用, 源文件后续上传..&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Server" scheme="http://hocg.in/categories/Server/"/>
+    
+    
+      <category term="Ngrok" scheme="http://hocg.in/tags/Ngrok/"/>
+    
+      <category term="Tip" scheme="http://hocg.in/tags/Tip/"/>
+    
+  </entry>
   
   <entry>
     <title>Nexus 入门</title>
@@ -478,7 +562,7 @@
     <link href="http://hocg.in/2016/06/02/Https-%E7%AD%BE%E8%AF%81/"/>
     <id>http://hocg.in/2016/06/02/Https-签证/</id>
     <published>2016-06-02T03:22:43.000Z</published>
-    <updated>2016-08-27T05:28:18.299Z</updated>
+    <updated>2016-09-04T03:51:10.644Z</updated>
     
     <content type="html">&lt;h3 id=&quot;关于https&quot;&gt;&lt;a href=&quot;#关于https&quot; class=&quot;headerlink&quot; title=&quot;关于https&quot;&gt;&lt;/a&gt;关于https&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/HTTPS&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;wiki&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
@@ -493,7 +577,7 @@
 &lt;/ol&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;PROTECTION&lt;/code&gt; -&amp;gt; &lt;code&gt;SSL Encryption&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;PLUGIN STORE&lt;/code&gt;&lt;br&gt;&lt;a href=&quot;https://hocg.in/&quot;&gt;成品&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;PLUGIN STORE&lt;/code&gt;&lt;br&gt;&lt;a href=&quot;https://hocg.in/&quot;&gt;成品&lt;/a&gt;&lt;br&gt;&lt;strong&gt;NOTE: 2016年09月04日 发现&lt;code&gt;Kloudsec&lt;/code&gt;已经倒闭了&lt;/strong&gt;&lt;br&gt;现在使用的是&lt;a href=&quot;https://www.cloudflare.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Cloudflare&lt;/a&gt;&lt;br&gt;具体使用注册时有引导教程(&lt;code&gt;需把域名解析服务器改为cloudflare的&lt;/code&gt;).&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&quot;自己搭建的blog&quot;&gt;&lt;a href=&quot;#自己搭建的blog&quot; class=&quot;headerlink&quot; title=&quot;自己搭建的blog&quot;&gt;&lt;/a&gt;自己搭建的blog&lt;/h3&gt;&lt;p&gt;免费的使用 &lt;a href=&quot;https://www.startssl.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Startssl&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://blog.lutty.me/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;成品&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&quot;TOMCAT-配置https环境&quot;&gt;&lt;a href=&quot;#TOMCAT-配置https环境&quot; class=&quot;headerlink&quot; title=&quot;TOMCAT 配置https环境&quot;&gt;&lt;/a&gt;TOMCAT 配置https环境&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/small____fish/article/details/8214938&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt; keytool 教程&lt;/a&gt;&lt;br&gt;外网回调可尝试使用&lt;a href=&quot;http://www.nat123.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;nat123&lt;/a&gt;&lt;/p&gt;

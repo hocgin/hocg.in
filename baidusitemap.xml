@@ -4,6 +4,48 @@
 
     
   <url>
+    <loc>http://hocg.in/2016/06/02/Https-%E7%AD%BE%E8%AF%81/</loc>
+    <lastmod>2016-09-04T03:51:10.644Z</lastmod>
+    <data>
+        <display>
+        <title>HTTPS 签证</title>
+        <pubTime>2016-06-02T03:22:43.000Z</pubTime>
+        
+        <tag>HTTPS</tag>
+         
+         
+           
+             
+              <breadCrumb title="Server" url="http://hocg.in/categories/Server/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://hocg.in/2016/08/31/Ngrok%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</loc>
+    <lastmod>2016-09-02T06:51:32.445Z</lastmod>
+    <data>
+        <display>
+        <title>Ngrok使用指南</title>
+        <pubTime>2016-08-30T23:15:24.000Z</pubTime>
+        
+        <tag>Ngrok</tag>
+         
+        <tag>Tip</tag>
+         
+         
+           
+             
+              <breadCrumb title="Server" url="http://hocg.in/categories/Server/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://hocg.in/2016/03/20/%E5%AE%89%E8%A3%85%E5%AE%8CUbuntu%E5%90%8E-%E6%88%91%E8%AF%A5%E5%81%9A%E4%BB%80%E4%B9%88/</loc>
     <lastmod>2016-08-27T05:40:14.158Z</lastmod>
     <data>
@@ -243,26 +285,6 @@
            
              
               <breadCrumb title="Other" url="http://hocg.in/categories/Other/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://hocg.in/2016/06/02/Https-%E7%AD%BE%E8%AF%81/</loc>
-    <lastmod>2016-08-27T05:28:18.299Z</lastmod>
-    <data>
-        <display>
-        <title>HTTPS 签证</title>
-        <pubTime>2016-06-02T03:22:43.000Z</pubTime>
-        
-        <tag>HTTPS</tag>
-         
-         
-           
-             
-              <breadCrumb title="Server" url="http://hocg.in/categories/Server/"/>
           
         </display>
     </data>
