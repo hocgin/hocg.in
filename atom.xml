@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hocg.in/"/>
-  <updated>2016-09-02T06:51:32.445Z</updated>
+  <updated>2016-10-20T01:11:57.526Z</updated>
   <id>http://hocg.in/</id>
   
   <author>
@@ -16,11 +16,63 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Redis 相关</title>
+    <link href="http://hocg.in/2016/10/20/Redis-%E7%9B%B8%E5%85%B3/"/>
+    <id>http://hocg.in/2016/10/20/Redis-相关/</id>
+    <published>2016-10-20T01:11:57.546Z</published>
+    <updated>2016-10-20T01:11:57.526Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://redis.io/download&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;官网&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;详情&quot;&gt;&lt;a href=&quot;#详情&quot; class=&quot;headerlink&quot; title=&quot;详情&quot;&gt;&lt;/a&gt;详情&lt;/h2&gt;&lt;h3 id=&quot;默认项&quot;&gt;&lt;a href=&quot;#默认项&quot; class=&quot;headerlink&quot; title=&quot;默认项&quot;&gt;&lt;/a&gt;默认项&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;端口 &lt;code&gt;6379&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;目录结构&quot;&gt;&lt;a href=&quot;#目录结构&quot; class=&quot;headerlink&quot; title=&quot;目录结构&quot;&gt;&lt;/a&gt;目录结构&lt;/h3&gt;&lt;p&gt;redis-3.2.4/&lt;br&gt;|– redis.conf &lt;code&gt;redis配置文件&lt;/code&gt;&lt;br&gt;&lt;code&gt;-- src&lt;/code&gt;编译后目录&lt;code&gt;|-- redis-server&lt;/code&gt;启动bit文件&lt;code&gt;`-- redis-cli&lt;/code&gt;终端bit文件`&lt;/p&gt;
+&lt;h2 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;以下操作均在&lt;code&gt;/opt&lt;/code&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# 下载&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;wget http://download.redis.io/releases/redis-3.2.4.tar.gz&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 解压&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;tar -zxvf redis-3.2.4.tar.gz&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;cd redis-3.2.4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 编译， 生成`src`目录&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;make&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;指令&quot;&gt;&lt;a href=&quot;#指令&quot; class=&quot;headerlink&quot; title=&quot;指令&quot;&gt;&lt;/a&gt;指令&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;以下操作均在&lt;code&gt;/opt&lt;/code&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# 默认配置运行&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;./redis-3.2.4/src/redis-server&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 指定配置文件运行&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;./redis-3.2.4/src/redis-server [config file]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;疑问？&quot;&gt;&lt;a href=&quot;#疑问？&quot; class=&quot;headerlink&quot; title=&quot;疑问？&quot;&gt;&lt;/a&gt;疑问？&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;如何使&lt;code&gt;redis&lt;/code&gt;后台运行?&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;更改配置文件, 找到&lt;code&gt;daemonize&lt;/code&gt;字段,更改&lt;code&gt;no&lt;/code&gt;为&lt;code&gt;yes&lt;/code&gt;, 重启&lt;code&gt;redis&lt;/code&gt; &lt;strong&gt;切记！要指定配置文件&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;如何更改&lt;code&gt;redis&lt;/code&gt;默认&lt;code&gt;6379&lt;/code&gt;端口?&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;更改配置文件, 找到&lt;code&gt;port&lt;/code&gt;字段,更改为指定端口, 重启&lt;code&gt;redis&lt;/code&gt; &lt;strong&gt;切记！要指定配置文件&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;如何设置&lt;code&gt;redis&lt;/code&gt;的验证密码?&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;更改配置文件, 找到&lt;code&gt;requirepass&lt;/code&gt;字段, 设置相应的验证密码, 重启&lt;code&gt;redis&lt;/code&gt; &lt;strong&gt;切记！要指定配置文件&lt;/strong&gt;&lt;br&gt;由于增加了验证密码，因此客户端连接命令为&lt;code&gt;redis-cli –a [upassword]&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://redis.io/download&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;官网&lt;/
+    
+    </summary>
+    
+      <category term="Server" scheme="http://hocg.in/categories/Server/"/>
+    
+    
+      <category term="Tips" scheme="http://hocg.in/tags/Tips/"/>
+    
+      <category term="Redis" scheme="http://hocg.in/tags/Redis/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Ngrok使用指南</title>
     <link href="http://hocg.in/2016/08/31/Ngrok%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/"/>
     <id>http://hocg.in/2016/08/31/Ngrok使用指南/</id>
     <published>2016-08-30T23:15:24.000Z</published>
-    <updated>2016-09-02T06:51:32.445Z</updated>
+    <updated>2016-10-17T08:31:33.796Z</updated>
     
     <content type="html">&lt;p&gt;只是Ngrok的使用, 源文件后续上传..&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;根域名: &lt;code&gt;web.hocg.in&lt;/code&gt;,即生成的域名为&lt;code&gt;*.web.hocg.in&lt;/code&gt;&lt;br&gt;文件结构:&lt;br&gt;ngrok&lt;br&gt;  ├── bin&lt;br&gt;  │   └── ngrok.cfg&lt;br&gt;  ├── client.sh&lt;br&gt;  ├── code.sh&lt;br&gt;  └── server.sh&lt;br&gt;&lt;strong&gt;部署环境:&lt;/strong&gt;&lt;br&gt;服务器OS: Ubuntu-15&lt;br&gt;客户端OS: Ubuntu-16&lt;/p&gt;
@@ -54,8 +106,9 @@
 &lt;p&gt;客户端运行&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;#!/bin/bash&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# $1 Port&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# $2 domain&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;./bin/ngrok -subdomain $2 -proto=http -config=./bin/ngrok.cfg $1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&quot;使用&quot;&gt;&lt;a href=&quot;#使用&quot; class=&quot;headerlink&quot; title=&quot;使用&quot;&gt;&lt;/a&gt;使用&lt;/h2&gt;&lt;h3 id=&quot;编译&quot;&gt;&lt;a href=&quot;#编译&quot; class=&quot;headerlink&quot; title=&quot;编译&quot;&gt;&lt;/a&gt;编译&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sh code.sh&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;blockquote&gt;
+&lt;h2 id=&quot;使用&quot;&gt;&lt;a href=&quot;#使用&quot; class=&quot;headerlink&quot; title=&quot;使用&quot;&gt;&lt;/a&gt;使用&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;若需变更域名, 需修改&lt;code&gt;code.sh&lt;/code&gt;的&lt;code&gt;DOMAIN&lt;/code&gt;、&lt;code&gt;server.sh&lt;/code&gt;的&lt;code&gt;DOMAIN&lt;/code&gt;与&lt;code&gt;./bin/ngrok.cfg&lt;/code&gt;的&lt;code&gt;server_addr&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&quot;编译&quot;&gt;&lt;a href=&quot;#编译&quot; class=&quot;headerlink&quot; title=&quot;编译&quot;&gt;&lt;/a&gt;编译&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sh code.sh&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;&lt;strong&gt;成功&lt;/strong&gt; 检查&lt;code&gt;ngrok/bin&lt;/code&gt;文件夹是否存在&lt;code&gt;ngrok&lt;/code&gt; and &lt;code&gt;ngrokd&lt;/code&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3 id=&quot;服务端&quot;&gt;&lt;a href=&quot;#服务端&quot; class=&quot;headerlink&quot; title=&quot;服务端&quot;&gt;&lt;/a&gt;服务端&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sh server.sh 8888 9999&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
@@ -82,6 +135,7 @@
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;go get -u github.com/jteeuwen/go-bindata/...&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
+&lt;p&gt;END:)&lt;/p&gt;
 </content>
     
     <summary type="html">
@@ -104,13 +158,13 @@
     <link href="http://hocg.in/2016/08/24/Nexus%E5%85%A5%E9%97%A8/"/>
     <id>http://hocg.in/2016/08/24/Nexus入门/</id>
     <published>2016-08-24T11:03:01.000Z</published>
-    <updated>2016-08-27T05:31:22.981Z</updated>
+    <updated>2016-10-17T07:55:36.929Z</updated>
     
     <content type="html">&lt;p&gt;适合&lt;code&gt;nexus&lt;/code&gt;入门，不是手机，不是手机，不是手机　．．ｏ（╯□╰）ｏ&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;环境&quot;&gt;&lt;a href=&quot;#环境&quot; class=&quot;headerlink&quot; title=&quot;环境&quot;&gt;&lt;/a&gt;环境&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;Ubuntu-14.04.1&lt;/li&gt;
 &lt;li&gt;jdk1.8.0_102&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://sonatype-download.global.ssl.fastly.net/nexus/oss/nexus-2.12.0-01-bundle.tar.gz&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;nexus-2.12.0-01&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://sonatype-download.global.ssl.fastly.net/nexus/oss/nexus-2.12.0-01-bundle.tar.gz&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;nexus-2.12.0-01&lt;/a&gt;|&lt;a href=&quot;http://www.sonatype.org/nexus/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;官网&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;域名:&lt;code&gt;nexus.hocg.in&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;前置条件&quot;&gt;&lt;a href=&quot;#前置条件&quot; class=&quot;headerlink&quot; title=&quot;前置条件&quot;&gt;&lt;/a&gt;前置条件&lt;/h2&gt;&lt;ul&gt;
@@ -137,8 +191,10 @@
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; Nexus会自动建立任务计划,一般远程仓库都比较大，构建会比较多，因此索引文件会很大，请确保磁盘大小充足.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&quot;可能出现的报错&quot;&gt;&lt;a href=&quot;#可能出现的报错&quot; class=&quot;headerlink&quot; title=&quot;可能出现的报错&quot;&gt;&lt;/a&gt;可能出现的报错&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;暂无&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;1&lt;/strong&gt; WARNING - NOT RECOMMENDED TO RUN AS ROOT , 原因是提醒你是否确认用&lt;code&gt;root&lt;/code&gt;用户运行&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;\# ./nexus-2.12.0-01/bin/nexus restart&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;****************************************&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;WARNING - NOT RECOMMENDED TO RUN AS ROOT&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;****************************************&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Stopping Nexus OSS...&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Nexus OSS was not running.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Starting Nexus OSS...&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Started Nexus OSS.&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;解决:&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;vim ./nexus-2.12.0-01/bin/nexus&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 修改&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;RUN_AS_USER=root&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 启动&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;./nexus-2.12.0-01/bin/nexus start&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 查看是否启动成功&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;./nexus-2.12.0-01/bin/nexus status&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 稍等几分钟再访问&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 </content>
     
     <summary type="html">
@@ -150,9 +206,9 @@
       <category term="Server" scheme="http://hocg.in/categories/Server/"/>
     
     
-      <category term="Tips" scheme="http://hocg.in/tags/Tips/"/>
-    
       <category term="Nexus" scheme="http://hocg.in/tags/Nexus/"/>
+    
+      <category term="Tips" scheme="http://hocg.in/tags/Tips/"/>
     
   </entry>
   
@@ -202,9 +258,9 @@
       <category term="Mobile" scheme="http://hocg.in/categories/Mobile/"/>
     
     
-      <category term="Android" scheme="http://hocg.in/tags/Android/"/>
-    
       <category term="Tips" scheme="http://hocg.in/tags/Tips/"/>
+    
+      <category term="Android" scheme="http://hocg.in/tags/Android/"/>
     
   </entry>
   
@@ -349,6 +405,50 @@
       <category term="Tips" scheme="http://hocg.in/tags/Tips/"/>
     
       <category term="Mac" scheme="http://hocg.in/tags/Mac/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>谈JVM，各种过程</title>
+    <link href="http://hocg.in/2016/06/12/%E8%B0%88JVM-%E5%90%84%E7%A7%8D%E8%BF%87%E7%A8%8B/"/>
+    <id>http://hocg.in/2016/06/12/谈JVM-各种过程/</id>
+    <published>2016-06-12T11:37:49.000Z</published>
+    <updated>2016-08-27T05:35:49.555Z</updated>
+    
+    <content type="html">&lt;p&gt;谈谈JVM 各种过程， XMind等我整理一下，稍后贴出 囧～&lt;br&gt;欢迎指教..&lt;br&gt;&lt;strong&gt;update:&lt;/strong&gt; 2016-08-03 14:44:12 更新了图&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;总思路&quot;&gt;&lt;a href=&quot;#总思路&quot; class=&quot;headerlink&quot; title=&quot;总思路&quot;&gt;&lt;/a&gt;总思路&lt;/h3&gt;&lt;p&gt;编译过程 -&amp;gt; 运行过程[类加载器过程(类的装载过程) -&amp;gt; 执行过程]&lt;/p&gt;
+&lt;h4 id=&quot;图&quot;&gt;&lt;a href=&quot;#图&quot; class=&quot;headerlink&quot; title=&quot;图&quot;&gt;&lt;/a&gt;图&lt;/h4&gt;&lt;p&gt;&lt;img src=&quot;http://7xs6lq.com1.z0.glb.clouddn.com/总思路-v1.png&quot; alt=&quot;总思路-v1.png&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;编译过程&quot;&gt;&lt;a href=&quot;#编译过程&quot; class=&quot;headerlink&quot; title=&quot;编译过程&quot;&gt;&lt;/a&gt;编译过程&lt;/h3&gt;&lt;p&gt;.java文件 -javac编译-&amp;gt; .class文件       {-JIT编译(转化+优化)-&amp;gt; 本地方法}[执行过程，当方法执行频率高]&lt;/p&gt;
+&lt;h4 id=&quot;图-1&quot;&gt;&lt;a href=&quot;#图-1&quot; class=&quot;headerlink&quot; title=&quot;图&quot;&gt;&lt;/a&gt;图&lt;/h4&gt;&lt;p&gt;&lt;img src=&quot;http://7xs6lq.com1.z0.glb.clouddn.com/编译过程.png&quot; alt=&quot;编译过程.png&quot;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;运行过程&quot;&gt;&lt;a href=&quot;#运行过程&quot; class=&quot;headerlink&quot; title=&quot;运行过程&quot;&gt;&lt;/a&gt;运行过程&lt;/h3&gt;&lt;p&gt;类加载器 -&amp;gt; (执行引擎 -&amp;gt; 本地库接口)[Java 运行时数据区] -&amp;gt; 本地方法库&lt;/p&gt;
+&lt;h4 id=&quot;图-2&quot;&gt;&lt;a href=&quot;#图-2&quot; class=&quot;headerlink&quot; title=&quot;图&quot;&gt;&lt;/a&gt;图&lt;/h4&gt;&lt;p&gt;&lt;img src=&quot;http://7xs6lq.com1.z0.glb.clouddn.com/运行过程.png&quot; alt=&quot;运行过程.png&quot;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;类加载器过程&quot;&gt;&lt;a href=&quot;#类加载器过程&quot; class=&quot;headerlink&quot; title=&quot;类加载器过程&quot;&gt;&lt;/a&gt;&lt;strong&gt;类加载器&lt;/strong&gt;过程&lt;/h3&gt;&lt;p&gt;[启动]类加载器(JNI) -&amp;gt; [扩展]类加载器 -&amp;gt; [系统]类加载器 -&amp;gt; [自定义]类加载器&lt;/p&gt;
+&lt;h4 id=&quot;图-3&quot;&gt;&lt;a href=&quot;#图-3&quot; class=&quot;headerlink&quot; title=&quot;图&quot;&gt;&lt;/a&gt;图&lt;/h4&gt;&lt;p&gt;&lt;img src=&quot;http://7xs6lq.com1.z0.glb.clouddn.com/类加载器过程.png&quot; alt=&quot;类加载器过程.png&quot;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;类装载过程&quot;&gt;&lt;a href=&quot;#类装载过程&quot; class=&quot;headerlink&quot; title=&quot;类装载过程&quot;&gt;&lt;/a&gt;&lt;strong&gt;类&lt;/strong&gt;装载过程&lt;/h3&gt;&lt;p&gt;加载文件到JVM内存 -&amp;gt; (校验语言规范 -&amp;gt; 分配结构存储类的信息 -&amp;gt; 该类常量池中符号更改为直接引用)[Linking] -&amp;gt; 类初始化&lt;/p&gt;
+&lt;h4 id=&quot;图-4&quot;&gt;&lt;a href=&quot;#图-4&quot; class=&quot;headerlink&quot; title=&quot;图&quot;&gt;&lt;/a&gt;图&lt;/h4&gt;&lt;p&gt;&lt;img src=&quot;http://7xs6lq.com1.z0.glb.clouddn.com/类装载过程.png&quot; alt=&quot;类装载过程.png&quot;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;执行引擎执行过程-逐行读取指令&quot;&gt;&lt;a href=&quot;#执行引擎执行过程-逐行读取指令&quot; class=&quot;headerlink&quot; title=&quot;执行引擎执行过程(逐行读取指令)&quot;&gt;&lt;/a&gt;&lt;strong&gt;执行引擎&lt;/strong&gt;执行过程(逐行读取指令)&lt;/h3&gt;&lt;p&gt;Thread启动 -生成-&amp;gt; JVM栈 -执行方法-&amp;gt; 压入栈帧(包含 局部变量数组&amp;amp;操作数栈&amp;amp;运行时常量池) -&amp;gt; 逐行读取指令&amp;amp;&amp;amp;解释(JVM栈帧 程序计数器存放下一条指令) -&amp;gt; {JIT(转化+优化)-&amp;gt; 本地方法}[当方法执行频率高] -执行&amp;amp;运算-&amp;gt; 结果(存放 操作数栈中) -&amp;gt; 推出栈帧&lt;/p&gt;
+&lt;h4 id=&quot;图-5&quot;&gt;&lt;a href=&quot;#图-5&quot; class=&quot;headerlink&quot; title=&quot;图&quot;&gt;&lt;/a&gt;图&lt;/h4&gt;&lt;p&gt;&lt;img src=&quot;http://7xs6lq.com1.z0.glb.clouddn.com/执行引擎执行过程.png&quot; alt=&quot;执行引擎执行过程.png&quot;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;Java-运行时数据区-贯穿整个执行过程&quot;&gt;&lt;a href=&quot;#Java-运行时数据区-贯穿整个执行过程&quot; class=&quot;headerlink&quot; title=&quot;Java 运行时数据区(贯穿整个执行过程)&quot;&gt;&lt;/a&gt;Java 运行时数据区(贯穿整个执行过程)&lt;/h3&gt;&lt;p&gt;共享型数据区：方法区(含运行时常量池[存放方法&amp;amp;变量的实际&lt;strong&gt;地址&lt;/strong&gt;])、堆(存放对象实例)&lt;br&gt;隔离型数据区：JVM 栈、本地方法栈(JNI)、程序计数器&lt;/p&gt;
+&lt;h4 id=&quot;图-6&quot;&gt;&lt;a href=&quot;#图-6&quot; class=&quot;headerlink&quot; title=&quot;图&quot;&gt;&lt;/a&gt;图&lt;/h4&gt;&lt;p&gt;&lt;img src=&quot;http://7xs6lq.com1.z0.glb.clouddn.com/运行时数据图.png&quot; alt=&quot;运行时数据图.png&quot;&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;谈谈JVM 各种过程， XMind等我整理一下，稍后贴出 囧～&lt;br&gt;欢迎指教..&lt;br&gt;&lt;strong&gt;update:&lt;/strong&gt; 2016-08-03 14:44:12 更新了图&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Coder" scheme="http://hocg.in/categories/Coder/"/>
+    
+    
+      <category term="Java" scheme="http://hocg.in/tags/Java/"/>
+    
+      <category term="JVM" scheme="http://hocg.in/tags/JVM/"/>
     
   </entry>
   
@@ -514,50 +614,6 @@
   </entry>
   
   <entry>
-    <title>谈JVM，各种过程</title>
-    <link href="http://hocg.in/2016/06/12/%E8%B0%88JVM-%E5%90%84%E7%A7%8D%E8%BF%87%E7%A8%8B/"/>
-    <id>http://hocg.in/2016/06/12/谈JVM-各种过程/</id>
-    <published>2016-06-12T11:37:49.000Z</published>
-    <updated>2016-08-27T05:35:49.555Z</updated>
-    
-    <content type="html">&lt;p&gt;谈谈JVM 各种过程， XMind等我整理一下，稍后贴出 囧～&lt;br&gt;欢迎指教..&lt;br&gt;&lt;strong&gt;update:&lt;/strong&gt; 2016-08-03 14:44:12 更新了图&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&quot;总思路&quot;&gt;&lt;a href=&quot;#总思路&quot; class=&quot;headerlink&quot; title=&quot;总思路&quot;&gt;&lt;/a&gt;总思路&lt;/h3&gt;&lt;p&gt;编译过程 -&amp;gt; 运行过程[类加载器过程(类的装载过程) -&amp;gt; 执行过程]&lt;/p&gt;
-&lt;h4 id=&quot;图&quot;&gt;&lt;a href=&quot;#图&quot; class=&quot;headerlink&quot; title=&quot;图&quot;&gt;&lt;/a&gt;图&lt;/h4&gt;&lt;p&gt;&lt;img src=&quot;http://7xs6lq.com1.z0.glb.clouddn.com/总思路-v1.png&quot; alt=&quot;总思路-v1.png&quot;&gt;&lt;/p&gt;
-&lt;h3 id=&quot;编译过程&quot;&gt;&lt;a href=&quot;#编译过程&quot; class=&quot;headerlink&quot; title=&quot;编译过程&quot;&gt;&lt;/a&gt;编译过程&lt;/h3&gt;&lt;p&gt;.java文件 -javac编译-&amp;gt; .class文件       {-JIT编译(转化+优化)-&amp;gt; 本地方法}[执行过程，当方法执行频率高]&lt;/p&gt;
-&lt;h4 id=&quot;图-1&quot;&gt;&lt;a href=&quot;#图-1&quot; class=&quot;headerlink&quot; title=&quot;图&quot;&gt;&lt;/a&gt;图&lt;/h4&gt;&lt;p&gt;&lt;img src=&quot;http://7xs6lq.com1.z0.glb.clouddn.com/编译过程.png&quot; alt=&quot;编译过程.png&quot;&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;h3 id=&quot;运行过程&quot;&gt;&lt;a href=&quot;#运行过程&quot; class=&quot;headerlink&quot; title=&quot;运行过程&quot;&gt;&lt;/a&gt;运行过程&lt;/h3&gt;&lt;p&gt;类加载器 -&amp;gt; (执行引擎 -&amp;gt; 本地库接口)[Java 运行时数据区] -&amp;gt; 本地方法库&lt;/p&gt;
-&lt;h4 id=&quot;图-2&quot;&gt;&lt;a href=&quot;#图-2&quot; class=&quot;headerlink&quot; title=&quot;图&quot;&gt;&lt;/a&gt;图&lt;/h4&gt;&lt;p&gt;&lt;img src=&quot;http://7xs6lq.com1.z0.glb.clouddn.com/运行过程.png&quot; alt=&quot;运行过程.png&quot;&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;h3 id=&quot;类加载器过程&quot;&gt;&lt;a href=&quot;#类加载器过程&quot; class=&quot;headerlink&quot; title=&quot;类加载器过程&quot;&gt;&lt;/a&gt;&lt;strong&gt;类加载器&lt;/strong&gt;过程&lt;/h3&gt;&lt;p&gt;[启动]类加载器(JNI) -&amp;gt; [扩展]类加载器 -&amp;gt; [系统]类加载器 -&amp;gt; [自定义]类加载器&lt;/p&gt;
-&lt;h4 id=&quot;图-3&quot;&gt;&lt;a href=&quot;#图-3&quot; class=&quot;headerlink&quot; title=&quot;图&quot;&gt;&lt;/a&gt;图&lt;/h4&gt;&lt;p&gt;&lt;img src=&quot;http://7xs6lq.com1.z0.glb.clouddn.com/类加载器过程.png&quot; alt=&quot;类加载器过程.png&quot;&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;h3 id=&quot;类装载过程&quot;&gt;&lt;a href=&quot;#类装载过程&quot; class=&quot;headerlink&quot; title=&quot;类装载过程&quot;&gt;&lt;/a&gt;&lt;strong&gt;类&lt;/strong&gt;装载过程&lt;/h3&gt;&lt;p&gt;加载文件到JVM内存 -&amp;gt; (校验语言规范 -&amp;gt; 分配结构存储类的信息 -&amp;gt; 该类常量池中符号更改为直接引用)[Linking] -&amp;gt; 类初始化&lt;/p&gt;
-&lt;h4 id=&quot;图-4&quot;&gt;&lt;a href=&quot;#图-4&quot; class=&quot;headerlink&quot; title=&quot;图&quot;&gt;&lt;/a&gt;图&lt;/h4&gt;&lt;p&gt;&lt;img src=&quot;http://7xs6lq.com1.z0.glb.clouddn.com/类装载过程.png&quot; alt=&quot;类装载过程.png&quot;&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;h3 id=&quot;执行引擎执行过程-逐行读取指令&quot;&gt;&lt;a href=&quot;#执行引擎执行过程-逐行读取指令&quot; class=&quot;headerlink&quot; title=&quot;执行引擎执行过程(逐行读取指令)&quot;&gt;&lt;/a&gt;&lt;strong&gt;执行引擎&lt;/strong&gt;执行过程(逐行读取指令)&lt;/h3&gt;&lt;p&gt;Thread启动 -生成-&amp;gt; JVM栈 -执行方法-&amp;gt; 压入栈帧(包含 局部变量数组&amp;amp;操作数栈&amp;amp;运行时常量池) -&amp;gt; 逐行读取指令&amp;amp;&amp;amp;解释(JVM栈帧 程序计数器存放下一条指令) -&amp;gt; {JIT(转化+优化)-&amp;gt; 本地方法}[当方法执行频率高] -执行&amp;amp;运算-&amp;gt; 结果(存放 操作数栈中) -&amp;gt; 推出栈帧&lt;/p&gt;
-&lt;h4 id=&quot;图-5&quot;&gt;&lt;a href=&quot;#图-5&quot; class=&quot;headerlink&quot; title=&quot;图&quot;&gt;&lt;/a&gt;图&lt;/h4&gt;&lt;p&gt;&lt;img src=&quot;http://7xs6lq.com1.z0.glb.clouddn.com/执行引擎执行过程.png&quot; alt=&quot;执行引擎执行过程.png&quot;&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;h3 id=&quot;Java-运行时数据区-贯穿整个执行过程&quot;&gt;&lt;a href=&quot;#Java-运行时数据区-贯穿整个执行过程&quot; class=&quot;headerlink&quot; title=&quot;Java 运行时数据区(贯穿整个执行过程)&quot;&gt;&lt;/a&gt;Java 运行时数据区(贯穿整个执行过程)&lt;/h3&gt;&lt;p&gt;共享型数据区：方法区(含运行时常量池[存放方法&amp;amp;变量的实际&lt;strong&gt;地址&lt;/strong&gt;])、堆(存放对象实例)&lt;br&gt;隔离型数据区：JVM 栈、本地方法栈(JNI)、程序计数器&lt;/p&gt;
-&lt;h4 id=&quot;图-6&quot;&gt;&lt;a href=&quot;#图-6&quot; class=&quot;headerlink&quot; title=&quot;图&quot;&gt;&lt;/a&gt;图&lt;/h4&gt;&lt;p&gt;&lt;img src=&quot;http://7xs6lq.com1.z0.glb.clouddn.com/运行时数据图.png&quot; alt=&quot;运行时数据图.png&quot;&gt;&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;谈谈JVM 各种过程， XMind等我整理一下，稍后贴出 囧～&lt;br&gt;欢迎指教..&lt;br&gt;&lt;strong&gt;update:&lt;/strong&gt; 2016-08-03 14:44:12 更新了图&lt;br&gt;
-    
-    </summary>
-    
-      <category term="Coder" scheme="http://hocg.in/categories/Coder/"/>
-    
-    
-      <category term="Java" scheme="http://hocg.in/tags/Java/"/>
-    
-      <category term="JVM" scheme="http://hocg.in/tags/JVM/"/>
-    
-  </entry>
-  
-  <entry>
     <title>HTTPS 签证</title>
     <link href="http://hocg.in/2016/06/02/Https-%E7%AD%BE%E8%AF%81/"/>
     <id>http://hocg.in/2016/06/02/Https-签证/</id>
@@ -597,43 +653,6 @@
   </entry>
   
   <entry>
-    <title>绿化NodeJS for linux版</title>
-    <link href="http://hocg.in/2016/04/25/%E7%BB%BF%E5%8C%96nodejs-for-linux%E7%89%88/"/>
-    <id>http://hocg.in/2016/04/25/绿化nodejs-for-linux版/</id>
-    <published>2016-04-25T01:38:49.000Z</published>
-    <updated>2016-08-27T05:35:32.660Z</updated>
-    
-    <content type="html">&lt;p&gt;起因，为了方便hexo发布博客，所以想把NodeJS绿化在U盘上..&lt;br&gt;谁叫网上只有win版的呢！自己码起来～&lt;br&gt;绿化 o(╯□╰)o&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;目录结构&quot;&gt;&lt;a href=&quot;#目录结构&quot; class=&quot;headerlink&quot; title=&quot;目录结构&quot;&gt;&lt;/a&gt;目录结构&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Green4nodeJS&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;├── hocgin.github.io // github博客目录&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;├── node // nodejs基本目录&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;│   ├── node-linux // nodejs源文件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;│   ├── cache // 创建一个空文件夹，即可&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;│   ├── init-module // 创建一个空文件夹，即可&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;│   └── userconfig // 创建一个空文件夹，即可&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;└── init.sh // 初始化shell文件 *重要&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&quot;初始化文件&quot;&gt;&lt;a href=&quot;#初始化文件&quot; class=&quot;headerlink&quot; title=&quot;初始化文件&quot;&gt;&lt;/a&gt;初始化文件&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;主要是加载配置环境，初始化变量&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;code&gt;init.sh&lt;/code&gt; 内容&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;#!/bin/bash&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# Author: hocgin@gmail.com&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# -------------Use--------------&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# source init.sh or . init.sh&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# ------------------------------&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;NOW_PATH=$(cd &amp;quot;$(dirname &amp;quot;$0&amp;quot;)&amp;quot;; pwd)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;NODE_NAME=&amp;quot;node-linux&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;NODE_HOME=$NOW_PATH&amp;quot;/node/&amp;quot;$NODE_NAME&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;NODE_PATH=$NODE_HOME&amp;quot;/bin&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;NPM_PATH=$NODE_HOME&amp;quot;/lib/node_modules/npm/bin&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo chmod +x -R $NPM_PATH&amp;quot;/.&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;export PATH=$PATH:$NODE_PATH:$NPM_PATH&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# &amp;quot;/home/hocgin/.npmrc&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;npm set userconfig $NOW_PATH&amp;quot;/node/userconfig&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# &amp;quot;/home/hocgin/.npm-init.js&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;npm set init-module $NOW_PATH&amp;quot;/node/init-module&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# &amp;quot;/home/hocgin/.npm&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;npm set cache  $NOW_PATH&amp;quot;/node/cache&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;修改 &lt;code&gt;/node/node-linux/lib/node_modules/npm/bin/npm&lt;/code&gt; 文件&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# NPM_CLI_JS=&amp;quot;$basedir/node_modules/npm/bin/npm-cli.js&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;NPM_CLI_JS=&amp;quot;$basedir/npm-cli.js&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;完成&lt;/p&gt;
-&lt;h2 id=&quot;使用方法&quot;&gt;&lt;a href=&quot;#使用方法&quot; class=&quot;headerlink&quot; title=&quot;使用方法&quot;&gt;&lt;/a&gt;使用方法&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;source init.sh&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# Or&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;. init.sh&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;cd hocgin.github.io&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 尽情hexo吧&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;&lt;code&gt;注: 安装module时请加上 -g&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;End&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;起因，为了方便hexo发布博客，所以想把NodeJS绿化在U盘上..&lt;br&gt;谁叫网上只有win版的呢！自己码起来～&lt;br&gt;绿化 o(╯□╰)o&lt;br&gt;
-    
-    </summary>
-    
-      <category term="Coder" scheme="http://hocg.in/categories/Coder/"/>
-    
-    
-      <category term="Tips" scheme="http://hocg.in/tags/Tips/"/>
-    
-      <category term="Ubuntu" scheme="http://hocg.in/tags/Ubuntu/"/>
-    
-      <category term="NodeJS" scheme="http://hocg.in/tags/NodeJS/"/>
-    
-  </entry>
-  
-  <entry>
     <title>使用Maven下载jar包 linux版</title>
     <link href="http://hocg.in/2016/04/25/%E4%BD%BF%E7%94%A8Maven%E4%B8%8B%E8%BD%BDjar%E5%8C%85-linux%E7%89%88/"/>
     <id>http://hocg.in/2016/04/25/使用Maven下载jar包-linux版/</id>
@@ -667,6 +686,43 @@
       <category term="Maven" scheme="http://hocg.in/tags/Maven/"/>
     
       <category term="Shell" scheme="http://hocg.in/tags/Shell/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>绿化NodeJS for linux版</title>
+    <link href="http://hocg.in/2016/04/25/%E7%BB%BF%E5%8C%96nodejs-for-linux%E7%89%88/"/>
+    <id>http://hocg.in/2016/04/25/绿化nodejs-for-linux版/</id>
+    <published>2016-04-25T01:38:49.000Z</published>
+    <updated>2016-08-27T05:35:32.660Z</updated>
+    
+    <content type="html">&lt;p&gt;起因，为了方便hexo发布博客，所以想把NodeJS绿化在U盘上..&lt;br&gt;谁叫网上只有win版的呢！自己码起来～&lt;br&gt;绿化 o(╯□╰)o&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;目录结构&quot;&gt;&lt;a href=&quot;#目录结构&quot; class=&quot;headerlink&quot; title=&quot;目录结构&quot;&gt;&lt;/a&gt;目录结构&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Green4nodeJS&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;├── hocgin.github.io // github博客目录&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;├── node // nodejs基本目录&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;│   ├── node-linux // nodejs源文件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;│   ├── cache // 创建一个空文件夹，即可&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;│   ├── init-module // 创建一个空文件夹，即可&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;│   └── userconfig // 创建一个空文件夹，即可&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;└── init.sh // 初始化shell文件 *重要&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;初始化文件&quot;&gt;&lt;a href=&quot;#初始化文件&quot; class=&quot;headerlink&quot; title=&quot;初始化文件&quot;&gt;&lt;/a&gt;初始化文件&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;主要是加载配置环境，初始化变量&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;init.sh&lt;/code&gt; 内容&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;#!/bin/bash&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# Author: hocgin@gmail.com&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# -------------Use--------------&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# source init.sh or . init.sh&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# ------------------------------&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;NOW_PATH=$(cd &amp;quot;$(dirname &amp;quot;$0&amp;quot;)&amp;quot;; pwd)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;NODE_NAME=&amp;quot;node-linux&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;NODE_HOME=$NOW_PATH&amp;quot;/node/&amp;quot;$NODE_NAME&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;NODE_PATH=$NODE_HOME&amp;quot;/bin&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;NPM_PATH=$NODE_HOME&amp;quot;/lib/node_modules/npm/bin&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo chmod +x -R $NPM_PATH&amp;quot;/.&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;export PATH=$PATH:$NODE_PATH:$NPM_PATH&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# &amp;quot;/home/hocgin/.npmrc&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;npm set userconfig $NOW_PATH&amp;quot;/node/userconfig&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# &amp;quot;/home/hocgin/.npm-init.js&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;npm set init-module $NOW_PATH&amp;quot;/node/init-module&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# &amp;quot;/home/hocgin/.npm&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;npm set cache  $NOW_PATH&amp;quot;/node/cache&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;修改 &lt;code&gt;/node/node-linux/lib/node_modules/npm/bin/npm&lt;/code&gt; 文件&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# NPM_CLI_JS=&amp;quot;$basedir/node_modules/npm/bin/npm-cli.js&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;NPM_CLI_JS=&amp;quot;$basedir/npm-cli.js&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;完成&lt;/p&gt;
+&lt;h2 id=&quot;使用方法&quot;&gt;&lt;a href=&quot;#使用方法&quot; class=&quot;headerlink&quot; title=&quot;使用方法&quot;&gt;&lt;/a&gt;使用方法&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;source init.sh&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# Or&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;. init.sh&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;cd hocgin.github.io&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 尽情hexo吧&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;code&gt;注: 安装module时请加上 -g&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;End&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;起因，为了方便hexo发布博客，所以想把NodeJS绿化在U盘上..&lt;br&gt;谁叫网上只有win版的呢！自己码起来～&lt;br&gt;绿化 o(╯□╰)o&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Coder" scheme="http://hocg.in/categories/Coder/"/>
+    
+    
+      <category term="Tips" scheme="http://hocg.in/tags/Tips/"/>
+    
+      <category term="Ubuntu" scheme="http://hocg.in/tags/Ubuntu/"/>
+    
+      <category term="NodeJS" scheme="http://hocg.in/tags/NodeJS/"/>
     
   </entry>
   

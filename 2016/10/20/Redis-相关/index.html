@@ -45,7 +45,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Java,JVM," />
+  <meta name="keywords" content="Tips,Redis," />
 
 
 
@@ -63,24 +63,34 @@
 
 
 
-<meta name="description" content="谈谈JVM 各种过程， XMind等我整理一下，稍后贴出 囧～欢迎指教..update: 2016-08-03 14:44:12 更新了图">
+<meta name="description" content="前言官网
+详情默认项
+端口 6379
+
+目录结构redis-3.2.4/|– redis.conf redis配置文件-- src编译后目录|-- redis-server启动bit文件`-- redis-cli终端bit文件`
+安装
+以下操作均在/opt1234567# 下载wget http://download.redis.io/releases/redis-3.2.4.tar.gz# 解压">
 <meta property="og:type" content="article">
-<meta property="og:title" content="谈JVM，各种过程">
-<meta property="og:url" content="http://hocg.in/2016/06/12/谈JVM-各种过程/index.html">
+<meta property="og:title" content="Redis 相关">
+<meta property="og:url" content="http://hocg.in/2016/10/20/Redis-相关/index.html">
 <meta property="og:site_name" content="Hocgin (๑`灬´๑)">
-<meta property="og:description" content="谈谈JVM 各种过程， XMind等我整理一下，稍后贴出 囧～欢迎指教..update: 2016-08-03 14:44:12 更新了图">
-<meta property="og:image" content="http://7xs6lq.com1.z0.glb.clouddn.com/总思路-v1.png">
-<meta property="og:image" content="http://7xs6lq.com1.z0.glb.clouddn.com/编译过程.png">
-<meta property="og:image" content="http://7xs6lq.com1.z0.glb.clouddn.com/运行过程.png">
-<meta property="og:image" content="http://7xs6lq.com1.z0.glb.clouddn.com/类加载器过程.png">
-<meta property="og:image" content="http://7xs6lq.com1.z0.glb.clouddn.com/类装载过程.png">
-<meta property="og:image" content="http://7xs6lq.com1.z0.glb.clouddn.com/执行引擎执行过程.png">
-<meta property="og:image" content="http://7xs6lq.com1.z0.glb.clouddn.com/运行时数据图.png">
-<meta property="og:updated_time" content="2016-08-27T05:35:49.555Z">
+<meta property="og:description" content="前言官网
+详情默认项
+端口 6379
+
+目录结构redis-3.2.4/|– redis.conf redis配置文件-- src编译后目录|-- redis-server启动bit文件`-- redis-cli终端bit文件`
+安装
+以下操作均在/opt1234567# 下载wget http://download.redis.io/releases/redis-3.2.4.tar.gz# 解压">
+<meta property="og:updated_time" content="2016-10-20T01:11:57.526Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="谈JVM，各种过程">
-<meta name="twitter:description" content="谈谈JVM 各种过程， XMind等我整理一下，稍后贴出 囧～欢迎指教..update: 2016-08-03 14:44:12 更新了图">
-<meta name="twitter:image" content="http://7xs6lq.com1.z0.glb.clouddn.com/总思路-v1.png">
+<meta name="twitter:title" content="Redis 相关">
+<meta name="twitter:description" content="前言官网
+详情默认项
+端口 6379
+
+目录结构redis-3.2.4/|– redis.conf redis配置文件-- src编译后目录|-- redis-server启动bit文件`-- redis-cli终端bit文件`
+安装
+以下操作均在/opt1234567# 下载wget http://download.redis.io/releases/redis-3.2.4.tar.gz# 解压">
 
 
 
@@ -98,7 +108,7 @@
   };
 </script>
 
-  <title> 谈JVM，各种过程 | Hocgin (๑`灬´๑) </title>
+  <title> Redis 相关 | Hocgin (๑`灬´๑) </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -270,7 +280,7 @@
             
             
               
-                谈JVM，各种过程
+                Redis 相关
               
             
           </h1>
@@ -282,8 +292,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-12T19:37:49+08:00" content="2016-06-12">
-              2016-06-12
+            <time itemprop="dateCreated" datetime="2016-10-20T09:11:57+08:00" content="2016-10-20">
+              2016-10-20
             </time>
           </span>
 
@@ -296,8 +306,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Coder/" itemprop="url" rel="index">
-                    <span itemprop="name">Coder</span>
+                  <a href="/categories/Server/" itemprop="url" rel="index">
+                    <span itemprop="name">Server</span>
                   </a>
                 </span>
 
@@ -312,8 +322,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/06/12/谈JVM-各种过程/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/12/谈JVM-各种过程/" itemprop="commentsCount"></span>
+                <a href="/2016/10/20/Redis-相关/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/20/Redis-相关/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -323,7 +333,7 @@
 
           
           
-             <span id="/2016/06/12/谈JVM-各种过程/" class="leancloud_visitors" data-flag-title="谈JVM，各种过程">
+             <span id="/2016/10/20/Redis-相关/" class="leancloud_visitors" data-flag-title="Redis 相关">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -343,26 +353,34 @@
       
 
       
-        <p>谈谈JVM 各种过程， XMind等我整理一下，稍后贴出 囧～<br>欢迎指教..<br><strong>update:</strong> 2016-08-03 14:44:12 更新了图<br><a id="more"></a></p>
-<h3 id="总思路"><a href="#总思路" class="headerlink" title="总思路"></a>总思路</h3><p>编译过程 -&gt; 运行过程[类加载器过程(类的装载过程) -&gt; 执行过程]</p>
-<h4 id="图"><a href="#图" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/总思路-v1.png" alt="总思路-v1.png"></p>
-<h3 id="编译过程"><a href="#编译过程" class="headerlink" title="编译过程"></a>编译过程</h3><p>.java文件 -javac编译-&gt; .class文件       {-JIT编译(转化+优化)-&gt; 本地方法}[执行过程，当方法执行频率高]</p>
-<h4 id="图-1"><a href="#图-1" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/编译过程.png" alt="编译过程.png"></p>
-<hr>
-<h3 id="运行过程"><a href="#运行过程" class="headerlink" title="运行过程"></a>运行过程</h3><p>类加载器 -&gt; (执行引擎 -&gt; 本地库接口)[Java 运行时数据区] -&gt; 本地方法库</p>
-<h4 id="图-2"><a href="#图-2" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/运行过程.png" alt="运行过程.png"></p>
-<hr>
-<h3 id="类加载器过程"><a href="#类加载器过程" class="headerlink" title="类加载器过程"></a><strong>类加载器</strong>过程</h3><p>[启动]类加载器(JNI) -&gt; [扩展]类加载器 -&gt; [系统]类加载器 -&gt; [自定义]类加载器</p>
-<h4 id="图-3"><a href="#图-3" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/类加载器过程.png" alt="类加载器过程.png"></p>
-<hr>
-<h3 id="类装载过程"><a href="#类装载过程" class="headerlink" title="类装载过程"></a><strong>类</strong>装载过程</h3><p>加载文件到JVM内存 -&gt; (校验语言规范 -&gt; 分配结构存储类的信息 -&gt; 该类常量池中符号更改为直接引用)[Linking] -&gt; 类初始化</p>
-<h4 id="图-4"><a href="#图-4" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/类装载过程.png" alt="类装载过程.png"></p>
-<hr>
-<h3 id="执行引擎执行过程-逐行读取指令"><a href="#执行引擎执行过程-逐行读取指令" class="headerlink" title="执行引擎执行过程(逐行读取指令)"></a><strong>执行引擎</strong>执行过程(逐行读取指令)</h3><p>Thread启动 -生成-&gt; JVM栈 -执行方法-&gt; 压入栈帧(包含 局部变量数组&amp;操作数栈&amp;运行时常量池) -&gt; 逐行读取指令&amp;&amp;解释(JVM栈帧 程序计数器存放下一条指令) -&gt; {JIT(转化+优化)-&gt; 本地方法}[当方法执行频率高] -执行&amp;运算-&gt; 结果(存放 操作数栈中) -&gt; 推出栈帧</p>
-<h4 id="图-5"><a href="#图-5" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/执行引擎执行过程.png" alt="执行引擎执行过程.png"></p>
-<hr>
-<h3 id="Java-运行时数据区-贯穿整个执行过程"><a href="#Java-运行时数据区-贯穿整个执行过程" class="headerlink" title="Java 运行时数据区(贯穿整个执行过程)"></a>Java 运行时数据区(贯穿整个执行过程)</h3><p>共享型数据区：方法区(含运行时常量池[存放方法&amp;变量的实际<strong>地址</strong>])、堆(存放对象实例)<br>隔离型数据区：JVM 栈、本地方法栈(JNI)、程序计数器</p>
-<h4 id="图-6"><a href="#图-6" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/运行时数据图.png" alt="运行时数据图.png"></p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><a href="http://redis.io/download" target="_blank" rel="external">官网</a></p>
+<h2 id="详情"><a href="#详情" class="headerlink" title="详情"></a>详情</h2><h3 id="默认项"><a href="#默认项" class="headerlink" title="默认项"></a>默认项</h3><ul>
+<li>端口 <code>6379</code></li>
+</ul>
+<h3 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h3><p>redis-3.2.4/<br>|– redis.conf <code>redis配置文件</code><br><code>-- src</code>编译后目录<code>|-- redis-server</code>启动bit文件<code>`-- redis-cli</code>终端bit文件`</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><blockquote>
+<p>以下操作均在<code>/opt</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># 下载</span><br><span class="line">wget http://download.redis.io/releases/redis-3.2.4.tar.gz</span><br><span class="line"># 解压</span><br><span class="line">tar -zxvf redis-3.2.4.tar.gz</span><br><span class="line">cd redis-3.2.4</span><br><span class="line"># 编译， 生成`src`目录</span><br><span class="line">make</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><blockquote>
+<p>以下操作均在<code>/opt</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 默认配置运行</span><br><span class="line">./redis-3.2.4/src/redis-server</span><br><span class="line"># 指定配置文件运行</span><br><span class="line">./redis-3.2.4/src/redis-server [config file]</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h2 id="疑问？"><a href="#疑问？" class="headerlink" title="疑问？"></a>疑问？</h2><ul>
+<li><p>如何使<code>redis</code>后台运行?</p>
+<blockquote>
+<p>更改配置文件, 找到<code>daemonize</code>字段,更改<code>no</code>为<code>yes</code>, 重启<code>redis</code> <strong>切记！要指定配置文件</strong></p>
+</blockquote>
+</li>
+<li><p>如何更改<code>redis</code>默认<code>6379</code>端口?</p>
+<blockquote>
+<p>更改配置文件, 找到<code>port</code>字段,更改为指定端口, 重启<code>redis</code> <strong>切记！要指定配置文件</strong></p>
+</blockquote>
+</li>
+<li><p>如何设置<code>redis</code>的验证密码?</p>
+<blockquote>
+<p>更改配置文件, 找到<code>requirepass</code>字段, 设置相应的验证密码, 重启<code>redis</code> <strong>切记！要指定配置文件</strong><br>由于增加了验证密码，因此客户端连接命令为<code>redis-cli –a [upassword]</code></p>
+</blockquote>
+</li>
+</ul>
 
       
     </div>
@@ -396,9 +414,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Java/" rel="tag">#Java</a>
+            <a href="/tags/Tips/" rel="tag">#Tips</a>
           
-            <a href="/tags/JVM/" rel="tag">#JVM</a>
+            <a href="/tags/Redis/" rel="tag">#Redis</a>
           
         </div>
       
@@ -407,17 +425,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/06/12/谈JVM-字节码/" rel="next" title="谈JVM，字节码">
-                <i class="fa fa-chevron-left"></i> 谈JVM，字节码
+              <a href="/2016/08/31/Ngrok使用指南/" rel="next" title="Ngrok使用指南">
+                <i class="fa fa-chevron-left"></i> Ngrok使用指南
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/07/02/Mac-使用/" rel="prev" title="Mac的使用">
-                Mac的使用 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -432,10 +446,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/06/12/谈JVM-各种过程/"
-     data-title="谈JVM，各种过程"
+        <div class="ds-share flat" data-thread-key="2016/10/20/Redis-相关/"
+     data-title="Redis 相关"
      data-content=""
-     data-url="http://hocg.in/2016/06/12/谈JVM-各种过程/">
+     data-url="http://hocg.in/2016/10/20/Redis-相关/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -462,8 +476,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/06/12/谈JVM-各种过程/"
-           data-title="谈JVM，各种过程" data-url="http://hocg.in/2016/06/12/谈JVM-各种过程/">
+      <div class="ds-thread" data-thread-key="2016/10/20/Redis-相关/"
+           data-title="Redis 相关" data-url="http://hocg.in/2016/10/20/Redis-相关/">
       </div>
     
   </div>
@@ -601,7 +615,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#总思路"><span class="nav-number">1.</span> <span class="nav-text">总思路</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#图"><span class="nav-number">1.1.</span> <span class="nav-text">图</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编译过程"><span class="nav-number">2.</span> <span class="nav-text">编译过程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#图-1"><span class="nav-number">2.1.</span> <span class="nav-text">图</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运行过程"><span class="nav-number">3.</span> <span class="nav-text">运行过程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#图-2"><span class="nav-number">3.1.</span> <span class="nav-text">图</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#类加载器过程"><span class="nav-number">4.</span> <span class="nav-text">类加载器过程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#图-3"><span class="nav-number">4.1.</span> <span class="nav-text">图</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#类装载过程"><span class="nav-number">5.</span> <span class="nav-text">类装载过程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#图-4"><span class="nav-number">5.1.</span> <span class="nav-text">图</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#执行引擎执行过程-逐行读取指令"><span class="nav-number">6.</span> <span class="nav-text">执行引擎执行过程(逐行读取指令)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#图-5"><span class="nav-number">6.1.</span> <span class="nav-text">图</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Java-运行时数据区-贯穿整个执行过程"><span class="nav-number">7.</span> <span class="nav-text">Java 运行时数据区(贯穿整个执行过程)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#图-6"><span class="nav-number">7.1.</span> <span class="nav-text">图</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#详情"><span class="nav-number">2.</span> <span class="nav-text">详情</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#默认项"><span class="nav-number">2.1.</span> <span class="nav-text">默认项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#目录结构"><span class="nav-number">2.2.</span> <span class="nav-text">目录结构</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">3.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#指令"><span class="nav-number">4.</span> <span class="nav-text">指令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#疑问？"><span class="nav-number">5.</span> <span class="nav-text">疑问？</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">

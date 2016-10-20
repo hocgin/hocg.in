@@ -2,16 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://hocg.in/2016/06/02/Https-%E7%AD%BE%E8%AF%81/</loc>
+    <loc>http://hocg.in/2016/10/20/Redis-%E7%9B%B8%E5%85%B3/</loc>
     
-    <lastmod>2016-09-04T03:51:10.644Z</lastmod>
+    <lastmod>2016-10-20T01:11:57.526Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://hocg.in/2016/08/31/Ngrok%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</loc>
     
-    <lastmod>2016-09-02T06:51:32.445Z</lastmod>
+    <lastmod>2016-10-17T08:31:33.796Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://hocg.in/2016/08/24/Nexus%E5%85%A5%E9%97%A8/</loc>
+    
+    <lastmod>2016-10-17T07:55:36.929Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://hocg.in/2016/06/02/Https-%E7%AD%BE%E8%AF%81/</loc>
+    
+    <lastmod>2016-09-04T03:51:10.644Z</lastmod>
     
   </url>
   
@@ -68,13 +82,6 @@
     <loc>http://hocg.in/2016/04/25/%E4%BD%BF%E7%94%A8Maven%E4%B8%8B%E8%BD%BDjar%E5%8C%85-linux%E7%89%88/</loc>
     
     <lastmod>2016-08-27T05:32:02.319Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://hocg.in/2016/08/24/Nexus%E5%85%A5%E9%97%A8/</loc>
-    
-    <lastmod>2016-08-27T05:31:22.981Z</lastmod>
     
   </url>
   

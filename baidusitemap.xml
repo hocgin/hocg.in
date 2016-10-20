@@ -4,14 +4,16 @@
 
     
   <url>
-    <loc>http://hocg.in/2016/06/02/Https-%E7%AD%BE%E8%AF%81/</loc>
-    <lastmod>2016-09-04T03:51:10.644Z</lastmod>
+    <loc>http://hocg.in/2016/10/20/Redis-%E7%9B%B8%E5%85%B3/</loc>
+    <lastmod>2016-10-20T01:11:57.526Z</lastmod>
     <data>
         <display>
-        <title>HTTPS 签证</title>
-        <pubTime>2016-06-02T03:22:43.000Z</pubTime>
+        <title>Redis 相关</title>
+        <pubTime>2016-10-20T01:11:57.546Z</pubTime>
         
-        <tag>HTTPS</tag>
+        <tag>Tips</tag>
+         
+        <tag>Redis</tag>
          
          
            
@@ -25,7 +27,7 @@
     
   <url>
     <loc>http://hocg.in/2016/08/31/Ngrok%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</loc>
-    <lastmod>2016-09-02T06:51:32.445Z</lastmod>
+    <lastmod>2016-10-17T08:31:33.796Z</lastmod>
     <data>
         <display>
         <title>Ngrok使用指南</title>
@@ -34,6 +36,48 @@
         <tag>Ngrok</tag>
          
         <tag>Tip</tag>
+         
+         
+           
+             
+              <breadCrumb title="Server" url="http://hocg.in/categories/Server/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://hocg.in/2016/08/24/Nexus%E5%85%A5%E9%97%A8/</loc>
+    <lastmod>2016-10-17T07:55:36.929Z</lastmod>
+    <data>
+        <display>
+        <title>Nexus 入门</title>
+        <pubTime>2016-08-24T11:03:01.000Z</pubTime>
+        
+        <tag>Nexus</tag>
+         
+        <tag>Tips</tag>
+         
+         
+           
+             
+              <breadCrumb title="Server" url="http://hocg.in/categories/Server/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://hocg.in/2016/06/02/Https-%E7%AD%BE%E8%AF%81/</loc>
+    <lastmod>2016-09-04T03:51:10.644Z</lastmod>
+    <data>
+        <display>
+        <title>HTTPS 签证</title>
+        <pubTime>2016-06-02T03:22:43.000Z</pubTime>
+        
+        <tag>HTTPS</tag>
          
          
            
@@ -77,9 +121,9 @@
         <title>Android L 及以上版本Rom包中提取apk</title>
         <pubTime>2016-08-07T11:19:29.000Z</pubTime>
         
-        <tag>Android</tag>
-         
         <tag>Tips</tag>
+         
+        <tag>Android</tag>
          
          
            
@@ -221,28 +265,6 @@
            
              
               <breadCrumb title="Coder" url="http://hocg.in/categories/Coder/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://hocg.in/2016/08/24/Nexus%E5%85%A5%E9%97%A8/</loc>
-    <lastmod>2016-08-27T05:31:22.981Z</lastmod>
-    <data>
-        <display>
-        <title>Nexus 入门</title>
-        <pubTime>2016-08-24T11:03:01.000Z</pubTime>
-        
-        <tag>Tips</tag>
-         
-        <tag>Nexus</tag>
-         
-         
-           
-             
-              <breadCrumb title="Server" url="http://hocg.in/categories/Server/"/>
           
         </display>
     </data>

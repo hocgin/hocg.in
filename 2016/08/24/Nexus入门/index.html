@@ -45,7 +45,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Tips,Nexus," />
+  <meta name="keywords" content="Nexus,Tips," />
 
 
 
@@ -70,7 +70,7 @@
 <meta property="og:site_name" content="Hocgin (๑`灬´๑)">
 <meta property="og:description" content="适合nexus入门，不是手机，不是手机，不是手机　．．ｏ（╯□╰）ｏ">
 <meta property="og:image" content="https://hocg.in/i/如何建立与中央仓库的索引.png">
-<meta property="og:updated_time" content="2016-08-27T05:31:22.981Z">
+<meta property="og:updated_time" content="2016-10-17T07:55:36.929Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Nexus 入门">
 <meta name="twitter:description" content="适合nexus入门，不是手机，不是手机，不是手机　．．ｏ（╯□╰）ｏ">
@@ -341,7 +341,7 @@
 <h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><ul>
 <li>Ubuntu-14.04.1</li>
 <li>jdk1.8.0_102</li>
-<li><a href="https://sonatype-download.global.ssl.fastly.net/nexus/oss/nexus-2.12.0-01-bundle.tar.gz" target="_blank" rel="external">nexus-2.12.0-01</a></li>
+<li><a href="https://sonatype-download.global.ssl.fastly.net/nexus/oss/nexus-2.12.0-01-bundle.tar.gz" target="_blank" rel="external">nexus-2.12.0-01</a>|<a href="http://www.sonatype.org/nexus/" target="_blank" rel="external">官网</a></li>
 <li>域名:<code>nexus.hocg.in</code></li>
 </ul>
 <h2 id="前置条件"><a href="#前置条件" class="headerlink" title="前置条件"></a>前置条件</h2><ul>
@@ -368,8 +368,10 @@
 <p><strong>Note:</strong> Nexus会自动建立任务计划,一般远程仓库都比较大，构建会比较多，因此索引文件会很大，请确保磁盘大小充足.</p>
 </blockquote>
 <h2 id="可能出现的报错"><a href="#可能出现的报错" class="headerlink" title="可能出现的报错"></a>可能出现的报错</h2><ul>
-<li>暂无</li>
+<li><strong>1</strong> WARNING - NOT RECOMMENDED TO RUN AS ROOT , 原因是提醒你是否确认用<code>root</code>用户运行<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">\# ./nexus-2.12.0-01/bin/nexus restart</span><br><span class="line">****************************************</span><br><span class="line">WARNING - NOT RECOMMENDED TO RUN AS ROOT</span><br><span class="line">****************************************</span><br><span class="line">Stopping Nexus OSS...</span><br><span class="line">Nexus OSS was not running.</span><br><span class="line">Starting Nexus OSS...</span><br><span class="line">Started Nexus OSS.</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
+<p>解决:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">vim ./nexus-2.12.0-01/bin/nexus</span><br><span class="line"># 修改</span><br><span class="line">RUN_AS_USER=root</span><br><span class="line"># 启动</span><br><span class="line">./nexus-2.12.0-01/bin/nexus start</span><br><span class="line"># 查看是否启动成功</span><br><span class="line">./nexus-2.12.0-01/bin/nexus status</span><br><span class="line"># 稍等几分钟再访问</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -403,9 +405,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Tips/" rel="tag">#Tips</a>
-          
             <a href="/tags/Nexus/" rel="tag">#Nexus</a>
+          
+            <a href="/tags/Tips/" rel="tag">#Tips</a>
           
         </div>
       
@@ -515,7 +517,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">14</span>
+              <span class="site-state-item-count">15</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -532,7 +534,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">18</span>
+                <span class="site-state-item-count">19</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
