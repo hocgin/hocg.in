@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hocg.in/"/>
-  <updated>2016-10-20T01:11:57.526Z</updated>
+  <updated>2016-10-20T01:15:51.292Z</updated>
   <id>http://hocg.in/</id>
   
   <author>
@@ -19,10 +19,11 @@
     <title>Redis 相关</title>
     <link href="http://hocg.in/2016/10/20/Redis-%E7%9B%B8%E5%85%B3/"/>
     <id>http://hocg.in/2016/10/20/Redis-相关/</id>
-    <published>2016-10-20T01:11:57.546Z</published>
-    <updated>2016-10-20T01:11:57.526Z</updated>
+    <published>2016-10-20T01:15:51.308Z</published>
+    <updated>2016-10-20T01:15:51.292Z</updated>
     
-    <content type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://redis.io/download&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;官网&lt;/a&gt;&lt;/p&gt;
+    <content type="html">&lt;p&gt;Redis&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://redis.io/download&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;官网&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;详情&quot;&gt;&lt;a href=&quot;#详情&quot; class=&quot;headerlink&quot; title=&quot;详情&quot;&gt;&lt;/a&gt;详情&lt;/h2&gt;&lt;h3 id=&quot;默认项&quot;&gt;&lt;a href=&quot;#默认项&quot; class=&quot;headerlink&quot; title=&quot;默认项&quot;&gt;&lt;/a&gt;默认项&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;端口 &lt;code&gt;6379&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -54,7 +55,7 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://redis.io/download&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;官网&lt;/
+      &lt;p&gt;Redis&lt;br&gt;
     
     </summary>
     
@@ -206,9 +207,9 @@
       <category term="Server" scheme="http://hocg.in/categories/Server/"/>
     
     
-      <category term="Nexus" scheme="http://hocg.in/tags/Nexus/"/>
-    
       <category term="Tips" scheme="http://hocg.in/tags/Tips/"/>
+    
+      <category term="Nexus" scheme="http://hocg.in/tags/Nexus/"/>
     
   </entry>
   
@@ -258,9 +259,9 @@
       <category term="Mobile" scheme="http://hocg.in/categories/Mobile/"/>
     
     
-      <category term="Tips" scheme="http://hocg.in/tags/Tips/"/>
-    
       <category term="Android" scheme="http://hocg.in/tags/Android/"/>
+    
+      <category term="Tips" scheme="http://hocg.in/tags/Tips/"/>
     
   </entry>
   
@@ -653,6 +654,43 @@
   </entry>
   
   <entry>
+    <title>绿化NodeJS for linux版</title>
+    <link href="http://hocg.in/2016/04/25/%E7%BB%BF%E5%8C%96nodejs-for-linux%E7%89%88/"/>
+    <id>http://hocg.in/2016/04/25/绿化nodejs-for-linux版/</id>
+    <published>2016-04-25T01:38:49.000Z</published>
+    <updated>2016-08-27T05:35:32.660Z</updated>
+    
+    <content type="html">&lt;p&gt;起因，为了方便hexo发布博客，所以想把NodeJS绿化在U盘上..&lt;br&gt;谁叫网上只有win版的呢！自己码起来～&lt;br&gt;绿化 o(╯□╰)o&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;目录结构&quot;&gt;&lt;a href=&quot;#目录结构&quot; class=&quot;headerlink&quot; title=&quot;目录结构&quot;&gt;&lt;/a&gt;目录结构&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Green4nodeJS&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;├── hocgin.github.io // github博客目录&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;├── node // nodejs基本目录&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;│   ├── node-linux // nodejs源文件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;│   ├── cache // 创建一个空文件夹，即可&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;│   ├── init-module // 创建一个空文件夹，即可&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;│   └── userconfig // 创建一个空文件夹，即可&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;└── init.sh // 初始化shell文件 *重要&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;初始化文件&quot;&gt;&lt;a href=&quot;#初始化文件&quot; class=&quot;headerlink&quot; title=&quot;初始化文件&quot;&gt;&lt;/a&gt;初始化文件&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;主要是加载配置环境，初始化变量&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;init.sh&lt;/code&gt; 内容&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;#!/bin/bash&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# Author: hocgin@gmail.com&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# -------------Use--------------&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# source init.sh or . init.sh&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# ------------------------------&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;NOW_PATH=$(cd &amp;quot;$(dirname &amp;quot;$0&amp;quot;)&amp;quot;; pwd)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;NODE_NAME=&amp;quot;node-linux&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;NODE_HOME=$NOW_PATH&amp;quot;/node/&amp;quot;$NODE_NAME&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;NODE_PATH=$NODE_HOME&amp;quot;/bin&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;NPM_PATH=$NODE_HOME&amp;quot;/lib/node_modules/npm/bin&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo chmod +x -R $NPM_PATH&amp;quot;/.&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;export PATH=$PATH:$NODE_PATH:$NPM_PATH&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# &amp;quot;/home/hocgin/.npmrc&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;npm set userconfig $NOW_PATH&amp;quot;/node/userconfig&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# &amp;quot;/home/hocgin/.npm-init.js&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;npm set init-module $NOW_PATH&amp;quot;/node/init-module&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# &amp;quot;/home/hocgin/.npm&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;npm set cache  $NOW_PATH&amp;quot;/node/cache&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;修改 &lt;code&gt;/node/node-linux/lib/node_modules/npm/bin/npm&lt;/code&gt; 文件&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# NPM_CLI_JS=&amp;quot;$basedir/node_modules/npm/bin/npm-cli.js&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;NPM_CLI_JS=&amp;quot;$basedir/npm-cli.js&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;完成&lt;/p&gt;
+&lt;h2 id=&quot;使用方法&quot;&gt;&lt;a href=&quot;#使用方法&quot; class=&quot;headerlink&quot; title=&quot;使用方法&quot;&gt;&lt;/a&gt;使用方法&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;source init.sh&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# Or&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;. init.sh&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;cd hocgin.github.io&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 尽情hexo吧&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;code&gt;注: 安装module时请加上 -g&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;End&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;起因，为了方便hexo发布博客，所以想把NodeJS绿化在U盘上..&lt;br&gt;谁叫网上只有win版的呢！自己码起来～&lt;br&gt;绿化 o(╯□╰)o&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Coder" scheme="http://hocg.in/categories/Coder/"/>
+    
+    
+      <category term="Tips" scheme="http://hocg.in/tags/Tips/"/>
+    
+      <category term="NodeJS" scheme="http://hocg.in/tags/NodeJS/"/>
+    
+      <category term="Ubuntu" scheme="http://hocg.in/tags/Ubuntu/"/>
+    
+  </entry>
+  
+  <entry>
     <title>使用Maven下载jar包 linux版</title>
     <link href="http://hocg.in/2016/04/25/%E4%BD%BF%E7%94%A8Maven%E4%B8%8B%E8%BD%BDjar%E5%8C%85-linux%E7%89%88/"/>
     <id>http://hocg.in/2016/04/25/使用Maven下载jar包-linux版/</id>
@@ -686,43 +724,6 @@
       <category term="Maven" scheme="http://hocg.in/tags/Maven/"/>
     
       <category term="Shell" scheme="http://hocg.in/tags/Shell/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>绿化NodeJS for linux版</title>
-    <link href="http://hocg.in/2016/04/25/%E7%BB%BF%E5%8C%96nodejs-for-linux%E7%89%88/"/>
-    <id>http://hocg.in/2016/04/25/绿化nodejs-for-linux版/</id>
-    <published>2016-04-25T01:38:49.000Z</published>
-    <updated>2016-08-27T05:35:32.660Z</updated>
-    
-    <content type="html">&lt;p&gt;起因，为了方便hexo发布博客，所以想把NodeJS绿化在U盘上..&lt;br&gt;谁叫网上只有win版的呢！自己码起来～&lt;br&gt;绿化 o(╯□╰)o&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;目录结构&quot;&gt;&lt;a href=&quot;#目录结构&quot; class=&quot;headerlink&quot; title=&quot;目录结构&quot;&gt;&lt;/a&gt;目录结构&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Green4nodeJS&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;├── hocgin.github.io // github博客目录&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;├── node // nodejs基本目录&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;│   ├── node-linux // nodejs源文件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;│   ├── cache // 创建一个空文件夹，即可&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;│   ├── init-module // 创建一个空文件夹，即可&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;│   └── userconfig // 创建一个空文件夹，即可&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;└── init.sh // 初始化shell文件 *重要&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&quot;初始化文件&quot;&gt;&lt;a href=&quot;#初始化文件&quot; class=&quot;headerlink&quot; title=&quot;初始化文件&quot;&gt;&lt;/a&gt;初始化文件&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;主要是加载配置环境，初始化变量&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;code&gt;init.sh&lt;/code&gt; 内容&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;#!/bin/bash&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# Author: hocgin@gmail.com&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# -------------Use--------------&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# source init.sh or . init.sh&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# ------------------------------&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;NOW_PATH=$(cd &amp;quot;$(dirname &amp;quot;$0&amp;quot;)&amp;quot;; pwd)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;NODE_NAME=&amp;quot;node-linux&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;NODE_HOME=$NOW_PATH&amp;quot;/node/&amp;quot;$NODE_NAME&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;NODE_PATH=$NODE_HOME&amp;quot;/bin&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;NPM_PATH=$NODE_HOME&amp;quot;/lib/node_modules/npm/bin&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo chmod +x -R $NPM_PATH&amp;quot;/.&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;export PATH=$PATH:$NODE_PATH:$NPM_PATH&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# &amp;quot;/home/hocgin/.npmrc&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;npm set userconfig $NOW_PATH&amp;quot;/node/userconfig&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# &amp;quot;/home/hocgin/.npm-init.js&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;npm set init-module $NOW_PATH&amp;quot;/node/init-module&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# &amp;quot;/home/hocgin/.npm&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;npm set cache  $NOW_PATH&amp;quot;/node/cache&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;修改 &lt;code&gt;/node/node-linux/lib/node_modules/npm/bin/npm&lt;/code&gt; 文件&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# NPM_CLI_JS=&amp;quot;$basedir/node_modules/npm/bin/npm-cli.js&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;NPM_CLI_JS=&amp;quot;$basedir/npm-cli.js&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;完成&lt;/p&gt;
-&lt;h2 id=&quot;使用方法&quot;&gt;&lt;a href=&quot;#使用方法&quot; class=&quot;headerlink&quot; title=&quot;使用方法&quot;&gt;&lt;/a&gt;使用方法&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;source init.sh&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# Or&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;. init.sh&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;cd hocgin.github.io&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 尽情hexo吧&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;&lt;code&gt;注: 安装module时请加上 -g&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;End&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;起因，为了方便hexo发布博客，所以想把NodeJS绿化在U盘上..&lt;br&gt;谁叫网上只有win版的呢！自己码起来～&lt;br&gt;绿化 o(╯□╰)o&lt;br&gt;
-    
-    </summary>
-    
-      <category term="Coder" scheme="http://hocg.in/categories/Coder/"/>
-    
-    
-      <category term="Tips" scheme="http://hocg.in/tags/Tips/"/>
-    
-      <category term="Ubuntu" scheme="http://hocg.in/tags/Ubuntu/"/>
-    
-      <category term="NodeJS" scheme="http://hocg.in/tags/NodeJS/"/>
     
   </entry>
   
