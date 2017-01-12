@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://hocg.in/2016/06/02/Https-%E7%AD%BE%E8%AF%81/</loc>
+    
+    <lastmod>2017-01-12T09:01:25.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://hocg.in/2016/03/15/hexo-%E4%BD%BF%E7%94%A8/</loc>
     
     <lastmod>2017-01-12T02:37:02.000Z</lastmod>
@@ -33,13 +40,6 @@
     <loc>http://hocg.in/2016/10/20/Redis-%E7%9B%B8%E5%85%B3/</loc>
     
     <lastmod>2016-10-20T01:15:51.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://hocg.in/2016/06/02/Https-%E7%AD%BE%E8%AF%81/</loc>
-    
-    <lastmod>2016-09-04T03:51:10.000Z</lastmod>
     
   </url>
   

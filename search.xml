@@ -482,6 +482,8 @@
 </ul>
 <h3 id="自己搭建的blog"><a href="#自己搭建的blog" class="headerlink" title="自己搭建的blog"></a>自己搭建的blog</h3><p>免费的使用 <a href="https://www.startssl.com/" target="_blank" rel="external">Startssl</a><br><a href="https://blog.lutty.me/" target="_blank" rel="external">成品</a></p>
 <h3 id="TOMCAT-配置https环境"><a href="#TOMCAT-配置https环境" class="headerlink" title="TOMCAT 配置https环境"></a>TOMCAT 配置https环境</h3><p><a href="http://blog.csdn.net/small____fish/article/details/8214938" target="_blank" rel="external"> keytool 教程</a><br>外网回调可尝试使用<a href="http://www.nat123.com" target="_blank" rel="external">nat123</a></p>
+<h3 id="自己VPS使用HTTPS"><a href="#自己VPS使用HTTPS" class="headerlink" title="自己VPS使用HTTPS"></a>自己VPS使用<code>HTTPS</code></h3><p><a href="https://laravel-china.org/topics/2766" target="_blank" rel="external">参考</a></p>
+<p>##END</p>
 ]]></content>
     </entry>
     
