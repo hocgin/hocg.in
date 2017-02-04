@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hocg.in/"/>
-  <updated>2016-10-20T01:15:51.000Z</updated>
+  <updated>2017-02-04T05:31:00.000Z</updated>
   <id>http://hocg.in/</id>
   
   <author>
@@ -16,13 +16,76 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>关于Chrome 插件开发的一些知识点</title>
+    <link href="http://hocg.in/2017/02/04/%E5%85%B3%E4%BA%8EChrome%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91%E7%9A%84%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
+    <id>http://hocg.in/2017/02/04/关于Chrome插件开发的一些知识点/</id>
+    <published>2017-02-04T05:20:51.000Z</published>
+    <updated>2017-02-04T05:31:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>身为Chrome重度患者，生活和工作处处不离，这篇并不是入门教程，而是开发中的一些小Tip的记录.<br><a id="more"></a></p>
+<h1 id="数据存储"><a href="#数据存储" class="headerlink" title="数据存储"></a>数据存储</h1><ul>
+<li>HTML5 <code>localStorage</code> <strong>存储在解析页面当前范围和网站共享localStorage</strong></li>
+<li>Chrome API <code>chrome.storage</code> <strong>存储在系统磁盘，适合少量数据</strong></li>
+<li>Web SQL Database <strong>存储在系统磁盘，适合大量数据</strong></li>
+</ul>
+<h1 id="脚本运行范围"><a href="#脚本运行范围" class="headerlink" title="脚本运行范围"></a>脚本运行范围</h1><ul>
+<li>background <strong>安装插件后运行</strong></li>
+<li>content_scripts <strong>在网页加载后引入到网站内</strong></li>
+<li>html内导入的脚本 <strong>运行于该html页面</strong></li>
+</ul>
+<h1 id="Action-入口"><a href="#Action-入口" class="headerlink" title="Action 入口"></a>Action 入口</h1><ul>
+<li>地址栏右侧图标外 <code>browser_action</code> <strong>可显示badge</strong></li>
+<li>右键菜单 <code>chrome.contextMenus</code> <strong>可在<code>background</code>中创建</strong></li>
+<li>地址栏右侧图标<del>内</del>外 <code>page_action</code> <strong>新版的已更改显示在外围 <a href="https://developer.chrome.com/extensions/pageAction" target="_blank" rel="external">PageAction API</a></strong></li>
+<li>多功能框 <code>omnibox</code> <strong>对地址框进行监听</strong></li>
+<li>overrides <strong>如, <code>管理书签</code>/<code>历史记录</code>/<code>新标签页</code>等 (一个扩展只能替换一个页面)</strong></li>
+<li>桌面提醒 <code>webkitNotifications.createNotification</code></li>
+</ul>
+<h1 id="权限"><a href="#权限" class="headerlink" title="权限"></a>权限</h1><blockquote>
+<p>相当一部分Chrome API 使用需要在<code>Manifest</code>申明权限</p>
+</blockquote>
+<h1 id="页面间通信"><a href="#页面间通信" class="headerlink" title="页面间通信"></a>页面间通信</h1><blockquote>
+<p>eg: popup与<code>background</code>，可使用Chrome API <code>chrome.runtime</code></p>
+</blockquote>
+<h1 id="i18"><a href="#i18" class="headerlink" title="i18"></a>i18</h1><ul>
+<li><code>CSS</code> __MSG_@@key</li>
+<li><code>JS</code> chrome.i18n.getMessage(‘key’);</li>
+</ul>
+<h1 id="关于打包-amp-发布"><a href="#关于打包-amp-发布" class="headerlink" title="关于打包 &amp; 发布"></a>关于打包 &amp; 发布</h1><ol>
+<li><code>扩展程序</code>中进行打包，生成<code>.crx</code>(扩展程序) &amp; <code>.pem</code>(秘钥<strong>重要</strong>)</li>
+<li>前往<a href="https://chrome.google.com/webstore/developer/dashboard/" target="_blank" rel="external">Chrome 开发者中心</a> 认证<code>需支付5美元用于认证</code></li>
+<li>把<code>.pem</code>更名为<code>key.pem</code>并放入<code>源码文件夹</code>中，打包为<code>.zip</code>文件</li>
+<li>上传 并编辑 (<strong>必填 (扩展描述、ICON(128x128)、扩展截图(1280x800 or 640x400)、类别、语言)</strong>)</li>
+</ol>
+<hr>
+<blockquote>
+<p>如有遗漏或错误欢迎补充..</p>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;身为Chrome重度患者，生活和工作处处不离，这篇并不是入门教程，而是开发中的一些小Tip的记录.&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Chrome" scheme="http://hocg.in/categories/Chrome/"/>
+    
+    
+      <category term="HTML5" scheme="http://hocg.in/tags/HTML5/"/>
+    
+      <category term="CSS3" scheme="http://hocg.in/tags/CSS3/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Redis 相关</title>
     <link href="http://hocg.in/2016/10/20/Redis-%E7%9B%B8%E5%85%B3/"/>
     <id>http://hocg.in/2016/10/20/Redis-相关/</id>
     <published>2016-10-20T01:15:51.000Z</published>
-    <updated>2016-10-20T01:15:51.000Z</updated>
+    <updated>2017-02-04T05:47:13.000Z</updated>
     
-    <content type="html"><![CDATA[<p>Redis<br><a id="more"></a></p>
+    <content type="html"><![CDATA[<p>  Redis 的部署和部位设计的实践, 还有常见问题的梳理! 💪<br><a id="more"></a></p>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><a href="http://redis.io/download" target="_blank" rel="external">官网</a></p>
 <h2 id="详情"><a href="#详情" class="headerlink" title="详情"></a>详情</h2><h3 id="默认项"><a href="#默认项" class="headerlink" title="默认项"></a>默认项</h3><ul>
 <li>端口 <code>6379</code></li>
@@ -55,7 +118,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;Redis&lt;br&gt;
+      &lt;p&gt;  Redis 的部署和部位设计的实践, 还有常见问题的梳理! 💪&lt;br&gt;
     
     </summary>
     
@@ -73,9 +136,9 @@
     <link href="http://hocg.in/2016/08/31/Ngrok%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/"/>
     <id>http://hocg.in/2016/08/31/Ngrok使用指南/</id>
     <published>2016-08-30T23:15:24.000Z</published>
-    <updated>2016-12-27T01:25:38.000Z</updated>
+    <updated>2017-02-04T05:39:31.000Z</updated>
     
-    <content type="html"><![CDATA[<p>只是Ngrok的使用, 源文件后续上传..<br><a id="more"></a></p>
+    <content type="html"><![CDATA[<p>Ngrok 是一款内部端口转发，对于微信类似的开发很有用的😆<br>可参照墙内(花生壳 or nat123)<br><a id="more"></a></p>
 <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p><strong>编译环境:</strong><br><a href="https://storage.googleapis.com/golang/go1.4.1.linux-amd64.tar.gz" target="_blank" rel="external">Go 1.4.1 强烈建议</a><br>根域名: <code>web.hocg.in</code>,即生成的域名为<code>*.web.hocg.in</code><br>文件结构:<br>ngrok<br>  ├── bin<br>  │   └── ngrok.cfg<br>  ├── client.sh<br>  ├── code.sh<br>  └── server.sh<br><strong>部署环境:</strong><br>服务器OS: Ubuntu-15<br>客户端OS: Ubuntu-16</p>
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="环境依赖及源码下载"><a href="#环境依赖及源码下载" class="headerlink" title="环境依赖及源码下载"></a>环境依赖及源码下载</h3><blockquote>
 <p>以下命令根目录统一在<code>/opt</code></p>
@@ -163,7 +226,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;只是Ngrok的使用, 源文件后续上传..&lt;br&gt;
+      &lt;p&gt;Ngrok 是一款内部端口转发，对于微信类似的开发很有用的😆&lt;br&gt;可参照墙内(花生壳 or nat123)&lt;br&gt;
     
     </summary>
     
@@ -229,9 +292,9 @@
       <category term="Server" scheme="http://hocg.in/categories/Server/"/>
     
     
-      <category term="Tips" scheme="http://hocg.in/tags/Tips/"/>
-    
       <category term="Nexus" scheme="http://hocg.in/tags/Nexus/"/>
+    
+      <category term="Tips" scheme="http://hocg.in/tags/Tips/"/>
     
   </entry>
   
@@ -281,9 +344,9 @@
       <category term="Mobile" scheme="http://hocg.in/categories/Mobile/"/>
     
     
-      <category term="Android" scheme="http://hocg.in/tags/Android/"/>
-    
       <category term="Tips" scheme="http://hocg.in/tags/Tips/"/>
+    
+      <category term="Android" scheme="http://hocg.in/tags/Android/"/>
     
   </entry>
   
@@ -292,9 +355,9 @@
     <link href="http://hocg.in/2016/08/02/%E6%A8%A1%E5%9D%97%E8%AE%BE%E8%AE%A1%E4%B9%8B%E5%AF%B9%E6%8E%A5%E5%90%8C%E6%AD%A5%E8%AE%A2%E5%8D%95%E6%A8%A1%E5%9D%97/"/>
     <id>http://hocg.in/2016/08/02/模块设计之对接同步订单模块/</id>
     <published>2016-08-02T02:47:06.000Z</published>
-    <updated>2016-08-27T05:33:49.000Z</updated>
+    <updated>2017-02-04T05:42:52.000Z</updated>
     
-    <content type="html"><![CDATA[<p>  一个关于设计模块的故事。<br><a id="more"></a></p>
+    <content type="html"><![CDATA[<p>实习期间设计的对接同步订单的某块, 缅怀..<br>设计日期(2016.6)<br><a id="more"></a></p>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
 <p><strong>#对接同步订单模块#</strong> 该部分是我入职后自主设计的一个模块，因为初期预计对接5家平台的订单，并考虑到后期可能对接更多平台和平台订单数量等，所以扩展性和性能方面是很值得深思的问题。</p>
 </blockquote>
@@ -330,7 +393,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;  一个关于设计模块的故事。&lt;br&gt;
+      &lt;p&gt;实习期间设计的对接同步订单的某块, 缅怀..&lt;br&gt;设计日期(2016.6)&lt;br&gt;
     
     </summary>
     
@@ -428,6 +491,50 @@
       <category term="Tips" scheme="http://hocg.in/tags/Tips/"/>
     
       <category term="Mac" scheme="http://hocg.in/tags/Mac/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>谈JVM，各种过程</title>
+    <link href="http://hocg.in/2016/06/12/%E8%B0%88JVM-%E5%90%84%E7%A7%8D%E8%BF%87%E7%A8%8B/"/>
+    <id>http://hocg.in/2016/06/12/谈JVM-各种过程/</id>
+    <published>2016-06-12T11:37:49.000Z</published>
+    <updated>2016-08-27T05:35:49.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>谈谈JVM 各种过程， XMind等我整理一下，稍后贴出 囧～<br>欢迎指教..<br><strong>update:</strong> 2016-08-03 14:44:12 更新了图<br><a id="more"></a></p>
+<h3 id="总思路"><a href="#总思路" class="headerlink" title="总思路"></a>总思路</h3><p>编译过程 -&gt; 运行过程[类加载器过程(类的装载过程) -&gt; 执行过程]</p>
+<h4 id="图"><a href="#图" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/总思路-v1.png" alt="总思路-v1.png"></p>
+<h3 id="编译过程"><a href="#编译过程" class="headerlink" title="编译过程"></a>编译过程</h3><p>.java文件 -javac编译-&gt; .class文件       {-JIT编译(转化+优化)-&gt; 本地方法}[执行过程，当方法执行频率高]</p>
+<h4 id="图-1"><a href="#图-1" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/编译过程.png" alt="编译过程.png"></p>
+<hr>
+<h3 id="运行过程"><a href="#运行过程" class="headerlink" title="运行过程"></a>运行过程</h3><p>类加载器 -&gt; (执行引擎 -&gt; 本地库接口)[Java 运行时数据区] -&gt; 本地方法库</p>
+<h4 id="图-2"><a href="#图-2" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/运行过程.png" alt="运行过程.png"></p>
+<hr>
+<h3 id="类加载器过程"><a href="#类加载器过程" class="headerlink" title="类加载器过程"></a><strong>类加载器</strong>过程</h3><p>[启动]类加载器(JNI) -&gt; [扩展]类加载器 -&gt; [系统]类加载器 -&gt; [自定义]类加载器</p>
+<h4 id="图-3"><a href="#图-3" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/类加载器过程.png" alt="类加载器过程.png"></p>
+<hr>
+<h3 id="类装载过程"><a href="#类装载过程" class="headerlink" title="类装载过程"></a><strong>类</strong>装载过程</h3><p>加载文件到JVM内存 -&gt; (校验语言规范 -&gt; 分配结构存储类的信息 -&gt; 该类常量池中符号更改为直接引用)[Linking] -&gt; 类初始化</p>
+<h4 id="图-4"><a href="#图-4" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/类装载过程.png" alt="类装载过程.png"></p>
+<hr>
+<h3 id="执行引擎执行过程-逐行读取指令"><a href="#执行引擎执行过程-逐行读取指令" class="headerlink" title="执行引擎执行过程(逐行读取指令)"></a><strong>执行引擎</strong>执行过程(逐行读取指令)</h3><p>Thread启动 -生成-&gt; JVM栈 -执行方法-&gt; 压入栈帧(包含 局部变量数组&amp;操作数栈&amp;运行时常量池) -&gt; 逐行读取指令&amp;&amp;解释(JVM栈帧 程序计数器存放下一条指令) -&gt; {JIT(转化+优化)-&gt; 本地方法}[当方法执行频率高] -执行&amp;运算-&gt; 结果(存放 操作数栈中) -&gt; 推出栈帧</p>
+<h4 id="图-5"><a href="#图-5" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/执行引擎执行过程.png" alt="执行引擎执行过程.png"></p>
+<hr>
+<h3 id="Java-运行时数据区-贯穿整个执行过程"><a href="#Java-运行时数据区-贯穿整个执行过程" class="headerlink" title="Java 运行时数据区(贯穿整个执行过程)"></a>Java 运行时数据区(贯穿整个执行过程)</h3><p>共享型数据区：方法区(含运行时常量池[存放方法&amp;变量的实际<strong>地址</strong>])、堆(存放对象实例)<br>隔离型数据区：JVM 栈、本地方法栈(JNI)、程序计数器</p>
+<h4 id="图-6"><a href="#图-6" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/运行时数据图.png" alt="运行时数据图.png"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;谈谈JVM 各种过程， XMind等我整理一下，稍后贴出 囧～&lt;br&gt;欢迎指教..&lt;br&gt;&lt;strong&gt;update:&lt;/strong&gt; 2016-08-03 14:44:12 更新了图&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Coder" scheme="http://hocg.in/categories/Coder/"/>
+    
+    
+      <category term="Java" scheme="http://hocg.in/tags/Java/"/>
+    
+      <category term="JVM" scheme="http://hocg.in/tags/JVM/"/>
     
   </entry>
   
@@ -593,59 +700,16 @@
   </entry>
   
   <entry>
-    <title>谈JVM，各种过程</title>
-    <link href="http://hocg.in/2016/06/12/%E8%B0%88JVM-%E5%90%84%E7%A7%8D%E8%BF%87%E7%A8%8B/"/>
-    <id>http://hocg.in/2016/06/12/谈JVM-各种过程/</id>
-    <published>2016-06-12T11:37:49.000Z</published>
-    <updated>2016-08-27T05:35:49.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>谈谈JVM 各种过程， XMind等我整理一下，稍后贴出 囧～<br>欢迎指教..<br><strong>update:</strong> 2016-08-03 14:44:12 更新了图<br><a id="more"></a></p>
-<h3 id="总思路"><a href="#总思路" class="headerlink" title="总思路"></a>总思路</h3><p>编译过程 -&gt; 运行过程[类加载器过程(类的装载过程) -&gt; 执行过程]</p>
-<h4 id="图"><a href="#图" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/总思路-v1.png" alt="总思路-v1.png"></p>
-<h3 id="编译过程"><a href="#编译过程" class="headerlink" title="编译过程"></a>编译过程</h3><p>.java文件 -javac编译-&gt; .class文件       {-JIT编译(转化+优化)-&gt; 本地方法}[执行过程，当方法执行频率高]</p>
-<h4 id="图-1"><a href="#图-1" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/编译过程.png" alt="编译过程.png"></p>
-<hr>
-<h3 id="运行过程"><a href="#运行过程" class="headerlink" title="运行过程"></a>运行过程</h3><p>类加载器 -&gt; (执行引擎 -&gt; 本地库接口)[Java 运行时数据区] -&gt; 本地方法库</p>
-<h4 id="图-2"><a href="#图-2" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/运行过程.png" alt="运行过程.png"></p>
-<hr>
-<h3 id="类加载器过程"><a href="#类加载器过程" class="headerlink" title="类加载器过程"></a><strong>类加载器</strong>过程</h3><p>[启动]类加载器(JNI) -&gt; [扩展]类加载器 -&gt; [系统]类加载器 -&gt; [自定义]类加载器</p>
-<h4 id="图-3"><a href="#图-3" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/类加载器过程.png" alt="类加载器过程.png"></p>
-<hr>
-<h3 id="类装载过程"><a href="#类装载过程" class="headerlink" title="类装载过程"></a><strong>类</strong>装载过程</h3><p>加载文件到JVM内存 -&gt; (校验语言规范 -&gt; 分配结构存储类的信息 -&gt; 该类常量池中符号更改为直接引用)[Linking] -&gt; 类初始化</p>
-<h4 id="图-4"><a href="#图-4" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/类装载过程.png" alt="类装载过程.png"></p>
-<hr>
-<h3 id="执行引擎执行过程-逐行读取指令"><a href="#执行引擎执行过程-逐行读取指令" class="headerlink" title="执行引擎执行过程(逐行读取指令)"></a><strong>执行引擎</strong>执行过程(逐行读取指令)</h3><p>Thread启动 -生成-&gt; JVM栈 -执行方法-&gt; 压入栈帧(包含 局部变量数组&amp;操作数栈&amp;运行时常量池) -&gt; 逐行读取指令&amp;&amp;解释(JVM栈帧 程序计数器存放下一条指令) -&gt; {JIT(转化+优化)-&gt; 本地方法}[当方法执行频率高] -执行&amp;运算-&gt; 结果(存放 操作数栈中) -&gt; 推出栈帧</p>
-<h4 id="图-5"><a href="#图-5" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/执行引擎执行过程.png" alt="执行引擎执行过程.png"></p>
-<hr>
-<h3 id="Java-运行时数据区-贯穿整个执行过程"><a href="#Java-运行时数据区-贯穿整个执行过程" class="headerlink" title="Java 运行时数据区(贯穿整个执行过程)"></a>Java 运行时数据区(贯穿整个执行过程)</h3><p>共享型数据区：方法区(含运行时常量池[存放方法&amp;变量的实际<strong>地址</strong>])、堆(存放对象实例)<br>隔离型数据区：JVM 栈、本地方法栈(JNI)、程序计数器</p>
-<h4 id="图-6"><a href="#图-6" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/运行时数据图.png" alt="运行时数据图.png"></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;谈谈JVM 各种过程， XMind等我整理一下，稍后贴出 囧～&lt;br&gt;欢迎指教..&lt;br&gt;&lt;strong&gt;update:&lt;/strong&gt; 2016-08-03 14:44:12 更新了图&lt;br&gt;
-    
-    </summary>
-    
-      <category term="Coder" scheme="http://hocg.in/categories/Coder/"/>
-    
-    
-      <category term="Java" scheme="http://hocg.in/tags/Java/"/>
-    
-      <category term="JVM" scheme="http://hocg.in/tags/JVM/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HTTPS 签证</title>
+    <title>关于HTTPS</title>
     <link href="http://hocg.in/2016/06/02/Https-%E7%AD%BE%E8%AF%81/"/>
     <id>http://hocg.in/2016/06/02/Https-签证/</id>
     <published>2016-06-02T03:22:43.000Z</published>
-    <updated>2017-01-12T09:01:25.000Z</updated>
+    <updated>2017-02-04T05:37:54.000Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="关于https"><a href="#关于https" class="headerlink" title="关于https"></a>关于https</h3><p><a href="https://en.wikipedia.org/wiki/HTTPS" target="_blank" rel="external">wiki</a></p>
+    <content type="html"><![CDATA[<p>这是一篇关于<code>HTTPS</code>的日常使用记录，例如:博客HTTPS化~<br>来吧!年轻人!<del>装逼</del>HTTPS时代到了<br><a id="more"></a></p>
+<h3 id="关于https"><a href="#关于https" class="headerlink" title="关于https"></a>关于https</h3><p><a href="https://en.wikipedia.org/wiki/HTTPS" target="_blank" rel="external">什么是HTTPS ?</a></p>
 <blockquote>
-<p>通俗的讲： 高大上</p>
+<p>通俗的讲：隐私安全</p>
 </blockquote>
 <h3 id="GitHub-page-使用https"><a href="#GitHub-page-使用https" class="headerlink" title="GitHub page 使用https"></a>GitHub page 使用https</h3><p>主要是使用 <a href="https://kloudsec.com/github-pages/new" target="_blank" rel="external">Kloudsec</a></p>
 <ol>
@@ -660,13 +724,13 @@
 </ul>
 <h3 id="自己搭建的blog"><a href="#自己搭建的blog" class="headerlink" title="自己搭建的blog"></a>自己搭建的blog</h3><p>免费的使用 <a href="https://www.startssl.com/" target="_blank" rel="external">Startssl</a><br><a href="https://blog.lutty.me/" target="_blank" rel="external">成品</a></p>
 <h3 id="TOMCAT-配置https环境"><a href="#TOMCAT-配置https环境" class="headerlink" title="TOMCAT 配置https环境"></a>TOMCAT 配置https环境</h3><p><a href="http://blog.csdn.net/small____fish/article/details/8214938" target="_blank" rel="external"> keytool 教程</a><br>外网回调可尝试使用<a href="http://www.nat123.com" target="_blank" rel="external">nat123</a></p>
-<h3 id="自己VPS使用HTTPS"><a href="#自己VPS使用HTTPS" class="headerlink" title="自己VPS使用HTTPS"></a>自己VPS使用<code>HTTPS</code></h3><p><a href="https://laravel-china.org/topics/2766" target="_blank" rel="external">参考</a></p>
-<p>##END</p>
+<h3 id="自己VPS使用HTTPS"><a href="#自己VPS使用HTTPS" class="headerlink" title="自己VPS使用HTTPS"></a>自己VPS使用<code>HTTPS</code></h3><p><a href="https://laravel-china.org/topics/2766" target="_blank" rel="external">Let’s Encrypt</a></p>
+<p>:)</p>
 ]]></content>
     
     <summary type="html">
     
-      高大上的HTTPS 签证
+      &lt;p&gt;这是一篇关于&lt;code&gt;HTTPS&lt;/code&gt;的日常使用记录，例如:博客HTTPS化~&lt;br&gt;来吧!年轻人!&lt;del&gt;装逼&lt;/del&gt;HTTPS时代到了&lt;br&gt;
     
     </summary>
     
@@ -674,43 +738,6 @@
     
     
       <category term="HTTPS" scheme="http://hocg.in/tags/HTTPS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用Maven下载jar包 linux版</title>
-    <link href="http://hocg.in/2016/04/25/%E4%BD%BF%E7%94%A8Maven%E4%B8%8B%E8%BD%BDjar%E5%8C%85-linux%E7%89%88/"/>
-    <id>http://hocg.in/2016/04/25/使用Maven下载jar包-linux版/</id>
-    <published>2016-04-25T01:38:49.000Z</published>
-    <updated>2016-08-27T05:32:02.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>当一个jar包只提供Maven的配置方法时怎么办？～<br><a id="more"></a></p>
-<h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Green4nodeJS</div><div class="line">├── down.sh // 下载shell，o(╯□╰)o其实就是一条shell</div><div class="line">└── pom.xml // 正常maven配置</div></pre></td></tr></table></figure>
-<h2 id="文件内容"><a href="#文件内容" class="headerlink" title="文件内容"></a>文件内容</h2><p><code>down.sh</code> 内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">#!/bin/sh</div><div class="line"># Author: hocgin@gmail.com</div><div class="line"># -------------Use--------------</div><div class="line"># sh down.sh</div><div class="line"># ------------------------------</div><div class="line"># 运行pom.xml 下载jar</div><div class="line">NOW_PATH=$(cd &quot;$(dirname &quot;$0&quot;)&quot;; pwd)</div><div class="line">POM_XML=$NOW_PATH&quot;/pom.xml&quot;</div><div class="line">TARGET_DIR=$NOW_PATH&quot;/target&quot;</div><div class="line">mvn -f $POM_XML dependency:copy-dependencies</div><div class="line">sudo chmod -R 777 $TARGET_DIR</div></pre></td></tr></table></figure></p>
-<p><code>pom.xml</code> 内容：</p>
-<blockquote>
-<p>正常maven的pom.xml内容</p>
-</blockquote>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">project</span> <span class="attr">xmlns</span>=<span class="string">"http://maven.apache.org/POM/4.0.0"</span> <span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></span></div><div class="line">  <span class="attr">xsi:schemaLocation</span>=<span class="string">"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"</span>&gt;</div><div class="line">  <span class="comment">&lt;!-- 项目的名称 start --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">modelVersion</span>&gt;</span>4.0.0<span class="tag">&lt;/<span class="name">modelVersion</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>temp.download<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>temp-download<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!-- 项目的名称 end --&gt;</span></div><div class="line"></div><div class="line">	<span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></div><div class="line">      <span class="comment">&lt;!-- 要下载的jar start --&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.json<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>json<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">version</span>&gt;</span>20160212<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div><div class="line">     <span class="comment">&lt;!-- 要下载的jar end --&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">project</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>完成</p>
-<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">source init.sh</div><div class="line"># Or</div><div class="line">. init.sh</div><div class="line"></div><div class="line">cd hocgin.github.io</div><div class="line"># 尽情hexo吧</div></pre></td></tr></table></figure>
-<p>End</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;当一个jar包只提供Maven的配置方法时怎么办？～&lt;br&gt;
-    
-    </summary>
-    
-      <category term="Coder" scheme="http://hocg.in/categories/Coder/"/>
-    
-    
-      <category term="Tips" scheme="http://hocg.in/tags/Tips/"/>
-    
-      <category term="Maven" scheme="http://hocg.in/tags/Maven/"/>
-    
-      <category term="Shell" scheme="http://hocg.in/tags/Shell/"/>
     
   </entry>
   
@@ -752,13 +779,51 @@
   </entry>
   
   <entry>
+    <title>使用Maven下载jar包 linux版</title>
+    <link href="http://hocg.in/2016/04/25/%E4%BD%BF%E7%94%A8Maven%E4%B8%8B%E8%BD%BDjar%E5%8C%85-linux%E7%89%88/"/>
+    <id>http://hocg.in/2016/04/25/使用Maven下载jar包-linux版/</id>
+    <published>2016-04-25T01:38:49.000Z</published>
+    <updated>2017-02-04T05:43:57.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>这只是学习Shell的小脚本, 练手工具罢了.. 折腾!折腾啊<br><a id="more"></a></p>
+<h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Green4nodeJS</div><div class="line">├── down.sh // 下载shell，o(╯□╰)o其实就是一条shell</div><div class="line">└── pom.xml // 正常maven配置</div></pre></td></tr></table></figure>
+<h2 id="文件内容"><a href="#文件内容" class="headerlink" title="文件内容"></a>文件内容</h2><p><code>down.sh</code> 内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">#!/bin/sh</div><div class="line"># Author: hocgin@gmail.com</div><div class="line"># -------------Use--------------</div><div class="line"># sh down.sh</div><div class="line"># ------------------------------</div><div class="line"># 运行pom.xml 下载jar</div><div class="line">NOW_PATH=$(cd &quot;$(dirname &quot;$0&quot;)&quot;; pwd)</div><div class="line">POM_XML=$NOW_PATH&quot;/pom.xml&quot;</div><div class="line">TARGET_DIR=$NOW_PATH&quot;/target&quot;</div><div class="line">mvn -f $POM_XML dependency:copy-dependencies</div><div class="line">sudo chmod -R 777 $TARGET_DIR</div></pre></td></tr></table></figure></p>
+<p><code>pom.xml</code> 内容：</p>
+<blockquote>
+<p>正常maven的pom.xml内容</p>
+</blockquote>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">project</span> <span class="attr">xmlns</span>=<span class="string">"http://maven.apache.org/POM/4.0.0"</span> <span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></span></div><div class="line">  <span class="attr">xsi:schemaLocation</span>=<span class="string">"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"</span>&gt;</div><div class="line">  <span class="comment">&lt;!-- 项目的名称 start --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">modelVersion</span>&gt;</span>4.0.0<span class="tag">&lt;/<span class="name">modelVersion</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>temp.download<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>temp-download<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!-- 项目的名称 end --&gt;</span></div><div class="line"></div><div class="line">	<span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></div><div class="line">      <span class="comment">&lt;!-- 要下载的jar start --&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.json<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>json<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">version</span>&gt;</span>20160212<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div><div class="line">     <span class="comment">&lt;!-- 要下载的jar end --&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">project</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>完成</p>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">source init.sh</div><div class="line"># Or</div><div class="line">. init.sh</div><div class="line"></div><div class="line">cd hocgin.github.io</div><div class="line"># 尽情hexo吧</div></pre></td></tr></table></figure>
+<p>End</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这只是学习Shell的小脚本, 练手工具罢了.. 折腾!折腾啊&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Coder" scheme="http://hocg.in/categories/Coder/"/>
+    
+    
+      <category term="Tips" scheme="http://hocg.in/tags/Tips/"/>
+    
+      <category term="Maven" scheme="http://hocg.in/tags/Maven/"/>
+    
+      <category term="Shell" scheme="http://hocg.in/tags/Shell/"/>
+    
+  </entry>
+  
+  <entry>
     <title>hexo 功能扩展</title>
     <link href="http://hocg.in/2016/03/26/hexo-%E5%8A%9F%E8%83%BD%E6%89%A9%E5%B1%95/"/>
     <id>http://hocg.in/2016/03/26/hexo-功能扩展/</id>
     <published>2016-03-26T05:44:28.000Z</published>
-    <updated>2016-08-27T05:24:59.000Z</updated>
+    <updated>2017-02-04T05:34:09.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="须知"><a href="#须知" class="headerlink" title="须知"></a>须知</h2><p><code>站点目录</code>: /<br><code>主题目录</code>: /themes/[主题名]<br><code>主题配置文件</code>: /themes/[主题名]/_config.yml<br><code>站点配置文件</code>: /_config.yml  </p>
+    <content type="html"><![CDATA[<p>这是自己参照hexo进行私人订制的教程，也是实战的记录，感觉还不错，成品可参照本博客.. （如果我以后没换的话😶）<br><a id="more"></a></p>
+<h2 id="须知"><a href="#须知" class="headerlink" title="须知"></a>须知</h2><p><code>站点目录</code>: /<br><code>主题目录</code>: /themes/[主题名]<br><code>主题配置文件</code>: /themes/[主题名]/_config.yml<br><code>站点配置文件</code>: /_config.yml  </p>
 <h2 id="添加微信公众号二维码"><a href="#添加微信公众号二维码" class="headerlink" title="添加微信公众号二维码"></a>添加微信公众号二维码</h2><p>首先，打开<code>主题目录</code>下的 <code>layout/_macro/post.swig</code><br>然后，找到节点<code>footer</code>加入以下代码<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">!</span> <span class="attr">--</span> 添加微信图标 <span class="attr">start</span> <span class="attr">--</span>&gt;</span></div><div class="line">      &#123;% if theme.wechat_subscriber.enable %&#125;</div><div class="line">        &#123;% if !is_home() %&#125;</div><div class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"hocgin-container"</span>&gt;</span></div><div class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"folder"</span>&gt;</span></div><div class="line">           <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"paper"</span>&gt;</span></div><div class="line">        	<span class="tag">&lt;<span class="name">img</span> <span class="attr">width</span>=<span class="string">"100%"</span> <span class="attr">src</span>=<span class="string">"&#123;&#123; theme.wechat_subscriber.qcode &#125;&#125;"</span>/&gt;</span></div><div class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">          <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">	      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"hocgin-description"</span>&gt;</span>&#123;&#123; theme.wechat_subscriber.description &#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">        &#123;% endif %&#125;</div><div class="line">      &#123;% endif %&#125;</div><div class="line"><span class="tag">&lt;<span class="name">!</span> <span class="attr">--</span> 添加微信图标 <span class="attr">end</span> <span class="attr">--</span>&gt;</span></div></pre></td></tr></table></figure></p>
 <p>其次，到<code>主题目录</code>下的<code>source/css</code>创建文件夹<code>_hocgin</code>并在它之下创建css文件<code>customize-hocgin.css</code>以下是文件内容：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.hocgin-container</span> *, *<span class="selector-pseudo">:before</span>, *<span class="selector-pseudo">:after</span> &#123;</div><div class="line">  <span class="attribute">box-sizing</span>: border-box;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.hocgin-container</span> &#123;</div><div class="line">  <span class="attribute">position</span>: relative;</div><div class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</div><div class="line">  <span class="attribute">height</span>: <span class="number">100%</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.hocgin-container</span> &gt; <span class="selector-class">.folder</span> &#123;</div><div class="line">  <span class="attribute">width</span>: <span class="number">220px</span>;</div><div class="line">  <span class="attribute">height</span>: <span class="number">180px</span>;</div><div class="line">  <span class="attribute">left</span>: <span class="built_in">calc</span>(50% - 110px);</div><div class="line">  <span class="attribute">top</span>: <span class="built_in">calc</span>(70% - 90px);</div><div class="line">  <span class="attribute">position</span>: relative;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.hocgin-container</span> &gt; <span class="selector-class">.folder</span> &gt; <span class="selector-class">.paper</span> &#123;</div><div class="line">  <span class="attribute">opacity</span>: <span class="number">1</span>;</div><div class="line">  <span class="attribute">position</span>: absolute;</div><div class="line">  <span class="attribute">overflow</span>: hidden;</div><div class="line">  <span class="attribute">width</span>: <span class="number">200px</span>;</div><div class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</div><div class="line">  <span class="attribute">top</span>: <span class="built_in">calc</span>(50% - 111px);</div><div class="line">  <span class="attribute">left</span>: <span class="built_in">calc</span>(50% - 100px);</div><div class="line">  <span class="attribute">transition</span>: top <span class="number">0.5s</span>, opacity <span class="number">0.4s</span>;</div><div class="line">  <span class="attribute">font-family</span>: Verdana, Tahoma, sans-serif;</div><div class="line">  <span class="attribute">font-size</span>: <span class="number">0.1em</span>;</div><div class="line">  <span class="attribute">padding</span>: <span class="number">1em</span>;</div><div class="line">  <span class="attribute">color</span>: <span class="number">#644812</span>;</div><div class="line">  <span class="attribute">background-color</span>: <span class="number">#fde1ab</span>;</div><div class="line">  <span class="attribute">-moz-box-shadow</span>: <span class="number">10px</span> <span class="number">10px</span> <span class="built_in">rgba</span>(0, 0, 0, 0.2);</div><div class="line">  <span class="attribute">-webkit-box-shadow</span>: <span class="number">10px</span> <span class="number">10px</span> <span class="built_in">rgba</span>(0, 0, 0, 0.2);</div><div class="line">  <span class="attribute">box-shadow</span>: <span class="number">10px</span> <span class="number">10px</span> <span class="built_in">rgba</span>(0, 0, 0, 0.2);</div><div class="line">  <span class="attribute">-moz-border-radius</span>: <span class="number">5px</span>;</div><div class="line">  <span class="attribute">-webkit-border-radius</span>: <span class="number">5px</span>;</div><div class="line">  <span class="attribute">border-radius</span>: <span class="number">5px</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.hocgin-container</span> &gt; <span class="selector-class">.folder</span><span class="selector-pseudo">:hover</span> &gt; <span class="selector-class">.paper</span> &#123;</div><div class="line">  <span class="attribute">top</span>: <span class="built_in">calc</span>(50% - 150px);</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.hocgin-container</span> &gt; <span class="selector-class">.folder</span><span class="selector-class">.opened</span> &gt; <span class="selector-class">.paper</span> &#123;</div><div class="line">  <span class="attribute">top</span>: <span class="built_in">calc</span>(-250px);</div><div class="line">  <span class="attribute">opacity</span>: .<span class="number">9</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.hocgin-description</span> &#123;</div><div class="line">  <span class="attribute">text-align</span>: center;</div><div class="line">  <span class="attribute">margin-top</span>: <span class="number">4px</span>;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>保存后，找到<code>主题目录</code>下<code>source/css/main.styl</code><strong>(注：别的主题可能不一样)</strong> 追加<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">// --------------------------------------------------</div><div class="line">@import "_hocgin/customize-hocgin.css";</div></pre></td></tr></table></figure></p>
@@ -798,7 +863,7 @@
     
     <summary type="html">
     
-      扩展 美化扩展 功能扩展
+      &lt;p&gt;这是自己参照hexo进行私人订制的教程，也是实战的记录，感觉还不错，成品可参照本博客.. （如果我以后没换的话😶）&lt;br&gt;
     
     </summary>
     
@@ -818,9 +883,9 @@
     <link href="http://hocg.in/2016/03/20/%E5%AE%89%E8%A3%85%E5%AE%8CUbuntu%E5%90%8E-%E6%88%91%E8%AF%A5%E5%81%9A%E4%BB%80%E4%B9%88/"/>
     <id>http://hocg.in/2016/03/20/安装完Ubuntu后-我该做什么/</id>
     <published>2016-03-20T06:34:20.000Z</published>
-    <updated>2016-12-16T14:00:23.000Z</updated>
+    <updated>2017-02-04T05:28:40.000Z</updated>
     
-    <content type="html"><![CDATA[<p>安装完Ubuntu后,我该做什么..(借鉴和整理，还有一些平时遇到的， <strong>不定期更新</strong>)<br><strong>update</strong>: 新增<code>undistract-me</code>终端命令完成提醒插件<br><a id="more"></a></p>
+    <content type="html"><![CDATA[<p>这是一篇我对Ubuntu日常使用和优化的整理，也是一篇借鉴前人的文章，还有一些可能会遇到的疑难杂病的“偏方”，希望对你有帮助:)<br><strong>update</strong>: 新增<code>undistract-me</code>终端命令完成提醒插件<br><a id="more"></a></p>
 <h2 id="yuan获取"><a href="#yuan获取" class="headerlink" title="yuan获取"></a>yuan获取</h2><p>官方列表： <a href="http://wiki.ubuntu.org.cn/%E6%BA%90%E5%88%97%E8%A1%A8" target="_blank" rel="external">http://wiki.ubuntu.org.cn/%E6%BA%90%E5%88%97%E8%A1%A8</a><br>网易163： <a href="http://mirrors.163.com/.help/ubuntu.html" target="_blank" rel="external">http://mirrors.163.com/.help/ubuntu.html</a></p>
 <hr>
 <h2 id="移除"><a href="#移除" class="headerlink" title="移除"></a>移除</h2><blockquote>
@@ -1136,7 +1201,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;安装完Ubuntu后,我该做什么..(借鉴和整理，还有一些平时遇到的， &lt;strong&gt;不定期更新&lt;/strong&gt;)&lt;br&gt;&lt;strong&gt;update&lt;/strong&gt;: 新增&lt;code&gt;undistract-me&lt;/code&gt;终端命令完成提醒插件&lt;br&gt;
+      &lt;p&gt;这是一篇我对Ubuntu日常使用和优化的整理，也是一篇借鉴前人的文章，还有一些可能会遇到的疑难杂病的“偏方”，希望对你有帮助:)&lt;br&gt;&lt;strong&gt;update&lt;/strong&gt;: 新增&lt;code&gt;undistract-me&lt;/code&gt;终端命令完成提醒插件&lt;br&gt;
     
     </summary>
     
