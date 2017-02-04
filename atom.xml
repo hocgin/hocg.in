@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hocg.in/"/>
-  <updated>2017-02-04T05:31:00.000Z</updated>
+  <updated>2017-02-04T05:55:37.000Z</updated>
   <id>http://hocg.in/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://hocg.in/2017/02/04/%E5%85%B3%E4%BA%8EChrome%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91%E7%9A%84%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
     <id>http://hocg.in/2017/02/04/关于Chrome插件开发的一些知识点/</id>
     <published>2017-02-04T05:20:51.000Z</published>
-    <updated>2017-02-04T05:31:00.000Z</updated>
+    <updated>2017-02-04T05:55:37.000Z</updated>
     
     <content type="html"><![CDATA[<p>身为Chrome重度患者，生活和工作处处不离，这篇并不是入门教程，而是开发中的一些小Tip的记录.<br><a id="more"></a></p>
 <h1 id="数据存储"><a href="#数据存储" class="headerlink" title="数据存储"></a>数据存储</h1><ul>
@@ -69,12 +69,50 @@
     
     </summary>
     
-      <category term="Chrome" scheme="http://hocg.in/categories/Chrome/"/>
+      <category term="IDE" scheme="http://hocg.in/categories/IDE/"/>
     
     
       <category term="HTML5" scheme="http://hocg.in/tags/HTML5/"/>
     
-      <category term="CSS3" scheme="http://hocg.in/tags/CSS3/"/>
+      <category term="Chrome" scheme="http://hocg.in/tags/Chrome/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于log4j报错</title>
+    <link href="http://hocg.in/2017/01/16/%E5%85%B3%E4%BA%8Elog4j%E6%8A%A5%E9%94%99/"/>
+    <id>http://hocg.in/2017/01/16/关于log4j报错/</id>
+    <published>2017-01-16T00:09:27.000Z</published>
+    <updated>2017-02-04T05:57:15.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>  Java开发中经常遇到日志<code>冲突</code>或者<code>异常</code>, 彻底的来此追根究底.<br><a id="more"></a></p>
+<h2 id="日志历史"><a href="#日志历史" class="headerlink" title="日志历史"></a>日志历史</h2><ul>
+<li>log4j</li>
+<li>JCL + log4j</li>
+<li>SLF4J <code>slf4j-XXX-version.jar</code> [XXX指代log4j12, jdk14, jcl, nop 等]</li>
+<li>slf4j-api<blockquote>
+<p>v1 <code>log4j</code> 早期直接实现日志打印<br>v2 <code>JCL + log4j</code> 动态绑定, 面向<code>JCL 接口</code>实现的<code>log4j</code><br>v3 <code>slf4j-api</code> 提供 <code>SLF4J接口</code> <strong>面向对象编程</strong><br><code>slf4j-XXX-version.jar</code> 对接口和指定<code>XXX</code>种类日志的具体实现</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="slf4j-举例jar"><a href="#slf4j-举例jar" class="headerlink" title="slf4j 举例jar"></a>slf4j 举例jar</h2><ul>
+<li>log4j-over-slf4j.jar 把<code>log4j</code>转为<code>slf4j</code></li>
+<li>slf4j-log4j12.jar 以slf4j标准实现的log4j12</li>
+<li><code>XXX-over-slf4j.jar</code> 把日志重定向到<code>slf4j</code> eg.<code>jcl-over-slf4j.jar</code></li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>即.<br>Component<br>   |<br>   | log to Apache Commons Logging<br>   V<br> jcl-over-slf4j.jar — (redirect) —&gt; SLF4j —&gt; slf4j-log4j12-version.jar —&gt; log4j.jar —&gt; 输出日志<br><strong>解释:</strong><br>JCL实现的重定向为SLF4J日志形式, 然后SLF4J转为Log4j12输出!</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;  Java开发中经常遇到日志&lt;code&gt;冲突&lt;/code&gt;或者&lt;code&gt;异常&lt;/code&gt;, 彻底的来此追根究底.&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Coder" scheme="http://hocg.in/categories/Coder/"/>
+    
+    
+      <category term="JAVA" scheme="http://hocg.in/tags/JAVA/"/>
     
   </entry>
   
@@ -292,9 +330,9 @@
       <category term="Server" scheme="http://hocg.in/categories/Server/"/>
     
     
-      <category term="Nexus" scheme="http://hocg.in/tags/Nexus/"/>
-    
       <category term="Tips" scheme="http://hocg.in/tags/Tips/"/>
+    
+      <category term="Nexus" scheme="http://hocg.in/tags/Nexus/"/>
     
   </entry>
   
@@ -344,9 +382,9 @@
       <category term="Mobile" scheme="http://hocg.in/categories/Mobile/"/>
     
     
-      <category term="Tips" scheme="http://hocg.in/tags/Tips/"/>
-    
       <category term="Android" scheme="http://hocg.in/tags/Android/"/>
+    
+      <category term="Tips" scheme="http://hocg.in/tags/Tips/"/>
     
   </entry>
   
@@ -491,50 +529,6 @@
       <category term="Tips" scheme="http://hocg.in/tags/Tips/"/>
     
       <category term="Mac" scheme="http://hocg.in/tags/Mac/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>谈JVM，各种过程</title>
-    <link href="http://hocg.in/2016/06/12/%E8%B0%88JVM-%E5%90%84%E7%A7%8D%E8%BF%87%E7%A8%8B/"/>
-    <id>http://hocg.in/2016/06/12/谈JVM-各种过程/</id>
-    <published>2016-06-12T11:37:49.000Z</published>
-    <updated>2016-08-27T05:35:49.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>谈谈JVM 各种过程， XMind等我整理一下，稍后贴出 囧～<br>欢迎指教..<br><strong>update:</strong> 2016-08-03 14:44:12 更新了图<br><a id="more"></a></p>
-<h3 id="总思路"><a href="#总思路" class="headerlink" title="总思路"></a>总思路</h3><p>编译过程 -&gt; 运行过程[类加载器过程(类的装载过程) -&gt; 执行过程]</p>
-<h4 id="图"><a href="#图" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/总思路-v1.png" alt="总思路-v1.png"></p>
-<h3 id="编译过程"><a href="#编译过程" class="headerlink" title="编译过程"></a>编译过程</h3><p>.java文件 -javac编译-&gt; .class文件       {-JIT编译(转化+优化)-&gt; 本地方法}[执行过程，当方法执行频率高]</p>
-<h4 id="图-1"><a href="#图-1" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/编译过程.png" alt="编译过程.png"></p>
-<hr>
-<h3 id="运行过程"><a href="#运行过程" class="headerlink" title="运行过程"></a>运行过程</h3><p>类加载器 -&gt; (执行引擎 -&gt; 本地库接口)[Java 运行时数据区] -&gt; 本地方法库</p>
-<h4 id="图-2"><a href="#图-2" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/运行过程.png" alt="运行过程.png"></p>
-<hr>
-<h3 id="类加载器过程"><a href="#类加载器过程" class="headerlink" title="类加载器过程"></a><strong>类加载器</strong>过程</h3><p>[启动]类加载器(JNI) -&gt; [扩展]类加载器 -&gt; [系统]类加载器 -&gt; [自定义]类加载器</p>
-<h4 id="图-3"><a href="#图-3" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/类加载器过程.png" alt="类加载器过程.png"></p>
-<hr>
-<h3 id="类装载过程"><a href="#类装载过程" class="headerlink" title="类装载过程"></a><strong>类</strong>装载过程</h3><p>加载文件到JVM内存 -&gt; (校验语言规范 -&gt; 分配结构存储类的信息 -&gt; 该类常量池中符号更改为直接引用)[Linking] -&gt; 类初始化</p>
-<h4 id="图-4"><a href="#图-4" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/类装载过程.png" alt="类装载过程.png"></p>
-<hr>
-<h3 id="执行引擎执行过程-逐行读取指令"><a href="#执行引擎执行过程-逐行读取指令" class="headerlink" title="执行引擎执行过程(逐行读取指令)"></a><strong>执行引擎</strong>执行过程(逐行读取指令)</h3><p>Thread启动 -生成-&gt; JVM栈 -执行方法-&gt; 压入栈帧(包含 局部变量数组&amp;操作数栈&amp;运行时常量池) -&gt; 逐行读取指令&amp;&amp;解释(JVM栈帧 程序计数器存放下一条指令) -&gt; {JIT(转化+优化)-&gt; 本地方法}[当方法执行频率高] -执行&amp;运算-&gt; 结果(存放 操作数栈中) -&gt; 推出栈帧</p>
-<h4 id="图-5"><a href="#图-5" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/执行引擎执行过程.png" alt="执行引擎执行过程.png"></p>
-<hr>
-<h3 id="Java-运行时数据区-贯穿整个执行过程"><a href="#Java-运行时数据区-贯穿整个执行过程" class="headerlink" title="Java 运行时数据区(贯穿整个执行过程)"></a>Java 运行时数据区(贯穿整个执行过程)</h3><p>共享型数据区：方法区(含运行时常量池[存放方法&amp;变量的实际<strong>地址</strong>])、堆(存放对象实例)<br>隔离型数据区：JVM 栈、本地方法栈(JNI)、程序计数器</p>
-<h4 id="图-6"><a href="#图-6" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/运行时数据图.png" alt="运行时数据图.png"></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;谈谈JVM 各种过程， XMind等我整理一下，稍后贴出 囧～&lt;br&gt;欢迎指教..&lt;br&gt;&lt;strong&gt;update:&lt;/strong&gt; 2016-08-03 14:44:12 更新了图&lt;br&gt;
-    
-    </summary>
-    
-      <category term="Coder" scheme="http://hocg.in/categories/Coder/"/>
-    
-    
-      <category term="Java" scheme="http://hocg.in/tags/Java/"/>
-    
-      <category term="JVM" scheme="http://hocg.in/tags/JVM/"/>
     
   </entry>
   
@@ -687,6 +681,50 @@
     <summary type="html">
     
       &lt;p&gt;谈谈JVM，最近在研究破解jar，有这方面经验的麻烦指导一下思路..&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Coder" scheme="http://hocg.in/categories/Coder/"/>
+    
+    
+      <category term="Java" scheme="http://hocg.in/tags/Java/"/>
+    
+      <category term="JVM" scheme="http://hocg.in/tags/JVM/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>谈JVM，各种过程</title>
+    <link href="http://hocg.in/2016/06/12/%E8%B0%88JVM-%E5%90%84%E7%A7%8D%E8%BF%87%E7%A8%8B/"/>
+    <id>http://hocg.in/2016/06/12/谈JVM-各种过程/</id>
+    <published>2016-06-12T11:37:49.000Z</published>
+    <updated>2016-08-27T05:35:49.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>谈谈JVM 各种过程， XMind等我整理一下，稍后贴出 囧～<br>欢迎指教..<br><strong>update:</strong> 2016-08-03 14:44:12 更新了图<br><a id="more"></a></p>
+<h3 id="总思路"><a href="#总思路" class="headerlink" title="总思路"></a>总思路</h3><p>编译过程 -&gt; 运行过程[类加载器过程(类的装载过程) -&gt; 执行过程]</p>
+<h4 id="图"><a href="#图" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/总思路-v1.png" alt="总思路-v1.png"></p>
+<h3 id="编译过程"><a href="#编译过程" class="headerlink" title="编译过程"></a>编译过程</h3><p>.java文件 -javac编译-&gt; .class文件       {-JIT编译(转化+优化)-&gt; 本地方法}[执行过程，当方法执行频率高]</p>
+<h4 id="图-1"><a href="#图-1" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/编译过程.png" alt="编译过程.png"></p>
+<hr>
+<h3 id="运行过程"><a href="#运行过程" class="headerlink" title="运行过程"></a>运行过程</h3><p>类加载器 -&gt; (执行引擎 -&gt; 本地库接口)[Java 运行时数据区] -&gt; 本地方法库</p>
+<h4 id="图-2"><a href="#图-2" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/运行过程.png" alt="运行过程.png"></p>
+<hr>
+<h3 id="类加载器过程"><a href="#类加载器过程" class="headerlink" title="类加载器过程"></a><strong>类加载器</strong>过程</h3><p>[启动]类加载器(JNI) -&gt; [扩展]类加载器 -&gt; [系统]类加载器 -&gt; [自定义]类加载器</p>
+<h4 id="图-3"><a href="#图-3" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/类加载器过程.png" alt="类加载器过程.png"></p>
+<hr>
+<h3 id="类装载过程"><a href="#类装载过程" class="headerlink" title="类装载过程"></a><strong>类</strong>装载过程</h3><p>加载文件到JVM内存 -&gt; (校验语言规范 -&gt; 分配结构存储类的信息 -&gt; 该类常量池中符号更改为直接引用)[Linking] -&gt; 类初始化</p>
+<h4 id="图-4"><a href="#图-4" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/类装载过程.png" alt="类装载过程.png"></p>
+<hr>
+<h3 id="执行引擎执行过程-逐行读取指令"><a href="#执行引擎执行过程-逐行读取指令" class="headerlink" title="执行引擎执行过程(逐行读取指令)"></a><strong>执行引擎</strong>执行过程(逐行读取指令)</h3><p>Thread启动 -生成-&gt; JVM栈 -执行方法-&gt; 压入栈帧(包含 局部变量数组&amp;操作数栈&amp;运行时常量池) -&gt; 逐行读取指令&amp;&amp;解释(JVM栈帧 程序计数器存放下一条指令) -&gt; {JIT(转化+优化)-&gt; 本地方法}[当方法执行频率高] -执行&amp;运算-&gt; 结果(存放 操作数栈中) -&gt; 推出栈帧</p>
+<h4 id="图-5"><a href="#图-5" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/执行引擎执行过程.png" alt="执行引擎执行过程.png"></p>
+<hr>
+<h3 id="Java-运行时数据区-贯穿整个执行过程"><a href="#Java-运行时数据区-贯穿整个执行过程" class="headerlink" title="Java 运行时数据区(贯穿整个执行过程)"></a>Java 运行时数据区(贯穿整个执行过程)</h3><p>共享型数据区：方法区(含运行时常量池[存放方法&amp;变量的实际<strong>地址</strong>])、堆(存放对象实例)<br>隔离型数据区：JVM 栈、本地方法栈(JNI)、程序计数器</p>
+<h4 id="图-6"><a href="#图-6" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/运行时数据图.png" alt="运行时数据图.png"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;谈谈JVM 各种过程， XMind等我整理一下，稍后贴出 囧～&lt;br&gt;欢迎指教..&lt;br&gt;&lt;strong&gt;update:&lt;/strong&gt; 2016-08-03 14:44:12 更新了图&lt;br&gt;
     
     </summary>
     
