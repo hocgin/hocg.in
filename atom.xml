@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hocg.in/"/>
-  <updated>2017-02-25T07:32:13.000Z</updated>
+  <updated>2017-02-25T07:36:21.000Z</updated>
   <id>http://hocg.in/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://hocg.in/2017/02/24/Nginx-%E9%83%A8%E7%BD%B2/"/>
     <id>http://hocg.in/2017/02/24/Nginx-部署/</id>
     <published>2017-02-24T01:12:22.000Z</published>
-    <updated>2017-02-25T07:32:13.000Z</updated>
+    <updated>2017-02-25T07:36:21.000Z</updated>
     
     <content type="html"><![CDATA[<p>🎽 <a href="http://baike.baidu.com/link?url=6LDqhy3I7UWDkwOT6TS_s-d4Jsv9AVcA_yedSmd618s1BjJl-0NQ-roxjDF7jHazXWlTwbIHTv03_gWIWeRPUq" target="_blank" rel="external">Nginx</a> 是一个很强大的高性能Web和反向代理服务器<br><a id="more"></a></p>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h3><p>OS: Ubuntu-16</p>
@@ -33,26 +33,23 @@
 <h3 id="shell"><a href="#shell" class="headerlink" title="shell"></a>shell</h3><blockquote>
 <p>以下操作均在<code>/opt</code>目录</p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">\# tar -zxvf nginx-1.10.1.tar.gz</div><div class="line">\# cd nginx-1.10.1</div><div class="line">\# ./configure</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"># tar -zxvf nginx-1.10.1.tar.gz</div><div class="line"># cd nginx-1.10.1</div><div class="line"># ./configure</div></pre></td></tr></table></figure>
 <p>ERROR:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">checking for OS</div><div class="line"> + Linux 2.6.32-042stab113.21 x86_64</div><div class="line">checking for C compiler ... not found</div><div class="line"></div><div class="line">./configure: error: C compiler cc is not found</div></pre></td></tr></table></figure></p>
-<p>缺失编译部件, 解决办法如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">\# apt-get install build-essential libtool</div><div class="line">\# ./configure</div></pre></td></tr></table></figure></p>
+<p>缺失编译部件, 解决办法如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># apt-get install build-essential libtool</div><div class="line"># ./configure</div></pre></td></tr></table></figure></p>
 <p>Error:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">./configure: error: the HTTP rewrite module requires the PCRE library.</div><div class="line">You can either disable the module by using --without-http_rewrite_module</div><div class="line">option, or install the PCRE library into the system, or build the PCRE library</div><div class="line">statically from the source with nginx by using --with-pcre=&lt;path&gt; option.</div></pre></td></tr></table></figure></p>
 <p>缺失<code>PCRE</code>, 移步官网下载(<code>顶部有链接</code>), 我是在<code>/opt</code>目录中解压<br><strong>注</strong>: pcre 没有 <code>2</code></p>
 <blockquote>
 <p>以下操作均在<code>/opt</code>目录  </p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">\# tar -jxvf pcre-8.38.tar.bz2</div><div class="line">\# cd pcre-8.38</div><div class="line">\# ./configure &amp;&amp; make &amp;&amp; make install</div></pre></td></tr></table></figure>
-<p>回到<code>/opt/nginx-1.10.1</code>目录继续进行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">\# ./configure --with-pcre=/opt/pcre-8.38</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"># tar -jxvf pcre-8.38.tar.bz2</div><div class="line"># cd pcre-8.38</div><div class="line"># ./configure &amp;&amp; make &amp;&amp; make install</div></pre></td></tr></table></figure>
+<p>回到<code>/opt/nginx-1.10.1</code>目录继续进行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"># ./configure --with-pcre=/opt/pcre-8.38</div></pre></td></tr></table></figure></p>
 <p>Error:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">./configure: error: the HTTP gzip module requires the zlib library.</div><div class="line">You can either disable the module by using --without-http_gzip_module</div><div class="line">option, or install the zlib library into the system, or build the zlib library</div><div class="line">statically from the source with nginx by using --with-zlib=&lt;path&gt; option.</div></pre></td></tr></table></figure></p>
 <p>原因是缺失<code>zlib</code>,移步官网下载(<code>顶部有链接</code>), 同样是在<code>/opt</code>目录中解压</p>
 <blockquote>
-<p>以下操作均在<code>/opt</code>目录<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">\# tar -zxvf zlib-1.2.8.tar.gz</div><div class="line">\# cd zlib-1.2.8</div><div class="line">\# ./configure &amp;&amp; make &amp;&amp; make install</div></pre></td></tr></table></figure></p>
+<p>以下操作均在<code>/opt</code>目录<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"># tar -zxvf zlib-1.2.8.tar.gz</div><div class="line"># cd zlib-1.2.8</div><div class="line"># ./configure &amp;&amp; make &amp;&amp; make install</div></pre></td></tr></table></figure></p>
 </blockquote>
-<p>回到<code>/opt/nginx-1.10.1</code>目录继续进行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">\# ./configure --with-pcre=/opt/pcre-8.38 --with-zlib=/opt/zlib-1.2.8</div><div class="line">\# make</div><div class="line">\# make install</div></pre></td></tr></table></figure></p>
-<p>至此，安装结束。可查看<code>ls /usr/local/nginx/</code>目录<br>显示如下文件:<br>/usr/local/nginx/<br>|– conf<br>|   |– fastcgi.conf<br>|   |– fastcgi.conf.default<br>|   |– fastcgi_params<br>|   |– fastcgi_params.default<br>|   |– koi-utf<br>|   |– koi-win<br>|   |– mime.types<br>|   |– mime.types.default<br>|   |– nginx.conf<br>|   |– nginx.conf.default<br>|   |– scgi_params<br>|   |– scgi_params.default<br>|   |– uwsgi_params<br>|   |– uwsgi_params.default<br>|   <code>-- win-utf  
-|-- html  
-|   |-- 50x.html  
-|</code>– index.html<br>|– logs<br><code>-- sbin</code>– nginx  </p>
+<p>回到<code>/opt/nginx-1.10.1</code>目录继续进行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"># ./configure --with-pcre=/opt/pcre-8.38 --with-zlib=/opt/zlib-1.2.8</div><div class="line"># make</div><div class="line"># make install</div></pre></td></tr></table></figure></p>
+<p>至此，安装结束。可查看<code>ls /usr/local/nginx/</code>目录<br>显示如下文件:<br>/usr/local/nginx/<br>|– conf<br>|   |– fastcgi.conf<br>|   |– fastcgi.conf.default<br>|   |– fastcgi_params<br>|   |– fastcgi_params.default<br>|   |– koi-utf<br>|   |– koi-win<br>|   |– mime.types<br>|   |– mime.types.default<br>|   |– nginx.conf<br>|   |– nginx.conf.default<br>|   |– scgi_params<br>|   |– scgi_params.default<br>|   |– uwsgi_params<br>|   |– uwsgi_params.default<br>|   `– win-utf<br>|– html<br>|   |– 50x.html<br>|   `– index.html<br>|– logs<br>`– sbin<br>    `– nginx  </p>
 <h2 id="基础命令"><a href="#基础命令" class="headerlink" title="基础命令"></a>基础命令</h2><blockquote>
 <p>以下命令均在<code>/usr/local/nginx</code>目录下运行  </p>
 </blockquote>
