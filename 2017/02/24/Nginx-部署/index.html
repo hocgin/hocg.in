@@ -63,16 +63,18 @@
 
 
 
-<meta name="description" content="🎽 Nginx 是一个很强大的高性能Web和反向代理服务器">
+<meta name="description" content="🎽  Nginx 是一个很强大的高性能Web和反向代理服务器">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Nginx 部署">
 <meta property="og:url" content="http://hocg.in/2017/02/24/Nginx-部署/index.html">
 <meta property="og:site_name" content="Hocgin (๑`灬´๑)">
-<meta property="og:description" content="🎽 Nginx 是一个很强大的高性能Web和反向代理服务器">
-<meta property="og:updated_time" content="2017-02-25T07:36:21.000Z">
+<meta property="og:description" content="🎽  Nginx 是一个很强大的高性能Web和反向代理服务器">
+<meta property="og:image" content="http://baidu.com/E3B25E4D-8D26-4E4D-BBA2-F77F7B089FA5.png">
+<meta property="og:updated_time" content="2017-02-25T07:40:35.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Nginx 部署">
-<meta name="twitter:description" content="🎽 Nginx 是一个很强大的高性能Web和反向代理服务器">
+<meta name="twitter:description" content="🎽  Nginx 是一个很强大的高性能Web和反向代理服务器">
+<meta name="twitter:image" content="http://baidu.com/E3B25E4D-8D26-4E4D-BBA2-F77F7B089FA5.png">
 
 
 
@@ -335,7 +337,7 @@
       
 
       
-        <p>🎽 <a href="http://baike.baidu.com/link?url=6LDqhy3I7UWDkwOT6TS_s-d4Jsv9AVcA_yedSmd618s1BjJl-0NQ-roxjDF7jHazXWlTwbIHTv03_gWIWeRPUq" target="_blank" rel="external">Nginx</a> 是一个很强大的高性能Web和反向代理服务器<br><a id="more"></a></p>
+        <p>🎽  <a href="http://baike.baidu.com/link?url=6LDqhy3I7UWDkwOT6TS_s-d4Jsv9AVcA_yedSmd618s1BjJl-0NQ-roxjDF7jHazXWlTwbIHTv03_gWIWeRPUq" target="_blank" rel="external">Nginx</a> 是一个很强大的高性能Web和反向代理服务器<br><a id="more"></a></p>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h3><p>OS: Ubuntu-16</p>
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="依赖"><a href="#依赖" class="headerlink" title="依赖"></a>依赖</h3><ul>
 <li><a href="http://www.pcre.org/" target="_blank" rel="external">PCRE</a></li>
@@ -361,8 +363,9 @@
 <blockquote>
 <p>以下操作均在<code>/opt</code>目录<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"># tar -zxvf zlib-1.2.8.tar.gz</div><div class="line"># cd zlib-1.2.8</div><div class="line"># ./configure &amp;&amp; make &amp;&amp; make install</div></pre></td></tr></table></figure></p>
 </blockquote>
-<p>回到<code>/opt/nginx-1.10.1</code>目录继续进行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"># ./configure --with-pcre=/opt/pcre-8.38 --with-zlib=/opt/zlib-1.2.8</div><div class="line"># make</div><div class="line"># make install</div></pre></td></tr></table></figure></p>
-<p>至此，安装结束。可查看<code>ls /usr/local/nginx/</code>目录<br>显示如下文件:<br>/usr/local/nginx/<br>|– conf<br>|   |– fastcgi.conf<br>|   |– fastcgi.conf.default<br>|   |– fastcgi_params<br>|   |– fastcgi_params.default<br>|   |– koi-utf<br>|   |– koi-win<br>|   |– mime.types<br>|   |– mime.types.default<br>|   |– nginx.conf<br>|   |– nginx.conf.default<br>|   |– scgi_params<br>|   |– scgi_params.default<br>|   |– uwsgi_params<br>|   |– uwsgi_params.default<br>|   `– win-utf<br>|– html<br>|   |– 50x.html<br>|   `– index.html<br>|– logs<br>`– sbin<br>    `– nginx  </p>
+<p>回到<code>/opt/nginx-1.10.1</code>目录继续进行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"># ./configure --with-pcre=/opt/pcre-8.38 --with-zlib=/opt/zlib-1.2.8</div><div class="line"># make</div><div class="line"># make install</div></pre></td></tr></table></figure>
+<p>至此，安装结束。可查看<code>ls /usr/local/nginx/</code>目录<br>显示如下文件:<br>/usr/local/nginx/<br><img src="http://baidu.com/E3B25E4D-8D26-4E4D-BBA2-F77F7B089FA5.png" alt="image"></p>
 <h2 id="基础命令"><a href="#基础命令" class="headerlink" title="基础命令"></a>基础命令</h2><blockquote>
 <p>以下命令均在<code>/usr/local/nginx</code>目录下运行  </p>
 </blockquote>
