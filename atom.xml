@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hocg.in/"/>
-  <updated>2017-02-25T07:25:41.000Z</updated>
+  <updated>2017-02-25T07:32:13.000Z</updated>
   <id>http://hocg.in/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://hocg.in/2017/02/24/Nginx-%E9%83%A8%E7%BD%B2/"/>
     <id>http://hocg.in/2017/02/24/Nginx-部署/</id>
     <published>2017-02-24T01:12:22.000Z</published>
-    <updated>2017-02-25T07:25:41.000Z</updated>
+    <updated>2017-02-25T07:32:13.000Z</updated>
     
     <content type="html"><![CDATA[<p>🎽 <a href="http://baike.baidu.com/link?url=6LDqhy3I7UWDkwOT6TS_s-d4Jsv9AVcA_yedSmd618s1BjJl-0NQ-roxjDF7jHazXWlTwbIHTv03_gWIWeRPUq" target="_blank" rel="external">Nginx</a> 是一个很强大的高性能Web和反向代理服务器<br><a id="more"></a></p>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h3><p>OS: Ubuntu-16</p>
@@ -39,7 +39,7 @@
 <p>Error:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">./configure: error: the HTTP rewrite module requires the PCRE library.</div><div class="line">You can either disable the module by using --without-http_rewrite_module</div><div class="line">option, or install the PCRE library into the system, or build the PCRE library</div><div class="line">statically from the source with nginx by using --with-pcre=&lt;path&gt; option.</div></pre></td></tr></table></figure></p>
 <p>缺失<code>PCRE</code>, 移步官网下载(<code>顶部有链接</code>), 我是在<code>/opt</code>目录中解压<br><strong>注</strong>: pcre 没有 <code>2</code></p>
 <blockquote>
-<p>以下操作均在<code>/opt</code>目录</p>
+<p>以下操作均在<code>/opt</code>目录  </p>
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">\# tar -jxvf pcre-8.38.tar.bz2</div><div class="line">\# cd pcre-8.38</div><div class="line">\# ./configure &amp;&amp; make &amp;&amp; make install</div></pre></td></tr></table></figure>
 <p>回到<code>/opt/nginx-1.10.1</code>目录继续进行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">\# ./configure --with-pcre=/opt/pcre-8.38</div></pre></td></tr></table></figure></p>
@@ -49,15 +49,17 @@
 <p>以下操作均在<code>/opt</code>目录<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">\# tar -zxvf zlib-1.2.8.tar.gz</div><div class="line">\# cd zlib-1.2.8</div><div class="line">\# ./configure &amp;&amp; make &amp;&amp; make install</div></pre></td></tr></table></figure></p>
 </blockquote>
 <p>回到<code>/opt/nginx-1.10.1</code>目录继续进行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">\# ./configure --with-pcre=/opt/pcre-8.38 --with-zlib=/opt/zlib-1.2.8</div><div class="line">\# make</div><div class="line">\# make install</div></pre></td></tr></table></figure></p>
-<p>至此，安装结束。可查看<code>ls /usr/local/nginx/</code>目录<br>显示如下文件:<br>/usr/local/nginx/<br>|– conf<br>|   |– fastcgi.conf<br>|   |– fastcgi.conf.default<br>|   |– fastcgi_params<br>|   |– fastcgi_params.default<br>|   |– koi-utf<br>|   |– koi-win<br>|   |– mime.types<br>|   |– mime.types.default<br>|   |– nginx.conf<br>|   |– nginx.conf.default<br>|   |– scgi_params<br>|   |– scgi_params.default<br>|   |– uwsgi_params<br>|   |– uwsgi_params.default<br>|   <code>-- win-utf
-|-- html
-|   |-- 50x.html
-|</code>– index.html<br>|– logs<br><code>-- sbin</code>– nginx</p>
+<p>至此，安装结束。可查看<code>ls /usr/local/nginx/</code>目录<br>显示如下文件:<br>/usr/local/nginx/<br>|– conf<br>|   |– fastcgi.conf<br>|   |– fastcgi.conf.default<br>|   |– fastcgi_params<br>|   |– fastcgi_params.default<br>|   |– koi-utf<br>|   |– koi-win<br>|   |– mime.types<br>|   |– mime.types.default<br>|   |– nginx.conf<br>|   |– nginx.conf.default<br>|   |– scgi_params<br>|   |– scgi_params.default<br>|   |– uwsgi_params<br>|   |– uwsgi_params.default<br>|   <code>-- win-utf  
+|-- html  
+|   |-- 50x.html  
+|</code>– index.html<br>|– logs<br><code>-- sbin</code>– nginx  </p>
 <h2 id="基础命令"><a href="#基础命令" class="headerlink" title="基础命令"></a>基础命令</h2><blockquote>
-<p>以下命令均在<code>/usr/local/nginx</code>目录下运行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"># 启动</div><div class="line">./sbin/nginx</div><div class="line"># 检查配置</div><div class="line">./sbin/nginx -t</div><div class="line"># 重新加载配置</div><div class="line">./sbin/nginx -s reload</div><div class="line"># 查看配置文件</div><div class="line">cat ./conf/nginx.conf</div></pre></td></tr></table></figure></p>
+<p>以下命令均在<code>/usr/local/nginx</code>目录下运行  </p>
 </blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"># 启动</div><div class="line">./sbin/nginx</div><div class="line"># 检查配置</div><div class="line">./sbin/nginx -t</div><div class="line"># 重新加载配置</div><div class="line">./sbin/nginx -s reload</div><div class="line"># 查看配置文件</div><div class="line">cat ./conf/nginx.conf</div></pre></td></tr></table></figure>
 <h2 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h2><h3 id="nginx-conf配置"><a href="#nginx-conf配置" class="headerlink" title="nginx.conf配置"></a><code>nginx.conf</code>配置</h3><p><a href="http://blog.csdn.net/tjcyjd/article/details/50695922" target="_blank" rel="external">字段详解</a></p>
-<h3 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h3>]]></content>
+<h3 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h3><p><strong>待续ing</strong></p>
+]]></content>
     
     <summary type="html">
     
@@ -593,50 +595,6 @@
   </entry>
   
   <entry>
-    <title>谈JVM，各种过程</title>
-    <link href="http://hocg.in/2016/06/12/%E8%B0%88JVM-%E5%90%84%E7%A7%8D%E8%BF%87%E7%A8%8B/"/>
-    <id>http://hocg.in/2016/06/12/谈JVM-各种过程/</id>
-    <published>2016-06-12T11:37:49.000Z</published>
-    <updated>2016-08-27T05:35:49.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>谈谈JVM 各种过程， XMind等我整理一下，稍后贴出 囧～<br>欢迎指教..<br><strong>update:</strong> 2016-08-03 14:44:12 更新了图<br><a id="more"></a></p>
-<h3 id="总思路"><a href="#总思路" class="headerlink" title="总思路"></a>总思路</h3><p>编译过程 -&gt; 运行过程[类加载器过程(类的装载过程) -&gt; 执行过程]</p>
-<h4 id="图"><a href="#图" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/总思路-v1.png" alt="总思路-v1.png"></p>
-<h3 id="编译过程"><a href="#编译过程" class="headerlink" title="编译过程"></a>编译过程</h3><p>.java文件 -javac编译-&gt; .class文件       {-JIT编译(转化+优化)-&gt; 本地方法}[执行过程，当方法执行频率高]</p>
-<h4 id="图-1"><a href="#图-1" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/编译过程.png" alt="编译过程.png"></p>
-<hr>
-<h3 id="运行过程"><a href="#运行过程" class="headerlink" title="运行过程"></a>运行过程</h3><p>类加载器 -&gt; (执行引擎 -&gt; 本地库接口)[Java 运行时数据区] -&gt; 本地方法库</p>
-<h4 id="图-2"><a href="#图-2" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/运行过程.png" alt="运行过程.png"></p>
-<hr>
-<h3 id="类加载器过程"><a href="#类加载器过程" class="headerlink" title="类加载器过程"></a><strong>类加载器</strong>过程</h3><p>[启动]类加载器(JNI) -&gt; [扩展]类加载器 -&gt; [系统]类加载器 -&gt; [自定义]类加载器</p>
-<h4 id="图-3"><a href="#图-3" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/类加载器过程.png" alt="类加载器过程.png"></p>
-<hr>
-<h3 id="类装载过程"><a href="#类装载过程" class="headerlink" title="类装载过程"></a><strong>类</strong>装载过程</h3><p>加载文件到JVM内存 -&gt; (校验语言规范 -&gt; 分配结构存储类的信息 -&gt; 该类常量池中符号更改为直接引用)[Linking] -&gt; 类初始化</p>
-<h4 id="图-4"><a href="#图-4" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/类装载过程.png" alt="类装载过程.png"></p>
-<hr>
-<h3 id="执行引擎执行过程-逐行读取指令"><a href="#执行引擎执行过程-逐行读取指令" class="headerlink" title="执行引擎执行过程(逐行读取指令)"></a><strong>执行引擎</strong>执行过程(逐行读取指令)</h3><p>Thread启动 -生成-&gt; JVM栈 -执行方法-&gt; 压入栈帧(包含 局部变量数组&amp;操作数栈&amp;运行时常量池) -&gt; 逐行读取指令&amp;&amp;解释(JVM栈帧 程序计数器存放下一条指令) -&gt; {JIT(转化+优化)-&gt; 本地方法}[当方法执行频率高] -执行&amp;运算-&gt; 结果(存放 操作数栈中) -&gt; 推出栈帧</p>
-<h4 id="图-5"><a href="#图-5" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/执行引擎执行过程.png" alt="执行引擎执行过程.png"></p>
-<hr>
-<h3 id="Java-运行时数据区-贯穿整个执行过程"><a href="#Java-运行时数据区-贯穿整个执行过程" class="headerlink" title="Java 运行时数据区(贯穿整个执行过程)"></a>Java 运行时数据区(贯穿整个执行过程)</h3><p>共享型数据区：方法区(含运行时常量池[存放方法&amp;变量的实际<strong>地址</strong>])、堆(存放对象实例)<br>隔离型数据区：JVM 栈、本地方法栈(JNI)、程序计数器</p>
-<h4 id="图-6"><a href="#图-6" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/运行时数据图.png" alt="运行时数据图.png"></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;谈谈JVM 各种过程， XMind等我整理一下，稍后贴出 囧～&lt;br&gt;欢迎指教..&lt;br&gt;&lt;strong&gt;update:&lt;/strong&gt; 2016-08-03 14:44:12 更新了图&lt;br&gt;
-    
-    </summary>
-    
-      <category term="Coder" scheme="http://hocg.in/categories/Coder/"/>
-    
-    
-      <category term="Java" scheme="http://hocg.in/tags/Java/"/>
-    
-      <category term="JVM" scheme="http://hocg.in/tags/JVM/"/>
-    
-  </entry>
-  
-  <entry>
     <title>谈JVM，字节码</title>
     <link href="http://hocg.in/2016/06/12/%E8%B0%88JVM-%E5%AD%97%E8%8A%82%E7%A0%81/"/>
     <id>http://hocg.in/2016/06/12/谈JVM-字节码/</id>
@@ -785,6 +743,50 @@
     <summary type="html">
     
       &lt;p&gt;谈谈JVM，最近在研究破解jar，有这方面经验的麻烦指导一下思路..&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Coder" scheme="http://hocg.in/categories/Coder/"/>
+    
+    
+      <category term="Java" scheme="http://hocg.in/tags/Java/"/>
+    
+      <category term="JVM" scheme="http://hocg.in/tags/JVM/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>谈JVM，各种过程</title>
+    <link href="http://hocg.in/2016/06/12/%E8%B0%88JVM-%E5%90%84%E7%A7%8D%E8%BF%87%E7%A8%8B/"/>
+    <id>http://hocg.in/2016/06/12/谈JVM-各种过程/</id>
+    <published>2016-06-12T11:37:49.000Z</published>
+    <updated>2016-08-27T05:35:49.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>谈谈JVM 各种过程， XMind等我整理一下，稍后贴出 囧～<br>欢迎指教..<br><strong>update:</strong> 2016-08-03 14:44:12 更新了图<br><a id="more"></a></p>
+<h3 id="总思路"><a href="#总思路" class="headerlink" title="总思路"></a>总思路</h3><p>编译过程 -&gt; 运行过程[类加载器过程(类的装载过程) -&gt; 执行过程]</p>
+<h4 id="图"><a href="#图" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/总思路-v1.png" alt="总思路-v1.png"></p>
+<h3 id="编译过程"><a href="#编译过程" class="headerlink" title="编译过程"></a>编译过程</h3><p>.java文件 -javac编译-&gt; .class文件       {-JIT编译(转化+优化)-&gt; 本地方法}[执行过程，当方法执行频率高]</p>
+<h4 id="图-1"><a href="#图-1" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/编译过程.png" alt="编译过程.png"></p>
+<hr>
+<h3 id="运行过程"><a href="#运行过程" class="headerlink" title="运行过程"></a>运行过程</h3><p>类加载器 -&gt; (执行引擎 -&gt; 本地库接口)[Java 运行时数据区] -&gt; 本地方法库</p>
+<h4 id="图-2"><a href="#图-2" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/运行过程.png" alt="运行过程.png"></p>
+<hr>
+<h3 id="类加载器过程"><a href="#类加载器过程" class="headerlink" title="类加载器过程"></a><strong>类加载器</strong>过程</h3><p>[启动]类加载器(JNI) -&gt; [扩展]类加载器 -&gt; [系统]类加载器 -&gt; [自定义]类加载器</p>
+<h4 id="图-3"><a href="#图-3" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/类加载器过程.png" alt="类加载器过程.png"></p>
+<hr>
+<h3 id="类装载过程"><a href="#类装载过程" class="headerlink" title="类装载过程"></a><strong>类</strong>装载过程</h3><p>加载文件到JVM内存 -&gt; (校验语言规范 -&gt; 分配结构存储类的信息 -&gt; 该类常量池中符号更改为直接引用)[Linking] -&gt; 类初始化</p>
+<h4 id="图-4"><a href="#图-4" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/类装载过程.png" alt="类装载过程.png"></p>
+<hr>
+<h3 id="执行引擎执行过程-逐行读取指令"><a href="#执行引擎执行过程-逐行读取指令" class="headerlink" title="执行引擎执行过程(逐行读取指令)"></a><strong>执行引擎</strong>执行过程(逐行读取指令)</h3><p>Thread启动 -生成-&gt; JVM栈 -执行方法-&gt; 压入栈帧(包含 局部变量数组&amp;操作数栈&amp;运行时常量池) -&gt; 逐行读取指令&amp;&amp;解释(JVM栈帧 程序计数器存放下一条指令) -&gt; {JIT(转化+优化)-&gt; 本地方法}[当方法执行频率高] -执行&amp;运算-&gt; 结果(存放 操作数栈中) -&gt; 推出栈帧</p>
+<h4 id="图-5"><a href="#图-5" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/执行引擎执行过程.png" alt="执行引擎执行过程.png"></p>
+<hr>
+<h3 id="Java-运行时数据区-贯穿整个执行过程"><a href="#Java-运行时数据区-贯穿整个执行过程" class="headerlink" title="Java 运行时数据区(贯穿整个执行过程)"></a>Java 运行时数据区(贯穿整个执行过程)</h3><p>共享型数据区：方法区(含运行时常量池[存放方法&amp;变量的实际<strong>地址</strong>])、堆(存放对象实例)<br>隔离型数据区：JVM 栈、本地方法栈(JNI)、程序计数器</p>
+<h4 id="图-6"><a href="#图-6" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/运行时数据图.png" alt="运行时数据图.png"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;谈谈JVM 各种过程， XMind等我整理一下，稍后贴出 囧～&lt;br&gt;欢迎指教..&lt;br&gt;&lt;strong&gt;update:&lt;/strong&gt; 2016-08-03 14:44:12 更新了图&lt;br&gt;
     
     </summary>
     

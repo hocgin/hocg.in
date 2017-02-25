@@ -69,7 +69,7 @@
 <meta property="og:url" content="http://hocg.in/2017/02/24/Nginx-部署/index.html">
 <meta property="og:site_name" content="Hocgin (๑`灬´๑)">
 <meta property="og:description" content="🎽 Nginx 是一个很强大的高性能Web和反向代理服务器">
-<meta property="og:updated_time" content="2017-02-25T07:25:41.000Z">
+<meta property="og:updated_time" content="2017-02-25T07:32:13.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Nginx 部署">
 <meta name="twitter:description" content="🎽 Nginx 是一个很强大的高性能Web和反向代理服务器">
@@ -352,7 +352,7 @@
 <p>Error:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">./configure: error: the HTTP rewrite module requires the PCRE library.</div><div class="line">You can either disable the module by using --without-http_rewrite_module</div><div class="line">option, or install the PCRE library into the system, or build the PCRE library</div><div class="line">statically from the source with nginx by using --with-pcre=&lt;path&gt; option.</div></pre></td></tr></table></figure></p>
 <p>缺失<code>PCRE</code>, 移步官网下载(<code>顶部有链接</code>), 我是在<code>/opt</code>目录中解压<br><strong>注</strong>: pcre 没有 <code>2</code></p>
 <blockquote>
-<p>以下操作均在<code>/opt</code>目录</p>
+<p>以下操作均在<code>/opt</code>目录  </p>
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">\# tar -jxvf pcre-8.38.tar.bz2</div><div class="line">\# cd pcre-8.38</div><div class="line">\# ./configure &amp;&amp; make &amp;&amp; make install</div></pre></td></tr></table></figure>
 <p>回到<code>/opt/nginx-1.10.1</code>目录继续进行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">\# ./configure --with-pcre=/opt/pcre-8.38</div></pre></td></tr></table></figure></p>
@@ -362,15 +362,17 @@
 <p>以下操作均在<code>/opt</code>目录<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">\# tar -zxvf zlib-1.2.8.tar.gz</div><div class="line">\# cd zlib-1.2.8</div><div class="line">\# ./configure &amp;&amp; make &amp;&amp; make install</div></pre></td></tr></table></figure></p>
 </blockquote>
 <p>回到<code>/opt/nginx-1.10.1</code>目录继续进行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">\# ./configure --with-pcre=/opt/pcre-8.38 --with-zlib=/opt/zlib-1.2.8</div><div class="line">\# make</div><div class="line">\# make install</div></pre></td></tr></table></figure></p>
-<p>至此，安装结束。可查看<code>ls /usr/local/nginx/</code>目录<br>显示如下文件:<br>/usr/local/nginx/<br>|– conf<br>|   |– fastcgi.conf<br>|   |– fastcgi.conf.default<br>|   |– fastcgi_params<br>|   |– fastcgi_params.default<br>|   |– koi-utf<br>|   |– koi-win<br>|   |– mime.types<br>|   |– mime.types.default<br>|   |– nginx.conf<br>|   |– nginx.conf.default<br>|   |– scgi_params<br>|   |– scgi_params.default<br>|   |– uwsgi_params<br>|   |– uwsgi_params.default<br>|   <code>-- win-utf
-|-- html
-|   |-- 50x.html
-|</code>– index.html<br>|– logs<br><code>-- sbin</code>– nginx</p>
+<p>至此，安装结束。可查看<code>ls /usr/local/nginx/</code>目录<br>显示如下文件:<br>/usr/local/nginx/<br>|– conf<br>|   |– fastcgi.conf<br>|   |– fastcgi.conf.default<br>|   |– fastcgi_params<br>|   |– fastcgi_params.default<br>|   |– koi-utf<br>|   |– koi-win<br>|   |– mime.types<br>|   |– mime.types.default<br>|   |– nginx.conf<br>|   |– nginx.conf.default<br>|   |– scgi_params<br>|   |– scgi_params.default<br>|   |– uwsgi_params<br>|   |– uwsgi_params.default<br>|   <code>-- win-utf  
+|-- html  
+|   |-- 50x.html  
+|</code>– index.html<br>|– logs<br><code>-- sbin</code>– nginx  </p>
 <h2 id="基础命令"><a href="#基础命令" class="headerlink" title="基础命令"></a>基础命令</h2><blockquote>
-<p>以下命令均在<code>/usr/local/nginx</code>目录下运行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"># 启动</div><div class="line">./sbin/nginx</div><div class="line"># 检查配置</div><div class="line">./sbin/nginx -t</div><div class="line"># 重新加载配置</div><div class="line">./sbin/nginx -s reload</div><div class="line"># 查看配置文件</div><div class="line">cat ./conf/nginx.conf</div></pre></td></tr></table></figure></p>
+<p>以下命令均在<code>/usr/local/nginx</code>目录下运行  </p>
 </blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"># 启动</div><div class="line">./sbin/nginx</div><div class="line"># 检查配置</div><div class="line">./sbin/nginx -t</div><div class="line"># 重新加载配置</div><div class="line">./sbin/nginx -s reload</div><div class="line"># 查看配置文件</div><div class="line">cat ./conf/nginx.conf</div></pre></td></tr></table></figure>
 <h2 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h2><h3 id="nginx-conf配置"><a href="#nginx-conf配置" class="headerlink" title="nginx.conf配置"></a><code>nginx.conf</code>配置</h3><p><a href="http://blog.csdn.net/tjcyjd/article/details/50695922" target="_blank" rel="external">字段详解</a></p>
-<h3 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h3>
+<h3 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h3><p><strong>待续ing</strong></p>
+
       
     </div>
 
