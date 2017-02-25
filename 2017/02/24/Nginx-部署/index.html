@@ -69,12 +69,12 @@
 <meta property="og:url" content="http://hocg.in/2017/02/24/Nginx-部署/index.html">
 <meta property="og:site_name" content="Hocgin (๑`灬´๑)">
 <meta property="og:description" content="🎽  Nginx 是一个很强大的高性能Web和反向代理服务器">
-<meta property="og:image" content="http://baidu.com/E3B25E4D-8D26-4E4D-BBA2-F77F7B089FA5.png">
-<meta property="og:updated_time" content="2017-02-25T07:40:35.000Z">
+<meta property="og:image" content="http://7xs6lq.com1.z0.glb.clouddn.com/E3B25E4D-8D26-4E4D-BBA2-F77F7B089FA5.png">
+<meta property="og:updated_time" content="2017-02-25T09:17:57.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Nginx 部署">
 <meta name="twitter:description" content="🎽  Nginx 是一个很强大的高性能Web和反向代理服务器">
-<meta name="twitter:image" content="http://baidu.com/E3B25E4D-8D26-4E4D-BBA2-F77F7B089FA5.png">
+<meta name="twitter:image" content="http://7xs6lq.com1.z0.glb.clouddn.com/E3B25E4D-8D26-4E4D-BBA2-F77F7B089FA5.png">
 
 
 
@@ -361,11 +361,12 @@
 <p>Error:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">./configure: error: the HTTP gzip module requires the zlib library.</div><div class="line">You can either disable the module by using --without-http_gzip_module</div><div class="line">option, or install the zlib library into the system, or build the zlib library</div><div class="line">statically from the source with nginx by using --with-zlib=&lt;path&gt; option.</div></pre></td></tr></table></figure></p>
 <p>原因是缺失<code>zlib</code>,移步官网下载(<code>顶部有链接</code>), 同样是在<code>/opt</code>目录中解压</p>
 <blockquote>
-<p>以下操作均在<code>/opt</code>目录<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"># tar -zxvf zlib-1.2.8.tar.gz</div><div class="line"># cd zlib-1.2.8</div><div class="line"># ./configure &amp;&amp; make &amp;&amp; make install</div></pre></td></tr></table></figure></p>
+<p>以下操作均在<code>/opt</code>目录  </p>
 </blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"># tar -zxvf zlib-1.2.8.tar.gz</div><div class="line"># cd zlib-1.2.8</div><div class="line"># ./configure &amp;&amp; make &amp;&amp; make install</div></pre></td></tr></table></figure>
 <p>回到<code>/opt/nginx-1.10.1</code>目录继续进行</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"># ./configure --with-pcre=/opt/pcre-8.38 --with-zlib=/opt/zlib-1.2.8</div><div class="line"># make</div><div class="line"># make install</div></pre></td></tr></table></figure>
-<p>至此，安装结束。可查看<code>ls /usr/local/nginx/</code>目录<br>显示如下文件:<br>/usr/local/nginx/<br><img src="http://baidu.com/E3B25E4D-8D26-4E4D-BBA2-F77F7B089FA5.png" alt="image"></p>
+<p>至此，安装结束。可查看<code>ls /usr/local/nginx/</code>目录<br>显示如下文件:<br>/usr/local/nginx/<br><img src="http://7xs6lq.com1.z0.glb.clouddn.com/E3B25E4D-8D26-4E4D-BBA2-F77F7B089FA5.png" alt="image"></p>
 <h2 id="基础命令"><a href="#基础命令" class="headerlink" title="基础命令"></a>基础命令</h2><blockquote>
 <p>以下命令均在<code>/usr/local/nginx</code>目录下运行  </p>
 </blockquote>
