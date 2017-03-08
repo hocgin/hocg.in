@@ -45,7 +45,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Tips,Redis," />
+  <meta name="keywords" content="Hocgin, hocgin, 洪承金" />
 
 
 
@@ -63,16 +63,15 @@
 
 
 
-<meta name="description" content="Redis 的部署和部位设计的实践, 还有常见问题的梳理! 💪">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Redis 相关">
-<meta property="og:url" content="http://hocg.in/2016/10/20/Redis-相关/index.html">
+<meta name="description" content="Ubuntu | Java | Android | HTML5 | CSS3">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hocgin (๑`灬´๑)">
+<meta property="og:url" content="http://hocg.in/archives/2017/03/index.html">
 <meta property="og:site_name" content="Hocgin (๑`灬´๑)">
-<meta property="og:description" content="Redis 的部署和部位设计的实践, 还有常见问题的梳理! 💪">
-<meta property="og:updated_time" content="2017-02-04T05:47:13.000Z">
+<meta property="og:description" content="Ubuntu | Java | Android | HTML5 | CSS3">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Redis 相关">
-<meta name="twitter:description" content="Redis 的部署和部位设计的实践, 还有常见问题的梳理! 💪">
+<meta name="twitter:title" content="Hocgin (๑`灬´๑)">
+<meta name="twitter:description" content="Ubuntu | Java | Android | HTML5 | CSS3">
 
 
 
@@ -90,7 +89,7 @@
   };
 </script>
 
-  <title> Redis 相关 | Hocgin (๑`灬´๑) </title>
+  <title> 归档 | Hocgin (๑`灬´๑) </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -120,7 +119,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container one-collumn sidebar-position-left  page-archive  ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -241,219 +240,66 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
+  <section id="posts" class="posts-collapse">
+    <span class="archive-move-on"></span>
+
+    <span class="archive-page-counter">
+      
+      
+      
+        
+      
+      嗯..! 目前共计 19 篇日志。 继续努力。
+    </span>
+
     
 
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                Redis 相关
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-10-20T09:15:51+08:00" content="2016-10-20">
-              2016-10-20
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Server/" itemprop="url" rel="index">
-                    <span itemprop="name">Server</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/10/20/Redis-相关/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/20/Redis-相关/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/10/20/Redis-相关/" class="leancloud_visitors" data-flag-title="Redis 相关">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
-      
-        <p>  Redis 的部署和部位设计的实践, 还有常见问题的梳理! 💪<br><a id="more"></a></p>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><a href="http://redis.io/download" target="_blank" rel="external">官网</a></p>
-<h2 id="详情"><a href="#详情" class="headerlink" title="详情"></a>详情</h2><h3 id="默认项"><a href="#默认项" class="headerlink" title="默认项"></a>默认项</h3><ul>
-<li>端口 <code>6379</code></li>
-</ul>
-<h3 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h3><p>redis-3.2.4/<br>|– redis.conf <code>redis配置文件</code><br><code>-- src</code>编译后目录<code>|-- redis-server</code>启动bit文件<code>`-- redis-cli</code>终端bit文件`</p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><blockquote>
-<p>以下操作均在<code>/opt</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"># 下载</div><div class="line">wget http://download.redis.io/releases/redis-3.2.4.tar.gz</div><div class="line"># 解压</div><div class="line">tar -zxvf redis-3.2.4.tar.gz</div><div class="line">cd redis-3.2.4</div><div class="line"># 编译， 生成`src`目录</div><div class="line">make</div></pre></td></tr></table></figure></p>
-</blockquote>
-<h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><blockquote>
-<p>以下操作均在<code>/opt</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"># 默认配置运行</div><div class="line">./redis-3.2.4/src/redis-server</div><div class="line"># 指定配置文件运行</div><div class="line">./redis-3.2.4/src/redis-server [config file]</div></pre></td></tr></table></figure></p>
-</blockquote>
-<h2 id="疑问？"><a href="#疑问？" class="headerlink" title="疑问？"></a>疑问？</h2><ul>
-<li><p>如何使<code>redis</code>后台运行?</p>
-<blockquote>
-<p>更改配置文件, 找到<code>daemonize</code>字段,更改<code>no</code>为<code>yes</code>, 重启<code>redis</code> <strong>切记！要指定配置文件</strong></p>
-</blockquote>
-</li>
-<li><p>如何更改<code>redis</code>默认<code>6379</code>端口?</p>
-<blockquote>
-<p>更改配置文件, 找到<code>port</code>字段,更改为指定端口, 重启<code>redis</code> <strong>切记！要指定配置文件</strong></p>
-</blockquote>
-</li>
-<li><p>如何设置<code>redis</code>的验证密码?</p>
-<blockquote>
-<p>更改配置文件, 找到<code>requirepass</code>字段, 设置相应的验证密码, 重启<code>redis</code> <strong>切记！要指定配置文件</strong><br>由于增加了验证密码，因此客户端连接命令为<code>redis-cli –a [upassword]</code></p>
-</blockquote>
-</li>
-</ul>
-
-      
-    </div>
-
-    <div>
       
         
-      
-    </div>
-
-    <footer class="post-footer">
-      <! -- 添加打赏图标 start -->
-      
-      <! -- 添加打赏图标 end -->
-
-      <! -- 添加微信图标 start -->
-      
-        
-        <div class="hocgin-container">
-          <div class="folder">
-           <div class="paper">
-        	<img width="100%" src="http://7xs6lq.com1.z0.glb.clouddn.com/img/un/ali.pay.500.png"/>
-            </div>
-          </div>
-        </div>
-	<div class="hocgin-description">(๑•̀ω•́๑)请我喝杯Coffee！</div>
-        
-      
-      <! -- 添加微信图标 end -->
-
-      
-        <div class="post-tags">
-          
-            <a href="/tags/Tips/" rel="tag">#Tips</a>
-          
-            <a href="/tags/Redis/" rel="tag">#Redis</a>
-          
+        <div class="collection-title">
+          <h2 class="archive-year motion-element" id="archive-year-2017">2017</h2>
         </div>
       
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2016/08/31/Ngrok使用指南/" rel="next" title="Ngrok使用指南">
-                <i class="fa fa-chevron-left"></i> Ngrok使用指南
-              </a>
-            
-          </div>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/01/16/关于log4j报错/" rel="prev" title="关于log4j报错">
-                关于log4j报错 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
       
 
       
-      
-    </footer>
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h1 class="post-title">
+        
+            <a class="post-title-link" href="/2017/03/01/PHP-laravel-快速入门/" itemprop="url">
+              
+                <span itemprop="name">PHP Laravel 快速入门</span>
+              
+            </a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2017-03-01T14:59:38+08:00"
+              content="2017-03-01" >
+          03-01
+        </time>
+      </div>
+
+    </header>
   </article>
 
 
 
-    <div class="post-spread">
-      
-        <div class="ds-share flat" data-thread-key="2016/10/20/Redis-相关/"
-     data-title="Redis 相关"
-     data-content=""
-     data-url="http://hocg.in/2016/10/20/Redis-相关/">
-  <div class="ds-share-inline">
-    <ul  class="ds-share-icons-16">
+    
 
-      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
-      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
-      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
-      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
-      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+  </section>
 
-    </ul>
-    <div class="ds-share-icons-more">
-    </div>
-  </div>
-</div>
-      
-    </div>
-  </div>
+  
+
 
 
           </div>
@@ -461,14 +307,6 @@
 
 
           
-  <div class="comments" id="comments">
-    
-      <div class="ds-thread" data-thread-key="2016/10/20/Redis-相关/"
-           data-title="Redis 相关" data-url="http://hocg.in/2016/10/20/Redis-相关/">
-      </div>
-    
-  </div>
-
 
         </div>
         
@@ -488,17 +326,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel ">
+      <section class="site-overview sidebar-panel  sidebar-panel-active ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/default_avatar.jpg"
@@ -593,23 +422,6 @@
       </section>
 
       
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc-indicator-top post-toc-indicator">
-            <i class="fa fa-angle-double-up"></i>
-          </div>
-          <div class="post-toc">
-            
-              
-            
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#详情"><span class="nav-number">2.</span> <span class="nav-text">详情</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#默认项"><span class="nav-number">2.1.</span> <span class="nav-text">默认项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#目录结构"><span class="nav-number">2.2.</span> <span class="nav-text">目录结构</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">3.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#指令"><span class="nav-number">4.</span> <span class="nav-text">指令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#疑问？"><span class="nav-number">5.</span> <span class="nav-text">疑问？</span></a></li></ol></div>
-            
-          </div>
-          <div class="post-toc-indicator-bottom post-toc-indicator">
-            <i class="fa fa-angle-double-down"></i>
-          </div>
-        </section>
-      
 
     </div>
   </aside>
@@ -703,165 +515,10 @@
 
   
   
-<script type="text/javascript" src="/js/src/scrollspy.js?v=0.5.0"></script>
-
-<script type="text/javascript" id="sidebar.toc.highlight">
-  $(document).ready(function () {
-    var tocSelector = '.post-toc';
-    var $tocSelector = $(tocSelector);
-    var activeCurrentSelector = '.active-current';
-
-    $tocSelector
-      .on('activate.bs.scrollspy', function () {
-        var $currentActiveElement = $(tocSelector + ' .active').last();
-
-        removeCurrentActiveClass();
-        $currentActiveElement.addClass('active-current');
-
-        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
-      })
-      .on('clear.bs.scrollspy', function () {
-        removeCurrentActiveClass();
-      });
-
-    function removeCurrentActiveClass () {
-      $(tocSelector + ' ' + activeCurrentSelector)
-        .removeClass(activeCurrentSelector.substring(1));
-    }
-
-    function processTOC () {
-      getTOCMaxHeight();
-      toggleTOCOverflowIndicators();
-    }
-
-    function getTOCMaxHeight () {
-      var height = $('.sidebar').height() -
-                   $tocSelector.position().top -
-                   $('.post-toc-indicator-bottom').height();
-
-      $tocSelector.css('height', height);
-
-      return height;
-    }
-
-    function toggleTOCOverflowIndicators () {
-      tocOverflowIndicator(
-        '.post-toc-indicator-top',
-        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
-      );
-
-      tocOverflowIndicator(
-        '.post-toc-indicator-bottom',
-        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
-      )
-    }
-
-    $(document).on('sidebar.motion.complete', function () {
-      processTOC();
-    });
-
-    $('body').scrollspy({ target: tocSelector });
-    $(window).on('resize', function () {
-      if ( $('.sidebar').hasClass('sidebar-active') ) {
-        processTOC();
-      }
-    });
-
-    onScroll($tocSelector);
-
-    function onScroll (element) {
-      element.on('mousewheel DOMMouseScroll', function (event) {
-          var oe = event.originalEvent;
-          var delta = oe.wheelDelta || -oe.detail;
-
-          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
-          event.preventDefault();
-
-          toggleTOCOverflowIndicators();
-      });
-    }
-
-    function tocOverflowIndicator (indicator, action) {
-      var $indicator = $(indicator);
-      var opacity = action === 'show' ? 1 : 0;
-      $indicator.velocity ?
-        $indicator.velocity('stop').velocity({
-          opacity: opacity
-        }, { duration: 100 }) :
-        $indicator.stop().animate({
-          opacity: opacity
-        }, 100);
-    }
-
-  });
-</script>
-
-<script type="text/javascript" id="sidebar.nav">
-  $(document).ready(function () {
-    var html = $('html');
-    var TAB_ANIMATE_DURATION = 200;
-    var hasVelocity = $.isFunction(html.velocity);
-
-    $('.sidebar-nav li').on('click', function () {
-      var item = $(this);
-      var activeTabClassName = 'sidebar-nav-active';
-      var activePanelClassName = 'sidebar-panel-active';
-      if (item.hasClass(activeTabClassName)) {
-        return;
-      }
-
-      var currentTarget = $('.' + activePanelClassName);
-      var target = $('.' + item.data('target'));
-
-      hasVelocity ?
-        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
-          target
-            .velocity('stop')
-            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
-            .addClass(activePanelClassName);
-        }) :
-        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
-          currentTarget.hide();
-          target
-            .stop()
-            .css({'opacity': 0, 'display': 'block'})
-            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
-              currentTarget.removeClass(activePanelClassName);
-              target.addClass(activePanelClassName);
-            });
-        });
-
-      item.siblings().removeClass(activeTabClassName);
-      item.addClass(activeTabClassName);
-    });
-
-    $('.post-toc a').on('click', function (e) {
-      e.preventDefault();
-      var targetSelector = NexT.utils.escapeSelector(this.getAttribute('href'));
-      var offset = $(targetSelector).offset().top;
-      hasVelocity ?
-        html.velocity('stop').velocity('scroll', {
-          offset: offset  + 'px',
-          mobileHA: false
-        }) :
-        $('html, body').stop().animate({
-          scrollTop: offset
-        }, 500);
-    });
-
-    // Expand sidebar on post detail page by default, when post has a toc.
-    NexT.motion.middleWares.sidebar = function () {
-      var $tocContent = $('.post-toc-content');
-
-      if (CONFIG.sidebar.display === 'post' || CONFIG.sidebar.display === 'always') {
-        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
-          NexT.utils.displaySidebar();
-        }
-      }
-    };
-  });
-</script>
-
+    <script type="text/javascript" id="motion.page.archive">
+      $('.archive-year').velocity('transition.slideLeftIn');
+    </script>
+  
 
 
   

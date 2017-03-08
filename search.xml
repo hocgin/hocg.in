@@ -4,6 +4,66 @@
   
     
     <entry>
+      <title><![CDATA[PHP Laravel 快速入门]]></title>
+      <url>http://hocg.in/2017/03/01/PHP-laravel-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/</url>
+      <content type="html"><![CDATA[<p>PHP 框架 Laravel 搭建开始, 慢慢更新~ 😜😜😜😜<br><a id="more"></a></p>
+<h1 id="Quit-Start"><a href="#Quit-Start" class="headerlink" title="Quit Start"></a>Quit Start</h1><p>一. 安装<code>composer</code>, 用于管理依赖</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># 全局安装 macOS</div><div class="line">brew update</div><div class="line">brew tap josegonzalez/homebrew-php</div><div class="line">brew tap homebrew/versions</div><div class="line">brew install php55-intl</div><div class="line">brew install josegonzalez/php/composer</div></pre></td></tr></table></figure>
+<p>二. 下载<code>laravel</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">composer global require &quot;laravel/installer&quot;</div></pre></td></tr></table></figure>
+<p>三. 创建项目</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">composer create-project laravel/laravel --prefer-dist</div></pre></td></tr></table></figure>
+<p>四. 关于如何使用<code>PhpStorm</code>  </p>
+<blockquote>
+<p>默认已经配置好PHP开发环境了!</p>
+</blockquote>
+<p>4.0.1 相关插件</p>
+<ul>
+<li>Laravel Plugin</li>
+<li><strong>[Optional]</strong> PHP Annotations Plugin</li>
+<li><strong>[Optional]</strong> Symfony2 Plugin</li>
+</ul>
+<p>4.1 配置<code>Composer</code></p>
+<ul>
+<li>右键项目根节点 -&gt; Composer -&gt; init composer, 配置<code>PHP解释器</code>和<code>Composer路径</code></li>
+</ul>
+<p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/874D3259-AB37-4EA4-BAAC-CA17674334C8.png" alt="image"></p>
+<ul>
+<li>右键项目根节点 -&gt; Composer -&gt; add dependency, 添加<code>barryvdh/laravel-ide-helper</code></li>
+</ul>
+<p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/2F36AE2A-A1A7-40D0-8668-26EB0038BBCE.png" alt="image"><br>或者</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">composer require barryvdh/laravel-ide-helper</div></pre></td></tr></table></figure>
+<p>4.2 编辑<code>config/app.php</code>文件, 在<code>providers</code>节点下面添加<br><img src="http://7xs6lq.com1.z0.glb.clouddn.com/4761A0E6-27E9-4544-B379-DE897A42E24E.png" alt="image"></p>
+<p>4.3 扩展命令工具</p>
+<ul>
+<li>Preferences -&gt; Tools -&gt; Command Line Tool Support</li>
+</ul>
+<p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/A84F6129-8F9E-4BC3-BAAA-D32FEFB7F1D5.png" alt="image"></p>
+<p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/3C942985-0082-4675-BA3F-1FCC3A83CD2B.png" alt="image"></p>
+<p><strong>使用</strong>: Tools -&gt; Run Command(⌘ + ⇧ + X)</p>
+<p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/363F317B-FED9-40AE-A30A-84216A3A2721.png" alt="image"></p>
+<p>4.4 配置 php-xdebug<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># 检查是否安装php-xdebug</div><div class="line">php -m</div></pre></td></tr></table></figure></p>
+<p>安装后，修改下php.ini把xdebug.so前的注释’;’去掉</p>
+<p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/5157CD6B-FD07-4F82-9DE6-9E8BEA21D504.png" alt="image"></p>
+<p>五. 配置启动<br><img src="http://7xs6lq.com1.z0.glb.clouddn.com/A1D8FA94-D5A1-46A6-AE09-B638BC4C5FCE.png" alt="image"></p>
+<p>六. 配置Debug</p>
+<p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/03337E90-7562-498F-A595-98FEA679EDDE.png" alt="image"><br>并且在根目录加入<code>debug.ini</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">xdebug.remote_enable = On</div><div class="line">xdebug.remote_autostart = On</div><div class="line">upload_max_filesize = 1000M</div><div class="line">post_max_size = 1005M</div><div class="line">max_execution_time = 120</div><div class="line"></div><div class="line">;xdebug.profiler_enable = On</div><div class="line">;xdebug.profiler_enable_trigger = Off</div><div class="line">;xdebug.profiler_output_dir = ./xdebug</div><div class="line">;xdebug.profiler_aggregate = On</div><div class="line">;xdebug.profiler_append = On</div><div class="line">;xdebug.profiler_output_name = &quot;cachegrind.out.%R.%u.%p&quot;</div></pre></td></tr></table></figure>
+<h1 id="资源"><a href="#资源" class="headerlink" title="资源"></a>资源</h1><p><a href="https://github.com/koomai/phpstorm-laravel-live-templates#requests--input" target="_blank" rel="external">Laravel Live Templates for PhpStorm</a><br><a href="https://laracasts.com/series/how-to-be-awesome-in-phpstorm/episodes/15" target="_blank" rel="external">Laravel 插件视频</a></p>
+<h2 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h2><ul>
+<li><p>继承<br><code>@extends</code></p>
+</li>
+<li><p>存在替换<br><code>@yield(&#39;content&#39;)</code><br><code>@section</code><br><code>@endsection</code></p>
+</li>
+<li><p>增加<br><code>@stack(&quot;appendCSS&quot;)</code><br><code>@push(&#39;appendCSS&#39;)</code><br><code>@endpush</code></p>
+</li>
+<li><p>注入<br><code>@inject(&quot;xx&quot;, &quot;xx[Name]&quot;)</code></p>
+</li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Nginx 部署]]></title>
       <url>http://hocg.in/2017/02/24/Nginx-%E9%83%A8%E7%BD%B2/</url>
       <content type="html"><![CDATA[<p>🎽  <a href="http://baike.baidu.com/link?url=6LDqhy3I7UWDkwOT6TS_s-d4Jsv9AVcA_yedSmd618s1BjJl-0NQ-roxjDF7jHazXWlTwbIHTv03_gWIWeRPUq" target="_blank" rel="external">Nginx</a> 是一个很强大的高性能Web和反向代理服务器<br><a id="more"></a></p>
@@ -601,23 +661,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[绿化NodeJS for linux版]]></title>
-      <url>http://hocg.in/2016/04/25/%E7%BB%BF%E5%8C%96nodejs-for-linux%E7%89%88/</url>
-      <content type="html"><![CDATA[<p>起因，为了方便hexo发布博客，所以想把NodeJS绿化在U盘上..<br>谁叫网上只有win版的呢！自己码起来～<br>绿化 o(╯□╰)o<br><a id="more"></a></p>
-<h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">Green4nodeJS</div><div class="line">├── hocgin.github.io // github博客目录</div><div class="line">├── node // nodejs基本目录</div><div class="line">│   ├── node-linux // nodejs源文件</div><div class="line">│   ├── cache // 创建一个空文件夹，即可</div><div class="line">│   ├── init-module // 创建一个空文件夹，即可</div><div class="line">│   └── userconfig // 创建一个空文件夹，即可</div><div class="line">└── init.sh // 初始化shell文件 *重要</div></pre></td></tr></table></figure>
-<h2 id="初始化文件"><a href="#初始化文件" class="headerlink" title="初始化文件"></a>初始化文件</h2><blockquote>
-<p>主要是加载配置环境，初始化变量</p>
-</blockquote>
-<p><code>init.sh</code> 内容<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">#!/bin/bash</div><div class="line"># Author: hocgin@gmail.com</div><div class="line"># -------------Use--------------</div><div class="line"># source init.sh or . init.sh</div><div class="line"># ------------------------------</div><div class="line">NOW_PATH=$(cd &quot;$(dirname &quot;$0&quot;)&quot;; pwd)</div><div class="line">NODE_NAME=&quot;node-linux&quot;</div><div class="line">NODE_HOME=$NOW_PATH&quot;/node/&quot;$NODE_NAME</div><div class="line">NODE_PATH=$NODE_HOME&quot;/bin&quot;</div><div class="line">NPM_PATH=$NODE_HOME&quot;/lib/node_modules/npm/bin&quot;</div><div class="line">sudo chmod +x -R $NPM_PATH&quot;/.&quot;</div><div class="line">export PATH=$PATH:$NODE_PATH:$NPM_PATH</div><div class="line"># &quot;/home/hocgin/.npmrc&quot;</div><div class="line">npm set userconfig $NOW_PATH&quot;/node/userconfig&quot;</div><div class="line"># &quot;/home/hocgin/.npm-init.js&quot;</div><div class="line">npm set init-module $NOW_PATH&quot;/node/init-module&quot;</div><div class="line"># &quot;/home/hocgin/.npm&quot;</div><div class="line">npm set cache  $NOW_PATH&quot;/node/cache&quot;</div></pre></td></tr></table></figure></p>
-<p>修改 <code>/node/node-linux/lib/node_modules/npm/bin/npm</code> 文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># NPM_CLI_JS=&quot;$basedir/node_modules/npm/bin/npm-cli.js&quot;</div><div class="line">NPM_CLI_JS=&quot;$basedir/npm-cli.js&quot;</div></pre></td></tr></table></figure></p>
-<p>完成</p>
-<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">source init.sh</div><div class="line"># Or</div><div class="line">. init.sh</div><div class="line"></div><div class="line">cd hocgin.github.io</div><div class="line"># 尽情hexo吧</div></pre></td></tr></table></figure>
-<p><code>注: 安装module时请加上 -g</code></p>
-<p>End</p>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[使用Maven下载jar包 linux版]]></title>
       <url>http://hocg.in/2016/04/25/%E4%BD%BF%E7%94%A8Maven%E4%B8%8B%E8%BD%BDjar%E5%8C%85-linux%E7%89%88/</url>
       <content type="html"><![CDATA[<p>这只是学习Shell的小脚本, 练手工具罢了.. 折腾!折腾啊<br><a id="more"></a></p>
@@ -630,6 +673,23 @@
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">project</span> <span class="attr">xmlns</span>=<span class="string">"http://maven.apache.org/POM/4.0.0"</span> <span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></span></div><div class="line">  <span class="attr">xsi:schemaLocation</span>=<span class="string">"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"</span>&gt;</div><div class="line">  <span class="comment">&lt;!-- 项目的名称 start --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">modelVersion</span>&gt;</span>4.0.0<span class="tag">&lt;/<span class="name">modelVersion</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>temp.download<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>temp-download<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!-- 项目的名称 end --&gt;</span></div><div class="line"></div><div class="line">	<span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></div><div class="line">      <span class="comment">&lt;!-- 要下载的jar start --&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.json<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>json<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">version</span>&gt;</span>20160212<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div><div class="line">     <span class="comment">&lt;!-- 要下载的jar end --&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">project</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>完成</p>
 <h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">source init.sh</div><div class="line"># Or</div><div class="line">. init.sh</div><div class="line"></div><div class="line">cd hocgin.github.io</div><div class="line"># 尽情hexo吧</div></pre></td></tr></table></figure>
+<p>End</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[绿化NodeJS for linux版]]></title>
+      <url>http://hocg.in/2016/04/25/%E7%BB%BF%E5%8C%96nodejs-for-linux%E7%89%88/</url>
+      <content type="html"><![CDATA[<p>起因，为了方便hexo发布博客，所以想把NodeJS绿化在U盘上..<br>谁叫网上只有win版的呢！自己码起来～<br>绿化 o(╯□╰)o<br><a id="more"></a></p>
+<h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">Green4nodeJS</div><div class="line">├── hocgin.github.io // github博客目录</div><div class="line">├── node // nodejs基本目录</div><div class="line">│   ├── node-linux // nodejs源文件</div><div class="line">│   ├── cache // 创建一个空文件夹，即可</div><div class="line">│   ├── init-module // 创建一个空文件夹，即可</div><div class="line">│   └── userconfig // 创建一个空文件夹，即可</div><div class="line">└── init.sh // 初始化shell文件 *重要</div></pre></td></tr></table></figure>
+<h2 id="初始化文件"><a href="#初始化文件" class="headerlink" title="初始化文件"></a>初始化文件</h2><blockquote>
+<p>主要是加载配置环境，初始化变量</p>
+</blockquote>
+<p><code>init.sh</code> 内容<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">#!/bin/bash</div><div class="line"># Author: hocgin@gmail.com</div><div class="line"># -------------Use--------------</div><div class="line"># source init.sh or . init.sh</div><div class="line"># ------------------------------</div><div class="line">NOW_PATH=$(cd &quot;$(dirname &quot;$0&quot;)&quot;; pwd)</div><div class="line">NODE_NAME=&quot;node-linux&quot;</div><div class="line">NODE_HOME=$NOW_PATH&quot;/node/&quot;$NODE_NAME</div><div class="line">NODE_PATH=$NODE_HOME&quot;/bin&quot;</div><div class="line">NPM_PATH=$NODE_HOME&quot;/lib/node_modules/npm/bin&quot;</div><div class="line">sudo chmod +x -R $NPM_PATH&quot;/.&quot;</div><div class="line">export PATH=$PATH:$NODE_PATH:$NPM_PATH</div><div class="line"># &quot;/home/hocgin/.npmrc&quot;</div><div class="line">npm set userconfig $NOW_PATH&quot;/node/userconfig&quot;</div><div class="line"># &quot;/home/hocgin/.npm-init.js&quot;</div><div class="line">npm set init-module $NOW_PATH&quot;/node/init-module&quot;</div><div class="line"># &quot;/home/hocgin/.npm&quot;</div><div class="line">npm set cache  $NOW_PATH&quot;/node/cache&quot;</div></pre></td></tr></table></figure></p>
+<p>修改 <code>/node/node-linux/lib/node_modules/npm/bin/npm</code> 文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># NPM_CLI_JS=&quot;$basedir/node_modules/npm/bin/npm-cli.js&quot;</div><div class="line">NPM_CLI_JS=&quot;$basedir/npm-cli.js&quot;</div></pre></td></tr></table></figure></p>
+<p>完成</p>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">source init.sh</div><div class="line"># Or</div><div class="line">. init.sh</div><div class="line"></div><div class="line">cd hocgin.github.io</div><div class="line"># 尽情hexo吧</div></pre></td></tr></table></figure>
+<p><code>注: 安装module时请加上 -g</code></p>
 <p>End</p>
 ]]></content>
     </entry>
