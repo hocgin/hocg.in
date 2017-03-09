@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://hocg.in/2016/03/20/%E5%AE%89%E8%A3%85%E5%AE%8CUbuntu%E5%90%8E-%E6%88%91%E8%AF%A5%E5%81%9A%E4%BB%80%E4%B9%88/</loc>
+    
+    <lastmod>2017-03-09T11:41:24.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://hocg.in/2017/03/01/PHP-laravel-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/</loc>
     
     <lastmod>2017-03-08T07:01:23.000Z</lastmod>
@@ -68,13 +75,6 @@
     <loc>http://hocg.in/2016/03/26/hexo-%E5%8A%9F%E8%83%BD%E6%89%A9%E5%B1%95/</loc>
     
     <lastmod>2017-02-04T05:34:09.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://hocg.in/2016/03/20/%E5%AE%89%E8%A3%85%E5%AE%8CUbuntu%E5%90%8E-%E6%88%91%E8%AF%A5%E5%81%9A%E4%BB%80%E4%B9%88/</loc>
-    
-    <lastmod>2017-02-04T05:28:40.000Z</lastmod>
     
   </url>
   

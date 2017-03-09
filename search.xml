@@ -1050,8 +1050,13 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">XMODIFIERS=&quot;@im=fcitx&quot;</div><div class="line">export XMODIFIERS</div></pre></td></tr></table></figure>
 <p>到</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"># ---------------------------------------------------------------------</div><div class="line"># Run the IDE.</div><div class="line"># ---------------------------------------------------------------------</div></pre></td></tr></table></figure>
-<h3 id="解决LC-CTYPE-cannot-change-locale-en-US-UTF-8-错误"><a href="#解决LC-CTYPE-cannot-change-locale-en-US-UTF-8-错误" class="headerlink" title="解决LC_CTYPE: cannot change locale (en_US.UTF-8) 错误"></a>解决<code>LC_CTYPE: cannot change locale (en_US.UTF-8)</code> 错误</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># 增加en_US.UTF-8</div><div class="line">locale-gen en_US.UTF-8</div></pre></td></tr></table></figure>
 <p>之前。<br><strong>通用</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo mv /usr/bin/ibus-daemon /usr/bin/ibus-daemon.fix</div></pre></td></tr></table></figure></p>
+<h3 id="解决LC-CTYPE-cannot-change-locale-en-US-UTF-8-错误"><a href="#解决LC-CTYPE-cannot-change-locale-en-US-UTF-8-错误" class="headerlink" title="解决LC_CTYPE: cannot change locale (en_US.UTF-8) 错误"></a>解决<code>LC_CTYPE: cannot change locale (en_US.UTF-8)</code> 错误</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># 增加en_US.UTF-8</div><div class="line">locale-gen en_US.UTF-8</div></pre></td></tr></table></figure>
+<h3 id="修复VMware故障，闪退"><a href="#修复VMware故障，闪退" class="headerlink" title="修复VMware故障，闪退"></a>修复<code>VMware</code>故障，闪退</h3><ol>
+<li>下载<a href="http://7xs6lq.com1.z0.glb.clouddn.com/Uefi.priv" target="_blank" rel="external">Uefi.priv</a>、<a href="http://7xs6lq.com1.z0.glb.clouddn.com/fix.sh" target="_blank" rel="external">fix.sh</a>、<a href="http://7xs6lq.com1.z0.glb.clouddn.com/Uefi.der" target="_blank" rel="external">Uefi.der</a>至于同一目录.</li>
+<li>执行<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sh fix.sh</div></pre></td></tr></table></figure>
+</li>
+</ol>
 ]]></content>
     </entry>
     
