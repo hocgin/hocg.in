@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hocg.in/"/>
-  <updated>2017-03-08T07:01:23.000Z</updated>
+  <updated>2017-03-31T07:41:34.000Z</updated>
   <id>http://hocg.in/</id>
   
   <author>
@@ -14,6 +14,106 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vue.js项目 部件简介 (未完待续)</title>
+    <link href="http://hocg.in/2017/03/31/Vue.js%E9%A1%B9%E7%9B%AE-%E9%83%A8%E4%BB%B6%E7%AE%80%E4%BB%8B/"/>
+    <id>http://hocg.in/2017/03/31/Vue.js项目-部件简介/</id>
+    <published>2017-03-31T07:32:36.000Z</published>
+    <updated>2017-03-31T07:41:34.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>🦋 目前国内前端MVVM最火的框架.. 前段时间写了一个<a href="https://github.com/hocgin/iPage" target="_blank" rel="external">About页面</a>, 这几天顺带整理一下知识点.<br><a id="more"></a></p>
+<h1 id="Vue-js"><a href="#Vue-js" class="headerlink" title="Vue.js"></a>Vue.js</h1><blockquote>
+<p>Vue.js是当下很火的一个JavaScript MVVM库，它是以数据驱动和组件化的思想构建的.<br>类似的有<code>Angular.js</code>.</p>
+</blockquote>
+<ul>
+<li>可以建立DOM和数据之间的绑定</li>
+<li>可以按功能/组件抽离HTML代码</li>
+</ul>
+<p><strong>相关</strong><br><a href="Vue.js-项目实践">Vue 项目实践 - 持续更新</a></p>
+<h3 id="功能部分"><a href="#功能部分" class="headerlink" title="功能部分"></a>功能部分</h3><h5 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h5><ul>
+<li>数值默认双向绑定</li>
+<li>支持 条件语法特性/功能函数/生命周期</li>
+<li>动态设定<code>style</code>/<code>class</code></li>
+<li>捆绑<code>event</code></li>
+<li>渲染生命周期<h5 id="高级"><a href="#高级" class="headerlink" title="高级"></a>高级</h5></li>
+<li>单页面组件</li>
+<li>自定义指令</li>
+<li>单元测试</li>
+<li>插件</li>
+</ul>
+<h3 id="单文件组件-vue"><a href="#单文件组件-vue" class="headerlink" title="单文件组件.vue"></a>单文件组件<code>.vue</code></h3><p><strong>定义:</strong><br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">h1</span>&gt;</span>This is title<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line">  export default &#123;</div><div class="line">    name: 'Title'</div><div class="line">  &#125;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p><strong>使用:</strong><br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"./assets/logo.png"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">Title</span>&gt;</span><span class="tag">&lt;/<span class="name">Title</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line">  import Title from './components/Title'</div><div class="line">  export default &#123;</div><div class="line">    name: 'app',</div><div class="line">    components: &#123;</div><div class="line">      Title</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h1 id="Vue-Router"><a href="#Vue-Router" class="headerlink" title="Vue Router"></a>Vue Router</h1><blockquote>
+<p>扩展 Vue<br>按字面意思来看为<code>Vue 路由</code><br>其实质也就是用于<strong>单页应用</strong>管理页面跳转, 负责路径解析.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span></div><div class="line"><span class="keyword">import</span> Router <span class="keyword">from</span> <span class="string">'vue-router'</span></div><div class="line"><span class="keyword">import</span> Hello <span class="keyword">from</span> <span class="string">'@/components/Hello'</span></div><div class="line"></div><div class="line">Vue.use(Router)</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">new</span> Router(&#123;</div><div class="line">  <span class="attr">routes</span>: [</div><div class="line">    &#123;</div><div class="line">      <span class="attr">path</span>: <span class="string">'/'</span>,</div><div class="line">      <span class="attr">name</span>: <span class="string">'Hello'</span>,</div><div class="line">      <span class="attr">component</span>: Hello</div><div class="line">    &#125;</div><div class="line">  ]</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+</blockquote>
+<h1 id="Vuex"><a href="#Vuex" class="headerlink" title="Vuex"></a>Vuex</h1><blockquote>
+<p>扩展 Vue<br>当开发大型项目时, 为防止 Vue 太过臃肿, 使用 Vuex 管理数据状态.</p>
+</blockquote>
+<h1 id="webpack"><a href="#webpack" class="headerlink" title="webpack"></a>webpack</h1><blockquote>
+<p>一款模块加载器兼打包工具<br>使用模块的理念来处理 JS/CSS/图片等资源文件</p>
+</blockquote>
+<h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"># 安装</div><div class="line">npm install webpack --save-dev</div><div class="line"># 执行</div><div class="line">webpack</div><div class="line">   --display-error-details # 输出详细错误</div><div class="line">   --watch # 实时监听并自动打包</div><div class="line">   --config &lt;file&gt; # 指定配置文件打包</div><div class="line">   -p # 压缩打包</div><div class="line">   -d # 生成map映射文件</div></pre></td></tr></table></figure>
+<h2 id="配置-webpack-config-js"><a href="#配置-webpack-config-js" class="headerlink" title="配置(webpack.config.js)"></a>配置(webpack.config.js)</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">  <span class="comment">// 插件</span></div><div class="line">  plugins: [],</div><div class="line">  <span class="comment">// 页面入口</span></div><div class="line">  entry: &#123;&#125;,</div><div class="line">  <span class="comment">// 入口文件输出位置, 即处理后的文件存放位置</span></div><div class="line">  output: &#123;&#125;,</div><div class="line">  <span class="attr">module</span>: &#123;</div><div class="line">    <span class="comment">// 文件处理加载器</span></div><div class="line">    rules: []</div><div class="line">  &#125;,</div><div class="line">  <span class="comment">// 额外处理</span></div><div class="line">  resolve: &#123;</div><div class="line">    <span class="comment">// 自动扩展文件后缀, require时可以进行省略</span></div><div class="line">    extensions: [],</div><div class="line">    <span class="comment">// 模块定义别名, require时可以进行路径省略, 直接使用别名</span></div><div class="line">    alias: &#123;&#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="入口文件-main-index"><a href="#入口文件-main-index" class="headerlink" title="入口文件(main.index)"></a>入口文件(main.index)</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span></div><div class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">'./App'</span></div><div class="line"><span class="keyword">import</span> router <span class="keyword">from</span> <span class="string">'./router'</span></div><div class="line"><span class="keyword">import</span> store <span class="keyword">from</span> <span class="string">'./store/index'</span></div><div class="line"><span class="comment">// 引入js, 加载器会自动进行处理</span></div><div class="line"><span class="keyword">import</span> holderjs <span class="keyword">from</span> <span class="string">'holderjs'</span></div><div class="line"><span class="comment">// 引入 css/scss, 加载器会自动进行处理</span></div><div class="line"><span class="keyword">import</span> appScss <span class="keyword">from</span> <span class="string">'./assets/app.scss'</span></div><div class="line"><span class="keyword">import</span> fontAwesomeCss <span class="keyword">from</span> <span class="string">'./assets/font-awesome-4.7.0/css/font-awesome.css'</span></div><div class="line"></div><div class="line">Vue.config.productionTip = <span class="literal">false</span></div><div class="line"></div><div class="line"><span class="comment">/* eslint-disable no-new */</span></div><div class="line"><span class="keyword">new</span> Vue(&#123;</div><div class="line">  <span class="attr">el</span>: <span class="string">'#app'</span>,</div><div class="line">  router,</div><div class="line">  store,</div><div class="line">  <span class="attr">template</span>: <span class="string">'&lt;App/&gt;'</span>,</div><div class="line">  <span class="attr">components</span>: &#123; App &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<blockquote>
+<p>未完待续ing</p>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;🦋 目前国内前端MVVM最火的框架.. 前段时间写了一个&lt;a href=&quot;https://github.com/hocgin/iPage&quot;&gt;About页面&lt;/a&gt;, 这几天顺带整理一下知识点.&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Coder" scheme="http://hocg.in/categories/Coder/"/>
+    
+    
+      <category term="JavaScript" scheme="http://hocg.in/tags/JavaScript/"/>
+    
+      <category term="HTML5" scheme="http://hocg.in/tags/HTML5/"/>
+    
+      <category term="前端" scheme="http://hocg.in/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue 项目实践 - 持续更新</title>
+    <link href="http://hocg.in/2017/03/26/Vue.js-%E9%A1%B9%E7%9B%AE%E5%AE%9E%E8%B7%B5/"/>
+    <id>http://hocg.in/2017/03/26/Vue.js-项目实践/</id>
+    <published>2017-03-26T07:40:08.000Z</published>
+    <updated>2017-03-31T07:42:08.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>🐌 目前国内前端MVVM最火的框架.. 项目实践记录一些流程<br><a id="more"></a></p>
+<h1 id="相关"><a href="#相关" class="headerlink" title="相关"></a>相关</h1><ul>
+<li>vue<ul>
+<li>vue-router <code>给vue使用的路由</code></li>
+<li>vuex <code>一个专为 Vue.js 应用程序开发的状态管理模式</code></li>
+</ul>
+</li>
+<li>webpack</li>
+</ul>
+<h1 id="快速搭建项目"><a href="#快速搭建项目" class="headerlink" title="快速搭建项目"></a>快速搭建项目</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"># 构建项目</div><div class="line">npm install -g vue-cli</div><div class="line">vue init webpack &lt;project-name&gt;</div><div class="line"># 试行</div><div class="line">cd iPage</div><div class="line">npm install</div><div class="line">npm run dev</div><div class="line"></div><div class="line"># 安装 vuex</div><div class="line">npm install vuex -S</div><div class="line"></div><div class="line"># 安装 sass 开发支持</div><div class="line">npm install --save-dev sass-loader</div><div class="line">npm install --save-dev node-sass</div><div class="line">npm install --save-dev css-loader</div><div class="line">npm install --save-dev style-loader</div></pre></td></tr></table></figure>
+<h1 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">.  </div><div class="line">├── README.md  </div><div class="line">├── build  </div><div class="line">├── config   </div><div class="line">├── index.html  </div><div class="line">├── node_modules  </div><div class="line">├── package.json  </div><div class="line">├── src // 源码</div><div class="line">|    ├── App.vue    // 父组件  </div><div class="line">|    ├── assets     // 静态文件  </div><div class="line">|    ├── components // 公共组件  </div><div class="line">|    ├── main.js    // webpack打包入口文件  </div><div class="line">|    └── router  </div><div class="line">|          └── index.js // 页面路由  </div><div class="line">├── static  </div><div class="line">└── test</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;🐌 目前国内前端MVVM最火的框架.. 项目实践记录一些流程&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Coder" scheme="http://hocg.in/categories/Coder/"/>
+    
+    
+      <category term="JavaScript" scheme="http://hocg.in/tags/JavaScript/"/>
+    
+      <category term="HTML5" scheme="http://hocg.in/tags/HTML5/"/>
+    
+      <category term="前端" scheme="http://hocg.in/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>PHP Laravel 快速入门</title>
@@ -1047,9 +1147,9 @@
       <category term="Web" scheme="http://hocg.in/categories/Web/"/>
     
     
-      <category term="Hexo" scheme="http://hocg.in/tags/Hexo/"/>
-    
       <category term="HTML5" scheme="http://hocg.in/tags/HTML5/"/>
+    
+      <category term="Hexo" scheme="http://hocg.in/tags/Hexo/"/>
     
       <category term="CSS3" scheme="http://hocg.in/tags/CSS3/"/>
     
@@ -1395,116 +1495,6 @@
       <category term="Ubuntu" scheme="http://hocg.in/tags/Ubuntu/"/>
     
       <category term="Gnome" scheme="http://hocg.in/tags/Gnome/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hexo 使用小记</title>
-    <link href="http://hocg.in/2016/03/15/hexo-%E4%BD%BF%E7%94%A8/"/>
-    <id>http://hocg.in/2016/03/15/hexo-使用/</id>
-    <published>2016-03-15T13:31:42.000Z</published>
-    <updated>2017-01-12T02:37:02.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>  这是一篇关于如何使用hexo的收集Box <strong>&gt;</strong> 不定期更新吧！<br>  <strong>update</strong> 2017年01月12日10:33:55<br><a id="more"></a></p>
-<blockquote>
-<p>参照 <a href="https://hexo.io/zh-cn/docs/tag-plugins.html" target="_blank" rel="external">hexo 官方文档</a><br>参照 <a href="http://theme-next.iissnan.com/theme-settings.html" target="_blank" rel="external">next 主题</a><br>参照 <a href="https://github.com/iissnan/hexo-theme-next/wiki/%E5%88%9B%E5%BB%BA%E5%88%86%E7%B1%BB%E9%A1%B5%E9%9D%A2" target="_blank" rel="external">next 主题 for github</a><br>参照 <a href="http://www.tuicool.com/articles/AfQnQjy/" target="_blank" rel="external">更多扩展使用</a></p>
-</blockquote>
-<h2 id="md文档头部"><a href="#md文档头部" class="headerlink" title="md文档头部"></a>md文档头部</h2><table>
-<thead>
-<tr>
-<th>参数</th>
-<th>描述</th>
-<th>默认值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>layout</td>
-<td>布局</td>
-<td>有哪些layout呢，请到 scaffolds 目录下查看，这些文件名称就是layout名称</td>
-</tr>
-<tr>
-<td>title</td>
-<td>标题</td>
-<td></td>
-</tr>
-<tr>
-<td>date</td>
-<td>建立日期</td>
-<td>文件建立日期</td>
-</tr>
-<tr>
-<td>updated</td>
-<td>更新日期</td>
-<td>文件更新日期</td>
-</tr>
-<tr>
-<td>comments</td>
-<td>开启文章的评论功能</td>
-<td>true</td>
-</tr>
-<tr>
-<td>tags</td>
-<td>标签（不适用于分页）</td>
-<td></td>
-</tr>
-<tr>
-<td>categories</td>
-<td>分类（不适用于分页）</td>
-<td></td>
-</tr>
-<tr>
-<td>permalink</td>
-<td>覆盖文章网址</td>
-<td></td>
-</tr>
-<tr>
-<td>description</td>
-<td>添加本页描述</td>
-<td>默认所有</td>
-</tr>
-<tr>
-<td>photos</td>
-<td>添加图片</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h2 id="hexo-基础命令"><a href="#hexo-基础命令" class="headerlink" title="hexo 基础命令"></a>hexo 基础命令</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"># 清除</div><div class="line">$ hexo clean</div><div class="line"># 上传 GitHub</div><div class="line">$ hexo deploy</div><div class="line"># 新建文章</div><div class="line">$ hexo new &quot;postName&quot;</div><div class="line"># 新建页面</div><div class="line">hexo new page &quot;pageName&quot;</div><div class="line"># 生成静态页面至public目录</div><div class="line">hexo generate</div><div class="line"># 开启预览访问端口（默认端口4000，&apos;ctrl + c&apos;关闭server）</div><div class="line">hexo server</div><div class="line"># 将.deploy目录部署到GitHub</div><div class="line">hexo deploy</div></pre></td></tr></table></figure>
-<h2 id="md-扩展"><a href="#md-扩展" class="headerlink" title=".md 扩展"></a>.md 扩展</h2><ol>
-<li><p>扩大图片宽度</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% fi image-url, alt, title %&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>显示 更多按钮</p>
-<figure class="highlight md"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">以上是摘要</div><div class="line"><span class="xml"><span class="comment">&lt;!--more--&gt;</span></span></div><div class="line">以下是余下全文</div></pre></td></tr></table></figure>
-</li>
-<li><p>使用标签别名</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% cq %&#125; 标签别名 &#123;% endcq %&#125;</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<h2 id="可能遇到的问题"><a href="#可能遇到的问题" class="headerlink" title="可能遇到的问题"></a>可能遇到的问题</h2><ol>
-<li>当你发布的<code>.md</code>文件中携带逗号<code>,</code>(已知)，在<code>多说</code>评论插件中将无法识别评论条数(就是文章顶部那个)<blockquote>
-<p>借鉴办法：替换文件命名，将逗号已<code>_</code>或<code> </code>分隔</p>
-</blockquote>
-</li>
-</ol>
-<h2 id="换电脑后-如何迁移？"><a href="#换电脑后-如何迁移？" class="headerlink" title="换电脑后, 如何迁移？"></a>换电脑后, 如何迁移？</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">// 为了使用hexo d来部署到git上，需要安装</div><div class="line">npm install hexo-deployer-git --save</div><div class="line">// 为了建立RSS订阅，需要安装</div><div class="line">npm install hexo-generator-feed --save</div><div class="line">// 为了建立站点地图，需要安装</div><div class="line">npm install hexo-generator-sitemap --save</div></pre></td></tr></table></figure>
-<ul>
-<li>可能会遇到 ‘./build/Release/DTraceProviderBindings’] code: ‘MODULE_NOT_FOUND’</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo --no-optional</div></pre></td></tr></table></figure>
-<h2 id="End"><a href="#End" class="headerlink" title="End"></a>End</h2>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;  这是一篇关于如何使用hexo的收集Box &lt;strong&gt;&amp;gt;&lt;/strong&gt; 不定期更新吧！&lt;br&gt;  &lt;strong&gt;update&lt;/strong&gt; 2017年01月12日10:33:55&lt;br&gt;
-    
-    </summary>
-    
-      <category term="Other" scheme="http://hocg.in/categories/Other/"/>
-    
-    
-      <category term="Hexo" scheme="http://hocg.in/tags/Hexo/"/>
     
   </entry>
   
