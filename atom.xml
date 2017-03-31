@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hocgin (๑`灬´๑)</title>
+  <title>hocgin (๑`灬´๑)</title>
   <subtitle>Great minds have purpose, others have wishes.</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://hocg.in/"/>
+  <link href="https://hocg.in/"/>
   <updated>2017-03-31T07:46:29.000Z</updated>
-  <id>http://hocg.in/</id>
+  <id>https://hocg.in/</id>
   
   <author>
-    <name>Hocgin</name>
+    <name>hocgin</name>
     <email>admin@hocg.in</email>
   </author>
   
@@ -17,8 +17,8 @@
   
   <entry>
     <title>Vue.js项目 部件简介 (未完待续)</title>
-    <link href="http://hocg.in/2017/03/31/Vue.js%E9%A1%B9%E7%9B%AE-%E9%83%A8%E4%BB%B6%E7%AE%80%E4%BB%8B/"/>
-    <id>http://hocg.in/2017/03/31/Vue.js项目-部件简介/</id>
+    <link href="https://hocg.in/2017/03/31/Vue.js%E9%A1%B9%E7%9B%AE-%E9%83%A8%E4%BB%B6%E7%AE%80%E4%BB%8B/"/>
+    <id>https://hocg.in/2017/03/31/Vue.js项目-部件简介/</id>
     <published>2017-03-31T07:32:36.000Z</published>
     <updated>2017-03-31T07:46:29.000Z</updated>
     
@@ -67,21 +67,21 @@
     
     </summary>
     
-      <category term="Coder" scheme="http://hocg.in/categories/Coder/"/>
+      <category term="Coder" scheme="https://hocg.in/categories/Coder/"/>
     
     
-      <category term="JavaScript" scheme="http://hocg.in/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="https://hocg.in/tags/JavaScript/"/>
     
-      <category term="HTML5" scheme="http://hocg.in/tags/HTML5/"/>
+      <category term="HTML5" scheme="https://hocg.in/tags/HTML5/"/>
     
-      <category term="前端" scheme="http://hocg.in/tags/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://hocg.in/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
   <entry>
     <title>Vue 项目实践 - 持续更新</title>
-    <link href="http://hocg.in/2017/03/26/Vue.js-%E9%A1%B9%E7%9B%AE%E5%AE%9E%E8%B7%B5/"/>
-    <id>http://hocg.in/2017/03/26/Vue.js-项目实践/</id>
+    <link href="https://hocg.in/2017/03/26/Vue.js-%E9%A1%B9%E7%9B%AE%E5%AE%9E%E8%B7%B5/"/>
+    <id>https://hocg.in/2017/03/26/Vue.js-项目实践/</id>
     <published>2017-03-26T07:40:08.000Z</published>
     <updated>2017-03-31T07:42:08.000Z</updated>
     
@@ -104,21 +104,21 @@
     
     </summary>
     
-      <category term="Coder" scheme="http://hocg.in/categories/Coder/"/>
+      <category term="Coder" scheme="https://hocg.in/categories/Coder/"/>
     
     
-      <category term="JavaScript" scheme="http://hocg.in/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="https://hocg.in/tags/JavaScript/"/>
     
-      <category term="HTML5" scheme="http://hocg.in/tags/HTML5/"/>
+      <category term="HTML5" scheme="https://hocg.in/tags/HTML5/"/>
     
-      <category term="前端" scheme="http://hocg.in/tags/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://hocg.in/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
   <entry>
     <title>PHP Laravel 快速入门</title>
-    <link href="http://hocg.in/2017/03/01/PHP-laravel-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/"/>
-    <id>http://hocg.in/2017/03/01/PHP-laravel-快速入门/</id>
+    <link href="https://hocg.in/2017/03/01/PHP-laravel-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/"/>
+    <id>https://hocg.in/2017/03/01/PHP-laravel-快速入门/</id>
     <published>2017-03-01T06:59:38.000Z</published>
     <updated>2017-03-08T07:01:23.000Z</updated>
     
@@ -184,19 +184,19 @@
     
     </summary>
     
-      <category term="Server" scheme="http://hocg.in/categories/Server/"/>
+      <category term="Server" scheme="https://hocg.in/categories/Server/"/>
     
     
-      <category term="Mac" scheme="http://hocg.in/tags/Mac/"/>
+      <category term="Mac" scheme="https://hocg.in/tags/Mac/"/>
     
-      <category term="PHP" scheme="http://hocg.in/tags/PHP/"/>
+      <category term="PHP" scheme="https://hocg.in/tags/PHP/"/>
     
   </entry>
   
   <entry>
     <title>Nginx 部署</title>
-    <link href="http://hocg.in/2017/02/24/Nginx-%E9%83%A8%E7%BD%B2/"/>
-    <id>http://hocg.in/2017/02/24/Nginx-部署/</id>
+    <link href="https://hocg.in/2017/02/24/Nginx-%E9%83%A8%E7%BD%B2/"/>
+    <id>https://hocg.in/2017/02/24/Nginx-部署/</id>
     <published>2017-02-24T01:12:22.000Z</published>
     <updated>2017-02-25T09:17:57.000Z</updated>
     
@@ -244,17 +244,17 @@
     
     </summary>
     
-      <category term="Server" scheme="http://hocg.in/categories/Server/"/>
+      <category term="Server" scheme="https://hocg.in/categories/Server/"/>
     
     
-      <category term="Ubuntu" scheme="http://hocg.in/tags/Ubuntu/"/>
+      <category term="Ubuntu" scheme="https://hocg.in/tags/Ubuntu/"/>
     
   </entry>
   
   <entry>
     <title>关于Chrome 插件开发的一些知识点</title>
-    <link href="http://hocg.in/2017/02/04/%E5%85%B3%E4%BA%8EChrome%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91%E7%9A%84%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
-    <id>http://hocg.in/2017/02/04/关于Chrome插件开发的一些知识点/</id>
+    <link href="https://hocg.in/2017/02/04/%E5%85%B3%E4%BA%8EChrome%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91%E7%9A%84%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
+    <id>https://hocg.in/2017/02/04/关于Chrome插件开发的一些知识点/</id>
     <published>2017-02-04T05:20:51.000Z</published>
     <updated>2017-02-04T06:01:35.000Z</updated>
     
@@ -308,19 +308,19 @@
     
     </summary>
     
-      <category term="IDE" scheme="http://hocg.in/categories/IDE/"/>
+      <category term="IDE" scheme="https://hocg.in/categories/IDE/"/>
     
     
-      <category term="HTML5" scheme="http://hocg.in/tags/HTML5/"/>
+      <category term="HTML5" scheme="https://hocg.in/tags/HTML5/"/>
     
-      <category term="Chrome" scheme="http://hocg.in/tags/Chrome/"/>
+      <category term="Chrome" scheme="https://hocg.in/tags/Chrome/"/>
     
   </entry>
   
   <entry>
     <title>关于log4j报错</title>
-    <link href="http://hocg.in/2017/01/16/%E5%85%B3%E4%BA%8Elog4j%E6%8A%A5%E9%94%99/"/>
-    <id>http://hocg.in/2017/01/16/关于log4j报错/</id>
+    <link href="https://hocg.in/2017/01/16/%E5%85%B3%E4%BA%8Elog4j%E6%8A%A5%E9%94%99/"/>
+    <id>https://hocg.in/2017/01/16/关于log4j报错/</id>
     <published>2017-01-16T00:09:27.000Z</published>
     <updated>2017-02-04T05:57:15.000Z</updated>
     
@@ -348,17 +348,17 @@
     
     </summary>
     
-      <category term="Coder" scheme="http://hocg.in/categories/Coder/"/>
+      <category term="Coder" scheme="https://hocg.in/categories/Coder/"/>
     
     
-      <category term="JAVA" scheme="http://hocg.in/tags/JAVA/"/>
+      <category term="JAVA" scheme="https://hocg.in/tags/JAVA/"/>
     
   </entry>
   
   <entry>
     <title>Redis 相关</title>
-    <link href="http://hocg.in/2016/10/20/Redis-%E7%9B%B8%E5%85%B3/"/>
-    <id>http://hocg.in/2016/10/20/Redis-相关/</id>
+    <link href="https://hocg.in/2016/10/20/Redis-%E7%9B%B8%E5%85%B3/"/>
+    <id>https://hocg.in/2016/10/20/Redis-相关/</id>
     <published>2016-10-20T01:15:51.000Z</published>
     <updated>2017-02-04T05:47:13.000Z</updated>
     
@@ -399,19 +399,19 @@
     
     </summary>
     
-      <category term="Server" scheme="http://hocg.in/categories/Server/"/>
+      <category term="Server" scheme="https://hocg.in/categories/Server/"/>
     
     
-      <category term="Tips" scheme="http://hocg.in/tags/Tips/"/>
+      <category term="Tips" scheme="https://hocg.in/tags/Tips/"/>
     
-      <category term="Redis" scheme="http://hocg.in/tags/Redis/"/>
+      <category term="Redis" scheme="https://hocg.in/tags/Redis/"/>
     
   </entry>
   
   <entry>
     <title>Ngrok使用指南</title>
-    <link href="http://hocg.in/2016/08/31/Ngrok%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/"/>
-    <id>http://hocg.in/2016/08/31/Ngrok使用指南/</id>
+    <link href="https://hocg.in/2016/08/31/Ngrok%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/"/>
+    <id>https://hocg.in/2016/08/31/Ngrok使用指南/</id>
     <published>2016-08-30T23:15:24.000Z</published>
     <updated>2017-02-04T05:39:31.000Z</updated>
     
@@ -507,19 +507,19 @@
     
     </summary>
     
-      <category term="Server" scheme="http://hocg.in/categories/Server/"/>
+      <category term="Server" scheme="https://hocg.in/categories/Server/"/>
     
     
-      <category term="Ngrok" scheme="http://hocg.in/tags/Ngrok/"/>
+      <category term="Ngrok" scheme="https://hocg.in/tags/Ngrok/"/>
     
-      <category term="Tip" scheme="http://hocg.in/tags/Tip/"/>
+      <category term="Tip" scheme="https://hocg.in/tags/Tip/"/>
     
   </entry>
   
   <entry>
     <title>Nexus 入门</title>
-    <link href="http://hocg.in/2016/08/24/Nexus%E5%85%A5%E9%97%A8/"/>
-    <id>http://hocg.in/2016/08/24/Nexus入门/</id>
+    <link href="https://hocg.in/2016/08/24/Nexus%E5%85%A5%E9%97%A8/"/>
+    <id>https://hocg.in/2016/08/24/Nexus入门/</id>
     <published>2016-08-24T11:03:01.000Z</published>
     <updated>2016-10-26T09:01:49.000Z</updated>
     
@@ -566,19 +566,19 @@
     
     </summary>
     
-      <category term="Server" scheme="http://hocg.in/categories/Server/"/>
+      <category term="Server" scheme="https://hocg.in/categories/Server/"/>
     
     
-      <category term="Tips" scheme="http://hocg.in/tags/Tips/"/>
+      <category term="Tips" scheme="https://hocg.in/tags/Tips/"/>
     
-      <category term="Nexus" scheme="http://hocg.in/tags/Nexus/"/>
+      <category term="Nexus" scheme="https://hocg.in/tags/Nexus/"/>
     
   </entry>
   
   <entry>
     <title>Android L 及以上版本Rom包中提取apk</title>
-    <link href="http://hocg.in/2016/08/07/Android-L-%E5%8F%8A%E4%BB%A5%E4%B8%8A%E7%89%88%E6%9C%ACRom%E5%8C%85%E4%B8%AD%E6%8F%90%E5%8F%96apk/"/>
-    <id>http://hocg.in/2016/08/07/Android-L-及以上版本Rom包中提取apk/</id>
+    <link href="https://hocg.in/2016/08/07/Android-L-%E5%8F%8A%E4%BB%A5%E4%B8%8A%E7%89%88%E6%9C%ACRom%E5%8C%85%E4%B8%AD%E6%8F%90%E5%8F%96apk/"/>
+    <id>https://hocg.in/2016/08/07/Android-L-及以上版本Rom包中提取apk/</id>
     <published>2016-08-07T11:19:29.000Z</published>
     <updated>2016-08-27T05:39:29.000Z</updated>
     
@@ -618,19 +618,19 @@
     
     </summary>
     
-      <category term="Mobile" scheme="http://hocg.in/categories/Mobile/"/>
+      <category term="Mobile" scheme="https://hocg.in/categories/Mobile/"/>
     
     
-      <category term="Android" scheme="http://hocg.in/tags/Android/"/>
+      <category term="Android" scheme="https://hocg.in/tags/Android/"/>
     
-      <category term="Tips" scheme="http://hocg.in/tags/Tips/"/>
+      <category term="Tips" scheme="https://hocg.in/tags/Tips/"/>
     
   </entry>
   
   <entry>
     <title>模块设计之对接同步订单模块</title>
-    <link href="http://hocg.in/2016/08/02/%E6%A8%A1%E5%9D%97%E8%AE%BE%E8%AE%A1%E4%B9%8B%E5%AF%B9%E6%8E%A5%E5%90%8C%E6%AD%A5%E8%AE%A2%E5%8D%95%E6%A8%A1%E5%9D%97/"/>
-    <id>http://hocg.in/2016/08/02/模块设计之对接同步订单模块/</id>
+    <link href="https://hocg.in/2016/08/02/%E6%A8%A1%E5%9D%97%E8%AE%BE%E8%AE%A1%E4%B9%8B%E5%AF%B9%E6%8E%A5%E5%90%8C%E6%AD%A5%E8%AE%A2%E5%8D%95%E6%A8%A1%E5%9D%97/"/>
+    <id>https://hocg.in/2016/08/02/模块设计之对接同步订单模块/</id>
     <published>2016-08-02T02:47:06.000Z</published>
     <updated>2017-02-04T05:42:52.000Z</updated>
     
@@ -674,19 +674,19 @@
     
     </summary>
     
-      <category term="Coder" scheme="http://hocg.in/categories/Coder/"/>
+      <category term="Coder" scheme="https://hocg.in/categories/Coder/"/>
     
     
-      <category term="设计思路" scheme="http://hocg.in/tags/%E8%AE%BE%E8%AE%A1%E6%80%9D%E8%B7%AF/"/>
+      <category term="设计思路" scheme="https://hocg.in/tags/%E8%AE%BE%E8%AE%A1%E6%80%9D%E8%B7%AF/"/>
     
-      <category term="Java" scheme="http://hocg.in/tags/Java/"/>
+      <category term="Java" scheme="https://hocg.in/tags/Java/"/>
     
   </entry>
   
   <entry>
     <title>模块设计之消息模块</title>
-    <link href="http://hocg.in/2016/07/30/%E6%A8%A1%E5%9D%97%E8%AE%BE%E8%AE%A1%E4%B9%8B%E6%B6%88%E6%81%AF%E6%A8%A1%E5%9D%97/"/>
-    <id>http://hocg.in/2016/07/30/模块设计之消息模块/</id>
+    <link href="https://hocg.in/2016/07/30/%E6%A8%A1%E5%9D%97%E8%AE%BE%E8%AE%A1%E4%B9%8B%E6%B6%88%E6%81%AF%E6%A8%A1%E5%9D%97/"/>
+    <id>https://hocg.in/2016/07/30/模块设计之消息模块/</id>
     <published>2016-07-30T11:25:56.000Z</published>
     <updated>2016-08-27T05:34:33.000Z</updated>
     
@@ -732,19 +732,19 @@
     
     </summary>
     
-      <category term="Coder" scheme="http://hocg.in/categories/Coder/"/>
+      <category term="Coder" scheme="https://hocg.in/categories/Coder/"/>
     
     
-      <category term="设计思路" scheme="http://hocg.in/tags/%E8%AE%BE%E8%AE%A1%E6%80%9D%E8%B7%AF/"/>
+      <category term="设计思路" scheme="https://hocg.in/tags/%E8%AE%BE%E8%AE%A1%E6%80%9D%E8%B7%AF/"/>
     
-      <category term="Java" scheme="http://hocg.in/tags/Java/"/>
+      <category term="Java" scheme="https://hocg.in/tags/Java/"/>
     
   </entry>
   
   <entry>
     <title>Mac的使用</title>
-    <link href="http://hocg.in/2016/07/02/Mac-%E4%BD%BF%E7%94%A8/"/>
-    <id>http://hocg.in/2016/07/02/Mac-使用/</id>
+    <link href="https://hocg.in/2016/07/02/Mac-%E4%BD%BF%E7%94%A8/"/>
+    <id>https://hocg.in/2016/07/02/Mac-使用/</id>
     <published>2016-07-02T02:47:06.000Z</published>
     <updated>2016-08-27T05:29:43.000Z</updated>
     
@@ -762,63 +762,19 @@
     
     </summary>
     
-      <category term="OS" scheme="http://hocg.in/categories/OS/"/>
+      <category term="OS" scheme="https://hocg.in/categories/OS/"/>
     
     
-      <category term="Tips" scheme="http://hocg.in/tags/Tips/"/>
+      <category term="Tips" scheme="https://hocg.in/tags/Tips/"/>
     
-      <category term="Mac" scheme="http://hocg.in/tags/Mac/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>谈JVM，各种过程</title>
-    <link href="http://hocg.in/2016/06/12/%E8%B0%88JVM-%E5%90%84%E7%A7%8D%E8%BF%87%E7%A8%8B/"/>
-    <id>http://hocg.in/2016/06/12/谈JVM-各种过程/</id>
-    <published>2016-06-12T11:37:49.000Z</published>
-    <updated>2016-08-27T05:35:49.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>谈谈JVM 各种过程， XMind等我整理一下，稍后贴出 囧～<br>欢迎指教..<br><strong>update:</strong> 2016-08-03 14:44:12 更新了图<br><a id="more"></a></p>
-<h3 id="总思路"><a href="#总思路" class="headerlink" title="总思路"></a>总思路</h3><p>编译过程 -&gt; 运行过程[类加载器过程(类的装载过程) -&gt; 执行过程]</p>
-<h4 id="图"><a href="#图" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/总思路-v1.png" alt="总思路-v1.png"></p>
-<h3 id="编译过程"><a href="#编译过程" class="headerlink" title="编译过程"></a>编译过程</h3><p>.java文件 -javac编译-&gt; .class文件       {-JIT编译(转化+优化)-&gt; 本地方法}[执行过程，当方法执行频率高]</p>
-<h4 id="图-1"><a href="#图-1" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/编译过程.png" alt="编译过程.png"></p>
-<hr>
-<h3 id="运行过程"><a href="#运行过程" class="headerlink" title="运行过程"></a>运行过程</h3><p>类加载器 -&gt; (执行引擎 -&gt; 本地库接口)[Java 运行时数据区] -&gt; 本地方法库</p>
-<h4 id="图-2"><a href="#图-2" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/运行过程.png" alt="运行过程.png"></p>
-<hr>
-<h3 id="类加载器过程"><a href="#类加载器过程" class="headerlink" title="类加载器过程"></a><strong>类加载器</strong>过程</h3><p>[启动]类加载器(JNI) -&gt; [扩展]类加载器 -&gt; [系统]类加载器 -&gt; [自定义]类加载器</p>
-<h4 id="图-3"><a href="#图-3" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/类加载器过程.png" alt="类加载器过程.png"></p>
-<hr>
-<h3 id="类装载过程"><a href="#类装载过程" class="headerlink" title="类装载过程"></a><strong>类</strong>装载过程</h3><p>加载文件到JVM内存 -&gt; (校验语言规范 -&gt; 分配结构存储类的信息 -&gt; 该类常量池中符号更改为直接引用)[Linking] -&gt; 类初始化</p>
-<h4 id="图-4"><a href="#图-4" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/类装载过程.png" alt="类装载过程.png"></p>
-<hr>
-<h3 id="执行引擎执行过程-逐行读取指令"><a href="#执行引擎执行过程-逐行读取指令" class="headerlink" title="执行引擎执行过程(逐行读取指令)"></a><strong>执行引擎</strong>执行过程(逐行读取指令)</h3><p>Thread启动 -生成-&gt; JVM栈 -执行方法-&gt; 压入栈帧(包含 局部变量数组&amp;操作数栈&amp;运行时常量池) -&gt; 逐行读取指令&amp;&amp;解释(JVM栈帧 程序计数器存放下一条指令) -&gt; {JIT(转化+优化)-&gt; 本地方法}[当方法执行频率高] -执行&amp;运算-&gt; 结果(存放 操作数栈中) -&gt; 推出栈帧</p>
-<h4 id="图-5"><a href="#图-5" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/执行引擎执行过程.png" alt="执行引擎执行过程.png"></p>
-<hr>
-<h3 id="Java-运行时数据区-贯穿整个执行过程"><a href="#Java-运行时数据区-贯穿整个执行过程" class="headerlink" title="Java 运行时数据区(贯穿整个执行过程)"></a>Java 运行时数据区(贯穿整个执行过程)</h3><p>共享型数据区：方法区(含运行时常量池[存放方法&amp;变量的实际<strong>地址</strong>])、堆(存放对象实例)<br>隔离型数据区：JVM 栈、本地方法栈(JNI)、程序计数器</p>
-<h4 id="图-6"><a href="#图-6" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/运行时数据图.png" alt="运行时数据图.png"></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;谈谈JVM 各种过程， XMind等我整理一下，稍后贴出 囧～&lt;br&gt;欢迎指教..&lt;br&gt;&lt;strong&gt;update:&lt;/strong&gt; 2016-08-03 14:44:12 更新了图&lt;br&gt;
-    
-    </summary>
-    
-      <category term="Coder" scheme="http://hocg.in/categories/Coder/"/>
-    
-    
-      <category term="Java" scheme="http://hocg.in/tags/Java/"/>
-    
-      <category term="JVM" scheme="http://hocg.in/tags/JVM/"/>
+      <category term="Mac" scheme="https://hocg.in/tags/Mac/"/>
     
   </entry>
   
   <entry>
     <title>谈JVM，字节码</title>
-    <link href="http://hocg.in/2016/06/12/%E8%B0%88JVM-%E5%AD%97%E8%8A%82%E7%A0%81/"/>
-    <id>http://hocg.in/2016/06/12/谈JVM-字节码/</id>
+    <link href="https://hocg.in/2016/06/12/%E8%B0%88JVM-%E5%AD%97%E8%8A%82%E7%A0%81/"/>
+    <id>https://hocg.in/2016/06/12/谈JVM-字节码/</id>
     <published>2016-06-12T11:37:49.000Z</published>
     <updated>2016-08-27T05:35:58.000Z</updated>
     
@@ -967,19 +923,63 @@
     
     </summary>
     
-      <category term="Coder" scheme="http://hocg.in/categories/Coder/"/>
+      <category term="Coder" scheme="https://hocg.in/categories/Coder/"/>
     
     
-      <category term="Java" scheme="http://hocg.in/tags/Java/"/>
+      <category term="Java" scheme="https://hocg.in/tags/Java/"/>
     
-      <category term="JVM" scheme="http://hocg.in/tags/JVM/"/>
+      <category term="JVM" scheme="https://hocg.in/tags/JVM/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>谈JVM，各种过程</title>
+    <link href="https://hocg.in/2016/06/12/%E8%B0%88JVM-%E5%90%84%E7%A7%8D%E8%BF%87%E7%A8%8B/"/>
+    <id>https://hocg.in/2016/06/12/谈JVM-各种过程/</id>
+    <published>2016-06-12T11:37:49.000Z</published>
+    <updated>2016-08-27T05:35:49.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>谈谈JVM 各种过程， XMind等我整理一下，稍后贴出 囧～<br>欢迎指教..<br><strong>update:</strong> 2016-08-03 14:44:12 更新了图<br><a id="more"></a></p>
+<h3 id="总思路"><a href="#总思路" class="headerlink" title="总思路"></a>总思路</h3><p>编译过程 -&gt; 运行过程[类加载器过程(类的装载过程) -&gt; 执行过程]</p>
+<h4 id="图"><a href="#图" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/总思路-v1.png" alt="总思路-v1.png"></p>
+<h3 id="编译过程"><a href="#编译过程" class="headerlink" title="编译过程"></a>编译过程</h3><p>.java文件 -javac编译-&gt; .class文件       {-JIT编译(转化+优化)-&gt; 本地方法}[执行过程，当方法执行频率高]</p>
+<h4 id="图-1"><a href="#图-1" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/编译过程.png" alt="编译过程.png"></p>
+<hr>
+<h3 id="运行过程"><a href="#运行过程" class="headerlink" title="运行过程"></a>运行过程</h3><p>类加载器 -&gt; (执行引擎 -&gt; 本地库接口)[Java 运行时数据区] -&gt; 本地方法库</p>
+<h4 id="图-2"><a href="#图-2" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/运行过程.png" alt="运行过程.png"></p>
+<hr>
+<h3 id="类加载器过程"><a href="#类加载器过程" class="headerlink" title="类加载器过程"></a><strong>类加载器</strong>过程</h3><p>[启动]类加载器(JNI) -&gt; [扩展]类加载器 -&gt; [系统]类加载器 -&gt; [自定义]类加载器</p>
+<h4 id="图-3"><a href="#图-3" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/类加载器过程.png" alt="类加载器过程.png"></p>
+<hr>
+<h3 id="类装载过程"><a href="#类装载过程" class="headerlink" title="类装载过程"></a><strong>类</strong>装载过程</h3><p>加载文件到JVM内存 -&gt; (校验语言规范 -&gt; 分配结构存储类的信息 -&gt; 该类常量池中符号更改为直接引用)[Linking] -&gt; 类初始化</p>
+<h4 id="图-4"><a href="#图-4" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/类装载过程.png" alt="类装载过程.png"></p>
+<hr>
+<h3 id="执行引擎执行过程-逐行读取指令"><a href="#执行引擎执行过程-逐行读取指令" class="headerlink" title="执行引擎执行过程(逐行读取指令)"></a><strong>执行引擎</strong>执行过程(逐行读取指令)</h3><p>Thread启动 -生成-&gt; JVM栈 -执行方法-&gt; 压入栈帧(包含 局部变量数组&amp;操作数栈&amp;运行时常量池) -&gt; 逐行读取指令&amp;&amp;解释(JVM栈帧 程序计数器存放下一条指令) -&gt; {JIT(转化+优化)-&gt; 本地方法}[当方法执行频率高] -执行&amp;运算-&gt; 结果(存放 操作数栈中) -&gt; 推出栈帧</p>
+<h4 id="图-5"><a href="#图-5" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/执行引擎执行过程.png" alt="执行引擎执行过程.png"></p>
+<hr>
+<h3 id="Java-运行时数据区-贯穿整个执行过程"><a href="#Java-运行时数据区-贯穿整个执行过程" class="headerlink" title="Java 运行时数据区(贯穿整个执行过程)"></a>Java 运行时数据区(贯穿整个执行过程)</h3><p>共享型数据区：方法区(含运行时常量池[存放方法&amp;变量的实际<strong>地址</strong>])、堆(存放对象实例)<br>隔离型数据区：JVM 栈、本地方法栈(JNI)、程序计数器</p>
+<h4 id="图-6"><a href="#图-6" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/运行时数据图.png" alt="运行时数据图.png"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;谈谈JVM 各种过程， XMind等我整理一下，稍后贴出 囧～&lt;br&gt;欢迎指教..&lt;br&gt;&lt;strong&gt;update:&lt;/strong&gt; 2016-08-03 14:44:12 更新了图&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Coder" scheme="https://hocg.in/categories/Coder/"/>
+    
+    
+      <category term="Java" scheme="https://hocg.in/tags/Java/"/>
+    
+      <category term="JVM" scheme="https://hocg.in/tags/JVM/"/>
     
   </entry>
   
   <entry>
     <title>关于HTTPS</title>
-    <link href="http://hocg.in/2016/06/02/Https-%E7%AD%BE%E8%AF%81/"/>
-    <id>http://hocg.in/2016/06/02/Https-签证/</id>
+    <link href="https://hocg.in/2016/06/02/Https-%E7%AD%BE%E8%AF%81/"/>
+    <id>https://hocg.in/2016/06/02/Https-签证/</id>
     <published>2016-06-02T03:22:43.000Z</published>
     <updated>2017-02-04T05:37:54.000Z</updated>
     
@@ -1011,54 +1011,17 @@
     
     </summary>
     
-      <category term="Server" scheme="http://hocg.in/categories/Server/"/>
+      <category term="Server" scheme="https://hocg.in/categories/Server/"/>
     
     
-      <category term="HTTPS" scheme="http://hocg.in/tags/HTTPS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>绿化NodeJS for linux版</title>
-    <link href="http://hocg.in/2016/04/25/%E7%BB%BF%E5%8C%96nodejs-for-linux%E7%89%88/"/>
-    <id>http://hocg.in/2016/04/25/绿化nodejs-for-linux版/</id>
-    <published>2016-04-25T01:38:49.000Z</published>
-    <updated>2016-08-27T05:35:32.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>起因，为了方便hexo发布博客，所以想把NodeJS绿化在U盘上..<br>谁叫网上只有win版的呢！自己码起来～<br>绿化 o(╯□╰)o<br><a id="more"></a></p>
-<h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">Green4nodeJS</div><div class="line">├── hocgin.github.io // github博客目录</div><div class="line">├── node // nodejs基本目录</div><div class="line">│   ├── node-linux // nodejs源文件</div><div class="line">│   ├── cache // 创建一个空文件夹，即可</div><div class="line">│   ├── init-module // 创建一个空文件夹，即可</div><div class="line">│   └── userconfig // 创建一个空文件夹，即可</div><div class="line">└── init.sh // 初始化shell文件 *重要</div></pre></td></tr></table></figure>
-<h2 id="初始化文件"><a href="#初始化文件" class="headerlink" title="初始化文件"></a>初始化文件</h2><blockquote>
-<p>主要是加载配置环境，初始化变量</p>
-</blockquote>
-<p><code>init.sh</code> 内容<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">#!/bin/bash</div><div class="line"># Author: hocgin@gmail.com</div><div class="line"># -------------Use--------------</div><div class="line"># source init.sh or . init.sh</div><div class="line"># ------------------------------</div><div class="line">NOW_PATH=$(cd &quot;$(dirname &quot;$0&quot;)&quot;; pwd)</div><div class="line">NODE_NAME=&quot;node-linux&quot;</div><div class="line">NODE_HOME=$NOW_PATH&quot;/node/&quot;$NODE_NAME</div><div class="line">NODE_PATH=$NODE_HOME&quot;/bin&quot;</div><div class="line">NPM_PATH=$NODE_HOME&quot;/lib/node_modules/npm/bin&quot;</div><div class="line">sudo chmod +x -R $NPM_PATH&quot;/.&quot;</div><div class="line">export PATH=$PATH:$NODE_PATH:$NPM_PATH</div><div class="line"># &quot;/home/hocgin/.npmrc&quot;</div><div class="line">npm set userconfig $NOW_PATH&quot;/node/userconfig&quot;</div><div class="line"># &quot;/home/hocgin/.npm-init.js&quot;</div><div class="line">npm set init-module $NOW_PATH&quot;/node/init-module&quot;</div><div class="line"># &quot;/home/hocgin/.npm&quot;</div><div class="line">npm set cache  $NOW_PATH&quot;/node/cache&quot;</div></pre></td></tr></table></figure></p>
-<p>修改 <code>/node/node-linux/lib/node_modules/npm/bin/npm</code> 文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># NPM_CLI_JS=&quot;$basedir/node_modules/npm/bin/npm-cli.js&quot;</div><div class="line">NPM_CLI_JS=&quot;$basedir/npm-cli.js&quot;</div></pre></td></tr></table></figure></p>
-<p>完成</p>
-<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">source init.sh</div><div class="line"># Or</div><div class="line">. init.sh</div><div class="line"></div><div class="line">cd hocgin.github.io</div><div class="line"># 尽情hexo吧</div></pre></td></tr></table></figure>
-<p><code>注: 安装module时请加上 -g</code></p>
-<p>End</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;起因，为了方便hexo发布博客，所以想把NodeJS绿化在U盘上..&lt;br&gt;谁叫网上只有win版的呢！自己码起来～&lt;br&gt;绿化 o(╯□╰)o&lt;br&gt;
-    
-    </summary>
-    
-      <category term="Coder" scheme="http://hocg.in/categories/Coder/"/>
-    
-    
-      <category term="Tips" scheme="http://hocg.in/tags/Tips/"/>
-    
-      <category term="Ubuntu" scheme="http://hocg.in/tags/Ubuntu/"/>
-    
-      <category term="NodeJS" scheme="http://hocg.in/tags/NodeJS/"/>
+      <category term="HTTPS" scheme="https://hocg.in/tags/HTTPS/"/>
     
   </entry>
   
   <entry>
     <title>使用Maven下载jar包 linux版</title>
-    <link href="http://hocg.in/2016/04/25/%E4%BD%BF%E7%94%A8Maven%E4%B8%8B%E8%BD%BDjar%E5%8C%85-linux%E7%89%88/"/>
-    <id>http://hocg.in/2016/04/25/使用Maven下载jar包-linux版/</id>
+    <link href="https://hocg.in/2016/04/25/%E4%BD%BF%E7%94%A8Maven%E4%B8%8B%E8%BD%BDjar%E5%8C%85-linux%E7%89%88/"/>
+    <id>https://hocg.in/2016/04/25/使用Maven下载jar包-linux版/</id>
     <published>2016-04-25T01:38:49.000Z</published>
     <updated>2017-02-04T05:43:57.000Z</updated>
     
@@ -1081,21 +1044,58 @@
     
     </summary>
     
-      <category term="Coder" scheme="http://hocg.in/categories/Coder/"/>
+      <category term="Coder" scheme="https://hocg.in/categories/Coder/"/>
     
     
-      <category term="Tips" scheme="http://hocg.in/tags/Tips/"/>
+      <category term="Tips" scheme="https://hocg.in/tags/Tips/"/>
     
-      <category term="Maven" scheme="http://hocg.in/tags/Maven/"/>
+      <category term="Maven" scheme="https://hocg.in/tags/Maven/"/>
     
-      <category term="Shell" scheme="http://hocg.in/tags/Shell/"/>
+      <category term="Shell" scheme="https://hocg.in/tags/Shell/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>绿化NodeJS for linux版</title>
+    <link href="https://hocg.in/2016/04/25/%E7%BB%BF%E5%8C%96nodejs-for-linux%E7%89%88/"/>
+    <id>https://hocg.in/2016/04/25/绿化nodejs-for-linux版/</id>
+    <published>2016-04-25T01:38:49.000Z</published>
+    <updated>2016-08-27T05:35:32.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>起因，为了方便hexo发布博客，所以想把NodeJS绿化在U盘上..<br>谁叫网上只有win版的呢！自己码起来～<br>绿化 o(╯□╰)o<br><a id="more"></a></p>
+<h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">Green4nodeJS</div><div class="line">├── hocgin.github.io // github博客目录</div><div class="line">├── node // nodejs基本目录</div><div class="line">│   ├── node-linux // nodejs源文件</div><div class="line">│   ├── cache // 创建一个空文件夹，即可</div><div class="line">│   ├── init-module // 创建一个空文件夹，即可</div><div class="line">│   └── userconfig // 创建一个空文件夹，即可</div><div class="line">└── init.sh // 初始化shell文件 *重要</div></pre></td></tr></table></figure>
+<h2 id="初始化文件"><a href="#初始化文件" class="headerlink" title="初始化文件"></a>初始化文件</h2><blockquote>
+<p>主要是加载配置环境，初始化变量</p>
+</blockquote>
+<p><code>init.sh</code> 内容<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">#!/bin/bash</div><div class="line"># Author: hocgin@gmail.com</div><div class="line"># -------------Use--------------</div><div class="line"># source init.sh or . init.sh</div><div class="line"># ------------------------------</div><div class="line">NOW_PATH=$(cd &quot;$(dirname &quot;$0&quot;)&quot;; pwd)</div><div class="line">NODE_NAME=&quot;node-linux&quot;</div><div class="line">NODE_HOME=$NOW_PATH&quot;/node/&quot;$NODE_NAME</div><div class="line">NODE_PATH=$NODE_HOME&quot;/bin&quot;</div><div class="line">NPM_PATH=$NODE_HOME&quot;/lib/node_modules/npm/bin&quot;</div><div class="line">sudo chmod +x -R $NPM_PATH&quot;/.&quot;</div><div class="line">export PATH=$PATH:$NODE_PATH:$NPM_PATH</div><div class="line"># &quot;/home/hocgin/.npmrc&quot;</div><div class="line">npm set userconfig $NOW_PATH&quot;/node/userconfig&quot;</div><div class="line"># &quot;/home/hocgin/.npm-init.js&quot;</div><div class="line">npm set init-module $NOW_PATH&quot;/node/init-module&quot;</div><div class="line"># &quot;/home/hocgin/.npm&quot;</div><div class="line">npm set cache  $NOW_PATH&quot;/node/cache&quot;</div></pre></td></tr></table></figure></p>
+<p>修改 <code>/node/node-linux/lib/node_modules/npm/bin/npm</code> 文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># NPM_CLI_JS=&quot;$basedir/node_modules/npm/bin/npm-cli.js&quot;</div><div class="line">NPM_CLI_JS=&quot;$basedir/npm-cli.js&quot;</div></pre></td></tr></table></figure></p>
+<p>完成</p>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">source init.sh</div><div class="line"># Or</div><div class="line">. init.sh</div><div class="line"></div><div class="line">cd hocgin.github.io</div><div class="line"># 尽情hexo吧</div></pre></td></tr></table></figure>
+<p><code>注: 安装module时请加上 -g</code></p>
+<p>End</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;起因，为了方便hexo发布博客，所以想把NodeJS绿化在U盘上..&lt;br&gt;谁叫网上只有win版的呢！自己码起来～&lt;br&gt;绿化 o(╯□╰)o&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Coder" scheme="https://hocg.in/categories/Coder/"/>
+    
+    
+      <category term="Tips" scheme="https://hocg.in/tags/Tips/"/>
+    
+      <category term="Ubuntu" scheme="https://hocg.in/tags/Ubuntu/"/>
+    
+      <category term="NodeJS" scheme="https://hocg.in/tags/NodeJS/"/>
     
   </entry>
   
   <entry>
     <title>hexo 功能扩展</title>
-    <link href="http://hocg.in/2016/03/26/hexo-%E5%8A%9F%E8%83%BD%E6%89%A9%E5%B1%95/"/>
-    <id>http://hocg.in/2016/03/26/hexo-功能扩展/</id>
+    <link href="https://hocg.in/2016/03/26/hexo-%E5%8A%9F%E8%83%BD%E6%89%A9%E5%B1%95/"/>
+    <id>https://hocg.in/2016/03/26/hexo-功能扩展/</id>
     <published>2016-03-26T05:44:28.000Z</published>
     <updated>2017-02-04T05:34:09.000Z</updated>
     
@@ -1144,21 +1144,21 @@
     
     </summary>
     
-      <category term="Web" scheme="http://hocg.in/categories/Web/"/>
+      <category term="Web" scheme="https://hocg.in/categories/Web/"/>
     
     
-      <category term="HTML5" scheme="http://hocg.in/tags/HTML5/"/>
+      <category term="HTML5" scheme="https://hocg.in/tags/HTML5/"/>
     
-      <category term="Hexo" scheme="http://hocg.in/tags/Hexo/"/>
+      <category term="Hexo" scheme="https://hocg.in/tags/Hexo/"/>
     
-      <category term="CSS3" scheme="http://hocg.in/tags/CSS3/"/>
+      <category term="CSS3" scheme="https://hocg.in/tags/CSS3/"/>
     
   </entry>
   
   <entry>
     <title>安装完Ubuntu后,我该做什么</title>
-    <link href="http://hocg.in/2016/03/20/%E5%AE%89%E8%A3%85%E5%AE%8CUbuntu%E5%90%8E-%E6%88%91%E8%AF%A5%E5%81%9A%E4%BB%80%E4%B9%88/"/>
-    <id>http://hocg.in/2016/03/20/安装完Ubuntu后-我该做什么/</id>
+    <link href="https://hocg.in/2016/03/20/%E5%AE%89%E8%A3%85%E5%AE%8CUbuntu%E5%90%8E-%E6%88%91%E8%AF%A5%E5%81%9A%E4%BB%80%E4%B9%88/"/>
+    <id>https://hocg.in/2016/03/20/安装完Ubuntu后-我该做什么/</id>
     <published>2016-03-20T06:34:20.000Z</published>
     <updated>2017-03-09T11:45:14.000Z</updated>
     
@@ -1487,14 +1487,14 @@
     
     </summary>
     
-      <category term="OS" scheme="http://hocg.in/categories/OS/"/>
+      <category term="OS" scheme="https://hocg.in/categories/OS/"/>
     
     
-      <category term="Tips" scheme="http://hocg.in/tags/Tips/"/>
+      <category term="Tips" scheme="https://hocg.in/tags/Tips/"/>
     
-      <category term="Ubuntu" scheme="http://hocg.in/tags/Ubuntu/"/>
+      <category term="Ubuntu" scheme="https://hocg.in/tags/Ubuntu/"/>
     
-      <category term="Gnome" scheme="http://hocg.in/tags/Gnome/"/>
+      <category term="Gnome" scheme="https://hocg.in/tags/Gnome/"/>
     
   </entry>
   

@@ -5,7 +5,7 @@
     
     <entry>
       <title><![CDATA[Vue.js项目 部件简介 (未完待续)]]></title>
-      <url>http://hocg.in/2017/03/31/Vue.js%E9%A1%B9%E7%9B%AE-%E9%83%A8%E4%BB%B6%E7%AE%80%E4%BB%8B/</url>
+      <url>https://hocg.in/2017/03/31/Vue.js%E9%A1%B9%E7%9B%AE-%E9%83%A8%E4%BB%B6%E7%AE%80%E4%BB%8B/</url>
       <content type="html"><![CDATA[<p>🦋 目前国内前端MVVM最火的框架.. 前段时间写了一个<a href="https://github.com/hocgin/iPage" target="_blank" rel="external">About页面</a>, 这几天顺带整理一下知识点.<br><a id="more"></a></p>
 <h1 id="Vue-js"><a href="#Vue-js" class="headerlink" title="Vue.js"></a>Vue.js</h1><blockquote>
 <p>Vue.js是当下很火的一个JavaScript MVVM库，它是以数据驱动和组件化的思想构建的.<br>类似的有<code>Angular.js</code>.</p>
@@ -48,7 +48,7 @@
     
     <entry>
       <title><![CDATA[Vue 项目实践 - 持续更新]]></title>
-      <url>http://hocg.in/2017/03/26/Vue.js-%E9%A1%B9%E7%9B%AE%E5%AE%9E%E8%B7%B5/</url>
+      <url>https://hocg.in/2017/03/26/Vue.js-%E9%A1%B9%E7%9B%AE%E5%AE%9E%E8%B7%B5/</url>
       <content type="html"><![CDATA[<p>🐌 目前国内前端MVVM最火的框架.. 项目实践记录一些流程<br><a id="more"></a></p>
 <h1 id="相关"><a href="#相关" class="headerlink" title="相关"></a>相关</h1><ul>
 <li>vue<ul>
@@ -65,7 +65,7 @@
     
     <entry>
       <title><![CDATA[PHP Laravel 快速入门]]></title>
-      <url>http://hocg.in/2017/03/01/PHP-laravel-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/</url>
+      <url>https://hocg.in/2017/03/01/PHP-laravel-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/</url>
       <content type="html"><![CDATA[<p>PHP 框架 Laravel 搭建开始, 慢慢更新~ 😜😜😜😜<br><a id="more"></a></p>
 <h1 id="Quit-Start"><a href="#Quit-Start" class="headerlink" title="Quit Start"></a>Quit Start</h1><p>一. 安装<code>composer</code>, 用于管理依赖</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># 全局安装 macOS</div><div class="line">brew update</div><div class="line">brew tap josegonzalez/homebrew-php</div><div class="line">brew tap homebrew/versions</div><div class="line">brew install php55-intl</div><div class="line">brew install josegonzalez/php/composer</div></pre></td></tr></table></figure>
@@ -125,7 +125,7 @@
     
     <entry>
       <title><![CDATA[Nginx 部署]]></title>
-      <url>http://hocg.in/2017/02/24/Nginx-%E9%83%A8%E7%BD%B2/</url>
+      <url>https://hocg.in/2017/02/24/Nginx-%E9%83%A8%E7%BD%B2/</url>
       <content type="html"><![CDATA[<p>🎽  <a href="http://baike.baidu.com/link?url=6LDqhy3I7UWDkwOT6TS_s-d4Jsv9AVcA_yedSmd618s1BjJl-0NQ-roxjDF7jHazXWlTwbIHTv03_gWIWeRPUq" target="_blank" rel="external">Nginx</a> 是一个很强大的高性能Web和反向代理服务器<br><a id="more"></a></p>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h3><p>OS: Ubuntu-16</p>
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="依赖"><a href="#依赖" class="headerlink" title="依赖"></a>依赖</h3><ul>
@@ -167,7 +167,7 @@
     
     <entry>
       <title><![CDATA[关于Chrome 插件开发的一些知识点]]></title>
-      <url>http://hocg.in/2017/02/04/%E5%85%B3%E4%BA%8EChrome%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91%E7%9A%84%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
+      <url>https://hocg.in/2017/02/04/%E5%85%B3%E4%BA%8EChrome%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91%E7%9A%84%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
       <content type="html"><![CDATA[<p>身为Chrome重度患者，生活和工作处处不离，这篇并不是入门教程，而是开发中的一些小Tip的记录.<br><a id="more"></a></p>
 <h1 id="我开发的Chrome-插件"><a href="#我开发的Chrome-插件" class="headerlink" title="我开发的Chrome 插件"></a>我开发的Chrome 插件</h1><ul>
 <li><a href="https://github.com/hocgin/Weather-For-Chrome-Plugin" target="_blank" rel="external">天气预报</a></li>
@@ -215,7 +215,7 @@
     
     <entry>
       <title><![CDATA[关于log4j报错]]></title>
-      <url>http://hocg.in/2017/01/16/%E5%85%B3%E4%BA%8Elog4j%E6%8A%A5%E9%94%99/</url>
+      <url>https://hocg.in/2017/01/16/%E5%85%B3%E4%BA%8Elog4j%E6%8A%A5%E9%94%99/</url>
       <content type="html"><![CDATA[<p>  Java开发中经常遇到日志<code>冲突</code>或者<code>异常</code>, 彻底的来此追根究底.<br><a id="more"></a></p>
 <h2 id="日志历史"><a href="#日志历史" class="headerlink" title="日志历史"></a>日志历史</h2><ul>
 <li>log4j</li>
@@ -237,7 +237,7 @@
     
     <entry>
       <title><![CDATA[Redis 相关]]></title>
-      <url>http://hocg.in/2016/10/20/Redis-%E7%9B%B8%E5%85%B3/</url>
+      <url>https://hocg.in/2016/10/20/Redis-%E7%9B%B8%E5%85%B3/</url>
       <content type="html"><![CDATA[<p>  Redis 的部署和部位设计的实践, 还有常见问题的梳理! 💪<br><a id="more"></a></p>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><a href="http://redis.io/download" target="_blank" rel="external">官网</a></p>
 <h2 id="详情"><a href="#详情" class="headerlink" title="详情"></a>详情</h2><h3 id="默认项"><a href="#默认项" class="headerlink" title="默认项"></a>默认项</h3><ul>
@@ -272,7 +272,7 @@
     
     <entry>
       <title><![CDATA[Ngrok使用指南]]></title>
-      <url>http://hocg.in/2016/08/31/Ngrok%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</url>
+      <url>https://hocg.in/2016/08/31/Ngrok%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</url>
       <content type="html"><![CDATA[<p>Ngrok 是一款内部端口转发，对于微信类似的开发很有用的😆<br>可参照墙内(花生壳 or nat123)<br><a id="more"></a></p>
 <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p><strong>编译环境:</strong><br><a href="https://storage.googleapis.com/golang/go1.4.1.linux-amd64.tar.gz" target="_blank" rel="external">Go 1.4.1 强烈建议</a><br>根域名: <code>web.hocg.in</code>,即生成的域名为<code>*.web.hocg.in</code><br>文件结构:<br>ngrok<br>  ├── bin<br>  │   └── ngrok.cfg<br>  ├── client.sh<br>  ├── code.sh<br>  └── server.sh<br><strong>部署环境:</strong><br>服务器OS: Ubuntu-15<br>客户端OS: Ubuntu-16</p>
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="环境依赖及源码下载"><a href="#环境依赖及源码下载" class="headerlink" title="环境依赖及源码下载"></a>环境依赖及源码下载</h3><blockquote>
@@ -362,7 +362,7 @@
     
     <entry>
       <title><![CDATA[Nexus 入门]]></title>
-      <url>http://hocg.in/2016/08/24/Nexus%E5%85%A5%E9%97%A8/</url>
+      <url>https://hocg.in/2016/08/24/Nexus%E5%85%A5%E9%97%A8/</url>
       <content type="html"><![CDATA[<p>适合<code>nexus</code>入门，不是手机，不是手机，不是手机　．．ｏ（╯□╰）ｏ<br><a id="more"></a></p>
 <h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><ul>
 <li>Ubuntu-14.04.1</li>
@@ -403,7 +403,7 @@
     
     <entry>
       <title><![CDATA[Android L 及以上版本Rom包中提取apk]]></title>
-      <url>http://hocg.in/2016/08/07/Android-L-%E5%8F%8A%E4%BB%A5%E4%B8%8A%E7%89%88%E6%9C%ACRom%E5%8C%85%E4%B8%AD%E6%8F%90%E5%8F%96apk/</url>
+      <url>https://hocg.in/2016/08/07/Android-L-%E5%8F%8A%E4%BB%A5%E4%B8%8A%E7%89%88%E6%9C%ACRom%E5%8C%85%E4%B8%AD%E6%8F%90%E5%8F%96apk/</url>
       <content type="html"><![CDATA[<p>提取想要的apk， 例如CM ROM包中的含天气的时钟不错！</p>
 <a id="more"></a>
 <h2 id="以往版本"><a href="#以往版本" class="headerlink" title="以往版本"></a>以往版本</h2><blockquote>
@@ -437,7 +437,7 @@
     
     <entry>
       <title><![CDATA[模块设计之对接同步订单模块]]></title>
-      <url>http://hocg.in/2016/08/02/%E6%A8%A1%E5%9D%97%E8%AE%BE%E8%AE%A1%E4%B9%8B%E5%AF%B9%E6%8E%A5%E5%90%8C%E6%AD%A5%E8%AE%A2%E5%8D%95%E6%A8%A1%E5%9D%97/</url>
+      <url>https://hocg.in/2016/08/02/%E6%A8%A1%E5%9D%97%E8%AE%BE%E8%AE%A1%E4%B9%8B%E5%AF%B9%E6%8E%A5%E5%90%8C%E6%AD%A5%E8%AE%A2%E5%8D%95%E6%A8%A1%E5%9D%97/</url>
       <content type="html"><![CDATA[<p>实习期间设计的对接同步订单的某块, 缅怀..<br>设计日期(2016.6)<br><a id="more"></a></p>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
 <p><strong>#对接同步订单模块#</strong> 该部分是我入职后自主设计的一个模块，因为初期预计对接5家平台的订单，并考虑到后期可能对接更多平台和平台订单数量等，所以扩展性和性能方面是很值得深思的问题。</p>
@@ -475,7 +475,7 @@
     
     <entry>
       <title><![CDATA[模块设计之消息模块]]></title>
-      <url>http://hocg.in/2016/07/30/%E6%A8%A1%E5%9D%97%E8%AE%BE%E8%AE%A1%E4%B9%8B%E6%B6%88%E6%81%AF%E6%A8%A1%E5%9D%97/</url>
+      <url>https://hocg.in/2016/07/30/%E6%A8%A1%E5%9D%97%E8%AE%BE%E8%AE%A1%E4%B9%8B%E6%B6%88%E6%81%AF%E6%A8%A1%E5%9D%97/</url>
       <content type="html"><![CDATA[<p>  新手上路，小心撞车..<br><a id="more"></a></p>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
 <p><strong>#消息模块#</strong> 这是我刚入职时所接触的第一个模块，也算是比较大的模块了。这个模块的业务是负责整个项目所有的消息出入口，包含短信发送，APP推送，邮件发送以及前后端人员站内消息。当时设计的时候需求架构比较简单而且时间紧迫(π__π)，没有从根本理清业务和功能后期存在的扩展。因此，这篇文章是记录当时架构的思路和需要改善的地方。</p>
@@ -515,7 +515,7 @@
     
     <entry>
       <title><![CDATA[Mac的使用]]></title>
-      <url>http://hocg.in/2016/07/02/Mac-%E4%BD%BF%E7%94%A8/</url>
+      <url>https://hocg.in/2016/07/02/Mac-%E4%BD%BF%E7%94%A8/</url>
       <content type="html"><![CDATA[<p>  留坑，刚刚起步，梳理中ing。<br><a id="more"></a></p>
 <h3 id="小技巧"><a href="#小技巧" class="headerlink" title="小技巧"></a>小技巧</h3><ul>
 <li>在Dock 隐藏 iTerm2<br>隐藏:<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/usr/libexec/PlistBuddy -c &quot;Add :LSUIElement bool true&quot; /Applications/iTerm.app/Contents/Info.plist</div></pre></td></tr></table></figure>
@@ -526,34 +526,8 @@
     </entry>
     
     <entry>
-      <title><![CDATA[谈JVM，各种过程]]></title>
-      <url>http://hocg.in/2016/06/12/%E8%B0%88JVM-%E5%90%84%E7%A7%8D%E8%BF%87%E7%A8%8B/</url>
-      <content type="html"><![CDATA[<p>谈谈JVM 各种过程， XMind等我整理一下，稍后贴出 囧～<br>欢迎指教..<br><strong>update:</strong> 2016-08-03 14:44:12 更新了图<br><a id="more"></a></p>
-<h3 id="总思路"><a href="#总思路" class="headerlink" title="总思路"></a>总思路</h3><p>编译过程 -&gt; 运行过程[类加载器过程(类的装载过程) -&gt; 执行过程]</p>
-<h4 id="图"><a href="#图" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/总思路-v1.png" alt="总思路-v1.png"></p>
-<h3 id="编译过程"><a href="#编译过程" class="headerlink" title="编译过程"></a>编译过程</h3><p>.java文件 -javac编译-&gt; .class文件       {-JIT编译(转化+优化)-&gt; 本地方法}[执行过程，当方法执行频率高]</p>
-<h4 id="图-1"><a href="#图-1" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/编译过程.png" alt="编译过程.png"></p>
-<hr>
-<h3 id="运行过程"><a href="#运行过程" class="headerlink" title="运行过程"></a>运行过程</h3><p>类加载器 -&gt; (执行引擎 -&gt; 本地库接口)[Java 运行时数据区] -&gt; 本地方法库</p>
-<h4 id="图-2"><a href="#图-2" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/运行过程.png" alt="运行过程.png"></p>
-<hr>
-<h3 id="类加载器过程"><a href="#类加载器过程" class="headerlink" title="类加载器过程"></a><strong>类加载器</strong>过程</h3><p>[启动]类加载器(JNI) -&gt; [扩展]类加载器 -&gt; [系统]类加载器 -&gt; [自定义]类加载器</p>
-<h4 id="图-3"><a href="#图-3" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/类加载器过程.png" alt="类加载器过程.png"></p>
-<hr>
-<h3 id="类装载过程"><a href="#类装载过程" class="headerlink" title="类装载过程"></a><strong>类</strong>装载过程</h3><p>加载文件到JVM内存 -&gt; (校验语言规范 -&gt; 分配结构存储类的信息 -&gt; 该类常量池中符号更改为直接引用)[Linking] -&gt; 类初始化</p>
-<h4 id="图-4"><a href="#图-4" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/类装载过程.png" alt="类装载过程.png"></p>
-<hr>
-<h3 id="执行引擎执行过程-逐行读取指令"><a href="#执行引擎执行过程-逐行读取指令" class="headerlink" title="执行引擎执行过程(逐行读取指令)"></a><strong>执行引擎</strong>执行过程(逐行读取指令)</h3><p>Thread启动 -生成-&gt; JVM栈 -执行方法-&gt; 压入栈帧(包含 局部变量数组&amp;操作数栈&amp;运行时常量池) -&gt; 逐行读取指令&amp;&amp;解释(JVM栈帧 程序计数器存放下一条指令) -&gt; {JIT(转化+优化)-&gt; 本地方法}[当方法执行频率高] -执行&amp;运算-&gt; 结果(存放 操作数栈中) -&gt; 推出栈帧</p>
-<h4 id="图-5"><a href="#图-5" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/执行引擎执行过程.png" alt="执行引擎执行过程.png"></p>
-<hr>
-<h3 id="Java-运行时数据区-贯穿整个执行过程"><a href="#Java-运行时数据区-贯穿整个执行过程" class="headerlink" title="Java 运行时数据区(贯穿整个执行过程)"></a>Java 运行时数据区(贯穿整个执行过程)</h3><p>共享型数据区：方法区(含运行时常量池[存放方法&amp;变量的实际<strong>地址</strong>])、堆(存放对象实例)<br>隔离型数据区：JVM 栈、本地方法栈(JNI)、程序计数器</p>
-<h4 id="图-6"><a href="#图-6" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/运行时数据图.png" alt="运行时数据图.png"></p>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[谈JVM，字节码]]></title>
-      <url>http://hocg.in/2016/06/12/%E8%B0%88JVM-%E5%AD%97%E8%8A%82%E7%A0%81/</url>
+      <url>https://hocg.in/2016/06/12/%E8%B0%88JVM-%E5%AD%97%E8%8A%82%E7%A0%81/</url>
       <content type="html"><![CDATA[<p>谈谈JVM，最近在研究破解jar，有这方面经验的麻烦指导一下思路..<br><a id="more"></a></p>
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://www.yangyong.me/java-class%E6%96%87%E4%BB%B6%E5%92%8C%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AD%97%E8%8A%82%E7%A0%81%E6%8C%87%E4%BB%A4-%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8Bclass%E6%96%87%E4%BB%B6/#viewclass" target="_blank" rel="external">参考1</a><br><a href="http://blog.csdn.net/sprayabc/article/details/8576605" target="_blank" rel="external">指令整理</a></p>
 <h2 id="常用指令"><a href="#常用指令" class="headerlink" title="常用指令"></a>常用指令</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"># 反编译查看`类文件`所有信息</div><div class="line">javap -verbose [class]</div></pre></td></tr></table></figure>
@@ -695,8 +669,34 @@
     </entry>
     
     <entry>
+      <title><![CDATA[谈JVM，各种过程]]></title>
+      <url>https://hocg.in/2016/06/12/%E8%B0%88JVM-%E5%90%84%E7%A7%8D%E8%BF%87%E7%A8%8B/</url>
+      <content type="html"><![CDATA[<p>谈谈JVM 各种过程， XMind等我整理一下，稍后贴出 囧～<br>欢迎指教..<br><strong>update:</strong> 2016-08-03 14:44:12 更新了图<br><a id="more"></a></p>
+<h3 id="总思路"><a href="#总思路" class="headerlink" title="总思路"></a>总思路</h3><p>编译过程 -&gt; 运行过程[类加载器过程(类的装载过程) -&gt; 执行过程]</p>
+<h4 id="图"><a href="#图" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/总思路-v1.png" alt="总思路-v1.png"></p>
+<h3 id="编译过程"><a href="#编译过程" class="headerlink" title="编译过程"></a>编译过程</h3><p>.java文件 -javac编译-&gt; .class文件       {-JIT编译(转化+优化)-&gt; 本地方法}[执行过程，当方法执行频率高]</p>
+<h4 id="图-1"><a href="#图-1" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/编译过程.png" alt="编译过程.png"></p>
+<hr>
+<h3 id="运行过程"><a href="#运行过程" class="headerlink" title="运行过程"></a>运行过程</h3><p>类加载器 -&gt; (执行引擎 -&gt; 本地库接口)[Java 运行时数据区] -&gt; 本地方法库</p>
+<h4 id="图-2"><a href="#图-2" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/运行过程.png" alt="运行过程.png"></p>
+<hr>
+<h3 id="类加载器过程"><a href="#类加载器过程" class="headerlink" title="类加载器过程"></a><strong>类加载器</strong>过程</h3><p>[启动]类加载器(JNI) -&gt; [扩展]类加载器 -&gt; [系统]类加载器 -&gt; [自定义]类加载器</p>
+<h4 id="图-3"><a href="#图-3" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/类加载器过程.png" alt="类加载器过程.png"></p>
+<hr>
+<h3 id="类装载过程"><a href="#类装载过程" class="headerlink" title="类装载过程"></a><strong>类</strong>装载过程</h3><p>加载文件到JVM内存 -&gt; (校验语言规范 -&gt; 分配结构存储类的信息 -&gt; 该类常量池中符号更改为直接引用)[Linking] -&gt; 类初始化</p>
+<h4 id="图-4"><a href="#图-4" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/类装载过程.png" alt="类装载过程.png"></p>
+<hr>
+<h3 id="执行引擎执行过程-逐行读取指令"><a href="#执行引擎执行过程-逐行读取指令" class="headerlink" title="执行引擎执行过程(逐行读取指令)"></a><strong>执行引擎</strong>执行过程(逐行读取指令)</h3><p>Thread启动 -生成-&gt; JVM栈 -执行方法-&gt; 压入栈帧(包含 局部变量数组&amp;操作数栈&amp;运行时常量池) -&gt; 逐行读取指令&amp;&amp;解释(JVM栈帧 程序计数器存放下一条指令) -&gt; {JIT(转化+优化)-&gt; 本地方法}[当方法执行频率高] -执行&amp;运算-&gt; 结果(存放 操作数栈中) -&gt; 推出栈帧</p>
+<h4 id="图-5"><a href="#图-5" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/执行引擎执行过程.png" alt="执行引擎执行过程.png"></p>
+<hr>
+<h3 id="Java-运行时数据区-贯穿整个执行过程"><a href="#Java-运行时数据区-贯穿整个执行过程" class="headerlink" title="Java 运行时数据区(贯穿整个执行过程)"></a>Java 运行时数据区(贯穿整个执行过程)</h3><p>共享型数据区：方法区(含运行时常量池[存放方法&amp;变量的实际<strong>地址</strong>])、堆(存放对象实例)<br>隔离型数据区：JVM 栈、本地方法栈(JNI)、程序计数器</p>
+<h4 id="图-6"><a href="#图-6" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/运行时数据图.png" alt="运行时数据图.png"></p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[关于HTTPS]]></title>
-      <url>http://hocg.in/2016/06/02/Https-%E7%AD%BE%E8%AF%81/</url>
+      <url>https://hocg.in/2016/06/02/Https-%E7%AD%BE%E8%AF%81/</url>
       <content type="html"><![CDATA[<p>这是一篇关于<code>HTTPS</code>的日常使用记录，例如:博客HTTPS化~<br>来吧!年轻人!<del>装逼</del>HTTPS时代到了<br><a id="more"></a></p>
 <h3 id="关于https"><a href="#关于https" class="headerlink" title="关于https"></a>关于https</h3><p><a href="https://en.wikipedia.org/wiki/HTTPS" target="_blank" rel="external">什么是HTTPS ?</a></p>
 <blockquote>
@@ -721,25 +721,8 @@
     </entry>
     
     <entry>
-      <title><![CDATA[绿化NodeJS for linux版]]></title>
-      <url>http://hocg.in/2016/04/25/%E7%BB%BF%E5%8C%96nodejs-for-linux%E7%89%88/</url>
-      <content type="html"><![CDATA[<p>起因，为了方便hexo发布博客，所以想把NodeJS绿化在U盘上..<br>谁叫网上只有win版的呢！自己码起来～<br>绿化 o(╯□╰)o<br><a id="more"></a></p>
-<h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">Green4nodeJS</div><div class="line">├── hocgin.github.io // github博客目录</div><div class="line">├── node // nodejs基本目录</div><div class="line">│   ├── node-linux // nodejs源文件</div><div class="line">│   ├── cache // 创建一个空文件夹，即可</div><div class="line">│   ├── init-module // 创建一个空文件夹，即可</div><div class="line">│   └── userconfig // 创建一个空文件夹，即可</div><div class="line">└── init.sh // 初始化shell文件 *重要</div></pre></td></tr></table></figure>
-<h2 id="初始化文件"><a href="#初始化文件" class="headerlink" title="初始化文件"></a>初始化文件</h2><blockquote>
-<p>主要是加载配置环境，初始化变量</p>
-</blockquote>
-<p><code>init.sh</code> 内容<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">#!/bin/bash</div><div class="line"># Author: hocgin@gmail.com</div><div class="line"># -------------Use--------------</div><div class="line"># source init.sh or . init.sh</div><div class="line"># ------------------------------</div><div class="line">NOW_PATH=$(cd &quot;$(dirname &quot;$0&quot;)&quot;; pwd)</div><div class="line">NODE_NAME=&quot;node-linux&quot;</div><div class="line">NODE_HOME=$NOW_PATH&quot;/node/&quot;$NODE_NAME</div><div class="line">NODE_PATH=$NODE_HOME&quot;/bin&quot;</div><div class="line">NPM_PATH=$NODE_HOME&quot;/lib/node_modules/npm/bin&quot;</div><div class="line">sudo chmod +x -R $NPM_PATH&quot;/.&quot;</div><div class="line">export PATH=$PATH:$NODE_PATH:$NPM_PATH</div><div class="line"># &quot;/home/hocgin/.npmrc&quot;</div><div class="line">npm set userconfig $NOW_PATH&quot;/node/userconfig&quot;</div><div class="line"># &quot;/home/hocgin/.npm-init.js&quot;</div><div class="line">npm set init-module $NOW_PATH&quot;/node/init-module&quot;</div><div class="line"># &quot;/home/hocgin/.npm&quot;</div><div class="line">npm set cache  $NOW_PATH&quot;/node/cache&quot;</div></pre></td></tr></table></figure></p>
-<p>修改 <code>/node/node-linux/lib/node_modules/npm/bin/npm</code> 文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># NPM_CLI_JS=&quot;$basedir/node_modules/npm/bin/npm-cli.js&quot;</div><div class="line">NPM_CLI_JS=&quot;$basedir/npm-cli.js&quot;</div></pre></td></tr></table></figure></p>
-<p>完成</p>
-<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">source init.sh</div><div class="line"># Or</div><div class="line">. init.sh</div><div class="line"></div><div class="line">cd hocgin.github.io</div><div class="line"># 尽情hexo吧</div></pre></td></tr></table></figure>
-<p><code>注: 安装module时请加上 -g</code></p>
-<p>End</p>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[使用Maven下载jar包 linux版]]></title>
-      <url>http://hocg.in/2016/04/25/%E4%BD%BF%E7%94%A8Maven%E4%B8%8B%E8%BD%BDjar%E5%8C%85-linux%E7%89%88/</url>
+      <url>https://hocg.in/2016/04/25/%E4%BD%BF%E7%94%A8Maven%E4%B8%8B%E8%BD%BDjar%E5%8C%85-linux%E7%89%88/</url>
       <content type="html"><![CDATA[<p>这只是学习Shell的小脚本, 练手工具罢了.. 折腾!折腾啊<br><a id="more"></a></p>
 <h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Green4nodeJS</div><div class="line">├── down.sh // 下载shell，o(╯□╰)o其实就是一条shell</div><div class="line">└── pom.xml // 正常maven配置</div></pre></td></tr></table></figure>
 <h2 id="文件内容"><a href="#文件内容" class="headerlink" title="文件内容"></a>文件内容</h2><p><code>down.sh</code> 内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">#!/bin/sh</div><div class="line"># Author: hocgin@gmail.com</div><div class="line"># -------------Use--------------</div><div class="line"># sh down.sh</div><div class="line"># ------------------------------</div><div class="line"># 运行pom.xml 下载jar</div><div class="line">NOW_PATH=$(cd &quot;$(dirname &quot;$0&quot;)&quot;; pwd)</div><div class="line">POM_XML=$NOW_PATH&quot;/pom.xml&quot;</div><div class="line">TARGET_DIR=$NOW_PATH&quot;/target&quot;</div><div class="line">mvn -f $POM_XML dependency:copy-dependencies</div><div class="line">sudo chmod -R 777 $TARGET_DIR</div></pre></td></tr></table></figure></p>
@@ -755,8 +738,25 @@
     </entry>
     
     <entry>
+      <title><![CDATA[绿化NodeJS for linux版]]></title>
+      <url>https://hocg.in/2016/04/25/%E7%BB%BF%E5%8C%96nodejs-for-linux%E7%89%88/</url>
+      <content type="html"><![CDATA[<p>起因，为了方便hexo发布博客，所以想把NodeJS绿化在U盘上..<br>谁叫网上只有win版的呢！自己码起来～<br>绿化 o(╯□╰)o<br><a id="more"></a></p>
+<h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">Green4nodeJS</div><div class="line">├── hocgin.github.io // github博客目录</div><div class="line">├── node // nodejs基本目录</div><div class="line">│   ├── node-linux // nodejs源文件</div><div class="line">│   ├── cache // 创建一个空文件夹，即可</div><div class="line">│   ├── init-module // 创建一个空文件夹，即可</div><div class="line">│   └── userconfig // 创建一个空文件夹，即可</div><div class="line">└── init.sh // 初始化shell文件 *重要</div></pre></td></tr></table></figure>
+<h2 id="初始化文件"><a href="#初始化文件" class="headerlink" title="初始化文件"></a>初始化文件</h2><blockquote>
+<p>主要是加载配置环境，初始化变量</p>
+</blockquote>
+<p><code>init.sh</code> 内容<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">#!/bin/bash</div><div class="line"># Author: hocgin@gmail.com</div><div class="line"># -------------Use--------------</div><div class="line"># source init.sh or . init.sh</div><div class="line"># ------------------------------</div><div class="line">NOW_PATH=$(cd &quot;$(dirname &quot;$0&quot;)&quot;; pwd)</div><div class="line">NODE_NAME=&quot;node-linux&quot;</div><div class="line">NODE_HOME=$NOW_PATH&quot;/node/&quot;$NODE_NAME</div><div class="line">NODE_PATH=$NODE_HOME&quot;/bin&quot;</div><div class="line">NPM_PATH=$NODE_HOME&quot;/lib/node_modules/npm/bin&quot;</div><div class="line">sudo chmod +x -R $NPM_PATH&quot;/.&quot;</div><div class="line">export PATH=$PATH:$NODE_PATH:$NPM_PATH</div><div class="line"># &quot;/home/hocgin/.npmrc&quot;</div><div class="line">npm set userconfig $NOW_PATH&quot;/node/userconfig&quot;</div><div class="line"># &quot;/home/hocgin/.npm-init.js&quot;</div><div class="line">npm set init-module $NOW_PATH&quot;/node/init-module&quot;</div><div class="line"># &quot;/home/hocgin/.npm&quot;</div><div class="line">npm set cache  $NOW_PATH&quot;/node/cache&quot;</div></pre></td></tr></table></figure></p>
+<p>修改 <code>/node/node-linux/lib/node_modules/npm/bin/npm</code> 文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># NPM_CLI_JS=&quot;$basedir/node_modules/npm/bin/npm-cli.js&quot;</div><div class="line">NPM_CLI_JS=&quot;$basedir/npm-cli.js&quot;</div></pre></td></tr></table></figure></p>
+<p>完成</p>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">source init.sh</div><div class="line"># Or</div><div class="line">. init.sh</div><div class="line"></div><div class="line">cd hocgin.github.io</div><div class="line"># 尽情hexo吧</div></pre></td></tr></table></figure>
+<p><code>注: 安装module时请加上 -g</code></p>
+<p>End</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[hexo 功能扩展]]></title>
-      <url>http://hocg.in/2016/03/26/hexo-%E5%8A%9F%E8%83%BD%E6%89%A9%E5%B1%95/</url>
+      <url>https://hocg.in/2016/03/26/hexo-%E5%8A%9F%E8%83%BD%E6%89%A9%E5%B1%95/</url>
       <content type="html"><![CDATA[<p>这是自己参照hexo进行私人订制的教程，也是实战的记录，感觉还不错，成品可参照本博客.. （如果我以后没换的话😶）<br><a id="more"></a></p>
 <h2 id="须知"><a href="#须知" class="headerlink" title="须知"></a>须知</h2><p><code>站点目录</code>: /<br><code>主题目录</code>: /themes/[主题名]<br><code>主题配置文件</code>: /themes/[主题名]/_config.yml<br><code>站点配置文件</code>: /_config.yml  </p>
 <h2 id="添加微信公众号二维码"><a href="#添加微信公众号二维码" class="headerlink" title="添加微信公众号二维码"></a>添加微信公众号二维码</h2><p>首先，打开<code>主题目录</code>下的 <code>layout/_macro/post.swig</code><br>然后，找到节点<code>footer</code>加入以下代码<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">!</span> <span class="attr">--</span> 添加微信图标 <span class="attr">start</span> <span class="attr">--</span>&gt;</span></div><div class="line">      &#123;% if theme.wechat_subscriber.enable %&#125;</div><div class="line">        &#123;% if !is_home() %&#125;</div><div class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"hocgin-container"</span>&gt;</span></div><div class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"folder"</span>&gt;</span></div><div class="line">           <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"paper"</span>&gt;</span></div><div class="line">        	<span class="tag">&lt;<span class="name">img</span> <span class="attr">width</span>=<span class="string">"100%"</span> <span class="attr">src</span>=<span class="string">"&#123;&#123; theme.wechat_subscriber.qcode &#125;&#125;"</span>/&gt;</span></div><div class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">          <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">	      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"hocgin-description"</span>&gt;</span>&#123;&#123; theme.wechat_subscriber.description &#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">        &#123;% endif %&#125;</div><div class="line">      &#123;% endif %&#125;</div><div class="line"><span class="tag">&lt;<span class="name">!</span> <span class="attr">--</span> 添加微信图标 <span class="attr">end</span> <span class="attr">--</span>&gt;</span></div></pre></td></tr></table></figure></p>
@@ -799,7 +799,7 @@
     
     <entry>
       <title><![CDATA[安装完Ubuntu后,我该做什么]]></title>
-      <url>http://hocg.in/2016/03/20/%E5%AE%89%E8%A3%85%E5%AE%8CUbuntu%E5%90%8E-%E6%88%91%E8%AF%A5%E5%81%9A%E4%BB%80%E4%B9%88/</url>
+      <url>https://hocg.in/2016/03/20/%E5%AE%89%E8%A3%85%E5%AE%8CUbuntu%E5%90%8E-%E6%88%91%E8%AF%A5%E5%81%9A%E4%BB%80%E4%B9%88/</url>
       <content type="html"><![CDATA[<p>这是一篇我对Ubuntu日常使用和优化的整理，也是一篇借鉴前人的文章，还有一些可能会遇到的疑难杂病的“偏方”，希望对你有帮助:)<br><strong>update</strong>: 新增<code>undistract-me</code>终端命令完成提醒插件<br><a id="more"></a></p>
 <h2 id="yuan获取"><a href="#yuan获取" class="headerlink" title="yuan获取"></a>yuan获取</h2><p>官方列表： <a href="http://wiki.ubuntu.org.cn/%E6%BA%90%E5%88%97%E8%A1%A8" target="_blank" rel="external">http://wiki.ubuntu.org.cn/%E6%BA%90%E5%88%97%E8%A1%A8</a><br>网易163： <a href="http://mirrors.163.com/.help/ubuntu.html" target="_blank" rel="external">http://mirrors.163.com/.help/ubuntu.html</a></p>
 <hr>
@@ -1122,7 +1122,7 @@
     
     <entry>
       <title><![CDATA[hexo 使用小记]]></title>
-      <url>http://hocg.in/2016/03/15/hexo-%E4%BD%BF%E7%94%A8/</url>
+      <url>https://hocg.in/2016/03/15/hexo-%E4%BD%BF%E7%94%A8/</url>
       <content type="html"><![CDATA[<p>  这是一篇关于如何使用hexo的收集Box <strong>&gt;</strong> 不定期更新吧！<br>  <strong>update</strong> 2017年01月12日10:33:55<br><a id="more"></a></p>
 <blockquote>
 <p>参照 <a href="https://hexo.io/zh-cn/docs/tag-plugins.html" target="_blank" rel="external">hexo 官方文档</a><br>参照 <a href="http://theme-next.iissnan.com/theme-settings.html" target="_blank" rel="external">next 主题</a><br>参照 <a href="https://github.com/iissnan/hexo-theme-next/wiki/%E5%88%9B%E5%BB%BA%E5%88%86%E7%B1%BB%E9%A1%B5%E9%9D%A2" target="_blank" rel="external">next 主题 for github</a><br>参照 <a href="http://www.tuicool.com/articles/AfQnQjy/" target="_blank" rel="external">更多扩展使用</a></p>
