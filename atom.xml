@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hocg.in/"/>
-  <updated>2017-03-31T07:44:54.000Z</updated>
+  <updated>2017-03-31T07:46:29.000Z</updated>
   <id>http://hocg.in/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://hocg.in/2017/03/31/Vue.js%E9%A1%B9%E7%9B%AE-%E9%83%A8%E4%BB%B6%E7%AE%80%E4%BB%8B/"/>
     <id>http://hocg.in/2017/03/31/Vue.js项目-部件简介/</id>
     <published>2017-03-31T07:32:36.000Z</published>
-    <updated>2017-03-31T07:44:54.000Z</updated>
+    <updated>2017-03-31T07:46:29.000Z</updated>
     
     <content type="html"><![CDATA[<p>🦋 目前国内前端MVVM最火的框架.. 前段时间写了一个<a href="https://github.com/hocgin/iPage" target="_blank" rel="external">About页面</a>, 这几天顺带整理一下知识点.<br><a id="more"></a></p>
 <h1 id="Vue-js"><a href="#Vue-js" class="headerlink" title="Vue.js"></a>Vue.js</h1><blockquote>
@@ -55,7 +55,7 @@
 </blockquote>
 <h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"># 安装</div><div class="line">npm install webpack --save-dev</div><div class="line"># 执行</div><div class="line">webpack</div><div class="line">   --display-error-details # 输出详细错误</div><div class="line">   --watch # 实时监听并自动打包</div><div class="line">   --config &lt;file&gt; # 指定配置文件打包</div><div class="line">   -p # 压缩打包</div><div class="line">   -d # 生成map映射文件</div></pre></td></tr></table></figure>
 <h2 id="配置-webpack-config-js"><a href="#配置-webpack-config-js" class="headerlink" title="配置(webpack.config.js)"></a>配置(webpack.config.js)</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">  <span class="comment">// 插件</span></div><div class="line">  plugins: [],</div><div class="line">  <span class="comment">// 页面入口</span></div><div class="line">  entry: &#123;&#125;,</div><div class="line">  <span class="comment">// 入口文件输出位置, 即处理后的文件存放位置</span></div><div class="line">  output: &#123;&#125;,</div><div class="line">  <span class="attr">module</span>: &#123;</div><div class="line">    <span class="comment">// 文件处理加载器</span></div><div class="line">    rules: []</div><div class="line">  &#125;,</div><div class="line">  <span class="comment">// 额外处理</span></div><div class="line">  resolve: &#123;</div><div class="line">    <span class="comment">// 自动扩展文件后缀, require时可以进行省略</span></div><div class="line">    extensions: [],</div><div class="line">    <span class="comment">// 模块定义别名, require时可以进行路径省略, 直接使用别名</span></div><div class="line">    alias: &#123;&#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="入口文件-main-index"><a href="#入口文件-main-index" class="headerlink" title="入口文件(main.index)"></a>入口文件(main.index)</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span></div><div class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">'./App'</span></div><div class="line"><span class="keyword">import</span> router <span class="keyword">from</span> <span class="string">'./router'</span></div><div class="line"><span class="keyword">import</span> store <span class="keyword">from</span> <span class="string">'./store/index'</span></div><div class="line"><span class="comment">// 引入js, 加载器会自动进行处理</span></div><div class="line"><span class="keyword">import</span> holderjs <span class="keyword">from</span> <span class="string">'holderjs'</span></div><div class="line"><span class="comment">// 引入 css/scss, 加载器会自动进行处理</span></div><div class="line"><span class="keyword">import</span> appScss <span class="keyword">from</span> <span class="string">'./assets/app.scss'</span></div><div class="line"><span class="keyword">import</span> fontAwesomeCss <span class="keyword">from</span> <span class="string">'./assets/font-awesome-4.7.0/css/font-awesome.css'</span></div><div class="line"></div><div class="line">Vue.config.productionTip = <span class="literal">false</span></div><div class="line"></div><div class="line"><span class="comment">/* eslint-disable no-new */</span></div><div class="line"><span class="keyword">new</span> Vue(&#123;</div><div class="line">  <span class="attr">el</span>: <span class="string">'#app'</span>,</div><div class="line">  router,</div><div class="line">  store,</div><div class="line">  <span class="attr">template</span>: <span class="string">'&lt;App/&gt;'</span>,</div><div class="line">  <span class="attr">components</span>: &#123; App &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h2 id="入口文件-main-js"><a href="#入口文件-main-js" class="headerlink" title="入口文件(main.js)"></a>入口文件(main.js)</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span></div><div class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">'./App'</span></div><div class="line"><span class="keyword">import</span> router <span class="keyword">from</span> <span class="string">'./router'</span></div><div class="line"><span class="keyword">import</span> store <span class="keyword">from</span> <span class="string">'./store/index'</span></div><div class="line"><span class="comment">// 引入js, 加载器会自动进行处理</span></div><div class="line"><span class="keyword">import</span> holderjs <span class="keyword">from</span> <span class="string">'holderjs'</span></div><div class="line"><span class="comment">// 引入 css/scss, 加载器会自动进行处理</span></div><div class="line"><span class="keyword">import</span> appScss <span class="keyword">from</span> <span class="string">'./assets/app.scss'</span></div><div class="line"><span class="keyword">import</span> fontAwesomeCss <span class="keyword">from</span> <span class="string">'./assets/font-awesome-4.7.0/css/font-awesome.css'</span></div><div class="line"></div><div class="line">Vue.config.productionTip = <span class="literal">false</span></div><div class="line"></div><div class="line"><span class="comment">/* eslint-disable no-new */</span></div><div class="line"><span class="keyword">new</span> Vue(&#123;</div><div class="line">  <span class="attr">el</span>: <span class="string">'#app'</span>,</div><div class="line">  router,</div><div class="line">  store,</div><div class="line">  <span class="attr">template</span>: <span class="string">'&lt;App/&gt;'</span>,</div><div class="line">  <span class="attr">components</span>: &#123; App &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <blockquote>
 <p>未完待续ing</p>
 </blockquote>
@@ -772,50 +772,6 @@
   </entry>
   
   <entry>
-    <title>谈JVM，各种过程</title>
-    <link href="http://hocg.in/2016/06/12/%E8%B0%88JVM-%E5%90%84%E7%A7%8D%E8%BF%87%E7%A8%8B/"/>
-    <id>http://hocg.in/2016/06/12/谈JVM-各种过程/</id>
-    <published>2016-06-12T11:37:49.000Z</published>
-    <updated>2016-08-27T05:35:49.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>谈谈JVM 各种过程， XMind等我整理一下，稍后贴出 囧～<br>欢迎指教..<br><strong>update:</strong> 2016-08-03 14:44:12 更新了图<br><a id="more"></a></p>
-<h3 id="总思路"><a href="#总思路" class="headerlink" title="总思路"></a>总思路</h3><p>编译过程 -&gt; 运行过程[类加载器过程(类的装载过程) -&gt; 执行过程]</p>
-<h4 id="图"><a href="#图" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/总思路-v1.png" alt="总思路-v1.png"></p>
-<h3 id="编译过程"><a href="#编译过程" class="headerlink" title="编译过程"></a>编译过程</h3><p>.java文件 -javac编译-&gt; .class文件       {-JIT编译(转化+优化)-&gt; 本地方法}[执行过程，当方法执行频率高]</p>
-<h4 id="图-1"><a href="#图-1" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/编译过程.png" alt="编译过程.png"></p>
-<hr>
-<h3 id="运行过程"><a href="#运行过程" class="headerlink" title="运行过程"></a>运行过程</h3><p>类加载器 -&gt; (执行引擎 -&gt; 本地库接口)[Java 运行时数据区] -&gt; 本地方法库</p>
-<h4 id="图-2"><a href="#图-2" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/运行过程.png" alt="运行过程.png"></p>
-<hr>
-<h3 id="类加载器过程"><a href="#类加载器过程" class="headerlink" title="类加载器过程"></a><strong>类加载器</strong>过程</h3><p>[启动]类加载器(JNI) -&gt; [扩展]类加载器 -&gt; [系统]类加载器 -&gt; [自定义]类加载器</p>
-<h4 id="图-3"><a href="#图-3" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/类加载器过程.png" alt="类加载器过程.png"></p>
-<hr>
-<h3 id="类装载过程"><a href="#类装载过程" class="headerlink" title="类装载过程"></a><strong>类</strong>装载过程</h3><p>加载文件到JVM内存 -&gt; (校验语言规范 -&gt; 分配结构存储类的信息 -&gt; 该类常量池中符号更改为直接引用)[Linking] -&gt; 类初始化</p>
-<h4 id="图-4"><a href="#图-4" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/类装载过程.png" alt="类装载过程.png"></p>
-<hr>
-<h3 id="执行引擎执行过程-逐行读取指令"><a href="#执行引擎执行过程-逐行读取指令" class="headerlink" title="执行引擎执行过程(逐行读取指令)"></a><strong>执行引擎</strong>执行过程(逐行读取指令)</h3><p>Thread启动 -生成-&gt; JVM栈 -执行方法-&gt; 压入栈帧(包含 局部变量数组&amp;操作数栈&amp;运行时常量池) -&gt; 逐行读取指令&amp;&amp;解释(JVM栈帧 程序计数器存放下一条指令) -&gt; {JIT(转化+优化)-&gt; 本地方法}[当方法执行频率高] -执行&amp;运算-&gt; 结果(存放 操作数栈中) -&gt; 推出栈帧</p>
-<h4 id="图-5"><a href="#图-5" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/执行引擎执行过程.png" alt="执行引擎执行过程.png"></p>
-<hr>
-<h3 id="Java-运行时数据区-贯穿整个执行过程"><a href="#Java-运行时数据区-贯穿整个执行过程" class="headerlink" title="Java 运行时数据区(贯穿整个执行过程)"></a>Java 运行时数据区(贯穿整个执行过程)</h3><p>共享型数据区：方法区(含运行时常量池[存放方法&amp;变量的实际<strong>地址</strong>])、堆(存放对象实例)<br>隔离型数据区：JVM 栈、本地方法栈(JNI)、程序计数器</p>
-<h4 id="图-6"><a href="#图-6" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/运行时数据图.png" alt="运行时数据图.png"></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;谈谈JVM 各种过程， XMind等我整理一下，稍后贴出 囧～&lt;br&gt;欢迎指教..&lt;br&gt;&lt;strong&gt;update:&lt;/strong&gt; 2016-08-03 14:44:12 更新了图&lt;br&gt;
-    
-    </summary>
-    
-      <category term="Coder" scheme="http://hocg.in/categories/Coder/"/>
-    
-    
-      <category term="Java" scheme="http://hocg.in/tags/Java/"/>
-    
-      <category term="JVM" scheme="http://hocg.in/tags/JVM/"/>
-    
-  </entry>
-  
-  <entry>
     <title>谈JVM，字节码</title>
     <link href="http://hocg.in/2016/06/12/%E8%B0%88JVM-%E5%AD%97%E8%8A%82%E7%A0%81/"/>
     <id>http://hocg.in/2016/06/12/谈JVM-字节码/</id>
@@ -964,6 +920,50 @@
     <summary type="html">
     
       &lt;p&gt;谈谈JVM，最近在研究破解jar，有这方面经验的麻烦指导一下思路..&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Coder" scheme="http://hocg.in/categories/Coder/"/>
+    
+    
+      <category term="Java" scheme="http://hocg.in/tags/Java/"/>
+    
+      <category term="JVM" scheme="http://hocg.in/tags/JVM/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>谈JVM，各种过程</title>
+    <link href="http://hocg.in/2016/06/12/%E8%B0%88JVM-%E5%90%84%E7%A7%8D%E8%BF%87%E7%A8%8B/"/>
+    <id>http://hocg.in/2016/06/12/谈JVM-各种过程/</id>
+    <published>2016-06-12T11:37:49.000Z</published>
+    <updated>2016-08-27T05:35:49.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>谈谈JVM 各种过程， XMind等我整理一下，稍后贴出 囧～<br>欢迎指教..<br><strong>update:</strong> 2016-08-03 14:44:12 更新了图<br><a id="more"></a></p>
+<h3 id="总思路"><a href="#总思路" class="headerlink" title="总思路"></a>总思路</h3><p>编译过程 -&gt; 运行过程[类加载器过程(类的装载过程) -&gt; 执行过程]</p>
+<h4 id="图"><a href="#图" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/总思路-v1.png" alt="总思路-v1.png"></p>
+<h3 id="编译过程"><a href="#编译过程" class="headerlink" title="编译过程"></a>编译过程</h3><p>.java文件 -javac编译-&gt; .class文件       {-JIT编译(转化+优化)-&gt; 本地方法}[执行过程，当方法执行频率高]</p>
+<h4 id="图-1"><a href="#图-1" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/编译过程.png" alt="编译过程.png"></p>
+<hr>
+<h3 id="运行过程"><a href="#运行过程" class="headerlink" title="运行过程"></a>运行过程</h3><p>类加载器 -&gt; (执行引擎 -&gt; 本地库接口)[Java 运行时数据区] -&gt; 本地方法库</p>
+<h4 id="图-2"><a href="#图-2" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/运行过程.png" alt="运行过程.png"></p>
+<hr>
+<h3 id="类加载器过程"><a href="#类加载器过程" class="headerlink" title="类加载器过程"></a><strong>类加载器</strong>过程</h3><p>[启动]类加载器(JNI) -&gt; [扩展]类加载器 -&gt; [系统]类加载器 -&gt; [自定义]类加载器</p>
+<h4 id="图-3"><a href="#图-3" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/类加载器过程.png" alt="类加载器过程.png"></p>
+<hr>
+<h3 id="类装载过程"><a href="#类装载过程" class="headerlink" title="类装载过程"></a><strong>类</strong>装载过程</h3><p>加载文件到JVM内存 -&gt; (校验语言规范 -&gt; 分配结构存储类的信息 -&gt; 该类常量池中符号更改为直接引用)[Linking] -&gt; 类初始化</p>
+<h4 id="图-4"><a href="#图-4" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/类装载过程.png" alt="类装载过程.png"></p>
+<hr>
+<h3 id="执行引擎执行过程-逐行读取指令"><a href="#执行引擎执行过程-逐行读取指令" class="headerlink" title="执行引擎执行过程(逐行读取指令)"></a><strong>执行引擎</strong>执行过程(逐行读取指令)</h3><p>Thread启动 -生成-&gt; JVM栈 -执行方法-&gt; 压入栈帧(包含 局部变量数组&amp;操作数栈&amp;运行时常量池) -&gt; 逐行读取指令&amp;&amp;解释(JVM栈帧 程序计数器存放下一条指令) -&gt; {JIT(转化+优化)-&gt; 本地方法}[当方法执行频率高] -执行&amp;运算-&gt; 结果(存放 操作数栈中) -&gt; 推出栈帧</p>
+<h4 id="图-5"><a href="#图-5" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/执行引擎执行过程.png" alt="执行引擎执行过程.png"></p>
+<hr>
+<h3 id="Java-运行时数据区-贯穿整个执行过程"><a href="#Java-运行时数据区-贯穿整个执行过程" class="headerlink" title="Java 运行时数据区(贯穿整个执行过程)"></a>Java 运行时数据区(贯穿整个执行过程)</h3><p>共享型数据区：方法区(含运行时常量池[存放方法&amp;变量的实际<strong>地址</strong>])、堆(存放对象实例)<br>隔离型数据区：JVM 栈、本地方法栈(JNI)、程序计数器</p>
+<h4 id="图-6"><a href="#图-6" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/运行时数据图.png" alt="运行时数据图.png"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;谈谈JVM 各种过程， XMind等我整理一下，稍后贴出 囧～&lt;br&gt;欢迎指教..&lt;br&gt;&lt;strong&gt;update:&lt;/strong&gt; 2016-08-03 14:44:12 更新了图&lt;br&gt;
     
     </summary>
     
