@@ -2,37 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://hocg.in/iPage/static/js/vendor.1b8f944abf895e4bc592.js</loc>
+    <loc>http://hocg.in/iPage/index.html</loc>
     
-    <lastmod>2017-03-31T08:26:38.000Z</lastmod>
+    <lastmod>2017-03-31T08:28:07.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://hocg.in/iPage/static/js/manifest.ff243f16e19fc2270547.js</loc>
+    <loc>http://hocg.in/iPage/static/js/vendor.1b8f944abf895e4bc592.js</loc>
     
-    <lastmod>2017-03-31T08:26:38.000Z</lastmod>
+    <lastmod>2017-03-31T08:28:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://hocg.in/iPage/static/js/manifest.e09abc7952c538c3e5ca.js</loc>
+    
+    <lastmod>2017-03-31T08:28:07.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://hocg.in/iPage/static/js/app.92000e20ccb9faffa847.js</loc>
     
-    <lastmod>2017-03-31T08:26:38.000Z</lastmod>
+    <lastmod>2017-03-31T08:28:07.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://hocg.in/iPage/static/css/app.071a54685ddaecdd0184a69af62b6317.css</loc>
+    <loc>http://hocg.in/iPage/static/css/app.7e15262225124c19b0496aa583868611.css</loc>
     
-    <lastmod>2017-03-31T08:26:38.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://hocg.in/iPage/index.html</loc>
-    
-    <lastmod>2017-03-31T08:26:38.000Z</lastmod>
+    <lastmod>2017-03-31T08:28:07.000Z</lastmod>
     
   </url>
   
