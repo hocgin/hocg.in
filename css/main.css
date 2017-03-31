@@ -1691,7 +1691,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #d03c8b;
+  background: #116938;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2825,6 +2825,10 @@ hr {
 }
 .with-love .lover-color{
   color: #c30303;
+}
+
+* {
+    cursor: url('https://hocg.in/mouse.png'), auto;
 }
 
 .hocgin-money *, *:before, *:after {
