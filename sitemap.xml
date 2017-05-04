@@ -2,6 +2,48 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://hocg.in/card/index.html</loc>
+    
+    <lastmod>2017-05-04T13:13:41.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hocg.in/card/static/js/vendor.036968f052cfb475999a.js</loc>
+    
+    <lastmod>2017-05-04T13:10:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hocg.in/card/static/js/manifest.85ff1a6e2022ccca59d7.js</loc>
+    
+    <lastmod>2017-05-04T13:10:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hocg.in/card/static/js/app.c8c8b17a368d73e4258c.js</loc>
+    
+    <lastmod>2017-05-04T13:10:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hocg.in/card/static/css/app.7431aa6c00fc71198636b3f4f6830104.css</loc>
+    
+    <lastmod>2017-05-04T13:10:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hocg.in/2017/03/26/Vue.js-%E9%A1%B9%E7%9B%AE%E5%AE%9E%E8%B7%B5/</loc>
+    
+    <lastmod>2017-05-04T09:08:30.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://hocg.in/2017/03/31/Vue.js%E9%A1%B9%E7%9B%AE-%E9%83%A8%E4%BB%B6%E7%AE%80%E4%BB%8B/</loc>
     
     <lastmod>2017-03-31T13:15:33.000Z</lastmod>
@@ -26,13 +68,6 @@
     <loc>https://hocg.in/categories/index.html</loc>
     
     <lastmod>2017-03-31T11:28:49.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hocg.in/2017/03/26/Vue.js-%E9%A1%B9%E7%9B%AE%E5%AE%9E%E8%B7%B5/</loc>
-    
-    <lastmod>2017-03-31T07:42:08.000Z</lastmod>
     
   </url>
   

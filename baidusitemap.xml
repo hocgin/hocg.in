@@ -3,6 +3,35 @@
 
 
     
+    
+    
+    
+    
+    
+  <url>
+    <loc>https://hocg.in/2017/03/26/Vue.js-%E9%A1%B9%E7%9B%AE%E5%AE%9E%E8%B7%B5/</loc>
+    <lastmod>2017-05-04T09:08:30.000Z</lastmod>
+    <data>
+        <display>
+        <title>Vue 项目实践 - 持续更新</title>
+        <pubTime>2017-03-26T07:40:08.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+        <tag>HTML5</tag>
+         
+        <tag>前端</tag>
+         
+         
+           
+             
+              <breadCrumb title="Coder" url="https://hocg.in/categories/Coder/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
   <url>
     <loc>https://hocg.in/2017/03/31/Vue.js%E9%A1%B9%E7%9B%AE-%E9%83%A8%E4%BB%B6%E7%AE%80%E4%BB%8B/</loc>
     <lastmod>2017-03-31T13:15:33.000Z</lastmod>
@@ -29,30 +58,6 @@
     
     
     
-    
-  <url>
-    <loc>https://hocg.in/2017/03/26/Vue.js-%E9%A1%B9%E7%9B%AE%E5%AE%9E%E8%B7%B5/</loc>
-    <lastmod>2017-03-31T07:42:08.000Z</lastmod>
-    <data>
-        <display>
-        <title>Vue 项目实践 - 持续更新</title>
-        <pubTime>2017-03-26T07:40:08.000Z</pubTime>
-        
-        <tag>JavaScript</tag>
-         
-        <tag>HTML5</tag>
-         
-        <tag>前端</tag>
-         
-         
-           
-             
-              <breadCrumb title="Coder" url="https://hocg.in/categories/Coder/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
   <url>
     <loc>https://hocg.in/2016/03/20/%E5%AE%89%E8%A3%85%E5%AE%8CUbuntu%E5%90%8E-%E6%88%91%E8%AF%A5%E5%81%9A%E4%BB%80%E4%B9%88/</loc>
@@ -346,9 +351,9 @@
         <title>Android L 及以上版本Rom包中提取apk</title>
         <pubTime>2016-08-07T11:19:29.000Z</pubTime>
         
-        <tag>Tips</tag>
-         
         <tag>Android</tag>
+         
+        <tag>Tips</tag>
          
          
            
@@ -458,9 +463,9 @@
         <title>Mac的使用</title>
         <pubTime>2016-07-02T02:47:06.000Z</pubTime>
         
-        <tag>Mac</tag>
-         
         <tag>Tips</tag>
+         
+        <tag>Mac</tag>
          
          
            
