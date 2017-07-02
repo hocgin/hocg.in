@@ -4,8 +4,30 @@
 
     
   <url>
+    <loc>https://hocg.in/2017/07/02/%E5%85%B3%E4%BA%8EAndroid%20Studio%20%E5%90%AF%E5%8A%A8Android%E6%A8%A1%E6%8B%9F%E5%99%A8%E5%A4%B1%E8%B4%A5%E9%97%AE%E9%A2%98/</loc>
+    <lastmod>2017-07-02T13:07:55.000Z</lastmod>
+    <data>
+        <display>
+        <title>关于 Android Studio 启动 Android 模拟器失败问题</title>
+        <pubTime>2017-07-02T13:07:00.000Z</pubTime>
+        
+        <tag>Mac</tag>
+         
+        <tag>Android</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="https://hocg.in/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://hocg.in/2017/03/26/Vue.js-%E9%A1%B9%E7%9B%AE%E5%AE%9E%E8%B7%B5/</loc>
-    <lastmod>2017-05-04T09:08:30.000Z</lastmod>
+    <lastmod>2017-06-01T13:20:00.000Z</lastmod>
     <data>
         <display>
         <title>Vue 项目实践 - 持续更新</title>
@@ -346,9 +368,9 @@
         <title>Android L 及以上版本Rom包中提取apk</title>
         <pubTime>2016-08-07T11:19:29.000Z</pubTime>
         
-        <tag>Android</tag>
-         
         <tag>Tips</tag>
+         
+        <tag>Android</tag>
          
          
            
@@ -458,9 +480,9 @@
         <title>Mac的使用</title>
         <pubTime>2016-07-02T02:47:06.000Z</pubTime>
         
-        <tag>Tips</tag>
-         
         <tag>Mac</tag>
+         
+        <tag>Tips</tag>
          
          
            

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hocg.in/"/>
-  <updated>2017-03-31T13:15:33.000Z</updated>
+  <updated>2017-07-02T13:07:55.000Z</updated>
   <id>https://hocg.in/</id>
   
   <author>
@@ -14,6 +14,39 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于 Android Studio 启动 Android 模拟器失败问题</title>
+    <link href="https://hocg.in/2017/07/02/%E5%85%B3%E4%BA%8EAndroid%20Studio%20%E5%90%AF%E5%8A%A8Android%E6%A8%A1%E6%8B%9F%E5%99%A8%E5%A4%B1%E8%B4%A5%E9%97%AE%E9%A2%98/"/>
+    <id>https://hocg.in/2017/07/02/关于Android Studio 启动Android模拟器失败问题/</id>
+    <published>2017-07-02T13:07:00.000Z</published>
+    <updated>2017-07-02T13:07:55.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>Android Studio 启动虚拟机一直闪退，不显示任何报错信息</p>
+<a id="more"></a>
+<h2 id="排查问题"><a href="#排查问题" class="headerlink" title="排查问题"></a>排查问题</h2><ol>
+<li>尝试用命令启动模拟器, 方便查看其错误日志<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"># 查看你创建的设备</div><div class="line">emulator -list-avds</div><div class="line"># 启动命令</div><div class="line">emulator -netdelay none -netspeed full -avd New_Device_API_2</div><div class="line"># 以下为报错日志</div><div class="line">Hax is enabled</div><div class="line">Hax ram_size 0x60000000</div><div class="line">HAX is working and emulator runs in fast virt mode.</div><div class="line">Failed to sync vcpu reg</div><div class="line">Failed to sync vcpu reg</div><div class="line">Failed to sync vcpu reg</div><div class="line">Failed to sync vcpu reg</div><div class="line">Failed to sync vcpu reg</div><div class="line">Failed to sync HAX vcpu contextInternal error: Initial hax sync failed</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>vcpu无法进行同步?? What??<br>尝试进行了 Google，<a href="https://stackoverflow.com/questions/17024538/how-do-i-fix-failed-to-sync-vcpu-reg-error/17024645" target="_blank" rel="external">How do I fix “Failed to sync vcpu reg” error?
+</a><br>好吧, docker 之类的虚拟机引起了冲突</p>
+<h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><p>关掉用不着的虚拟机如 docker ..</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;起因&quot;&gt;&lt;a href=&quot;#起因&quot; class=&quot;headerlink&quot; title=&quot;起因&quot;&gt;&lt;/a&gt;起因&lt;/h2&gt;&lt;p&gt;Android Studio 启动虚拟机一直闪退，不显示任何报错信息&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Android" scheme="https://hocg.in/categories/Android/"/>
+    
+    
+      <category term="Mac" scheme="https://hocg.in/tags/Mac/"/>
+    
+      <category term="Android" scheme="https://hocg.in/tags/Android/"/>
+    
+  </entry>
   
   <entry>
     <title>Vue.js项目 部件简介 (未完待续)</title>
@@ -84,7 +117,7 @@
     <link href="https://hocg.in/2017/03/26/Vue.js-%E9%A1%B9%E7%9B%AE%E5%AE%9E%E8%B7%B5/"/>
     <id>https://hocg.in/2017/03/26/Vue.js-项目实践/</id>
     <published>2017-03-26T07:40:08.000Z</published>
-    <updated>2017-05-04T09:08:30.000Z</updated>
+    <updated>2017-06-01T13:20:00.000Z</updated>
     
     <content type="html"><![CDATA[<p>🐌 目前国内前端MVVM最火的框架.. 项目实践记录一些流程<br><a id="more"></a></p>
 <h1 id="相关"><a href="#相关" class="headerlink" title="相关"></a>相关</h1><ul>
@@ -97,7 +130,7 @@
 </ul>
 <h1 id="快速搭建项目"><a href="#快速搭建项目" class="headerlink" title="快速搭建项目"></a>快速搭建项目</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"># 构建项目</div><div class="line">npm install -g vue-cli</div><div class="line">vue init webpack &lt;project-name&gt;</div><div class="line"># 试行</div><div class="line">cd iPage</div><div class="line">npm install</div><div class="line">npm run dev</div><div class="line"></div><div class="line"># 安装 vuex</div><div class="line">npm install vuex -S</div><div class="line"></div><div class="line"># 安装 sass 开发支持</div><div class="line">npm install --save-dev sass-loader</div><div class="line">npm install --save-dev node-sass</div><div class="line">npm install --save-dev css-loader</div><div class="line">npm install --save-dev style-loader</div><div class="line"></div><div class="line"># 编译生成静态文件</div><div class="line">npm run build</div></pre></td></tr></table></figure>
 <h1 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">.  </div><div class="line">├── README.md  </div><div class="line">├── build  </div><div class="line">├── config   </div><div class="line">├── index.html  </div><div class="line">├── node_modules  </div><div class="line">├── package.json  </div><div class="line">├── src // 源码</div><div class="line">|    ├── App.vue    // 父组件  </div><div class="line">|    ├── assets     // 静态文件  </div><div class="line">|    ├── components // 公共组件  </div><div class="line">|    ├── main.js    // webpack打包入口文件  </div><div class="line">|    └── router  </div><div class="line">|          └── index.js // 页面路由  </div><div class="line">├── static  </div><div class="line">└── test</div></pre></td></tr></table></figure>
-]]></content>
+<h1 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h1>]]></content>
     
     <summary type="html">
     
@@ -622,9 +655,9 @@
       <category term="Mobile" scheme="https://hocg.in/categories/Mobile/"/>
     
     
-      <category term="Android" scheme="https://hocg.in/tags/Android/"/>
-    
       <category term="Tips" scheme="https://hocg.in/tags/Tips/"/>
+    
+      <category term="Android" scheme="https://hocg.in/tags/Android/"/>
     
   </entry>
   
@@ -766,53 +799,9 @@
       <category term="OS" scheme="https://hocg.in/categories/OS/"/>
     
     
-      <category term="Tips" scheme="https://hocg.in/tags/Tips/"/>
-    
       <category term="Mac" scheme="https://hocg.in/tags/Mac/"/>
     
-  </entry>
-  
-  <entry>
-    <title>谈JVM，各种过程</title>
-    <link href="https://hocg.in/2016/06/12/%E8%B0%88JVM-%E5%90%84%E7%A7%8D%E8%BF%87%E7%A8%8B/"/>
-    <id>https://hocg.in/2016/06/12/谈JVM-各种过程/</id>
-    <published>2016-06-12T11:37:49.000Z</published>
-    <updated>2016-08-27T05:35:49.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>谈谈JVM 各种过程， XMind等我整理一下，稍后贴出 囧～<br>欢迎指教..<br><strong>update:</strong> 2016-08-03 14:44:12 更新了图<br><a id="more"></a></p>
-<h3 id="总思路"><a href="#总思路" class="headerlink" title="总思路"></a>总思路</h3><p>编译过程 -&gt; 运行过程[类加载器过程(类的装载过程) -&gt; 执行过程]</p>
-<h4 id="图"><a href="#图" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/总思路-v1.png" alt="总思路-v1.png"></p>
-<h3 id="编译过程"><a href="#编译过程" class="headerlink" title="编译过程"></a>编译过程</h3><p>.java文件 -javac编译-&gt; .class文件       {-JIT编译(转化+优化)-&gt; 本地方法}[执行过程，当方法执行频率高]</p>
-<h4 id="图-1"><a href="#图-1" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/编译过程.png" alt="编译过程.png"></p>
-<hr>
-<h3 id="运行过程"><a href="#运行过程" class="headerlink" title="运行过程"></a>运行过程</h3><p>类加载器 -&gt; (执行引擎 -&gt; 本地库接口)[Java 运行时数据区] -&gt; 本地方法库</p>
-<h4 id="图-2"><a href="#图-2" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/运行过程.png" alt="运行过程.png"></p>
-<hr>
-<h3 id="类加载器过程"><a href="#类加载器过程" class="headerlink" title="类加载器过程"></a><strong>类加载器</strong>过程</h3><p>[启动]类加载器(JNI) -&gt; [扩展]类加载器 -&gt; [系统]类加载器 -&gt; [自定义]类加载器</p>
-<h4 id="图-3"><a href="#图-3" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/类加载器过程.png" alt="类加载器过程.png"></p>
-<hr>
-<h3 id="类装载过程"><a href="#类装载过程" class="headerlink" title="类装载过程"></a><strong>类</strong>装载过程</h3><p>加载文件到JVM内存 -&gt; (校验语言规范 -&gt; 分配结构存储类的信息 -&gt; 该类常量池中符号更改为直接引用)[Linking] -&gt; 类初始化</p>
-<h4 id="图-4"><a href="#图-4" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/类装载过程.png" alt="类装载过程.png"></p>
-<hr>
-<h3 id="执行引擎执行过程-逐行读取指令"><a href="#执行引擎执行过程-逐行读取指令" class="headerlink" title="执行引擎执行过程(逐行读取指令)"></a><strong>执行引擎</strong>执行过程(逐行读取指令)</h3><p>Thread启动 -生成-&gt; JVM栈 -执行方法-&gt; 压入栈帧(包含 局部变量数组&amp;操作数栈&amp;运行时常量池) -&gt; 逐行读取指令&amp;&amp;解释(JVM栈帧 程序计数器存放下一条指令) -&gt; {JIT(转化+优化)-&gt; 本地方法}[当方法执行频率高] -执行&amp;运算-&gt; 结果(存放 操作数栈中) -&gt; 推出栈帧</p>
-<h4 id="图-5"><a href="#图-5" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/执行引擎执行过程.png" alt="执行引擎执行过程.png"></p>
-<hr>
-<h3 id="Java-运行时数据区-贯穿整个执行过程"><a href="#Java-运行时数据区-贯穿整个执行过程" class="headerlink" title="Java 运行时数据区(贯穿整个执行过程)"></a>Java 运行时数据区(贯穿整个执行过程)</h3><p>共享型数据区：方法区(含运行时常量池[存放方法&amp;变量的实际<strong>地址</strong>])、堆(存放对象实例)<br>隔离型数据区：JVM 栈、本地方法栈(JNI)、程序计数器</p>
-<h4 id="图-6"><a href="#图-6" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/运行时数据图.png" alt="运行时数据图.png"></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;谈谈JVM 各种过程， XMind等我整理一下，稍后贴出 囧～&lt;br&gt;欢迎指教..&lt;br&gt;&lt;strong&gt;update:&lt;/strong&gt; 2016-08-03 14:44:12 更新了图&lt;br&gt;
-    
-    </summary>
-    
-      <category term="Coder" scheme="https://hocg.in/categories/Coder/"/>
-    
-    
-      <category term="Java" scheme="https://hocg.in/tags/Java/"/>
-    
-      <category term="JVM" scheme="https://hocg.in/tags/JVM/"/>
+      <category term="Tips" scheme="https://hocg.in/tags/Tips/"/>
     
   </entry>
   
@@ -965,6 +954,50 @@
     <summary type="html">
     
       &lt;p&gt;谈谈JVM，最近在研究破解jar，有这方面经验的麻烦指导一下思路..&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Coder" scheme="https://hocg.in/categories/Coder/"/>
+    
+    
+      <category term="Java" scheme="https://hocg.in/tags/Java/"/>
+    
+      <category term="JVM" scheme="https://hocg.in/tags/JVM/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>谈JVM，各种过程</title>
+    <link href="https://hocg.in/2016/06/12/%E8%B0%88JVM-%E5%90%84%E7%A7%8D%E8%BF%87%E7%A8%8B/"/>
+    <id>https://hocg.in/2016/06/12/谈JVM-各种过程/</id>
+    <published>2016-06-12T11:37:49.000Z</published>
+    <updated>2016-08-27T05:35:49.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>谈谈JVM 各种过程， XMind等我整理一下，稍后贴出 囧～<br>欢迎指教..<br><strong>update:</strong> 2016-08-03 14:44:12 更新了图<br><a id="more"></a></p>
+<h3 id="总思路"><a href="#总思路" class="headerlink" title="总思路"></a>总思路</h3><p>编译过程 -&gt; 运行过程[类加载器过程(类的装载过程) -&gt; 执行过程]</p>
+<h4 id="图"><a href="#图" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/总思路-v1.png" alt="总思路-v1.png"></p>
+<h3 id="编译过程"><a href="#编译过程" class="headerlink" title="编译过程"></a>编译过程</h3><p>.java文件 -javac编译-&gt; .class文件       {-JIT编译(转化+优化)-&gt; 本地方法}[执行过程，当方法执行频率高]</p>
+<h4 id="图-1"><a href="#图-1" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/编译过程.png" alt="编译过程.png"></p>
+<hr>
+<h3 id="运行过程"><a href="#运行过程" class="headerlink" title="运行过程"></a>运行过程</h3><p>类加载器 -&gt; (执行引擎 -&gt; 本地库接口)[Java 运行时数据区] -&gt; 本地方法库</p>
+<h4 id="图-2"><a href="#图-2" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/运行过程.png" alt="运行过程.png"></p>
+<hr>
+<h3 id="类加载器过程"><a href="#类加载器过程" class="headerlink" title="类加载器过程"></a><strong>类加载器</strong>过程</h3><p>[启动]类加载器(JNI) -&gt; [扩展]类加载器 -&gt; [系统]类加载器 -&gt; [自定义]类加载器</p>
+<h4 id="图-3"><a href="#图-3" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/类加载器过程.png" alt="类加载器过程.png"></p>
+<hr>
+<h3 id="类装载过程"><a href="#类装载过程" class="headerlink" title="类装载过程"></a><strong>类</strong>装载过程</h3><p>加载文件到JVM内存 -&gt; (校验语言规范 -&gt; 分配结构存储类的信息 -&gt; 该类常量池中符号更改为直接引用)[Linking] -&gt; 类初始化</p>
+<h4 id="图-4"><a href="#图-4" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/类装载过程.png" alt="类装载过程.png"></p>
+<hr>
+<h3 id="执行引擎执行过程-逐行读取指令"><a href="#执行引擎执行过程-逐行读取指令" class="headerlink" title="执行引擎执行过程(逐行读取指令)"></a><strong>执行引擎</strong>执行过程(逐行读取指令)</h3><p>Thread启动 -生成-&gt; JVM栈 -执行方法-&gt; 压入栈帧(包含 局部变量数组&amp;操作数栈&amp;运行时常量池) -&gt; 逐行读取指令&amp;&amp;解释(JVM栈帧 程序计数器存放下一条指令) -&gt; {JIT(转化+优化)-&gt; 本地方法}[当方法执行频率高] -执行&amp;运算-&gt; 结果(存放 操作数栈中) -&gt; 推出栈帧</p>
+<h4 id="图-5"><a href="#图-5" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/执行引擎执行过程.png" alt="执行引擎执行过程.png"></p>
+<hr>
+<h3 id="Java-运行时数据区-贯穿整个执行过程"><a href="#Java-运行时数据区-贯穿整个执行过程" class="headerlink" title="Java 运行时数据区(贯穿整个执行过程)"></a>Java 运行时数据区(贯穿整个执行过程)</h3><p>共享型数据区：方法区(含运行时常量池[存放方法&amp;变量的实际<strong>地址</strong>])、堆(存放对象实例)<br>隔离型数据区：JVM 栈、本地方法栈(JNI)、程序计数器</p>
+<h4 id="图-6"><a href="#图-6" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/运行时数据图.png" alt="运行时数据图.png"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;谈谈JVM 各种过程， XMind等我整理一下，稍后贴出 囧～&lt;br&gt;欢迎指教..&lt;br&gt;&lt;strong&gt;update:&lt;/strong&gt; 2016-08-03 14:44:12 更新了图&lt;br&gt;
     
     </summary>
     
@@ -1153,349 +1186,6 @@
       <category term="Hexo" scheme="https://hocg.in/tags/Hexo/"/>
     
       <category term="CSS3" scheme="https://hocg.in/tags/CSS3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>安装完Ubuntu后,我该做什么</title>
-    <link href="https://hocg.in/2016/03/20/%E5%AE%89%E8%A3%85%E5%AE%8CUbuntu%E5%90%8E-%E6%88%91%E8%AF%A5%E5%81%9A%E4%BB%80%E4%B9%88/"/>
-    <id>https://hocg.in/2016/03/20/安装完Ubuntu后-我该做什么/</id>
-    <published>2016-03-20T06:34:20.000Z</published>
-    <updated>2017-03-09T11:45:14.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>这是一篇我对Ubuntu日常使用和优化的整理，也是一篇借鉴前人的文章，还有一些可能会遇到的疑难杂病的“偏方”，希望对你有帮助:)<br><strong>update</strong>: 新增<code>undistract-me</code>终端命令完成提醒插件<br><a id="more"></a></p>
-<h2 id="yuan获取"><a href="#yuan获取" class="headerlink" title="yuan获取"></a>yuan获取</h2><p>官方列表： <a href="http://wiki.ubuntu.org.cn/%E6%BA%90%E5%88%97%E8%A1%A8" target="_blank" rel="external">http://wiki.ubuntu.org.cn/%E6%BA%90%E5%88%97%E8%A1%A8</a><br>网易163： <a href="http://mirrors.163.com/.help/ubuntu.html" target="_blank" rel="external">http://mirrors.163.com/.help/ubuntu.html</a></p>
-<hr>
-<h2 id="移除"><a href="#移除" class="headerlink" title="移除"></a>移除</h2><blockquote>
-<p>删除libreoffice</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get remove libreoffice-common</div></pre></td></tr></table></figure>
-<blockquote>
-<p>删除Amazon的链接s</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get remove unity-webapps-common</div></pre></td></tr></table></figure>
-<blockquote>
-<p>删掉基本不用的自带软件</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo apt-get remove thunderbird totem rhythmbox empathy brasero simple-scan gnome-mahjongg aisleriot gnome-mines cheese transmission-common gnome-orca webbrowser-app gnome-sudoku  landscape-client-ui-install</div><div class="line">sudo apt-get remove onboard deja-dup</div></pre></td></tr></table></figure>
-<blockquote>
-<p>shang xia zuoyou</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo apt-get remove vim-common</div><div class="line">sudo apt-get install vim</div></pre></td></tr></table></figure>
-<hr>
-<h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><p>monaco<code>苹果字体</code><br><a href="https://github.com/cstrap/monaco-font" target="_blank" rel="external">https://github.com/cstrap/monaco-font</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl -kL https://raw.github.com/cstrap/monaco-font/master/install-font-ubuntu.sh | bash</div></pre></td></tr></table></figure></p>
-<p>consolas<code>微软字体</code></p>
-<hr>
-<h2 id="Gnome3"><a href="#Gnome3" class="headerlink" title="Gnome3"></a>Gnome3</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><h4 id="1-安装Gnome3桌面"><a href="#1-安装Gnome3桌面" class="headerlink" title="1.安装Gnome3桌面"></a>1.安装Gnome3桌面</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"># 安装</div><div class="line">sudo add-apt-repository ppa:gnome3-team/gnome3</div><div class="line">sudo apt-get update</div><div class="line">sudo apt-get install ppa-purge</div><div class="line">sudo ppa-purge ppa:gnome3-team/gnome3</div><div class="line">sudo apt-get dist-upgrade</div><div class="line">sudo apt-get install gnome-themes-standard ubuntu-desktop gnome-shell</div><div class="line"># 删除</div><div class="line">sudo apt-get install ppa-purge</div><div class="line">sudo ppa-purge ppa:gnome3-team/gnome3</div></pre></td></tr></table></figure>
-<h4 id="2-Gnome3系统"><a href="#2-Gnome3系统" class="headerlink" title="2.Gnome3系统"></a>2.Gnome3系统</h4><p><a href="https://ubuntugnome.org/download/" target="_blank" rel="external">下载</a></p>
-<h3 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h3><p><code>主题文件位置：~/.themes 或 /usr/share/themes</code></p>
-<h4 id="1-Paper"><a href="#1-Paper" class="headerlink" title="1.Paper"></a>1.Paper</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"># 下拉git</div><div class="line">git clone https://github.com/snwh/paper-gtk-theme.git</div><div class="line"># 运行安装脚本</div><div class="line">sh ./install-gtk-theme.sh</div></pre></td></tr></table></figure>
-<h4 id="2-Numix-Circle"><a href="#2-Numix-Circle" class="headerlink" title="2.Numix-Circle"></a>2.Numix-Circle</h4><blockquote>
-<p>很赞</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"># 安装</div><div class="line">sudo apt-add-repository ppa:numix/ppa</div><div class="line">sudo apt-get update</div><div class="line">sudo apt-get install numix-icon-theme-circle</div></pre></td></tr></table></figure>
-<h3 id="插件支持"><a href="#插件支持" class="headerlink" title="插件支持"></a>插件支持</h3><blockquote>
-<p>gnome-tweak-tool Gnome3的调节软件<br>可直接管理插件</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install gnome-tweak-tool</div></pre></td></tr></table></figure>
-<p><code>插件下载网站: https://extensions.gnome.org/</code></p>
-<ol>
-<li>使用Chrome 插件</li>
-<li>系统安装chrome-gnome-shell</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">sudo add-apt-repository ppa:ne0sight/chrome-gnome-shell</div><div class="line"># trusty</div><div class="line">sudo apt-get update</div><div class="line">sudo apt-get install chrome-gnome-shell</div></pre></td></tr></table></figure>
-<p><strong>插件列表</strong></p>
-<table>
-<thead>
-<tr>
-<th>名称</th>
-<th>描述</th>
-<th>推荐</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Autohide battery</td>
-<td>可以在电池充满的情况下隐藏电池图标</td>
-<td>推荐</td>
-</tr>
-<tr>
-<td>Battery status</td>
-<td>可以显示当前电池电量以及可以使用的时间</td>
-<td>推荐</td>
-</tr>
-<tr>
-<td>Dash to dock</td>
-<td>在屏幕左边显示一个快速启动条</td>
-<td>推荐</td>
-</tr>
-<tr>
-<td>Freon</td>
-<td>显示当前磁盘，显卡，CPU等等温度</td>
-<td>不推荐，推荐SysPeek</td>
-</tr>
-<tr>
-<td>Lock Keys</td>
-<td>显示当前的 Num Lock, Caps Lock 的状态</td>
-<td>推荐</td>
-</tr>
-<tr>
-<td>Refesh wifi connections</td>
-<td>在 wifi 列表上显示一个刷新图标</td>
-<td>推荐</td>
-</tr>
-<tr>
-<td>status title bar</td>
-<td>讲状态条上的标题改为当前窗口的标题</td>
-<td>推荐</td>
-</tr>
-<tr>
-<td>Coverflow Alt-Tab</td>
-<td>类似WIN 7切换特效</td>
-<td>太显眼，不推荐</td>
-</tr>
-<tr>
-<td>OpenWeather</td>
-<td>天气预报</td>
-<td>推荐</td>
-</tr>
-<tr>
-<td>NetSpeed</td>
-<td>显示网速</td>
-<td>不推荐，推荐SysPeek</td>
-</tr>
-<tr>
-<td>system-monitor</td>
-<td>显示当前系统信息</td>
-<td>太显眼，不推荐</td>
-</tr>
-<tr>
-<td>Dynamic Top Bar</td>
-<td>在当前没有最大化窗口时使顶栏透明</td>
-<td>推荐</td>
-</tr>
-<tr>
-<td>Impatience</td>
-<td>Gnome Shell 动画提速</td>
-<td>推荐</td>
-</tr>
-<tr>
-<td>Better Volume Indicator</td>
-<td>透过鼠标滚轮操作更便捷地调整音量</td>
-<td>推荐</td>
-</tr>
-<tr>
-<td>Media player indicator</td>
-<td>显示音乐播放器的状态</td>
-<td>推荐</td>
-</tr>
-<tr>
-<td>Workspaces-to-dock</td>
-<td>将工作区转变为一个可自动隐藏的停靠栏</td>
-<td>推荐</td>
-</tr>
-<tr>
-<td>Panel OSD</td>
-<td>修改通知显示位置</td>
-<td>推荐</td>
-</tr>
-<tr>
-<td>Clipboard Indicator</td>
-<td>剪贴板指示器</td>
-<td>推荐</td>
-</tr>
-<tr>
-<td>Caffeine</td>
-<td>禁止自动挂起或锁屏</td>
-<td>推荐</td>
-</tr>
-<tr>
-<td>Transmission Daemon Indicator</td>
-<td>Transmission面板指示器</td>
-<td>推荐，需要Transmission Daemon</td>
-</tr>
-<tr>
-<td>Icon Hider</td>
-<td>显示/隐藏顶栏图标</td>
-<td>推荐</td>
-</tr>
-<tr>
-<td>Top Panel Workspace Scroll</td>
-<td>在顶栏上滚动鼠标中键来快速切换工作区。在topbar按住shift+滚轮</td>
-<td>推荐</td>
-</tr>
-<tr>
-<td>Drop Down Terminal</td>
-<td>终端快捷方式</td>
-<td>推荐</td>
-</tr>
-<tr>
-<td>Windows Blur Effects</td>
-<td>给未激活的窗口添加模糊效果</td>
-<td>不推荐</td>
-</tr>
-<tr>
-<td>Modern Calc</td>
-<td>功能齐全的计算器扩展</td>
-<td>没找到</td>
-</tr>
-<tr>
-<td>EasyScreenCast</td>
-<td>录屏工具</td>
-<td>推荐</td>
-</tr>
-<tr>
-<td>Place status indicator</td>
-<td>快速访问一些文件夹</td>
-<td>推荐，没装上</td>
-</tr>
-<tr>
-<td>Removable drive menu</td>
-<td>显示连接到电脑的usb设备</td>
-<td>推荐</td>
-</tr>
-<tr>
-<td>User themes</td>
-<td>用来启用自定义的shell主题</td>
-<td>推荐，没装上</td>
-</tr>
-<tr>
-<td>Workspace indicator</td>
-<td>在顶栏显示当前示工作区的序号</td>
-<td>推荐</td>
-</tr>
-<tr>
-<td>touchpad-indicator</td>
-<td>插入鼠标时自动使触摸板失效</td>
-<td>推荐</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h2 id="壁纸"><a href="#壁纸" class="headerlink" title="壁纸"></a>壁纸</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"># 1.安装archibold</div><div class="line">curl -L -O http://archibold.io/sh/archibold</div><div class="line">chmod +x archibold</div><div class="line">sudo mv archibold /usr/bin</div><div class="line"></div><div class="line"># 2.执行</div><div class="line">archibold login-background [壁纸的位置]</div></pre></td></tr></table></figure>
-<p>此外还可以让桌面和锁屏界面使用动态壁纸，动态壁纸由一个xml文件构成，就像这样：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">background</span>&gt;</span></div><div class="line"></div><div class="line">  <span class="tag">&lt;<span class="name">starttime</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">year</span>&gt;</span>2011<span class="tag">&lt;/<span class="name">year</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">month</span>&gt;</span>11<span class="tag">&lt;/<span class="name">month</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">day</span>&gt;</span>24<span class="tag">&lt;/<span class="name">day</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">hour</span>&gt;</span>7<span class="tag">&lt;/<span class="name">hour</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">minute</span>&gt;</span>00<span class="tag">&lt;/<span class="name">minute</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">second</span>&gt;</span>00<span class="tag">&lt;/<span class="name">second</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">starttime</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">static</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">duration</span>&gt;</span>3600.0<span class="tag">&lt;/<span class="name">duration</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">file</span>&gt;</span>picture1.jpg<span class="tag">&lt;/<span class="name">file</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">static</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">transition</span> <span class="attr">type</span>=<span class="string">"overlay"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">duration</span>&gt;</span>18000.0<span class="tag">&lt;/<span class="name">duration</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">from</span>&gt;</span>picture1.jpg<span class="tag">&lt;/<span class="name">from</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">to</span>&gt;</span>/picture2.jpg<span class="tag">&lt;/<span class="name">to</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">transition</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">static</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">duration</span>&gt;</span>18000.0<span class="tag">&lt;/<span class="name">duration</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">file</span>&gt;</span>picture2.jpg<span class="tag">&lt;/<span class="name">file</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">static</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">transition</span> <span class="attr">type</span>=<span class="string">"overlay"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">duration</span>&gt;</span>21600.0<span class="tag">&lt;/<span class="name">duration</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">from</span>&gt;</span>picture2.jpg<span class="tag">&lt;/<span class="name">from</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">to</span>&gt;</span>picture1.jpg<span class="tag">&lt;/<span class="name">to</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">transition</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">background</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>简单解释以下这个xml文件的含义：</p>
-<p><code>starttime</code>：这个部分规定了壁纸切换起始时间，设置成过去的某个时间即可(设置成2020年就要等到2020年才会有效果)<br><code>static</code>：这个部分表示在duration规定的时间(以秒为单位)中壁纸都是file中给定的那张图片<br><code>transition</code>：这个部分表示在duration规定的时间内壁纸从from中的图片切换到to中的图片你可以添加任意多个static+transition的组合，只需要最后一个transition切换回最初的static那张图片就可以循环更换壁纸了。  </p>
-<p>那么如何启用这样的xml文件呢，单凭系统设置无法办到，我们需要使用dconf系统配置编辑器。<br>首先打开dconf编辑器，展开<code>org–gnome–desktop–background</code>这一项，可以看到其中的<code>picture-uri</code>修这一项的默认值是<code>file:///usr/share/backgrounds/gnome/adwaita-timed.xml</code>，这个就是你刚装好桌面是的默认壁纸啦，将其改成你的xml文件就可以了。<br>锁屏界面的壁纸更换方法也一样，只不过把<code>org–gnome–desktop–background</code>改成<code>org–gnome–desktop–screensaver</code>而已</p>
-<hr>
-<h2 id="软件安装"><a href="#软件安装" class="headerlink" title="软件安装"></a>软件安装</h2><h3 id="指令安装"><a href="#指令安装" class="headerlink" title="指令安装"></a>指令安装</h3><blockquote>
-<p>命令面板小提示</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"># 安装</div><div class="line">sudo apt update</div><div class="line">sudo apt install python3-dev python3-pip</div><div class="line">sudo -H pip3 install thefuck</div></pre></td></tr></table></figure>
-<blockquote>
-<p>科学上网 Client-SS</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"># 安装</div><div class="line">sudo add-apt-repository ppa:hzwhuang/ss-qt5</div><div class="line">sudo apt-get update</div><div class="line">sudo apt-get install shadowsocks-qt5</div><div class="line"># 安装 pip</div><div class="line">sudo pip install genpac</div><div class="line"></div><div class="line"># 下载自动翻墙列表</div><div class="line">genpac -p &quot;SOCKS5 127.0.0.1:1080&quot; --gfwlist-proxy=&quot;SOCKS5 127.0.0.1:1080&quot; --output=&quot;~/Documents/autoproxy.pac&quot; --gfwlist-url=&quot;https://autoproxy-gfwlist.googlecode.com/svn/trunk/gfwlist.txt&quot; --user-rule-from=&quot;user-rules.txt&quot;</div></pre></td></tr></table></figure>
-<p><strong>添加开机启动</strong><br>command：<code>/usr/bin/ss-qt5</code></p>
-<blockquote>
-<p>屏幕截图 Shutter</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"># 安装</div><div class="line">sudo apt-get install Shutter</div><div class="line"></div><div class="line"># 打开</div><div class="line"># 搜索 Shutter</div></pre></td></tr></table></figure>
-<blockquote>
-<p>音视频解码 ubuntu-restricted extras</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># 安装</div><div class="line">sudo apt-get install ubuntu-restricted-extras</div></pre></td></tr></table></figure>
-<blockquote>
-<p>终端命令执行完成提醒</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"># 安装</div><div class="line">sudo apt-get install undistract-me</div><div class="line"># 配置</div><div class="line">vim ~/.bashrc</div><div class="line"># 新增如下两行</div><div class="line"># . /usr/share/undistract-me/long-running.bash</div><div class="line"># notify_when_long_running_commands_finish_install</div><div class="line"># 生效</div><div class="line">source ~/.bashrc</div><div class="line"># 测试</div><div class="line">sleep 11</div></pre></td></tr></table></figure>
-<blockquote>
-<p>GNOME MPV 代替VLC播放器</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"># 安装</div><div class="line">sudo add-apt-repository ppa:xuzhen666/gnome-mpv</div><div class="line">sudo apt-get update</div><div class="line">sudo apt-get install gnome-mpv</div></pre></td></tr></table></figure>
-<blockquote>
-<p>视频播放 VLC播放器</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># 安装</div><div class="line">sudo add-apt-repository ppa:videolan/master-daily</div><div class="line">sudo apt-get update</div><div class="line">sudo apt-get install vlc</div><div class="line"># 使用</div><div class="line"># 搜索 vlc</div></pre></td></tr></table></figure>
-<blockquote>
-<p>Grub引导 Grub Customizer<br>可配置启动界面，启动项等</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># 安装</div><div class="line">sudo add-apt-repository ppa:danielrichter2007/grub-customizer</div><div class="line">sudo apt-get update</div><div class="line">sudo apt-get install grub-customizer</div><div class="line"># 使用</div><div class="line"># 搜索 Grub Customizer</div></pre></td></tr></table></figure>
-<blockquote>
-<p>Office WPS</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># 安装</div><div class="line">sudo apt-get install wps-office</div></pre></td></tr></table></figure>
-<blockquote>
-<p>[小插件]指示器性能 SysPeek</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"># 安装</div><div class="line">sudo add-apt-repository ppa:nilarimogard/webupd8  </div><div class="line">sudo apt-get update</div><div class="line">sudo apt-get install syspeeka</div></pre></td></tr></table></figure>
-<blockquote>
-<p>Synapse 快速启动器</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo add-apt-repository ppa:synapse-core/testing</div><div class="line">sudo apt-get update</div><div class="line">sudo apt-get install synapse</div></pre></td></tr></table></figure>
-<blockquote>
-<p>Uget一款下载工具，配合 aria2 插件使用效果出色<br>curl + area2 + axel</p>
-</blockquote>
-<p>地址：<a href="http://baike.renwuyi.com/2014-11/2153.html" target="_blank" rel="external">参考</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"># 安装</div><div class="line">sudo add-apt-repository ppa:plushuang-tw/uget-stable</div><div class="line">sudo apt-get update</div><div class="line">sudo apt-get install uget</div></pre></td></tr></table></figure>
-<blockquote>
-<p>redshift类似 f.lux 的屏幕色温调整工具</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># 安装</div><div class="line">sudo apt-get install redshift-gtk</div></pre></td></tr></table></figure>
-<p><strong>添加开机启动</strong><br>command：<code>redshift-gtk -l 39.92:116.46 -t 5500:4500</code></p>
-<blockquote>
-<p>Go For It 一款整合了待办事项与计时器的生产力应用。</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"># 安装</div><div class="line">sudo add-apt-repository ppa:mank319/go-for-it</div><div class="line">sudo apt-get update</div><div class="line">sudo apt-get install go-for-it</div></pre></td></tr></table></figure>
-<blockquote>
-<p>Catfish 一款优雅迅捷的文件搜索工具<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># 安装</div><div class="line">sudo apt-get install catfish</div></pre></td></tr></table></figure></p>
-<p>神级命令行软件 Tmux <a href="http://www.wushxin.top/2016/03/28/%E4%BD%BF%E7%94%A8tmux.html" target="_blank" rel="external">说明</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install tmux</div></pre></td></tr></table></figure></p>
-<p><code>cat</code>代码高亮<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># 安装</div><div class="line">pip install pygments</div></pre></td></tr></table></figure></p>
-</blockquote>
-<p>配置<br>～/.bashrc<br>加入<code>alias cat=&#39;pygmentize -O style=monokai -f console256 -g&#39;</code></p>
-<h3 id="软件包安装"><a href="#软件包安装" class="headerlink" title="软件包安装"></a>软件包安装</h3><p><a href="http://ubuntu-tweak.com/" target="_blank" rel="external">系统管理 UbuntuTweak</a><br><code>打开：搜索 Ubuntu Tweak</code><br><a href="https://www.jianguoyun.com" target="_blank" rel="external">同步软件 坚果云</a><br><code>打开：搜索 Nutstore</code><br><a href="https://github.com/LiuLang/bcloud-packages" target="_blank" rel="external">百度网盘桌面客户端 BCloud</a><br><a href="https://launchpad.net/indicator-stickynotes" target="_blank" rel="external">便签</a><br><a href="http://keepass.info/" target="_blank" rel="external">MarkDown编辑软件 HarooPad</a><br><a href="http://pad.haroopress.com/" target="_blank" rel="external">密码管理器 keepass2</a><br><a href="http://pinyin.sogou.com/linux/?r=pinyin" target="_blank" rel="external">搜狗输入法</a><br><a href="http://cidian.youdao.com/multi.html#linuxAll" target="_blank" rel="external">有道词典</a><br><a href="http://www.vmware.com/products/workstation/" target="_blank" rel="external">VMware Workstation</a><br><a href="http://www.google.cn/chrome/browser/" target="_blank" rel="external">Chrome</a><br><a href="https://github.com/cosven/FeelUOwn" target="_blank" rel="external">网易音乐</a><br><a href="http://fabforce.net/dbdesigner4/" target="_blank" rel="external">数据库设计软件 DBdesigner4</a> - <a href="http://josemarfuregattideabreusilva.blogspot.com/2015/04/installing-dbdesigner-405-on-ubuntu.html" target="_blank" rel="external">问题1</a></p>
-<hr>
-<h3 id="听起来不错"><a href="#听起来不错" class="headerlink" title="听起来不错"></a>听起来不错</h3><ol>
-<li>Deluge Bittorrent 客户端</li>
-<li>Nutty网络监测工具。</li>
-<li>Synaptic 新立得软件包管理器</li>
-<li>UNetbootin启动盘制作工具</li>
-<li>Gpick拾色器。</li>
-<li>gpaint 微软画图</li>
-<li>ddm 驱动管理器</li>
-<li>Navicat <code>o(╯□╰)o 竟然是wine的</code></li>
-<li>XMind</li>
-</ol>
-<h2 id="小技巧"><a href="#小技巧" class="headerlink" title="小技巧"></a>小技巧</h2><h3 id="关闭系统检测报告"><a href="#关闭系统检测报告" class="headerlink" title="关闭系统检测报告"></a>关闭系统检测报告</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo gedit /etc/default/apport</div><div class="line"># 修改enabled=0</div></pre></td></tr></table></figure>
-<h3 id="开机自动开启数字键"><a href="#开机自动开启数字键" class="headerlink" title="开机自动开启数字键"></a>开机自动开启数字键</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install numlockx</div><div class="line">sudo vim /etc/gdm/Init/Default</div><div class="line"># -----------</div><div class="line"># 在文件最后exit 0的前面添加：</div><div class="line">  if [ -x /usr/bin/numlockx ]; then</div><div class="line">      numlockx on</div><div class="line">  fi</div></pre></td></tr></table></figure>
-<p>重启即可</p>
-<h3 id="插入鼠标时自动使触摸板失效"><a href="#插入鼠标时自动使触摸板失效" class="headerlink" title="插入鼠标时自动使触摸板失效"></a>插入鼠标时自动使触摸板失效</h3><p>安装Touchpad Indicator (触摸板开关）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo add-apt-repository ppa:atareao/atareao  </div><div class="line">sudo apt-get update  </div><div class="line">sudo apt-get install touchpad-indicator</div></pre></td></tr></table></figure></p>
-<p> 搜索 touchpad indicator</p>
-<h3 id="遇到显示俩个输入法图标情况"><a href="#遇到显示俩个输入法图标情况" class="headerlink" title="遇到显示俩个输入法图标情况"></a>遇到显示俩个输入法图标情况</h3><p><code>有一定原因是自启项启动了一个</code></p>
-<h3 id="黑屏"><a href="#黑屏" class="headerlink" title="黑屏"></a>黑屏</h3><p><code>95% 是和显卡驱动有关</code></p>
-<h3 id="Chrome-每次打开都要求输入密码"><a href="#Chrome-每次打开都要求输入密码" class="headerlink" title="Chrome 每次打开都要求输入密码"></a>Chrome 每次打开都要求输入密码</h3><p>一、删除现在的密钥环<br>  视图-&gt;根据密码环 在密码区会有一个“登录”为名字的密钥环，右击将其删除。<br>二、添加新的密钥环<br>  终端输入seahorse打开管理密钥环的软件，文件-&gt;新建-&gt;密码和密钥-&gt;输入名字(这里是以”chrome”为例)。密码设置为空</p>
-<h3 id="添加源安装后，not-fount-XX"><a href="#添加源安装后，not-fount-XX" class="headerlink" title="添加源安装后，not fount XX"></a>添加源安装后，not fount XX</h3><p>一、 试着访问该链接<br>二、如果可以手动找到该路径，那便可以修改<code>/etc/apt/source.list.d/</code>目录下你添加的安装源文件<br><strong>例如</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">vim /etc/apt/sources.list.d/sogoupinyin.list</div><div class="line"># 显示内容</div><div class="line"># deb http://archive.ubuntukylin.com:10006/ubuntukylin trusty main</div><div class="line"># 可修改链接部分。</div></pre></td></tr></table></figure></p>
-<h3 id="网卡驱动-Realtek-RTL8723AE-无线网卡驱动"><a href="#网卡驱动-Realtek-RTL8723AE-无线网卡驱动" class="headerlink" title="网卡驱动 Realtek RTL8723AE 无线网卡驱动"></a>网卡驱动 <code>Realtek RTL8723AE 无线网卡驱动</code></h3><p><strong>第一种</strong>(闭源驱动)：  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install linux-firmware-nonfree</div></pre></td></tr></table></figure>
-<p><strong>第二种</strong>(第三方驱动，PPA安装)：  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo add-apt-repository ppa:hanipouspilot/rtlwifi</div><div class="line">sudo apt-get update</div><div class="line">sudo apt-get install rtlwifi-new-dkms</div></pre></td></tr></table></figure>
-<h3 id="当遇到产品无法输入中文的时候"><a href="#当遇到产品无法输入中文的时候" class="headerlink" title="当遇到产品无法输入中文的时候"></a>当遇到产品无法输入中文的时候</h3><p>先尝试卸载ibus，如果还是不可以试试在xxx.sh的启动脚本中添加如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">XMODIFIERS=&quot;@im=fcitx&quot;</div><div class="line">export XMODIFIERS</div></pre></td></tr></table></figure>
-<p>到</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"># ---------------------------------------------------------------------</div><div class="line"># Run the IDE.</div><div class="line"># ---------------------------------------------------------------------</div></pre></td></tr></table></figure>
-<p>之前。<br><strong>通用</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo mv /usr/bin/ibus-daemon /usr/bin/ibus-daemon.fix</div></pre></td></tr></table></figure></p>
-<h3 id="解决LC-CTYPE-cannot-change-locale-en-US-UTF-8-错误"><a href="#解决LC-CTYPE-cannot-change-locale-en-US-UTF-8-错误" class="headerlink" title="解决LC_CTYPE: cannot change locale (en_US.UTF-8) 错误"></a>解决<code>LC_CTYPE: cannot change locale (en_US.UTF-8)</code> 错误</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># 增加en_US.UTF-8</div><div class="line">locale-gen en_US.UTF-8</div></pre></td></tr></table></figure>
-<h3 id="修复VMware故障，闪退"><a href="#修复VMware故障，闪退" class="headerlink" title="修复VMware故障，闪退"></a>修复<code>VMware</code>故障，闪退</h3><ol>
-<li>下载<a href="http://7xs6lq.com1.z0.glb.clouddn.com/Uefi.priv" target="_blank" rel="external">Uefi.priv</a>、<a href="http://7xs6lq.com1.z0.glb.clouddn.com/fix.sh" target="_blank" rel="external">fix.sh</a>、<a href="http://7xs6lq.com1.z0.glb.clouddn.com/Uefi.der" target="_blank" rel="external">Uefi.der</a>至于同一目录.</li>
-<li>执行  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sh fix.sh</div></pre></td></tr></table></figure>
-</li>
-</ol>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;这是一篇我对Ubuntu日常使用和优化的整理，也是一篇借鉴前人的文章，还有一些可能会遇到的疑难杂病的“偏方”，希望对你有帮助:)&lt;br&gt;&lt;strong&gt;update&lt;/strong&gt;: 新增&lt;code&gt;undistract-me&lt;/code&gt;终端命令完成提醒插件&lt;br&gt;
-    
-    </summary>
-    
-      <category term="OS" scheme="https://hocg.in/categories/OS/"/>
-    
-    
-      <category term="Tips" scheme="https://hocg.in/tags/Tips/"/>
-    
-      <category term="Ubuntu" scheme="https://hocg.in/tags/Ubuntu/"/>
-    
-      <category term="Gnome" scheme="https://hocg.in/tags/Gnome/"/>
     
   </entry>
   
