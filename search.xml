@@ -80,6 +80,105 @@
     </entry>
     
     <entry>
+      <title><![CDATA[关于 Objective-C 的小笔记]]></title>
+      <url>https://hocg.in/2017/03/20/%E5%85%B3%E4%BA%8E%20Objective-C%20%E7%9A%84%E5%B0%8F%E7%AC%94%E8%AE%B0/</url>
+      <content type="html"><![CDATA[<p>之前学 <code>swift3</code> 顺带整理的小笔记<br><a id="more"></a></p>
+<h1 id="Objective-C"><a href="#Objective-C" class="headerlink" title="Objective-C"></a>Objective-C</h1><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><table>
+<thead>
+<tr>
+<th>文件后缀</th>
+<th>文件类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>*.h</code></td>
+<td><strong>头文件</strong>。头文件包含类，类型，函数和常数的声明。</td>
+</tr>
+<tr>
+<td><code>*.m</code></td>
+<td><strong>源代码文件</strong>。这是典型的源代码文件扩展名，可以包含 Objective-C 和 C 代码</td>
+</tr>
+<tr>
+<td><code>*.mm</code></td>
+<td><strong>源代码文件</strong>。带有这种扩展名的源代码文件，除了可以包含Objective-C和C代码以外还可以包含C++代码。仅在你的Objective-C代码中确实需要使用C++类或者特性的时候才用这种扩展名。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><table>
+<thead>
+<tr>
+<th>关键词</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>#import</td>
+<td>引入文件, 并确保相同的文件只会被包含一次</td>
+</tr>
+<tr>
+<td>NSString* say = @”Hello World”</td>
+<td>创建NSString对象</td>
+</tr>
+<tr>
+<td>@interface/@implementation</td>
+<td>objective-c 一个类是由:定义和实现来构成的, @interface 用于定义, @implementation用于实现细节.</td>
+</tr>
+<tr>
+<td>@property与@synthesize</td>
+<td>@property用于在@interface声明getter与setter函数, @synthesize用于在@implementation实现getter与setter函数, <br><strong>二者是搭配口味</strong><br><strong>高版本(Xcode4.5)可省略@synthesize</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="基础框架"><a href="#基础框架" class="headerlink" title="基础框架"></a>基础框架</h2><h3 id=""><a href="#" class="headerlink" title=""></a><foundation foundation.h=""></foundation></h3><ul>
+<li>它包括 NSArray，NSDictionary中的NSSet等扩展数据类型的列表。</li>
+<li>它由一组丰富的操作文件的函数，字符串，等等。</li>
+<li>URL处理它提供的功能，如日期格式，数据处理，错误处理等实用工具</li>
+</ul>
+<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><h3 id="语法速读"><a href="#语法速读" class="headerlink" title="语法速读"></a>语法速读</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">/* 预处理(导包) */</div><div class="line">#import &lt;Foundation/Foundation.h&gt;</div><div class="line"></div><div class="line">/* 定义接口(继承:NSObject) */</div><div class="line">@interface SampleClass:NSObject</div><div class="line">- (void)sampleMethod;</div><div class="line">@end</div><div class="line"></div><div class="line">/* 实现接口(SampleClass) */</div><div class="line">@implementation SampleClass</div><div class="line"></div><div class="line">- (void)sampleMethod&#123;</div><div class="line">   NSLog(@&quot;Hello, World!</div><div class="line">&quot;);</div><div class="line">&#125;</div><div class="line"></div><div class="line">@end</div><div class="line"></div><div class="line"></div><div class="line">/* 主函数 */</div><div class="line">int main() &#123;</div><div class="line">   /* my first program in Objective-C */</div><div class="line">   SampleClass *sampleClass = [[SampleClass alloc]init];</div><div class="line"></div><div class="line">   /* - 调用函数</div><div class="line">   C: sampleClass.sampleMethod(args);</div><div class="line">   OC: [对象 函数名: 参数]</div><div class="line">    */</div><div class="line">   [sampleClass sampleMethod: args];</div><div class="line"></div><div class="line"></div><div class="line">   return 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="类的语法"><a href="#类的语法" class="headerlink" title="类的语法"></a>类的语法</h3><blockquote>
+<p>类分为: <strong>类的定义(.h)</strong> 和 <strong>类的实现(.m)</strong><br><img src="http://7xs6lq.com1.z0.glb.clouddn.com/类的定义语法.jpg" alt="image"></p>
+<h4 id="定义-h"><a href="#定义-h" class="headerlink" title="定义 ( *.h )"></a>定义 ( *.h )</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">@interface MyObject : NSObject</div><div class="line">&#123;</div><div class="line">    // 此处变量默认为受保护(protected)</div><div class="line">    int memberVar1; // 实体变量</div><div class="line">    id  memberVar2;</div><div class="line">&#125;</div><div class="line"></div><div class="line">+(return_type) class_method; // &quot;+&quot; 表示 类方法</div><div class="line"></div><div class="line">-(return_type) instance_method1; // &quot;-&quot; 表示 实例方法</div><div class="line">-(return_type) instance_method2: (int) p1;</div><div class="line">// 这里的调用方式为: [obj instance_method3: 1 andPar: 2];</div><div class="line">// andPar 相当于外部的另外一个别名</div><div class="line">-(return_type) instance_method3: (int) p1 andPar: (int) p2;</div><div class="line">@end</div></pre></td></tr></table></figure>
+</blockquote>
+<h4 id="实现-m"><a href="#实现-m" class="headerlink" title="实现 ( *.m )"></a>实现 ( *.m )</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">@implementation MyObject</div><div class="line">&#123;</div><div class="line">  // 此处变量为私有(private)</div><div class="line">  int memberVar3; //私有实体变量</div><div class="line">&#125;</div><div class="line"></div><div class="line">+(return_type) class_method &#123;</div><div class="line">    .... //method implementation</div><div class="line">&#125;</div><div class="line">-(return_type) instance_method1 &#123;</div><div class="line">     ....</div><div class="line">&#125;</div><div class="line">-(return_type) instance_method2: (int) p1 &#123;</div><div class="line">    ....</div><div class="line">&#125;</div><div class="line">-(return_type) instance_method3: (int) p1 andPar: (int) p2 &#123;</div><div class="line">    ....</div><div class="line">&#125;</div><div class="line">@end</div></pre></td></tr></table></figure>
+<h4 id="创建对象"><a href="#创建对象" class="headerlink" title="创建对象"></a>创建对象</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">// 注: alloc 与 init 都属于 NSObject 里的函数</div><div class="line">MyObject * my = [[MyObject alloc] init];</div><div class="line">// 无参构建, 也可采用以下方式 (Objective-C 2.0)</div><div class="line">MyObject * my = [MyObject new];</div></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>Note:</strong> { } 需如文这样标识, 才可表达出准确的语义, 读者自行领悟.</p>
+</blockquote>
+<h3 id="函数语法"><a href="#函数语法" class="headerlink" title="函数语法"></a>函数语法</h3><blockquote>
+<p>函数分为: <strong>类函数</strong> 和 <strong>对象函数</strong><br><img src="http://7xs6lq.com1.z0.glb.clouddn.com/函数的定义语法.jpg" alt="image"></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">// 如上</div><div class="line">// 定义语法: 范围标识 (返回值)函数名:外部形参别名:(参数类型) 形参名 外部形参别名:(参数类型) 形参名</div><div class="line">// 注: 第一个 外部形参别名 可省略</div><div class="line">- (void)insertObject:(id)anObject atIndex:(NSUInteger) index</div><div class="line">+ (void)insertObject:(id)anObject atIndex:(NSUInteger) index</div><div class="line"></div><div class="line">// 调用</div><div class="line">// 对象调用 [对象 函数名: 参数1 外部形参别名: 参数2]</div><div class="line">[obj insertObject: arg1 atIndex: arg2]</div><div class="line">// 类调用 [类名 函数名: 参数1 外部形参别名: 参数2]</div><div class="line">[Object insertObject: arg1 atIndex: arg2]</div><div class="line"></div><div class="line">// 注:) 类调用 和 对象调用 的形式是一样的</div></pre></td></tr></table></figure>
+<h3 id="属性语法"><a href="#属性语法" class="headerlink" title="属性语法"></a>属性语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div></pre></td><td class="code"><pre><div class="line">@interface Person : NSObject</div><div class="line">&#123;</div><div class="line">/*</div><div class="line">相当于 @public 至 @private 之间的属性被暴露出去</div><div class="line">可通过实例直接访问, 例如: obj-&gt;name</div><div class="line">*/</div><div class="line">@public</div><div class="line">  NSString *name;</div><div class="line">@private</div><div class="line">  int age;</div><div class="line">&#125;</div><div class="line"></div><div class="line">/*</div><div class="line">  参考: http://justcoding.iteye.com/blog/1444548</div><div class="line">  使用范围: @interface, @protocol, @category</div><div class="line">  可声明特性:</div><div class="line">          读写属性：   （readwrite/readonly）</div><div class="line">          setter语意：（assign/retain/copy）</div><div class="line">          原子性：    （atomicity/nonatomic）</div><div class="line">  使用效果(声明一个setter与getter方法):</div><div class="line">    - (NSString*)name;  </div><div class="line">    - (void)setName: (NSString*)newName;</div><div class="line"> */</div><div class="line">@property(copy) NSString *name;</div><div class="line">@property(readonly) int age;</div><div class="line"></div><div class="line">-(id)initWithAge:(int)age;</div><div class="line"></div><div class="line">@end</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">@implementation Person</div><div class="line">/*</div><div class="line">  使用范围: @implementation</div><div class="line">  使用效果(自动实现一个setter与getter方法):</div><div class="line">    - (NSString*)name &#123;</div><div class="line">      return name;</div><div class="line">    &#125;  </div><div class="line">    - (void)setName: (NSString*)newName &#123;</div><div class="line">      name = newName;</div><div class="line">    &#125;</div><div class="line"> */</div><div class="line">@synthesize name;</div><div class="line">/* @dynamic 仅仅是告诉编译器这两个方法在运行期会有的，无需产生警告 */</div><div class="line">@dynamic age;</div><div class="line"></div><div class="line">-(id)initWithAge:(int)initAge</div><div class="line">&#123;</div><div class="line">    age = initAge; // 注意：直接赋给成员变量，而非属性</div><div class="line">    return self;</div><div class="line">&#125;</div><div class="line"></div><div class="line">-(int)age</div><div class="line">&#123;</div><div class="line">    return 29; // 注意：并非返回真正的年龄</div><div class="line">&#125;</div><div class="line">@end</div></pre></td></tr></table></figure>
+<h4 id="类或协议的属性可以被动态的读取"><a href="#类或协议的属性可以被动态的读取" class="headerlink" title="类或协议的属性可以被动态的读取"></a>类或协议的属性可以被动态的读取</h4><blockquote>
+<p>类似反射机制 , 略过..</p>
+</blockquote>
+<h3 id="快速枚举"><a href="#快速枚举" class="headerlink" title="快速枚举"></a>快速枚举</h3><blockquote>
+<p>一种省内存的循环遍历 , 略过..</p>
+</blockquote>
+<h3 id="协议语法"><a href="#协议语法" class="headerlink" title="协议语法"></a>协议语法</h3><blockquote>
+<p>类似 Java 中的接口<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">/*定义协议*/</div><div class="line">@protocol Locking</div><div class="line">- (void)lock;</div><div class="line">- (void)unlock;</div><div class="line">@end</div><div class="line">/*</div><div class="line">类的@interface 宣称使用 协议</div><div class="line">*/</div><div class="line">@interface SomeClass : SomeSuperClass &lt;Locking&gt;</div><div class="line">@end</div><div class="line">/*</div><div class="line">类的@implementation 实现 协议 细节</div><div class="line">*/</div><div class="line">@implementation SomeClass</div><div class="line">- (void)lock &#123;</div><div class="line">  // 实现lock方法...</div><div class="line">&#125;</div><div class="line">- (void)unlock &#123;</div><div class="line">  // 实现unlock方法...</div><div class="line">&#125;</div><div class="line">@end</div></pre></td></tr></table></figure></p>
+</blockquote>
+<h3 id="动态类型"><a href="#动态类型" class="headerlink" title="动态类型"></a>动态类型</h3><blockquote>
+<p>id 相当于 Java 中的 Object, 即 任意对象</p>
+</blockquote>
+<h3 id="类别-Category-语法"><a href="#类别-Category-语法" class="headerlink" title="类别 (Category) 语法"></a>类别 (Category) 语法</h3><blockquote>
+<p>分类不仅可以增加类的方法，也可以代替原有的<strong>函数</strong>, <strong>并不能新增变量</strong><br>动态增加和替换函数, 强得一匹</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">/*</div><div class="line">  说明: 定义扩展 Integer类 接口, 新增/覆盖 函数 showstars 与 showint</div><div class="line">  语法:</div><div class="line">    #import &quot;待扩展类接口文件.h&quot;</div><div class="line">    @interface 待扩展类(扩展类)</div><div class="line">      // 函数定义</div><div class="line">    @end</div><div class="line">*/</div><div class="line">#import &quot;Integer.h&quot;</div><div class="line">@interface Integer(Display)</div><div class="line">- (id) showstars;</div><div class="line">- (id) showint;</div><div class="line">@end</div><div class="line"></div><div class="line">/*</div><div class="line">  说明: 实现扩展 Integer类 接口, 新增/覆盖 函数 showstars 与 showint</div><div class="line">  语法:</div><div class="line">    #import &quot;扩展类接口文件.h&quot;</div><div class="line">    @implementation 待扩展类(扩展类)</div><div class="line">      // 函数实现</div><div class="line">    @end</div><div class="line">*/</div><div class="line">#import &quot;Display.h&quot;</div><div class="line">@implementation Integer(Display)</div><div class="line">- (id) showstars &#123;</div><div class="line">  ..</div><div class="line">&#125;</div><div class="line"></div><div class="line">- (id) showint &#123;</div><div class="line">    ..</div><div class="line">&#125;</div><div class="line">@end</div></pre></td></tr></table></figure>
+<p><strong>NOTE:</strong> 使用时需#import 待扩展类与扩展类的接口文件<strong>(.h)</strong></p>
+<h2 id="划重点"><a href="#划重点" class="headerlink" title="划重点"></a>划重点</h2><ul>
+<li><code>NSString*</code>/<code>NSObject*</code>等 表示对象</li>
+<li><code>self</code> 某种程度相当于 <code>this</code></li>
+<li>nil 基本上等同于 NULL</li>
+<li>调用属性 self-&gt;name</li>
+<li>一般(.h 存放<strong>@interface文件</strong>, .m 存放<strong>@implementation文件</strong>). 进行#import时, 只需#import .h文件</li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[PHP Laravel 快速入门]]></title>
       <url>https://hocg.in/2017/03/01/PHP-laravel-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/</url>
       <content type="html"><![CDATA[<p>PHP 框架 Laravel 搭建开始, 慢慢更新~ 😜😜😜😜<br><a id="more"></a></p>
