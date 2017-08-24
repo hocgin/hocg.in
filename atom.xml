@@ -39,6 +39,12 @@
     
     </summary>
     
+      <category term="Android" scheme="https://hocg.in/categories/Android/"/>
+    
+    
+      <category term="Android" scheme="https://hocg.in/tags/Android/"/>
+    
+      <category term="Mac" scheme="https://hocg.in/tags/Mac/"/>
     
   </entry>
   
@@ -95,6 +101,14 @@
     
     </summary>
     
+      <category term="Coder" scheme="https://hocg.in/categories/Coder/"/>
+    
+    
+      <category term="JavaScript" scheme="https://hocg.in/tags/JavaScript/"/>
+    
+      <category term="HTML5" scheme="https://hocg.in/tags/HTML5/"/>
+    
+      <category term="前端" scheme="https://hocg.in/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
@@ -124,6 +138,14 @@
     
     </summary>
     
+      <category term="Coder" scheme="https://hocg.in/categories/Coder/"/>
+    
+    
+      <category term="JavaScript" scheme="https://hocg.in/tags/JavaScript/"/>
+    
+      <category term="HTML5" scheme="https://hocg.in/tags/HTML5/"/>
+    
+      <category term="前端" scheme="https://hocg.in/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
@@ -235,6 +257,12 @@
     
     </summary>
     
+      <category term="Mac" scheme="https://hocg.in/categories/Mac/"/>
+    
+    
+      <category term="语法" scheme="https://hocg.in/tags/%E8%AF%AD%E6%B3%95/"/>
+    
+      <category term="Objective-C" scheme="https://hocg.in/tags/Objective-C/"/>
     
   </entry>
   
@@ -307,6 +335,12 @@
     
     </summary>
     
+      <category term="Server" scheme="https://hocg.in/categories/Server/"/>
+    
+    
+      <category term="PHP" scheme="https://hocg.in/tags/PHP/"/>
+    
+      <category term="Mac" scheme="https://hocg.in/tags/Mac/"/>
     
   </entry>
   
@@ -361,6 +395,10 @@
     
     </summary>
     
+      <category term="Server" scheme="https://hocg.in/categories/Server/"/>
+    
+    
+      <category term="Ubuntu" scheme="https://hocg.in/tags/Ubuntu/"/>
     
   </entry>
   
@@ -421,6 +459,12 @@
     
     </summary>
     
+      <category term="IDE" scheme="https://hocg.in/categories/IDE/"/>
+    
+    
+      <category term="HTML5" scheme="https://hocg.in/tags/HTML5/"/>
+    
+      <category term="Chrome" scheme="https://hocg.in/tags/Chrome/"/>
     
   </entry>
   
@@ -455,6 +499,10 @@
     
     </summary>
     
+      <category term="Coder" scheme="https://hocg.in/categories/Coder/"/>
+    
+    
+      <category term="JAVA" scheme="https://hocg.in/tags/JAVA/"/>
     
   </entry>
   
@@ -502,6 +550,12 @@
     
     </summary>
     
+      <category term="Server" scheme="https://hocg.in/categories/Server/"/>
+    
+    
+      <category term="Tips" scheme="https://hocg.in/tags/Tips/"/>
+    
+      <category term="Redis" scheme="https://hocg.in/tags/Redis/"/>
     
   </entry>
   
@@ -604,6 +658,12 @@
     
     </summary>
     
+      <category term="Server" scheme="https://hocg.in/categories/Server/"/>
+    
+    
+      <category term="Ngrok" scheme="https://hocg.in/tags/Ngrok/"/>
+    
+      <category term="Tip" scheme="https://hocg.in/tags/Tip/"/>
     
   </entry>
   
@@ -657,6 +717,12 @@
     
     </summary>
     
+      <category term="Server" scheme="https://hocg.in/categories/Server/"/>
+    
+    
+      <category term="Tips" scheme="https://hocg.in/tags/Tips/"/>
+    
+      <category term="Nexus" scheme="https://hocg.in/tags/Nexus/"/>
     
   </entry>
   
@@ -703,6 +769,12 @@
     
     </summary>
     
+      <category term="Mobile" scheme="https://hocg.in/categories/Mobile/"/>
+    
+    
+      <category term="Android" scheme="https://hocg.in/tags/Android/"/>
+    
+      <category term="Tips" scheme="https://hocg.in/tags/Tips/"/>
     
   </entry>
   
@@ -753,6 +825,12 @@
     
     </summary>
     
+      <category term="Coder" scheme="https://hocg.in/categories/Coder/"/>
+    
+    
+      <category term="设计思路" scheme="https://hocg.in/tags/%E8%AE%BE%E8%AE%A1%E6%80%9D%E8%B7%AF/"/>
+    
+      <category term="Java" scheme="https://hocg.in/tags/Java/"/>
     
   </entry>
   
@@ -805,6 +883,12 @@
     
     </summary>
     
+      <category term="Coder" scheme="https://hocg.in/categories/Coder/"/>
+    
+    
+      <category term="设计思路" scheme="https://hocg.in/tags/%E8%AE%BE%E8%AE%A1%E6%80%9D%E8%B7%AF/"/>
+    
+      <category term="Java" scheme="https://hocg.in/tags/Java/"/>
     
   </entry>
   
@@ -829,6 +913,12 @@
     
     </summary>
     
+      <category term="OS" scheme="https://hocg.in/categories/OS/"/>
+    
+    
+      <category term="Tips" scheme="https://hocg.in/tags/Tips/"/>
+    
+      <category term="Mac" scheme="https://hocg.in/tags/Mac/"/>
     
   </entry>
   
@@ -908,6 +998,12 @@
     
     </summary>
     
+      <category term="Server" scheme="https://hocg.in/categories/Server/"/>
+    
+    
+      <category term="Tips" scheme="https://hocg.in/tags/Tips/"/>
+    
+      <category term="SQL" scheme="https://hocg.in/tags/SQL/"/>
     
   </entry>
   
@@ -946,6 +1042,12 @@
     
     </summary>
     
+      <category term="Coder" scheme="https://hocg.in/categories/Coder/"/>
+    
+    
+      <category term="Java" scheme="https://hocg.in/tags/Java/"/>
+    
+      <category term="JVM" scheme="https://hocg.in/tags/JVM/"/>
     
   </entry>
   
@@ -1101,6 +1203,12 @@
     
     </summary>
     
+      <category term="Coder" scheme="https://hocg.in/categories/Coder/"/>
+    
+    
+      <category term="Java" scheme="https://hocg.in/tags/Java/"/>
+    
+      <category term="JVM" scheme="https://hocg.in/tags/JVM/"/>
     
   </entry>
   
@@ -1139,6 +1247,10 @@
     
     </summary>
     
+      <category term="Server" scheme="https://hocg.in/categories/Server/"/>
+    
+    
+      <category term="HTTPS" scheme="https://hocg.in/tags/HTTPS/"/>
     
   </entry>
   
@@ -1168,6 +1280,14 @@
     
     </summary>
     
+      <category term="Coder" scheme="https://hocg.in/categories/Coder/"/>
+    
+    
+      <category term="Tips" scheme="https://hocg.in/tags/Tips/"/>
+    
+      <category term="Maven" scheme="https://hocg.in/tags/Maven/"/>
+    
+      <category term="Shell" scheme="https://hocg.in/tags/Shell/"/>
     
   </entry>
   

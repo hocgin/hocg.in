@@ -11,8 +11,15 @@
         <title>SQL的重新梳理</title>
         <pubTime>2016-06-16T15:21:42.000Z</pubTime>
         
+        <tag>Tips</tag>
+         
+        <tag>SQL</tag>
+         
          
            
+             
+              <breadCrumb title="Server" url="https://hocg.in/categories/Server/"/>
+          
         </display>
     </data>
     </url>
@@ -26,8 +33,15 @@
         <title>关于 Objective-C 的小笔记</title>
         <pubTime>2017-03-20T00:07:00.000Z</pubTime>
         
+        <tag>语法</tag>
+         
+        <tag>Objective-C</tag>
+         
          
            
+             
+              <breadCrumb title="Mac" url="https://hocg.in/categories/Mac/"/>
+          
         </display>
     </data>
     </url>
@@ -41,8 +55,15 @@
         <title>关于 Android Studio 启动 Android 模拟器失败问题</title>
         <pubTime>2017-07-02T13:07:00.000Z</pubTime>
         
+        <tag>Android</tag>
+         
+        <tag>Mac</tag>
+         
          
            
+             
+              <breadCrumb title="Android" url="https://hocg.in/categories/Android/"/>
+          
         </display>
     </data>
     </url>
@@ -56,8 +77,17 @@
         <title>Vue 项目实践 - 持续更新</title>
         <pubTime>2017-03-26T07:40:08.000Z</pubTime>
         
+        <tag>JavaScript</tag>
+         
+        <tag>HTML5</tag>
+         
+        <tag>前端</tag>
+         
          
            
+             
+              <breadCrumb title="Coder" url="https://hocg.in/categories/Coder/"/>
+          
         </display>
     </data>
     </url>
@@ -71,8 +101,17 @@
         <title>Vue.js项目 部件简介 (未完待续)</title>
         <pubTime>2017-03-31T07:32:36.000Z</pubTime>
         
+        <tag>JavaScript</tag>
+         
+        <tag>HTML5</tag>
+         
+        <tag>前端</tag>
+         
          
            
+             
+              <breadCrumb title="Coder" url="https://hocg.in/categories/Coder/"/>
+          
         </display>
     </data>
     </url>
@@ -89,8 +128,17 @@
         <title>安装完Ubuntu后,我该做什么</title>
         <pubTime>2016-03-20T06:34:20.000Z</pubTime>
         
+        <tag>Tips</tag>
+         
+        <tag>Ubuntu</tag>
+         
+        <tag>Gnome</tag>
+         
          
            
+             
+              <breadCrumb title="OS" url="https://hocg.in/categories/OS/"/>
+          
         </display>
     </data>
     </url>
@@ -104,8 +152,15 @@
         <title>PHP Laravel 快速入门</title>
         <pubTime>2017-03-01T06:59:38.000Z</pubTime>
         
+        <tag>PHP</tag>
+         
+        <tag>Mac</tag>
+         
          
            
+             
+              <breadCrumb title="Server" url="https://hocg.in/categories/Server/"/>
+          
         </display>
     </data>
     </url>
@@ -119,8 +174,13 @@
         <title>Nginx 部署</title>
         <pubTime>2017-02-24T01:12:22.000Z</pubTime>
         
+        <tag>Ubuntu</tag>
+         
          
            
+             
+              <breadCrumb title="Server" url="https://hocg.in/categories/Server/"/>
+          
         </display>
     </data>
     </url>
@@ -134,8 +194,15 @@
         <title>关于Chrome 插件开发的一些知识点</title>
         <pubTime>2017-02-04T05:20:51.000Z</pubTime>
         
+        <tag>HTML5</tag>
+         
+        <tag>Chrome</tag>
+         
          
            
+             
+              <breadCrumb title="IDE" url="https://hocg.in/categories/IDE/"/>
+          
         </display>
     </data>
     </url>
@@ -149,8 +216,13 @@
         <title>关于log4j报错</title>
         <pubTime>2017-01-16T00:09:27.000Z</pubTime>
         
+        <tag>JAVA</tag>
+         
          
            
+             
+              <breadCrumb title="Coder" url="https://hocg.in/categories/Coder/"/>
+          
         </display>
     </data>
     </url>
@@ -164,8 +236,15 @@
         <title>Redis 相关</title>
         <pubTime>2016-10-20T01:15:51.000Z</pubTime>
         
+        <tag>Tips</tag>
+         
+        <tag>Redis</tag>
+         
          
            
+             
+              <breadCrumb title="Server" url="https://hocg.in/categories/Server/"/>
+          
         </display>
     </data>
     </url>
@@ -179,8 +258,17 @@
         <title>使用Maven下载jar包 linux版</title>
         <pubTime>2016-04-25T01:38:49.000Z</pubTime>
         
+        <tag>Tips</tag>
+         
+        <tag>Maven</tag>
+         
+        <tag>Shell</tag>
+         
          
            
+             
+              <breadCrumb title="Coder" url="https://hocg.in/categories/Coder/"/>
+          
         </display>
     </data>
     </url>
@@ -194,8 +282,15 @@
         <title>模块设计之对接同步订单模块</title>
         <pubTime>2016-08-02T02:47:06.000Z</pubTime>
         
+        <tag>设计思路</tag>
+         
+        <tag>Java</tag>
+         
          
            
+             
+              <breadCrumb title="Coder" url="https://hocg.in/categories/Coder/"/>
+          
         </display>
     </data>
     </url>
@@ -209,8 +304,15 @@
         <title>Ngrok使用指南</title>
         <pubTime>2016-08-30T23:15:24.000Z</pubTime>
         
+        <tag>Ngrok</tag>
+         
+        <tag>Tip</tag>
+         
          
            
+             
+              <breadCrumb title="Server" url="https://hocg.in/categories/Server/"/>
+          
         </display>
     </data>
     </url>
@@ -224,8 +326,13 @@
         <title>关于HTTPS</title>
         <pubTime>2016-06-02T03:22:43.000Z</pubTime>
         
+        <tag>HTTPS</tag>
+         
          
            
+             
+              <breadCrumb title="Server" url="https://hocg.in/categories/Server/"/>
+          
         </display>
     </data>
     </url>
@@ -239,8 +346,17 @@
         <title>hexo 功能扩展</title>
         <pubTime>2016-03-26T05:44:28.000Z</pubTime>
         
+        <tag>HTML5</tag>
+         
+        <tag>Hexo</tag>
+         
+        <tag>CSS3</tag>
+         
          
            
+             
+              <breadCrumb title="Web" url="https://hocg.in/categories/Web/"/>
+          
         </display>
     </data>
     </url>
@@ -254,8 +370,13 @@
         <title>hexo 使用小记</title>
         <pubTime>2016-03-15T13:31:42.000Z</pubTime>
         
+        <tag>Hexo</tag>
+         
          
            
+             
+              <breadCrumb title="Other" url="https://hocg.in/categories/Other/"/>
+          
         </display>
     </data>
     </url>
@@ -269,8 +390,15 @@
         <title>Nexus 入门</title>
         <pubTime>2016-08-24T11:03:01.000Z</pubTime>
         
+        <tag>Tips</tag>
+         
+        <tag>Nexus</tag>
+         
          
            
+             
+              <breadCrumb title="Server" url="https://hocg.in/categories/Server/"/>
+          
         </display>
     </data>
     </url>
@@ -284,8 +412,15 @@
         <title>Android L 及以上版本Rom包中提取apk</title>
         <pubTime>2016-08-07T11:19:29.000Z</pubTime>
         
+        <tag>Android</tag>
+         
+        <tag>Tips</tag>
+         
          
            
+             
+              <breadCrumb title="Mobile" url="https://hocg.in/categories/Mobile/"/>
+          
         </display>
     </data>
     </url>
@@ -299,8 +434,15 @@
         <title>谈JVM，字节码</title>
         <pubTime>2016-06-12T11:37:49.000Z</pubTime>
         
+        <tag>Java</tag>
+         
+        <tag>JVM</tag>
+         
          
            
+             
+              <breadCrumb title="Coder" url="https://hocg.in/categories/Coder/"/>
+          
         </display>
     </data>
     </url>
@@ -314,8 +456,15 @@
         <title>谈JVM，各种过程</title>
         <pubTime>2016-06-12T11:37:49.000Z</pubTime>
         
+        <tag>Java</tag>
+         
+        <tag>JVM</tag>
+         
          
            
+             
+              <breadCrumb title="Coder" url="https://hocg.in/categories/Coder/"/>
+          
         </display>
     </data>
     </url>
@@ -329,8 +478,17 @@
         <title>绿化NodeJS for linux版</title>
         <pubTime>2016-04-25T01:38:49.000Z</pubTime>
         
+        <tag>Tips</tag>
+         
+        <tag>Ubuntu</tag>
+         
+        <tag>NodeJS</tag>
+         
          
            
+             
+              <breadCrumb title="Coder" url="https://hocg.in/categories/Coder/"/>
+          
         </display>
     </data>
     </url>
@@ -344,8 +502,15 @@
         <title>模块设计之消息模块</title>
         <pubTime>2016-07-30T11:25:56.000Z</pubTime>
         
+        <tag>设计思路</tag>
+         
+        <tag>Java</tag>
+         
          
            
+             
+              <breadCrumb title="Coder" url="https://hocg.in/categories/Coder/"/>
+          
         </display>
     </data>
     </url>
@@ -359,8 +524,15 @@
         <title>Mac的使用</title>
         <pubTime>2016-07-02T02:47:06.000Z</pubTime>
         
+        <tag>Tips</tag>
+         
+        <tag>Mac</tag>
+         
          
            
+             
+              <breadCrumb title="OS" url="https://hocg.in/categories/OS/"/>
+          
         </display>
     </data>
     </url>
