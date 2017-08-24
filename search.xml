@@ -643,7 +643,8 @@
     <entry>
       <title><![CDATA[SQL的重新梳理]]></title>
       <url>https://hocg.in/2016/06/16/SQL%E9%87%8D%E6%96%B0%E6%A2%B3%E7%90%86/</url>
-      <content type="html"><![CDATA[<h2 id="关于-SQL-执行顺序"><a href="#关于-SQL-执行顺序" class="headerlink" title="关于 SQL 执行顺序"></a>关于 SQL 执行顺序</h2><h3 id="资料"><a href="#资料" class="headerlink" title="资料"></a>资料</h3><p><a href="http://www.uol123.com/2013/01/26/sql%E8%AF%AD%E5%8F%A5%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86.html" target="_blank" rel="external">参考</a></p>
+      <content type="html"><![CDATA[<p>持续积累..<br><a id="more"></a></p>
+<h2 id="关于-SQL-执行顺序"><a href="#关于-SQL-执行顺序" class="headerlink" title="关于 SQL 执行顺序"></a>关于 SQL 执行顺序</h2><h3 id="资料"><a href="#资料" class="headerlink" title="资料"></a>资料</h3><p><a href="http://www.uol123.com/2013/01/26/sql%E8%AF%AD%E5%8F%A5%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86.html" target="_blank" rel="external">参考</a></p>
 <h3 id="例句"><a href="#例句" class="headerlink" title="例句"></a>例句</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">select</span> * <span class="keyword">from</span> t_1 <span class="keyword">join</span> t_2</div><div class="line"><span class="keyword">on</span> t_1.id = t_2.fid</div><div class="line"><span class="keyword">where</span> <span class="number">1</span>=<span class="number">1</span></div><div class="line"><span class="keyword">group</span> <span class="keyword">by</span> t_1.className</div><div class="line"><span class="keyword">having</span> t_1.className = <span class="string">'1班'</span></div><div class="line"><span class="keyword">order</span> <span class="keyword">by</span> <span class="keyword">id</span> <span class="keyword">desc</span>;</div></pre></td></tr></table></figure>
 <blockquote>
 <p>这是一条简单/规范的基本SQL。</p>
