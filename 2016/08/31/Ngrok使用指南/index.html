@@ -101,11 +101,13 @@
 
 
 <meta name="description" content="Ngrok 是一款内部端口转发，对于微信类似的开发很有用的😆可参照墙内(花生壳 or nat123)">
+<meta name="keywords" content="Ngrok,Tip">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ngrok使用指南">
 <meta property="og:url" content="https://hocg.in/2016/08/31/Ngrok使用指南/index.html">
 <meta property="og:site_name" content="hocgin (๑`灬´๑)">
 <meta property="og:description" content="Ngrok 是一款内部端口转发，对于微信类似的开发很有用的😆可参照墙内(花生壳 or nat123)">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://hocg.in/i/Ngrok使用指南.png">
 <meta property="og:updated_time" content="2017-02-04T05:39:31.000Z">
 <meta name="twitter:card" content="summary">
@@ -467,7 +469,7 @@
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="环境依赖及源码下载"><a href="#环境依赖及源码下载" class="headerlink" title="环境依赖及源码下载"></a>环境依赖及源码下载</h3><blockquote>
 <p>以下命令根目录统一在<code>/opt</code></p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"># 环境依赖</div><div class="line">sudo apt-get install build-essential golang mercurial git</div><div class="line"># 获取 ngrok 源码</div><div class="line">git clone https://github.com/tutumcloud/ngrok.git ngrok</div><div class="line">cd ngrok</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span> 环境依赖</div><div class="line">sudo apt-get install build-essential golang mercurial git</div><div class="line"><span class="meta">#</span> 获取 ngrok 源码</div><div class="line">git clone https://github.com/tutumcloud/ngrok.git ngrok</div><div class="line">cd ngrok</div></pre></td></tr></table></figure>
 <h3 id="生成证书-amp-amp-编译"><a href="#生成证书-amp-amp-编译" class="headerlink" title="生成证书 &amp;&amp; 编译"></a>生成证书 &amp;&amp; 编译</h3><blockquote>
 <p>以下命令根目录统一在<code>/opt/ngrok</code></p>
 </blockquote>
@@ -475,64 +477,64 @@
 <blockquote>
 <p>生成证书 &amp;&amp; 编译服务端<br><code>DOMAIN</code> 为配置的<code>根域名</code>, 用于签名.</p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">#!/bin/bash</div><div class="line">echo &quot;开始清除..&quot;</div><div class="line">rm -rf assets/client/tls/ngrokroot.crt</div><div class="line">rm -rf assets/server/tls/snakeoil.crt</div><div class="line">rm -rf assets/server/tls/snakeoil.key</div><div class="line">rm -rf device.*</div><div class="line">rm -rf rootCA.*</div><div class="line">DOMAIN=web.hocg.in</div><div class="line">echo &quot;设置域名为[*.$DOMAIN]&quot;</div><div class="line">echo &quot;开始生成秘钥..&quot;</div><div class="line">openssl genrsa -out rootCA.key 2048</div><div class="line">openssl req -x509 -new -nodes -key rootCA.key -subj &quot;/CN=$DOMAIN&quot; -days 5000 -out rootCA.pem</div><div class="line">openssl genrsa -out device.key 2048</div><div class="line">openssl req -new -key device.key -subj &quot;/CN=$DOMAIN&quot; -out device.csr</div><div class="line">openssl x509 -req -in device.csr -CA rootCA.pem -CAkey rootCA.key -CAcreateserial -out device.crt -days 5000</div><div class="line"></div><div class="line">echo &quot;开始迁移秘钥..&quot;</div><div class="line">cp -rf rootCA.pem assets/client/tls/ngrokroot.crt</div><div class="line">cp -rf device.crt assets/server/tls/snakeoil.crt</div><div class="line">cp -rf device.key assets/server/tls/snakeoil.key</div><div class="line"></div><div class="line">echo &quot;开始编译..&quot;</div><div class="line">make release-server</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span>!/bin/bash</div><div class="line">echo "开始清除.."</div><div class="line">rm -rf assets/client/tls/ngrokroot.crt</div><div class="line">rm -rf assets/server/tls/snakeoil.crt</div><div class="line">rm -rf assets/server/tls/snakeoil.key</div><div class="line">rm -rf device.*</div><div class="line">rm -rf rootCA.*</div><div class="line">DOMAIN=web.hocg.in</div><div class="line">echo "设置域名为[*.$DOMAIN]"</div><div class="line">echo "开始生成秘钥.."</div><div class="line">openssl genrsa -out rootCA.key 2048</div><div class="line">openssl req -x509 -new -nodes -key rootCA.key -subj "/CN=$DOMAIN" -days 5000 -out rootCA.pem</div><div class="line">openssl genrsa -out device.key 2048</div><div class="line">openssl req -new -key device.key -subj "/CN=$DOMAIN" -out device.csr</div><div class="line">openssl x509 -req -in device.csr -CA rootCA.pem -CAkey rootCA.key -CAcreateserial -out device.crt -days 5000</div><div class="line"></div><div class="line">echo "开始迁移秘钥.."</div><div class="line">cp -rf rootCA.pem assets/client/tls/ngrokroot.crt</div><div class="line">cp -rf device.crt assets/server/tls/snakeoil.crt</div><div class="line">cp -rf device.key assets/server/tls/snakeoil.key</div><div class="line"></div><div class="line">echo "开始编译.."</div><div class="line">make release-server</div></pre></td></tr></table></figure>
 <p><strong>客户端</strong></p>
 <blockquote>
 <p>前置条件: Go需先增加对这些平台交叉编译的支持</p>
 </blockquote>
 <ul>
-<li>Windows<br>go的<code>src</code>目录  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">GOOS=windows GOARCH=amd64 ./make.bash</div></pre></td></tr></table></figure>
+<li>Windows<br>go的<code>src</code>目录  <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">GOOS=windows GOARCH=amd64 ./make.bash</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<p><code>nginx</code>目录,编译<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">GOOS=windows GOARCH=amd64 make release-client</div></pre></td></tr></table></figure></p>
+<p><code>nginx</code>目录,编译<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">GOOS=windows GOARCH=amd64 make release-client</div></pre></td></tr></table></figure></p>
 <ul>
-<li>macOS<br>go的<code>src</code>目录  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">GOOS=darwin GOARCH=amd64 ./make.bash</div></pre></td></tr></table></figure>
+<li>macOS<br>go的<code>src</code>目录  <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">GOOS=darwin GOARCH=amd64 ./make.bash</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<p><code>nginx</code>目录,编译<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">GOOS=darwin GOARCH=amd64 make release-client</div></pre></td></tr></table></figure></p>
+<p><code>nginx</code>目录,编译<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">GOOS=darwin GOARCH=amd64 make release-client</div></pre></td></tr></table></figure></p>
 <ul>
-<li>Linux<br><code>nginx</code>目录,编译<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">make release-client</div></pre></td></tr></table></figure>
+<li>Linux<br><code>nginx</code>目录,编译<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">make release-client</div></pre></td></tr></table></figure>
 </li>
 </ul>
 <h3 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h3><p><code>ngrok.cfg</code>文件</p>
 <blockquote>
 <p><code>server_addr</code> 为配置的<code>根域名</code>， <code>4443</code>为默认端口</p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">server_addr: web.hocg.in:4443</div><div class="line">trust_host_root_certs: false</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">server_addr: web.hocg.in:4443</div><div class="line">trust_host_root_certs: false</div></pre></td></tr></table></figure>
 <h3 id="运行文件"><a href="#运行文件" class="headerlink" title="运行文件"></a>运行文件</h3><p><code>server.sh</code>文件</p>
 <blockquote>
 <p>服务器运行<br><code>DOMAIN</code> 为配置的<code>根域名</code>.<br>注释的那一句用于后台运行</p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">#!/bin/bash</div><div class="line"># $1 HTTP</div><div class="line"># $2 HTTPS</div><div class="line">killall ngrokd</div><div class="line">DOMAIN=web.hocg.in</div><div class="line"># nohup ./bin/ngrokd -domain=&quot;$DOMAIN&quot; -httpAddr=&quot;:$1&quot; -httpsAddr=&quot;:$2&quot; &gt;/tmp/ngrok.log 2&gt;&amp;1 &amp;</div><div class="line">./bin/ngrokd -domain=&quot;$DOMAIN&quot; -httpAddr=&quot;:$1&quot; -httpsAddr=&quot;:$2&quot;</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span>!/bin/bash</div><div class="line"><span class="meta">#</span> $1 HTTP</div><div class="line"><span class="meta">#</span> $2 HTTPS</div><div class="line">killall ngrokd</div><div class="line">DOMAIN=web.hocg.in</div><div class="line"><span class="meta">#</span> nohup ./bin/ngrokd -domain="$DOMAIN" -httpAddr=":$1" -httpsAddr=":$2" &gt;/tmp/ngrok.log 2&gt;&amp;1 &amp;</div><div class="line">./bin/ngrokd -domain="$DOMAIN" -httpAddr=":$1" -httpsAddr=":$2"</div></pre></td></tr></table></figure>
 <p><code>client.sh</code>文件</p>
 <blockquote>
 <p>客户端运行, default:linux<br>具体环境修改具体内容</p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">#!/bin/bash</div><div class="line"># $1 Port</div><div class="line"># $2 domain</div><div class="line">./bin/ngrok -subdomain $2 -proto=http -config=./bin/ngrok.cfg $1</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span>!/bin/bash</div><div class="line"><span class="meta">#</span> $1 Port</div><div class="line"><span class="meta">#</span> $2 domain</div><div class="line">./bin/ngrok -subdomain $2 -proto=http -config=./bin/ngrok.cfg $1</div></pre></td></tr></table></figure>
 <h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><blockquote>
 <p>若需变更域名, 需修改<code>code.sh</code>的<code>DOMAIN</code>、<code>server.sh</code>的<code>DOMAIN</code>与<code>./bin/ngrok.cfg</code>的<code>server_addr</code></p>
-<h3 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sh code.sh</div></pre></td></tr></table></figure>
+<h3 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sh code.sh</div></pre></td></tr></table></figure>
 <p><strong>成功</strong> 检查<code>ngrok/bin</code>文件夹是否存在<code>ngrok</code> and <code>ngrokd</code></p>
 </blockquote>
-<h3 id="服务端"><a href="#服务端" class="headerlink" title="服务端"></a>服务端</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sh server.sh 8888 9999</div></pre></td></tr></table></figure>
-<h3 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sh client.sh 8080 dm</div></pre></td></tr></table></figure>
+<h3 id="服务端"><a href="#服务端" class="headerlink" title="服务端"></a>服务端</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sh server.sh 8888 9999</div></pre></td></tr></table></figure>
+<h3 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sh client.sh 8080 dm</div></pre></td></tr></table></figure>
 <h3 id="检验"><a href="#检验" class="headerlink" title="检验"></a>检验</h3><p>访问:<code>http://dm.web.hocg.in:8888</code><br><img src="https://hocg.in/i/Ngrok使用指南.png" alt="image"></p>
 <h2 id="重要"><a href="#重要" class="headerlink" title="重要"></a>重要</h2><h3 id="关于域名解析"><a href="#关于域名解析" class="headerlink" title="关于域名解析"></a>关于域名解析</h3><p>eg. <code>*.web.hocg.in</code><br>路径解析需配置<code>*.web</code> and <code>web</code> 两个A记录</p>
 <h3 id="关于签名"><a href="#关于签名" class="headerlink" title="关于签名"></a>关于签名</h3><p>最好在同一环境进行<code>服务端</code>和<code>客户端</code>的编译</p>
 <h2 id="小技巧"><a href="#小技巧" class="headerlink" title="小技巧"></a>小技巧</h2><ul>
 <li>如何让服务端的<code>ngrok</code>后台运行<blockquote>
 <p>正常的<code>nohup</code>或<code>&amp;</code>是无法使<code>ngrok</code>后台运行的<br>需使用<code>screen</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"># 安装</div><div class="line">\# apt-get install screen</div><div class="line"># 使用</div><div class="line">screen -S [命名] [需放入后台的命令]</div><div class="line"># 使用 ctrl+A+D 让其运行在后台</div><div class="line"># 查看screen 后台进程</div><div class="line">screen -ls</div><div class="line"># 重新连接后台进程</div><div class="line">screen -r [进程id]</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span> 安装</div><div class="line">\# apt-get install screen</div><div class="line"><span class="meta">#</span> 使用</div><div class="line">screen -S [命名] [需放入后台的命令]</div><div class="line"><span class="meta">#</span> 使用 ctrl+A+D 让其运行在后台</div><div class="line"><span class="meta">#</span> 查看screen 后台进程</div><div class="line">screen -ls</div><div class="line"><span class="meta">#</span> 重新连接后台进程</div><div class="line">screen -r [进程id]</div></pre></td></tr></table></figure>
 </blockquote>
 </li>
 </ul>
 <h2 id="可能遇到的异常"><a href="#可能遇到的异常" class="headerlink" title="可能遇到的异常"></a>可能遇到的异常</h2><ul>
-<li>Go-1.2.1语言版本不支持<code>go version</code><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"># github.com/gorilla/websocket</div><div class="line">src/github.com/gorilla/websocket/client.go:361: unknown tls.Config field &apos;GetCertificate&apos; in struct literal</div><div class="line">src/github.com/gorilla/websocket/client.go:370: unknown tls.Config field &apos;ClientSessionCache&apos; in struct literal</div><div class="line">src/github.com/gorilla/websocket/client.go:373: unknown tls.Config field &apos;CurvePreferences&apos; in struct literal</div><div class="line">make: *** [client] Error 2</div></pre></td></tr></table></figure>
+<li>Go-1.2.1语言版本不支持<code>go version</code><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span> github.com/gorilla/websocket</div><div class="line">src/github.com/gorilla/websocket/client.go:361: unknown tls.Config field 'GetCertificate' in struct literal</div><div class="line">src/github.com/gorilla/websocket/client.go:370: unknown tls.Config field 'ClientSessionCache' in struct literal</div><div class="line">src/github.com/gorilla/websocket/client.go:373: unknown tls.Config field 'CurvePreferences' in struct literal</div><div class="line">make: *** [client] Error 2</div></pre></td></tr></table></figure>
 </li>
 </ul>
 <p><a href="https://golang.org/doc/install?download=go1.7.linux-amd64.tar.gz" target="_blank" rel="external">官方Go-64的安装</a></p>
 <ul>
-<li>Go编译器找不到<code>go-bindata</code><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">GOOS=&quot;&quot; GOARCH=&quot;&quot; go get github.com/jteeuwen/go-bindata/go-bindata</div><div class="line">/bin/sh: 1: go: not found</div><div class="line">make: *** [bin/go-bindata] Error 127</div></pre></td></tr></table></figure>
+<li>Go编译器找不到<code>go-bindata</code><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">GOOS="" GOARCH="" go get github.com/jteeuwen/go-bindata/go-bindata</div><div class="line">/bin/sh: 1: go: not found</div><div class="line">make: *** [bin/go-bindata] Error 127</div></pre></td></tr></table></figure>
 </li>
 </ul>
 <ol>
@@ -542,7 +544,7 @@
 </blockquote>
 </li>
 <li><p>执行以下shell下载插件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">go get -u github.com/jteeuwen/go-bindata/...</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">go get -u github.com/jteeuwen/go-bindata/...</div></pre></td></tr></table></figure>
 </li>
 </ol>
 <p>END:)</p>

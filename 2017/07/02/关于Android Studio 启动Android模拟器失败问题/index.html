@@ -101,11 +101,13 @@
 
 
 <meta name="description" content="起因Android Studio 启动虚拟机一直闪退，不显示任何报错信息">
+<meta name="keywords" content="Android,Mac">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于 Android Studio 启动 Android 模拟器失败问题">
 <meta property="og:url" content="https://hocg.in/2017/07/02/关于Android Studio 启动Android模拟器失败问题/index.html">
 <meta property="og:site_name" content="hocgin (๑`灬´๑)">
 <meta property="og:description" content="起因Android Studio 启动虚拟机一直闪退，不显示任何报错信息">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-07-02T13:07:55.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于 Android Studio 启动 Android 模拟器失败问题">
@@ -463,7 +465,7 @@
         <h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>Android Studio 启动虚拟机一直闪退，不显示任何报错信息</p>
 <a id="more"></a>
 <h2 id="排查问题"><a href="#排查问题" class="headerlink" title="排查问题"></a>排查问题</h2><ol>
-<li>尝试用命令启动模拟器, 方便查看其错误日志<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"># 查看你创建的设备</div><div class="line">emulator -list-avds</div><div class="line"># 启动命令</div><div class="line">emulator -netdelay none -netspeed full -avd New_Device_API_2</div><div class="line"># 以下为报错日志</div><div class="line">Hax is enabled</div><div class="line">Hax ram_size 0x60000000</div><div class="line">HAX is working and emulator runs in fast virt mode.</div><div class="line">Failed to sync vcpu reg</div><div class="line">Failed to sync vcpu reg</div><div class="line">Failed to sync vcpu reg</div><div class="line">Failed to sync vcpu reg</div><div class="line">Failed to sync vcpu reg</div><div class="line">Failed to sync HAX vcpu contextInternal error: Initial hax sync failed</div></pre></td></tr></table></figure>
+<li>尝试用命令启动模拟器, 方便查看其错误日志<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span> 查看你创建的设备</div><div class="line">emulator -list-avds</div><div class="line"><span class="meta">#</span> 启动命令</div><div class="line">emulator -netdelay none -netspeed full -avd New_Device_API_2</div><div class="line"><span class="meta">#</span> 以下为报错日志</div><div class="line">Hax is enabled</div><div class="line">Hax ram_size 0x60000000</div><div class="line">HAX is working and emulator runs in fast virt mode.</div><div class="line">Failed to sync vcpu reg</div><div class="line">Failed to sync vcpu reg</div><div class="line">Failed to sync vcpu reg</div><div class="line">Failed to sync vcpu reg</div><div class="line">Failed to sync vcpu reg</div><div class="line">Failed to sync HAX vcpu contextInternal error: Initial hax sync failed</div></pre></td></tr></table></figure>
 </li>
 </ol>
 <p>vcpu无法进行同步?? What??<br>尝试进行了 Google，<a href="https://stackoverflow.com/questions/17024538/how-do-i-fix-failed-to-sync-vcpu-reg-error/17024645" target="_blank" rel="external">How do I fix “Failed to sync vcpu reg” error?

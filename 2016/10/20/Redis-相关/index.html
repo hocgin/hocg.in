@@ -101,11 +101,13 @@
 
 
 <meta name="description" content="Redis 的部署和部位设计的实践, 还有常见问题的梳理! 💪">
+<meta name="keywords" content="Tips,Redis">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Redis 相关">
 <meta property="og:url" content="https://hocg.in/2016/10/20/Redis-相关/index.html">
 <meta property="og:site_name" content="hocgin (๑`灬´๑)">
 <meta property="og:description" content="Redis 的部署和部位设计的实践, 还有常见问题的梳理! 💪">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-08-24T09:48:34.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Redis 相关">
@@ -467,10 +469,10 @@
 </ul>
 <h3 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h3><p>redis-3.2.4/<br>|– redis.conf <code>redis配置文件</code><br><code>-- src</code>编译后目录<code>|-- redis-server</code>启动bit文件<code>`-- redis-cli</code>终端bit文件`</p>
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><blockquote>
-<p>以下操作均在<code>/opt</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"># 下载</div><div class="line">wget http://download.redis.io/releases/redis-3.2.4.tar.gz</div><div class="line"># 解压</div><div class="line">tar -zxvf redis-3.2.4.tar.gz</div><div class="line">cd redis-3.2.4</div><div class="line"># 编译， 生成`src`目录</div><div class="line">make</div></pre></td></tr></table></figure></p>
+<p>以下操作均在<code>/opt</code><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span> 下载</div><div class="line">wget http://download.redis.io/releases/redis-3.2.4.tar.gz</div><div class="line"><span class="meta">#</span> 解压</div><div class="line">tar -zxvf redis-3.2.4.tar.gz</div><div class="line">cd redis-3.2.4</div><div class="line"><span class="meta">#</span> 编译， 生成`src`目录</div><div class="line">make</div></pre></td></tr></table></figure></p>
 </blockquote>
 <h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><blockquote>
-<p>以下操作均在<code>/opt</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"># 默认配置运行</div><div class="line">./redis-3.2.4/src/redis-server</div><div class="line"># 指定配置文件运行</div><div class="line">./redis-3.2.4/src/redis-server [config file]</div></pre></td></tr></table></figure></p>
+<p>以下操作均在<code>/opt</code><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span> 默认配置运行</div><div class="line">./redis-3.2.4/src/redis-server</div><div class="line"><span class="meta">#</span> 指定配置文件运行</div><div class="line">./redis-3.2.4/src/redis-server [config file]</div></pre></td></tr></table></figure></p>
 </blockquote>
 <h2 id="疑问？"><a href="#疑问？" class="headerlink" title="疑问？"></a>疑问？</h2><ul>
 <li><p>如何使<code>redis</code>后台运行?</p>

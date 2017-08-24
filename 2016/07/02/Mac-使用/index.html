@@ -101,11 +101,13 @@
 
 
 <meta name="description" content="留坑，刚刚起步，梳理中ing。">
+<meta name="keywords" content="Tips,Mac">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mac的使用">
 <meta property="og:url" content="https://hocg.in/2016/07/02/Mac-使用/index.html">
 <meta property="og:site_name" content="hocgin (๑`灬´๑)">
 <meta property="og:description" content="留坑，刚刚起步，梳理中ing。">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2016-08-27T05:29:43.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac的使用">
@@ -462,10 +464,10 @@
       
         <p>  留坑，刚刚起步，梳理中ing。<br><a id="more"></a></p>
 <h3 id="小技巧"><a href="#小技巧" class="headerlink" title="小技巧"></a>小技巧</h3><ul>
-<li>在Dock 隐藏 iTerm2<br>隐藏:<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/usr/libexec/PlistBuddy -c &quot;Add :LSUIElement bool true&quot; /Applications/iTerm.app/Contents/Info.plist</div></pre></td></tr></table></figure>
+<li>在Dock 隐藏 iTerm2<br>隐藏:<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/usr/libexec/PlistBuddy -c "Add :LSUIElement bool true" /Applications/iTerm.app/Contents/Info.plist</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>显示:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/usr/libexec/PlistBuddy -c &quot;Delete :LSUIElement&quot; /Applications/iTerm.app/Contents/Info.plist</div></pre></td></tr></table></figure></p>
+<p>显示:<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/usr/libexec/PlistBuddy -c "Delete :LSUIElement" /Applications/iTerm.app/Contents/Info.plist</div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -528,8 +530,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/06/12/谈JVM-各种过程/" rel="next" title="谈JVM，各种过程">
-                <i class="fa fa-chevron-left"></i> 谈JVM，各种过程
+              <a href="/2016/06/12/谈JVM-字节码/" rel="next" title="谈JVM，字节码">
+                <i class="fa fa-chevron-left"></i> 谈JVM，字节码
               </a>
             
           </div>
