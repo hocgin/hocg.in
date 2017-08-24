@@ -4,12 +4,34 @@
 
     
   <url>
-    <loc>https://hocg.in/2016/06/16/SQL%E9%87%8D%E6%96%B0%E6%A2%B3%E7%90%86/</loc>
-    <lastmod>2017-08-24T09:33:44.000Z</lastmod>
+    <loc>https://hocg.in/2016/10/20/Redis-%E7%9B%B8%E5%85%B3/</loc>
+    <lastmod>2017-08-24T09:48:34.000Z</lastmod>
+    <data>
+        <display>
+        <title>Redis 相关</title>
+        <pubTime>2016-10-20T01:11:48.000Z</pubTime>
+        
+        <tag>Tips</tag>
+         
+        <tag>Redis</tag>
+         
+         
+           
+             
+              <breadCrumb title="Server" url="https://hocg.in/categories/Server/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://hocg.in/2017/04/07/SQL%E9%87%8D%E6%96%B0%E6%A2%B3%E7%90%86/</loc>
+    <lastmod>2017-08-24T09:48:32.000Z</lastmod>
     <data>
         <display>
         <title>SQL的重新梳理</title>
-        <pubTime>2016-06-16T15:21:42.000Z</pubTime>
+        <pubTime>2017-04-07T01:19:09.000Z</pubTime>
         
         <tag>Tips</tag>
          
@@ -152,9 +174,9 @@
         <title>PHP Laravel 快速入门</title>
         <pubTime>2017-03-01T06:59:38.000Z</pubTime>
         
-        <tag>PHP</tag>
-         
         <tag>Mac</tag>
+         
+        <tag>PHP</tag>
          
          
            
@@ -222,28 +244,6 @@
            
              
               <breadCrumb title="Coder" url="https://hocg.in/categories/Coder/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://hocg.in/2016/10/20/Redis-%E7%9B%B8%E5%85%B3/</loc>
-    <lastmod>2017-02-04T05:47:13.000Z</lastmod>
-    <data>
-        <display>
-        <title>Redis 相关</title>
-        <pubTime>2016-10-20T01:15:51.000Z</pubTime>
-        
-        <tag>Tips</tag>
-         
-        <tag>Redis</tag>
-         
-         
-           
-             
-              <breadCrumb title="Server" url="https://hocg.in/categories/Server/"/>
           
         </display>
     </data>
