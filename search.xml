@@ -4,6 +4,86 @@
   
     
     <entry>
+      <title><![CDATA[OpenWrt 入门篇]]></title>
+      <url>https://hocg.in/2017/09/18/OpenWrt-%E5%85%A5%E9%97%A8%E7%AF%87/</url>
+      <content type="html"><![CDATA[<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p><a href="https://www.wikiwand.com/zh/OpenWrt" target="_blank" rel="external">什么是 OpenWrt?</a></p>
+<h2 id="关于支持-OpenWrt-的路由器"><a href="#关于支持-OpenWrt-的路由器" class="headerlink" title="关于支持 OpenWrt 的路由器"></a>关于支持 OpenWrt 的路由器</h2><p>可以去 <a href="https://wiki.openwrt.org/toh/start" target="_blank" rel="external">支持 OpenWrt 的路由器列表</a> 查看支持的路由器, 了解其 <strong>CPU型号(既芯片型号)</strong> <strong>RAM容量</strong> <strong>Flash容量</strong></p>
+<h2 id="关于-OpenWrt-固件的下载"><a href="#关于-OpenWrt-固件的下载" class="headerlink" title="关于 OpenWrt 固件的下载"></a>关于 OpenWrt 固件的下载</h2><p><a href="https://downloads.openwrt.org" target="_blank" rel="external">OpenWrt 官方下载固件地址</a><br><img src="http://7xs6lq.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-09-18%2012.12.12.png" alt="image"><br><strong>关于下载地址格式:</strong></p>
+<p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-09-18%2012.26.38.png" alt="image"></p>
+<p><strong>关于固件类型</strong></p>
+<ul>
+<li>后缀为<code>factory</code>是用于从原厂固件刷为 OpenWrt。</li>
+<li>后缀为<code>sysupgrade</code>是用于从 OpenWrt 更新 OpenWrt。</li>
+</ul>
+<h2 id="原厂刷-OpenWrt-固件"><a href="#原厂刷-OpenWrt-固件" class="headerlink" title="原厂刷 OpenWrt 固件"></a>原厂刷 OpenWrt 固件</h2><blockquote>
+<p>待补充</p>
+</blockquote>
+<h2 id="网页界面-OpenWrt-备份-amp-升级固件"><a href="#网页界面-OpenWrt-备份-amp-升级固件" class="headerlink" title="网页界面 OpenWrt 备份 &amp; 升级固件"></a>网页界面 OpenWrt 备份 &amp; 升级固件</h2><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-09-18%2012.50.34.png" alt="image"><br><img src="http://7xs6lq.com1.z0.glb.clouddn.com/屏幕快照%202017-09-18%2012.57.13.png" alt="image"></p>
+<h2 id="OpenWrt-安全模式"><a href="#OpenWrt-安全模式" class="headerlink" title="OpenWrt 安全模式"></a>OpenWrt 安全模式</h2><blockquote>
+<p>当我们无法进入网页界面，可以使用<strong>安全模式</strong>管理恢复固件<br><strong>必须使用有线电缆进行连接。</strong><br>环境: Linux or macOS</p>
+</blockquote>
+<p>进入OpenWrt安全模式的方法：</p>
+<ol>
+<li>使用网线连接电脑和路由器</li>
+<li>设置电脑网卡<br>IP 地址:<code>192.168.1.x</code>(x为2至255)<br>子网掩码:<code>255.255.255.0</code></li>
+<li><p>打开终端运行命令</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span> 注, 此处 eth0 为网卡. 可使用 ifconfig 进行查看</div><div class="line">sudo tcpdump -Ani eth0 port 4919 and udp</div></pre></td></tr></table></figure>
+</li>
+<li><p>断电重启</p>
+</li>
+<li><p>打开终端运行命令</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">telnet 192.168.1.1</div></pre></td></tr></table></figure>
+</li>
+<li><p>执行指令, 例如</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span> 重置系统</div><div class="line">firstboot</div><div class="line"><span class="meta">#</span> 重置密码</div><div class="line">passwd</div></pre></td></tr></table></figure>
+</li>
+<li><p>重启路由器</p>
+</li>
+</ol>
+<h2 id="不死-U-Boot"><a href="#不死-U-Boot" class="headerlink" title="不死 U-Boot"></a>不死 U-Boot</h2><blockquote>
+<p>待补充</p>
+</blockquote>
+<h2 id="网页界面-OpenWrt-宽带拨号设置"><a href="#网页界面-OpenWrt-宽带拨号设置" class="headerlink" title="网页界面 OpenWrt 宽带拨号设置"></a>网页界面 OpenWrt 宽带拨号设置</h2><ol>
+<li><p>进入接口设置界面</p>
+</li>
+<li><p>进行 WAN 口编辑<br><img src="http://7xs6lq.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-09-18%2013.37.35.png" alt="image"></p>
+</li>
+<li><p>填写宽带账号 &amp; 密码<br><img src="http://7xs6lq.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-09-18%2013.45.42.png" alt="image"></p>
+</li>
+<li><p>此时电脑连接 LAN 口的话，即可进行上网。</p>
+</li>
+</ol>
+<h2 id="WiFi-设置"><a href="#WiFi-设置" class="headerlink" title="WiFi 设置"></a>WiFi 设置</h2><ol>
+<li>进入 WiFi 设置界面，此处为双网卡<br><img src="http://7xs6lq.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-09-18%2013.53.43.png" alt="image"></li>
+<li>开启WiFi<br><img src="http://7xs6lq.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-09-18%2014.00.00.png" alt="image"></li>
+<li>设置WiFi<br><img src="http://7xs6lq.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-09-18%2014.26.04.png" alt="image"></li>
+</ol>
+<hr>
+<h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><h3 id="什么是WAN口？什么是LAN口？"><a href="#什么是WAN口？什么是LAN口？" class="headerlink" title="什么是WAN口？什么是LAN口？"></a>什么是WAN口？什么是LAN口？</h3><blockquote>
+<p>路由器通常有多个LAN口，一个WAN口</p>
+</blockquote>
+<ul>
+<li>WAN<blockquote>
+<p>广域网（WAN、公网、外网）</p>
+</blockquote>
+</li>
+</ul>
+<p>设置拨号上网连接互联网</p>
+<ul>
+<li>LAN<blockquote>
+<p>局域网（LAN、私网、内网)</p>
+</blockquote>
+</li>
+</ul>
+<p>连接本地计算机</p>
+<h3 id="PPPoE"><a href="#PPPoE" class="headerlink" title="PPPoE"></a>PPPoE</h3><blockquote>
+<p>以太网上的点对点协议中的一种, 宽带接入方式ADSL 就使用了PPPoE协议</p>
+</blockquote>
+<h3 id="关于-WiFi-2-4G-和-5G"><a href="#关于-WiFi-2-4G-和-5G" class="headerlink" title="关于 WiFi 2.4G 和 5G"></a>关于 WiFi 2.4G 和 5G</h3><p><code>802.11n/b/g</code> 主要工作频段为2.4GHz<br><code>802.11a/ac</code> 主要工作频段为5GHz</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[关于 Android Studio 启动 Android 模拟器失败问题]]></title>
       <url>https://hocg.in/2017/07/02/%E5%85%B3%E4%BA%8EAndroid%20Studio%20%E5%90%AF%E5%8A%A8Android%E6%A8%A1%E6%8B%9F%E5%99%A8%E5%A4%B1%E8%B4%A5%E9%97%AE%E9%A2%98/</url>
       <content type="html"><![CDATA[<h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>Android Studio 启动虚拟机一直闪退，不显示任何报错信息</p>
