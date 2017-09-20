@@ -152,9 +152,10 @@
     <link href="https://hocg.in/2017/06/18/Google-%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/"/>
     <id>https://hocg.in/2017/06/18/Google-使用技巧/</id>
     <published>2017-06-18T03:24:06.000Z</published>
-    <updated>2017-09-19T05:57:37.000Z</updated>
+    <updated>2017-09-20T14:17:30.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h2><p>使用 <a href="https://www.google.com/ncr" target="_blank" rel="external">https://www.google.com/ncr</a> 模式并且是<code>英文版</code>。</p>
+    <content type="html"><![CDATA[<p>利器。<br>&lt;!-more-&gt;</p>
+<h2 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h2><p>使用 <a href="https://www.google.com/ncr" target="_blank" rel="external">https://www.google.com/ncr</a> 模式并且是<code>英文版</code>。</p>
 <h2 id="技巧"><a href="#技巧" class="headerlink" title="技巧"></a>技巧</h2><h3 id="双引号"><a href="#双引号" class="headerlink" title="双引号"></a>双引号</h3><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-09-19%2011.44.17.png" alt="image"></p>
 <blockquote>
 <p><strong>完全匹配搜索</strong></p>
@@ -241,7 +242,8 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;前提&quot;&gt;&lt;a href=&quot;#前提&quot; class=&quot;headerlink&quot; title=&quot;前提&quot;&gt;&lt;/a&gt;前提&lt;/h2&gt;&lt;p&gt;使用 &lt;a href=&quot;https://www.google.com/ncr&quot; target=&quot;_blank&quot; rel=&quot;external&quot;
+      &lt;p&gt;利器。&lt;br&gt;&amp;lt;!-more-&amp;gt;&lt;/p&gt;
+&lt;h2 id=&quot;前提&quot;&gt;&lt;a href=&quot;#前提&quot; class=&quot;headerlink&quot; title=&quot;前提&quot;&gt;&lt;/a&gt;前提&lt;/h2&gt;&lt;p&gt;使用 &lt;a href=&quot;https://www.google.com/ncr&quot; 
     
     </summary>
     
@@ -1185,9 +1187,9 @@
       <category term="Mobile" scheme="https://hocg.in/categories/Mobile/"/>
     
     
-      <category term="Android" scheme="https://hocg.in/tags/Android/"/>
-    
       <category term="Tips" scheme="https://hocg.in/tags/Tips/"/>
+    
+      <category term="Android" scheme="https://hocg.in/tags/Android/"/>
     
   </entry>
   

@@ -103,7 +103,7 @@
 <meta name="description" content="Ubuntu | Java | Android | HTML5 | CSS3">
 <meta property="og:type" content="website">
 <meta property="og:title" content="hocgin (๑`灬´๑)">
-<meta property="og:url" content="https://hocg.in/tags/JAVA/index.html">
+<meta property="og:url" content="https://hocg.in/tags/Java/index.html">
 <meta property="og:site_name" content="hocgin (๑`灬´๑)">
 <meta property="og:description" content="Ubuntu | Java | Android | HTML5 | CSS3">
 <meta property="og:locale" content="zh-Hans">
@@ -137,13 +137,13 @@
 
 
 
-  <link rel="canonical" href="https://hocg.in/tags/JAVA/"/>
+  <link rel="canonical" href="https://hocg.in/tags/Java/"/>
 
 
 
 
 
-  <title> 标签: JAVA | hocgin (๑`灬´๑) </title>
+  <title> 标签: Java | hocgin (๑`灬´๑) </title>
 
   <script>
   // 彩蛋
@@ -336,7 +336,7 @@
   <div id="posts" class="posts-collapse">
     <div class="collection-title">
       <h2 >
-        JAVA
+        Java
         <small>标签</small>
       </h2>
     </div>
@@ -349,9 +349,9 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/2017/01/16/关于log4j报错/" itemprop="url">
+            <a class="post-title-link" href="/2016/08/02/模块设计之对接同步订单模块/" itemprop="url">
               
-                <span itemprop="name">关于log4j报错</span>
+                <span itemprop="name">模块设计之对接同步订单模块</span>
               
             </a>
         
@@ -359,9 +359,93 @@
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
-              datetime="2017-01-16T08:09:27+08:00"
-              content="2017-01-16" >
-          01-16
+              datetime="2016-08-02T10:47:06+08:00"
+              content="2016-08-02" >
+          08-02
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2016/07/30/模块设计之消息模块/" itemprop="url">
+              
+                <span itemprop="name">模块设计之消息模块</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-07-30T19:25:56+08:00"
+              content="2016-07-30" >
+          07-30
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2016/06/12/谈JVM-字节码/" itemprop="url">
+              
+                <span itemprop="name">谈JVM，字节码</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-06-12T19:37:49+08:00"
+              content="2016-06-12" >
+          06-12
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2016/06/12/谈JVM-各种过程/" itemprop="url">
+              
+                <span itemprop="name">谈JVM，各种过程</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-06-12T19:37:49+08:00"
+              content="2016-06-12" >
+          06-12
         </time>
       </div>
 
@@ -884,82 +968,6 @@
             /* End Set ACL */
             newcounter.set("title", title);
             newcounter.set("url", url);
-            newcounter.set("time", 1);
-            newcounter.save(null, {
-              success: function(newcounter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
-              },
-              error: function(newcounter, error) {
-                console.log('Failed to create');
-              }
-            });
-          }
-        },
-        error: function(error) {
-          console.log('Error:' + error.code + " " + error.message);
-        }
-      });
-    }
-
-    $(function() {
-      var Counter = AV.Object.extend("Counter");
-      if ($('.leancloud_visitors').length == 1) {
-        addCount(Counter);
-      } else if ($('.post-title-link').length > 1) {
-        showTime(Counter);
-      }
-    });
-  </script>
-
-
-
-  
-<script>
-(function(){
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
-    }
-    else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-    }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
-</script>
-
-
-  
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-  
-
-
-  
-
-</body>
-</html>
-       newcounter.set("url", url);
             newcounter.set("time", 1);
             newcounter.save(null, {
               success: function(newcounter) {
