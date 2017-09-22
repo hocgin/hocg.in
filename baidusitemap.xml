@@ -4,6 +4,78 @@
 
     
   <url>
+    <loc>https://hocg.in/2016/09/20/Glup-%E8%87%AA%E5%8A%A8%E5%8C%96%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2017-09-22T12:55:01.000Z</lastmod>
+    <data>
+        <display>
+        <title>Glup 自动化构建工具</title>
+        <pubTime>2016-09-20T00:10:29.000Z</pubTime>
+        
+        <tag>Tips</tag>
+         
+        <tag>NodeJS</tag>
+         
+        <tag>Ubuntu</tag>
+         
+         
+           
+             
+              <breadCrumb title="Coder" url="https://hocg.in/categories/Coder/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://hocg.in/2016/05/10/ES6-%E6%96%B0%E7%89%B9%E6%80%A7/</loc>
+    <lastmod>2017-09-22T12:53:46.000Z</lastmod>
+    <data>
+        <display>
+        <title>ES6 新特性</title>
+        <pubTime>2016-05-10T02:28:29.000Z</pubTime>
+        
+        <tag>Tips</tag>
+         
+        <tag>NodeJS</tag>
+         
+        <tag>Ubuntu</tag>
+         
+         
+           
+             
+              <breadCrumb title="Coder" url="https://hocg.in/categories/Coder/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://hocg.in/2016/09/30/Ubuntu%E4%B8%8B%E7%9A%84OhMyZSH!/</loc>
+    <lastmod>2017-09-22T12:48:41.000Z</lastmod>
+    <data>
+        <display>
+        <title>Ubuntu 下的 Oh My ZSH!</title>
+        <pubTime>2016-09-30T08:18:09.000Z</pubTime>
+        
+        <tag>Tips</tag>
+         
+        <tag>Ubuntu</tag>
+         
+        <tag>Oh My ZSH</tag>
+         
+         
+           
+             
+              <breadCrumb title="IDE" url="https://hocg.in/categories/IDE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://hocg.in/2017/06/18/Google-%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</loc>
     <lastmod>2017-09-20T14:27:34.000Z</lastmod>
     <data>
@@ -566,9 +638,9 @@
         
         <tag>Tips</tag>
          
-        <tag>Ubuntu</tag>
-         
         <tag>NodeJS</tag>
+         
+        <tag>Ubuntu</tag>
          
          
            

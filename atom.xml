@@ -490,8 +490,8 @@
 <li>单元测试</li>
 <li>插件</li>
 </ul>
-<h2 id="单文件组件-vue"><a href="#单文件组件-vue" class="headerlink" title="单文件组件.vue"></a>单文件组件<code>.vue</code></h2><p><strong>定义:</strong><br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">h1</span>&gt;</span>This is title<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="undefined">  export default &#123;</span></div><div class="line"><span class="undefined">    name: 'Title'</span></div><div class="line"><span class="undefined">  &#125;</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p><strong>使用:</strong><br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"./assets/logo.png"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">Title</span>&gt;</span><span class="tag">&lt;/<span class="name">Title</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="undefined">  import Title from './components/Title'</span></div><div class="line"><span class="undefined">  export default &#123;</span></div><div class="line"><span class="undefined">    name: 'app',</span></div><div class="line"><span class="undefined">    components: &#123;</span></div><div class="line"><span class="undefined">      Title</span></div><div class="line"><span class="undefined">    &#125;</span></div><div class="line"><span class="undefined">  &#125;</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h2 id="单文件组件-vue"><a href="#单文件组件-vue" class="headerlink" title="单文件组件.vue"></a>单文件组件<code>.vue</code></h2><p><strong>定义:</strong><br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">h1</span>&gt;</span>This is title<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="javascript">  <span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></div><div class="line"><span class="javascript">    name: <span class="string">'Title'</span></span></div><div class="line"><span class="undefined">  &#125;</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p><strong>使用:</strong><br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"./assets/logo.png"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">Title</span>&gt;</span><span class="tag">&lt;/<span class="name">Title</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="javascript">  <span class="keyword">import</span> Title <span class="keyword">from</span> <span class="string">'./components/Title'</span></span></div><div class="line"><span class="javascript">  <span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></div><div class="line"><span class="javascript">    name: <span class="string">'app'</span>,</span></div><div class="line"><span class="undefined">    components: &#123;</span></div><div class="line"><span class="undefined">      Title</span></div><div class="line"><span class="undefined">    &#125;</span></div><div class="line"><span class="undefined">  &#125;</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
 <h1 id="Vue-Router"><a href="#Vue-Router" class="headerlink" title="Vue Router"></a>Vue Router</h1><blockquote>
 <p>扩展 Vue<br>按字面意思来看为<code>Vue 路由</code><br>其实质也就是用于<strong>单页应用</strong>管理页面跳转, 负责路径解析.</p>
 </blockquote>
@@ -975,6 +975,133 @@
   </entry>
   
   <entry>
+    <title>Ubuntu 下的 Oh My ZSH!</title>
+    <link href="https://hocg.in/2016/09/30/Ubuntu%E4%B8%8B%E7%9A%84OhMyZSH!/"/>
+    <id>https://hocg.in/2016/09/30/Ubuntu下的OhMyZSH!/</id>
+    <published>2016-09-30T08:18:09.000Z</published>
+    <updated>2017-09-22T12:48:41.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>号称终极shell :)<br><a id="more"></a></p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="什么是zsh？"><a href="#什么是zsh？" class="headerlink" title="什么是zsh？"></a>什么是zsh？</h3><p>shell的一种,<code>cat /etc/shells</code>查看当前系统支持的shell</p>
+<h3 id="相关Link"><a href="#相关Link" class="headerlink" title="相关Link"></a>相关Link</h3><p><a href="http://www.zhihu.com/question/21418449" target="_blank" rel="external">为什么说 zsh 是 shell 中的极品？</a></p>
+<h3 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h3><p>OS: Ubuntu 16.04 x86_64</p>
+<h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><ul>
+<li><p>~/.zshrc <code>文件zsh配置文件</code></p>
+<blockquote>
+<ol>
+<li>可用来更改<code>Theme</code></li>
+<li>加载<code>Plugin</code></li>
+</ol>
+</blockquote>
+</li>
+<li><p>~/.oh-my-zsh <code>oh-my-zsh目录</code></p>
+</li>
+</ul>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span> 安装zsh</div><div class="line"><span class="meta">$</span> sudo apt-get install zsh</div><div class="line"><span class="meta">#</span> 安装oh-my-zsh</div><div class="line"><span class="meta">$</span> sudo apt-get install wget git</div><div class="line"><span class="meta">$</span> wget --no-check-certificate https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh</div><div class="line"><span class="meta">#</span> 替换zsh为系统shell</div><div class="line"><span class="meta">$</span> chsh -s /bin/zsh</div><div class="line"><span class="meta">#</span> 退出&amp;重新登入</div><div class="line"><span class="meta">$</span> exit</div><div class="line"><span class="meta">#</span> 查看是否成功</div></pre></td></tr></table></figure>
+<h2 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h2><p><a href="">zsh.config</a></p>
+<p><strong>注意</strong></p>
+<ul>
+<li>需更改<code>.oh-my-zsh</code>的目录</li>
+</ul>
+<h2 id="插件介绍"><a href="#插件介绍" class="headerlink" title="插件介绍"></a>插件介绍</h2><ul>
+<li><code>git</code>;处于git项目下出现提示</li>
+<li><p><code>autojump</code>; 目录自动提示, 需要<a href="git clone git://github.com/joelthelion/autojump.git">Linux 额外安装</a></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span> ~/.bashrc 追加</div><div class="line">[[ -s ~/.autojump/etc/profile.d/autojump.sh ]] &amp;&amp; . ~/.autojump/etc/profile.d/autojump.sh</div></pre></td></tr></table></figure>
+</li>
+<li><p><code>git</code>;处于git项目下出现提示</p>
+</li>
+<li><p><code>zsh-syntax-highlighting</code>;高亮可用命令</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span> git clone git://github.com/jimmijj/zsh-syntax-highlighting ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting</div><div class="line">plugins=(zsh-syntax-highlighting)</div></pre></td></tr></table></figure>
+</li>
+<li><p><code>colored-man-pages</code>; 帮助文档高亮</p>
+</li>
+<li><code>colorize</code>;更多代码高亮</li>
+<li><code>copydir</code>; 整个目录拷贝</li>
+<li><code>command-not-found</code>;命令行智能提示</li>
+<li><code>history</code>;查看输入历史</li>
+<li><code>z</code>; <code>autojump</code>同类</li>
+</ul>
+<h2 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h2><ul>
+<li>ys</li>
+</ul>
+<h2 id="小技巧"><a href="#小技巧" class="headerlink" title="小技巧"></a>小技巧</h2><ul>
+<li>转换路径时可以省去cd命令，直接输入路径即可</li>
+<li><code>d</code> 可以查看访问过的路径，然后输入数字就可以直接切换</li>
+<li>输入不完整的路径/文件/命令，按下tab键可以出现提示，再按tab则可以实现路径补全</li>
+<li>普通命令使用两次tab可进入选择模式， ctrl+f/b/n/p 可以向前后左右切换</li>
+<li>kill + tab <code>强强强</code></li>
+<li>alias -s xx=’xxx’ 快捷配置</li>
+</ul>
+<h2 id="相关设置"><a href="#相关设置" class="headerlink" title="相关设置"></a>相关设置</h2><blockquote>
+<p>cat 代码高亮<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">pip install Pygments</div><div class="line"><span class="meta">#</span> 增加以下alias</div><div class="line"><span class="meta">#</span> alias ccat='pygmentize -g'</div></pre></td></tr></table></figure></p>
+</blockquote>
+<h2 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h2><p><a href="https://github.com/hocgin/Gather/tree/master/oh-my-zsh" target="_blank" rel="external">Oh My ZSH!</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;号称终极shell :)&lt;br&gt;
+    
+    </summary>
+    
+      <category term="IDE" scheme="https://hocg.in/categories/IDE/"/>
+    
+    
+      <category term="Tips" scheme="https://hocg.in/tags/Tips/"/>
+    
+      <category term="Ubuntu" scheme="https://hocg.in/tags/Ubuntu/"/>
+    
+      <category term="Oh My ZSH" scheme="https://hocg.in/tags/Oh-My-ZSH/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Glup 自动化构建工具</title>
+    <link href="https://hocg.in/2016/09/20/Glup-%E8%87%AA%E5%8A%A8%E5%8C%96%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/"/>
+    <id>https://hocg.in/2016/09/20/Glup-自动化构建工具/</id>
+    <published>2016-09-20T00:10:29.000Z</published>
+    <updated>2017-09-22T12:55:01.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Gulp.js 是一个自动化构建工具 😜<br><a id="more"></a></p>
+<h2 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h2><p><a href="https://github.com/hocgin/Gulp-Scaffold" target="_blank" rel="external">Glup 整合</a></p>
+<h2 id="Glup"><a href="#Glup" class="headerlink" title="Glup"></a>Glup</h2><blockquote>
+<p>Glup用自动化构建工具增强你的工作流程！</p>
+</blockquote>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span> npm install gulp -g</div><div class="line"><span class="meta">$</span> npm install gulp --save-dev</div></pre></td></tr></table></figure>
+<h2 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h2><ul>
+<li>编译Sass (gulp-ruby-sass)</li>
+<li>Autoprefixer (gulp-autoprefixer)</li>
+<li>缩小化(minify)CSS (gulp-minify-css)</li>
+<li>JSHint (gulp-jshint)</li>
+<li>拼接 (gulp-concat)</li>
+<li>丑化(Uglify) (gulp-uglify)</li>
+<li>图片压缩 (gulp-imagemin)</li>
+<li>即时重整(LiveReload) (gulp-livereload)</li>
+<li>清理档案 (gulp-clean)</li>
+<li>图片快取，只有更改过得图片会进行压缩 (gulp-cache)</li>
+<li>更动通知 (gulp-notify)<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span> npm install gulp-ruby-sass gulp-autoprefixer gulp-minify-css gulp-jshint gulp-concat gulp-uglify gulp-imagemin gulp-clean gulp-notify gulp-rename gulp-livereload gulp-cache --save-dev</div></pre></td></tr></table></figure>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Gulp.js 是一个自动化构建工具 😜&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Coder" scheme="https://hocg.in/categories/Coder/"/>
+    
+    
+      <category term="Tips" scheme="https://hocg.in/tags/Tips/"/>
+    
+      <category term="NodeJS" scheme="https://hocg.in/tags/NodeJS/"/>
+    
+      <category term="Ubuntu" scheme="https://hocg.in/tags/Ubuntu/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Ngrok使用指南</title>
     <link href="https://hocg.in/2016/08/31/Ngrok%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/"/>
     <id>https://hocg.in/2016/08/31/Ngrok使用指南/</id>
@@ -1246,94 +1373,6 @@
       <category term="设计思路" scheme="https://hocg.in/tags/%E8%AE%BE%E8%AE%A1%E6%80%9D%E8%B7%AF/"/>
     
       <category term="Java" scheme="https://hocg.in/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>模块设计之消息模块</title>
-    <link href="https://hocg.in/2016/07/30/%E6%A8%A1%E5%9D%97%E8%AE%BE%E8%AE%A1%E4%B9%8B%E6%B6%88%E6%81%AF%E6%A8%A1%E5%9D%97/"/>
-    <id>https://hocg.in/2016/07/30/模块设计之消息模块/</id>
-    <published>2016-07-30T11:25:56.000Z</published>
-    <updated>2016-08-27T05:34:33.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>  新手上路，小心撞车..<br><a id="more"></a></p>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
-<p><strong>#消息模块#</strong> 这是我刚入职时所接触的第一个模块，也算是比较大的模块了。这个模块的业务是负责整个项目所有的消息出入口，包含短信发送，APP推送，邮件发送以及前后端人员站内消息。当时设计的时候需求架构比较简单而且时间紧迫(π__π)，没有从根本理清业务和功能后期存在的扩展。因此，这篇文章是记录当时架构的思路和需要改善的地方。</p>
-</blockquote>
-<h2 id="开发周期-10day"><a href="#开发周期-10day" class="headerlink" title="开发周期 (10day)"></a>开发周期 (10day)</h2><ul>
-<li>库表设计</li>
-<li>接口整理和整合设计(短信&amp;友盟&amp;邮件等)</li>
-<li>代码编写</li>
-</ul>
-<h2 id="业务流程图"><a href="#业务流程图" class="headerlink" title="业务流程图"></a>业务流程图</h2><h3 id="表"><a href="#表" class="headerlink" title="表"></a>表</h3><ul>
-<li>消息记录表, <strong>主要负责消息出入口记录</strong></li>
-<li>事件触发表, <strong>主要对消息进行控制，例如: 触发订单变更推送到用户/运营人员 and so on</strong></li>
-<li>消息状态表, <strong>主要负责消息发送的状态，包含定时发送，撤销发送 and so on</strong></li>
-</ul>
-<h3 id="图"><a href="#图" class="headerlink" title="图"></a>图</h3><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/业务-now.png" alt="当前业务流程图"></p>
-<h2 id="类流程图"><a href="#类流程图" class="headerlink" title="类流程图"></a>类流程图</h2><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/类-now.png" alt="当前类流程图"></p>
-<p>如图，此模式主要是利用工厂模式, 提供多种消息通道实例，由不同的消息通道对自身通道消息进行处理，类似于把西瓜，牛肉，白菜等送入不同的工厂进行加工，但是又由食品质量控制中心对其进行记录和检验。</p>
-<p><strong>优点</strong>: 后期便于扩展更多的通道模式<br><strong>缺点</strong>: 各个模式是靠类型区别的，不便于进行细节化处理(例如，对某部分APP推送进行定制化，进入某个Activity等细节化定制)</p>
-<h2 id="进一步优化类流程图"><a href="#进一步优化类流程图" class="headerlink" title="进一步优化类流程图"></a>进一步优化类流程图</h2><blockquote>
-<p>使用Route进行更细节的定制化处理<br>更多实战，<a href="https://github.com/chanjarster/weixin-java-tools" target="_blank" rel="external">推荐</a></p>
-</blockquote>
-<h3 id="图-1"><a href="#图-1" class="headerlink" title="图"></a>图</h3><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/类-op.png" alt="当前类流程图"></p>
-<blockquote>
-<p>囧，单看图可能细分不出两者的差别，附上一段代码实例</p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 路由规则初始化，用于定义匹配规则</span></div><div class="line">NoticeRouter router = <span class="keyword">new</span> NoticeRouter();</div><div class="line">route.rule()</div><div class="line">    .noticeType(Notice.SMS)</div><div class="line">    <span class="comment">// ... 更多细节规则匹配</span></div><div class="line">    .handler(smsHandler)</div><div class="line">    .end()</div><div class="line">    .rule()</div><div class="line">    .noticeType(Notice.EMail)</div><div class="line">    <span class="comment">// ... 更多细节规则匹配</span></div><div class="line">    .handler(emailHandler)</div><div class="line">    .end()</div><div class="line"></div><div class="line"><span class="comment">// 将通知实体通知路由处理</span></div><div class="line">router.route(message)</div></pre></td></tr></table></figure>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul>
-<li>充分考虑后期业务需求 (就算非必须的业务需求)<blockquote>
-<p>不要妄想需求是恒久不变的，需求=小三，扩展=真爱</p>
-</blockquote>
-</li>
-</ul>
-<blockquote class="blockquote-center"><p>Ծ‸Ծ 多喝水,保持良好的状态. </p>
-</blockquote>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;  新手上路，小心撞车..&lt;br&gt;
-    
-    </summary>
-    
-      <category term="Coder" scheme="https://hocg.in/categories/Coder/"/>
-    
-    
-      <category term="设计思路" scheme="https://hocg.in/tags/%E8%AE%BE%E8%AE%A1%E6%80%9D%E8%B7%AF/"/>
-    
-      <category term="Java" scheme="https://hocg.in/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Mac的使用</title>
-    <link href="https://hocg.in/2016/07/02/Mac-%E4%BD%BF%E7%94%A8/"/>
-    <id>https://hocg.in/2016/07/02/Mac-使用/</id>
-    <published>2016-07-02T02:47:06.000Z</published>
-    <updated>2016-08-27T05:29:43.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>  留坑，刚刚起步，梳理中ing。<br><a id="more"></a></p>
-<h3 id="小技巧"><a href="#小技巧" class="headerlink" title="小技巧"></a>小技巧</h3><ul>
-<li>在Dock 隐藏 iTerm2<br>隐藏:<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/usr/libexec/PlistBuddy -c "Add :LSUIElement bool true" /Applications/iTerm.app/Contents/Info.plist</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>显示:<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/usr/libexec/PlistBuddy -c "Delete :LSUIElement" /Applications/iTerm.app/Contents/Info.plist</div></pre></td></tr></table></figure></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;  留坑，刚刚起步，梳理中ing。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="OS" scheme="https://hocg.in/categories/OS/"/>
-    
-    
-      <category term="Tips" scheme="https://hocg.in/tags/Tips/"/>
-    
-      <category term="Mac" scheme="https://hocg.in/tags/Mac/"/>
     
   </entry>
   

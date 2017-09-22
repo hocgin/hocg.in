@@ -368,8 +368,8 @@
 <li>单元测试</li>
 <li>插件</li>
 </ul>
-<h2 id="单文件组件-vue"><a href="#单文件组件-vue" class="headerlink" title="单文件组件.vue"></a>单文件组件<code>.vue</code></h2><p><strong>定义:</strong><br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">h1</span>&gt;</span>This is title<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="undefined">  export default &#123;</span></div><div class="line"><span class="undefined">    name: 'Title'</span></div><div class="line"><span class="undefined">  &#125;</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p><strong>使用:</strong><br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"./assets/logo.png"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">Title</span>&gt;</span><span class="tag">&lt;/<span class="name">Title</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="undefined">  import Title from './components/Title'</span></div><div class="line"><span class="undefined">  export default &#123;</span></div><div class="line"><span class="undefined">    name: 'app',</span></div><div class="line"><span class="undefined">    components: &#123;</span></div><div class="line"><span class="undefined">      Title</span></div><div class="line"><span class="undefined">    &#125;</span></div><div class="line"><span class="undefined">  &#125;</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h2 id="单文件组件-vue"><a href="#单文件组件-vue" class="headerlink" title="单文件组件.vue"></a>单文件组件<code>.vue</code></h2><p><strong>定义:</strong><br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">h1</span>&gt;</span>This is title<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="javascript">  <span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></div><div class="line"><span class="javascript">    name: <span class="string">'Title'</span></span></div><div class="line"><span class="undefined">  &#125;</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p><strong>使用:</strong><br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"./assets/logo.png"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">Title</span>&gt;</span><span class="tag">&lt;/<span class="name">Title</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="javascript">  <span class="keyword">import</span> Title <span class="keyword">from</span> <span class="string">'./components/Title'</span></span></div><div class="line"><span class="javascript">  <span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></div><div class="line"><span class="javascript">    name: <span class="string">'app'</span>,</span></div><div class="line"><span class="undefined">    components: &#123;</span></div><div class="line"><span class="undefined">      Title</span></div><div class="line"><span class="undefined">    &#125;</span></div><div class="line"><span class="undefined">  &#125;</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
 <h1 id="Vue-Router"><a href="#Vue-Router" class="headerlink" title="Vue Router"></a>Vue Router</h1><blockquote>
 <p>扩展 Vue<br>按字面意思来看为<code>Vue 路由</code><br>其实质也就是用于<strong>单页应用</strong>管理页面跳转, 负责路径解析.</p>
 </blockquote>
@@ -713,6 +713,93 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Ubuntu 下的 Oh My ZSH!]]></title>
+      <url>https://hocg.in/2016/09/30/Ubuntu%E4%B8%8B%E7%9A%84OhMyZSH!/</url>
+      <content type="html"><![CDATA[<p>号称终极shell :)<br><a id="more"></a></p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="什么是zsh？"><a href="#什么是zsh？" class="headerlink" title="什么是zsh？"></a>什么是zsh？</h3><p>shell的一种,<code>cat /etc/shells</code>查看当前系统支持的shell</p>
+<h3 id="相关Link"><a href="#相关Link" class="headerlink" title="相关Link"></a>相关Link</h3><p><a href="http://www.zhihu.com/question/21418449" target="_blank" rel="external">为什么说 zsh 是 shell 中的极品？</a></p>
+<h3 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h3><p>OS: Ubuntu 16.04 x86_64</p>
+<h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><ul>
+<li><p>~/.zshrc <code>文件zsh配置文件</code></p>
+<blockquote>
+<ol>
+<li>可用来更改<code>Theme</code></li>
+<li>加载<code>Plugin</code></li>
+</ol>
+</blockquote>
+</li>
+<li><p>~/.oh-my-zsh <code>oh-my-zsh目录</code></p>
+</li>
+</ul>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span> 安装zsh</div><div class="line"><span class="meta">$</span> sudo apt-get install zsh</div><div class="line"><span class="meta">#</span> 安装oh-my-zsh</div><div class="line"><span class="meta">$</span> sudo apt-get install wget git</div><div class="line"><span class="meta">$</span> wget --no-check-certificate https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh</div><div class="line"><span class="meta">#</span> 替换zsh为系统shell</div><div class="line"><span class="meta">$</span> chsh -s /bin/zsh</div><div class="line"><span class="meta">#</span> 退出&amp;重新登入</div><div class="line"><span class="meta">$</span> exit</div><div class="line"><span class="meta">#</span> 查看是否成功</div></pre></td></tr></table></figure>
+<h2 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h2><p><a href="">zsh.config</a></p>
+<p><strong>注意</strong></p>
+<ul>
+<li>需更改<code>.oh-my-zsh</code>的目录</li>
+</ul>
+<h2 id="插件介绍"><a href="#插件介绍" class="headerlink" title="插件介绍"></a>插件介绍</h2><ul>
+<li><code>git</code>;处于git项目下出现提示</li>
+<li><p><code>autojump</code>; 目录自动提示, 需要<a href="git clone git://github.com/joelthelion/autojump.git">Linux 额外安装</a></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span> ~/.bashrc 追加</div><div class="line">[[ -s ~/.autojump/etc/profile.d/autojump.sh ]] &amp;&amp; . ~/.autojump/etc/profile.d/autojump.sh</div></pre></td></tr></table></figure>
+</li>
+<li><p><code>git</code>;处于git项目下出现提示</p>
+</li>
+<li><p><code>zsh-syntax-highlighting</code>;高亮可用命令</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span> git clone git://github.com/jimmijj/zsh-syntax-highlighting ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting</div><div class="line">plugins=(zsh-syntax-highlighting)</div></pre></td></tr></table></figure>
+</li>
+<li><p><code>colored-man-pages</code>; 帮助文档高亮</p>
+</li>
+<li><code>colorize</code>;更多代码高亮</li>
+<li><code>copydir</code>; 整个目录拷贝</li>
+<li><code>command-not-found</code>;命令行智能提示</li>
+<li><code>history</code>;查看输入历史</li>
+<li><code>z</code>; <code>autojump</code>同类</li>
+</ul>
+<h2 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h2><ul>
+<li>ys</li>
+</ul>
+<h2 id="小技巧"><a href="#小技巧" class="headerlink" title="小技巧"></a>小技巧</h2><ul>
+<li>转换路径时可以省去cd命令，直接输入路径即可</li>
+<li><code>d</code> 可以查看访问过的路径，然后输入数字就可以直接切换</li>
+<li>输入不完整的路径/文件/命令，按下tab键可以出现提示，再按tab则可以实现路径补全</li>
+<li>普通命令使用两次tab可进入选择模式， ctrl+f/b/n/p 可以向前后左右切换</li>
+<li>kill + tab <code>强强强</code></li>
+<li>alias -s xx=’xxx’ 快捷配置</li>
+</ul>
+<h2 id="相关设置"><a href="#相关设置" class="headerlink" title="相关设置"></a>相关设置</h2><blockquote>
+<p>cat 代码高亮<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">pip install Pygments</div><div class="line"><span class="meta">#</span> 增加以下alias</div><div class="line"><span class="meta">#</span> alias ccat='pygmentize -g'</div></pre></td></tr></table></figure></p>
+</blockquote>
+<h2 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h2><p><a href="https://github.com/hocgin/Gather/tree/master/oh-my-zsh" target="_blank" rel="external">Oh My ZSH!</a></p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Glup 自动化构建工具]]></title>
+      <url>https://hocg.in/2016/09/20/Glup-%E8%87%AA%E5%8A%A8%E5%8C%96%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/</url>
+      <content type="html"><![CDATA[<p>Gulp.js 是一个自动化构建工具 😜<br><a id="more"></a></p>
+<h2 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h2><p><a href="https://github.com/hocgin/Gulp-Scaffold" target="_blank" rel="external">Glup 整合</a></p>
+<h2 id="Glup"><a href="#Glup" class="headerlink" title="Glup"></a>Glup</h2><blockquote>
+<p>Glup用自动化构建工具增强你的工作流程！</p>
+</blockquote>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span> npm install gulp -g</div><div class="line"><span class="meta">$</span> npm install gulp --save-dev</div></pre></td></tr></table></figure>
+<h2 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h2><ul>
+<li>编译Sass (gulp-ruby-sass)</li>
+<li>Autoprefixer (gulp-autoprefixer)</li>
+<li>缩小化(minify)CSS (gulp-minify-css)</li>
+<li>JSHint (gulp-jshint)</li>
+<li>拼接 (gulp-concat)</li>
+<li>丑化(Uglify) (gulp-uglify)</li>
+<li>图片压缩 (gulp-imagemin)</li>
+<li>即时重整(LiveReload) (gulp-livereload)</li>
+<li>清理档案 (gulp-clean)</li>
+<li>图片快取，只有更改过得图片会进行压缩 (gulp-cache)</li>
+<li>更动通知 (gulp-notify)<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span> npm install gulp-ruby-sass gulp-autoprefixer gulp-minify-css gulp-jshint gulp-concat gulp-uglify gulp-imagemin gulp-clean gulp-notify gulp-rename gulp-livereload gulp-cache --save-dev</div></pre></td></tr></table></figure>
+</li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Ngrok使用指南]]></title>
       <url>https://hocg.in/2016/08/31/Ngrok%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</url>
       <content type="html"><![CDATA[<p>Ngrok 是一款内部端口转发，对于微信类似的开发很有用的😆<br>可参照墙内(花生壳 or nat123)<br><a id="more"></a></p>
@@ -968,32 +1055,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[谈JVM，各种过程]]></title>
-      <url>https://hocg.in/2016/06/12/%E8%B0%88JVM-%E5%90%84%E7%A7%8D%E8%BF%87%E7%A8%8B/</url>
-      <content type="html"><![CDATA[<p>谈谈JVM 各种过程， XMind等我整理一下，稍后贴出 囧～<br>欢迎指教..<br><strong>update:</strong> 2016-08-03 14:44:12 更新了图<br><a id="more"></a></p>
-<h3 id="总思路"><a href="#总思路" class="headerlink" title="总思路"></a>总思路</h3><p>编译过程 -&gt; 运行过程[类加载器过程(类的装载过程) -&gt; 执行过程]</p>
-<h4 id="图"><a href="#图" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/总思路-v1.png" alt="总思路-v1.png"></p>
-<h3 id="编译过程"><a href="#编译过程" class="headerlink" title="编译过程"></a>编译过程</h3><p>.java文件 -javac编译-&gt; .class文件       {-JIT编译(转化+优化)-&gt; 本地方法}[执行过程，当方法执行频率高]</p>
-<h4 id="图-1"><a href="#图-1" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/编译过程.png" alt="编译过程.png"></p>
-<hr>
-<h3 id="运行过程"><a href="#运行过程" class="headerlink" title="运行过程"></a>运行过程</h3><p>类加载器 -&gt; (执行引擎 -&gt; 本地库接口)[Java 运行时数据区] -&gt; 本地方法库</p>
-<h4 id="图-2"><a href="#图-2" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/运行过程.png" alt="运行过程.png"></p>
-<hr>
-<h3 id="类加载器过程"><a href="#类加载器过程" class="headerlink" title="类加载器过程"></a><strong>类加载器</strong>过程</h3><p>[启动]类加载器(JNI) -&gt; [扩展]类加载器 -&gt; [系统]类加载器 -&gt; [自定义]类加载器</p>
-<h4 id="图-3"><a href="#图-3" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/类加载器过程.png" alt="类加载器过程.png"></p>
-<hr>
-<h3 id="类装载过程"><a href="#类装载过程" class="headerlink" title="类装载过程"></a><strong>类</strong>装载过程</h3><p>加载文件到JVM内存 -&gt; (校验语言规范 -&gt; 分配结构存储类的信息 -&gt; 该类常量池中符号更改为直接引用)[Linking] -&gt; 类初始化</p>
-<h4 id="图-4"><a href="#图-4" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/类装载过程.png" alt="类装载过程.png"></p>
-<hr>
-<h3 id="执行引擎执行过程-逐行读取指令"><a href="#执行引擎执行过程-逐行读取指令" class="headerlink" title="执行引擎执行过程(逐行读取指令)"></a><strong>执行引擎</strong>执行过程(逐行读取指令)</h3><p>Thread启动 -生成-&gt; JVM栈 -执行方法-&gt; 压入栈帧(包含 局部变量数组&amp;操作数栈&amp;运行时常量池) -&gt; 逐行读取指令&amp;&amp;解释(JVM栈帧 程序计数器存放下一条指令) -&gt; {JIT(转化+优化)-&gt; 本地方法}[当方法执行频率高] -执行&amp;运算-&gt; 结果(存放 操作数栈中) -&gt; 推出栈帧</p>
-<h4 id="图-5"><a href="#图-5" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/执行引擎执行过程.png" alt="执行引擎执行过程.png"></p>
-<hr>
-<h3 id="Java-运行时数据区-贯穿整个执行过程"><a href="#Java-运行时数据区-贯穿整个执行过程" class="headerlink" title="Java 运行时数据区(贯穿整个执行过程)"></a>Java 运行时数据区(贯穿整个执行过程)</h3><p>共享型数据区：方法区(含运行时常量池[存放方法&amp;变量的实际<strong>地址</strong>])、堆(存放对象实例)<br>隔离型数据区：JVM 栈、本地方法栈(JNI)、程序计数器</p>
-<h4 id="图-6"><a href="#图-6" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/运行时数据图.png" alt="运行时数据图.png"></p>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[谈JVM，字节码]]></title>
       <url>https://hocg.in/2016/06/12/%E8%B0%88JVM-%E5%AD%97%E8%8A%82%E7%A0%81/</url>
       <content type="html"><![CDATA[<p>谈谈JVM，最近在研究破解jar，有这方面经验的麻烦指导一下思路..<br><a id="more"></a></p>
@@ -1137,6 +1198,32 @@
     </entry>
     
     <entry>
+      <title><![CDATA[谈JVM，各种过程]]></title>
+      <url>https://hocg.in/2016/06/12/%E8%B0%88JVM-%E5%90%84%E7%A7%8D%E8%BF%87%E7%A8%8B/</url>
+      <content type="html"><![CDATA[<p>谈谈JVM 各种过程， XMind等我整理一下，稍后贴出 囧～<br>欢迎指教..<br><strong>update:</strong> 2016-08-03 14:44:12 更新了图<br><a id="more"></a></p>
+<h3 id="总思路"><a href="#总思路" class="headerlink" title="总思路"></a>总思路</h3><p>编译过程 -&gt; 运行过程[类加载器过程(类的装载过程) -&gt; 执行过程]</p>
+<h4 id="图"><a href="#图" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/总思路-v1.png" alt="总思路-v1.png"></p>
+<h3 id="编译过程"><a href="#编译过程" class="headerlink" title="编译过程"></a>编译过程</h3><p>.java文件 -javac编译-&gt; .class文件       {-JIT编译(转化+优化)-&gt; 本地方法}[执行过程，当方法执行频率高]</p>
+<h4 id="图-1"><a href="#图-1" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/编译过程.png" alt="编译过程.png"></p>
+<hr>
+<h3 id="运行过程"><a href="#运行过程" class="headerlink" title="运行过程"></a>运行过程</h3><p>类加载器 -&gt; (执行引擎 -&gt; 本地库接口)[Java 运行时数据区] -&gt; 本地方法库</p>
+<h4 id="图-2"><a href="#图-2" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/运行过程.png" alt="运行过程.png"></p>
+<hr>
+<h3 id="类加载器过程"><a href="#类加载器过程" class="headerlink" title="类加载器过程"></a><strong>类加载器</strong>过程</h3><p>[启动]类加载器(JNI) -&gt; [扩展]类加载器 -&gt; [系统]类加载器 -&gt; [自定义]类加载器</p>
+<h4 id="图-3"><a href="#图-3" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/类加载器过程.png" alt="类加载器过程.png"></p>
+<hr>
+<h3 id="类装载过程"><a href="#类装载过程" class="headerlink" title="类装载过程"></a><strong>类</strong>装载过程</h3><p>加载文件到JVM内存 -&gt; (校验语言规范 -&gt; 分配结构存储类的信息 -&gt; 该类常量池中符号更改为直接引用)[Linking] -&gt; 类初始化</p>
+<h4 id="图-4"><a href="#图-4" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/类装载过程.png" alt="类装载过程.png"></p>
+<hr>
+<h3 id="执行引擎执行过程-逐行读取指令"><a href="#执行引擎执行过程-逐行读取指令" class="headerlink" title="执行引擎执行过程(逐行读取指令)"></a><strong>执行引擎</strong>执行过程(逐行读取指令)</h3><p>Thread启动 -生成-&gt; JVM栈 -执行方法-&gt; 压入栈帧(包含 局部变量数组&amp;操作数栈&amp;运行时常量池) -&gt; 逐行读取指令&amp;&amp;解释(JVM栈帧 程序计数器存放下一条指令) -&gt; {JIT(转化+优化)-&gt; 本地方法}[当方法执行频率高] -执行&amp;运算-&gt; 结果(存放 操作数栈中) -&gt; 推出栈帧</p>
+<h4 id="图-5"><a href="#图-5" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/执行引擎执行过程.png" alt="执行引擎执行过程.png"></p>
+<hr>
+<h3 id="Java-运行时数据区-贯穿整个执行过程"><a href="#Java-运行时数据区-贯穿整个执行过程" class="headerlink" title="Java 运行时数据区(贯穿整个执行过程)"></a>Java 运行时数据区(贯穿整个执行过程)</h3><p>共享型数据区：方法区(含运行时常量池[存放方法&amp;变量的实际<strong>地址</strong>])、堆(存放对象实例)<br>隔离型数据区：JVM 栈、本地方法栈(JNI)、程序计数器</p>
+<h4 id="图-6"><a href="#图-6" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/运行时数据图.png" alt="运行时数据图.png"></p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[关于HTTPS]]></title>
       <url>https://hocg.in/2016/06/02/Https-%E7%AD%BE%E8%AF%81/</url>
       <content type="html"><![CDATA[<p>这是一篇关于<code>HTTPS</code>的日常使用记录，例如:博客HTTPS化~<br>来吧!年轻人!<del>装逼</del>HTTPS时代到了<br><a id="more"></a></p>
@@ -1163,19 +1250,38 @@
     </entry>
     
     <entry>
-      <title><![CDATA[绿化NodeJS for linux版]]></title>
-      <url>https://hocg.in/2016/04/25/%E7%BB%BF%E5%8C%96nodejs-for-linux%E7%89%88/</url>
-      <content type="html"><![CDATA[<p>起因，为了方便hexo发布博客，所以想把NodeJS绿化在U盘上..<br>谁叫网上只有win版的呢！自己码起来～<br>绿化 o(╯□╰)o<br><a id="more"></a></p>
-<h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">Green4nodeJS</div><div class="line">├── hocgin.github.io // github博客目录</div><div class="line">├── node // nodejs基本目录</div><div class="line">│   ├── node-linux // nodejs源文件</div><div class="line">│   ├── cache // 创建一个空文件夹，即可</div><div class="line">│   ├── init-module // 创建一个空文件夹，即可</div><div class="line">│   └── userconfig // 创建一个空文件夹，即可</div><div class="line">└── init.sh // 初始化shell文件 *重要</div></pre></td></tr></table></figure>
-<h2 id="初始化文件"><a href="#初始化文件" class="headerlink" title="初始化文件"></a>初始化文件</h2><blockquote>
-<p>主要是加载配置环境，初始化变量</p>
+      <title><![CDATA[ES6 新特性]]></title>
+      <url>https://hocg.in/2016/05/10/ES6-%E6%96%B0%E7%89%B9%E6%80%A7/</url>
+      <content type="html"><![CDATA[<p>NodeJS 的构建工具层出不穷，因此了解一下陈旧事物的进展。<br><a id="more"></a></p>
+<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>es6: ecmscript6</p>
+<h1 id="新特性"><a href="#新特性" class="headerlink" title="新特性"></a>新特性</h1><ul>
+<li>let 块级作用域, <code>注: es5中var声明的上全局范围的</code></li>
+<li>const 常量</li>
+<li>class 类</li>
+<li>extends 继承</li>
+<li>super 指代父类的实例</li>
+<li><p>arrow functions 语法糖</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"><span class="comment"> * 语法: (参数) =&gt; &#123;执行代码&#125;</span></div><div class="line"><span class="comment"> **/</span></div><div class="line"><span class="function"><span class="keyword">function</span>(<span class="params">i</span>)</span>&#123; <span class="keyword">return</span> i + <span class="number">1</span>; &#125; <span class="comment">//ES5</span></div><div class="line">(i) =&gt; &#123; i + <span class="number">1</span> &#125; <span class="comment">//ES6</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>template string 模版字符  </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"><span class="comment"> * 语法: `$&#123;变量&#125;`</span></div><div class="line"><span class="comment"> **/</span></div><div class="line"> <span class="keyword">const</span> name = <span class="string">'hocgin'</span>;</div><div class="line"> <span class="built_in">console</span>.log(<span class="string">`this is template strnig</span></div><div class="line"><span class="string"> &lt;b&gt;<span class="subst">$&#123;name&#125;</span>&lt;/b&gt;</span></div><div class="line"><span class="string"> `</span>);</div></pre></td></tr></table></figure>
+</li>
+<li><p>destructuring   </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> cat = <span class="string">'ken'</span></div><div class="line"><span class="keyword">let</span> dog = <span class="string">'lili'</span></div><div class="line"><span class="keyword">let</span> zoo = &#123;cat, dog&#125;</div><div class="line"><span class="built_in">console</span>.log(zoo)  <span class="comment">//Object &#123;cat: "ken", dog: "lili"&#125;</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> dog = &#123;<span class="attr">type</span>: <span class="string">'animal'</span>, <span class="attr">many</span>: <span class="number">2</span>&#125;</div><div class="line"><span class="keyword">let</span> &#123; type, many&#125; = dog</div><div class="line"><span class="built_in">console</span>.log(type, many)   <span class="comment">//animal 2</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>default 默认值</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"><span class="comment"> * 语法:</span></div><div class="line"><span class="comment"> * function &lt;method name&gt;(param = &lt;default value&gt;) &#123;</span></div><div class="line"><span class="comment"> *    ...</span></div><div class="line"><span class="comment"> * &#125;</span></div><div class="line"><span class="comment"> **/</span></div><div class="line"> <span class="function"><span class="keyword">function</span> <span class="title">animal</span>(<span class="params">type = <span class="string">'cat'</span></span>)</span>&#123;</div><div class="line">     <span class="built_in">console</span>.log(type)</div><div class="line"> &#125;</div><div class="line"> animal();</div></pre></td></tr></table></figure>
+</li>
+<li><p>rest 可变参数</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"><span class="comment"> * 语法:</span></div><div class="line"><span class="comment"> * function &lt;method name&gt;(...params) &#123;</span></div><div class="line"><span class="comment"> *    ...</span></div><div class="line"><span class="comment"> * &#125;</span></div><div class="line"><span class="comment"> **/</span></div><div class="line"> <span class="function"><span class="keyword">function</span> <span class="title">animals</span>(<span class="params">...types</span>)</span>&#123;</div><div class="line">     <span class="built_in">console</span>.log(types)</div><div class="line"> &#125;</div><div class="line"> animals(<span class="string">'cat'</span>, <span class="string">'dog'</span>, <span class="string">'fish'</span>);</div></pre></td></tr></table></figure>
+</li>
+<li><p>import export 模块设计</p>
+<blockquote>
+<p>es6 把一个文件当作一个模块, 一个模块可<code>export</code>多个变量, 因此不同的<code>export</code><br>可对应不同的<code>import</code></p>
 </blockquote>
-<p><code>init.sh</code> 内容<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span>!/bin/bash</div><div class="line"><span class="meta">#</span> Author: hocgin@gmail.com</div><div class="line"><span class="meta">#</span> -------------Use--------------</div><div class="line"><span class="meta">#</span> source init.sh or . init.sh</div><div class="line"><span class="meta">#</span> ------------------------------</div><div class="line">NOW_PATH=$(cd "$(dirname "$0")"; pwd)</div><div class="line">NODE_NAME="node-linux"</div><div class="line">NODE_HOME=$NOW_PATH"/node/"$NODE_NAME</div><div class="line">NODE_PATH=$NODE_HOME"/bin"</div><div class="line">NPM_PATH=$NODE_HOME"/lib/node_modules/npm/bin"</div><div class="line">sudo chmod +x -R $NPM_PATH"/."</div><div class="line">export PATH=$PATH:$NODE_PATH:$NPM_PATH</div><div class="line"><span class="meta">#</span> "/home/hocgin/.npmrc"</div><div class="line">npm set userconfig $NOW_PATH"/node/userconfig"</div><div class="line"><span class="meta">#</span> "/home/hocgin/.npm-init.js"</div><div class="line">npm set init-module $NOW_PATH"/node/init-module"</div><div class="line"><span class="meta">#</span> "/home/hocgin/.npm"</div><div class="line">npm set cache  $NOW_PATH"/node/cache"</div></pre></td></tr></table></figure></p>
-<p>修改 <code>/node/node-linux/lib/node_modules/npm/bin/npm</code> 文件<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span> NPM_CLI_JS="$basedir/node_modules/npm/bin/npm-cli.js"</div><div class="line">NPM_CLI_JS="$basedir/npm-cli.js"</div></pre></td></tr></table></figure></p>
-<p>完成</p>
-<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">source init.sh</div><div class="line"><span class="meta">#</span> Or</div><div class="line">. init.sh</div><div class="line"></div><div class="line">cd hocgin.github.io</div><div class="line"><span class="meta">#</span> 尽情hexo吧</div></pre></td></tr></table></figure>
-<p><code>注: 安装module时请加上 -g</code></p>
-<p>End</p>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 导出模块</span></div><div class="line"><span class="keyword">export</span> animal</div><div class="line"><span class="comment">// 导入模块 - 变量为 animal</span></div><div class="line"><span class="keyword">import</span> animal <span class="keyword">from</span> <span class="string">'./content'</span></div><div class="line"><span class="comment">//--------------------</span></div><div class="line"><span class="comment">// 导出模块</span></div><div class="line"><span class="keyword">export</span> &#123;dog, cat&#125;</div><div class="line"><span class="comment">// 导入模块 - 变量为 [dog, cat]</span></div><div class="line"><span class="keyword">import</span> &#123;dog, cat&#125; <span class="keyword">from</span> <span class="string">'./content'</span></div><div class="line"><span class="comment">//--------------------</span></div><div class="line"><span class="keyword">export</span> &#123;dog, cat&#125;</div><div class="line"><span class="comment">// 全部导入</span></div><div class="line"><span class="keyword">import</span> * <span class="keyword">as</span> animal <span class="keyword">from</span> <span class="string">'./content'</span></div><div class="line"><span class="comment">// or</span></div><div class="line"><span class="built_in">module</span> animal form <span class="string">'./content'</span></div><div class="line"><span class="comment">//--------------------</span></div><div class="line"><span class="comment">// 默认导出, 一个模块只能使用 export default 一次</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="string">'dog dog'</span></div><div class="line"><span class="keyword">import</span> animal <span class="keyword">from</span> <span class="string">'./content'</span></div></pre></td></tr></table></figure>
 ]]></content>
     </entry>
     
@@ -1192,6 +1298,23 @@
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">project</span> <span class="attr">xmlns</span>=<span class="string">"http://maven.apache.org/POM/4.0.0"</span> <span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></span></div><div class="line"><span class="tag">  <span class="attr">xsi:schemaLocation</span>=<span class="string">"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"</span>&gt;</span></div><div class="line">  <span class="comment">&lt;!-- 项目的名称 start --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">modelVersion</span>&gt;</span>4.0.0<span class="tag">&lt;/<span class="name">modelVersion</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>temp.download<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>temp-download<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!-- 项目的名称 end --&gt;</span></div><div class="line"></div><div class="line">	<span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></div><div class="line">      <span class="comment">&lt;!-- 要下载的jar start --&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.json<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>json<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">version</span>&gt;</span>20160212<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div><div class="line">     <span class="comment">&lt;!-- 要下载的jar end --&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">project</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>完成</p>
 <h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">source init.sh</div><div class="line"><span class="meta">#</span> Or</div><div class="line">. init.sh</div><div class="line"></div><div class="line">cd hocgin.github.io</div><div class="line"><span class="meta">#</span> 尽情hexo吧</div></pre></td></tr></table></figure>
+<p>End</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[绿化NodeJS for linux版]]></title>
+      <url>https://hocg.in/2016/04/25/%E7%BB%BF%E5%8C%96nodejs-for-linux%E7%89%88/</url>
+      <content type="html"><![CDATA[<p>起因，为了方便hexo发布博客，所以想把NodeJS绿化在U盘上..<br>谁叫网上只有win版的呢！自己码起来～<br>绿化 o(╯□╰)o<br><a id="more"></a></p>
+<h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">Green4nodeJS</div><div class="line">├── hocgin.github.io // github博客目录</div><div class="line">├── node // nodejs基本目录</div><div class="line">│   ├── node-linux // nodejs源文件</div><div class="line">│   ├── cache // 创建一个空文件夹，即可</div><div class="line">│   ├── init-module // 创建一个空文件夹，即可</div><div class="line">│   └── userconfig // 创建一个空文件夹，即可</div><div class="line">└── init.sh // 初始化shell文件 *重要</div></pre></td></tr></table></figure>
+<h2 id="初始化文件"><a href="#初始化文件" class="headerlink" title="初始化文件"></a>初始化文件</h2><blockquote>
+<p>主要是加载配置环境，初始化变量</p>
+</blockquote>
+<p><code>init.sh</code> 内容<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span>!/bin/bash</div><div class="line"><span class="meta">#</span> Author: hocgin@gmail.com</div><div class="line"><span class="meta">#</span> -------------Use--------------</div><div class="line"><span class="meta">#</span> source init.sh or . init.sh</div><div class="line"><span class="meta">#</span> ------------------------------</div><div class="line">NOW_PATH=$(cd "$(dirname "$0")"; pwd)</div><div class="line">NODE_NAME="node-linux"</div><div class="line">NODE_HOME=$NOW_PATH"/node/"$NODE_NAME</div><div class="line">NODE_PATH=$NODE_HOME"/bin"</div><div class="line">NPM_PATH=$NODE_HOME"/lib/node_modules/npm/bin"</div><div class="line">sudo chmod +x -R $NPM_PATH"/."</div><div class="line">export PATH=$PATH:$NODE_PATH:$NPM_PATH</div><div class="line"><span class="meta">#</span> "/home/hocgin/.npmrc"</div><div class="line">npm set userconfig $NOW_PATH"/node/userconfig"</div><div class="line"><span class="meta">#</span> "/home/hocgin/.npm-init.js"</div><div class="line">npm set init-module $NOW_PATH"/node/init-module"</div><div class="line"><span class="meta">#</span> "/home/hocgin/.npm"</div><div class="line">npm set cache  $NOW_PATH"/node/cache"</div></pre></td></tr></table></figure></p>
+<p>修改 <code>/node/node-linux/lib/node_modules/npm/bin/npm</code> 文件<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span> NPM_CLI_JS="$basedir/node_modules/npm/bin/npm-cli.js"</div><div class="line">NPM_CLI_JS="$basedir/npm-cli.js"</div></pre></td></tr></table></figure></p>
+<p>完成</p>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">source init.sh</div><div class="line"><span class="meta">#</span> Or</div><div class="line">. init.sh</div><div class="line"></div><div class="line">cd hocgin.github.io</div><div class="line"><span class="meta">#</span> 尽情hexo吧</div></pre></td></tr></table></figure>
+<p><code>注: 安装module时请加上 -g</code></p>
 <p>End</p>
 ]]></content>
     </entry>
