@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hocg.in/"/>
-  <updated>2017-10-18T08:45:55.642Z</updated>
+  <updated>2017-10-18T08:47:31.838Z</updated>
   <id>https://hocg.in/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://hocg.in/2017/10/18/Thymeleaf-3.0-%E6%89%8B%E5%86%8C/"/>
     <id>https://hocg.in/2017/10/18/Thymeleaf-3.0-手册/</id>
     <published>2017-10-18T08:40:51.000Z</published>
-    <updated>2017-10-18T08:45:55.642Z</updated>
+    <updated>2017-10-18T08:47:31.838Z</updated>
     
     <content type="html"><![CDATA[<p>Spring 官方推崇的模版引擎，遵循 HTML5规范。<br><a id="more"></a></p>
 <h2 id="HTML5"><a href="#HTML5" class="headerlink" title="HTML5"></a>HTML5</h2><p>若要完全遵循HTML5规范，可使用 <code>data-th-*</code> 代替 <code>th:*</code>。</p>
@@ -145,10 +145,14 @@
 <ul>
 <li>引入模版片段</li>
 </ul>
-<p><strong>XPath</strong></p>
+<ol>
+<li><p>XPath 表达式</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">th:include</span>=<span class="string">"mytemplate :: [//div[@class='content']]"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<p><strong>CSS</strong></p>
+</li>
+<li><p>CSS 表达式</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">th:include</span>=<span class="string">"mytemplate :: [div.content]"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+</ol>
 <ul>
 <li>引入公有片段(JS 或 CSS)</li>
 </ul>

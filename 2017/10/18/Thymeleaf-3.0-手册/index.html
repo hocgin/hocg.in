@@ -108,7 +108,7 @@
 <meta property="og:site_name" content="hocgin (๑`灬´๑)">
 <meta property="og:description" content="Spring 官方推崇的模版引擎，遵循 HTML5规范。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-10-18T08:45:55.642Z">
+<meta property="og:updated_time" content="2017-10-18T08:47:31.838Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Thymeleaf 3.0 手册">
 <meta name="twitter:description" content="Spring 官方推崇的模版引擎，遵循 HTML5规范。">
@@ -585,10 +585,14 @@
 <ul>
 <li>引入模版片段</li>
 </ul>
-<p><strong>XPath</strong></p>
+<ol>
+<li><p>XPath 表达式</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">th:include</span>=<span class="string">"mytemplate :: [//div[@class='content']]"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<p><strong>CSS</strong></p>
+</li>
+<li><p>CSS 表达式</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">th:include</span>=<span class="string">"mytemplate :: [div.content]"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+</ol>
 <ul>
 <li>引入公有片段(JS 或 CSS)</li>
 </ul>
