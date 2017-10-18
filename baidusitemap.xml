@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>https://hocg.in/2017/10/18/Thymeleaf-3.0-%E6%89%8B%E5%86%8C/</loc>
+    <lastmod>2017-10-18T08:40:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>Thymeleaf 3.0 手册</title>
+        <pubTime>2017-10-18T08:40:51.000Z</pubTime>
+        
+        <tag>HTML5</tag>
+         
+        <tag>Thymeleaf</tag>
+         
+         
+           
+             
+              <breadCrumb title="Server" url="https://hocg.in/categories/Server/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://hocg.in/2017/09/27/%E8%A7%A3%E5%86%B3ProgressBar%E9%A1%B6%E9%83%A8%E5%87%BA%E7%8E%B0%E7%A9%BA%E7%99%BD%E7%8E%B0%E8%B1%A1/</loc>
     <lastmod>2017-09-28T14:15:57.000Z</lastmod>
     <data>
@@ -301,9 +323,9 @@
         <title>Vue 项目实践 - 持续更新</title>
         <pubTime>2017-03-26T07:40:08.000Z</pubTime>
         
-        <tag>JavaScript</tag>
-         
         <tag>HTML5</tag>
+         
+        <tag>JavaScript</tag>
          
         <tag>前端</tag>
          
@@ -325,9 +347,9 @@
         <title>Vue.js项目 部件简介 (未完待续)</title>
         <pubTime>2017-03-31T07:32:36.000Z</pubTime>
         
-        <tag>JavaScript</tag>
-         
         <tag>HTML5</tag>
+         
+        <tag>JavaScript</tag>
          
         <tag>前端</tag>
          

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hocg.in/"/>
-  <updated>2017-09-28T14:14:54.743Z</updated>
+  <updated>2017-10-18T08:40:59.000Z</updated>
   <id>https://hocg.in/</id>
   
   <author>
@@ -14,6 +14,148 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Thymeleaf 3.0 手册</title>
+    <link href="https://hocg.in/2017/10/18/Thymeleaf-3.0-%E6%89%8B%E5%86%8C/"/>
+    <id>https://hocg.in/2017/10/18/Thymeleaf-3.0-手册/</id>
+    <published>2017-10-18T08:40:51.000Z</published>
+    <updated>2017-10-18T08:40:59.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Spring 官方推崇的模版引擎，遵循 HTML5规范。<br><a id="more"></a></p>
+<h2 id="HTML5"><a href="#HTML5" class="headerlink" title="HTML5"></a>HTML5</h2><p>若要完全遵循HTML5规范，可使用 <code>data-th-*</code> 代替 <code>th:*</code>。</p>
+<h2 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h2><blockquote>
+<p>TODO 以后补<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">th:fragment</div><div class="line">th:insert</div><div class="line">th:include</div><div class="line">th:replace</div></pre></td></tr></table></figure></p>
+</blockquote>
+<h2 id="注释语法"><a href="#注释语法" class="headerlink" title="注释语法"></a>注释语法</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!--/* 这里是 编译器显示为注释, 浏览器不可见 */--&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!--/*--&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>这里是 编译器显示不注释，浏览器不可见 <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="comment">&lt;!--*/--&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!--/*/</span></div><div class="line"><span class="comment">&lt;div th:text="$&#123;'这里是 编辑器显示为注释, 浏览器可见'&#125;"&gt;...&lt;/div&gt;</span></div><div class="line"><span class="comment">/*/--&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="表达式"><a href="#表达式" class="headerlink" title="表达式"></a>表达式</h2><h3 id="URL-表达式"><a href="#URL-表达式" class="headerlink" title="URL 表达式"></a>URL 表达式</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">th:src</span>=<span class="string">"@&#123;/img/tup.png&#125;"</span> <span class="attr">alt</span>=<span class="string">"绝对路径"</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- &lt;img alt="绝对路径" src="/img/tup.png"&gt; --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">th:src</span>=<span class="string">"@&#123;../img/tup.png&#125;"</span> <span class="attr">alt</span>=<span class="string">"相对路径"</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- &lt;img alt="相对路径" src="../img/tup.png"&gt; --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">th:src</span>=<span class="string">"@&#123;../img/tup.png(size=$&#123;100&#125;)&#125;"</span> <span class="attr">alt</span>=<span class="string">"带参数的路径"</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- &lt;img alt="带参数的路径" src="../img/tup.png?size=100"&gt; --&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="国际化表达式"><a href="#国际化表达式" class="headerlink" title="国际化表达式"></a>国际化表达式</h3><ol>
+<li><p>创建 <code>resources/messages_zh_CN.properties</code>, 其内容:</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">message.error=错误</div></pre></td></tr></table></figure>
+</li>
+<li><p>配置 <code>application.yml</code> (使用 xml 的执行转换)</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="attr">spring:</span></div><div class="line"><span class="attr">  messages:</span></div><div class="line"><span class="attr">    basename:</span> <span class="string">messages_zh_CN</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>使用</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">th:text</span>=<span class="string">"#&#123;message.error&#125;"</span>&gt;</span>Error<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="变量表达式"><a href="#变量表达式" class="headerlink" title="变量表达式"></a>变量表达式</h3><blockquote>
+<p>最基本的表达式, 类似于 EL 表达式。</p>
+<ul>
+<li>合 <code>org.springframework.ui.Model</code> 使用。</li>
+<li>可以使用众多内置对象。</li>
+<li>@访问 Spring 容器内对象</li>
+</ul>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">th:text</span>=<span class="string">"$&#123;author.name&#125;"</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="变量表达式-扩展-1"><a href="#变量表达式-扩展-1" class="headerlink" title="变量表达式 - 扩展 1"></a>变量表达式 - 扩展 1</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">th:object</span>=<span class="string">"$&#123;author&#125;"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">th:text</span>=<span class="string">"*&#123;name&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">th:text</span>=<span class="string">"*&#123;mail&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">th:text</span>=<span class="string">"*&#123;address&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!--</span></div><div class="line"><span class="comment">    等价于</span></div><div class="line"><span class="comment">    &lt;ul&gt;</span></div><div class="line"><span class="comment">        &lt;li th:text="$&#123;author.name&#125;"&gt;&lt;/li&gt;</span></div><div class="line"><span class="comment">        &lt;li th:text="$&#123;author.mail&#125;"&gt;&lt;/li&gt;</span></div><div class="line"><span class="comment">        &lt;li th:text="$&#123;author.address&#125;"&gt;&lt;/li&gt;</span></div><div class="line"><span class="comment">    &lt;/ul&gt;</span></div><div class="line"><span class="comment">--&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="变量表达式-扩展-2"><a href="#变量表达式-扩展-2" class="headerlink" title="变量表达式 - 扩展 2"></a>变量表达式 - 扩展 2</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">th:text</span>=<span class="string">"$&#123;@demoService.getStr('hocgin')&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="预处理表达式"><a href="#预处理表达式" class="headerlink" title="预处理表达式"></a>预处理表达式</h3><ol>
+<li><p>前置设置, Controller</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@GetMapping</span>(&#123;<span class="string">"/test.html"</span>&#125;)</div><div class="line"><span class="function"><span class="keyword">public</span> String <span class="title">index</span><span class="params">(Model model, @PathVariable String page)</span> </span>&#123;</div><div class="line">    model.addAttribute(<span class="string">"key"</span>, <span class="string">"error"</span>);</div><div class="line">    HashMap&lt;String, String&gt; vm = <span class="keyword">new</span> HashMap&lt;&gt;();</div><div class="line">    vm.put(<span class="string">"error"</span>, <span class="string">"来自 $&#123;&#125; 表达式"</span>);</div><div class="line">    model.addAttribute(<span class="string">"obj"</span>, vm);</div><div class="line">    <span class="keyword">return</span> String.format(<span class="string">"test.html"</span>, page);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>前置设置, <code>messages_zh_CN.properties</code> 参考<strong>国际化表达式</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">message.error=错误</div></pre></td></tr></table></figure>
+</li>
+<li><p>test.html 编写</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">th:href</span>=<span class="string">"@&#123;/img/__$&#123;1+1&#125;__&#125;"</span>&gt;</span>连接<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- &lt;a href="/img/2"&gt;连接&lt;/a&gt; --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">th:text</span>=<span class="string">"#&#123;message.__$&#123;key&#125;__&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- &lt;div&gt;错误&lt;/div&gt; --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">th:text</span>=<span class="string">"$&#123;obj.__$&#123;key&#125;__&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- &lt;div&gt;来自 $&#123;&#125; 表达式&lt;/div&gt; --&gt;</span></div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="表达式语法"><a href="#表达式语法" class="headerlink" title="表达式语法"></a>表达式语法</h2><h3 id="字符串拼接"><a href="#字符串拼接" class="headerlink" title="字符串拼接"></a>字符串拼接</h3><p>使用 <code>+</code> 或者 <code>|..|</code><br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">th:text</span>=<span class="string">"'1+1=' + $&#123;1+1&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- 1+1=2 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">th:text</span>=<span class="string">"|1+1=$&#123;1+1&#125;|"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- 1+1=2 --&gt;</span></div></pre></td></tr></table></figure></p>
+<h3 id="运算符号"><a href="#运算符号" class="headerlink" title="运算符号"></a>运算符号</h3><p>使用 <code>+, -, *, /, %</code>。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">th:text</span>=<span class="string">"-((1+1-1)*2/2)%9"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- -1 --&gt;</span></div></pre></td></tr></table></figure></p>
+<h3 id="与-或-非"><a href="#与-或-非" class="headerlink" title="与 或 非"></a>与 或 非</h3><p>使用 <code>and , or</code> 和 <code>! , not</code>。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">th:text</span>=<span class="string">"1==1 and true"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- true --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">th:text</span>=<span class="string">"true and false"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- false --&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">th:text</span>=<span class="string">"true or false"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- true --&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">th:text</span>=<span class="string">"not true"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- false --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">th:text</span>=<span class="string">"! false"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- true --&gt;</span></div></pre></td></tr></table></figure></p>
+<h3 id="关系表达式"><a href="#关系表达式" class="headerlink" title="关系表达式"></a>关系表达式</h3><p>使用 <code>&gt;, &lt;, &gt;=, &lt;=, ==, !=</code>。<br>或者 <code>gt, lt, ge, le, eq, ne</code>。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">th:text</span>=<span class="string">"((1 &gt; 2 and 2 &lt; 3) or (2 &gt;= 2 and 2 &lt;= 5)) and (1 == 1 and 1 != 2)"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- true --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">th:text</span>=<span class="string">"((1 gt 2 and 2 lt 3) or (2 ge 2 and 2 le 5)) and (1 eq 1 and 1 ne 2)"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- true --&gt;</span></div></pre></td></tr></table></figure></p>
+<h3 id="简单条件表达式"><a href="#简单条件表达式" class="headerlink" title="简单条件表达式"></a>简单条件表达式</h3><p>使用:<br>if-then <code>(if) ? (then)</code><br>if-then-else <code>(if) ? (then) : (else)</code><br>default <code>(value) ?: (defaultValue)</code>  </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">th:text</span>=<span class="string">"true ? 'hocgin'"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- hocgin --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">th:text</span>=<span class="string">"false ? 'hocgin' : 'hocg.in'"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- hocg.in --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">th:text</span>=<span class="string">"$&#123;iname&#125; ?: 'hocgin'"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- hocgin --&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="解析优先级"><a href="#解析优先级" class="headerlink" title="解析优先级"></a>解析优先级</h2><table>
+<thead>
+<tr>
+<th>级别</th>
+<th>描述</th>
+<th>th属性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>(Fragment inclusion)代码片段导入</td>
+<td><code>th:insert</code>,<code>th:replace</code></td>
+</tr>
+<tr>
+<td>2</td>
+<td>(Fragment iteration)迭代</td>
+<td><code>th:each</code></td>
+</tr>
+<tr>
+<td>3</td>
+<td>(Conditional evaluation)条件</td>
+<td><code>th:if</code>,<code>th:unless</code>,<code>th:switch</code>,<code>th:case</code></td>
+</tr>
+<tr>
+<td>4</td>
+<td>(Local variable definition)局部变量</td>
+<td><code>th:object</code>,<code>th:with</code></td>
+</tr>
+<tr>
+<td>5</td>
+<td>(General attribute modification)通用属性修改</td>
+<td><code>th:attr</code>,<code>th:attrprepend</code>,<code>th:attrappend</code></td>
+</tr>
+<tr>
+<td>6</td>
+<td>(Specific attribute modification)具体属性修改</td>
+<td><code>th:value</code>,<code>th:href</code>,<code>th:src</code> …</td>
+</tr>
+<tr>
+<td>7</td>
+<td>(Text tag body modification) 文本节点修改</td>
+<td><code>th:text</code>,<code>th:utext</code></td>
+</tr>
+<tr>
+<td>8</td>
+<td>(Fragment specification) 代码段定义</td>
+<td><code>th:fragment</code></td>
+</tr>
+<tr>
+<td>9</td>
+<td>(Fragment removal) 代码段删除</td>
+<td><code>th:remove</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="基础对象"><a href="#基础对象" class="headerlink" title="基础对象"></a>基础对象</h2><h3 id="ctx-org-thymeleaf-spring4-context-SpringWebContext"><a href="#ctx-org-thymeleaf-spring4-context-SpringWebContext" class="headerlink" title="#ctx (org.thymeleaf.spring4.context.SpringWebContext)"></a><code>#ctx</code> (org.thymeleaf.spring4.context.SpringWebContext)</h3><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"><span class="comment"> * org.thymeleaf.context.IContext</span></div><div class="line"><span class="comment"> **/</span></div><div class="line"><span class="comment">// 当前语言环境(eg. en_US)。 等价于 &#123;#locale&#125;</span></div><div class="line">$&#123;#ctx.locale&#125;</div><div class="line"><span class="comment">// org.thymeleaf.context.VariablesMap 对象, 内部存储的是可用于当前上下文(Context)的对象。等价于 &#123;#vars&#125;</span></div><div class="line">$&#123;#ctx.variables&#125;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"><span class="comment"> * org.thymeleaf.context.IWebContext</span></div><div class="line"><span class="comment"> **/</span></div><div class="line">$&#123;#ctx.applicationAttributes&#125;</div><div class="line"><span class="comment">// 等价于 &#123;#httpServletRequest&#125;</span></div><div class="line">$&#123;#ctx.httpServletRequest&#125;</div><div class="line">$&#123;#ctx.httpServletResponse&#125;</div><div class="line"><span class="comment">// 等价于 &#123;#httpSession&#125;</span></div><div class="line">$&#123;#ctx.httpSession&#125;</div><div class="line">$&#123;#ctx.requestAttributes&#125;</div><div class="line">$&#123;#ctx.requestParameters&#125;</div><div class="line">$&#123;#ctx.servletContext&#125;</div><div class="line">$&#123;#ctx.sessionAttributes&#125;</div></pre></td></tr></table></figure>
+<h3 id="param-org-apache-catalina-util-ParameterMap"><a href="#param-org-apache-catalina-util-ParameterMap" class="headerlink" title="param (org.apache.catalina.util.ParameterMap)"></a><code>param</code> (org.apache.catalina.util.ParameterMap)</h3><p>包含当前页面的请求的参数(eg. <code>http://localhost:8080/admin/test.html?name=hocgin</code>)。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 返回对象</span></div><div class="line">$&#123;param.name&#125; </div><div class="line"><span class="comment">// 获得值: hocgin</span></div><div class="line">$&#123;param.name[<span class="number">0</span>]&#125; </div><div class="line">$&#123;param.size()&#125;</div><div class="line">$&#123;param.isEmpty()&#125;</div><div class="line">$&#123;param.containsKey(<span class="string">'name'</span>)&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="session-org-thymeleaf-context-WebSessionVariablesMap"><a href="#session-org-thymeleaf-context-WebSessionVariablesMap" class="headerlink" title="session (org.thymeleaf.context.WebSessionVariablesMap)"></a><code>session</code> (org.thymeleaf.context.WebSessionVariablesMap)</h3><p>从 Session 获取内容。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 获得值: hocgin</span></div><div class="line">$&#123;session.name&#125;</div><div class="line">$&#123;session.size()&#125;</div><div class="line">$&#123;session.isEmpty()&#125;</div><div class="line">$&#123;session.containsKey(<span class="string">'name'</span>)&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="httpServletRequest-org-apache-catalina-connector-RequestFacade"><a href="#httpServletRequest-org-apache-catalina-connector-RequestFacade" class="headerlink" title="#httpServletRequest (org.apache.catalina.connector.RequestFacade)"></a><code>#httpServletRequest</code> (org.apache.catalina.connector.RequestFacade)</h3><h3 id="themes-org-thymeleaf-spring4-expression-Themes"><a href="#themes-org-thymeleaf-spring4-expression-Themes" class="headerlink" title="#themes (org.thymeleaf.spring4.expression.Themes)"></a><code>#themes</code> (org.thymeleaf.spring4.expression.Themes)</h3><h3 id="application"><a href="#application" class="headerlink" title="application"></a><code>application</code></h3><h3 id="dates-org-thymeleaf-expression-Dates"><a href="#dates-org-thymeleaf-expression-Dates" class="headerlink" title="#dates (org.thymeleaf.expression.Dates)"></a><code>#dates</code> (org.thymeleaf.expression.Dates)</h3><h3 id="calendars-org-thymeleaf-expression-Calendars"><a href="#calendars-org-thymeleaf-expression-Calendars" class="headerlink" title="#calendars (org.thymeleaf.expression.Calendars)"></a><code>#calendars</code> (org.thymeleaf.expression.Calendars)</h3><h3 id="numbers-org-thymeleaf-expression-Numbers"><a href="#numbers-org-thymeleaf-expression-Numbers" class="headerlink" title="#numbers (org.thymeleaf.expression.Numbers)"></a><code>#numbers</code> (org.thymeleaf.expression.Numbers)</h3><h3 id="strings-org-thymeleaf-expression-Strings"><a href="#strings-org-thymeleaf-expression-Strings" class="headerlink" title="#strings (org.thymeleaf.expression.Strings)"></a><code>#strings</code> (org.thymeleaf.expression.Strings)</h3><h3 id="objects-org-thymeleaf-expression-Objects"><a href="#objects-org-thymeleaf-expression-Objects" class="headerlink" title="#objects (org.thymeleaf.expression.Objects)"></a><code>#objects</code> (org.thymeleaf.expression.Objects)</h3><h3 id="bools-org-thymeleaf-expression-Bools"><a href="#bools-org-thymeleaf-expression-Bools" class="headerlink" title="#bools (org.thymeleaf.expression.Bools)"></a><code>#bools</code> (org.thymeleaf.expression.Bools)</h3><h3 id="arrays-org-thymeleaf-expression-Arrays"><a href="#arrays-org-thymeleaf-expression-Arrays" class="headerlink" title="#arrays (org.thymeleaf.expression.Arrays)"></a><code>#arrays</code> (org.thymeleaf.expression.Arrays)</h3><h3 id="lists-org-thymeleaf-expression-Lists"><a href="#lists-org-thymeleaf-expression-Lists" class="headerlink" title="#lists (org.thymeleaf.expression.Lists)"></a><code>#lists</code> (org.thymeleaf.expression.Lists)</h3><h3 id="sets-org-thymeleaf-expression-Sets"><a href="#sets-org-thymeleaf-expression-Sets" class="headerlink" title="#sets (org.thymeleaf.expression.Sets)"></a><code>#sets</code> (org.thymeleaf.expression.Sets)</h3><h3 id="maps-org-thymeleaf-expression-Maps"><a href="#maps-org-thymeleaf-expression-Maps" class="headerlink" title="#maps (org.thymeleaf.expression.Maps)"></a><code>#maps</code> (org.thymeleaf.expression.Maps)</h3><h3 id="aggregates-org-thymeleaf-expression-Aggregates"><a href="#aggregates-org-thymeleaf-expression-Aggregates" class="headerlink" title="#aggregates (org.thymeleaf.expression.Aggregates)"></a><code>#aggregates</code> (org.thymeleaf.expression.Aggregates)</h3><h3 id="messages-org-thymeleaf-expression-Messages"><a href="#messages-org-thymeleaf-expression-Messages" class="headerlink" title="#messages (org.thymeleaf.expression.Messages)"></a><code>#messages</code> (org.thymeleaf.expression.Messages)</h3><h3 id="ids-org-thymeleaf-expression-Ids"><a href="#ids-org-thymeleaf-expression-Ids" class="headerlink" title="#ids (org.thymeleaf.expression.Ids)"></a><code>#ids</code> (org.thymeleaf.expression.Ids)</h3><p><strong>代码示例</strong><br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">### `#locale` (<span class="tag">&lt;<span class="name">span</span> <span class="attr">th:text</span>=<span class="string">"$&#123;#locale&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span>)<span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line">### `#ctx` (<span class="tag">&lt;<span class="name">span</span> <span class="attr">th:text</span>=<span class="string">"$&#123;#ctx&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span>)<span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line">### `#vars` (<span class="tag">&lt;<span class="name">span</span> <span class="attr">th:text</span>=<span class="string">"$&#123;#vars&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span>)<span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line"></div><div class="line">### `param` (<span class="tag">&lt;<span class="name">span</span> <span class="attr">th:text</span>=<span class="string">"$&#123;param&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span>)<span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line">### `application` (<span class="tag">&lt;<span class="name">span</span> <span class="attr">th:text</span>=<span class="string">"$&#123;application&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span>)<span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line">### `session` (<span class="tag">&lt;<span class="name">span</span> <span class="attr">th:text</span>=<span class="string">"$&#123;session&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span>)<span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line">### `#httpSession` (<span class="tag">&lt;<span class="name">span</span> <span class="attr">th:text</span>=<span class="string">"$&#123;#httpSession&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span>)<span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line">### `#httpServletRequest` (<span class="tag">&lt;<span class="name">span</span> <span class="attr">th:text</span>=<span class="string">"$&#123;#httpServletRequest&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span>)<span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line"></div><div class="line">### `#themes` (<span class="tag">&lt;<span class="name">span</span> <span class="attr">th:text</span>=<span class="string">"$&#123;#themes&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span>)<span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line">### `#dates` (<span class="tag">&lt;<span class="name">span</span> <span class="attr">th:text</span>=<span class="string">"$&#123;#dates&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span>)<span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line">### `#calendars` (<span class="tag">&lt;<span class="name">span</span> <span class="attr">th:text</span>=<span class="string">"$&#123;#calendars&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span>)<span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line">### `#numbers` (<span class="tag">&lt;<span class="name">span</span> <span class="attr">th:text</span>=<span class="string">"$&#123;#numbers&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span>)<span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line">### `#strings` (<span class="tag">&lt;<span class="name">span</span> <span class="attr">th:text</span>=<span class="string">"$&#123;#strings&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span>)<span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line">### `#objects` (<span class="tag">&lt;<span class="name">span</span> <span class="attr">th:text</span>=<span class="string">"$&#123;#objects&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span>)<span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line">### `#bools` (<span class="tag">&lt;<span class="name">span</span> <span class="attr">th:text</span>=<span class="string">"$&#123;#bools&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span>)<span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line">### `#arrays` (<span class="tag">&lt;<span class="name">span</span> <span class="attr">th:text</span>=<span class="string">"$&#123;#arrays&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span>)<span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line">### `#lists` (<span class="tag">&lt;<span class="name">span</span> <span class="attr">th:text</span>=<span class="string">"$&#123;#lists&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span>)<span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line">### `#sets` (<span class="tag">&lt;<span class="name">span</span> <span class="attr">th:text</span>=<span class="string">"$&#123;#sets&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span>)<span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line">### `#maps` (<span class="tag">&lt;<span class="name">span</span> <span class="attr">th:text</span>=<span class="string">"$&#123;#maps&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span>)<span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line">### `#aggregates` (<span class="tag">&lt;<span class="name">span</span> <span class="attr">th:text</span>=<span class="string">"$&#123;#aggregates&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span>)<span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line">### `#messages` (<span class="tag">&lt;<span class="name">span</span> <span class="attr">th:text</span>=<span class="string">"$&#123;#messages&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span>)<span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line">### `#ids` (<span class="tag">&lt;<span class="name">span</span> <span class="attr">th:text</span>=<span class="string">"$&#123;#ids&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span>)<span class="tag">&lt;<span class="name">br</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h2 id="重点"><a href="#重点" class="headerlink" title="重点"></a>重点</h2><ul>
+<li>在 <code>thymeleaf</code> 中使用 Spring 容器内的单例.</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">th:text</span>=<span class="string">"$&#123;@demoService.getStr('hocgin')&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<ul>
+<li>引入模版片段<br><strong>XPath</strong><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">th:include</span>=<span class="string">"mytemplate :: [//div[@class='content']]"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><strong>CSS</strong><br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">th:include</span>=<span class="string">"mytemplate :: [div.content]"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<ul>
+<li>引入公有片段(JS 或 CSS)<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">css</span> <span class="attr">th:replace</span>=<span class="string">"mytemplate :: common-css"</span>&gt;</span><span class="tag">&lt;/<span class="name">css</span>&gt;</span></div></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Spring 官方推崇的模版引擎，遵循 HTML5规范。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Server" scheme="https://hocg.in/categories/Server/"/>
+    
+    
+      <category term="HTML5" scheme="https://hocg.in/tags/HTML5/"/>
+    
+      <category term="Thymeleaf" scheme="https://hocg.in/tags/Thymeleaf/"/>
+    
+  </entry>
   
   <entry>
     <title>解决 WebView 点击时网页不断闪耀</title>
@@ -576,9 +718,9 @@
       <category term="Coder" scheme="https://hocg.in/categories/Coder/"/>
     
     
-      <category term="JavaScript" scheme="https://hocg.in/tags/JavaScript/"/>
-    
       <category term="HTML5" scheme="https://hocg.in/tags/HTML5/"/>
+    
+      <category term="JavaScript" scheme="https://hocg.in/tags/JavaScript/"/>
     
       <category term="前端" scheme="https://hocg.in/tags/%E5%89%8D%E7%AB%AF/"/>
     
@@ -613,9 +755,9 @@
       <category term="Coder" scheme="https://hocg.in/categories/Coder/"/>
     
     
-      <category term="JavaScript" scheme="https://hocg.in/tags/JavaScript/"/>
-    
       <category term="HTML5" scheme="https://hocg.in/tags/HTML5/"/>
+    
+      <category term="JavaScript" scheme="https://hocg.in/tags/JavaScript/"/>
     
       <category term="前端" scheme="https://hocg.in/tags/%E5%89%8D%E7%AB%AF/"/>
     
@@ -1263,65 +1405,6 @@
       <category term="Ngrok" scheme="https://hocg.in/tags/Ngrok/"/>
     
       <category term="Tip" scheme="https://hocg.in/tags/Tip/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Nexus 入门</title>
-    <link href="https://hocg.in/2016/08/24/Nexus%E5%85%A5%E9%97%A8/"/>
-    <id>https://hocg.in/2016/08/24/Nexus入门/</id>
-    <published>2016-08-24T11:03:01.000Z</published>
-    <updated>2016-10-26T09:01:49.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>适合<code>nexus</code>入门，不是手机，不是手机，不是手机　．．ｏ（╯□╰）ｏ<br><a id="more"></a></p>
-<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><ul>
-<li>Ubuntu-14.04.1</li>
-<li>jdk1.8.0_102</li>
-<li><a href="https://sonatype-download.global.ssl.fastly.net/nexus/oss/nexus-2.12.0-01-bundle.tar.gz" target="_blank" rel="external">nexus-2.12.0-01</a>|<a href="http://www.sonatype.org/nexus/" target="_blank" rel="external">官网</a></li>
-<li>域名:<code>nexus.hocg.in</code></li>
-</ul>
-<h2 id="前置条件"><a href="#前置条件" class="headerlink" title="前置条件"></a>前置条件</h2><ul>
-<li>安装完jdk并配置好环境变量 <code>eg: java查看是否成功</code></li>
-</ul>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p><strong>温馨提示:</strong> 以下操作都是在<code>/opt</code>目录下</p>
-<h3 id="下载-amp-解压"><a href="#下载-amp-解压" class="headerlink" title="下载&amp;解压"></a>下载&amp;解压</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span> 下载</div><div class="line">wget https://sonatype-download.global.ssl.fastly.net/nexus/oss/nexus-2.12.0-01-bundle.tar.gz</div><div class="line"><span class="meta">#</span> 解压</div><div class="line">tar -zxvf nexus-2.12.0-01-bundle.tar.gz</div><div class="line"><span class="meta">#</span> 清理</div><div class="line">rm -rf *.gz</div></pre></td></tr></table></figure>
-<h3 id="文件-目录详解"><a href="#文件-目录详解" class="headerlink" title="文件/目录详解"></a>文件/目录详解</h3><ul>
-<li><code>nexus-2.12.0-01</code> 程序目录</li>
-<li><code>sonatype-work</code> 仓库目录(内包含仓库配置及jar包仓库)</li>
-</ul>
-<h3 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./nexus-2.12.0-01/bin/nexus &#123; console | start | stop | restart | status | dump &#125;</div></pre></td></tr></table></figure>
-<p><code>访问 http://nexus.hocg.in:8081/nexus</code></p>
-<blockquote>
-<p>默认账号:admin 默认密码: admin123</p>
-</blockquote>
-<h2 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h2><h3 id="Maven-中配置仓库"><a href="#Maven-中配置仓库" class="headerlink" title="Maven 中配置仓库"></a>Maven 中配置仓库</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">repositories</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">repository</span>&gt;</span></div><div class="line">          <span class="tag">&lt;<span class="name">id</span>&gt;</span>Nexus<span class="tag">&lt;/<span class="name">id</span>&gt;</span></div><div class="line">          <span class="tag">&lt;<span class="name">name</span>&gt;</span>Nexus<span class="tag">&lt;/<span class="name">name</span>&gt;</span></div><div class="line">          <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://nexus.hocg.in:8081/nexus/content/groups/public/<span class="tag">&lt;/<span class="name">url</span>&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">repository</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">repositories</span>&gt;</span></div></pre></td></tr></table></figure>
-<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><h3 id="如何修改默认8081端口"><a href="#如何修改默认8081端口" class="headerlink" title="如何修改默认8081端口"></a>如何修改默认<code>8081</code>端口</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">vim /opt/nexus-2.12.0-01/conf/nexus.properties</div><div class="line"><span class="meta">#</span> 修改application-port=8081项</div></pre></td></tr></table></figure>
-<h3 id="如何创建用户"><a href="#如何创建用户" class="headerlink" title="如何创建用户"></a>如何创建用户</h3><p>登陆系统后，左侧<code>Security &gt; Users</code>中创建</p>
-<h3 id="如何使用构建账号"><a href="#如何使用构建账号" class="headerlink" title="如何使用构建账号"></a>如何使用<code>构建账号</code></h3><p>修改<code>Settings.xml</code>文件 (<strong>Maven</strong>)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;servers&gt;</div><div class="line">	&lt;server&gt;</div><div class="line">		&lt;id&gt;nexus.hocg.in&lt;/id&gt;</div><div class="line">		&lt;username&gt;admin&lt;/username&gt;</div><div class="line">		&lt;password&gt;admin123&lt;/password&gt;</div><div class="line">	&lt;/server&gt;</div><div class="line">&lt;/servers&gt;</div></pre></td></tr></table></figure></p>
-<h3 id="如何修改用户密码"><a href="#如何修改用户密码" class="headerlink" title="如何修改用户密码"></a>如何修改用户密码</h3><p>登陆系统后，顶部<code>点击用户名 &gt; Profile</code>中修改</p>
-<h3 id="如何建立与中央仓库的索引"><a href="#如何建立与中央仓库的索引" class="headerlink" title="如何建立与中央仓库的索引"></a>如何建立与中央仓库的索引</h3><p><img src="https://hocg.in/i/如何建立与中央仓库的索引.png" alt="image"></p>
-<blockquote>
-<p><strong>Note:</strong> Nexus会自动建立任务计划,一般远程仓库都比较大，构建会比较多，因此索引文件会很大，请确保磁盘大小充足.</p>
-</blockquote>
-<h2 id="可能出现的报错"><a href="#可能出现的报错" class="headerlink" title="可能出现的报错"></a>可能出现的报错</h2><ul>
-<li><strong>1</strong> WARNING - NOT RECOMMENDED TO RUN AS ROOT , 原因是提醒你是否确认用<code>root</code>用户运行<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">\# ./nexus-2.12.0-01/bin/nexus restart</div><div class="line">****************************************</div><div class="line">WARNING - NOT RECOMMENDED TO RUN AS ROOT</div><div class="line">****************************************</div><div class="line">Stopping Nexus OSS...</div><div class="line">Nexus OSS was not running.</div><div class="line">Starting Nexus OSS...</div><div class="line">Started Nexus OSS.</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>解决:<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">vim ./nexus-2.12.0-01/bin/nexus</div><div class="line"><span class="meta">#</span> 加入系统变量</div><div class="line">vi /etc/profile</div><div class="line"><span class="meta">#</span> 加入export RUN_AS_USER=root</div><div class="line"><span class="meta">#</span> 修改</div><div class="line">RUN_AS_USER=root</div><div class="line"><span class="meta">#</span> 启动</div><div class="line">./nexus-2.12.0-01/bin/nexus start</div><div class="line"><span class="meta">#</span> 查看是否启动成功</div><div class="line">./nexus-2.12.0-01/bin/nexus status</div><div class="line"><span class="meta">#</span> 稍等几分钟再访问</div></pre></td></tr></table></figure></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;适合&lt;code&gt;nexus&lt;/code&gt;入门，不是手机，不是手机，不是手机　．．ｏ（╯□╰）ｏ&lt;br&gt;
-    
-    </summary>
-    
-      <category term="Server" scheme="https://hocg.in/categories/Server/"/>
-    
-    
-      <category term="Tips" scheme="https://hocg.in/tags/Tips/"/>
-    
-      <category term="Nexus" scheme="https://hocg.in/tags/Nexus/"/>
     
   </entry>
   
