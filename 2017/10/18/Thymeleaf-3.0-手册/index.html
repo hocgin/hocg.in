@@ -108,7 +108,7 @@
 <meta property="og:site_name" content="hocgin (๑`灬´๑)">
 <meta property="og:description" content="Spring 官方推崇的模版引擎，遵循 HTML5规范。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-10-18T08:47:31.838Z">
+<meta property="og:updated_time" content="2017-10-18T08:49:15.066Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Thymeleaf 3.0 手册">
 <meta name="twitter:description" content="Spring 官方推崇的模版引擎，遵循 HTML5规范。">
@@ -596,7 +596,7 @@
 <ul>
 <li>引入公有片段(JS 或 CSS)</li>
 </ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">css</span> <span class="attr">th:replace</span>=<span class="string">"mytemplate :: common-css"</span>&gt;</span><span class="tag">&lt;/<span class="name">css</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">css</span> <span class="attr">th:replace</span>=<span class="string">"mytemplate :: common-css"</span>&gt;</span><span class="tag">&lt;/<span class="name">css</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">js</span> <span class="attr">th:replace</span>=<span class="string">"@&#123;mytemplate&#125; :: common-css"</span>&gt;</span><span class="tag">&lt;/<span class="name">js</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- 可结合 路径表达式 --&gt;</span></div></pre></td></tr></table></figure>
       
     </div>
 
