@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>https://hocg.in/2017/10/19/JQuery.Pjax%E6%97%A0%E6%B3%95%E5%86%8D%E6%AC%A1%E5%88%9D%E5%A7%8B%E5%8C%96%E5%BD%93%E5%89%8D%E9%A1%B5%E9%9D%A2%E7%9A%84JS/</loc>
+    <lastmod>2017-10-19T14:08:30.098Z</lastmod>
+    <data>
+        <display>
+        <title>JQuery.Pjax无法再次初始化当前页面的JS</title>
+        <pubTime>2017-10-19T14:07:20.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+        <tag>Pjax</tag>
+         
+         
+           
+             
+              <breadCrumb title="Web" url="https://hocg.in/categories/Web/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://hocg.in/2017/10/18/Thymeleaf-3.0-%E6%89%8B%E5%86%8C/</loc>
     <lastmod>2017-10-18T08:49:15.066Z</lastmod>
     <data>
@@ -77,11 +99,11 @@
         <title>Glup 自动化构建工具</title>
         <pubTime>2016-09-20T00:10:29.000Z</pubTime>
         
-        <tag>Tips</tag>
-         
         <tag>NodeJS</tag>
          
         <tag>Ubuntu</tag>
+         
+        <tag>Tips</tag>
          
          
            
@@ -101,11 +123,11 @@
         <title>ES6 新特性</title>
         <pubTime>2016-05-10T02:28:29.000Z</pubTime>
         
-        <tag>Tips</tag>
-         
         <tag>NodeJS</tag>
          
         <tag>Ubuntu</tag>
+         
+        <tag>Tips</tag>
          
          
            
@@ -125,9 +147,9 @@
         <title>Ubuntu 下的 Oh My ZSH!</title>
         <pubTime>2016-09-30T08:18:09.000Z</pubTime>
         
-        <tag>Tips</tag>
-         
         <tag>Ubuntu</tag>
+         
+        <tag>Tips</tag>
          
         <tag>Oh My ZSH</tag>
          
@@ -323,9 +345,9 @@
         <title>Vue 项目实践 - 持续更新</title>
         <pubTime>2017-03-26T07:40:08.000Z</pubTime>
         
-        <tag>HTML5</tag>
-         
         <tag>JavaScript</tag>
+         
+        <tag>HTML5</tag>
          
         <tag>前端</tag>
          
@@ -347,9 +369,9 @@
         <title>Vue.js项目 部件简介 (未完待续)</title>
         <pubTime>2017-03-31T07:32:36.000Z</pubTime>
         
-        <tag>HTML5</tag>
-         
         <tag>JavaScript</tag>
+         
+        <tag>HTML5</tag>
          
         <tag>前端</tag>
          
@@ -374,9 +396,9 @@
         <title>安装完Ubuntu后,我该做什么</title>
         <pubTime>2016-03-20T06:34:20.000Z</pubTime>
         
-        <tag>Tips</tag>
-         
         <tag>Ubuntu</tag>
+         
+        <tag>Tips</tag>
          
         <tag>Gnome</tag>
          
@@ -636,9 +658,9 @@
         <title>Android L 及以上版本Rom包中提取apk</title>
         <pubTime>2016-08-07T11:19:29.000Z</pubTime>
         
-        <tag>Android</tag>
-         
         <tag>Tips</tag>
+         
+        <tag>Android</tag>
          
          
            
@@ -702,11 +724,11 @@
         <title>绿化NodeJS for linux版</title>
         <pubTime>2016-04-25T01:38:49.000Z</pubTime>
         
-        <tag>Tips</tag>
-         
         <tag>NodeJS</tag>
          
         <tag>Ubuntu</tag>
+         
+        <tag>Tips</tag>
          
          
            
