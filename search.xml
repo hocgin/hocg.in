@@ -4,6 +4,62 @@
   
     
     <entry>
+      <title><![CDATA[IDEA 中的 Spring Boot 开发模式]]></title>
+      <url>https://hocg.in/2017/10/20/IDEA-%E4%B8%AD%E7%9A%84-Spring-Boot-%E5%BC%80%E5%8F%91%E6%A8%A1%E5%BC%8F/</url>
+      <content type="html"><![CDATA[<p>🤑 完全热部署, 配置完成瞬间舒爽无比。<br><a id="more"></a></p>
+<h2 id="java-文件和配置文件更改后进行自动重启"><a href="#java-文件和配置文件更改后进行自动重启" class="headerlink" title=".java 文件和配置文件更改后进行自动重启"></a><code>.java</code> 文件和配置文件更改后进行自动重启</h2><ol>
+<li>更改<code>IDEA</code>中的如下设置<code>Build project automatically</code>。</li>
+</ol>
+<p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-19%2022.30.09.png" alt="屏幕快照 2017-10-19 22.30.09.png"></p>
+<ol>
+<li>打开<code>IDEA</code>的<code>Action window</code>, 快捷键如下:</li>
+</ol>
+<ul>
+<li>Linux : <code>CTRL+SHIFT+A</code></li>
+<li>Mac OSX : <code>SHIFT+COMMAND+A</code></li>
+<li>Windows : <code>CTRL+ALT+SHIFT+/</code><br>输入(选择) <code>Registry...</code>, 选择如下:</li>
+</ul>
+<p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-19%2022.36.39.png" alt="屏幕快照 2017-10-19 22.36.39.png"></p>
+<p>此时进行<code>.java</code> 文件和配置文件修改时, 会进行 Spring Boot 重启。</p>
+<h2 id="当更改静态HTML进行实时刷新"><a href="#当更改静态HTML进行实时刷新" class="headerlink" title="当更改静态HTML进行实时刷新"></a>当更改静态<code>HTML</code>进行实时刷新</h2><ol>
+<li>加入依赖</li>
+</ol>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-devtools<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div></pre></td></tr></table></figure>
+<ol>
+<li>安装浏览器插件</li>
+</ol>
+<ul>
+<li><p><a href="https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei" target="_blank" rel="external">Chrome 插件</a></p>
+</li>
+<li><p><a href="https://addons.mozilla.org/en-US/firefox/addon/livereload/" target="_blank" rel="external">Firefox 插件</a></p>
+</li>
+<li><p><a href="http://download.livereload.com/2.1.0/LiveReload-2.1.0.safariextz" target="_blank" rel="external">Safari 插件</a></p>
+</li>
+</ul>
+<ol>
+<li>更改文件和静态页面(HTML)都可以进行热部署类。</li>
+</ol>
+<h2 id="实时刷新thymeleaf模版文件"><a href="#实时刷新thymeleaf模版文件" class="headerlink" title="实时刷新thymeleaf模版文件"></a>实时刷新<code>thymeleaf</code>模版文件</h2><p>配置文件设置取消缓存:</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="attr">spring:</span></div><div class="line"><span class="attr">    thymeleaf:</span></div><div class="line"><span class="attr">        cache:</span> <span class="literal">false</span></div></pre></td></tr></table></figure>
+<p>Chrome 设置取消缓存:</p>
+<p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-19%2022.46.23.png" alt="屏幕快照 2017-10-19 22.46.23.png"></p>
+<p>此时几乎所有的东西(<code>.java</code>/<code>`/</code>SpringBoot 配置文件`)都可以进行热部署了。<br>包括:</p>
+<ul>
+<li>修改 <code>.java</code> 文件。</li>
+<li>修改页面(<code>thymeleaf</code> <code>html</code> <code>..</code>) 文件。</li>
+<li>修改 <code>SpringBoot 配置文件</code>。</li>
+<li>增删静态文件(<code>css</code> <code>js</code> <code>图片</code>)。</li>
+</ul>
+<h2 id="关于定制化热部署"><a href="#关于定制化热部署" class="headerlink" title="关于定制化热部署"></a>关于定制化热部署</h2><p> 可查询<code>spring-boot-devtools</code>的使用, 使用以下子项进行配置。<br> <figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attr">spring:</span></div><div class="line"><span class="attr">   devtools:</span></div></pre></td></tr></table></figure></p>
+<h2 id="IDEA-扩展"><a href="#IDEA-扩展" class="headerlink" title="IDEA 扩展"></a>IDEA 扩展</h2><blockquote>
+<p>pom.xml 添加以下依赖可查看更多的信息。<br>该依赖是可查看监控信息的, 更多使用移步 Google.com。<br> <figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-actuator<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>IDEA 显示如下:</p>
+<p> <img src="http://7xs6lq.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-29%2014.18.38.png" alt="屏幕快照 2017-10-29 14.18.38.png"></p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[JQuery.pjax 无法再次初始化当前页面的JS]]></title>
       <url>https://hocg.in/2017/10/19/JQuery.pjax%E6%97%A0%E6%B3%95%E5%86%8D%E6%AC%A1%E5%88%9D%E5%A7%8B%E5%8C%96%E5%BD%93%E5%89%8D%E9%A1%B5%E9%9D%A2%E7%9A%84JS/</url>
       <content type="html"><![CDATA[<p>Pjax 很久之前用过一次, 这一次在整合后台模版，发现网上对这个坑竟然是改源码…在这详细记录一下。</p>
@@ -1228,6 +1284,32 @@
     </entry>
     
     <entry>
+      <title><![CDATA[谈JVM，各种过程]]></title>
+      <url>https://hocg.in/2016/06/12/%E8%B0%88JVM-%E5%90%84%E7%A7%8D%E8%BF%87%E7%A8%8B/</url>
+      <content type="html"><![CDATA[<p>谈谈JVM 各种过程， XMind等我整理一下，稍后贴出 囧～<br>欢迎指教..<br><strong>update:</strong> 2016-08-03 14:44:12 更新了图<br><a id="more"></a></p>
+<h3 id="总思路"><a href="#总思路" class="headerlink" title="总思路"></a>总思路</h3><p>编译过程 -&gt; 运行过程[类加载器过程(类的装载过程) -&gt; 执行过程]</p>
+<h4 id="图"><a href="#图" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/总思路-v1.png" alt="总思路-v1.png"></p>
+<h3 id="编译过程"><a href="#编译过程" class="headerlink" title="编译过程"></a>编译过程</h3><p>.java文件 -javac编译-&gt; .class文件       {-JIT编译(转化+优化)-&gt; 本地方法}[执行过程，当方法执行频率高]</p>
+<h4 id="图-1"><a href="#图-1" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/编译过程.png" alt="编译过程.png"></p>
+<hr>
+<h3 id="运行过程"><a href="#运行过程" class="headerlink" title="运行过程"></a>运行过程</h3><p>类加载器 -&gt; (执行引擎 -&gt; 本地库接口)[Java 运行时数据区] -&gt; 本地方法库</p>
+<h4 id="图-2"><a href="#图-2" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/运行过程.png" alt="运行过程.png"></p>
+<hr>
+<h3 id="类加载器过程"><a href="#类加载器过程" class="headerlink" title="类加载器过程"></a><strong>类加载器</strong>过程</h3><p>[启动]类加载器(JNI) -&gt; [扩展]类加载器 -&gt; [系统]类加载器 -&gt; [自定义]类加载器</p>
+<h4 id="图-3"><a href="#图-3" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/类加载器过程.png" alt="类加载器过程.png"></p>
+<hr>
+<h3 id="类装载过程"><a href="#类装载过程" class="headerlink" title="类装载过程"></a><strong>类</strong>装载过程</h3><p>加载文件到JVM内存 -&gt; (校验语言规范 -&gt; 分配结构存储类的信息 -&gt; 该类常量池中符号更改为直接引用)[Linking] -&gt; 类初始化</p>
+<h4 id="图-4"><a href="#图-4" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/类装载过程.png" alt="类装载过程.png"></p>
+<hr>
+<h3 id="执行引擎执行过程-逐行读取指令"><a href="#执行引擎执行过程-逐行读取指令" class="headerlink" title="执行引擎执行过程(逐行读取指令)"></a><strong>执行引擎</strong>执行过程(逐行读取指令)</h3><p>Thread启动 -生成-&gt; JVM栈 -执行方法-&gt; 压入栈帧(包含 局部变量数组&amp;操作数栈&amp;运行时常量池) -&gt; 逐行读取指令&amp;&amp;解释(JVM栈帧 程序计数器存放下一条指令) -&gt; {JIT(转化+优化)-&gt; 本地方法}[当方法执行频率高] -执行&amp;运算-&gt; 结果(存放 操作数栈中) -&gt; 推出栈帧</p>
+<h4 id="图-5"><a href="#图-5" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/执行引擎执行过程.png" alt="执行引擎执行过程.png"></p>
+<hr>
+<h3 id="Java-运行时数据区-贯穿整个执行过程"><a href="#Java-运行时数据区-贯穿整个执行过程" class="headerlink" title="Java 运行时数据区(贯穿整个执行过程)"></a>Java 运行时数据区(贯穿整个执行过程)</h3><p>共享型数据区：方法区(含运行时常量池[存放方法&amp;变量的实际<strong>地址</strong>])、堆(存放对象实例)<br>隔离型数据区：JVM 栈、本地方法栈(JNI)、程序计数器</p>
+<h4 id="图-6"><a href="#图-6" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/运行时数据图.png" alt="运行时数据图.png"></p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[谈JVM，字节码]]></title>
       <url>https://hocg.in/2016/06/12/%E8%B0%88JVM-%E5%AD%97%E8%8A%82%E7%A0%81/</url>
       <content type="html"><![CDATA[<p>谈谈JVM，最近在研究破解jar，有这方面经验的麻烦指导一下思路..<br><a id="more"></a></p>
@@ -1371,32 +1453,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[谈JVM，各种过程]]></title>
-      <url>https://hocg.in/2016/06/12/%E8%B0%88JVM-%E5%90%84%E7%A7%8D%E8%BF%87%E7%A8%8B/</url>
-      <content type="html"><![CDATA[<p>谈谈JVM 各种过程， XMind等我整理一下，稍后贴出 囧～<br>欢迎指教..<br><strong>update:</strong> 2016-08-03 14:44:12 更新了图<br><a id="more"></a></p>
-<h3 id="总思路"><a href="#总思路" class="headerlink" title="总思路"></a>总思路</h3><p>编译过程 -&gt; 运行过程[类加载器过程(类的装载过程) -&gt; 执行过程]</p>
-<h4 id="图"><a href="#图" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/总思路-v1.png" alt="总思路-v1.png"></p>
-<h3 id="编译过程"><a href="#编译过程" class="headerlink" title="编译过程"></a>编译过程</h3><p>.java文件 -javac编译-&gt; .class文件       {-JIT编译(转化+优化)-&gt; 本地方法}[执行过程，当方法执行频率高]</p>
-<h4 id="图-1"><a href="#图-1" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/编译过程.png" alt="编译过程.png"></p>
-<hr>
-<h3 id="运行过程"><a href="#运行过程" class="headerlink" title="运行过程"></a>运行过程</h3><p>类加载器 -&gt; (执行引擎 -&gt; 本地库接口)[Java 运行时数据区] -&gt; 本地方法库</p>
-<h4 id="图-2"><a href="#图-2" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/运行过程.png" alt="运行过程.png"></p>
-<hr>
-<h3 id="类加载器过程"><a href="#类加载器过程" class="headerlink" title="类加载器过程"></a><strong>类加载器</strong>过程</h3><p>[启动]类加载器(JNI) -&gt; [扩展]类加载器 -&gt; [系统]类加载器 -&gt; [自定义]类加载器</p>
-<h4 id="图-3"><a href="#图-3" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/类加载器过程.png" alt="类加载器过程.png"></p>
-<hr>
-<h3 id="类装载过程"><a href="#类装载过程" class="headerlink" title="类装载过程"></a><strong>类</strong>装载过程</h3><p>加载文件到JVM内存 -&gt; (校验语言规范 -&gt; 分配结构存储类的信息 -&gt; 该类常量池中符号更改为直接引用)[Linking] -&gt; 类初始化</p>
-<h4 id="图-4"><a href="#图-4" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/类装载过程.png" alt="类装载过程.png"></p>
-<hr>
-<h3 id="执行引擎执行过程-逐行读取指令"><a href="#执行引擎执行过程-逐行读取指令" class="headerlink" title="执行引擎执行过程(逐行读取指令)"></a><strong>执行引擎</strong>执行过程(逐行读取指令)</h3><p>Thread启动 -生成-&gt; JVM栈 -执行方法-&gt; 压入栈帧(包含 局部变量数组&amp;操作数栈&amp;运行时常量池) -&gt; 逐行读取指令&amp;&amp;解释(JVM栈帧 程序计数器存放下一条指令) -&gt; {JIT(转化+优化)-&gt; 本地方法}[当方法执行频率高] -执行&amp;运算-&gt; 结果(存放 操作数栈中) -&gt; 推出栈帧</p>
-<h4 id="图-5"><a href="#图-5" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/执行引擎执行过程.png" alt="执行引擎执行过程.png"></p>
-<hr>
-<h3 id="Java-运行时数据区-贯穿整个执行过程"><a href="#Java-运行时数据区-贯穿整个执行过程" class="headerlink" title="Java 运行时数据区(贯穿整个执行过程)"></a>Java 运行时数据区(贯穿整个执行过程)</h3><p>共享型数据区：方法区(含运行时常量池[存放方法&amp;变量的实际<strong>地址</strong>])、堆(存放对象实例)<br>隔离型数据区：JVM 栈、本地方法栈(JNI)、程序计数器</p>
-<h4 id="图-6"><a href="#图-6" class="headerlink" title="图"></a>图</h4><p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/运行时数据图.png" alt="运行时数据图.png"></p>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[关于HTTPS]]></title>
       <url>https://hocg.in/2016/06/02/Https-%E7%AD%BE%E8%AF%81/</url>
       <content type="html"><![CDATA[<p>这是一篇关于<code>HTTPS</code>的日常使用记录，例如:博客HTTPS化~<br>来吧!年轻人!<del>装逼</del>HTTPS时代到了<br><a id="more"></a></p>
@@ -1459,23 +1515,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[绿化NodeJS for linux版]]></title>
-      <url>https://hocg.in/2016/04/25/%E7%BB%BF%E5%8C%96nodejs-for-linux%E7%89%88/</url>
-      <content type="html"><![CDATA[<p>起因，为了方便hexo发布博客，所以想把NodeJS绿化在U盘上..<br>谁叫网上只有win版的呢！自己码起来～<br>绿化 o(╯□╰)o<br><a id="more"></a></p>
-<h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">Green4nodeJS</div><div class="line">├── hocgin.github.io // github博客目录</div><div class="line">├── node // nodejs基本目录</div><div class="line">│   ├── node-linux // nodejs源文件</div><div class="line">│   ├── cache // 创建一个空文件夹，即可</div><div class="line">│   ├── init-module // 创建一个空文件夹，即可</div><div class="line">│   └── userconfig // 创建一个空文件夹，即可</div><div class="line">└── init.sh // 初始化shell文件 *重要</div></pre></td></tr></table></figure>
-<h2 id="初始化文件"><a href="#初始化文件" class="headerlink" title="初始化文件"></a>初始化文件</h2><blockquote>
-<p>主要是加载配置环境，初始化变量</p>
-</blockquote>
-<p><code>init.sh</code> 内容<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span>!/bin/bash</div><div class="line"><span class="meta">#</span> Author: hocgin@gmail.com</div><div class="line"><span class="meta">#</span> -------------Use--------------</div><div class="line"><span class="meta">#</span> source init.sh or . init.sh</div><div class="line"><span class="meta">#</span> ------------------------------</div><div class="line">NOW_PATH=$(cd "$(dirname "$0")"; pwd)</div><div class="line">NODE_NAME="node-linux"</div><div class="line">NODE_HOME=$NOW_PATH"/node/"$NODE_NAME</div><div class="line">NODE_PATH=$NODE_HOME"/bin"</div><div class="line">NPM_PATH=$NODE_HOME"/lib/node_modules/npm/bin"</div><div class="line">sudo chmod +x -R $NPM_PATH"/."</div><div class="line">export PATH=$PATH:$NODE_PATH:$NPM_PATH</div><div class="line"><span class="meta">#</span> "/home/hocgin/.npmrc"</div><div class="line">npm set userconfig $NOW_PATH"/node/userconfig"</div><div class="line"><span class="meta">#</span> "/home/hocgin/.npm-init.js"</div><div class="line">npm set init-module $NOW_PATH"/node/init-module"</div><div class="line"><span class="meta">#</span> "/home/hocgin/.npm"</div><div class="line">npm set cache  $NOW_PATH"/node/cache"</div></pre></td></tr></table></figure></p>
-<p>修改 <code>/node/node-linux/lib/node_modules/npm/bin/npm</code> 文件<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span> NPM_CLI_JS="$basedir/node_modules/npm/bin/npm-cli.js"</div><div class="line">NPM_CLI_JS="$basedir/npm-cli.js"</div></pre></td></tr></table></figure></p>
-<p>完成</p>
-<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">source init.sh</div><div class="line"><span class="meta">#</span> Or</div><div class="line">. init.sh</div><div class="line"></div><div class="line">cd hocgin.github.io</div><div class="line"><span class="meta">#</span> 尽情hexo吧</div></pre></td></tr></table></figure>
-<p><code>注: 安装module时请加上 -g</code></p>
-<p>End</p>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[使用Maven下载jar包 linux版]]></title>
       <url>https://hocg.in/2016/04/25/%E4%BD%BF%E7%94%A8Maven%E4%B8%8B%E8%BD%BDjar%E5%8C%85-linux%E7%89%88/</url>
       <content type="html"><![CDATA[<p>这只是学习Shell的小脚本, 练手工具罢了.. 折腾!折腾啊<br><a id="more"></a></p>
@@ -1488,6 +1527,23 @@
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">project</span> <span class="attr">xmlns</span>=<span class="string">"http://maven.apache.org/POM/4.0.0"</span> <span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></span></div><div class="line"><span class="tag">  <span class="attr">xsi:schemaLocation</span>=<span class="string">"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"</span>&gt;</span></div><div class="line">  <span class="comment">&lt;!-- 项目的名称 start --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">modelVersion</span>&gt;</span>4.0.0<span class="tag">&lt;/<span class="name">modelVersion</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>temp.download<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>temp-download<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!-- 项目的名称 end --&gt;</span></div><div class="line"></div><div class="line">	<span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></div><div class="line">      <span class="comment">&lt;!-- 要下载的jar start --&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.json<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>json<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">version</span>&gt;</span>20160212<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div><div class="line">     <span class="comment">&lt;!-- 要下载的jar end --&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">project</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>完成</p>
 <h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">source init.sh</div><div class="line"><span class="meta">#</span> Or</div><div class="line">. init.sh</div><div class="line"></div><div class="line">cd hocgin.github.io</div><div class="line"><span class="meta">#</span> 尽情hexo吧</div></pre></td></tr></table></figure>
+<p>End</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[绿化NodeJS for linux版]]></title>
+      <url>https://hocg.in/2016/04/25/%E7%BB%BF%E5%8C%96nodejs-for-linux%E7%89%88/</url>
+      <content type="html"><![CDATA[<p>起因，为了方便hexo发布博客，所以想把NodeJS绿化在U盘上..<br>谁叫网上只有win版的呢！自己码起来～<br>绿化 o(╯□╰)o<br><a id="more"></a></p>
+<h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">Green4nodeJS</div><div class="line">├── hocgin.github.io // github博客目录</div><div class="line">├── node // nodejs基本目录</div><div class="line">│   ├── node-linux // nodejs源文件</div><div class="line">│   ├── cache // 创建一个空文件夹，即可</div><div class="line">│   ├── init-module // 创建一个空文件夹，即可</div><div class="line">│   └── userconfig // 创建一个空文件夹，即可</div><div class="line">└── init.sh // 初始化shell文件 *重要</div></pre></td></tr></table></figure>
+<h2 id="初始化文件"><a href="#初始化文件" class="headerlink" title="初始化文件"></a>初始化文件</h2><blockquote>
+<p>主要是加载配置环境，初始化变量</p>
+</blockquote>
+<p><code>init.sh</code> 内容<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span>!/bin/bash</div><div class="line"><span class="meta">#</span> Author: hocgin@gmail.com</div><div class="line"><span class="meta">#</span> -------------Use--------------</div><div class="line"><span class="meta">#</span> source init.sh or . init.sh</div><div class="line"><span class="meta">#</span> ------------------------------</div><div class="line">NOW_PATH=$(cd "$(dirname "$0")"; pwd)</div><div class="line">NODE_NAME="node-linux"</div><div class="line">NODE_HOME=$NOW_PATH"/node/"$NODE_NAME</div><div class="line">NODE_PATH=$NODE_HOME"/bin"</div><div class="line">NPM_PATH=$NODE_HOME"/lib/node_modules/npm/bin"</div><div class="line">sudo chmod +x -R $NPM_PATH"/."</div><div class="line">export PATH=$PATH:$NODE_PATH:$NPM_PATH</div><div class="line"><span class="meta">#</span> "/home/hocgin/.npmrc"</div><div class="line">npm set userconfig $NOW_PATH"/node/userconfig"</div><div class="line"><span class="meta">#</span> "/home/hocgin/.npm-init.js"</div><div class="line">npm set init-module $NOW_PATH"/node/init-module"</div><div class="line"><span class="meta">#</span> "/home/hocgin/.npm"</div><div class="line">npm set cache  $NOW_PATH"/node/cache"</div></pre></td></tr></table></figure></p>
+<p>修改 <code>/node/node-linux/lib/node_modules/npm/bin/npm</code> 文件<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span> NPM_CLI_JS="$basedir/node_modules/npm/bin/npm-cli.js"</div><div class="line">NPM_CLI_JS="$basedir/npm-cli.js"</div></pre></td></tr></table></figure></p>
+<p>完成</p>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">source init.sh</div><div class="line"><span class="meta">#</span> Or</div><div class="line">. init.sh</div><div class="line"></div><div class="line">cd hocgin.github.io</div><div class="line"><span class="meta">#</span> 尽情hexo吧</div></pre></td></tr></table></figure>
+<p><code>注: 安装module时请加上 -g</code></p>
 <p>End</p>
 ]]></content>
     </entry>

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hocg.in/"/>
-  <updated>2017-10-22T04:16:22.962Z</updated>
+  <updated>2017-10-29T06:22:33.106Z</updated>
   <id>https://hocg.in/</id>
   
   <author>
@@ -14,6 +14,82 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>IDEA 中的 Spring Boot 开发模式</title>
+    <link href="https://hocg.in/2017/10/20/IDEA-%E4%B8%AD%E7%9A%84-Spring-Boot-%E5%BC%80%E5%8F%91%E6%A8%A1%E5%BC%8F/"/>
+    <id>https://hocg.in/2017/10/20/IDEA-中的-Spring-Boot-开发模式/</id>
+    <published>2017-10-20T15:28:09.000Z</published>
+    <updated>2017-10-29T06:22:33.106Z</updated>
+    
+    <content type="html"><![CDATA[<p>🤑 完全热部署, 配置完成瞬间舒爽无比。<br><a id="more"></a></p>
+<h2 id="java-文件和配置文件更改后进行自动重启"><a href="#java-文件和配置文件更改后进行自动重启" class="headerlink" title=".java 文件和配置文件更改后进行自动重启"></a><code>.java</code> 文件和配置文件更改后进行自动重启</h2><ol>
+<li>更改<code>IDEA</code>中的如下设置<code>Build project automatically</code>。</li>
+</ol>
+<p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-19%2022.30.09.png" alt="屏幕快照 2017-10-19 22.30.09.png"></p>
+<ol>
+<li>打开<code>IDEA</code>的<code>Action window</code>, 快捷键如下:</li>
+</ol>
+<ul>
+<li>Linux : <code>CTRL+SHIFT+A</code></li>
+<li>Mac OSX : <code>SHIFT+COMMAND+A</code></li>
+<li>Windows : <code>CTRL+ALT+SHIFT+/</code><br>输入(选择) <code>Registry...</code>, 选择如下:</li>
+</ul>
+<p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-19%2022.36.39.png" alt="屏幕快照 2017-10-19 22.36.39.png"></p>
+<p>此时进行<code>.java</code> 文件和配置文件修改时, 会进行 Spring Boot 重启。</p>
+<h2 id="当更改静态HTML进行实时刷新"><a href="#当更改静态HTML进行实时刷新" class="headerlink" title="当更改静态HTML进行实时刷新"></a>当更改静态<code>HTML</code>进行实时刷新</h2><ol>
+<li>加入依赖</li>
+</ol>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-devtools<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div></pre></td></tr></table></figure>
+<ol>
+<li>安装浏览器插件</li>
+</ol>
+<ul>
+<li><p><a href="https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei" target="_blank" rel="external">Chrome 插件</a></p>
+</li>
+<li><p><a href="https://addons.mozilla.org/en-US/firefox/addon/livereload/" target="_blank" rel="external">Firefox 插件</a></p>
+</li>
+<li><p><a href="http://download.livereload.com/2.1.0/LiveReload-2.1.0.safariextz" target="_blank" rel="external">Safari 插件</a></p>
+</li>
+</ul>
+<ol>
+<li>更改文件和静态页面(HTML)都可以进行热部署类。</li>
+</ol>
+<h2 id="实时刷新thymeleaf模版文件"><a href="#实时刷新thymeleaf模版文件" class="headerlink" title="实时刷新thymeleaf模版文件"></a>实时刷新<code>thymeleaf</code>模版文件</h2><p>配置文件设置取消缓存:</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="attr">spring:</span></div><div class="line"><span class="attr">    thymeleaf:</span></div><div class="line"><span class="attr">        cache:</span> <span class="literal">false</span></div></pre></td></tr></table></figure>
+<p>Chrome 设置取消缓存:</p>
+<p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-19%2022.46.23.png" alt="屏幕快照 2017-10-19 22.46.23.png"></p>
+<p>此时几乎所有的东西(<code>.java</code>/<code>`/</code>SpringBoot 配置文件`)都可以进行热部署了。<br>包括:</p>
+<ul>
+<li>修改 <code>.java</code> 文件。</li>
+<li>修改页面(<code>thymeleaf</code> <code>html</code> <code>..</code>) 文件。</li>
+<li>修改 <code>SpringBoot 配置文件</code>。</li>
+<li>增删静态文件(<code>css</code> <code>js</code> <code>图片</code>)。</li>
+</ul>
+<h2 id="关于定制化热部署"><a href="#关于定制化热部署" class="headerlink" title="关于定制化热部署"></a>关于定制化热部署</h2><p> 可查询<code>spring-boot-devtools</code>的使用, 使用以下子项进行配置。<br> <figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attr">spring:</span></div><div class="line"><span class="attr">   devtools:</span></div></pre></td></tr></table></figure></p>
+<h2 id="IDEA-扩展"><a href="#IDEA-扩展" class="headerlink" title="IDEA 扩展"></a>IDEA 扩展</h2><blockquote>
+<p>pom.xml 添加以下依赖可查看更多的信息。<br>该依赖是可查看监控信息的, 更多使用移步 Google.com。<br> <figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-actuator<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>IDEA 显示如下:</p>
+<p> <img src="http://7xs6lq.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-29%2014.18.38.png" alt="屏幕快照 2017-10-29 14.18.38.png"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;🤑 完全热部署, 配置完成瞬间舒爽无比。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Server" scheme="https://hocg.in/categories/Server/"/>
+    
+    
+      <category term="Tips" scheme="https://hocg.in/tags/Tips/"/>
+    
+      <category term="Ubuntu" scheme="https://hocg.in/tags/Ubuntu/"/>
+    
+      <category term="SpringBoot" scheme="https://hocg.in/tags/SpringBoot/"/>
+    
+  </entry>
   
   <entry>
     <title>JQuery.pjax 无法再次初始化当前页面的JS</title>
@@ -1297,52 +1373,6 @@
       <category term="Ubuntu" scheme="https://hocg.in/tags/Ubuntu/"/>
     
       <category term="Oh My ZSH" scheme="https://hocg.in/tags/Oh-My-ZSH/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Glup 自动化构建工具</title>
-    <link href="https://hocg.in/2016/09/20/Glup-%E8%87%AA%E5%8A%A8%E5%8C%96%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/"/>
-    <id>https://hocg.in/2016/09/20/Glup-自动化构建工具/</id>
-    <published>2016-09-20T00:10:29.000Z</published>
-    <updated>2017-09-22T12:55:01.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Gulp.js 是一个自动化构建工具 😜<br><a id="more"></a></p>
-<h2 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h2><p><a href="https://github.com/hocgin/Gulp-Scaffold" target="_blank" rel="external">Glup 整合</a></p>
-<h2 id="Glup"><a href="#Glup" class="headerlink" title="Glup"></a>Glup</h2><blockquote>
-<p>Glup用自动化构建工具增强你的工作流程！</p>
-</blockquote>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span> npm install gulp -g</div><div class="line"><span class="meta">$</span> npm install gulp --save-dev</div></pre></td></tr></table></figure>
-<h2 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h2><ul>
-<li>编译Sass (gulp-ruby-sass)</li>
-<li>Autoprefixer (gulp-autoprefixer)</li>
-<li>缩小化(minify)CSS (gulp-minify-css)</li>
-<li>JSHint (gulp-jshint)</li>
-<li>拼接 (gulp-concat)</li>
-<li>丑化(Uglify) (gulp-uglify)</li>
-<li>图片压缩 (gulp-imagemin)</li>
-<li>即时重整(LiveReload) (gulp-livereload)</li>
-<li>清理档案 (gulp-clean)</li>
-<li>图片快取，只有更改过得图片会进行压缩 (gulp-cache)</li>
-<li>更动通知 (gulp-notify)<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span> npm install gulp-ruby-sass gulp-autoprefixer gulp-minify-css gulp-jshint gulp-concat gulp-uglify gulp-imagemin gulp-clean gulp-notify gulp-rename gulp-livereload gulp-cache --save-dev</div></pre></td></tr></table></figure>
-</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Gulp.js 是一个自动化构建工具 😜&lt;br&gt;
-    
-    </summary>
-    
-      <category term="Coder" scheme="https://hocg.in/categories/Coder/"/>
-    
-    
-      <category term="Tips" scheme="https://hocg.in/tags/Tips/"/>
-    
-      <category term="NodeJS" scheme="https://hocg.in/tags/NodeJS/"/>
-    
-      <category term="Ubuntu" scheme="https://hocg.in/tags/Ubuntu/"/>
     
   </entry>
   
