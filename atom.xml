@@ -126,7 +126,7 @@
     <link href="https://hocg.in/2017/10/18/Thymeleaf-3.0-%E6%89%8B%E5%86%8C/"/>
     <id>https://hocg.in/2017/10/18/Thymeleaf-3.0-手册/</id>
     <published>2017-10-18T08:40:51.000Z</published>
-    <updated>2017-10-18T08:49:15.066Z</updated>
+    <updated>2017-11-08T06:57:32.408Z</updated>
     
     <content type="html"><![CDATA[<p>Spring 官方推崇的模版引擎，遵循 HTML5规范。<br><a id="more"></a></p>
 <h2 id="HTML5"><a href="#HTML5" class="headerlink" title="HTML5"></a>HTML5</h2><p>若要完全遵循HTML5规范，可使用 <code>data-th-*</code> 代替 <code>th:*</code>。</p>
@@ -262,7 +262,11 @@
 <ul>
 <li>引入公有片段(JS 或 CSS)</li>
 </ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">css</span> <span class="attr">th:replace</span>=<span class="string">"mytemplate :: common-css"</span>&gt;</span><span class="tag">&lt;/<span class="name">css</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">js</span> <span class="attr">th:replace</span>=<span class="string">"@&#123;mytemplate&#125; :: common-css"</span>&gt;</span><span class="tag">&lt;/<span class="name">js</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- 可结合 路径表达式 --&gt;</span></div></pre></td></tr></table></figure>]]></content>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">css</span> <span class="attr">th:replace</span>=<span class="string">"mytemplate :: common-css"</span>&gt;</span><span class="tag">&lt;/<span class="name">css</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">js</span> <span class="attr">th:replace</span>=<span class="string">"@&#123;mytemplate&#125; :: common-css"</span>&gt;</span><span class="tag">&lt;/<span class="name">js</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- 可结合 路径表达式 --&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="黑科技"><a href="#黑科技" class="headerlink" title="黑科技"></a>黑科技</h2><ol>
+<li>当我们想取一个对象里面的一个属性, 但这个对象可能为空时(😋)。<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">td</span> <span class="attr">th:text</span>=<span class="string">"$&#123;user?.address?.city&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></div></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
     
     <summary type="html">
     
