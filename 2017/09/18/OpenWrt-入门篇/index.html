@@ -494,15 +494,15 @@
 <li>使用网线连接电脑和路由器</li>
 <li>设置电脑网卡<br>IP 地址:<code>192.168.1.x</code>(x为2至255)<br>子网掩码:<code>255.255.255.0</code></li>
 <li><p>打开终端运行命令</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span> 注, 此处 eth0 为网卡. 可使用 ifconfig 进行查看</div><div class="line">sudo tcpdump -Ani eth0 port 4919 and udp</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 注, 此处 eth0 为网卡. 可使用 ifconfig 进行查看</span><br><span class="line">sudo tcpdump -Ani eth0 port 4919 and udp</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>断电重启</p>
 </li>
 <li><p>打开终端运行命令</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">telnet 192.168.1.1</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">telnet 192.168.1.1</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>执行指令, 例如</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span> 重置系统</div><div class="line">firstboot</div><div class="line"><span class="meta">#</span> 重置密码</div><div class="line">passwd</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 重置系统</span><br><span class="line">firstboot</span><br><span class="line"><span class="meta">#</span> 重置密码</span><br><span class="line">passwd</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>重启路由器</p>
 </li>
