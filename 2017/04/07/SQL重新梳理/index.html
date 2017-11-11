@@ -108,7 +108,7 @@
 <meta property="og:site_name" content="hocgin (๑`灬´๑)">
 <meta property="og:description" content="持续积累..">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-24T09:48:32.000Z">
+<meta property="og:updated_time" content="2017-11-11T15:11:01.049Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SQL的重新梳理">
 <meta name="twitter:description" content="持续积累..">
@@ -131,8 +131,8 @@
       applicationID: '',
       apiKey: '',
       indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+      hits: "",
+      labels: ""
     }
   };
 </script>
@@ -387,7 +387,19 @@
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-11-11T23:11:01+08:00">
+                2017-11-11
+              </time>
             
           </span>
 
@@ -446,6 +458,11 @@
           
 
           
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
 
           
 
@@ -491,33 +508,33 @@
 <h2 id="关于-表-Joins"><a href="#关于-表-Joins" class="headerlink" title="关于 表 Joins"></a>关于 表 Joins</h2><blockquote>
 <p> Joins 子句用于结合两个或多个数据库中表的记录, 也就是说是<strong>通过某种联系建立表之间的关联, 并形成一张新表</strong></p>
 </blockquote>
-<h3 id="SQL-定义了三种主要类型的连接"><a href="#SQL-定义了三种主要类型的连接" class="headerlink" title="SQL 定义了三种主要类型的连接"></a>SQL 定义了三种主要类型的连接</h3><ul>
+<h3 id="SQL-定义了三种主要类型的连接"><a href="#SQL-定义了三种主要类型的连接" class="headerlink" title="SQL 定义了三种主要类型的连接"></a>SQL 定义了三种主要类型的连接</h3><ul>
 <li><p>交叉连接 ( <strong>CROSS JOIN</strong> ), 又称 <strong>笛卡尔积</strong></p>
 <blockquote>
-<p>会形成庞大的表, 因此慎用。<br><strong>假设:</strong> 表t1(5行数据, 3列), 表t2(4行数据, 2列)<br><strong>SQL:</strong> select <em> from t1 cross join t2<br><strong>结果:</strong> 数据数量为20行数据(5 </em> 4), 5列</p>
+<p>会形成庞大的表, 因此慎用。<br><strong>假设:</strong> 表t1(5行数据, 3列), 表t2(4行数据, 2列)<br><strong>SQL:</strong> select <em> from t1 cross join t2<br><strong>结果:</strong> 数据数量为20行数据(5 </em> 4), 5列</p>
 </blockquote>
 </li>
 <li><p>内连接 ( <strong>INNER JOIN</strong> ), 通常可省略 <code>inner</code></p>
 <blockquote>
-<p>通过 <code>on</code> 或 <code>where</code> 建立表之间的联系或者说<strong>表形成的条件</strong><br><strong>假设:</strong> 表t1(5行数据, 3列), 表t2(4行数据, 2列)<br><strong>SQL:</strong> select <em> from t1 inner join t2 on t1.sid = t2.sid<br><em>*结果:</em></em> 查询操作列出与连接条件匹配的数据行, 5列</p>
+<p>通过 <code>on</code> 或 <code>where</code> 建立表之间的联系或者说<strong>表形成的条件</strong><br><strong>假设:</strong> 表t1(5行数据, 3列), 表t2(4行数据, 2列)<br><strong>SQL:</strong> select <em> from t1 inner join t2 on t1.sid = t2.sid<br><em>*结果:</em></em> 查询操作列出与连接条件匹配的数据行, 5列</p>
 </blockquote>
 </li>
 <li><p>外连接 ( <strong>OUTER JOIN</strong> )</p>
 <blockquote>
-<p>外连接为内连接的扩展, 主要区别在于哪边为基准, 使用 <code>on</code> 进行数据关联<br>外连接分为: <code>左外连接</code>、<code>右外连接</code>、<code>全外连接</code><br>部分SQL语言并不包含全部种类, 例如<br>SQLite 之包含 <strong>左外连接</strong></p>
+<p>外连接为内连接的扩展, 主要区别在于哪边为基准, 使用 <code>on</code> 进行数据关联<br>外连接分为: <code>左外连接</code>、<code>右外连接</code>、<code>全外连接</code><br>部分SQL语言并不包含全部种类, 例如<br>SQLite 之包含 <strong>左外连接</strong></p>
 <ul>
-<li>左外连接 ( <strong>LEFT JOIN</strong> )<br><strong>假设:</strong> 表t1(5行数据, 3列), 表t2(4行数据, 2列)<br><strong>SQL:</strong> select <em> from t1 left join t2 on t1.sid = t2.sid<br><em>*结果:</em></em> 以左表为基准, 将数据按条件进行连接, 左表行全部显示, 若右表没有满足条件的行则显示为NULL, 5列</li>
+<li>左外连接 ( <strong>LEFT JOIN</strong> )<br><strong>假设:</strong> 表t1(5行数据, 3列), 表t2(4行数据, 2列)<br><strong>SQL:</strong> select <em> from t1 left join t2 on t1.sid = t2.sid<br><em>*结果:</em></em> 以左表为基准, 将数据按条件进行连接, 左表行全部显示, 若右表没有满足条件的行则显示为NULL, 5列</li>
 </ul>
 </blockquote>
 <ul>
 <li><p>右外连接 ( <strong>RIGHT JOIN</strong> )</p>
 <blockquote>
-<p><strong>假设:</strong> 表t1(5行数据, 3列), 表t2(4行数据, 2列)<br><strong>SQL:</strong> select <em> from t1 right join t2 on t1.sid = t2.sid<br><em>*结果:</em></em> 以右表为基准, 将数据按条件进行连接, 右表行全部显示, 若左表没有满足条件的行则显示为NULL, 5列</p>
+<p><strong>假设:</strong> 表t1(5行数据, 3列), 表t2(4行数据, 2列)<br><strong>SQL:</strong> select <em> from t1 right join t2 on t1.sid = t2.sid<br><em>*结果:</em></em> 以右表为基准, 将数据按条件进行连接, 右表行全部显示, 若左表没有满足条件的行则显示为NULL, 5列</p>
 </blockquote>
 </li>
 <li><p>全外连接 ( <strong>FULL JOIN</strong> )</p>
 <blockquote>
-<p><strong>假设:</strong> 表t1(5行数据, 3列), 表t2(4行数据, 2列)<br><strong>SQL:</strong> select <em> from t1 full join t2 on t1.sid = t2.sid<br><em>*结果:</em></em> 完整的显示两表的数据, 将数据按条件进行连接, 当没有被关联的表中没有存在满足条件的行时, 则显示为NULL, 5列</p>
+<p><strong>假设:</strong> 表t1(5行数据, 3列), 表t2(4行数据, 2列)<br><strong>SQL:</strong> select <em> from t1 full join t2 on t1.sid = t2.sid<br><em>*结果:</em></em> 完整的显示两表的数据, 将数据按条件进行连接, 当没有被关联的表中没有存在满足条件的行时, 则显示为NULL, 5列</p>
 </blockquote>
 </li>
 </ul>
@@ -784,7 +801,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#关于-SQL-执行顺序"><span class="nav-number">1.</span> <span class="nav-text">关于 SQL 执行顺序</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#资料"><span class="nav-number">1.1.</span> <span class="nav-text">资料</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例句"><span class="nav-number">1.2.</span> <span class="nav-text">例句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注意"><span class="nav-number">1.3.</span> <span class="nav-text">注意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#具体顺序"><span class="nav-number">1.4.</span> <span class="nav-text">具体顺序</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关于-表-Joins"><span class="nav-number">2.</span> <span class="nav-text">关于 表 Joins</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#SQL-定义了三种主要类型的连接"><span class="nav-number">2.1.</span> <span class="nav-text">SQL 定义了三种主要类型的连接</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#关于-SQL-执行顺序"><span class="nav-number">1.</span> <span class="nav-text">关于 SQL 执行顺序</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#资料"><span class="nav-number">1.1.</span> <span class="nav-text">资料</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例句"><span class="nav-number">1.2.</span> <span class="nav-text">例句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注意"><span class="nav-number">1.3.</span> <span class="nav-text">注意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#具体顺序"><span class="nav-number">1.4.</span> <span class="nav-text">具体顺序</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关于-表-Joins"><span class="nav-number">2.</span> <span class="nav-text">关于 表 Joins</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#SQL-定义了三种主要类型的连接"><span class="nav-number">2.1.</span> <span class="nav-text">SQL 定义了三种主要类型的连接</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -828,6 +845,26 @@
 
 
         
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
 
         
       </div>
