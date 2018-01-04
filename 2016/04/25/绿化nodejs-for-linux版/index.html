@@ -82,7 +82,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Tips,NodeJS,Ubuntu," />
+  <meta name="keywords" content="NodeJS,Ubuntu,Tips," />
 
 
 
@@ -101,7 +101,7 @@
 
 
 <meta name="description" content="起因，为了方便hexo发布博客，所以想把NodeJS绿化在U盘上..谁叫网上只有win版的呢！自己码起来～绿化 o(╯□╰)o">
-<meta name="keywords" content="Tips,NodeJS,Ubuntu">
+<meta name="keywords" content="NodeJS,Ubuntu,Tips">
 <meta property="og:type" content="article">
 <meta property="og:title" content="绿化NodeJS for linux版">
 <meta property="og:url" content="https://hocg.in/2016/04/25/绿化nodejs-for-linux版/index.html">
@@ -484,10 +484,10 @@
 <h2 id="初始化文件"><a href="#初始化文件" class="headerlink" title="初始化文件"></a>初始化文件</h2><blockquote>
 <p>主要是加载配置环境，初始化变量</p>
 </blockquote>
-<p><code>init.sh</code> 内容<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>!/bin/bash</span><br><span class="line"><span class="meta">#</span> Author: hocgin@gmail.com</span><br><span class="line"><span class="meta">#</span> -------------Use--------------</span><br><span class="line"><span class="meta">#</span> source init.sh or . init.sh</span><br><span class="line"><span class="meta">#</span> ------------------------------</span><br><span class="line">NOW_PATH=$(cd "$(dirname "$0")"; pwd)</span><br><span class="line">NODE_NAME="node-linux"</span><br><span class="line">NODE_HOME=$NOW_PATH"/node/"$NODE_NAME</span><br><span class="line">NODE_PATH=$NODE_HOME"/bin"</span><br><span class="line">NPM_PATH=$NODE_HOME"/lib/node_modules/npm/bin"</span><br><span class="line">sudo chmod +x -R $NPM_PATH"/."</span><br><span class="line">export PATH=$PATH:$NODE_PATH:$NPM_PATH</span><br><span class="line"><span class="meta">#</span> "/home/hocgin/.npmrc"</span><br><span class="line">npm set userconfig $NOW_PATH"/node/userconfig"</span><br><span class="line"><span class="meta">#</span> "/home/hocgin/.npm-init.js"</span><br><span class="line">npm set init-module $NOW_PATH"/node/init-module"</span><br><span class="line"><span class="meta">#</span> "/home/hocgin/.npm"</span><br><span class="line">npm set cache  $NOW_PATH"/node/cache"</span><br></pre></td></tr></table></figure></p>
-<p>修改 <code>/node/node-linux/lib/node_modules/npm/bin/npm</code> 文件<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> NPM_CLI_JS="$basedir/node_modules/npm/bin/npm-cli.js"</span><br><span class="line">NPM_CLI_JS="$basedir/npm-cli.js"</span><br></pre></td></tr></table></figure></p>
+<p><code>init.sh</code> 内容<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/bin/bash</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Author: hocgin@gmail.com</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> -------------Use--------------</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> <span class="built_in">source</span> init.sh or . init.sh</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> ------------------------------</span></span><br><span class="line">NOW_PATH=$(cd "$(dirname "$0")"; pwd)</span><br><span class="line">NODE_NAME="node-linux"</span><br><span class="line">NODE_HOME=$NOW_PATH"/node/"$NODE_NAME</span><br><span class="line">NODE_PATH=$NODE_HOME"/bin"</span><br><span class="line">NPM_PATH=$NODE_HOME"/lib/node_modules/npm/bin"</span><br><span class="line">sudo chmod +x -R $NPM_PATH"/."</span><br><span class="line">export PATH=$PATH:$NODE_PATH:$NPM_PATH</span><br><span class="line"><span class="meta">#</span><span class="bash"> <span class="string">"/home/hocgin/.npmrc"</span></span></span><br><span class="line">npm set userconfig $NOW_PATH"/node/userconfig"</span><br><span class="line"><span class="meta">#</span><span class="bash"> <span class="string">"/home/hocgin/.npm-init.js"</span></span></span><br><span class="line">npm set init-module $NOW_PATH"/node/init-module"</span><br><span class="line"><span class="meta">#</span><span class="bash"> <span class="string">"/home/hocgin/.npm"</span></span></span><br><span class="line">npm set cache  $NOW_PATH"/node/cache"</span><br></pre></td></tr></table></figure></p>
+<p>修改 <code>/node/node-linux/lib/node_modules/npm/bin/npm</code> 文件<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> NPM_CLI_JS=<span class="string">"<span class="variable">$basedir</span>/node_modules/npm/bin/npm-cli.js"</span></span></span><br><span class="line">NPM_CLI_JS="$basedir/npm-cli.js"</span><br></pre></td></tr></table></figure></p>
 <p>完成</p>
-<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">source init.sh</span><br><span class="line"><span class="meta">#</span> Or</span><br><span class="line">. init.sh</span><br><span class="line"></span><br><span class="line">cd hocgin.github.io</span><br><span class="line"><span class="meta">#</span> 尽情hexo吧</span><br></pre></td></tr></table></figure>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">source init.sh</span><br><span class="line"><span class="meta">#</span><span class="bash"> Or</span></span><br><span class="line">. init.sh</span><br><span class="line"></span><br><span class="line">cd hocgin.github.io</span><br><span class="line"><span class="meta">#</span><span class="bash"> 尽情hexo吧</span></span><br></pre></td></tr></table></figure>
 <p><code>注: 安装module时请加上 -g</code></p>
 <p>End</p>
 
@@ -537,11 +537,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Tips/" rel="tag"># Tips</a>
-          
             <a href="/tags/NodeJS/" rel="tag"># NodeJS</a>
           
             <a href="/tags/Ubuntu/" rel="tag"># Ubuntu</a>
+          
+            <a href="/tags/Tips/" rel="tag"># Tips</a>
           
         </div>
       
@@ -554,8 +554,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/04/25/使用Maven下载jar包-linux版/" rel="next" title="使用Maven下载jar包 linux版">
-                <i class="fa fa-chevron-left"></i> 使用Maven下载jar包 linux版
+              <a href="/2016/03/26/hexo-功能扩展/" rel="next" title="hexo 功能扩展">
+                <i class="fa fa-chevron-left"></i> hexo 功能扩展
               </a>
             
           </div>
@@ -564,8 +564,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/05/10/ES6-新特性/" rel="prev" title="ES6 新特性">
-                ES6 新特性 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/04/25/使用Maven下载jar包-linux版/" rel="prev" title="使用Maven下载jar包 linux版">
+                使用Maven下载jar包 linux版 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -646,7 +646,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">36</span>
+                <span class="site-state-item-count">37</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -775,8 +775,8 @@
       <div class="footer-inner">
         <div class="copyright" >
   
-  &copy; 
-  <span itemprop="copyrightYear">2017</span>
+  &copy;  2017 - 
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart lover-color"></i>
   </span>
