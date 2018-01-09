@@ -482,7 +482,7 @@
         <h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>Android Studio 启动虚拟机一直闪退，不显示任何报错信息</p>
 <a id="more"></a>
 <h2 id="排查问题"><a href="#排查问题" class="headerlink" title="排查问题"></a>排查问题</h2><ol>
-<li>尝试用命令启动模拟器, 方便查看其错误日志<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 查看你创建的设备</span><br><span class="line">emulator -list-avds</span><br><span class="line"><span class="meta">#</span> 启动命令</span><br><span class="line">emulator -netdelay none -netspeed full -avd New_Device_API_2</span><br><span class="line"><span class="meta">#</span> 以下为报错日志</span><br><span class="line">Hax is enabled</span><br><span class="line">Hax ram_size 0x60000000</span><br><span class="line">HAX is working and emulator runs in fast virt mode.</span><br><span class="line">Failed to sync vcpu reg</span><br><span class="line">Failed to sync vcpu reg</span><br><span class="line">Failed to sync vcpu reg</span><br><span class="line">Failed to sync vcpu reg</span><br><span class="line">Failed to sync vcpu reg</span><br><span class="line">Failed to sync HAX vcpu contextInternal error: Initial hax sync failed</span><br></pre></td></tr></table></figure>
+<li>尝试用命令启动模拟器, 方便查看其错误日志<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 查看你创建的设备</span></span><br><span class="line">emulator -list-avds</span><br><span class="line"><span class="meta">#</span><span class="bash"> 启动命令</span></span><br><span class="line">emulator -netdelay none -netspeed full -avd New_Device_API_2</span><br><span class="line"><span class="meta">#</span><span class="bash"> 以下为报错日志</span></span><br><span class="line">Hax is enabled</span><br><span class="line">Hax ram_size 0x60000000</span><br><span class="line">HAX is working and emulator runs in fast virt mode.</span><br><span class="line">Failed to sync vcpu reg</span><br><span class="line">Failed to sync vcpu reg</span><br><span class="line">Failed to sync vcpu reg</span><br><span class="line">Failed to sync vcpu reg</span><br><span class="line">Failed to sync vcpu reg</span><br><span class="line">Failed to sync HAX vcpu contextInternal error: Initial hax sync failed</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <p>vcpu无法进行同步?? What??<br>尝试进行了 Google，<a href="https://stackoverflow.com/questions/17024538/how-do-i-fix-failed-to-sync-vcpu-reg-error/17024645" target="_blank" rel="external">How do I fix “Failed to sync vcpu reg” error?
@@ -642,7 +642,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">37</span>
+                <span class="site-state-item-count">39</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -653,7 +653,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-count">11</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -664,7 +664,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">35</span>
+                <span class="site-state-item-count">37</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

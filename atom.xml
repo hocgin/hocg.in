@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hocg.in/"/>
-  <updated>2018-01-04T08:54:52.260Z</updated>
+  <updated>2018-01-04T10:23:24.929Z</updated>
   <id>https://hocg.in/</id>
   
   <author>
@@ -15,6 +15,59 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用Docker交叉编译OpenWrt上运行的Docker程序</title>
+    <link href="https://hocg.in/2017/11/23/%E4%BD%BF%E7%94%A8Docker%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91OpenWrt%E4%B8%8A%E8%BF%90%E8%A1%8C%E7%9A%84Docker%E7%A8%8B%E5%BA%8F/"/>
+    <id>https://hocg.in/2017/11/23/使用Docker交叉编译OpenWrt上运行的Docker程序/</id>
+    <published>2017-11-23T02:17:02.000Z</published>
+    <updated>2018-01-04T10:23:24.929Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><ul><li>使用 <code>https://github.com/gomini/go-mips32</code> 对 Go 程序进行交叉编译.</li></ul><h2 id="使用-Docker-交叉编译-Go-程序"><a href="#使用-Docker-交叉编译-Go-程序" class="headerlink" title="使用 Docker 交叉编译 Go 程序"></a>使用 Docker 交叉编译 Go 程序</h2><ol><li><p>拉取镜像</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull conoro/go-mips32:v1</span><br></pre></td></tr></table></figure></li><li><p>启动镜像并挂载本地目录</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">docker run -it -v 程序目录:/go/src conoro/go-mips32:v1 /bin/sh</span><br><span class="line"><span class="built_in">cd</span> src</span><br><span class="line"><span class="comment"># 编译</span></span><br><span class="line"><span class="comment"># export GOOS=linux</span></span><br><span class="line"><span class="comment"># export GOARCH=mips32le</span></span><br><span class="line">go build main.go</span><br></pre></td></tr></table></figure></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;使用 &lt;code&gt;https://github.com/gomini/go-mips32&lt;/
+      
+    
+    </summary>
+    
+      <category term="Docker" scheme="https://hocg.in/categories/Docker/"/>
+    
+    
+      <category term="OpenWrt" scheme="https://hocg.in/tags/OpenWrt/"/>
+    
+      <category term="Docker" scheme="https://hocg.in/tags/Docker/"/>
+    
+      <category term="Go" scheme="https://hocg.in/tags/Go/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>自编译 OpenWrt 系统</title>
+    <link href="https://hocg.in/2017/11/22/%E8%87%AA%E7%BC%96%E8%AF%91%20OpenWrt%20%E7%B3%BB%E7%BB%9F/"/>
+    <id>https://hocg.in/2017/11/22/自编译 OpenWrt 系统/</id>
+    <published>2017-11-22T02:18:02.000Z</published>
+    <updated>2018-01-04T10:30:58.409Z</updated>
+    
+    <content type="html"><![CDATA[<p>😌 整理、记录一下步骤..<br><a id="more"></a></p><h1 id="前置"><a href="#前置" class="headerlink" title="前置"></a>前置</h1><h2 id="更改源"><a href="#更改源" class="headerlink" title="更改源"></a>更改源</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sed -i.bak 's/\/us.archive.ubuntu.com\//\/cn.archive.ubuntu.com\//g' /etc/apt/sources.list</span><br><span class="line"></span><br><span class="line">sudo apt update</span><br></pre></td></tr></table></figure><h2 id="关闭IPv6"><a href="#关闭IPv6" class="headerlink" title="关闭IPv6"></a>关闭IPv6</h2><p>echo 1 &gt; /proc/sys/net/ipv6/conf/<eth1>/disable_ipv6</eth1></p><h2 id="前置安装"><a href="#前置安装" class="headerlink" title="前置安装"></a>前置安装</h2><ul><li>git subversion make automake autoconf gcc g++ binutils</li></ul><h2 id="make-缺省安装"><a href="#make-缺省安装" class="headerlink" title="make, 缺省安装"></a>make, 缺省安装</h2><ul><li>libncurses5-dev</li><li>libssl-dev</li><li>gawk</li></ul><h2 id="前置-1"><a href="#前置-1" class="headerlink" title="前置"></a>前置</h2><ul><li>GitHub(git clone <a href="https://github.com/openwrt/openwrt" target="_blank" rel="external">https://github.com/openwrt/openwrt</a>) 获取 OpenWrt, 更改 openWrt 目录为当前用户所有权<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 例如:</span></span><br><span class="line">chown -R hocgin:hocgin openwrt</span><br></pre></td></tr></table></figure></li></ul><hr><h1 id="编译-openwrt"><a href="#编译-openwrt" class="headerlink" title="编译(openwrt/)"></a>编译(openwrt/)</h1><h2 id="编译过程"><a href="#编译过程" class="headerlink" title="编译过程"></a>编译过程</h2><ol><li><p>make</p></li><li><p>./script/feeds update -a</p></li><li><p>./script/feeds install -a</p></li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4. make deconfig <span class="comment"># 使用默认的配置</span></span><br></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">5. make menuconfig <span class="comment"># 基于终端的一种配置方式，提供了文本模式的图形用户界面，用户可以通过光标移动来浏览所支持的各种特性。</span></span><br></pre></td></tr></table></figure><blockquote><p>固件配置, 可以选择编译的软件包</p></blockquote><pre><code>## 部分选项- 架构(AR7xxx) - FLASH(Generic)- 路由器型号(WNDR3800) - 文件系统(squashfs)- 通用设置    - [-] Crytographically signed package lists    - [-] Compile with support for patented functionallty    - [-] Enable shadow password support    - [-] Crash logging    - [-] Compile the kernel with debug information    - [-] Compile the kernel SysRq support    - [-] Enable process core dump support    - [-] Enable printk timestamps    - [-] Enable Ipv6 support in packages    - [-] Compile certain packages parallelized    - [-] Enable gcc format-security- [-] Build the OpenWrt Image Builder    - [-] In- [-] Build the OpenWrt SDK- [-] Package the OpenWrt-based Toolchain</code></pre><p>其余默认。</p><ol><li><p>make kernel_config</p><blockquote><p>内核配置[开启浮点数模拟(FPU)]</p></blockquote></li><li><p>make V=s -j&lt;处理器数量&gt;</p></li><li><p>编译完成后，移出<code>bin/ar71xx/OpenWrt-ImageBuilder-ar71xx-generic.Linux-x86_64.tar.bz2</code> 文件, 并解压(tar xvf).</p></li><li><p>进入(<code>OpenWrt-ImageBuilder-ar71xx-generic.Linux-x86_64/</code>)</p></li><li><p>编译成镜像</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 检查基础镜像</span></span><br><span class="line">parallels@ubuntu:~/OpenWrt/OpenWrt-ImageBuilder-ar71xx-generic.Linux-x86_64$ make image PROFILE=WNDR3700</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 包含必备包`预装软件`的镜像</span></span><br><span class="line">parallels@ubuntu:~/OpenWrt/OpenWrt-ImageBuilder-ar71xx-generic.Linux-x86_64$ make image PROFILE=WNDR3700 PACKAGES="-dnsmasq dnsmasq-full ipset openssh-keygen openssh-server openssh-sftp-server kmod-fs-ext4 kmod-fs-ntfs kmod-fs-vfat kmod-usb2 kmod-usb-core kmod-usb-storage kmod-usb-storage-extras luci-app-firewall luci-app-samba luci-app-upnp luci luci-theme-material curl kmod-ipt-nat-extra libpcre"</span><br></pre></td></tr></table></figure></li><li><p>生成镜像(<code>~/OpenWrt/OpenWrt-ImageBuilder-ar71xx-generic.Linux-x86_64/bin/</code>)</p></li></ol><ul><li>openwrt-ar71xx-generic-wndr3800-squashfs-sysupgrade.bin</li><li>openwrt-ar71xx-generic-wndr3800-squashfs-factory.img</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;😌 整理、记录一下步骤..&lt;br&gt;
+    
+    </summary>
+    
+      <category term="OpenWrt" scheme="https://hocg.in/categories/OpenWrt/"/>
+    
+    
+      <category term="OpenWrt" scheme="https://hocg.in/tags/OpenWrt/"/>
+    
+  </entry>
   
   <entry>
     <title>制作.ipk安装文件</title>
@@ -61,9 +114,9 @@
       <category term="Server" scheme="https://hocg.in/categories/Server/"/>
     
     
-      <category term="Tips" scheme="https://hocg.in/tags/Tips/"/>
-    
       <category term="Ubuntu" scheme="https://hocg.in/tags/Ubuntu/"/>
+    
+      <category term="Tips" scheme="https://hocg.in/tags/Tips/"/>
     
       <category term="SpringBoot" scheme="https://hocg.in/tags/SpringBoot/"/>
     
@@ -196,7 +249,7 @@
     <published>2017-07-02T13:07:00.000Z</published>
     <updated>2017-07-02T13:07:55.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>Android Studio 启动虚拟机一直闪退，不显示任何报错信息</p><a id="more"></a><h2 id="排查问题"><a href="#排查问题" class="headerlink" title="排查问题"></a>排查问题</h2><ol><li>尝试用命令启动模拟器, 方便查看其错误日志<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 查看你创建的设备</span><br><span class="line">emulator -list-avds</span><br><span class="line"><span class="meta">#</span> 启动命令</span><br><span class="line">emulator -netdelay none -netspeed full -avd New_Device_API_2</span><br><span class="line"><span class="meta">#</span> 以下为报错日志</span><br><span class="line">Hax is enabled</span><br><span class="line">Hax ram_size 0x60000000</span><br><span class="line">HAX is working and emulator runs in fast virt mode.</span><br><span class="line">Failed to sync vcpu reg</span><br><span class="line">Failed to sync vcpu reg</span><br><span class="line">Failed to sync vcpu reg</span><br><span class="line">Failed to sync vcpu reg</span><br><span class="line">Failed to sync vcpu reg</span><br><span class="line">Failed to sync HAX vcpu contextInternal error: Initial hax sync failed</span><br></pre></td></tr></table></figure></li></ol><p>vcpu无法进行同步?? What??<br>尝试进行了 Google，<a href="https://stackoverflow.com/questions/17024538/how-do-i-fix-failed-to-sync-vcpu-reg-error/17024645" target="_blank" rel="external">How do I fix “Failed to sync vcpu reg” error?</a><br>好吧, docker 之类的虚拟机引起了冲突</p><h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><p>关掉用不着的虚拟机如 docker ..</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>Android Studio 启动虚拟机一直闪退，不显示任何报错信息</p><a id="more"></a><h2 id="排查问题"><a href="#排查问题" class="headerlink" title="排查问题"></a>排查问题</h2><ol><li>尝试用命令启动模拟器, 方便查看其错误日志<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 查看你创建的设备</span></span><br><span class="line">emulator -list-avds</span><br><span class="line"><span class="meta">#</span><span class="bash"> 启动命令</span></span><br><span class="line">emulator -netdelay none -netspeed full -avd New_Device_API_2</span><br><span class="line"><span class="meta">#</span><span class="bash"> 以下为报错日志</span></span><br><span class="line">Hax is enabled</span><br><span class="line">Hax ram_size 0x60000000</span><br><span class="line">HAX is working and emulator runs in fast virt mode.</span><br><span class="line">Failed to sync vcpu reg</span><br><span class="line">Failed to sync vcpu reg</span><br><span class="line">Failed to sync vcpu reg</span><br><span class="line">Failed to sync vcpu reg</span><br><span class="line">Failed to sync vcpu reg</span><br><span class="line">Failed to sync HAX vcpu contextInternal error: Initial hax sync failed</span><br></pre></td></tr></table></figure></li></ol><p>vcpu无法进行同步?? What??<br>尝试进行了 Google，<a href="https://stackoverflow.com/questions/17024538/how-do-i-fix-failed-to-sync-vcpu-reg-error/17024645" target="_blank" rel="external">How do I fix “Failed to sync vcpu reg” error?</a><br>好吧, docker 之类的虚拟机引起了冲突</p><h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><p>关掉用不着的虚拟机如 docker ..</p>]]></content>
     
     <summary type="html">
     
@@ -450,52 +503,6 @@
       <category term="HTML5" scheme="https://hocg.in/tags/HTML5/"/>
     
       <category term="Chrome" scheme="https://hocg.in/tags/Chrome/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于log4j报错</title>
-    <link href="https://hocg.in/2017/01/16/%E5%85%B3%E4%BA%8Elog4j%E6%8A%A5%E9%94%99/"/>
-    <id>https://hocg.in/2017/01/16/关于log4j报错/</id>
-    <published>2017-01-16T00:09:27.000Z</published>
-    <updated>2017-02-04T05:57:15.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>  Java开发中经常遇到日志<code>冲突</code>或者<code>异常</code>, 彻底的来此追根究底.<br><a id="more"></a></p><h2 id="日志历史"><a href="#日志历史" class="headerlink" title="日志历史"></a>日志历史</h2><ul><li>log4j</li><li>JCL + log4j</li><li>SLF4J <code>slf4j-XXX-version.jar</code> [XXX指代log4j12, jdk14, jcl, nop 等]</li><li>slf4j-api<blockquote><p>v1 <code>log4j</code> 早期直接实现日志打印<br>v2 <code>JCL + log4j</code> 动态绑定, 面向<code>JCL 接口</code>实现的<code>log4j</code><br>v3 <code>slf4j-api</code> 提供 <code>SLF4J接口</code> <strong>面向对象编程</strong><br><code>slf4j-XXX-version.jar</code> 对接口和指定<code>XXX</code>种类日志的具体实现</p></blockquote></li></ul><h2 id="slf4j-举例jar"><a href="#slf4j-举例jar" class="headerlink" title="slf4j 举例jar"></a>slf4j 举例jar</h2><ul><li>log4j-over-slf4j.jar 把<code>log4j</code>转为<code>slf4j</code></li><li>slf4j-log4j12.jar 以slf4j标准实现的log4j12</li><li><code>XXX-over-slf4j.jar</code> 把日志重定向到<code>slf4j</code> eg.<code>jcl-over-slf4j.jar</code></li></ul><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>即.<br>Component<br>   |<br>   | log to Apache Commons Logging<br>   V<br> jcl-over-slf4j.jar — (redirect) —&gt; SLF4j —&gt; slf4j-log4j12-version.jar —&gt; log4j.jar —&gt; 输出日志<br><strong>解释:</strong><br>JCL实现的重定向为SLF4J日志形式, 然后SLF4J转为Log4j12输出!</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;  Java开发中经常遇到日志&lt;code&gt;冲突&lt;/code&gt;或者&lt;code&gt;异常&lt;/code&gt;, 彻底的来此追根究底.&lt;br&gt;
-    
-    </summary>
-    
-      <category term="Coder" scheme="https://hocg.in/categories/Coder/"/>
-    
-    
-      <category term="JAVA" scheme="https://hocg.in/tags/JAVA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Redis 相关</title>
-    <link href="https://hocg.in/2016/10/20/Redis-%E7%9B%B8%E5%85%B3/"/>
-    <id>https://hocg.in/2016/10/20/Redis-相关/</id>
-    <published>2016-10-20T01:11:48.000Z</published>
-    <updated>2017-08-24T09:48:34.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>  Redis 的部署和部位设计的实践, 还有常见问题的梳理! 💪<br><a id="more"></a></p><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><a href="http://redis.io/download" target="_blank" rel="external">官网</a></p><h2 id="详情"><a href="#详情" class="headerlink" title="详情"></a>详情</h2><h3 id="默认项"><a href="#默认项" class="headerlink" title="默认项"></a>默认项</h3><ul><li>端口 <code>6379</code></li></ul><h3 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h3><p>redis-3.2.4/<br>|– redis.conf <code>redis配置文件</code><br><code>-- src</code>编译后目录<code>|-- redis-server</code>启动bit文件<code>`-- redis-cli</code>终端bit文件`</p><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><blockquote><p>以下操作均在<code>/opt</code><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 下载</span><br><span class="line">wget http://download.redis.io/releases/redis-3.2.4.tar.gz</span><br><span class="line"><span class="meta">#</span> 解压</span><br><span class="line">tar -zxvf redis-3.2.4.tar.gz</span><br><span class="line">cd redis-3.2.4</span><br><span class="line"><span class="meta">#</span> 编译， 生成`src`目录</span><br><span class="line">make</span><br></pre></td></tr></table></figure></p></blockquote><h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><blockquote><p>以下操作均在<code>/opt</code><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 默认配置运行</span><br><span class="line">./redis-3.2.4/src/redis-server</span><br><span class="line"><span class="meta">#</span> 指定配置文件运行</span><br><span class="line">./redis-3.2.4/src/redis-server [config file]</span><br></pre></td></tr></table></figure></p></blockquote><h2 id="疑问？"><a href="#疑问？" class="headerlink" title="疑问？"></a>疑问？</h2><ul><li><p>如何使<code>redis</code>后台运行?</p><blockquote><p>更改配置文件, 找到<code>daemonize</code>字段,更改<code>no</code>为<code>yes</code>, 重启<code>redis</code> <strong>切记！要指定配置文件</strong></p></blockquote></li><li><p>如何更改<code>redis</code>默认<code>6379</code>端口?</p><blockquote><p>更改配置文件, 找到<code>port</code>字段,更改为指定端口, 重启<code>redis</code> <strong>切记！要指定配置文件</strong></p></blockquote></li><li><p>如何设置<code>redis</code>的验证密码?</p><blockquote><p>更改配置文件, 找到<code>requirepass</code>字段, 设置相应的验证密码, 重启<code>redis</code> <strong>切记！要指定配置文件</strong><br>由于增加了验证密码，因此客户端连接命令为<code>redis-cli –a [upassword]</code></p></blockquote></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;  Redis 的部署和部位设计的实践, 还有常见问题的梳理! 💪&lt;br&gt;
-    
-    </summary>
-    
-      <category term="Server" scheme="https://hocg.in/categories/Server/"/>
-    
-    
-      <category term="Tips" scheme="https://hocg.in/tags/Tips/"/>
-    
-      <category term="Redis" scheme="https://hocg.in/tags/Redis/"/>
     
   </entry>
   
