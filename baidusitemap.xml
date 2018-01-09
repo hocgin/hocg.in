@@ -5,7 +5,7 @@
     
   <url>
     <loc>https://hocg.in/2017/11/23/%E4%BD%BF%E7%94%A8%20Docker%20%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%20OpenWrt%20%E4%B8%8A%E8%BF%90%E8%A1%8C%E7%9A%84%20Golang%20%E7%A8%8B%E5%BA%8F/</loc>
-    <lastmod>2018-01-09T00:32:32.377Z</lastmod>
+    <lastmod>2018-01-09T00:33:32.850Z</lastmod>
     <data>
         <display>
         <title>使用 Docker 交叉编译 OpenWrt 上运行的 Golang 程序</title>

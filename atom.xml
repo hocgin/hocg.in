@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hocg.in/"/>
-  <updated>2018-01-09T00:32:32.377Z</updated>
+  <updated>2018-01-09T00:33:32.850Z</updated>
   <id>https://hocg.in/</id>
   
   <author>
@@ -21,14 +21,13 @@
     <link href="https://hocg.in/2017/11/23/%E4%BD%BF%E7%94%A8%20Docker%20%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%20OpenWrt%20%E4%B8%8A%E8%BF%90%E8%A1%8C%E7%9A%84%20Golang%20%E7%A8%8B%E5%BA%8F/"/>
     <id>https://hocg.in/2017/11/23/使用 Docker 交叉编译 OpenWrt 上运行的 Golang 程序/</id>
     <published>2017-11-23T02:17:02.000Z</published>
-    <updated>2018-01-09T00:32:32.377Z</updated>
+    <updated>2018-01-09T00:33:32.850Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>.&lt;<br><a id="more"></a></p><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><ul><li>使用 <code>https://github.com/gomini/go-mips32</code> 对 Go 程序进行交叉编译.</li></ul></blockquote><h2 id="使用-Docker-交叉编译-Go-程序"><a href="#使用-Docker-交叉编译-Go-程序" class="headerlink" title="使用 Docker 交叉编译 Go 程序"></a>使用 Docker 交叉编译 Go 程序</h2><ol><li><p>拉取镜像</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull conoro/go-mips32:v1</span><br></pre></td></tr></table></figure></li><li><p>启动镜像并挂载本地目录</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">docker run -it -v 程序目录:/go/src conoro/go-mips32:v1 /bin/sh</span><br><span class="line"><span class="built_in">cd</span> src</span><br><span class="line"><span class="comment"># 编译</span></span><br><span class="line"><span class="comment"># export GOOS=linux</span></span><br><span class="line"><span class="comment"># export GOARCH=mips32le</span></span><br><span class="line">go build main.go</span><br></pre></td></tr></table></figure></li></ol>]]></content>
+    <content type="html"><![CDATA[<p>>.&lt;<br><a id="more"></a></p><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><ul><li>使用 <code>https://github.com/gomini/go-mips32</code> 对 Go 程序进行交叉编译.</li></ul><h2 id="使用-Docker-交叉编译-Go-程序"><a href="#使用-Docker-交叉编译-Go-程序" class="headerlink" title="使用 Docker 交叉编译 Go 程序"></a>使用 Docker 交叉编译 Go 程序</h2><ol><li><p>拉取镜像</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull conoro/go-mips32:v1</span><br></pre></td></tr></table></figure></li><li><p>启动镜像并挂载本地目录</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">docker run -it -v 程序目录:/go/src conoro/go-mips32:v1 /bin/sh</span><br><span class="line"><span class="built_in">cd</span> src</span><br><span class="line"><span class="comment"># 编译</span></span><br><span class="line"><span class="comment"># export GOOS=linux</span></span><br><span class="line"><span class="comment"># export GOARCH=mips32le</span></span><br><span class="line">go build main.go</span><br></pre></td></tr></table></figure></li></ol>]]></content>
     
     <summary type="html">
     
-      &lt;blockquote&gt;
-&lt;p&gt;.&amp;lt;&lt;br&gt;
+      &lt;p&gt;&gt;.&amp;lt;&lt;br&gt;
     
     </summary>
     
