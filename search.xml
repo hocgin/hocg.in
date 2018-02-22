@@ -98,6 +98,18 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[Java 线程池 和 锁 小记]]></title>
+    <url>%2F2017%2F10%2F07%2FJava%20%E7%BA%BF%E7%A8%8B%E6%B1%A0%20%E5%92%8C%20%E9%94%81%20%E5%B0%8F%E8%AE%B0%2F</url>
+    <content type="text"><![CDATA[提取想要的apk， 例如CM ROM包中的含天气的时钟不错！ 并发线程池 ExecutorService 123456789101112131415161718192021public class ConcurrencyMain &#123; public static void main(String[] args) throws InterruptedException &#123;ExecutorService executor = Executors.newWorkStealingPool(); List&lt;Callable&lt;String&gt;&gt; callables = Arrays.asList( () -&gt; "task1", () -&gt; "task2", () -&gt; "task3"); executor.invokeAll(callables) .stream() .map(future -&gt; &#123; try &#123; return future.get(); &#125; catch (Exception e) &#123; throw new IllegalStateException(e); &#125; &#125;) .forEach(System.out::println); &#125;&#125; ScheduledExecutorService 12345678910111213public class ConcurrencyMain &#123; public static void main(String[] args) throws InterruptedException &#123; ScheduledExecutorService executor = Executors.newScheduledThreadPool(3); ScheduledFuture&lt;?&gt; future = executor.schedule(() -&gt; System.out.println("执行延迟任务"), 2, TimeUnit.SECONDS); TimeUnit.MILLISECONDS.sleep(1000); long remainingDelay = future.getDelay(TimeUnit.MILLISECONDS); System.out.println(String.format("剩余延迟时间: %sms", remainingDelay)); &#125;&#125; 区别 两者的区别是ScheduledExecutorService是可延迟执行。 同步(Synchronized) 对象锁语法: 1234567891011121314151617181920212223242526272829303132333435363738public class SynchronizedMain &#123; public static void main(String[] args) &#123; // ==[测试一:同一对象]== // 结果: 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 Test t1 = new Test(); Thread runnable1 = new Thread(() -&gt; t1.exec()); Thread runnable2 = new Thread(() -&gt; t1.exec()); runnable1.start(); runnable2.start(); // ==[测试二:不同一对象]== // 结果: 0 0 1 2 3 4 5 6 7 1 2 3 4 5 6 7 8 9 8 9 Test t2 = new Test(); Thread runnable3 = new Thread(() -&gt; t1.exec()); Thread runnable4 = new Thread(() -&gt; t2.exec()); runnable3.start(); runnable4.start(); &#125;&#125;// 以下两种方式等价，仅作用范围不一样。class Test &#123; public synchronized void exec() &#123; for (int i = 0; i &lt; 10; i++) &#123; System.out.printf(i + " "); &#125; &#125; public void exec() &#123; synchronized (this) &#123; for (int i = 0; i &lt; 10; i++) &#123; System.out.printf(i + " "); &#125; &#125; &#125;&#125; 结论: 同一对象调用该方法是锁定的，不同对象不会进行锁定。 类锁12345678910111213141516171819202122232425262728293031323334353637383940public class SynchronizedMain &#123; public static void main(String[] args) &#123; // ==[测试一:同一对象]== // 结果: 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 Test t1 = new Test(); Thread runnable1 = new Thread(() -&gt; t1.exec()); Thread runnable2 = new Thread(() -&gt; t1.exec()); runnable1.start(); runnable2.start(); // ==[测试二:不同一对象]== // 结果: 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 Test t2 = new Test(); Thread runnable3 = new Thread(() -&gt; t1.exec()); Thread runnable4 = new Thread(() -&gt; t2.exec()); runnable3.start(); runnable4.start(); &#125;&#125;// 以下两种方式等价class Test &#123; private static Object lock = new Object(); public void exec() &#123; synchronized (lock) &#123; for (int i = 0; i &lt; 10; i++) &#123; System.out.printf(i + " "); &#125; &#125; &#125; public void exec() &#123; synchronized (Test.class) &#123; for (int i = 0; i &lt; 10; i++) &#123; System.out.printf(i + " "); &#125; &#125; &#125;&#125; 结论: 该方式锁的作用范围是整个类。 指定锁语法: 1234567891011121314151617181920212223242526272829303132public class SynchronizedMain &#123; private static Object lock = new Object(); public static void main(String[] args) &#123; // ==[测试一:同一对象]== // 结果: 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 Test t1 = new Test(); Thread runnable1 = new Thread(() -&gt; t1.exec(lock)); Thread runnable2 = new Thread(() -&gt; t1.exec(lock)); runnable1.start(); runnable2.start(); // ==[测试二:不同一对象]== // 结果: 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 Test t2 = new Test(); Thread runnable3 = new Thread(() -&gt; t1.exec(lock)); Thread runnable4 = new Thread(() -&gt; t2.exec(lock)); runnable3.start(); runnable4.start(); &#125;&#125;class Test &#123; public void exec(Object lock) &#123; synchronized (lock) &#123; for (int i = 0; i &lt; 10; i++) &#123; System.out.printf(i + " "); &#125; &#125; &#125;&#125; 结论: 该方式取决于传入的锁。当对象属性发生改变时，锁就失去了作用。 对于 Java8 中，ReentrantLock 可实现锁的作用。]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Tips</tag>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[解决 WebView 点击时网页不断闪耀]]></title>
     <url>%2F2017%2F09%2F28%2F%E8%A7%A3%E5%86%B3WebView%E7%82%B9%E5%87%BB%E6%97%B6%E7%BD%91%E9%A1%B5%E4%B8%8D%E6%96%AD%E9%97%AA%E8%80%80%2F</url>
     <content type="text"><![CDATA[解决高版本 WebView 点击时网页不断闪耀的问题 🤗 原因网页渲染开启了硬件加速，如果你也出现了该问题，可以尝试关闭硬件加速。 方案方案一: 在xml中使用android:layerType=&quot;software&quot;进行关闭。推荐方案二: 通过 java 代码webView.setLayerType(View.LAYER_TYPE_SOFTWARE, null);进行关闭。 参考BroswerKit进行标记的这段代码解决了我的闪耀问题]]></content>
@@ -358,8 +370,8 @@
         <category>Coder</category>
       </categories>
       <tags>
-        <tag>设计思路</tag>
         <tag>Java</tag>
+        <tag>设计思路</tag>
       </tags>
   </entry>
   <entry>
@@ -370,8 +382,8 @@
         <category>Coder</category>
       </categories>
       <tags>
-        <tag>设计思路</tag>
         <tag>Java</tag>
+        <tag>设计思路</tag>
       </tags>
   </entry>
   <entry>
