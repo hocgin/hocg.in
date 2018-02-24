@@ -108,7 +108,7 @@
 <meta property="og:site_name" content="hocgin (๑`灬´๑)">
 <meta property="og:description" content="日志系统 ELK 在 Spring Boot 上的初步集成 😋">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-20T05:10:25.342Z">
+<meta property="og:updated_time" content="2018-02-24T10:47:11.925Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="日志系统 ELK 在 Spring Boot 上的初步集成">
 <meta name="twitter:description" content="日志系统 ELK 在 Spring Boot 上的初步集成 😋">
@@ -397,8 +397,8 @@
               
                 <span class="post-meta-item-text">更新于</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-02-20T13:10:25+08:00">
-                2018-02-20
+              <time title="更新于" itemprop="dateModified" datetime="2018-02-24T18:47:11+08:00">
+                2018-02-24
               </time>
             
           </span>
@@ -481,15 +481,20 @@
       
         <p>日志系统 ELK 在 Spring Boot 上的初步集成 😋<br><a id="more"></a></p>
 <h2 id="ELK"><a href="#ELK" class="headerlink" title="ELK"></a>ELK</h2><blockquote>
-<p>Elasticsearch + Logstash + Kibana</p>
-<h3 id="Logstash"><a href="#Logstash" class="headerlink" title="Logstash"></a>Logstash</h3><p>日志搬运, 可以指定从 Redis/Log4j..处获取日志信息，然后进行过滤，再提交给 <code>Elasticsearch</code> 进行分析。<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">brew install logstash</span><br><span class="line"><span class="meta">#</span><span class="bash"> brew services restart logstash</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> ./bin/logstash -f config/logstash.conf</span></span><br></pre></td></tr></table></figure></p>
+<p>Elasticsearch + Logstash + Kibana，一个比较流行的日志系统。当然，你也可以尝试使用阿里云。如果钱多的话:)</p>
 </blockquote>
+<h3 id="Logstash"><a href="#Logstash" class="headerlink" title="Logstash"></a>Logstash</h3><blockquote>
+<p>日志搬运, 可以指定从 Redis/Log4j..处获取日志信息，然后进行过滤，再提交给 <code>Elasticsearch</code> 进行分析。</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 安装 &amp; 启动</span></span><br><span class="line">brew install logstash</span><br><span class="line"><span class="meta">#</span><span class="bash"> brew services restart logstash</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> ./bin/logstash -f config/logstash.conf</span></span><br></pre></td></tr></table></figure>
 <h3 id="Elasticsearch"><a href="#Elasticsearch" class="headerlink" title="Elasticsearch"></a>Elasticsearch</h3><blockquote>
-<p>日志存储 / 查询 / 分析<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">brew install elasticsearch</span><br><span class="line">brew services restart elasticsearch</span><br></pre></td></tr></table></figure></p>
+<p>日志存储 / 查询 / 分析</p>
 </blockquote>
-<h4 id="UI-操作界面"><a href="#UI-操作界面" class="headerlink" title="UI 操作界面"></a>UI 操作界面</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git clone git://github.com/mobz/elasticsearch-head.git</span><br><span class="line">cd elasticsearch-head</span><br><span class="line">npm install</span><br><span class="line">npm run start</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 安装 &amp; 启动</span></span><br><span class="line">brew install elasticsearch</span><br><span class="line">brew services restart elasticsearch</span><br></pre></td></tr></table></figure>
+<p>如果你想直接查看、操作或者研究 elasticsearch 存储的内容，可以考虑使用 elasticsearch-head 进行操作。</p>
+<h4 id="UI-操作界面"><a href="#UI-操作界面" class="headerlink" title="UI 操作界面"></a>UI 操作界面</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git clone git://github.com/mobz/elasticsearch-head.git</span><br><span class="line">cd elasticsearch-head</span><br><span class="line">npm install</span><br><span class="line">npm run start</span><br><span class="line">open http://localhost:9100</span><br></pre></td></tr></table></figure>
 <p>如果 Elasticsearch 安装了 X-Path 那么需要在配置文件中(<code>elasticsearch.yml</code>), 加入:<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">http.cors.enabled:</span> <span class="literal">true</span> </span><br><span class="line"><span class="string">http.cors.allow-origin:</span> <span class="string">'*'</span> </span><br><span class="line"><span class="string">http.cors.allow-headers:</span> <span class="string">"Authorization"</span></span><br></pre></td></tr></table></figure></p>
-<p><a href="https://chrome.google.com/webstore/detail/elasticsearch-head/ffmkiejjmecolpfloofpjologoblkegm/related" target="_blank" rel="external">elasticsearch-head Chrome Plug-in</a></p>
+<p>对了, 这里有一款<br><a href="https://chrome.google.com/webstore/detail/elasticsearch-head/ffmkiejjmecolpfloofpjologoblkegm/related" target="_blank" rel="external">elasticsearch-head Chrome Plug-in</a> 推荐。</p>
 <h3 id="Kibana"><a href="#Kibana" class="headerlink" title="Kibana"></a>Kibana</h3><blockquote>
 <p>UI 界面</p>
 </blockquote>
