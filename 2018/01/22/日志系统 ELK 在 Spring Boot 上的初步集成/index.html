@@ -108,7 +108,7 @@
 <meta property="og:site_name" content="hocgin (๑`灬´๑)">
 <meta property="og:description" content="日志系统 ELK 在 Spring Boot 上的初步集成 😋">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-24T10:47:11.925Z">
+<meta property="og:updated_time" content="2018-02-24T11:08:23.114Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="日志系统 ELK 在 Spring Boot 上的初步集成">
 <meta name="twitter:description" content="日志系统 ELK 在 Spring Boot 上的初步集成 😋">
@@ -397,7 +397,7 @@
               
                 <span class="post-meta-item-text">更新于</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-02-24T18:47:11+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-02-24T19:08:23+08:00">
                 2018-02-24
               </time>
             
@@ -491,10 +491,10 @@
 <p>日志存储 / 查询 / 分析</p>
 </blockquote>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 安装 &amp; 启动</span></span><br><span class="line">brew install elasticsearch</span><br><span class="line">brew services restart elasticsearch</span><br></pre></td></tr></table></figure>
-<p>如果你想直接查看、操作或者研究 elasticsearch 存储的内容，可以考虑使用 elasticsearch-head 进行操作。</p>
+<p>如果你想直接查看、操作或者研究 <code>elasticsearch</code> 存储的内容，可以考虑使用 <code>elasticsearch-head</code> 进行操作。</p>
 <h4 id="UI-操作界面"><a href="#UI-操作界面" class="headerlink" title="UI 操作界面"></a>UI 操作界面</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git clone git://github.com/mobz/elasticsearch-head.git</span><br><span class="line">cd elasticsearch-head</span><br><span class="line">npm install</span><br><span class="line">npm run start</span><br><span class="line">open http://localhost:9100</span><br></pre></td></tr></table></figure>
 <p>如果 Elasticsearch 安装了 X-Path 那么需要在配置文件中(<code>elasticsearch.yml</code>), 加入:<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">http.cors.enabled:</span> <span class="literal">true</span> </span><br><span class="line"><span class="string">http.cors.allow-origin:</span> <span class="string">'*'</span> </span><br><span class="line"><span class="string">http.cors.allow-headers:</span> <span class="string">"Authorization"</span></span><br></pre></td></tr></table></figure></p>
-<p>对了, 这里有一款<br><a href="https://chrome.google.com/webstore/detail/elasticsearch-head/ffmkiejjmecolpfloofpjologoblkegm/related" target="_blank" rel="external">elasticsearch-head Chrome Plug-in</a> 推荐。</p>
+<p>对了, 这里有一款<a href="https://chrome.google.com/webstore/detail/elasticsearch-head/ffmkiejjmecolpfloofpjologoblkegm/related" target="_blank" rel="external">elasticsearch-head Chrome Plug-in</a> 推荐。</p>
 <h3 id="Kibana"><a href="#Kibana" class="headerlink" title="Kibana"></a>Kibana</h3><blockquote>
 <p>UI 界面</p>
 </blockquote>
@@ -536,11 +536,7 @@
 </li>
 <li><p>启动 <code>ElasticSearch</code> 服务</p>
 </li>
-<li>使用 API 修改密码<br><code>`shell
-curl -u my_admin -XPUT &#39;http://localhost:9200/_xpack/security/user/elastic/_password?pretty&#39; -H &#39;Content-Type: application/json&#39; -d&#39;
-{
-&quot;password&quot; : &quot;new_password&quot;
-}&#39;</code></li>
+<li>使用 API 修改密码<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">curl -u my_admin -XPUT 'http://localhost:9200/_xpack/security/user/elastic/_password?pretty' -H 'Content-Type: application/json' -d'</span><br><span class="line">&#123;</span><br><span class="line">  "password" : "new_password"</span><br><span class="line">&#125;'</span><br><span class="line">``</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># ELK Docker</span></span></span><br><span class="line">- [ELK Docker](https://github.com/spujadas/elk-docker)</span><br><span class="line">简而言之:</span><br><span class="line">```shell</span><br><span class="line"><span class="meta">#</span><span class="bash"> :5601 - Kibana</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> :9200 - Elasticsearch</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> :5044 - Logstash</span></span><br><span class="line">sudo docker run -p 5601:5601 -p 9200:9200 -p 5044:5044 -it --name elk sebp/elk</span><br></pre></td></tr></table></figure></li>
 </ol>
 
       
