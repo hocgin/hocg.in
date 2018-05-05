@@ -68,8 +68,8 @@
         <category>Server</category>
       </categories>
       <tags>
-        <tag>Ubuntu</tag>
         <tag>Tips</tag>
+        <tag>Ubuntu</tag>
         <tag>SpringBoot</tag>
       </tags>
   </entry>
@@ -308,8 +308,8 @@
         <category>IDE</category>
       </categories>
       <tags>
-        <tag>Ubuntu</tag>
         <tag>Tips</tag>
+        <tag>Ubuntu</tag>
         <tag>Oh My ZSH</tag>
       </tags>
   </entry>
@@ -321,9 +321,9 @@
         <category>Coder</category>
       </categories>
       <tags>
+        <tag>Tips</tag>
         <tag>NodeJS</tag>
         <tag>Ubuntu</tag>
-        <tag>Tips</tag>
       </tags>
   </entry>
   <entry>
@@ -358,8 +358,8 @@
         <category>Mobile</category>
       </categories>
       <tags>
-        <tag>Tips</tag>
         <tag>Android</tag>
+        <tag>Tips</tag>
       </tags>
   </entry>
   <entry>
@@ -441,9 +441,9 @@
         <category>Coder</category>
       </categories>
       <tags>
+        <tag>Tips</tag>
         <tag>NodeJS</tag>
         <tag>Ubuntu</tag>
-        <tag>Tips</tag>
       </tags>
   </entry>
   <entry>
@@ -467,9 +467,9 @@
         <category>Coder</category>
       </categories>
       <tags>
+        <tag>Tips</tag>
         <tag>NodeJS</tag>
         <tag>Ubuntu</tag>
-        <tag>Tips</tag>
       </tags>
   </entry>
   <entry>
@@ -493,8 +493,8 @@
         <category>OS</category>
       </categories>
       <tags>
-        <tag>Ubuntu</tag>
         <tag>Tips</tag>
+        <tag>Ubuntu</tag>
         <tag>Gnome</tag>
       </tags>
   </entry>
