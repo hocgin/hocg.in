@@ -16,13 +16,6 @@
   </url>
   
   <url>
-    <loc>https://hocg.in/about/index.html</loc>
-    
-    <lastmod>2018-05-05T13:33:04.891Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://hocg.in/2017/10/07/Java%20%E7%BA%BF%E7%A8%8B%E6%B1%A0%20%E5%92%8C%20%E9%94%81%20%E5%B0%8F%E8%AE%B0/</loc>
     
     <lastmod>2018-05-05T13:02:21.829Z</lastmod>
@@ -86,7 +79,14 @@
   </url>
   
   <url>
-    <loc>https://hocg.in/2017/04/20/Wireshark%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
+    <loc>https://hocg.in/2017/09/18/OpenWrt-%E5%85%A5%E9%97%A8%E7%AF%87/</loc>
+    
+    <lastmod>2017-11-11T15:11:01.049Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hocg.in/2017/06/18/Google-%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</loc>
     
     <lastmod>2017-11-11T15:11:01.049Z</lastmod>
     
@@ -100,13 +100,6 @@
   </url>
   
   <url>
-    <loc>https://hocg.in/2017/09/18/OpenWrt-%E5%85%A5%E9%97%A8%E7%AF%87/</loc>
-    
-    <lastmod>2017-11-11T15:11:01.049Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://hocg.in/2017/05/12/%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%BC%96%E7%A0%81%E7%AF%87/</loc>
     
     <lastmod>2017-11-11T15:11:01.049Z</lastmod>
@@ -114,7 +107,7 @@
   </url>
   
   <url>
-    <loc>https://hocg.in/2017/06/18/Google-%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</loc>
+    <loc>https://hocg.in/2017/04/20/Wireshark%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
     
     <lastmod>2017-11-11T15:11:01.049Z</lastmod>
     
