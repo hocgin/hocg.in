@@ -63,13 +63,13 @@
   <entry>
     <title><![CDATA[IDEA 中的 Spring Boot 开发模式]]></title>
     <url>%2F2017%2F10%2F20%2FIDEA-%E4%B8%AD%E7%9A%84-Spring-Boot-%E5%BC%80%E5%8F%91%E6%A8%A1%E5%BC%8F%2F</url>
-    <content type="text"><![CDATA[🤑 完全热部署, 配置完成瞬间舒爽无比。 .java 文件和配置文件更改后进行自动重启 更改IDEA中的如下设置Build project automatically。 打开IDEA的Action window, 快捷键如下: Linux : CTRL+SHIFT+A Mac OSX : SHIFT+COMMAND+A Windows : CTRL+ALT+SHIFT+/输入(选择) Registry..., 选择如下: 此时进行.java 文件和配置文件修改时, 会进行 Spring Boot 重启。 当更改静态HTML进行实时刷新 加入依赖 1234&lt;dependency&gt; &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt; &lt;artifactId&gt;spring-boot-devtools&lt;/artifactId&gt;&lt;/dependency&gt; 安装浏览器插件 Chrome 插件 Firefox 插件 Safari 插件 更改文件和静态页面(HTML)都可以进行热部署类。 实时刷新thymeleaf模版文件配置文件设置取消缓存: 123spring: thymeleaf: cache: false Chrome 设置取消缓存: 此时几乎所有的东西(.java/`/SpringBoot 配置文件`)都可以进行热部署了。包括: 修改 .java 文件。 修改页面(thymeleaf html ..) 文件。 修改 SpringBoot 配置文件。 增删静态文件(css js 图片)。 关于定制化热部署 可查询spring-boot-devtools的使用, 使用以下子项进行配置。 12spring: devtools: IDEA 扩展 pom.xml 添加以下依赖可查看更多的信息。该依赖是可查看监控信息的, 更多使用移步 Google.com。 12345&lt;dependency&gt; &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt; &lt;artifactId&gt;spring-boot-starter-actuator&lt;/artifactId&gt;&lt;/dependency&gt; IDEA 显示如下:]]></content>
+    <content type="text"><![CDATA[🤑 完全热部署, 配置完成瞬间舒爽无比。 .java 文件和配置文件更改后进行自动重启 更改IDEA中的如下设置Build project automatically。 打开IDEA的Action window, 快捷键如下: Linux : CTRL+SHIFT+A Mac OSX : SHIFT+COMMAND+A Windows : CTRL+ALT+SHIFT+/输入(选择) Registry..., 选择如下: 此时进行.java 文件和配置文件修改时, 会进行 Spring Boot 重启。 当更改静态HTML进行实时刷新 加入依赖 1234&lt;dependency&gt; &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt; &lt;artifactId&gt;spring-boot-devtools&lt;/artifactId&gt;&lt;/dependency&gt; 安装浏览器插件 Chrome 插件 Firefox 插件 Safari 插件 更改文件和静态页面(HTML)都可以进行热部署类。 实时刷新thymeleaf模版文件配置文件设置取消缓存: 123spring: thymeleaf: cache: false Chrome 设置取消缓存: 此时几乎所有的东西(.java/`/SpringBoot 配置文件`)都可以进行热部署了。包括: 修改 .java 文件。 修改页面(thymeleaf html ..) 文件。 修改 SpringBoot 配置文件。 增删静态文件(css js 图片)。 关于定制化热部署 可查询spring-boot-devtools的使用, 使用以下子项进行配置。 12spring: devtools: IDEA 扩展 pom.xml 添加以下依赖可查看更多的信息。该依赖是可查看监控信息的, 更多使用移步 Google.com。 1234&lt;dependency&gt; &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt; &lt;artifactId&gt;spring-boot-starter-actuator&lt;/artifactId&gt;&lt;/dependency&gt; IDEA 显示如下:]]></content>
       <categories>
         <category>Server</category>
       </categories>
       <tags>
-        <tag>Tips</tag>
         <tag>Ubuntu</tag>
+        <tag>Tips</tag>
         <tag>SpringBoot</tag>
       </tags>
   </entry>
@@ -308,8 +308,8 @@
         <category>IDE</category>
       </categories>
       <tags>
-        <tag>Tips</tag>
         <tag>Ubuntu</tag>
+        <tag>Tips</tag>
         <tag>Oh My ZSH</tag>
       </tags>
   </entry>
@@ -321,9 +321,9 @@
         <category>Coder</category>
       </categories>
       <tags>
-        <tag>Tips</tag>
         <tag>NodeJS</tag>
         <tag>Ubuntu</tag>
+        <tag>Tips</tag>
       </tags>
   </entry>
   <entry>
@@ -355,11 +355,11 @@
     <url>%2F2016%2F08%2F07%2FAndroid-L-%E5%8F%8A%E4%BB%A5%E4%B8%8A%E7%89%88%E6%9C%ACRom%E5%8C%85%E4%B8%AD%E6%8F%90%E5%8F%96apk%2F</url>
     <content type="text"><![CDATA[提取想要的apk， 例如CM ROM包中的含天气的时钟不错！ 以往版本 Android Rom包只需解压后，取出system包即可取出内部apk Now 解压后可以发现，文件发生了改变并且system.new.dat此文件是不支持直接解压的。 环境系统: win10工具: 下载 环境自备 操作步骤 普通方式解压ROM 运行下载工具中.bat文件Extractor.bat 根据提示选择1，并复制system.new.dat, system.transfer.list，file_contexts三个文件到bat文件所在目录 按任意键继续 完成后可以得到一个system文件夹 嘿嘿嘿.. 问题! 有可能在你安装apk的时候出现应用未安装的情况 可以尝试重新对apk进行签名 检查是否已经安装过该apk End]]></content>
       <categories>
-        <category>Mobile</category>
+        <category>Android</category>
       </categories>
       <tags>
         <tag>Android</tag>
-        <tag>Tips</tag>
+        <tag>手机</tag>
       </tags>
   </entry>
   <entry>
@@ -441,22 +441,9 @@
         <category>Coder</category>
       </categories>
       <tags>
-        <tag>Tips</tag>
         <tag>NodeJS</tag>
         <tag>Ubuntu</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[绿化NodeJS for linux版]]></title>
-    <url>%2F2016%2F04%2F25%2F%E7%BB%BF%E5%8C%96nodejs-for-linux%E7%89%88%2F</url>
-    <content type="text"><![CDATA[起因，为了方便hexo发布博客，所以想把NodeJS绿化在U盘上..谁叫网上只有win版的呢！自己码起来～绿化 o(╯□╰)o 目录结构12345678Green4nodeJS├── hocgin.github.io // github博客目录├── node // nodejs基本目录│ ├── node-linux // nodejs源文件│ ├── cache // 创建一个空文件夹，即可│ ├── init-module // 创建一个空文件夹，即可│ └── userconfig // 创建一个空文件夹，即可└── init.sh // 初始化shell文件 *重要 初始化文件 主要是加载配置环境，初始化变量 init.sh 内容123456789101112131415161718#!/bin/bash# Author: hocgin@gmail.com# -------------Use--------------# source init.sh or . init.sh# ------------------------------NOW_PATH=$(cd "$(dirname "$0")"; pwd)NODE_NAME="node-linux"NODE_HOME=$NOW_PATH"/node/"$NODE_NAMENODE_PATH=$NODE_HOME"/bin"NPM_PATH=$NODE_HOME"/lib/node_modules/npm/bin"sudo chmod +x -R $NPM_PATH"/."export PATH=$PATH:$NODE_PATH:$NPM_PATH# "/home/hocgin/.npmrc"npm set userconfig $NOW_PATH"/node/userconfig"# "/home/hocgin/.npm-init.js"npm set init-module $NOW_PATH"/node/init-module"# "/home/hocgin/.npm"npm set cache $NOW_PATH"/node/cache" 修改 /node/node-linux/lib/node_modules/npm/bin/npm 文件12# NPM_CLI_JS="$basedir/node_modules/npm/bin/npm-cli.js"NPM_CLI_JS="$basedir/npm-cli.js" 完成 使用方法123456source init.sh# Or. init.shcd hocgin.github.io# 尽情hexo吧 注: 安装module时请加上 -g End]]></content>
-      <categories>
-        <category>Coder</category>
-      </categories>
-      <tags>
         <tag>Tips</tag>
-        <tag>NodeJS</tag>
-        <tag>Ubuntu</tag>
       </tags>
   </entry>
   <entry>
@@ -470,6 +457,19 @@
         <tag>Tips</tag>
         <tag>Maven</tag>
         <tag>Shell</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[绿化NodeJS for linux版]]></title>
+    <url>%2F2016%2F04%2F25%2F%E7%BB%BF%E5%8C%96nodejs-for-linux%E7%89%88%2F</url>
+    <content type="text"><![CDATA[起因，为了方便hexo发布博客，所以想把NodeJS绿化在U盘上..谁叫网上只有win版的呢！自己码起来～绿化 o(╯□╰)o 目录结构12345678Green4nodeJS├── hocgin.github.io // github博客目录├── node // nodejs基本目录│ ├── node-linux // nodejs源文件│ ├── cache // 创建一个空文件夹，即可│ ├── init-module // 创建一个空文件夹，即可│ └── userconfig // 创建一个空文件夹，即可└── init.sh // 初始化shell文件 *重要 初始化文件 主要是加载配置环境，初始化变量 init.sh 内容123456789101112131415161718#!/bin/bash# Author: hocgin@gmail.com# -------------Use--------------# source init.sh or . init.sh# ------------------------------NOW_PATH=$(cd "$(dirname "$0")"; pwd)NODE_NAME="node-linux"NODE_HOME=$NOW_PATH"/node/"$NODE_NAMENODE_PATH=$NODE_HOME"/bin"NPM_PATH=$NODE_HOME"/lib/node_modules/npm/bin"sudo chmod +x -R $NPM_PATH"/."export PATH=$PATH:$NODE_PATH:$NPM_PATH# "/home/hocgin/.npmrc"npm set userconfig $NOW_PATH"/node/userconfig"# "/home/hocgin/.npm-init.js"npm set init-module $NOW_PATH"/node/init-module"# "/home/hocgin/.npm"npm set cache $NOW_PATH"/node/cache" 修改 /node/node-linux/lib/node_modules/npm/bin/npm 文件12# NPM_CLI_JS="$basedir/node_modules/npm/bin/npm-cli.js"NPM_CLI_JS="$basedir/npm-cli.js" 完成 使用方法123456source init.sh# Or. init.shcd hocgin.github.io# 尽情hexo吧 注: 安装module时请加上 -g End]]></content>
+      <categories>
+        <category>Coder</category>
+      </categories>
+      <tags>
+        <tag>NodeJS</tag>
+        <tag>Ubuntu</tag>
+        <tag>Tips</tag>
       </tags>
   </entry>
   <entry>
@@ -493,8 +493,8 @@
         <category>OS</category>
       </categories>
       <tags>
-        <tag>Tips</tag>
         <tag>Ubuntu</tag>
+        <tag>Tips</tag>
         <tag>Gnome</tag>
       </tags>
   </entry>
