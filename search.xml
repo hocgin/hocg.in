@@ -447,19 +447,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[使用Maven下载jar包 linux版]]></title>
-    <url>%2F2016%2F04%2F25%2F%E4%BD%BF%E7%94%A8Maven%E4%B8%8B%E8%BD%BDjar%E5%8C%85-linux%E7%89%88%2F</url>
-    <content type="text"><![CDATA[这只是学习Shell的小脚本, 练手工具罢了.. 折腾!折腾啊 目录结构123Green4nodeJS├── down.sh // 下载shell，o(╯□╰)o其实就是一条shell└── pom.xml // 正常maven配置 文件内容down.sh 内容：1234567891011#!/bin/sh# Author: hocgin@gmail.com# -------------Use--------------# sh down.sh# ------------------------------# 运行pom.xml 下载jarNOW_PATH=$(cd "$(dirname "$0")"; pwd)POM_XML=$NOW_PATH"/pom.xml"TARGET_DIR=$NOW_PATH"/target"mvn -f $POM_XML dependency:copy-dependenciessudo chmod -R 777 $TARGET_DIR pom.xml 内容： 正常maven的pom.xml内容 1234567891011121314151617181920&lt;project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"&gt; &lt;!-- 项目的名称 start --&gt; &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt; &lt;groupId&gt;temp.download&lt;/groupId&gt; &lt;artifactId&gt;temp-download&lt;/artifactId&gt; &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt; &lt;!-- 项目的名称 end --&gt; &lt;dependencies&gt; &lt;!-- 要下载的jar start --&gt; &lt;dependency&gt; &lt;groupId&gt;org.json&lt;/groupId&gt; &lt;artifactId&gt;json&lt;/artifactId&gt; &lt;version&gt;20160212&lt;/version&gt; &lt;/dependency&gt; &lt;!-- 要下载的jar end --&gt; &lt;/dependencies&gt;&lt;/project&gt; 完成 使用方法123456source init.sh# Or. init.shcd hocgin.github.io# 尽情hexo吧 End]]></content>
-      <categories>
-        <category>Coder</category>
-      </categories>
-      <tags>
-        <tag>Tips</tag>
-        <tag>Maven</tag>
-        <tag>Shell</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[绿化NodeJS for linux版]]></title>
     <url>%2F2016%2F04%2F25%2F%E7%BB%BF%E5%8C%96nodejs-for-linux%E7%89%88%2F</url>
     <content type="text"><![CDATA[起因，为了方便hexo发布博客，所以想把NodeJS绿化在U盘上..谁叫网上只有win版的呢！自己码起来～绿化 o(╯□╰)o 目录结构12345678Green4nodeJS├── hocgin.github.io // github博客目录├── node // nodejs基本目录│ ├── node-linux // nodejs源文件│ ├── cache // 创建一个空文件夹，即可│ ├── init-module // 创建一个空文件夹，即可│ └── userconfig // 创建一个空文件夹，即可└── init.sh // 初始化shell文件 *重要 初始化文件 主要是加载配置环境，初始化变量 init.sh 内容123456789101112131415161718#!/bin/bash# Author: hocgin@gmail.com# -------------Use--------------# source init.sh or . init.sh# ------------------------------NOW_PATH=$(cd "$(dirname "$0")"; pwd)NODE_NAME="node-linux"NODE_HOME=$NOW_PATH"/node/"$NODE_NAMENODE_PATH=$NODE_HOME"/bin"NPM_PATH=$NODE_HOME"/lib/node_modules/npm/bin"sudo chmod +x -R $NPM_PATH"/."export PATH=$PATH:$NODE_PATH:$NPM_PATH# "/home/hocgin/.npmrc"npm set userconfig $NOW_PATH"/node/userconfig"# "/home/hocgin/.npm-init.js"npm set init-module $NOW_PATH"/node/init-module"# "/home/hocgin/.npm"npm set cache $NOW_PATH"/node/cache" 修改 /node/node-linux/lib/node_modules/npm/bin/npm 文件12# NPM_CLI_JS="$basedir/node_modules/npm/bin/npm-cli.js"NPM_CLI_JS="$basedir/npm-cli.js" 完成 使用方法123456source init.sh# Or. init.shcd hocgin.github.io# 尽情hexo吧 注: 安装module时请加上 -g End]]></content>
@@ -470,6 +457,19 @@
         <tag>NodeJS</tag>
         <tag>Ubuntu</tag>
         <tag>Tips</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[使用Maven下载jar包 linux版]]></title>
+    <url>%2F2016%2F04%2F25%2F%E4%BD%BF%E7%94%A8Maven%E4%B8%8B%E8%BD%BDjar%E5%8C%85-linux%E7%89%88%2F</url>
+    <content type="text"><![CDATA[这只是学习Shell的小脚本, 练手工具罢了.. 折腾!折腾啊 目录结构123Green4nodeJS├── down.sh // 下载shell，o(╯□╰)o其实就是一条shell└── pom.xml // 正常maven配置 文件内容down.sh 内容：1234567891011#!/bin/sh# Author: hocgin@gmail.com# -------------Use--------------# sh down.sh# ------------------------------# 运行pom.xml 下载jarNOW_PATH=$(cd "$(dirname "$0")"; pwd)POM_XML=$NOW_PATH"/pom.xml"TARGET_DIR=$NOW_PATH"/target"mvn -f $POM_XML dependency:copy-dependenciessudo chmod -R 777 $TARGET_DIR pom.xml 内容： 正常maven的pom.xml内容 1234567891011121314151617181920&lt;project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"&gt; &lt;!-- 项目的名称 start --&gt; &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt; &lt;groupId&gt;temp.download&lt;/groupId&gt; &lt;artifactId&gt;temp-download&lt;/artifactId&gt; &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt; &lt;!-- 项目的名称 end --&gt; &lt;dependencies&gt; &lt;!-- 要下载的jar start --&gt; &lt;dependency&gt; &lt;groupId&gt;org.json&lt;/groupId&gt; &lt;artifactId&gt;json&lt;/artifactId&gt; &lt;version&gt;20160212&lt;/version&gt; &lt;/dependency&gt; &lt;!-- 要下载的jar end --&gt; &lt;/dependencies&gt;&lt;/project&gt; 完成 使用方法123456source init.sh# Or. init.shcd hocgin.github.io# 尽情hexo吧 End]]></content>
+      <categories>
+        <category>Coder</category>
+      </categories>
+      <tags>
+        <tag>Tips</tag>
+        <tag>Maven</tag>
+        <tag>Shell</tag>
       </tags>
   </entry>
   <entry>

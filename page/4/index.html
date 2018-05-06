@@ -205,7 +205,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hocg.in/2016/08/02/模块设计之对接同步订单模块/" data-id="cjgtp1ofu0012pc514d59svmu" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://hocg.in/2016/08/02/模块设计之对接同步订单模块/" data-id="cjguzrtkd000z4551mbkmoatx" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -330,7 +330,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hocg.in/2016/07/30/模块设计之消息模块/" data-id="cjgtp1ofv0013pc51jy0vyrjd" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://hocg.in/2016/07/30/模块设计之消息模块/" data-id="cjguzrtkk00144551787pit95" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -455,7 +455,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hocg.in/2016/07/02/Mac-使用/" data-id="cjgtp1off0009pc51ckiqlqre" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://hocg.in/2016/07/02/Mac-使用/" data-id="cjguzrtjp000b4551jbhvshbt" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -580,7 +580,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hocg.in/2016/06/12/谈JVM-字节码/" data-id="cjgtp1ofy0016pc51jiidzcu0" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://hocg.in/2016/06/12/谈JVM-字节码/" data-id="cjguzrtkp00194551gu09329m" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -705,7 +705,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hocg.in/2016/06/12/谈JVM-各种过程/" data-id="cjgtp1ofw0014pc51i16vvj65" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://hocg.in/2016/06/12/谈JVM-各种过程/" data-id="cjguzrtkp00184551awdxdasf" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -830,7 +830,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hocg.in/2016/06/02/Https-签证/" data-id="cjgtp1ofd0006pc51sklzodbm" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://hocg.in/2016/06/02/Https-签证/" data-id="cjguzrtjl00074551zjhsfuc8" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -955,132 +955,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hocg.in/2016/05/10/ES6-新特性/" data-id="cjgtp1ofc0004pc51t8r4yms5" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-    <article id="post-使用Maven下载jar包-linux版"
-         class="article article-type-post "
-         itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-        <header class="article-header">
-            <div class="article-meta">
-                
-    <div class="article-date">
-        <a href="/2016/04/25/使用Maven下载jar包-linux版/">
-            <time datetime="2016-04-25T01:38:49.000Z" itemprop="datePublished">2016-04-25</time>
-        </a>
-    </div>
-
-
-                <div>•</div>
-                
-    <div class="article-category">
-        <a class="article-category-link" href="/categories/Coder/">Coder</a>
-    </div>
-
-            </div>
-            
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2016/04/25/使用Maven下载jar包-linux版/">使用Maven下载jar包 linux版</a>
-        </h1>
-    
-
-        </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-            
-            <p><p>这只是学习Shell的小脚本, 练手工具罢了.. 折腾!折腾啊<br></p>
-            <p class="article-more-link">
-                <a href="/2016/04/25/使用Maven下载jar包-linux版/#more">阅读全文</a>
-            </p>
-            
-
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="https://hocg.in/2016/04/25/使用Maven下载jar包-linux版/" data-id="cjgtp1ofp000spc51ikcos46y" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://hocg.in/2016/05/10/ES6-新特性/" data-id="cjguzrtjj00054551ovu62br1" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1205,7 +1080,132 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hocg.in/2016/04/25/绿化nodejs-for-linux版/" data-id="cjgtp1oft0011pc514wq9oxy6" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://hocg.in/2016/04/25/绿化nodejs-for-linux版/" data-id="cjguzrtkg001345516sbandz9" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-使用Maven下载jar包-linux版"
+         class="article article-type-post "
+         itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+        <header class="article-header">
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2016/04/25/使用Maven下载jar包-linux版/">
+            <time datetime="2016-04-25T01:38:49.000Z" itemprop="datePublished">2016-04-25</time>
+        </a>
+    </div>
+
+
+                <div>•</div>
+                
+    <div class="article-category">
+        <a class="article-category-link" href="/categories/Coder/">Coder</a>
+    </div>
+
+            </div>
+            
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2016/04/25/使用Maven下载jar包-linux版/">使用Maven下载jar包 linux版</a>
+        </h1>
+    
+
+        </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            
+            <p><p>这只是学习Shell的小脚本, 练手工具罢了.. 折腾!折腾啊<br></p>
+            <p class="article-more-link">
+                <a href="/2016/04/25/使用Maven下载jar包-linux版/#more">阅读全文</a>
+            </p>
+            
+
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://hocg.in/2016/04/25/使用Maven下载jar包-linux版/" data-id="cjguzrtk8000t45519eq50yzo" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1330,7 +1330,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hocg.in/2016/03/26/hexo-功能扩展/" data-id="cjgtp1ofo000qpc51etgriach" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://hocg.in/2016/03/26/hexo-功能扩展/" data-id="cjguzrtk7000s4551jb1vaked" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1526,7 +1526,7 @@ ga('send', 'pageview');
     <div class="outer">
         <div id="footer-info" class="inner">
             &copy; 2018&nbsp;
-            <i class="fa fa-heartbeat" style="color: #F22E3C;"></i>&nbsp;
+            <i class="fa fa-heartbeat heartbeat" style="color: #F22E3C;"></i>&nbsp;
             <a class="me" href="https://hocg.in" target="_blank">hocgin</a>.
             <p>
                 Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>.
