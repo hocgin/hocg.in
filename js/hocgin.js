@@ -1,5 +1,5 @@
 // 彩蛋
-console.log("\n %c Welcome ❤ %c https://hocg.in \n\n","color: #fadfa3; background: #030307; padding:5px 0;","background: #fadfa3; padding:5px 0;")
+console.log("%c Welcome ❤ %c https://hocg.in \n","color: #fadfa3; background: #030307; padding:5px 0;","background: #fadfa3; padding:5px 0;")
 // 切换标题
 let c,
     u = document.title;
