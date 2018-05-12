@@ -270,28 +270,6 @@
 
     
   <url>
-    <loc>https://hocg.in/2017/09/18/OpenWrt-%E5%85%A5%E9%97%A8%E7%AF%87/</loc>
-    <lastmod>2017-11-11T15:11:01.049Z</lastmod>
-    <data>
-        <display>
-        <title>OpenWrt 入门篇</title>
-        <pubTime>2017-09-18T06:32:26.000Z</pubTime>
-        
-        <tag>Tips</tag>
-         
-        <tag>OpenWrt</tag>
-         
-         
-           
-             
-              <breadCrumb title="OpenWrt" url="https://hocg.in/categories/OpenWrt/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://hocg.in/2017/06/18/Google-%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</loc>
     <lastmod>2017-11-11T15:11:01.049Z</lastmod>
     <data>
@@ -307,6 +285,28 @@
            
              
               <breadCrumb title="Other" url="https://hocg.in/categories/Other/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://hocg.in/2017/09/18/OpenWrt-%E5%85%A5%E9%97%A8%E7%AF%87/</loc>
+    <lastmod>2017-11-11T15:11:01.049Z</lastmod>
+    <data>
+        <display>
+        <title>OpenWrt 入门篇</title>
+        <pubTime>2017-09-18T06:32:26.000Z</pubTime>
+        
+        <tag>Tips</tag>
+         
+        <tag>OpenWrt</tag>
+         
+         
+           
+             
+              <breadCrumb title="OpenWrt" url="https://hocg.in/categories/OpenWrt/"/>
           
         </display>
     </data>
