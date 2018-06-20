@@ -4,6 +4,30 @@
 
     
   <url>
+    <loc>https://hocg.in/2018/06/20/%E4%BD%BF%E7%94%A8%20GitLab%20%E6%9D%A5%E5%AF%B9%20Spring%20Boot%20%E9%A1%B9%E7%9B%AE%E8%BF%9B%E8%A1%8C%20CI:CD/</loc>
+    <lastmod>2018-06-20T14:43:23.555Z</lastmod>
+    <data>
+        <display>
+        <title>使用 GitLab 来对 Spring Boot 项目进行 CI/CD</title>
+        <pubTime>2018-06-20T14:34:20.000Z</pubTime>
+        
+        <tag>DevOps</tag>
+         
+        <tag>GitLab</tag>
+         
+        <tag>CI/CD</tag>
+         
+         
+           
+             
+              <breadCrumb title="DevOps" url="https://hocg.in/categories/DevOps/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://hocg.in/2018/12/31/2018%20%E5%9B%BE%E7%89%87%E5%A2%99/</loc>
     <lastmod>2018-05-11T16:10:24.604Z</lastmod>
     <data>
@@ -270,21 +294,41 @@
 
     
   <url>
-    <loc>https://hocg.in/2017/04/20/Wireshark%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
+    <loc>https://hocg.in/2017/09/18/OpenWrt-%E5%85%A5%E9%97%A8%E7%AF%87/</loc>
     <lastmod>2017-11-11T15:11:01.049Z</lastmod>
     <data>
         <display>
-        <title>Wireshark 的使用</title>
-        <pubTime>2017-04-20T11:34:05.000Z</pubTime>
+        <title>OpenWrt 入门篇</title>
+        <pubTime>2017-09-18T06:32:26.000Z</pubTime>
         
         <tag>Tips</tag>
          
-        <tag>Wireshark</tag>
+        <tag>OpenWrt</tag>
          
          
            
              
-              <breadCrumb title="IDE" url="https://hocg.in/categories/IDE/"/>
+              <breadCrumb title="OpenWrt" url="https://hocg.in/categories/OpenWrt/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://hocg.in/2017/05/12/%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%BC%96%E7%A0%81%E7%AF%87/</loc>
+    <lastmod>2017-11-11T15:11:01.049Z</lastmod>
+    <data>
+        <display>
+        <title>字符串编码篇</title>
+        <pubTime>2017-05-12T13:09:03.000Z</pubTime>
+        
+        <tag>Tips</tag>
+         
+         
+           
+             
+              <breadCrumb title="Other" url="https://hocg.in/categories/Other/"/>
           
         </display>
     </data>
@@ -314,28 +358,6 @@
 
     
   <url>
-    <loc>https://hocg.in/2017/09/18/OpenWrt-%E5%85%A5%E9%97%A8%E7%AF%87/</loc>
-    <lastmod>2017-11-11T15:11:01.049Z</lastmod>
-    <data>
-        <display>
-        <title>OpenWrt 入门篇</title>
-        <pubTime>2017-09-18T06:32:26.000Z</pubTime>
-        
-        <tag>Tips</tag>
-         
-        <tag>OpenWrt</tag>
-         
-         
-           
-             
-              <breadCrumb title="OpenWrt" url="https://hocg.in/categories/OpenWrt/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://hocg.in/2017/06/18/Google-%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</loc>
     <lastmod>2017-11-11T15:11:01.049Z</lastmod>
     <data>
@@ -358,19 +380,21 @@
 
     
   <url>
-    <loc>https://hocg.in/2017/05/12/%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%BC%96%E7%A0%81%E7%AF%87/</loc>
+    <loc>https://hocg.in/2017/04/20/Wireshark%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
     <lastmod>2017-11-11T15:11:01.049Z</lastmod>
     <data>
         <display>
-        <title>字符串编码篇</title>
-        <pubTime>2017-05-12T13:09:03.000Z</pubTime>
+        <title>Wireshark 的使用</title>
+        <pubTime>2017-04-20T11:34:05.000Z</pubTime>
         
         <tag>Tips</tag>
+         
+        <tag>Wireshark</tag>
          
          
            
              
-              <breadCrumb title="Other" url="https://hocg.in/categories/Other/"/>
+              <breadCrumb title="IDE" url="https://hocg.in/categories/IDE/"/>
           
         </display>
     </data>
