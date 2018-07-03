@@ -1,0 +1,645 @@
+<!--
+   _                     _
+  | |__   ___   ___ __ _(_)_ __
+  | '_ \ / _ \ / __/ _` | | '_ \
+  | | | | (_) | (_| (_| | | | | |
+  |_| |_|\___/ \___\__, |_|_| |_|
+                   |___/
+-->
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <meta charset="utf-8">
+    
+    <title>关于Java并发-线程 | hocgin (๑`灬´๑)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="关于Java并发-线程">
+<meta name="keywords" content="Java,多线程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于Java并发-线程">
+<meta property="og:url" content="https://hocg.in/2018/02/27/关于Java多线程-线程/index.html">
+<meta property="og:site_name" content="hocgin (๑`灬´๑)">
+<meta property="og:description" content="关于Java并发-线程">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://7xs6lq.com1.z0.glb.clouddn.com/v2-674f0d37fca4fac1bd2df28a2b78e633_hd.jpg">
+<meta property="og:image" content="http://www.baeldung.com/wp-content/uploads/2018/02/Life_cycle_of_a_Thread_in_Java.jpg">
+<meta property="og:image" content="http://www.baeldung.com/wp-content/uploads/2018/02/Java_-_Wait_and_Notify.png">
+<meta property="og:updated_time" content="2018-07-03T05:25:05.849Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="关于Java并发-线程">
+<meta name="twitter:description" content="关于Java并发-线程">
+<meta name="twitter:image" content="http://7xs6lq.com1.z0.glb.clouddn.com/v2-674f0d37fca4fac1bd2df28a2b78e633_hd.jpg">
+    
+
+    
+        <link rel="alternate" href="/" title="hocgin (๑`灬´๑)" type="application/atom+xml" />
+    
+
+    
+        <link rel="icon" href="/favicon.ico" />
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/open-sans/styles.css">
+    <link rel="stylesheet" href="/libs/firacode/fira_code.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+        <script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-75635029-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+    
+    
+        <meta name="google-site-verification" content="BIu5FVv0ybO_ceKwrQ-A7znPy4ObYjrCIbLTvcKxqAM" />
+    
+    
+
+
+</head>
+
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <!--<i class="logo"></i>-->
+                <span class="site-title">hocgin (๑`灬´๑)</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/.">首页</a>
+                
+                    <a class="main-nav-link" href="/archives">归档</a>
+                
+                    <a class="main-nav-link" href="/categories">分类</a>
+                
+                    <a class="main-nav-link" href="/tags">标签</a>
+                
+            </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="想要查找什么..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/.">首页</a></td>
+                
+                    <td><a class="main-nav-link" href="/archives">归档</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories">分类</a></td>
+                
+                    <td><a class="main-nav-link" href="/tags">标签</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+            <section id="main"><article id="post-关于Java多线程-线程"
+         class="article article-type-post "
+         itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+        <header class="article-header">
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2018/02/27/关于Java多线程-线程/">
+            <time datetime="2018-02-26T17:13:39.000Z" itemprop="datePublished">2018-02-27</time>
+        </a>
+    </div>
+
+
+                <div>•</div>
+                
+    <div class="article-category">
+        <a class="article-category-link" href="/categories/Java/">Java</a>
+    </div>
+
+            </div>
+            
+    
+        <h1 class="article-title" itemprop="name">
+            关于Java并发-线程
+        </h1>
+    
+
+        </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            
+            
+            <p>关于Java并发-线程</p>
+<a id="more"></a>
+<h2 id="并发和并行"><a href="#并发和并行" class="headerlink" title="并发和并行"></a>并发和并行</h2><p>并行: 多核同时执行<br>并发: 单核切换执行</p>
+<p><img src="http://7xs6lq.com1.z0.glb.clouddn.com/v2-674f0d37fca4fac1bd2df28a2b78e633_hd.jpg" alt="v2-674f0d37fca4fac1bd2df28a2b78e633_hd.jpg"></p>
+<hr>
+<h2 id="线程"><a href="#线程" class="headerlink" title="线程"></a>线程</h2><h3 id="线程状态Thread-State"><a href="#线程状态Thread-State" class="headerlink" title="线程状态Thread.State"></a>线程状态<code>Thread.State</code></h3><blockquote>
+<p><code>@since 1.5</code><br>关于 Java Thread 状态不得不说的故事(网络上各种版本)..</p>
+</blockquote>
+<p><strong>线程的状态</strong><br><img src="http://www.baeldung.com/wp-content/uploads/2018/02/Life_cycle_of_a_Thread_in_Java.jpg" alt="线程状态图片"><br><a href="http://www.baeldung.com/java-thread-lifecycle" target="_blank" rel="external">原文URL</a></p>
+<h3 id="多线程操作"><a href="#多线程操作" class="headerlink" title="多线程操作"></a>多线程操作</h3><blockquote>
+<p>关于<code>wait</code>和<code>notify</code>此处涉及到线程中的几个状态，请勿混淆。</p>
+</blockquote>
+<p><strong>使用<code>wait</code>/<code>notify</code>对线程进行操作</strong><br><img src="http://www.baeldung.com/wp-content/uploads/2018/02/Java_-_Wait_and_Notify.png" alt="使用wait/notify对线程进行操作"><br><a href="http://www.baeldung.com/java-wait-notify" target="_blank" rel="external">使用wait/notify对线程进行操作</a></p>
+<h3 id="可能的误区"><a href="#可能的误区" class="headerlink" title="可能的误区"></a>可能的误区</h3><ol>
+<li><p>子线程被关闭，子线程所开启的子线程(子子线程)会不会被关闭？<br>答案: 不会的, 子线程的子线程本质上和子线程是同一等级的并不会被其影响。</p>
+</li>
+<li><p>守护线程什么情况会被关闭？<br>答案: 1. 守护线程执行完(自然关闭)。 2.所有用户线程的关闭(强行关闭)</p>
+</li>
+<li><p>什么是守护线程？<br>答案: 当线程<code>t.setDaemon(true)</code>该线程即为守护线程。铛铛铛，最出名的守护线程GC。</p>
+</li>
+<li><p>用户线程 和 守护线程 的区别？<br>答案: <code>守护线程[setDaemon(true)]</code>和<code>用户线程</code>大体并没啥区别, 但是守护线程的生命周期是随着所有用户线程的关闭而退出的。</p>
+</li>
+<li><p>如何杀死一个Java线程？<br>答案: Java已经不推荐使用<code>stop</code>进行线程的关闭了。如果线程是那种持久型操作类型的，建议开辟一个守护类型的线程进行回收(想法参照Go)。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">interrupt</span><span class="params">()</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</span><br><span class="line">    Thread thread = <span class="keyword">new</span> Thread(() -&gt; &#123;</span><br><span class="line">        <span class="keyword">while</span> (!Thread.currentThread().isInterrupted()) &#123;</span><br><span class="line">            System.out.println(<span class="string">"Do something"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">    thread.start();</span><br><span class="line">    </span><br><span class="line">    Thread.sleep(<span class="number">100</span>);</span><br><span class="line">    System.out.println(String.format(<span class="string">"线程 %s 状态 %s"</span>, thread.getName(), thread.getState()));</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 线程 RUNNABLE 状态会标记为关闭，并不进行关闭。</span></span><br><span class="line"><span class="comment">     * 线程 其他 状态会标记并进行关闭。</span></span><br><span class="line"><span class="comment">     * - 已经不推荐使用 thread.stop(); 可能会引起资源问题。</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    thread.interrupt();</span><br><span class="line">    Thread.sleep(<span class="number">100</span>);</span><br><span class="line">    System.out.println(String.format(<span class="string">"线程 %s 状态 %s"</span>, thread.getName(), thread.getState()));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<hr>
+<h2 id="线程池"><a href="#线程池" class="headerlink" title="线程池"></a>线程池</h2><h3 id="前置"><a href="#前置" class="headerlink" title="前置"></a>前置</h3><ul>
+<li>Runable 无返回值</li>
+<li>Callable 有返回值</li>
+<li>Future 返回结果</li>
+</ul>
+<h3 id="newCachedThreadPool"><a href="#newCachedThreadPool" class="headerlink" title="newCachedThreadPool()"></a>newCachedThreadPool()</h3><blockquote>
+<p>创建一个可缓存的线程池，其指定线程池中线程的存活时间，默认为 60s。</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> ExecutorService <span class="title">newCachedThreadPool</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> ThreadPoolExecutor(<span class="number">0</span>, Integer.MAX_VALUE,</span><br><span class="line">                                  <span class="number">60L</span>, TimeUnit.SECONDS,</span><br><span class="line">                                  <span class="keyword">new</span> SynchronousQueue&lt;Runnable&gt;());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>这边源码有注释:当你想实现一些缓存相关的细节(如超时时间)，应该自己使用<code>ThreadPoolExecutor</code>的构造函数来创建。</p>
+</blockquote>
+<h3 id="newSingleThreadExecutor"><a href="#newSingleThreadExecutor" class="headerlink" title="newSingleThreadExecutor"></a>newSingleThreadExecutor</h3><blockquote>
+<p>创建一个新的单线程Executor，其指定线程池中线程最大数量为1。</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> ExecutorService <span class="title">newSingleThreadExecutor</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> FinalizableDelegatedExecutorService</span><br><span class="line">        (<span class="keyword">new</span> ThreadPoolExecutor(<span class="number">1</span>, <span class="number">1</span>,</span><br><span class="line">                                <span class="number">0L</span>, TimeUnit.MILLISECONDS,</span><br><span class="line">                                <span class="keyword">new</span> LinkedBlockingQueue&lt;Runnable&gt;()));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<ol>
+<li>此处为何使用<code>门面模式</code>呢？注释写明只暴露<code>ExecutorService</code>接口的方法, 应该是为了防止强制使用<code>ThreadPoolExecutor</code>相关函数。</li>
+<li>相比于<code>newFixedThreadPool(1)</code>, 该函数保证不会被重新分配到其他的线程。</li>
+</ol>
+</blockquote>
+<h3 id="newFixedThreadPool"><a href="#newFixedThreadPool" class="headerlink" title="newFixedThreadPool"></a>newFixedThreadPool</h3><blockquote>
+<p>创建一个固定大小的线程池<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> ExecutorService <span class="title">newFixedThreadPool</span><span class="params">(<span class="keyword">int</span> nThreads)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> ThreadPoolExecutor(nThreads, nThreads,</span><br><span class="line">                                  <span class="number">0L</span>, TimeUnit.MILLISECONDS,</span><br><span class="line">                                  <span class="keyword">new</span> LinkedBlockingQueue&lt;Runnable&gt;());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>注释中说明: 提交的任务线程将一直存在，直到使用 ExecutorService#shutdown 进行退出</p>
+</blockquote>
+<h3 id="newScheduledThreadPool"><a href="#newScheduledThreadPool" class="headerlink" title="newScheduledThreadPool"></a>newScheduledThreadPool</h3><blockquote>
+<p>创建一个固定大小且可定时的线程池</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> ScheduledExecutorService <span class="title">newScheduledThreadPool</span><span class="params">(<span class="keyword">int</span> corePoolSize)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> ScheduledThreadPoolExecutor(corePoolSize);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="newSingleThreadScheduledExecutor"><a href="#newSingleThreadScheduledExecutor" class="headerlink" title="newSingleThreadScheduledExecutor"></a>newSingleThreadScheduledExecutor</h3><blockquote>
+<p>创建一个大小为1且可定时的线程池</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> ScheduledExecutorService <span class="title">newSingleThreadScheduledExecutor</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> DelegatedScheduledExecutorService</span><br><span class="line">        (<span class="keyword">new</span> ScheduledThreadPoolExecutor(<span class="number">1</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>同样使用了<code>门面模式</code></p>
+</blockquote>
+<h3 id="newWorkStealingPool-并行"><a href="#newWorkStealingPool-并行" class="headerlink" title="newWorkStealingPool 并行"></a>newWorkStealingPool <code>并行</code></h3><blockquote>
+<p>创建一个并行线程池(并行数目默认为:系统可用线程数目)<br><code>@since 1.8</code></p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> ExecutorService <span class="title">newWorkStealingPool</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> ForkJoinPool</span><br><span class="line">        (Runtime.getRuntime().availableProcessors(),</span><br><span class="line">         ForkJoinPool.defaultForkJoinWorkerThreadFactory,</span><br><span class="line">         <span class="keyword">null</span>, <span class="keyword">true</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="Fork-Join-并行"><a href="#Fork-Join-并行" class="headerlink" title="Fork/Join 并行"></a>Fork/Join <code>并行</code></h2><blockquote>
+<p>使用并行进行操作<br><code>@since 1.7</code></p>
+</blockquote>
+<h3 id="相关类-接口说明"><a href="#相关类-接口说明" class="headerlink" title="相关类/接口说明"></a>相关类/接口说明</h3><ul>
+<li>ForkJoinTask 顶层接口, 其实现了<code>Future</code>。<ul>
+<li>RecursiveTask 有返回值</li>
+<li>RecursiveAction 无返回值</li>
+</ul>
+</li>
+<li>ForkJoinPool 类似<code>Executor</code></li>
+</ul>
+<h4 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* Main.java</span></span><br><span class="line"><span class="comment">* 响应结果:</span></span><br><span class="line"><span class="comment">*   TASK:ForkJoinPool.commonPool-worker-1</span></span><br><span class="line"><span class="comment">*   TASK:ForkJoinPool.commonPool-worker-1</span></span><br><span class="line"><span class="comment">*   TASK:ForkJoinPool.commonPool-worker-2</span></span><br><span class="line"><span class="comment">*   TASK:ForkJoinPool.commonPool-worker-1</span></span><br><span class="line"><span class="comment">*   有效值 4</span></span><br><span class="line"><span class="comment">*   TASK:ForkJoinPool.commonPool-worker-2</span></span><br><span class="line"><span class="comment">*   有效值 5</span></span><br><span class="line"><span class="comment">*   TASK:ForkJoinPool.commonPool-worker-1</span></span><br><span class="line"><span class="comment">*   有效值 6</span></span><br><span class="line"><span class="comment">*   TASK:ForkJoinPool.commonPool-worker-1</span></span><br><span class="line"><span class="comment">*   有效值 7</span></span><br><span class="line"><span class="comment">*   22</span></span><br><span class="line"><span class="comment">**/</span></span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">forkJoinPool</span><span class="params">()</span> <span class="keyword">throws</span> ExecutionException, InterruptedException </span>&#123;</span><br><span class="line">        ForkJoinPool forkJoinPool = ForkJoinPool.commonPool();</span><br><span class="line">        IRecursiveTask iRecursiveTask = <span class="keyword">new</span> IRecursiveTask();</span><br><span class="line">        ForkJoinTask&lt;Integer&gt; task = forkJoinPool.submit(iRecursiveTask);</span><br><span class="line">        System.out.println(task.get());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* IRecursiveTask.java</span></span><br><span class="line"><span class="comment">* .fork() 进行任务分裂，并使用线程进行执行</span></span><br><span class="line"><span class="comment">* .join() 等待执行完成并获取结果</span></span><br><span class="line"><span class="comment">**/</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">IRecursiveTask</span> <span class="keyword">extends</span> <span class="title">RecursiveTask</span>&lt;<span class="title">Integer</span>&gt; </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> AtomicInteger FLAG = <span class="keyword">new</span> AtomicInteger(<span class="number">0</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> Integer <span class="title">compute</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"TASK:"</span> + Thread.currentThread().getName());</span><br><span class="line">        FLAG.addAndGet(<span class="number">1</span>);</span><br><span class="line">        <span class="keyword">if</span> (FLAG.get() &gt; <span class="number">3</span>) &#123;</span><br><span class="line">            System.out.println(String.format(<span class="string">"有效值 %d"</span>, FLAG.get()));</span><br><span class="line">            <span class="keyword">return</span> FLAG.get();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 为什么不用 this.fork()？</span></span><br><span class="line">        <span class="comment">// this.fork() 返回的是 this</span></span><br><span class="line">        Integer join1 = <span class="keyword">new</span> IRecursiveTask().fork().join();</span><br><span class="line">        Integer join2 = <span class="keyword">new</span> IRecursiveTask().fork().join();</span><br><span class="line">        <span class="keyword">return</span> join1 + join2;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="CompletableFuture-CompletionStage-异步-并行"><a href="#CompletableFuture-CompletionStage-异步-并行" class="headerlink" title="CompletableFuture/CompletionStage 异步+并行"></a>CompletableFuture/CompletionStage <code>异步+并行</code></h2><blockquote>
+<p>相比于<code>1.7</code>进行了更简便、友好的封装，并增加了异步通知的功能，摆脱了阻塞问题。<br><code>@since 1.8</code></p>
+</blockquote>
+<h3 id="CompletableFuture"><a href="#CompletableFuture" class="headerlink" title="CompletableFuture"></a>CompletableFuture</h3><blockquote>
+<ol>
+<li><code>CompletableFuture</code>实现了<code>CompletionStage</code>用于进行异步并行,并提供函数让多个<code>CompletionStage</code>可以进行组合操作和或操作。</li>
+</ol>
+</blockquote>
+<h3 id="静态函数-返回CompletionStage"><a href="#静态函数-返回CompletionStage" class="headerlink" title="静态函数, 返回CompletionStage"></a>静态函数, 返回<code>CompletionStage</code></h3><ul>
+<li>CompletableFuture.anyOf 任意一个执行完成</li>
+<li>CompletableFuture.allOf 所有执行完成</li>
+<li>CompletableFuture.supplyAsync 执行单个异步,有返回值(默认使用:ForkJoinPool#commonPool())。</li>
+<li>CompletableFuture.runAsync 执行单个异步,无返回值</li>
+<li>CompletableFuture.completedFuture 设定结果</li>
+</ul>
+<h3 id="CompletionStage-函数"><a href="#CompletionStage-函数" class="headerlink" title="CompletionStage 函数"></a>CompletionStage 函数</h3><ul>
+<li>thenXXX 流的流向(等待上一步执行完成)<ul>
+<li>thenApplyXXX 进行输入的转换(Apply：<code>有输入有输出</code>)</li>
+<li>thenRunXXX 对上一个结果不关心，也没有返回值(Run：<code>无输入无输出</code>)</li>
+<li>thenAcceptXXX 进行输入对处理(Accept：<code>有输入无输出</code>)</li>
+<li>thenAcceptBothXXX(CompletionStage,BiConsumer) 加入CompletionStage, 进行指定处理(<code>组合操作</code>，<code>有输入无输出</code>)。</li>
+<li>thenCombineXXX(CompletionStage,BiFunction) 加入CompletionStage, 进行指定处理(<code>组合操作</code>，<code>有输入有输出</code>)。</li>
+</ul>
+</li>
+<li>runAfterXXX 运行之后<ul>
+<li>runAfterBothXXX(CompletionStage, Runnable) 加入CompletionStage, 并在其运行后指定执行(<code>组合操作</code>，<code>无输入无输出</code>)。</li>
+<li>runAfterEither(CompletionStage, Runnable) (<code>或操作</code>)</li>
+</ul>
+</li>
+<li>完成<ul>
+<li>whenCompleteXXX 完成之后处理。(有输入无输出)</li>
+<li>handleXXX 完成之后处理。(有输入有输出)</li>
+</ul>
+</li>
+<li>异常处理<ul>
+<li>exceptionally 异常处理。</li>
+</ul>
+</li>
+<li>其他<ul>
+<li>.complete() // 立即结束并返回指定的结果</li>
+<li>.completeExceptionally() //立即异常结束</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>说明: </p>
+<ol>
+<li><code>xxxEither</code> 加入CompletionStage进行OR操作(与之前的进行对比),取最先返回的结果取其结果值。  </li>
+<li><code>xxxAsync</code> 都是异步执行</li>
+</ol>
+</blockquote>
+<hr>
+<h2 id="稍微提一下-线程组"><a href="#稍微提一下-线程组" class="headerlink" title="稍微提一下,线程组"></a>稍微提一下,线程组</h2><blockquote>
+<p>为管理 Thread 而存在的，可以进行批量标记、检查。</p>
+</blockquote>
+
+            
+    <div class="article-tag">
+        <a class="tag-link" href="/tags/Java/">Java</a>, <a class="tag-link" href="/tags/多线程/">多线程</a>
+    </div>
+
+            
+
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://hocg.in/2018/02/27/关于Java多线程-线程/" data-id="cjj59ag4r0010mh51ncf3irk6" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+
+        </footer>
+    </div>
+    
+    
+<nav id="article-nav">
+    
+        <a href="/2018/03/02/关于Java-Unsafe:LockSupport/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">上一篇</strong>
+            <div class="article-nav-title">
+                
+                    关于Java-Unsafe/LockSupport
+                
+            </div>
+        </a>
+    
+    
+        <a href="/2018/01/22/日志系统 ELK 在 Spring Boot 上的初步集成/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">下一篇</strong>
+            <div class="article-nav-title">日志系统ELK在Spring Boot上的初步集成</div>
+        </a>
+    
+</nav>
+
+
+    
+</article>
+
+
+
+    
+        <section id="comments">
+    <div id="valine-thread"></div>
+</section>
+    
+
+</section>
+            
+                
+<aside id="sidebar">
+   
+        <div class="widget-wrap">
+    <h3 class="widget-title">关注我</h3>
+    <div class="widget">
+        <a class="social" href="https://github.com/hocgin" target="_blank"><i class="fa fa-github fa-2x"></i></a>
+        <a class="social" href="https://weibo.com/u/2006617153" target="_blank"><i class="fa fa-weibo fa-2x"></i></a>
+        <a class="social" href="https://www.500px.com/hocgin" target="_blank"><i class="fa fa-500px fa-2x"></i></a>
+        <a class="social" href="https://hocg.in/atom.xml" target="_blank"><i class="fa fa-rss fa-2x"></i></a>
+        <a class="social" href="https://hocg.in/Resume" target="_blank"><span class="fa-2x">简</span></a>
+    </div>
+</div>
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">近期文章</h3>
+        <div class="widget">
+            <ul id="recent-post" class="no-thumbnail">
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <!--<p class="item-category"><a class="article-category-link" href="/categories/生活/">生活</a></p>-->
+                            <p class="item-title fa fa-angle-right"><a href="/2018/12/31/2018 图片墙/" class="title">2018 图片墙</a></p>
+                            <!--<p class="item-date"><time datetime="2018-12-31T15:59:59.000Z" itemprop="datePublished">2018-12-31</time></p>-->
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <!--<p class="item-category"><a class="article-category-link" href="/categories/Java/">Java</a></p>-->
+                            <p class="item-title fa fa-angle-right"><a href="/2018/07/02/关于Java IO、NIO、AIO/" class="title">关于Java IO、NIO、AIO</a></p>
+                            <!--<p class="item-date"><time datetime="2018-07-02T00:10:39.000Z" itemprop="datePublished">2018-07-02</time></p>-->
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <!--<p class="item-category"><a class="article-category-link" href="/categories/DevOps/">DevOps</a></p>-->
+                            <p class="item-title fa fa-angle-right"><a href="/2018/06/20/使用 GitLab 来对 Spring Boot 项目进行 CI:CD/" class="title">使用 GitLab 来对 Spring Boot 项目进行 CI/CD</a></p>
+                            <!--<p class="item-date"><time datetime="2018-06-20T14:34:20.000Z" itemprop="datePublished">2018-06-20</time></p>-->
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <!--<p class="item-category"><a class="article-category-link" href="/categories/Java/">Java</a></p>-->
+                            <p class="item-title fa fa-angle-right"><a href="/2018/03/20/关于Java-数据结构/" class="title">关于Java-数据结构</a></p>
+                            <!--<p class="item-date"><time datetime="2018-03-20T09:10:39.000Z" itemprop="datePublished">2018-03-20</time></p>-->
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <!--<p class="item-category"><a class="article-category-link" href="/categories/Java/">Java</a></p>-->
+                            <p class="item-title fa fa-angle-right"><a href="/2018/03/06/关于Java多线程-几个辅助类/" class="title">关于Java多线程-几个辅助类</a></p>
+                            <!--<p class="item-date"><time datetime="2018-03-06T09:13:39.000Z" itemprop="datePublished">2018-03-06</time></p>-->
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+    
+        
+<div class="widget-wrap" id="widget-toc">
+    <h3 class="widget-title">
+        文章目录
+    </h3>
+    <div class="widget">
+        <!--toc-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+            <div class="post-toc">
+                <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#并发和并行"><span class="nav-number">1.</span> <span class="nav-text">并发和并行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线程"><span class="nav-number">2.</span> <span class="nav-text">线程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#线程状态Thread-State"><span class="nav-number">2.1.</span> <span class="nav-text">线程状态Thread.State</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多线程操作"><span class="nav-number">2.2.</span> <span class="nav-text">多线程操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#可能的误区"><span class="nav-number">2.3.</span> <span class="nav-text">可能的误区</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线程池"><span class="nav-number">3.</span> <span class="nav-text">线程池</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#前置"><span class="nav-number">3.1.</span> <span class="nav-text">前置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#newCachedThreadPool"><span class="nav-number">3.2.</span> <span class="nav-text">newCachedThreadPool()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#newSingleThreadExecutor"><span class="nav-number">3.3.</span> <span class="nav-text">newSingleThreadExecutor</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#newFixedThreadPool"><span class="nav-number">3.4.</span> <span class="nav-text">newFixedThreadPool</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#newScheduledThreadPool"><span class="nav-number">3.5.</span> <span class="nav-text">newScheduledThreadPool</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#newSingleThreadScheduledExecutor"><span class="nav-number">3.6.</span> <span class="nav-text">newSingleThreadScheduledExecutor</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#newWorkStealingPool-并行"><span class="nav-number">3.7.</span> <span class="nav-text">newWorkStealingPool 并行</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Fork-Join-并行"><span class="nav-number">4.</span> <span class="nav-text">Fork/Join 并行</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#相关类-接口说明"><span class="nav-number">4.1.</span> <span class="nav-text">相关类/接口说明</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#案例"><span class="nav-number">4.1.1.</span> <span class="nav-text">案例</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CompletableFuture-CompletionStage-异步-并行"><span class="nav-number">5.</span> <span class="nav-text">CompletableFuture/CompletionStage 异步+并行</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CompletableFuture"><span class="nav-number">5.1.</span> <span class="nav-text">CompletableFuture</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#静态函数-返回CompletionStage"><span class="nav-number">5.2.</span> <span class="nav-text">静态函数, 返回CompletionStage</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CompletionStage-函数"><span class="nav-number">5.3.</span> <span class="nav-text">CompletionStage 函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#稍微提一下-线程组"><span class="nav-number">6.</span> <span class="nav-text">稍微提一下,线程组</span></a></li></ol>
+            </div>
+        </section>
+        <!--/toc-->
+    </div>
+</div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">归档</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">十二月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">七月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">六月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">十月 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">九月 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">七月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">六月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">五月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">九月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">七月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">四月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">3</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">标签云</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/Android/" style="font-size: 14.29px;">Android</a> <a href="/tags/CI-CD/" style="font-size: 10px;">CI/CD</a> <a href="/tags/CSS3/" style="font-size: 10px;">CSS3</a> <a href="/tags/Chrome/" style="font-size: 10px;">Chrome</a> <a href="/tags/DevOps/" style="font-size: 10px;">DevOps</a> <a href="/tags/Docker/" style="font-size: 10px;">Docker</a> <a href="/tags/ELK/" style="font-size: 10px;">ELK</a> <a href="/tags/GitLab/" style="font-size: 10px;">GitLab</a> <a href="/tags/Gnome/" style="font-size: 10px;">Gnome</a> <a href="/tags/Go/" style="font-size: 10px;">Go</a> <a href="/tags/Google/" style="font-size: 10px;">Google</a> <a href="/tags/HTML5/" style="font-size: 15.71px;">HTML5</a> <a href="/tags/HTTPS/" style="font-size: 10px;">HTTPS</a> <a href="/tags/Hexo/" style="font-size: 11.43px;">Hexo</a> <a href="/tags/IO/" style="font-size: 10px;">IO</a> <a href="/tags/JAVA/" style="font-size: 10px;">JAVA</a> <a href="/tags/JVM/" style="font-size: 11.43px;">JVM</a> <a href="/tags/Java/" style="font-size: 18.57px;">Java</a> <a href="/tags/JavaScript/" style="font-size: 12.86px;">JavaScript</a> <a href="/tags/Mac/" style="font-size: 12.86px;">Mac</a> <a href="/tags/Maven/" style="font-size: 10px;">Maven</a> <a href="/tags/Nexus/" style="font-size: 10px;">Nexus</a> <a href="/tags/Ngrok/" style="font-size: 10px;">Ngrok</a> <a href="/tags/NodeJS/" style="font-size: 12.86px;">NodeJS</a> <a href="/tags/Objective-C/" style="font-size: 10px;">Objective-C</a> <a href="/tags/Oh-My-ZSH/" style="font-size: 10px;">Oh My ZSH</a> <a href="/tags/OpenWrt/" style="font-size: 14.29px;">OpenWrt</a> <a href="/tags/PHP/" style="font-size: 10px;">PHP</a> <a href="/tags/Pjax/" style="font-size: 10px;">Pjax</a> <a href="/tags/Redis/" style="font-size: 10px;">Redis</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/Shell/" style="font-size: 11.43px;">Shell</a> <a href="/tags/Spring-Boot/" style="font-size: 10px;">Spring Boot</a> <a href="/tags/SpringBoot/" style="font-size: 10px;">SpringBoot</a> <a href="/tags/Thymeleaf/" style="font-size: 10px;">Thymeleaf</a> <a href="/tags/Tip/" style="font-size: 10px;">Tip</a> <a href="/tags/Tips/" style="font-size: 20px;">Tips</a> <a href="/tags/Ubuntu/" style="font-size: 17.14px;">Ubuntu</a> <a href="/tags/Web/" style="font-size: 10px;">Web</a> <a href="/tags/Wireshark/" style="font-size: 10px;">Wireshark</a> <a href="/tags/前端/" style="font-size: 11.43px;">前端</a> <a href="/tags/图片墙/" style="font-size: 10px;">图片墙</a> <a href="/tags/多线程/" style="font-size: 14.29px;">多线程</a> <a href="/tags/手机/" style="font-size: 10px;">手机</a> <a href="/tags/数据结构/" style="font-size: 10px;">数据结构</a> <a href="/tags/设计思路/" style="font-size: 11.43px;">设计思路</a> <a href="/tags/语法/" style="font-size: 10px;">语法</a> <a href="/tags/锁/" style="font-size: 10px;">锁</a> <a href="/tags/问题/" style="font-size: 11.43px;">问题</a>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">友情连接</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="https://blog.lutty.me/" target="_blank">lutty</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+
+            
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            &copy; 2018&nbsp;
+            <i class="fa fa-heartbeat heartbeat" style="color: #F22E3C;"></i>&nbsp;
+            <a class="me" href="https://hocg.in" target="_blank">hocgin</a>.
+            <p>
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>.
+                Theme by <a href="http://github.com/ppoffice" target="_blank">PPOffice</a>.
+                Made by <a href="https://hocg.in">hocgin</a>
+            </p>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//cdn.jsdelivr.net/gh/xcss/valine@v1.1.6/dist/Valine.min.js"></script>
+    <script>
+        new Valine({
+            el: '#valine-thread' ,
+            notify:false,
+            verify:false,
+            app_id: 'UgznLOt1wcUYIgK8LbBRwXOR-gzGzoHsz',
+            app_key: 'hyCCbbO9B8bTXEBe1KEuJ95K',
+            placeholder: '留言一下呗'
+        });
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+<script src="/js/hocgin.js"></script>
+
+    </div>
+    <script>
+        var xlm_wid='13073';
+        var xlm_url='https://www.xianliao.me/';
+    </script>
+    <script type='text/javascript' charset='UTF-8' src='http://www.xianliao.me/embed.js'></script>
+</body>
+</html>
