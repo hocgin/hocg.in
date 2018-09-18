@@ -1,3 +1,9 @@
+body {
+  cursor: url("/normal.ico"), auto;
+}
+a:hover {
+  cursor: url("/link.ico"), auto;
+}
 section#main {
   margin: 40px 0;
 }
