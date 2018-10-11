@@ -21,13 +21,13 @@
 <meta property="og:site_name" content="hocgin (๑`灬´๑)">
 <meta property="og:description" content="解决 ProgressBar 上下出现空白现象 🤠">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://7xs6lq.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-09-28%2021.58.00.png">
-<meta property="og:image" content="http://7xs6lq.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-09-28%2022.03.46.png">
-<meta property="og:updated_time" content="2017-09-28T14:15:57.000Z">
+<meta property="og:image" content="http://cdn.hocgin.top/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-09-28%2021.58.00.png">
+<meta property="og:image" content="http://cdn.hocgin.top/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-09-28%2022.03.46.png">
+<meta property="og:updated_time" content="2018-10-11T13:39:15.371Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="解决 ProgressBar 上下出现空白现象">
 <meta name="twitter:description" content="解决 ProgressBar 上下出现空白现象 🤠">
-<meta name="twitter:image" content="http://7xs6lq.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-09-28%2021.58.00.png">
+<meta name="twitter:image" content="http://cdn.hocgin.top/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-09-28%2021.58.00.png">
     
 
     
@@ -197,9 +197,9 @@ ga('send', 'pageview');
             
             <p>解决 ProgressBar 上下出现空白现象 🤠<br><a id="more"></a></p>
 <h2 id="出现问题"><a href="#出现问题" class="headerlink" title="出现问题"></a>出现问题</h2><p>一般情况我们使用如下代码来创建<code>ProgressBar</code><br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ProgressBar</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:id</span>=<span class="string">"@+id/progressBar"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">style</span>=<span class="string">"?android:attr/progressBarStyleHorizontal"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:background</span>=<span class="string">"#fff"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:max</span>=<span class="string">"100"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:indeterminate</span>=<span class="string">"true"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span>/&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>那么将会出现如下情况:<br><img src="http://7xs6lq.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-09-28%2021.58.00.png" alt="出现空白间隔问题"></p>
+<p>那么将会出现如下情况:<br><img src="http://cdn.hocgin.top/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-09-28%2021.58.00.png" alt="出现空白间隔问题"></p>
 <h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>通过变更<code>android:layout_marginBottom</code>和<code>android:layout_marginTop</code>在结合<code>android:background</code>设置为透明来处理这个问题:<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ProgressBar</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:id</span>=<span class="string">"@+id/progressBar"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">style</span>=<span class="string">"?android:attr/progressBarStyleHorizontal"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_marginBottom</span>=<span class="string">"-7dp"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_marginTop</span>=<span class="string">"-7dp"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:background</span>=<span class="string">"#00ffffff"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:max</span>=<span class="string">"100"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:indeterminate</span>=<span class="string">"true"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span>/&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>以下是处理后的结果<br><img src="http://7xs6lq.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-09-28%2022.03.46.png" alt="解决问题后"></p>
+<p>以下是处理后的结果<br><img src="http://cdn.hocgin.top/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-09-28%2022.03.46.png" alt="解决问题后"></p>
 
             
     <div class="article-tag">
@@ -216,7 +216,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hocg.in/2017/09/27/解决ProgressBar顶部出现空白现象/" data-id="cjm7lscru001enj51x893wdrp" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://hocg.in/2017/09/27/解决ProgressBar顶部出现空白现象/" data-id="cjn4mqnj2001e2a5113bcj9st" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
