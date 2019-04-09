@@ -156,6 +156,1201 @@ ga('send', 'pageview');
             
             <section id="main">
 
+    <article id="post-JQuery.pjax无法再次初始化当前页面的JS"
+         class="article article-type-post "
+         itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+        <header class="article-header">
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2017/10/19/JQuery.pjax无法再次初始化当前页面的JS/">
+            <time datetime="2017-10-19T14:07:20.000Z" itemprop="datePublished">2017-10-19</time>
+        </a>
+    </div>
+
+
+                <div>•</div>
+                
+    <div class="article-category">
+        <a class="article-category-link" href="/categories/Web/">Web</a>
+    </div>
+
+            </div>
+            
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2017/10/19/JQuery.pjax无法再次初始化当前页面的JS/">JQuery.pjax 无法再次初始化当前页面的JS</a>
+        </h1>
+    
+
+        </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            
+            <p><p>Pjax 很久之前用过一次, 这一次在整合后台模版，发现网上对这个坑竟然是改源码…在这详细记录一下。</p></p>
+            <p class="article-more-link">
+                <a href="/2017/10/19/JQuery.pjax无法再次初始化当前页面的JS/#more">阅读全文</a>
+            </p>
+            
+
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://hocg.in/2017/10/19/JQuery.pjax无法再次初始化当前页面的JS/" data-id="cju97ugnq000bhu513jujn701" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-Thymeleaf-3.0-手册"
+         class="article article-type-post "
+         itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+        <header class="article-header">
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2017/10/18/Thymeleaf-3.0-手册/">
+            <time datetime="2017-10-18T08:40:51.000Z" itemprop="datePublished">2017-10-18</time>
+        </a>
+    </div>
+
+
+                <div>•</div>
+                
+    <div class="article-category">
+        <a class="article-category-link" href="/categories/Server/">Server</a>
+    </div>
+
+            </div>
+            
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2017/10/18/Thymeleaf-3.0-手册/">Thymeleaf 3.0 手册</a>
+        </h1>
+    
+
+        </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            
+            <p><p>Spring 官方推崇的模版引擎，遵循 HTML5规范。<br></p>
+            <p class="article-more-link">
+                <a href="/2017/10/18/Thymeleaf-3.0-手册/#more">阅读全文</a>
+            </p>
+            
+
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://hocg.in/2017/10/18/Thymeleaf-3.0-手册/" data-id="cju97ugtc001ohu51m43a33ts" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-JDK8 新特性的使用"
+         class="article article-type-post "
+         itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+        <header class="article-header">
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2017/10/10/JDK8 新特性的使用/">
+            <time datetime="2017-10-10T02:02:00.000Z" itemprop="datePublished">2017-10-10</time>
+        </a>
+    </div>
+
+
+                <div>•</div>
+                
+    <div class="article-category">
+        <a class="article-category-link" href="/categories/Java/">Java</a>
+    </div>
+
+            </div>
+            
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2017/10/10/JDK8 新特性的使用/">JDK8 新特性的使用</a>
+        </h1>
+    
+
+        </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            
+            <p><p>JDK8 新特性的使用<br></p>
+            <p class="article-more-link">
+                <a href="/2017/10/10/JDK8 新特性的使用/#more">阅读全文</a>
+            </p>
+            
+
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://hocg.in/2017/10/10/JDK8 新特性的使用/" data-id="cju97ugt6001ihu51n5skvz19" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-Java 线程池 和 锁 小记"
+         class="article article-type-post "
+         itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+        <header class="article-header">
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2017/10/07/Java 线程池 和 锁 小记/">
+            <time datetime="2017-10-06T17:03:29.000Z" itemprop="datePublished">2017-10-07</time>
+        </a>
+    </div>
+
+
+                <div>•</div>
+                
+    <div class="article-category">
+        <a class="article-category-link" href="/categories/Java/">Java</a>
+    </div>
+
+            </div>
+            
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2017/10/07/Java 线程池 和 锁 小记/">Java线程池和锁-小记</a>
+        </h1>
+    
+
+        </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            
+            <p><p>提取想要的apk， 例如CM ROM包中的含天气的时钟不错！</p></p>
+            <p class="article-more-link">
+                <a href="/2017/10/07/Java 线程池 和 锁 小记/#more">阅读全文</a>
+            </p>
+            
+
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://hocg.in/2017/10/07/Java 线程池 和 锁 小记/" data-id="cju97ugnp000ahu514yvpnsyu" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-TextView 滚动问题"
+         class="article article-type-post "
+         itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+        <header class="article-header">
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2017/09/28/TextView 滚动问题/">
+            <time datetime="2017-09-28T13:47:21.000Z" itemprop="datePublished">2017-09-28</time>
+        </a>
+    </div>
+
+
+                <div>•</div>
+                
+    <div class="article-category">
+        <a class="article-category-link" href="/categories/Android/">Android</a>
+    </div>
+
+            </div>
+            
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2017/09/28/TextView 滚动问题/">解决 WebView 点击时网页不断闪耀</a>
+        </h1>
+    
+
+        </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            
+            <p><p>解决高版本 WebView 点击时网页不断闪耀的问题 🤗<br></p>
+            <p class="article-more-link">
+                <a href="/2017/09/28/TextView 滚动问题/#more">阅读全文</a>
+            </p>
+            
+
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://hocg.in/2017/09/28/TextView 滚动问题/" data-id="cju97ugo0000mhu51a4mv6kx7" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-解决WebView点击时网页不断闪耀"
+         class="article article-type-post "
+         itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+        <header class="article-header">
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2017/09/28/解决WebView点击时网页不断闪耀/">
+            <time datetime="2017-09-28T13:47:21.000Z" itemprop="datePublished">2017-09-28</time>
+        </a>
+    </div>
+
+
+                <div>•</div>
+                
+    <div class="article-category">
+        <a class="article-category-link" href="/categories/Android/">Android</a>
+    </div>
+
+            </div>
+            
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2017/09/28/解决WebView点击时网页不断闪耀/">解决 WebView 点击时网页不断闪耀</a>
+        </h1>
+    
+
+        </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            
+            <p><p>解决高版本 WebView 点击时网页不断闪耀的问题 🤗<br></p>
+            <p class="article-more-link">
+                <a href="/2017/09/28/解决WebView点击时网页不断闪耀/#more">阅读全文</a>
+            </p>
+            
+
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://hocg.in/2017/09/28/解决WebView点击时网页不断闪耀/" data-id="cju97ugow001dhu51r41de87w" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-解决ProgressBar顶部出现空白现象"
+         class="article article-type-post "
+         itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+        <header class="article-header">
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2017/09/27/解决ProgressBar顶部出现空白现象/">
+            <time datetime="2017-09-27T02:27:22.000Z" itemprop="datePublished">2017-09-27</time>
+        </a>
+    </div>
+
+
+                <div>•</div>
+                
+    <div class="article-category">
+        <a class="article-category-link" href="/categories/Android/">Android</a>
+    </div>
+
+            </div>
+            
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2017/09/27/解决ProgressBar顶部出现空白现象/">解决 ProgressBar 上下出现空白现象</a>
+        </h1>
+    
+
+        </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            
+            <p><p>解决 ProgressBar 上下出现空白现象 🤠<br></p>
+            <p class="article-more-link">
+                <a href="/2017/09/27/解决ProgressBar顶部出现空白现象/#more">阅读全文</a>
+            </p>
+            
+
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://hocg.in/2017/09/27/解决ProgressBar顶部出现空白现象/" data-id="cju97ugov001chu51xmik7gdl" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-OpenWrt-入门篇"
+         class="article article-type-post "
+         itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+        <header class="article-header">
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2017/09/18/OpenWrt-入门篇/">
+            <time datetime="2017-09-18T06:32:26.000Z" itemprop="datePublished">2017-09-18</time>
+        </a>
+    </div>
+
+
+                <div>•</div>
+                
+    <div class="article-category">
+        <a class="article-category-link" href="/categories/OpenWrt/">OpenWrt</a>
+    </div>
+
+            </div>
+            
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2017/09/18/OpenWrt-入门篇/">OpenWrt 入门篇</a>
+        </h1>
+    
+
+        </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            
+            <p><p>今天刚好重刷 OpenWrt 固件，整理整理<br></p>
+            <p class="article-more-link">
+                <a href="/2017/09/18/OpenWrt-入门篇/#more">阅读全文</a>
+            </p>
+            
+
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://hocg.in/2017/09/18/OpenWrt-入门篇/" data-id="cju97ugnv000ghu5116tbxubm" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-OpenWrt-Shadowsocks"
+         class="article article-type-post "
+         itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+        <header class="article-header">
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2017/09/18/OpenWrt-Shadowsocks/">
+            <time datetime="2017-09-18T06:32:26.000Z" itemprop="datePublished">2017-09-18</time>
+        </a>
+    </div>
+
+
+                <div>•</div>
+                
+    <div class="article-category">
+        <a class="article-category-link" href="/categories/OpenWrt/">OpenWrt</a>
+    </div>
+
+            </div>
+            
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2017/09/18/OpenWrt-Shadowsocks/">在 OpenWrt 部署 Shadowsocks</a>
+        </h1>
+    
+
+        </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            
+            
+            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>关于 OpenWrt 请看 <a href="http://hocg.in/2017/09/18/OpenWrt-%E5%85%A5%E9%97%A8%E7%AF%87/#more">OpenWrt 入门篇</a><br>关于 Shadowsocks 请看 <a href="https://www.wikiwand.com/zh/Shadowsocks" target="_blank" rel="external">什么是 Shadowsocks</a><br>已有 Shadowsocks 账号, 后续可能会记录。<br><strong>重要:</strong> 本文前提为读者已观看过以上2篇文章，如阅读引起任何不适请立即停止。</p>
+<h2 id="关于-Shadowsocks-libev-模块"><a href="#关于-Shadowsocks-libev-模块" class="headerlink" title="关于 Shadowsocks-libev 模块"></a>关于 Shadowsocks-libev 模块</h2><blockquote>
+<p><a href="https://github.com/shadowsocks/shadowsocks-libev" target="_blank" rel="external">Shadowsocks-libev 官网</a><br><a href="https://sourceforge.net/projects/openwrt-dist/files/shadowsocks-libev" target="_blank" rel="external">Shadowsocks-libev 下载地址 (推荐下载非spec版本)</a></p>
+</blockquote>
+<p>ss-server：服务器端，部署于服务器，提供 shadowsocks 服务。<br>ss-local：客户端，提供 SOCKS 代理<br>ss-redir：客户端，提供透明代理, 从 v2.2.0 开始支持 UDP<br>ss-tunnel: 客户端，提供端口转发, 可用于 DNS 查询</p>
+<p><strong>Note:</strong> 下载的时候请根据 CPU 类型, 查看方式请<a href="">参照</a></p>
+<h2 id="安装-Shadowsocks-libev"><a href="#安装-Shadowsocks-libev" class="headerlink" title="安装 Shadowsocks-libev"></a>安装 Shadowsocks-libev</h2><ol>
+<li><p>将下载的<code>Shadowsocks-libev</code>移至路由器<code>/tmp</code>目录</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp shadowsocks-libev-polarssl_2.4.8-2_ar71xx.ipk root@192.168.1.1:/tmp</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装依赖</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">opkg update</span><br><span class="line">opkg install iptables-mod-nat-extra ipset libopenssl</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装<code>Shadowsocks-libev</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">opkg install /tmp/shadowsocks-libev-polarssl_2.4.8-2_ar71xx.ipk</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="配置-shadowsocks"><a href="#配置-shadowsocks" class="headerlink" title="配置 shadowsocks"></a>配置 shadowsocks</h2><ol>
+<li><p>修改<code>/etc/shadowsocks.json</code>为实际参数。格式如下</p>
+ <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"server"</span>: <span class="string">"127.0.0.1"</span>,</span><br><span class="line">  <span class="attr">"server_port"</span>: <span class="number">443</span>,</span><br><span class="line">  <span class="attr">"local_port"</span>: <span class="number">7654</span>,</span><br><span class="line">  <span class="attr">"password"</span>: <span class="string">"password"</span>,</span><br><span class="line">  <span class="attr">"timeout"</span>: <span class="number">60</span>,</span><br><span class="line">  <span class="attr">"method"</span>: <span class="string">"rc4-md5"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p> 此处, <strong>“local_port”: 7654</strong> 为重点。不理解的, 请不要进行修改此项，后续会解释。<br> <strong>注:</strong> <code>/etc/shadowsocks.json</code> 为配置文件, 存储 shadowsocks 的账号、 密码及设置。</p>
+</li>
+<li><p>查看<code>/etc/init.d/shadowsocks</code>。内容如下</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/bin/sh /etc/rc.common</span></span><br><span class="line"></span><br><span class="line">START=95</span><br><span class="line"></span><br><span class="line">SERVICE_USE_PID=1</span><br><span class="line">SERVICE_WRITE_PID=1</span><br><span class="line">SERVICE_DAEMONIZE=1</span><br><span class="line"></span><br><span class="line">CONFIG=/etc/shadowsocks.json</span><br><span class="line"></span><br><span class="line">start() &#123;</span><br><span class="line">  service_start /usr/bin/ss-local -c $CONFIG -b 0.0.0.0</span><br><span class="line"><span class="meta">  #</span><span class="bash">service_start /usr/bin/ss-redir -c <span class="variable">$CONFIG</span> -b 0.0.0.0</span></span><br><span class="line"><span class="meta">  #</span><span class="bash">service_start /usr/bin/ss-tunnel -c <span class="variable">$CONFIG</span> -b 0.0.0.0 -l 5353 -L 8.8.8.8:53 -u</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">stop() &#123;</span><br><span class="line">  service_stop /usr/bin/ss-local</span><br><span class="line"><span class="meta">  #</span><span class="bash">service_stop /usr/bin/ss-redir</span></span><br><span class="line"><span class="meta">  #</span><span class="bash">service_stop /usr/bin/ss-tunnel</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p> <strong>注:</strong> <code>/etc/init.d/shadowsocks</code> 为运行文件, shadowsocks 的启动、停止、重启。</p>
+</li>
+<li><p>运行检查配置是否正确</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/etc/init.d/shadowsocks restart</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用代理进行检查, Chrome 浏览器下载 <a href="https://chrome.google.com/webstore/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif" target="_blank" rel="external">ExtensionProxy SwitchyOmega</a>，墙内地址后续补上..。对插件进行如下配置:<br><img src="http://7xs6lq.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-09-18%2015.43.33.png" alt="image"></p>
+</li>
+<li>在 Chrome 浏览器使用 ExtensionProxy SwitchyOmega 切换到该协议并访问 <a href="https://www.youtube.com/" target="_blank" rel="external">YouTuBe</a>，验证其配置的正确性。</li>
+<li>关闭 shadowsocks <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/etc/init.d/shadowsocks stop</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="自动化"><a href="#自动化" class="headerlink" title="自动化"></a>自动化</h2><h3 id="安装-dnsmasq-amp-ipset"><a href="#安装-dnsmasq-amp-ipset" class="headerlink" title="安装 dnsmasq &amp; ipset"></a>安装 dnsmasq &amp; ipset</h3><ol>
+<li><p>查看是否支持 ipset</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">opkg update</span><br><span class="line">opkg list-installed    </span><br><span class="line">dnsmasq -v</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 如果不支持，卸载掉安装full版</span></span><br><span class="line">opkg remove dnsmasq</span><br><span class="line">opkg install dnsmasq-full</span><br><span class="line">opkg install ipset iptables-mod-nat-extra</span><br><span class="line">opkg install /tmp/pdnsd_1.2.9a-par-a8e46ccba7b0fa2230d6c42ab6dcd92926f6c21d_ar71xx.ipk</span><br></pre></td></tr></table></figure>
+<p> 附件:</p>
+<ul>
+<li><a href="预留">pdnsd_1.2.9a-par-a8e46ccba7b0fa2230d6c42ab6dcd92926f6c21d_ar71xx.ipk 下载</a></li>
+</ul>
+</li>
+<li><p>配置 dnsmasq 和 ipset</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/dnsmasq.conf</span><br><span class="line">mkdir /etc/dnsmasq.d</span><br></pre></td></tr></table></figure>
+<p> 在末尾加入</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">conf-dir=/etc/dnsmasq.d</span><br><span class="line">cache-size=1500      #修改dnsmasq缓存大小，默认为150。</span><br><span class="line">min-cache-ttl=720    #修改DNS缓存最小有效期（秒）。仅适用于aa65535的dnsmasq-full版本。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>下载国内重要网站名单，用国内域名服务器查询iP地址</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd /etc/dnsmasq.d</span><br><span class="line">opkg install wget</span><br><span class="line">wget -4 --no-check-certificate -O /etc/dnsmasq.d/accelerated-domains.china.conf https://github.com/felixonmars/dnsmasq-china-list/raw/master/accelerated-domains.china.conf</span><br><span class="line">wget -4 --no-check-certificate -O /etc/dnsmasq.d/bogus-nxdomain.china.conf https://github.com/felixonmars/dnsmasq-china-list/raw/master/bogus-nxdomain.china.conf</span><br><span class="line">echo "server=/#/127.0.0.1#3210" &gt; gfwlist.conf</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改<code>/etc/init.d/shadowsocks</code>启动文件, 内容如下</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/bin/sh /etc/rc.common</span></span><br><span class="line"></span><br><span class="line">START=95</span><br><span class="line"></span><br><span class="line">SERVICE_USE_PID=1</span><br><span class="line">SERVICE_WRITE_PID=1</span><br><span class="line">SERVICE_DAEMONIZE=1</span><br><span class="line"></span><br><span class="line">CONFIG=/etc/shadowsocks.json</span><br><span class="line"></span><br><span class="line">start() &#123;</span><br><span class="line">    sed -i 's/114.114.114.114/127.0.0.1#3210/' /etc/dnsmasq.d/gfwlist.conf</span><br><span class="line">    /etc/init.d/dnsmasq restart</span><br><span class="line"></span><br><span class="line">    service_start /usr/bin/ss-redir -b 0.0.0.0 -c $CONFIG -f /var/run/shadowsocks.pid -u</span><br><span class="line">    service_start /usr/bin/ss-tunnel -b 0.0.0.0 -c $CONFIG -l 3210 -L 8.8.8.8:53 -u</span><br><span class="line">    /usr/bin/shadowsocks-firewall</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">stop() &#123;</span><br><span class="line">    sed -i 's/127.0.0.1#3210/114.114.114.114/' /etc/dnsmasq.d/gfwlist.conf</span><br><span class="line">    /etc/init.d/dnsmasq restart</span><br><span class="line"></span><br><span class="line">    service_stop /usr/bin/ss-redir</span><br><span class="line">    service_stop /usr/bin/ss-tunnel</span><br><span class="line">    killall ss-redir</span><br><span class="line">    killall ss-tunnel</span><br><span class="line">    /etc/init.d/firewall restart</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>配置 iptables 防火墙转发IP和端口<br><strong>创建执行文件 /usr/bin/shadowsocks-firewall</strong></p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">touch /usr/bin/shadowsocks-firewall</span><br><span class="line">chmod +x /usr/bin/shadowsocks-firewall</span><br></pre></td></tr></table></figure>
+<p> <strong>/usr/bin/shadowsocks-firewall 其内容如下</strong></p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/bin/sh</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">create a new chain named SHADOWSOCKS</span></span><br><span class="line">iptables -t nat -N SHADOWSOCKS</span><br><span class="line">iptables -t nat -N SHADOWSOCKS_WHITELIST</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> Ignore your shadowsocks server<span class="string">'s addresses</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> It<span class="string">'s very IMPORTANT, just be careful.</span></span></span><br><span class="line">iptables -t nat -A SHADOWSOCKS -d 此处为服务器IP -j RETURN</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> Ignore LANs IP address</span></span><br><span class="line">iptables -t nat -A SHADOWSOCKS -d 0.0.0.0/8 -j RETURN</span><br><span class="line">iptables -t nat -A SHADOWSOCKS -d 10.0.0.0/8 -j RETURN</span><br><span class="line">iptables -t nat -A SHADOWSOCKS -d 127.0.0.0/8 -j RETURN</span><br><span class="line">iptables -t nat -A SHADOWSOCKS -d 169.254.0.0/16 -j RETURN</span><br><span class="line">iptables -t nat -A SHADOWSOCKS -d 172.16.0.0/12 -j RETURN</span><br><span class="line">iptables -t nat -A SHADOWSOCKS -d 192.168.0.0/16 -j RETURN</span><br><span class="line">iptables -t nat -A SHADOWSOCKS -d 224.0.0.0/4 -j RETURN</span><br><span class="line">iptables -t nat -A SHADOWSOCKS -d 240.0.0.0/4 -j RETURN</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> Check whitelist</span></span><br><span class="line">iptables -t nat -A SHADOWSOCKS -j SHADOWSOCKS_WHITELIST</span><br><span class="line">iptables -t nat -A SHADOWSOCKS -m mark --mark 1 -j RETURN</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="keyword">for</span> hulu.com</span></span><br><span class="line">iptables -t nat -A SHADOWSOCKS -p tcp --dport 1935 -j REDIRECT --to-ports 7654</span><br><span class="line">iptables -t nat -A SHADOWSOCKS -p udp --dport 1935 -j REDIRECT --to-ports 7654</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> <span class="keyword">for</span> Chrome browser and youtube.com</span></span><br><span class="line">iptables -t nat -A SHADOWSOCKS -p udp --dport 443 -j REDIRECT --to-ports 7654</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> Anything <span class="keyword">else</span> should be redirected to shadowsocks<span class="string">'s local port</span></span></span><br><span class="line">iptables -t nat -A SHADOWSOCKS -p tcp -j REDIRECT --to-ports 7654</span><br><span class="line"><span class="meta">#</span><span class="bash"> Apply the rules</span></span><br><span class="line">iptables -t nat -A PREROUTING -p tcp -j SHADOWSOCKS</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> Ignore China IP address</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> <span class="keyword">for</span> white_ip <span class="keyword">in</span> `cat /etc/chinadns_chnroute.txt`;</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> <span class="keyword">do</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash">   iptables -t nat -A SHADOWSOCKS_WHITELIST -d <span class="string">"<span class="variable">$&#123;white_ip&#125;</span>"</span> -j MARK --<span class="built_in">set</span>-mark 1</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> <span class="keyword">done</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> Ignore Asia IP address</span></span><br><span class="line">iptables -t nat -A SHADOWSOCKS_WHITELIST -d 1.0.0.0/8 -j MARK --set-mark 1</span><br><span class="line">iptables -t nat -A SHADOWSOCKS_WHITELIST -d 14.0.0.0/8 -j MARK --set-mark 1</span><br><span class="line">iptables -t nat -A SHADOWSOCKS_WHITELIST -d 27.0.0.0/8 -j MARK --set-mark 1</span><br><span class="line">iptables -t nat -A SHADOWSOCKS_WHITELIST -d 36.0.0.0/8 -j MARK --set-mark 1</span><br><span class="line">iptables -t nat -A SHADOWSOCKS_WHITELIST -d 39.0.0.0/8 -j MARK --set-mark 1</span><br><span class="line">iptables -t nat -A SHADOWSOCKS_WHITELIST -d 42.0.0.0/8 -j MARK --set-mark 1</span><br><span class="line">iptables -t nat -A SHADOWSOCKS_WHITELIST -d 49.0.0.0/8 -j MARK --set-mark 1</span><br><span class="line">iptables -t nat -A SHADOWSOCKS_WHITELIST -d 58.0.0.0/8 -j MARK --set-mark 1</span><br><span class="line">iptables -t nat -A SHADOWSOCKS_WHITELIST -d 59.0.0.0/8 -j MARK --set-mark 1</span><br><span class="line">iptables -t nat -A SHADOWSOCKS_WHITELIST -d 60.0.0.0/8 -j MARK --set-mark 1</span><br><span class="line">iptables -t nat -A SHADOWSOCKS_WHITELIST -d 61.0.0.0/8 -j MARK --set-mark 1</span><br><span class="line">iptables -t nat -A SHADOWSOCKS_WHITELIST -d 101.0.0.0/8 -j MARK --set-mark 1</span><br><span class="line">iptables -t nat -A SHADOWSOCKS_WHITELIST -d 103.0.0.0/8 -j MARK --set-mark 1</span><br><span class="line">iptables -t nat -A SHADOWSOCKS_WHITELIST -d 106.0.0.0/8 -j MARK --set-mark 1</span><br><span class="line">iptables -t nat -A SHADOWSOCKS_WHITELIST -d 110.0.0.0/8 -j MARK --set-mark 1</span><br><span class="line">iptables -t nat -A SHADOWSOCKS_WHITELIST -d 111.0.0.0/8 -j MARK --set-mark 1</span><br><span class="line">iptables -t nat -A SHADOWSOCKS_WHITELIST -d 112.0.0.0/8 -j MARK --set-mark 1</span><br><span class="line">iptables -t nat -A SHADOWSOCKS_WHITELIST -d 113.0.0.0/8 -j MARK --set-mark 1</span><br><span class="line">iptables -t nat -A SHADOWSOCKS_WHITELIST -d 114.0.0.0/8 -j MARK --set-mark 1</span><br><span class="line">iptables -t nat -A SHADOWSOCKS_WHITELIST -d 115.0.0.0/8 -j MARK --set-mark 1</span><br><span class="line">iptables -t nat -A SHADOWSOCKS_WHITELIST -d 116.0.0.0/8 -j MARK --set-mark 1</span><br><span class="line">iptables -t nat -A SHADOWSOCKS_WHITELIST -d 117.0.0.0/8 -j MARK --set-mark 1</span><br><span class="line">iptables -t nat -A SHADOWSOCKS_WHITELIST -d 118.0.0.0/8 -j MARK --set-mark 1</span><br><span class="line">iptables -t nat -A SHADOWSOCKS_WHITELIST -d 119.0.0.0/8 -j MARK --set-mark 1</span><br><span class="line">iptables -t nat -A SHADOWSOCKS_WHITELIST -d 120.0.0.0/8 -j MARK --set-mark 1</span><br><span class="line">iptables -t nat -A SHADOWSOCKS_WHITELIST -d 121.0.0.0/8 -j MARK --set-mark 1</span><br><span class="line">iptables -t nat -A SHADOWSOCKS_WHITELIST -d 122.0.0.0/8 -j MARK --set-mark 1</span><br><span class="line">iptables -t nat -A SHADOWSOCKS_WHITELIST -d 123.0.0.0/8 -j MARK --set-mark 1</span><br><span class="line">iptables -t nat -A SHADOWSOCKS_WHITELIST -d 124.0.0.0/8 -j MARK --set-mark 1</span><br><span class="line">iptables -t nat -A SHADOWSOCKS_WHITELIST -d 125.0.0.0/8 -j MARK --set-mark 1</span><br><span class="line">iptables -t nat -A SHADOWSOCKS_WHITELIST -d 126.0.0.0/8 -j MARK --set-mark 1</span><br><span class="line">iptables -t nat -A SHADOWSOCKS_WHITELIST -d 169.0.0.0/8 -j MARK --set-mark 1</span><br><span class="line">iptables -t nat -A SHADOWSOCKS_WHITELIST -d 175.0.0.0/8 -j MARK --set-mark 1</span><br><span class="line">iptables -t nat -A SHADOWSOCKS_WHITELIST -d 180.0.0.0/8 -j MARK --set-mark 1</span><br><span class="line">iptables -t nat -A SHADOWSOCKS_WHITELIST -d 182.0.0.0/8 -j MARK --set-mark 1</span><br><span class="line">iptables -t nat -A SHADOWSOCKS_WHITELIST -d 183.0.0.0/8 -j MARK --set-mark 1</span><br><span class="line">iptables -t nat -A SHADOWSOCKS_WHITELIST -d 202.0.0.0/8 -j MARK --set-mark 1</span><br><span class="line">iptables -t nat -A SHADOWSOCKS_WHITELIST -d 203.0.0.0/8 -j MARK --set-mark 1</span><br><span class="line">iptables -t nat -A SHADOWSOCKS_WHITELIST -d 210.0.0.0/8 -j MARK --set-mark 1</span><br><span class="line">iptables -t nat -A SHADOWSOCKS_WHITELIST -d 211.0.0.0/8 -j MARK --set-mark 1</span><br><span class="line">iptables -t nat -A SHADOWSOCKS_WHITELIST -d 218.0.0.0/8 -j MARK --set-mark 1</span><br><span class="line">iptables -t nat -A SHADOWSOCKS_WHITELIST -d 219.0.0.0/8 -j MARK --set-mark 1</span><br><span class="line">iptables -t nat -A SHADOWSOCKS_WHITELIST -d 220.0.0.0/8 -j MARK --set-mark 1</span><br><span class="line">iptables -t nat -A SHADOWSOCKS_WHITELIST -d 221.0.0.0/8 -j MARK --set-mark 1</span><br><span class="line">iptables -t nat -A SHADOWSOCKS_WHITELIST -d 222.0.0.0/8 -j MARK --set-mark 1</span><br><span class="line">iptables -t nat -A SHADOWSOCKS_WHITELIST -d 223.0.0.0/8 -j MARK --set-mark 1</span><br></pre></td></tr></table></figure>
+<p> <strong>重要:</strong></p>
+<ol>
+<li><code>此处为服务器IP</code>更换为实际IP。</li>
+<li><code>Ignore Asia IP address</code>为亚洲IP地址段。如果路由器内存够大的话，可开启<code>Ignore China IP address</code>。<a href="https://github.com/softwaredownload/openwrt-fanqiang/blob/master/openwrt/default/etc/chinadns_chnroute.txt" target="_blank" rel="external">chinadns_chnroute.txt 文件下载</a></li>
+<li><code>--to-ports 7654</code>即<code>/etc/shadowsocks.json</code>中的 <strong>“local_port”: 7654</strong><h3 id="shadowsocks-控制"><a href="#shadowsocks-控制" class="headerlink" title="shadowsocks 控制"></a>shadowsocks 控制</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">/etc/init.d/shadowsocks stop</span><br><span class="line">/etc/init.d/shadowsocks start</span><br><span class="line">/etc/init.d/shadowsocks enable</span><br><span class="line">/etc/init.d/shadowsocks disable</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+</ol>
+
+            
+    <div class="article-tag">
+        <a class="tag-link" href="/tags/OpenWrt/">OpenWrt</a>, <a class="tag-link" href="/tags/Tips/">Tips</a>
+    </div>
+
+            
+
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://hocg.in/2017/09/18/OpenWrt-Shadowsocks/" data-id="cju97ugta001lhu51cqg90kqc" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
     <article id="post-关于Android Studio 启动Android模拟器失败问题"
          class="article article-type-post "
          itemscope itemprop="blogPost">
@@ -205,1132 +1400,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hocg.in/2017/07/02/关于Android Studio 启动Android模拟器失败问题/" data-id="cjn4mqnim000x2a51k6yx7r7y" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-    <article id="post-Google-使用技巧"
-         class="article article-type-post "
-         itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-        <header class="article-header">
-            <div class="article-meta">
-                
-    <div class="article-date">
-        <a href="/2017/06/18/Google-使用技巧/">
-            <time datetime="2017-06-18T03:24:06.000Z" itemprop="datePublished">2017-06-18</time>
-        </a>
-    </div>
-
-
-                <div>•</div>
-                
-    <div class="article-category">
-        <a class="article-category-link" href="/categories/Other/">Other</a>
-    </div>
-
-            </div>
-            
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2017/06/18/Google-使用技巧/">Google 使用技巧</a>
-        </h1>
-    
-
-        </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-            
-            <p><p>摩擦 Google 利器。</p></p>
-            <p class="article-more-link">
-                <a href="/2017/06/18/Google-使用技巧/#more">阅读全文</a>
-            </p>
-            
-
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="https://hocg.in/2017/06/18/Google-使用技巧/" data-id="cjn4mqni600082a51obvftfl9" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-    <article id="post-字符串编码篇"
-         class="article article-type-post "
-         itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-        <header class="article-header">
-            <div class="article-meta">
-                
-    <div class="article-date">
-        <a href="/2017/05/12/字符串编码篇/">
-            <time datetime="2017-05-12T13:09:03.000Z" itemprop="datePublished">2017-05-12</time>
-        </a>
-    </div>
-
-
-                <div>•</div>
-                
-    <div class="article-category">
-        <a class="article-category-link" href="/categories/Other/">Other</a>
-    </div>
-
-            </div>
-            
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2017/05/12/字符串编码篇/">字符串编码篇</a>
-        </h1>
-    
-
-        </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-            
-            <p><p> 字符编码的来历..<br></p>
-            <p class="article-more-link">
-                <a href="/2017/05/12/字符串编码篇/#more">阅读全文</a>
-            </p>
-            
-
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="https://hocg.in/2017/05/12/字符串编码篇/" data-id="cjn4mqniw00172a51wdhcw6w6" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-    <article id="post-Wireshark的使用"
-         class="article article-type-post "
-         itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-        <header class="article-header">
-            <div class="article-meta">
-                
-    <div class="article-date">
-        <a href="/2017/04/20/Wireshark的使用/">
-            <time datetime="2017-04-20T11:34:05.000Z" itemprop="datePublished">2017-04-20</time>
-        </a>
-    </div>
-
-
-                <div>•</div>
-                
-    <div class="article-category">
-        <a class="article-category-link" href="/categories/IDE/">IDE</a>
-    </div>
-
-            </div>
-            
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2017/04/20/Wireshark的使用/">Wireshark 的使用</a>
-        </h1>
-    
-
-        </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-            
-            <p><p> 抽空整理一下, 虽然<code>Charles</code>很好用, 但是某些情况下该软件也是不可替代的.<br></p>
-            <p class="article-more-link">
-                <a href="/2017/04/20/Wireshark的使用/#more">阅读全文</a>
-            </p>
-            
-
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="https://hocg.in/2017/04/20/Wireshark的使用/" data-id="cjn4mqnii000q2a51kdv5bzt1" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-    <article id="post-SQL重新梳理"
-         class="article article-type-post "
-         itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-        <header class="article-header">
-            <div class="article-meta">
-                
-    <div class="article-date">
-        <a href="/2017/04/07/SQL重新梳理/">
-            <time datetime="2017-04-07T01:19:09.000Z" itemprop="datePublished">2017-04-07</time>
-        </a>
-    </div>
-
-
-                <div>•</div>
-                
-    <div class="article-category">
-        <a class="article-category-link" href="/categories/Server/">Server</a>
-    </div>
-
-            </div>
-            
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2017/04/07/SQL重新梳理/">SQL的重新梳理</a>
-        </h1>
-    
-
-        </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-            
-            <p><p>持续积累..<br></p>
-            <p class="article-more-link">
-                <a href="/2017/04/07/SQL重新梳理/#more">阅读全文</a>
-            </p>
-            
-
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="https://hocg.in/2017/04/07/SQL重新梳理/" data-id="cjn4mqnie000k2a51ydijh7fj" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-    <article id="post-Vue.js项目-部件简介"
-         class="article article-type-post "
-         itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-        <header class="article-header">
-            <div class="article-meta">
-                
-    <div class="article-date">
-        <a href="/2017/03/31/Vue.js项目-部件简介/">
-            <time datetime="2017-03-31T07:32:36.000Z" itemprop="datePublished">2017-03-31</time>
-        </a>
-    </div>
-
-
-                <div>•</div>
-                
-    <div class="article-category">
-        <a class="article-category-link" href="/categories/Coder/">Coder</a>
-    </div>
-
-            </div>
-            
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2017/03/31/Vue.js项目-部件简介/">Vue.js项目 部件简介 (未完待续)</a>
-        </h1>
-    
-
-        </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-            
-            <p><p>🦋 目前国内前端MVVM最火的框架.. 前段时间写了一个<a href="https://github.com/hocgin/iPage" target="_blank" rel="external">About页面</a>, 这几天顺带整理一下知识点.<br></p>
-            <p class="article-more-link">
-                <a href="/2017/03/31/Vue.js项目-部件简介/#more">阅读全文</a>
-            </p>
-            
-
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="https://hocg.in/2017/03/31/Vue.js项目-部件简介/" data-id="cjn4mqnih000p2a5110ntfoho" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-    <article id="post-Vue.js-项目实践"
-         class="article article-type-post "
-         itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-        <header class="article-header">
-            <div class="article-meta">
-                
-    <div class="article-date">
-        <a href="/2017/03/26/Vue.js-项目实践/">
-            <time datetime="2017-03-26T07:40:08.000Z" itemprop="datePublished">2017-03-26</time>
-        </a>
-    </div>
-
-
-                <div>•</div>
-                
-    <div class="article-category">
-        <a class="article-category-link" href="/categories/Coder/">Coder</a>
-    </div>
-
-            </div>
-            
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2017/03/26/Vue.js-项目实践/">Vue 项目实践 - 持续更新</a>
-        </h1>
-    
-
-        </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-            
-            <p><p>🐌 目前国内前端MVVM最火的框架.. 项目实践记录一些流程<br></p>
-            <p class="article-more-link">
-                <a href="/2017/03/26/Vue.js-项目实践/#more">阅读全文</a>
-            </p>
-            
-
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="https://hocg.in/2017/03/26/Vue.js-项目实践/" data-id="cjn4mqnih000o2a51t3k61l9n" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-    <article id="post-关于 Objective-C 的小笔记"
-         class="article article-type-post "
-         itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-        <header class="article-header">
-            <div class="article-meta">
-                
-    <div class="article-date">
-        <a href="/2017/03/20/关于 Objective-C 的小笔记/">
-            <time datetime="2017-03-20T00:07:00.000Z" itemprop="datePublished">2017-03-20</time>
-        </a>
-    </div>
-
-
-                <div>•</div>
-                
-    <div class="article-category">
-        <a class="article-category-link" href="/categories/Mac/">Mac</a>
-    </div>
-
-            </div>
-            
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2017/03/20/关于 Objective-C 的小笔记/">关于 Objective-C 的小笔记</a>
-        </h1>
-    
-
-        </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-            
-            <p><p>之前学 <code>swift3</code> 顺带整理的小笔记<br></p>
-            <p class="article-more-link">
-                <a href="/2017/03/20/关于 Objective-C 的小笔记/#more">阅读全文</a>
-            </p>
-            
-
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="https://hocg.in/2017/03/20/关于 Objective-C 的小笔记/" data-id="cjn4mqnil000w2a51qa0ydgtw" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-    <article id="post-PHP-laravel-快速入门"
-         class="article article-type-post "
-         itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-        <header class="article-header">
-            <div class="article-meta">
-                
-    <div class="article-date">
-        <a href="/2017/03/01/PHP-laravel-快速入门/">
-            <time datetime="2017-03-01T06:59:38.000Z" itemprop="datePublished">2017-03-01</time>
-        </a>
-    </div>
-
-
-                <div>•</div>
-                
-    <div class="article-category">
-        <a class="article-category-link" href="/categories/Server/">Server</a>
-    </div>
-
-            </div>
-            
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2017/03/01/PHP-laravel-快速入门/">PHP Laravel 快速入门</a>
-        </h1>
-    
-
-        </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-            
-            <p><p>PHP 框架 Laravel 搭建开始, 慢慢更新~ 😜😜😜😜<br></p>
-            <p class="article-more-link">
-                <a href="/2017/03/01/PHP-laravel-快速入门/#more">阅读全文</a>
-            </p>
-            
-
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="https://hocg.in/2017/03/01/PHP-laravel-快速入门/" data-id="cjn4mqnid000i2a519flcsfq0" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-    <article id="post-Nginx-部署"
-         class="article article-type-post "
-         itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-        <header class="article-header">
-            <div class="article-meta">
-                
-    <div class="article-date">
-        <a href="/2017/02/24/Nginx-部署/">
-            <time datetime="2017-02-24T01:12:22.000Z" itemprop="datePublished">2017-02-24</time>
-        </a>
-    </div>
-
-
-                <div>•</div>
-                
-    <div class="article-category">
-        <a class="article-category-link" href="/categories/Server/">Server</a>
-    </div>
-
-            </div>
-            
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2017/02/24/Nginx-部署/">Nginx 部署</a>
-        </h1>
-    
-
-        </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-            
-            <p><p>🎽  <a href="http://baike.baidu.com/link?url=6LDqhy3I7UWDkwOT6TS_s-d4Jsv9AVcA_yedSmd618s1BjJl-0NQ-roxjDF7jHazXWlTwbIHTv03_gWIWeRPUq" target="_blank" rel="external">Nginx</a> 是一个很强大的高性能Web和反向代理服务器<br></p>
-            <p class="article-more-link">
-                <a href="/2017/02/24/Nginx-部署/#more">阅读全文</a>
-            </p>
-            
-
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="https://hocg.in/2017/02/24/Nginx-部署/" data-id="cjn4mqnib000f2a51cm38obvg" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://hocg.in/2017/07/02/关于Android Studio 启动Android模拟器失败问题/" data-id="cju97ugob000xhu51oqfy8rsh" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1407,7 +1477,7 @@ ga('send', 'pageview');
 
 
     <nav id="page-nav">
-        <a class="extend prev" rel="prev" href="/page/2/">&laquo; 上一页</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/4/">下一页 &raquo;</a>
+        <a class="extend prev" rel="prev" href="/page/2/">&laquo; 上一页</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/4/">下一页 &raquo;</a>
     </nav>
 </section>
             
@@ -1434,9 +1504,27 @@ ga('send', 'pageview');
                     <li>
                         
                         <div class="item-inner">
-                            <!--<p class="item-category"><a class="article-category-link" href="/categories/生活/">生活</a></p>-->
-                            <p class="item-title fa fa-angle-right"><a href="/2018/12/31/2018 图片墙/" class="title">2018 图片墙</a></p>
-                            <!--<p class="item-date"><time datetime="2018-12-31T15:59:59.000Z" itemprop="datePublished">2018-12-31</time></p>-->
+                            <!--<p class="item-category"><a class="article-category-link" href="/categories/Linux/">Linux</a></p>-->
+                            <p class="item-title fa fa-angle-right"><a href="/2019/04/01/Linux 下网络相关的命令/" class="title">Linux 下网络相关的命令</a></p>
+                            <!--<p class="item-date"><time datetime="2019-04-01T00:07:00.000Z" itemprop="datePublished">2019-04-01</time></p>-->
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <!--<p class="item-category"><a class="article-category-link" href="/categories/服务端/">服务端</a></p>-->
+                            <p class="item-title fa fa-angle-right"><a href="/2019/03/23/Elasticsearch 随手记/" class="title">Elasticsearch 随手记</a></p>
+                            <!--<p class="item-date"><time datetime="2019-03-23T05:53:00.000Z" itemprop="datePublished">2019-03-23</time></p>-->
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <!--<p class="item-category"><a class="article-category-link" href="/categories/K8s/">K8s</a></p>-->
+                            <p class="item-title fa fa-angle-right"><a href="/2019/03/08/k8s与kubeadm使用的一些记录/" class="title">K8s 与 kubeadm 使用的一些记录</a></p>
+                            <!--<p class="item-date"><time datetime="2019-03-08T01:13:00.000Z" itemprop="datePublished">2019-03-08</time></p>-->
                         </div>
                     </li>
                 
@@ -1444,17 +1532,8 @@ ga('send', 'pageview');
                         
                         <div class="item-inner">
                             <!--<p class="item-category"><a class="article-category-link" href="/categories/Java/">Java</a></p>-->
-                            <p class="item-title fa fa-angle-right"><a href="/2018/07/02/关于Java IO、NIO、AIO/" class="title">关于Java IO、NIO、AIO</a></p>
-                            <!--<p class="item-date"><time datetime="2018-07-02T00:10:39.000Z" itemprop="datePublished">2018-07-02</time></p>-->
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-inner">
-                            <!--<p class="item-category"><a class="article-category-link" href="/categories/DevOps/">DevOps</a></p>-->
-                            <p class="item-title fa fa-angle-right"><a href="/2018/06/20/使用 GitLab 来对 Spring Boot 项目进行 CI:CD/" class="title">使用 GitLab 来对 Spring Boot 项目进行 CI/CD</a></p>
-                            <!--<p class="item-date"><time datetime="2018-06-20T14:34:20.000Z" itemprop="datePublished">2018-06-20</time></p>-->
+                            <p class="item-title fa fa-angle-right"><a href="/2019/02/02/如何做单元测试/" class="title">如何做单元测试</a></p>
+                            <!--<p class="item-date"><time datetime="2019-02-02T05:17:21.000Z" itemprop="datePublished">2019-02-02</time></p>-->
                         </div>
                     </li>
                 
@@ -1462,17 +1541,8 @@ ga('send', 'pageview');
                         
                         <div class="item-inner">
                             <!--<p class="item-category"><a class="article-category-link" href="/categories/Java/">Java</a></p>-->
-                            <p class="item-title fa fa-angle-right"><a href="/2018/03/20/关于Java-数据结构/" class="title">关于Java-数据结构</a></p>
-                            <!--<p class="item-date"><time datetime="2018-03-20T09:10:39.000Z" itemprop="datePublished">2018-03-20</time></p>-->
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-inner">
-                            <!--<p class="item-category"><a class="article-category-link" href="/categories/Java/">Java</a></p>-->
-                            <p class="item-title fa fa-angle-right"><a href="/2018/03/06/关于Java多线程-几个辅助类/" class="title">关于Java多线程-几个辅助类</a></p>
-                            <!--<p class="item-date"><time datetime="2018-03-06T09:13:39.000Z" itemprop="datePublished">2018-03-06</time></p>-->
+                            <p class="item-title fa fa-angle-right"><a href="/2019/01/12/关于项目结构划分/" class="title">关于项目结构划分</a></p>
+                            <!--<p class="item-date"><time datetime="2019-01-12T04:24:23.000Z" itemprop="datePublished">2019-01-12</time></p>-->
                         </div>
                     </li>
                 
@@ -1487,7 +1557,7 @@ ga('send', 'pageview');
     <div class="widget-wrap">
         <h3 class="widget-title">归档</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">十二月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">七月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">六月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">十月 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">九月 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">七月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">六月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">五月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">九月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">七月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">四月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">3</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">四月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">三月 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">二月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">一月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">十二月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">十一月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">七月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">六月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">十月 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">九月 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">七月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">六月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">五月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">九月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">七月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">四月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">3</span></li></ul>
         </div>
     </div>
 
@@ -1496,7 +1566,7 @@ ga('send', 'pageview');
     <div class="widget-wrap">
         <h3 class="widget-title">标签云</h3>
         <div class="widget tagcloud">
-            <a href="/tags/Android/" style="font-size: 14.29px;">Android</a> <a href="/tags/CI-CD/" style="font-size: 10px;">CI/CD</a> <a href="/tags/CSS3/" style="font-size: 10px;">CSS3</a> <a href="/tags/Chrome/" style="font-size: 10px;">Chrome</a> <a href="/tags/DevOps/" style="font-size: 10px;">DevOps</a> <a href="/tags/Docker/" style="font-size: 10px;">Docker</a> <a href="/tags/ELK/" style="font-size: 10px;">ELK</a> <a href="/tags/GitLab/" style="font-size: 10px;">GitLab</a> <a href="/tags/Gnome/" style="font-size: 10px;">Gnome</a> <a href="/tags/Go/" style="font-size: 10px;">Go</a> <a href="/tags/Google/" style="font-size: 10px;">Google</a> <a href="/tags/HTML5/" style="font-size: 15.71px;">HTML5</a> <a href="/tags/HTTPS/" style="font-size: 10px;">HTTPS</a> <a href="/tags/Hexo/" style="font-size: 11.43px;">Hexo</a> <a href="/tags/IO/" style="font-size: 10px;">IO</a> <a href="/tags/JAVA/" style="font-size: 10px;">JAVA</a> <a href="/tags/JVM/" style="font-size: 11.43px;">JVM</a> <a href="/tags/Java/" style="font-size: 18.57px;">Java</a> <a href="/tags/JavaScript/" style="font-size: 12.86px;">JavaScript</a> <a href="/tags/Mac/" style="font-size: 12.86px;">Mac</a> <a href="/tags/Maven/" style="font-size: 10px;">Maven</a> <a href="/tags/Nexus/" style="font-size: 10px;">Nexus</a> <a href="/tags/Ngrok/" style="font-size: 10px;">Ngrok</a> <a href="/tags/NodeJS/" style="font-size: 12.86px;">NodeJS</a> <a href="/tags/Objective-C/" style="font-size: 10px;">Objective-C</a> <a href="/tags/Oh-My-ZSH/" style="font-size: 10px;">Oh My ZSH</a> <a href="/tags/OpenWrt/" style="font-size: 14.29px;">OpenWrt</a> <a href="/tags/PHP/" style="font-size: 10px;">PHP</a> <a href="/tags/Pjax/" style="font-size: 10px;">Pjax</a> <a href="/tags/Redis/" style="font-size: 10px;">Redis</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/Shell/" style="font-size: 11.43px;">Shell</a> <a href="/tags/Spring-Boot/" style="font-size: 10px;">Spring Boot</a> <a href="/tags/SpringBoot/" style="font-size: 10px;">SpringBoot</a> <a href="/tags/Thymeleaf/" style="font-size: 10px;">Thymeleaf</a> <a href="/tags/Tip/" style="font-size: 10px;">Tip</a> <a href="/tags/Tips/" style="font-size: 20px;">Tips</a> <a href="/tags/Ubuntu/" style="font-size: 17.14px;">Ubuntu</a> <a href="/tags/Web/" style="font-size: 10px;">Web</a> <a href="/tags/Wireshark/" style="font-size: 10px;">Wireshark</a> <a href="/tags/前端/" style="font-size: 11.43px;">前端</a> <a href="/tags/图片墙/" style="font-size: 10px;">图片墙</a> <a href="/tags/多线程/" style="font-size: 14.29px;">多线程</a> <a href="/tags/手机/" style="font-size: 10px;">手机</a> <a href="/tags/数据结构/" style="font-size: 10px;">数据结构</a> <a href="/tags/设计思路/" style="font-size: 11.43px;">设计思路</a> <a href="/tags/语法/" style="font-size: 10px;">语法</a> <a href="/tags/锁/" style="font-size: 10px;">锁</a> <a href="/tags/问题/" style="font-size: 11.43px;">问题</a>
+            <a href="/tags/Android/" style="font-size: 15px;">Android</a> <a href="/tags/CI-CD/" style="font-size: 10px;">CI/CD</a> <a href="/tags/CSS3/" style="font-size: 10px;">CSS3</a> <a href="/tags/Chrome/" style="font-size: 10px;">Chrome</a> <a href="/tags/DevOps/" style="font-size: 10px;">DevOps</a> <a href="/tags/Docker/" style="font-size: 10px;">Docker</a> <a href="/tags/ELK/" style="font-size: 10px;">ELK</a> <a href="/tags/Elasticsearch/" style="font-size: 10px;">Elasticsearch</a> <a href="/tags/GitLab/" style="font-size: 10px;">GitLab</a> <a href="/tags/Gnome/" style="font-size: 10px;">Gnome</a> <a href="/tags/Go/" style="font-size: 10px;">Go</a> <a href="/tags/Google/" style="font-size: 10px;">Google</a> <a href="/tags/HTML5/" style="font-size: 15px;">HTML5</a> <a href="/tags/HTTPS/" style="font-size: 10px;">HTTPS</a> <a href="/tags/Hexo/" style="font-size: 11.25px;">Hexo</a> <a href="/tags/IO/" style="font-size: 10px;">IO</a> <a href="/tags/JAVA/" style="font-size: 10px;">JAVA</a> <a href="/tags/JVM/" style="font-size: 11.25px;">JVM</a> <a href="/tags/Java/" style="font-size: 18.75px;">Java</a> <a href="/tags/JavaScript/" style="font-size: 12.5px;">JavaScript</a> <a href="/tags/K8s/" style="font-size: 10px;">K8s</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Mac/" style="font-size: 12.5px;">Mac</a> <a href="/tags/Maven/" style="font-size: 10px;">Maven</a> <a href="/tags/Nexus/" style="font-size: 10px;">Nexus</a> <a href="/tags/Ngrok/" style="font-size: 10px;">Ngrok</a> <a href="/tags/NodeJS/" style="font-size: 12.5px;">NodeJS</a> <a href="/tags/Objective-C/" style="font-size: 10px;">Objective-C</a> <a href="/tags/Oh-My-ZSH/" style="font-size: 10px;">Oh My ZSH</a> <a href="/tags/OpenWrt/" style="font-size: 16.25px;">OpenWrt</a> <a href="/tags/PHP/" style="font-size: 10px;">PHP</a> <a href="/tags/Pjax/" style="font-size: 10px;">Pjax</a> <a href="/tags/React/" style="font-size: 10px;">React</a> <a href="/tags/Redis/" style="font-size: 10px;">Redis</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/Shell/" style="font-size: 11.25px;">Shell</a> <a href="/tags/Spring-Boot/" style="font-size: 10px;">Spring Boot</a> <a href="/tags/SpringBoot/" style="font-size: 10px;">SpringBoot</a> <a href="/tags/TCP-IP/" style="font-size: 10px;">TCP/IP</a> <a href="/tags/Thymeleaf/" style="font-size: 10px;">Thymeleaf</a> <a href="/tags/Tip/" style="font-size: 10px;">Tip</a> <a href="/tags/Tips/" style="font-size: 20px;">Tips</a> <a href="/tags/Ubuntu/" style="font-size: 17.5px;">Ubuntu</a> <a href="/tags/Web/" style="font-size: 10px;">Web</a> <a href="/tags/Wireshark/" style="font-size: 10px;">Wireshark</a> <a href="/tags/前端/" style="font-size: 11.25px;">前端</a> <a href="/tags/图片墙/" style="font-size: 10px;">图片墙</a> <a href="/tags/多线程/" style="font-size: 13.75px;">多线程</a> <a href="/tags/手机/" style="font-size: 10px;">手机</a> <a href="/tags/数据结构/" style="font-size: 10px;">数据结构</a> <a href="/tags/设计思路/" style="font-size: 11.25px;">设计思路</a> <a href="/tags/语法/" style="font-size: 11.25px;">语法</a> <a href="/tags/锁/" style="font-size: 10px;">锁</a> <a href="/tags/问题/" style="font-size: 12.5px;">问题</a>
         </div>
     </div>
 
@@ -1525,7 +1595,7 @@ ga('send', 'pageview');
         <footer id="footer">
     <div class="outer">
         <div id="footer-info" class="inner">
-            &copy; 2018&nbsp;
+            &copy; 2019&nbsp;
             <i class="fa fa-heartbeat heartbeat" style="color: #F22E3C;"></i>&nbsp;
             <a class="me" href="https://hocg.in" target="_blank">hocgin</a>.
             <p>
