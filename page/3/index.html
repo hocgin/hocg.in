@@ -205,7 +205,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hocg.in/2017/10/19/JQuery.pjax无法再次初始化当前页面的JS/" data-id="cjub1zsqz00082lavf0h9mvxw" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://hocg.in/2017/10/19/JQuery.pjax无法再次初始化当前页面的JS/" data-id="cjul9txh2000hx751tcbl3mmx" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -330,7 +330,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hocg.in/2017/10/18/Thymeleaf-3.0-手册/" data-id="cjub1zsrc000v2lavx9rnhlvf" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://hocg.in/2017/10/18/Thymeleaf-3.0-手册/" data-id="cjul9txhb000ux751gqn7p6ck" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -455,7 +455,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hocg.in/2017/10/10/JDK8 新特性的使用/" data-id="cjub1zsr3000e2lav33pr5i4p" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://hocg.in/2017/10/10/JDK8 新特性的使用/" data-id="cjul9txgx000ax751crqc1qle" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -580,132 +580,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hocg.in/2017/10/07/Java 线程池 和 锁 小记/" data-id="cjub1zsr5000j2lavl91dwodh" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-    <article id="post-TextView 滚动问题"
-         class="article article-type-post "
-         itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-        <header class="article-header">
-            <div class="article-meta">
-                
-    <div class="article-date">
-        <a href="/2017/09/28/TextView 滚动问题/">
-            <time datetime="2017-09-28T13:47:21.000Z" itemprop="datePublished">2017-09-28</time>
-        </a>
-    </div>
-
-
-                <div>•</div>
-                
-    <div class="article-category">
-        <a class="article-category-link" href="/categories/Android/">Android</a>
-    </div>
-
-            </div>
-            
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2017/09/28/TextView 滚动问题/">解决 WebView 点击时网页不断闪耀</a>
-        </h1>
-    
-
-        </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-            
-            <p><p>解决高版本 WebView 点击时网页不断闪耀的问题 🤗<br></p>
-            <p class="article-more-link">
-                <a href="/2017/09/28/TextView 滚动问题/#more">阅读全文</a>
-            </p>
-            
-
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="https://hocg.in/2017/09/28/TextView 滚动问题/" data-id="cjub1zsr8000o2lavjsog4gmg" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://hocg.in/2017/10/07/Java 线程池 和 锁 小记/" data-id="cjul9txgy000dx751xfmt3794" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -830,7 +705,132 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hocg.in/2017/09/28/解决WebView点击时网页不断闪耀/" data-id="cjub1zsrs001n2lavyu5pafcm" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://hocg.in/2017/09/28/解决WebView点击时网页不断闪耀/" data-id="cjul9txi6001qx751a7636hd8" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-TextView 滚动问题"
+         class="article article-type-post "
+         itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+        <header class="article-header">
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2017/09/28/TextView 滚动问题/">
+            <time datetime="2017-09-28T13:47:21.000Z" itemprop="datePublished">2017-09-28</time>
+        </a>
+    </div>
+
+
+                <div>•</div>
+                
+    <div class="article-category">
+        <a class="article-category-link" href="/categories/Android/">Android</a>
+    </div>
+
+            </div>
+            
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2017/09/28/TextView 滚动问题/">解决 WebView 点击时网页不断闪耀</a>
+        </h1>
+    
+
+        </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            
+            <p><p>解决高版本 WebView 点击时网页不断闪耀的问题 🤗<br></p>
+            <p class="article-more-link">
+                <a href="/2017/09/28/TextView 滚动问题/#more">阅读全文</a>
+            </p>
+            
+
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://hocg.in/2017/09/28/TextView 滚动问题/" data-id="cjul9txh7000px75137y6497z" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -955,7 +955,132 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hocg.in/2017/09/27/解决ProgressBar顶部出现空白现象/" data-id="cjub1zsrt001p2lavq41itjcd" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://hocg.in/2017/09/27/解决ProgressBar顶部出现空白现象/" data-id="cjul9txi3001mx7514ll80g7m" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-OpenWrt-入门篇"
+         class="article article-type-post "
+         itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+        <header class="article-header">
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2017/09/18/OpenWrt-入门篇/">
+            <time datetime="2017-09-18T06:32:26.000Z" itemprop="datePublished">2017-09-18</time>
+        </a>
+    </div>
+
+
+                <div>•</div>
+                
+    <div class="article-category">
+        <a class="article-category-link" href="/categories/OpenWrt/">OpenWrt</a>
+    </div>
+
+            </div>
+            
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2017/09/18/OpenWrt-入门篇/">OpenWrt 入门篇</a>
+        </h1>
+    
+
+        </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            
+            <p><p>今天刚好重刷 OpenWrt 固件，整理整理<br></p>
+            <p class="article-more-link">
+                <a href="/2017/09/18/OpenWrt-入门篇/#more">阅读全文</a>
+            </p>
+            
+
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://hocg.in/2017/09/18/OpenWrt-入门篇/" data-id="cjul9txh4000jx751td15u0e5" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1150,132 +1275,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hocg.in/2017/09/18/OpenWrt-Shadowsocks/" data-id="cjub1zsr8000p2lava2sf6mhx" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-    <article id="post-OpenWrt-入门篇"
-         class="article article-type-post "
-         itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-        <header class="article-header">
-            <div class="article-meta">
-                
-    <div class="article-date">
-        <a href="/2017/09/18/OpenWrt-入门篇/">
-            <time datetime="2017-09-18T06:32:26.000Z" itemprop="datePublished">2017-09-18</time>
-        </a>
-    </div>
-
-
-                <div>•</div>
-                
-    <div class="article-category">
-        <a class="article-category-link" href="/categories/OpenWrt/">OpenWrt</a>
-    </div>
-
-            </div>
-            
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2017/09/18/OpenWrt-入门篇/">OpenWrt 入门篇</a>
-        </h1>
-    
-
-        </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-            
-            <p><p>今天刚好重刷 OpenWrt 固件，整理整理<br></p>
-            <p class="article-more-link">
-                <a href="/2017/09/18/OpenWrt-入门篇/#more">阅读全文</a>
-            </p>
-            
-
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="https://hocg.in/2017/09/18/OpenWrt-入门篇/" data-id="cjub1zsr5000i2lavh8s6jmd1" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://hocg.in/2017/09/18/OpenWrt-Shadowsocks/" data-id="cjul9txh4000kx751kvsk3tfp" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1400,7 +1400,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hocg.in/2017/07/02/关于Android Studio 启动Android模拟器失败问题/" data-id="cjub1zsrh00142lav7ineg07g" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://hocg.in/2017/07/02/关于Android Studio 启动Android模拟器失败问题/" data-id="cjul9txhm0015x751m2m41o8d" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding

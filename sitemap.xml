@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://hocg.in/2018/03/20/%E5%85%B3%E4%BA%8EJava-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
+    
+    <lastmod>2019-04-17T13:47:54.957Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://hocg.in/2019/04/01/Linux%20%E4%B8%8B%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E7%9A%84%E5%91%BD%E4%BB%A4/</loc>
     
     <lastmod>2019-04-10T10:04:38.417Z</lastmod>
@@ -173,13 +180,6 @@
     <loc>https://hocg.in/2018/03/02/%E5%85%B3%E4%BA%8EJava-Unsafe:LockSupport/</loc>
     
     <lastmod>2018-07-03T05:29:39.417Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hocg.in/2018/03/20/%E5%85%B3%E4%BA%8EJava-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
-    
-    <lastmod>2018-07-03T05:26:19.515Z</lastmod>
     
   </url>
   
