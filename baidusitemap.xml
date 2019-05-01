@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>https://hocg.in/2019/04/18/%E5%85%B3%E4%BA%8E%E7%BD%91%E7%BA%A6%E8%BD%A6%E6%A0%B8%E5%BF%83%E4%B8%9A%E5%8A%A1-%E6%8E%A8%E5%8D%95%E7%9B%B8%E5%85%B3%E6%95%B4%E7%90%86/</loc>
+    <lastmod>2019-05-01T08:12:49.031Z</lastmod>
+    <data>
+        <display>
+        <title>关于网约车核心业务-推单相关设计整理</title>
+        <pubTime>2019-04-18T10:20:20.000Z</pubTime>
+        
+        <tag>设计思路</tag>
+         
+         
+           
+             
+              <breadCrumb title="Web" url="https://hocg.in/categories/Web/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://hocg.in/2018/03/20/%E5%85%B3%E4%BA%8EJava-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
     <lastmod>2019-04-20T05:07:51.981Z</lastmod>
     <data>
@@ -141,9 +161,9 @@
         <title>JDK8 新特性的使用</title>
         <pubTime>2017-10-10T02:02:00.000Z</pubTime>
         
-        <tag>语法</tag>
-         
         <tag>Java</tag>
+         
+        <tag>语法</tag>
          
          
            
@@ -776,19 +796,21 @@
 
     
   <url>
-    <loc>https://hocg.in/2017/05/12/%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%BC%96%E7%A0%81%E7%AF%87/</loc>
+    <loc>https://hocg.in/2017/04/20/Wireshark%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
     <lastmod>2017-11-11T15:11:01.049Z</lastmod>
     <data>
         <display>
-        <title>字符串编码篇</title>
-        <pubTime>2017-05-12T13:09:03.000Z</pubTime>
+        <title>Wireshark 的使用</title>
+        <pubTime>2017-04-20T11:34:05.000Z</pubTime>
         
         <tag>Tips</tag>
+         
+        <tag>Wireshark</tag>
          
          
            
              
-              <breadCrumb title="Other" url="https://hocg.in/categories/Other/"/>
+              <breadCrumb title="IDE" url="https://hocg.in/categories/IDE/"/>
           
         </display>
     </data>
@@ -818,21 +840,19 @@
 
     
   <url>
-    <loc>https://hocg.in/2017/04/20/Wireshark%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
+    <loc>https://hocg.in/2017/05/12/%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%BC%96%E7%A0%81%E7%AF%87/</loc>
     <lastmod>2017-11-11T15:11:01.049Z</lastmod>
     <data>
         <display>
-        <title>Wireshark 的使用</title>
-        <pubTime>2017-04-20T11:34:05.000Z</pubTime>
+        <title>字符串编码篇</title>
+        <pubTime>2017-05-12T13:09:03.000Z</pubTime>
         
         <tag>Tips</tag>
-         
-        <tag>Wireshark</tag>
          
          
            
              
-              <breadCrumb title="IDE" url="https://hocg.in/categories/IDE/"/>
+              <breadCrumb title="Other" url="https://hocg.in/categories/Other/"/>
           
         </display>
     </data>
