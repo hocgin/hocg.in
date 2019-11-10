@@ -4,6 +4,20 @@ body {
 a:hover {
   cursor: url("/link.ico"), auto;
 }
+a#logo {
+  overflow: hidden;
+  display: inline-block;
+  position: relative;
+}
+a#logo:before {
+  content: "";
+  position: absolute;
+  width: 250px;
+  height: 15px;
+  background-color: rgba(255,255,255,0.5);
+  transform: rotate(-45deg);
+  animation: lightning 1s ease-in 1s infinite;
+}
 section#main {
   margin: 40px 0;
 }
@@ -140,6 +154,9 @@ article .article-entry li figure.highlight {
 .heartbeat {
   animation: heartbeat 1300ms ease 0s infinite normal;
 }
+/**
+ * 闪光
+ */
 @-moz-keyframes heartbeat {
   0% {
     -moz-transform: scale(1);
@@ -266,5 +283,45 @@ article .article-entry li figure.highlight {
     -ms-transform: scale(1);
     -webkit-transform: scale(1);
     transform: scale(1);
+  }
+}
+@-moz-keyframes lightning {
+  0% {
+    left: -100px;
+    top: 0;
+  }
+  to {
+    left: 120px;
+    top: 100px;
+  }
+}
+@-webkit-keyframes lightning {
+  0% {
+    left: -100px;
+    top: 0;
+  }
+  to {
+    left: 120px;
+    top: 100px;
+  }
+}
+@-o-keyframes lightning {
+  0% {
+    left: -100px;
+    top: 0;
+  }
+  to {
+    left: 120px;
+    top: 100px;
+  }
+}
+@keyframes lightning {
+  0% {
+    left: -100px;
+    top: 0;
+  }
+  to {
+    left: 120px;
+    top: 100px;
   }
 }
