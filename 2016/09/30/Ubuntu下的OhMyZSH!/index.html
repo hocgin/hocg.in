@@ -208,7 +208,7 @@ ga('send', 'pageview');
 <li><p>~/.oh-my-zsh <code>oh-my-zsh目录</code></p>
 </li>
 </ul>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 安装zsh</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo apt-get install zsh</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 安装oh-my-zsh</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo apt-get install wget git</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> wget --no-check-certificate https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 替换zsh为系统shell</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> chsh -s /bin/zsh</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 退出&amp;重新登入</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">exit</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 查看是否成功</span></span><br></pre></td></tr></table></figure>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 安装zsh</span><br><span class="line"><span class="meta">$</span> sudo apt-get install zsh</span><br><span class="line"><span class="meta">#</span> 安装oh-my-zsh</span><br><span class="line"><span class="meta">$</span> sudo apt-get install wget git</span><br><span class="line"><span class="meta">$</span> wget --no-check-certificate https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh</span><br><span class="line"><span class="meta">#</span> 替换zsh为系统shell</span><br><span class="line"><span class="meta">$</span> chsh -s /bin/zsh</span><br><span class="line"><span class="meta">#</span> 退出&amp;重新登入</span><br><span class="line"><span class="meta">$</span> exit</span><br><span class="line"><span class="meta">#</span> 查看是否成功</span><br></pre></td></tr></table></figure>
 <h2 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h2><p><a href="">zsh.config</a></p>
 <p><strong>注意</strong></p>
 <ul>
@@ -217,12 +217,12 @@ ga('send', 'pageview');
 <h2 id="插件介绍"><a href="#插件介绍" class="headerlink" title="插件介绍"></a>插件介绍</h2><ul>
 <li><code>git</code>;处于git项目下出现提示</li>
 <li><p><code>autojump</code>; 目录自动提示, 需要<a href="git clone git://github.com/joelthelion/autojump.git">Linux 额外安装</a></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> ~/.bashrc 追加</span></span><br><span class="line">[[ -s ~/.autojump/etc/profile.d/autojump.sh ]] &amp;&amp; . ~/.autojump/etc/profile.d/autojump.sh</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> ~/.bashrc 追加</span><br><span class="line">[[ -s ~/.autojump/etc/profile.d/autojump.sh ]] &amp;&amp; . ~/.autojump/etc/profile.d/autojump.sh</span><br></pre></td></tr></table></figure>
 </li>
 <li><p><code>git</code>;处于git项目下出现提示</p>
 </li>
 <li><p><code>zsh-syntax-highlighting</code>;高亮可用命令</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">clone</span> git://github.com/jimmijj/zsh-syntax-highlighting ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting</span></span><br><span class="line">plugins=(zsh-syntax-highlighting)</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git clone git://github.com/jimmijj/zsh-syntax-highlighting ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting</span><br><span class="line">plugins=(zsh-syntax-highlighting)</span><br></pre></td></tr></table></figure>
 </li>
 <li><p><code>colored-man-pages</code>; 帮助文档高亮</p>
 </li>
@@ -244,7 +244,7 @@ ga('send', 'pageview');
 <li>alias -s xx=’xxx’ 快捷配置</li>
 </ul>
 <h2 id="相关设置"><a href="#相关设置" class="headerlink" title="相关设置"></a>相关设置</h2><blockquote>
-<p>cat 代码高亮<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pip install Pygments</span><br><span class="line"><span class="meta">#</span><span class="bash"> 增加以下<span class="built_in">alias</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> <span class="built_in">alias</span> ccat=<span class="string">'pygmentize -g'</span></span></span><br></pre></td></tr></table></figure></p>
+<p>cat 代码高亮<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pip install Pygments</span><br><span class="line"><span class="meta">#</span> 增加以下alias</span><br><span class="line"><span class="meta">#</span> alias ccat='pygmentize -g'</span><br></pre></td></tr></table></figure></p>
 </blockquote>
 <h2 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h2><p><a href="https://github.com/hocgin/Gather/tree/master/oh-my-zsh" target="_blank" rel="external">Oh My ZSH!</a></p>
 
@@ -263,7 +263,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://hocg.in/2016/09/30/Ubuntu下的OhMyZSH!/" data-id="ck2vh1xgf000t3navsxdmy18p" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://hocg.in/2016/09/30/Ubuntu下的OhMyZSH!/" data-id="ck2vrld2w000o50avni56q4j6" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
