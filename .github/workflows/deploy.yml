@@ -3,7 +3,7 @@ name: Deploy CI
 on:
   push:
     branches:
-      - 自动合并分支
+      - master
 
 jobs:
   build:
