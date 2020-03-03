@@ -7,26 +7,15 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [11.x]
 
     steps:
     - name: Checkout Actions
       uses: actions/checkout@v2
 
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-
     - name: Push
       uses: JamesIves/github-pages-deploy-action@master
-      env:
+      with:
         ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: gh-pages
         FOLDER: public
-        BUILD_SCRIPT: npm install && npm install -g hexo-cli && hexo g
