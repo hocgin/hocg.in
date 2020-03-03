@@ -13,9 +13,15 @@ jobs:
     - name: Checkout Actions
       uses: actions/checkout@v2
 
+    - name: Dependent & Build
+      run: |
+        npm install
+        npm install -g hexo
+        hexo g
+
     - name: Push
       uses: JamesIves/github-pages-deploy-action@master
       with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: gh-pages
         FOLDER: public
