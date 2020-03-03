@@ -7,7 +7,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
@@ -26,17 +25,12 @@ jobs:
     - name: Dependent & Build
       run: |
         npm install
-        npm install -g hexo-cli
+        npm install -g hexo
         hexo g
 
-    - name: Commit
-      run: |
-        git config --global user.email hocgin@gmail.com
-        git config --global user.name hocgin
-        git add public/*
-        git commit -m '部署' -a
-
     - name: Push
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+      uses: JamesIves/github-pages-deploy-action@releases/v2
+      env:
+        ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        BRANCH: gh-pages
+        FOLDER: public
