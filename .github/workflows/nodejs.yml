@@ -25,7 +25,8 @@ jobs:
 
     - name: Dependent & Build
       run: |
-        npm install
+        npm install -g yarn
+        yarn
         npm run build
         hexo g
 
