@@ -12,7 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [8.x]
+        node-version: [11.x]
 
     steps:
     - name: Checkout Actions
@@ -25,8 +25,7 @@ jobs:
 
     - name: Dependent & Build
       run: |
-        npm install -g yarn
-        yarn
+        npm install
         npm run build
         hexo g
 
