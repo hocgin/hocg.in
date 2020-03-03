@@ -26,7 +26,7 @@ jobs:
     - name: Dependent & Build
       run: |
         npm install
-        npm install hexo
+        npm install -g hexo-cli
         hexo g
 
     - name: Commit
