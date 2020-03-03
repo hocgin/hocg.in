@@ -16,6 +16,6 @@ jobs:
     - name: Push
       uses: JamesIves/github-pages-deploy-action@master
       with:
-        ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: gh-pages
         FOLDER: public
