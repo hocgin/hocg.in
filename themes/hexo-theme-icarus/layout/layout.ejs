@@ -1,0 +1,31 @@
+<!--
+   _                     _
+  | |__   ___   ___ __ _(_)_ __
+  | '_ \ / _ \ / __/ _` | | '_ \
+  | | | | (_) | (_| (_| | | | | |
+  |_| |_|\___/ \___\__, |_|_| |_|
+                   |___/
+-->
+<%- partial('common/head') %>
+<body>
+    <div id="container">
+        <%- partial('common/header') %>
+        <div class="outer">
+            <% if (theme.customize.profile.enabled) { %>
+                <%- partial('common/profile', null, {cache: !config.relative_link}) %>
+            <% } %>
+            <section id="main"><%- body %></section>
+            <% if (theme.customize.sidebar) { %>
+                <%- partial('common/sidebar', null, false) %>
+            <% } %>
+        </div>
+        <%- partial('common/footer', null, {cache: !config.relative_link}) %>
+        <%- partial('common/scripts') %>
+    </div>
+    <script>
+        var xlm_wid='<%- theme.addOne.xlm_wid %>';
+        var xlm_url='https://www.xianliao.me/';
+    </script>
+    <script type='text/javascript' charset='UTF-8' src='http://www.xianliao.me/embed.js'></script>
+</body>
+</html>

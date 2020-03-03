@@ -1,0 +1,16 @@
+<% if (page.content != undefined && toc(page.content).length > 1) { %>
+<div class="widget-wrap" id="widget-toc">
+    <h3 class="widget-title">
+        <%= __('widget.toc') %>
+    </h3>
+    <div class="widget">
+        <!--toc-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+            <div class="post-toc">
+                <%- toc(page.content, {class: "nav", list_number: true}) %>
+            </div>
+        </section>
+        <!--/toc-->
+    </div>
+</div>
+<% } %>
