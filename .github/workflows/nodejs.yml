@@ -23,11 +23,20 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
+    - name: Dependent & Build
+      run: |
+        npm install
+        npm run build
+        hexo g
 
-    - name: Build and Deploy
-      uses: JamesIves/github-pages-deploy-action@master
-      env:
-        BRANCH: master
-        FOLDER: public
-        ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BUILD_SCRIPT: npm install && npm run build && hexo g
+    - name: Commit
+      run: |
+        git config --global user.email hocgin@gmail.com
+        git config --global user.name hocgin
+        git add public/*
+        git commit -m '部署' -a
+
+    - name: Push
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
