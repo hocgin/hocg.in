@@ -1,0 +1,101 @@
+# Menus
+menu:
+  首页: .
+  归档: archives
+  分类: categories
+  标签: tags
+
+language: zh-CN
+
+# Customize
+customize:
+    logo:
+        enabled: true
+        width: 40
+        height: 40
+        url: images/logo.png
+    profile:
+        enabled: false # Whether to show profile bar
+        fixed: true
+        avatar: css/images/avatar.png
+        gravatar: # Gravatar email address, if you enable Gravatar, your avatar config will be overriden
+        author: PPOffice
+        author_title: Web Developer & Designer
+        location: Harbin, China
+        follow: https://github.com/ppoffice/
+    highlight: monokai
+    sidebar: right # sidebar position, options: left, right or leave it empty
+    thumbnail: false # enable posts thumbnail, options: true, false
+    favicon: /favicon.ico # path to favicon
+    social_links:
+        github: http://github.com/ppoffice/hexo-theme-icarus
+        twitter: /
+        facebook: /
+        dribbble: /
+        rss: /
+    social_link_tooltip: true # enable the social link tooltip, options: true, false
+
+# Widgets
+#    - recent_posts
+#    - tag
+#    - category
+#    - qrcode
+widgets:
+    - socials
+    - recent_posts
+    - toc
+    - archive
+    - tagcloud
+    - links
+
+# Search
+search:
+    insight: true # you need to install `hexo-generator-json-content` before using Insight Search
+    swiftype: # enter swiftype install key here
+    baidu: false # you need to disable other search engines to use Baidu search, options: true, false
+
+# Comment
+comment:
+    disqus:  # enter disqus shortname here
+    duoshuo: # enter duoshuo shortname here
+    youyan: # enter youyan uid here
+    facebook: # enter true to enable
+    isso: # enter the domain name of your own comment isso server eg. comments.example.com
+    changyan: # please fill in `appid` and `conf` to enable
+        appid:
+        conf:
+    gitment:
+    livere: # enter livere uid here
+    valine: # Valine Comment System https://github.com/xCss/Valine
+        on: true # enter true to enable
+        appId: UgznLOt1wcUYIgK8LbBRwXOR-gzGzoHsz # enter the leancloud application appId here
+        appKey: hyCCbbO9B8bTXEBe1KEuJ95K # enter the leancloud application appKey here
+        notify: false # enter true to enable <Mail notifier> https://github.com/xCss/Valine/wiki/Valine-%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%E4%B8%AD%E7%9A%84%E9%82%AE%E4%BB%B6%E6%8F%90%E9%86%92%E8%AE%BE%E7%BD%AE
+        verify: false # enter true to enable <Validation code>
+        placeholder: 留言一下呗 # enter the comment box placeholder
+    
+
+# Share
+share: default # options: jiathis, bdshare, addtoany, default
+
+# Plugins
+plugins:
+    lightgallery: true # options: true, false
+    justifiedgallery: true # options: true, false
+    google_analytics: UA-75635029-1 # enter the tracking ID for your Google Analytics
+    google_site_verification: BIu5FVv0ybO_ceKwrQ-A7znPy4ObYjrCIbLTvcKxqAM # enter Google site verification code
+    baidu_analytics: # enter Baidu Analytics hash key
+    mathjax: false # options: true, false
+
+# Miscellaneous
+miscellaneous:
+    open_graph: # see http://ogp.me
+        fb_app_id:
+        fb_admins:
+        twitter_id:
+        google_plus:
+    links:
+        lutty: https://blog.lutty.me/
+
+addOne:
+  xlm_wid: 13073
