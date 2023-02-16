@@ -1,0 +1,829 @@
+<!--
+   _                     _
+  | |__   ___   ___ __ _(_)_ __
+  | '_ \ / _ \ / __/ _` | | '_ \
+  | | | | (_) | (_| (_| | | | | |
+  |_| |_|\___/ \___\__, |_|_| |_|
+                   |___/
+-->
+<!DOCTYPE html>
+<html lang="zh">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    
+    <title>安装完Ubuntu后,我该做什么 | hocgin (๑`灬´๑)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="这是一篇我对Ubuntu日常使用和优化的整理，也是一篇借鉴前人的文章，还有一些可能会遇到的疑难杂病的“偏方”，希望对你有帮助:)update: 新增undistract-me终端命令完成提醒插件">
+<meta name="keywords" content="Ubuntu,Tips,Gnome">
+<meta property="og:type" content="article">
+<meta property="og:title" content="安装完Ubuntu后,我该做什么">
+<meta property="og:url" content="https://hocg.in/2016/03/20/安装完Ubuntu后-我该做什么/index.html">
+<meta property="og:site_name" content="hocgin (๑`灬´๑)">
+<meta property="og:description" content="这是一篇我对Ubuntu日常使用和优化的整理，也是一篇借鉴前人的文章，还有一些可能会遇到的疑难杂病的“偏方”，希望对你有帮助:)update: 新增undistract-me终端命令完成提醒插件">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2023-02-16T17:03:24.035Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="安装完Ubuntu后,我该做什么">
+<meta name="twitter:description" content="这是一篇我对Ubuntu日常使用和优化的整理，也是一篇借鉴前人的文章，还有一些可能会遇到的疑难杂病的“偏方”，希望对你有帮助:)update: 新增undistract-me终端命令完成提醒插件">
+    
+
+    
+        <link rel="alternate" href="/" title="hocgin (๑`灬´๑)" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/favicon.ico">
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/open-sans/styles.css">
+    <link rel="stylesheet" href="/libs/firacode/fira_code.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+        <script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-75635029-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+    
+    
+        <meta name="google-site-verification" content="BIu5FVv0ybO_ceKwrQ-A7znPy4ObYjrCIbLTvcKxqAM">
+    
+    
+
+
+</head>
+</html>
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <!--<i class="logo"></i>-->
+                <span class="site-title">hocgin (๑`灬´๑)</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/.">首页</a>
+                
+                    <a class="main-nav-link" href="/archives">归档</a>
+                
+                    <a class="main-nav-link" href="/categories">分类</a>
+                
+                    <a class="main-nav-link" href="/tags">标签</a>
+                
+            </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="想要查找什么..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/.">首页</a></td>
+                
+                    <td><a class="main-nav-link" href="/archives">归档</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories">分类</a></td>
+                
+                    <td><a class="main-nav-link" href="/tags">标签</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+            <section id="main"><article id="post-安装完Ubuntu后-我该做什么"
+         class="article article-type-post "
+         itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+        <header class="article-header">
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2016/03/20/安装完Ubuntu后-我该做什么/">
+            <time datetime="2016-03-20T14:34:20.000Z" itemprop="datePublished">2016-03-20</time>
+        </a>
+    </div>
+
+
+                <div>•</div>
+                
+    <div class="article-category">
+        <a class="article-category-link" href="/categories/OS/">OS</a>
+    </div>
+
+            </div>
+            
+    
+        <h1 class="article-title" itemprop="name">
+            安装完Ubuntu后,我该做什么
+        </h1>
+    
+
+        </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            
+            
+            <p>这是一篇我对Ubuntu日常使用和优化的整理，也是一篇借鉴前人的文章，还有一些可能会遇到的疑难杂病的“偏方”，希望对你有帮助:)<br><strong>update</strong>: 新增<code>undistract-me</code>终端命令完成提醒插件<br><a id="more"></a></p>
+<h2 id="yuan获取"><a href="#yuan获取" class="headerlink" title="yuan获取"></a>yuan获取</h2><p>官方列表： <a href="http://wiki.ubuntu.org.cn/%E6%BA%90%E5%88%97%E8%A1%A8" target="_blank" rel="noopener">http://wiki.ubuntu.org.cn/%E6%BA%90%E5%88%97%E8%A1%A8</a><br>网易163： <a href="http://mirrors.163.com/.help/ubuntu.html" target="_blank" rel="noopener">http://mirrors.163.com/.help/ubuntu.html</a></p>
+<hr>
+<h2 id="移除"><a href="#移除" class="headerlink" title="移除"></a>移除</h2><blockquote>
+<p>删除libreoffice</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get remove libreoffice-common</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>删除Amazon的链接s</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get remove unity-webapps-common</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>删掉基本不用的自带软件</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get remove thunderbird totem rhythmbox empathy brasero simple-scan gnome-mahjongg aisleriot gnome-mines cheese transmission-common gnome-orca webbrowser-app gnome-sudoku  landscape-client-ui-install</span><br><span class="line">sudo apt-get remove onboard deja-dup</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>shang xia zuoyou</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get remove vim-common</span><br><span class="line">sudo apt-get install vim</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><p>monaco<code>苹果字体</code><br><a href="https://github.com/cstrap/monaco-font" target="_blank" rel="noopener">https://github.com/cstrap/monaco-font</a><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -kL https://raw.github.com/cstrap/monaco-font/master/install-font-ubuntu.sh | bash</span><br></pre></td></tr></table></figure></p>
+<p>consolas<code>微软字体</code></p>
+<hr>
+<h2 id="Gnome3"><a href="#Gnome3" class="headerlink" title="Gnome3"></a>Gnome3</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><h4 id="1-安装Gnome3桌面"><a href="#1-安装Gnome3桌面" class="headerlink" title="1.安装Gnome3桌面"></a>1.安装Gnome3桌面</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 安装</span></span><br><span class="line">sudo add-apt-repository ppa:gnome3-team/gnome3</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install ppa-purge</span><br><span class="line">sudo ppa-purge ppa:gnome3-team/gnome3</span><br><span class="line">sudo apt-get dist-upgrade</span><br><span class="line">sudo apt-get install gnome-themes-standard ubuntu-desktop gnome-shell</span><br><span class="line"><span class="meta">#</span><span class="bash"> 删除</span></span><br><span class="line">sudo apt-get install ppa-purge</span><br><span class="line">sudo ppa-purge ppa:gnome3-team/gnome3</span><br></pre></td></tr></table></figure>
+<h4 id="2-Gnome3系统"><a href="#2-Gnome3系统" class="headerlink" title="2.Gnome3系统"></a>2.Gnome3系统</h4><p><a href="https://ubuntugnome.org/download/" target="_blank" rel="noopener">下载</a></p>
+<h3 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h3><p><code>主题文件位置：~/.themes 或 /usr/share/themes</code></p>
+<h4 id="1-Paper"><a href="#1-Paper" class="headerlink" title="1.Paper"></a>1.Paper</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 下拉git</span></span><br><span class="line">git clone https://github.com/snwh/paper-gtk-theme.git</span><br><span class="line"><span class="meta">#</span><span class="bash"> 运行安装脚本</span></span><br><span class="line">sh ./install-gtk-theme.sh</span><br></pre></td></tr></table></figure>
+<h4 id="2-Numix-Circle"><a href="#2-Numix-Circle" class="headerlink" title="2.Numix-Circle"></a>2.Numix-Circle</h4><blockquote>
+<p>很赞</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 安装</span></span><br><span class="line">sudo apt-add-repository ppa:numix/ppa</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install numix-icon-theme-circle</span><br></pre></td></tr></table></figure>
+<h3 id="插件支持"><a href="#插件支持" class="headerlink" title="插件支持"></a>插件支持</h3><blockquote>
+<p>gnome-tweak-tool Gnome3的调节软件<br>可直接管理插件</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install gnome-tweak-tool</span><br></pre></td></tr></table></figure>
+<p><code>插件下载网站: https://extensions.gnome.org/</code></p>
+<ol>
+<li>使用Chrome 插件</li>
+<li>系统安装chrome-gnome-shell</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:ne0sight/chrome-gnome-shell</span><br><span class="line"><span class="meta">#</span><span class="bash"> trusty</span></span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install chrome-gnome-shell</span><br></pre></td></tr></table></figure>
+<p><strong>插件列表</strong></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>描述</th>
+<th>推荐</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Autohide battery</td>
+<td>可以在电池充满的情况下隐藏电池图标</td>
+<td>推荐</td>
+</tr>
+<tr>
+<td>Battery status</td>
+<td>可以显示当前电池电量以及可以使用的时间</td>
+<td>推荐</td>
+</tr>
+<tr>
+<td>Dash to dock</td>
+<td>在屏幕左边显示一个快速启动条</td>
+<td>推荐</td>
+</tr>
+<tr>
+<td>Freon</td>
+<td>显示当前磁盘，显卡，CPU等等温度</td>
+<td>不推荐，推荐SysPeek</td>
+</tr>
+<tr>
+<td>Lock Keys</td>
+<td>显示当前的 Num Lock, Caps Lock 的状态</td>
+<td>推荐</td>
+</tr>
+<tr>
+<td>Refesh wifi connections</td>
+<td>在 wifi 列表上显示一个刷新图标</td>
+<td>推荐</td>
+</tr>
+<tr>
+<td>status title bar</td>
+<td>讲状态条上的标题改为当前窗口的标题</td>
+<td>推荐</td>
+</tr>
+<tr>
+<td>Coverflow Alt-Tab</td>
+<td>类似WIN 7切换特效</td>
+<td>太显眼，不推荐</td>
+</tr>
+<tr>
+<td>OpenWeather</td>
+<td>天气预报</td>
+<td>推荐</td>
+</tr>
+<tr>
+<td>NetSpeed</td>
+<td>显示网速</td>
+<td>不推荐，推荐SysPeek</td>
+</tr>
+<tr>
+<td>system-monitor</td>
+<td>显示当前系统信息</td>
+<td>太显眼，不推荐</td>
+</tr>
+<tr>
+<td>Dynamic Top Bar</td>
+<td>在当前没有最大化窗口时使顶栏透明</td>
+<td>推荐</td>
+</tr>
+<tr>
+<td>Impatience</td>
+<td>Gnome Shell 动画提速</td>
+<td>推荐</td>
+</tr>
+<tr>
+<td>Better Volume Indicator</td>
+<td>透过鼠标滚轮操作更便捷地调整音量</td>
+<td>推荐</td>
+</tr>
+<tr>
+<td>Media player indicator</td>
+<td>显示音乐播放器的状态</td>
+<td>推荐</td>
+</tr>
+<tr>
+<td>Workspaces-to-dock</td>
+<td>将工作区转变为一个可自动隐藏的停靠栏</td>
+<td>推荐</td>
+</tr>
+<tr>
+<td>Panel OSD</td>
+<td>修改通知显示位置</td>
+<td>推荐</td>
+</tr>
+<tr>
+<td>Clipboard Indicator</td>
+<td>剪贴板指示器</td>
+<td>推荐</td>
+</tr>
+<tr>
+<td>Caffeine</td>
+<td>禁止自动挂起或锁屏</td>
+<td>推荐</td>
+</tr>
+<tr>
+<td>Transmission Daemon Indicator</td>
+<td>Transmission面板指示器</td>
+<td>推荐，需要Transmission Daemon</td>
+</tr>
+<tr>
+<td>Icon Hider</td>
+<td>显示/隐藏顶栏图标</td>
+<td>推荐</td>
+</tr>
+<tr>
+<td>Top Panel Workspace Scroll</td>
+<td>在顶栏上滚动鼠标中键来快速切换工作区。在topbar按住shift+滚轮</td>
+<td>推荐</td>
+</tr>
+<tr>
+<td>Drop Down Terminal</td>
+<td>终端快捷方式</td>
+<td>推荐</td>
+</tr>
+<tr>
+<td>Windows Blur Effects</td>
+<td>给未激活的窗口添加模糊效果</td>
+<td>不推荐</td>
+</tr>
+<tr>
+<td>Modern Calc</td>
+<td>功能齐全的计算器扩展</td>
+<td>没找到</td>
+</tr>
+<tr>
+<td>EasyScreenCast</td>
+<td>录屏工具</td>
+<td>推荐</td>
+</tr>
+<tr>
+<td>Place status indicator</td>
+<td>快速访问一些文件夹</td>
+<td>推荐，没装上</td>
+</tr>
+<tr>
+<td>Removable drive menu</td>
+<td>显示连接到电脑的usb设备</td>
+<td>推荐</td>
+</tr>
+<tr>
+<td>User themes</td>
+<td>用来启用自定义的shell主题</td>
+<td>推荐，没装上</td>
+</tr>
+<tr>
+<td>Workspace indicator</td>
+<td>在顶栏显示当前示工作区的序号</td>
+<td>推荐</td>
+</tr>
+<tr>
+<td>touchpad-indicator</td>
+<td>插入鼠标时自动使触摸板失效</td>
+<td>推荐</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="壁纸"><a href="#壁纸" class="headerlink" title="壁纸"></a>壁纸</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 1.安装archibold</span></span><br><span class="line">curl -L -O http://archibold.io/sh/archibold</span><br><span class="line">chmod +x archibold</span><br><span class="line">sudo mv archibold /usr/bin</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 2.执行</span></span><br><span class="line">archibold login-background [壁纸的位置]</span><br></pre></td></tr></table></figure>
+<p>此外还可以让桌面和锁屏界面使用动态壁纸，动态壁纸由一个xml文件构成，就像这样：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">background</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">starttime</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">year</span>&gt;</span>2011<span class="tag">&lt;/<span class="name">year</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">month</span>&gt;</span>11<span class="tag">&lt;/<span class="name">month</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">day</span>&gt;</span>24<span class="tag">&lt;/<span class="name">day</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">hour</span>&gt;</span>7<span class="tag">&lt;/<span class="name">hour</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">minute</span>&gt;</span>00<span class="tag">&lt;/<span class="name">minute</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">second</span>&gt;</span>00<span class="tag">&lt;/<span class="name">second</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">starttime</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">static</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">duration</span>&gt;</span>3600.0<span class="tag">&lt;/<span class="name">duration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">file</span>&gt;</span>picture1.jpg<span class="tag">&lt;/<span class="name">file</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">static</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">transition</span> <span class="attr">type</span>=<span class="string">"overlay"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">duration</span>&gt;</span>18000.0<span class="tag">&lt;/<span class="name">duration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">from</span>&gt;</span>picture1.jpg<span class="tag">&lt;/<span class="name">from</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">to</span>&gt;</span>/picture2.jpg<span class="tag">&lt;/<span class="name">to</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">transition</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">static</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">duration</span>&gt;</span>18000.0<span class="tag">&lt;/<span class="name">duration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">file</span>&gt;</span>picture2.jpg<span class="tag">&lt;/<span class="name">file</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">static</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">transition</span> <span class="attr">type</span>=<span class="string">"overlay"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">duration</span>&gt;</span>21600.0<span class="tag">&lt;/<span class="name">duration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">from</span>&gt;</span>picture2.jpg<span class="tag">&lt;/<span class="name">from</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">to</span>&gt;</span>picture1.jpg<span class="tag">&lt;/<span class="name">to</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">transition</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">background</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>简单解释以下这个xml文件的含义：</p>
+<p><code>starttime</code>：这个部分规定了壁纸切换起始时间，设置成过去的某个时间即可(设置成2020年就要等到2020年才会有效果)<br><code>static</code>：这个部分表示在duration规定的时间(以秒为单位)中壁纸都是file中给定的那张图片<br><code>transition</code>：这个部分表示在duration规定的时间内壁纸从from中的图片切换到to中的图片你可以添加任意多个static+transition的组合，只需要最后一个transition切换回最初的static那张图片就可以循环更换壁纸了。  </p>
+<p>那么如何启用这样的xml文件呢，单凭系统设置无法办到，我们需要使用dconf系统配置编辑器。<br>首先打开dconf编辑器，展开<code>org–gnome–desktop–background</code>这一项，可以看到其中的<code>picture-uri</code>修这一项的默认值是<code>file:///usr/share/backgrounds/gnome/adwaita-timed.xml</code>，这个就是你刚装好桌面是的默认壁纸啦，将其改成你的xml文件就可以了。<br>锁屏界面的壁纸更换方法也一样，只不过把<code>org–gnome–desktop–background</code>改成<code>org–gnome–desktop–screensaver</code>而已</p>
+<hr>
+<h2 id="软件安装"><a href="#软件安装" class="headerlink" title="软件安装"></a>软件安装</h2><h3 id="指令安装"><a href="#指令安装" class="headerlink" title="指令安装"></a>指令安装</h3><blockquote>
+<p>命令面板小提示</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 安装</span></span><br><span class="line">sudo apt update</span><br><span class="line">sudo apt install python3-dev python3-pip</span><br><span class="line">sudo -H pip3 install thefuck</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>科学上网 Client-SS</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 安装</span></span><br><span class="line">sudo add-apt-repository ppa:hzwhuang/ss-qt5</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install shadowsocks-qt5</span><br><span class="line"><span class="meta">#</span><span class="bash"> 安装 pip</span></span><br><span class="line">sudo pip install genpac</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 下载自动翻墙列表</span></span><br><span class="line">genpac -p "SOCKS5 127.0.0.1:1080" --gfwlist-proxy="SOCKS5 127.0.0.1:1080" --output="~/Documents/autoproxy.pac" --gfwlist-url="https://autoproxy-gfwlist.googlecode.com/svn/trunk/gfwlist.txt" --user-rule-from="user-rules.txt"</span><br></pre></td></tr></table></figure>
+<p><strong>添加开机启动</strong><br>command：<code>/usr/bin/ss-qt5</code></p>
+<blockquote>
+<p>屏幕截图 Shutter</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 安装</span></span><br><span class="line">sudo apt-get install Shutter</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 打开</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 搜索 Shutter</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>音视频解码 ubuntu-restricted extras</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 安装</span></span><br><span class="line">sudo apt-get install ubuntu-restricted-extras</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>终端命令执行完成提醒</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 安装</span></span><br><span class="line">sudo apt-get install undistract-me</span><br><span class="line"><span class="meta">#</span><span class="bash"> 配置</span></span><br><span class="line">vim ~/.bashrc</span><br><span class="line"><span class="meta">#</span><span class="bash"> 新增如下两行</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> . /usr/share/undistract-me/long-running.bash</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> notify_when_long_running_commands_finish_install</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 生效</span></span><br><span class="line">source ~/.bashrc</span><br><span class="line"><span class="meta">#</span><span class="bash"> 测试</span></span><br><span class="line">sleep 11</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>GNOME MPV 代替VLC播放器</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 安装</span></span><br><span class="line">sudo add-apt-repository ppa:xuzhen666/gnome-mpv</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install gnome-mpv</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>视频播放 VLC播放器</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 安装</span></span><br><span class="line">sudo add-apt-repository ppa:videolan/master-daily</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install vlc</span><br><span class="line"><span class="meta">#</span><span class="bash"> 使用</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 搜索 vlc</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Grub引导 Grub Customizer<br>可配置启动界面，启动项等</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 安装</span></span><br><span class="line">sudo add-apt-repository ppa:danielrichter2007/grub-customizer</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install grub-customizer</span><br><span class="line"><span class="meta">#</span><span class="bash"> 使用</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 搜索 Grub Customizer</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Office WPS</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 安装</span></span><br><span class="line">sudo apt-get install wps-office</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>[小插件]指示器性能 SysPeek</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 安装</span></span><br><span class="line">sudo add-apt-repository ppa:nilarimogard/webupd8  </span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install syspeeka</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Synapse 快速启动器</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:synapse-core/testing</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install synapse</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Uget一款下载工具，配合 aria2 插件使用效果出色<br>curl + area2 + axel</p>
+</blockquote>
+<p>地址：<a href="http://baike.renwuyi.com/2014-11/2153.html" target="_blank" rel="noopener">参考</a></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 安装</span></span><br><span class="line">sudo add-apt-repository ppa:plushuang-tw/uget-stable</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install uget</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>redshift类似 f.lux 的屏幕色温调整工具</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 安装</span></span><br><span class="line">sudo apt-get install redshift-gtk</span><br></pre></td></tr></table></figure>
+<p><strong>添加开机启动</strong><br>command：<code>redshift-gtk -l 39.92:116.46 -t 5500:4500</code></p>
+<blockquote>
+<p>Go For It 一款整合了待办事项与计时器的生产力应用。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 安装</span><br><span class="line">sudo add-apt-repository ppa:mank319/go-for-it</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install go-for-it</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Catfish 一款优雅迅捷的文件搜索工具<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 安装</span></span><br><span class="line">sudo apt-get install catfish</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>神级命令行软件 Tmux <a href="http://www.wushxin.top/2016/03/28/%E4%BD%BF%E7%94%A8tmux.html" target="_blank" rel="noopener">说明</a><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install tmux</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p><code>cat</code>代码高亮<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 安装</span><br><span class="line">pip install pygments</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>配置<br>～/.bashrc<br>加入<code>alias cat=&#39;pygmentize -O style=monokai -f console256 -g&#39;</code></p>
+<h3 id="软件包安装"><a href="#软件包安装" class="headerlink" title="软件包安装"></a>软件包安装</h3><p><a href="http://ubuntu-tweak.com/" target="_blank" rel="noopener">系统管理 UbuntuTweak</a><br><code>打开：搜索 Ubuntu Tweak</code><br><a href="https://www.jianguoyun.com" target="_blank" rel="noopener">同步软件 坚果云</a><br><code>打开：搜索 Nutstore</code><br><a href="https://github.com/LiuLang/bcloud-packages" target="_blank" rel="noopener">百度网盘桌面客户端 BCloud</a><br><a href="https://launchpad.net/indicator-stickynotes" target="_blank" rel="noopener">便签</a><br><a href="http://keepass.info/" target="_blank" rel="noopener">MarkDown编辑软件 HarooPad</a><br><a href="http://pad.haroopress.com/" target="_blank" rel="noopener">密码管理器 keepass2</a><br><a href="http://pinyin.sogou.com/linux/?r=pinyin" target="_blank" rel="noopener">搜狗输入法</a><br><a href="http://cidian.youdao.com/multi.html#linuxAll" target="_blank" rel="noopener">有道词典</a><br><a href="http://www.vmware.com/products/workstation/" target="_blank" rel="noopener">VMware Workstation</a><br><a href="http://www.google.cn/chrome/browser/" target="_blank" rel="noopener">Chrome</a><br><a href="https://github.com/cosven/FeelUOwn" target="_blank" rel="noopener">网易音乐</a><br><a href="http://fabforce.net/dbdesigner4/" target="_blank" rel="noopener">数据库设计软件 DBdesigner4</a> - <a href="http://josemarfuregattideabreusilva.blogspot.com/2015/04/installing-dbdesigner-405-on-ubuntu.html" target="_blank" rel="noopener">问题1</a></p>
+<hr>
+<h3 id="听起来不错"><a href="#听起来不错" class="headerlink" title="听起来不错"></a>听起来不错</h3><ol>
+<li>Deluge Bittorrent 客户端</li>
+<li>Nutty网络监测工具。</li>
+<li>Synaptic 新立得软件包管理器</li>
+<li>UNetbootin启动盘制作工具</li>
+<li>Gpick拾色器。</li>
+<li>gpaint 微软画图</li>
+<li>ddm 驱动管理器</li>
+<li>Navicat <code>o(╯□╰)o 竟然是wine的</code></li>
+<li>XMind</li>
+</ol>
+<h2 id="小技巧"><a href="#小技巧" class="headerlink" title="小技巧"></a>小技巧</h2><h3 id="关闭系统检测报告"><a href="#关闭系统检测报告" class="headerlink" title="关闭系统检测报告"></a>关闭系统检测报告</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo gedit /etc/default/apport</span><br><span class="line"><span class="meta">#</span><span class="bash"> 修改enabled=0</span></span><br></pre></td></tr></table></figure>
+<h3 id="开机自动开启数字键"><a href="#开机自动开启数字键" class="headerlink" title="开机自动开启数字键"></a>开机自动开启数字键</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install numlockx</span><br><span class="line">sudo vim /etc/gdm/Init/Default</span><br><span class="line"><span class="meta">#</span><span class="bash"> -----------</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 在文件最后<span class="built_in">exit</span> 0的前面添加：</span></span><br><span class="line">  if [ -x /usr/bin/numlockx ]; then</span><br><span class="line">      numlockx on</span><br><span class="line">  fi</span><br></pre></td></tr></table></figure>
+<p>重启即可</p>
+<h3 id="插入鼠标时自动使触摸板失效"><a href="#插入鼠标时自动使触摸板失效" class="headerlink" title="插入鼠标时自动使触摸板失效"></a>插入鼠标时自动使触摸板失效</h3><p>安装Touchpad Indicator (触摸板开关）<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:atareao/atareao  </span><br><span class="line">sudo apt-get update  </span><br><span class="line">sudo apt-get install touchpad-indicator</span><br></pre></td></tr></table></figure></p>
+<p> 搜索 touchpad indicator</p>
+<h3 id="遇到显示俩个输入法图标情况"><a href="#遇到显示俩个输入法图标情况" class="headerlink" title="遇到显示俩个输入法图标情况"></a>遇到显示俩个输入法图标情况</h3><p><code>有一定原因是自启项启动了一个</code></p>
+<h3 id="黑屏"><a href="#黑屏" class="headerlink" title="黑屏"></a>黑屏</h3><p><code>95% 是和显卡驱动有关</code></p>
+<h3 id="Chrome-每次打开都要求输入密码"><a href="#Chrome-每次打开都要求输入密码" class="headerlink" title="Chrome 每次打开都要求输入密码"></a>Chrome 每次打开都要求输入密码</h3><p>一、删除现在的密钥环<br>  视图-&gt;根据密码环 在密码区会有一个“登录”为名字的密钥环，右击将其删除。<br>二、添加新的密钥环<br>  终端输入seahorse打开管理密钥环的软件，文件-&gt;新建-&gt;密码和密钥-&gt;输入名字(这里是以”chrome”为例)。密码设置为空</p>
+<h3 id="添加源安装后，not-fount-XX"><a href="#添加源安装后，not-fount-XX" class="headerlink" title="添加源安装后，not fount XX"></a>添加源安装后，not fount XX</h3><p>一、 试着访问该链接<br>二、如果可以手动找到该路径，那便可以修改<code>/etc/apt/source.list.d/</code>目录下你添加的安装源文件<br><strong>例如</strong><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/apt/sources.list.d/sogoupinyin.list</span><br><span class="line"><span class="meta">#</span><span class="bash"> 显示内容</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> deb http://archive.ubuntukylin.com:10006/ubuntukylin trusty main</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 可修改链接部分。</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="网卡驱动-Realtek-RTL8723AE-无线网卡驱动"><a href="#网卡驱动-Realtek-RTL8723AE-无线网卡驱动" class="headerlink" title="网卡驱动 Realtek RTL8723AE 无线网卡驱动"></a>网卡驱动 <code>Realtek RTL8723AE 无线网卡驱动</code></h3><p><strong>第一种</strong>(闭源驱动)：  </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install linux-firmware-nonfree</span><br></pre></td></tr></table></figure>
+<p><strong>第二种</strong>(第三方驱动，PPA安装)：  </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:hanipouspilot/rtlwifi</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install rtlwifi-new-dkms</span><br></pre></td></tr></table></figure>
+<h3 id="当遇到产品无法输入中文的时候"><a href="#当遇到产品无法输入中文的时候" class="headerlink" title="当遇到产品无法输入中文的时候"></a>当遇到产品无法输入中文的时候</h3><p>先尝试卸载ibus，如果还是不可以试试在xxx.sh的启动脚本中添加如下：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">XMODIFIERS="@im=fcitx"</span><br><span class="line">export XMODIFIERS</span><br></pre></td></tr></table></figure>
+<p>到</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> ---------------------------------------------------------------------</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Run the IDE.</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> ---------------------------------------------------------------------</span></span><br></pre></td></tr></table></figure>
+<p>之前。<br><strong>通用</strong><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mv /usr/bin/ibus-daemon /usr/bin/ibus-daemon.fix</span><br></pre></td></tr></table></figure></p>
+<h3 id="解决LC-CTYPE-cannot-change-locale-en-US-UTF-8-错误"><a href="#解决LC-CTYPE-cannot-change-locale-en-US-UTF-8-错误" class="headerlink" title="解决LC_CTYPE: cannot change locale (en_US.UTF-8) 错误"></a>解决<code>LC_CTYPE: cannot change locale (en_US.UTF-8)</code> 错误</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 增加en_US.UTF-8</span></span><br><span class="line">locale-gen en_US.UTF-8</span><br></pre></td></tr></table></figure>
+<h3 id="修复VMware故障，闪退"><a href="#修复VMware故障，闪退" class="headerlink" title="修复VMware故障，闪退"></a>修复<code>VMware</code>故障，闪退</h3><ol>
+<li>下载<a href="http://cdn.hocgin.top/Uefi.priv" target="_blank" rel="noopener">Uefi.priv</a>、<a href="http://cdn.hocgin.top/fix.sh" target="_blank" rel="noopener">fix.sh</a>、<a href="http://cdn.hocgin.top/Uefi.der" target="_blank" rel="noopener">Uefi.der</a>至于同一目录.</li>
+<li>执行  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh fix.sh</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+
+            
+    <div class="article-tag">
+        <a class="tag-link" href="/tags/Gnome/">Gnome</a>, <a class="tag-link" href="/tags/Tips/">Tips</a>, <a class="tag-link" href="/tags/Ubuntu/">Ubuntu</a>
+    </div>
+
+            
+
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://hocg.in/2016/03/20/安装完Ubuntu后-我该做什么/" data-id="cle7cq1ga008w94o604wk23e3" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+
+        </footer>
+    </div>
+    
+    
+<nav id="article-nav">
+    
+        <a href="/2016/03/26/hexo-功能扩展/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">上一篇</strong>
+            <div class="article-nav-title">
+                
+                    hexo 功能扩展
+                
+            </div>
+        </a>
+    
+    
+        <a href="/2016/03/15/hexo-使用/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">下一篇</strong>
+            <div class="article-nav-title">hexo 使用小记</div>
+        </a>
+    
+</nav>
+
+
+    
+</article>
+
+
+
+    
+        <section id="comments">
+    <div id="valine-thread"></div>
+</section>
+    
+
+</section>
+            
+                
+<aside id="sidebar">
+   
+        <div class="widget-wrap">
+    <h3 class="widget-title">关注我</h3>
+    <div class="widget">
+        <a class="social" href="https://github.com/hocgin" target="_blank"><i class="fa fa-github fa-2x"></i></a>
+        <a class="social" href="https://hocg.in/atom.xml" target="_blank"><i class="fa fa-rss fa-2x"></i></a>
+        <a class="social" href="https://resume.hocg.in/" target="_blank"><span class="fa-2x">简</span></a>
+        <a class="social" href="https://projects.hocg.in/" target="_blank"><i class="fa fa-2x fa-fire"></i></a>
+        <a class="social" href="https://panda.hocg.in/" target="_blank"><i class="fa fa-2x fa-heart"></i></a>
+        <a class="social" href="https://weibo.com/u/2006617153" target="_blank"><i class="fa fa-weibo fa-2x"></i></a>
+        <a class="social" href="https://www.500px.com/hocgin" target="_blank"><i class="fa fa-500px fa-2x"></i></a>
+    </div>
+</div>
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">近期文章</h3>
+        <div class="widget">
+            <ul id="recent-post" class="no-thumbnail">
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <!--<p class="item-category"><a class="article-category-link" href="/categories/Java/">Java</a></p>-->
+                            <p class="item-title fa fa-angle-right"><a href="/2020/12/10/让你3步搞定单点登陆/" class="title">让你3步搞定单点登陆</a></p>
+                            <!--<p class="item-date"><time datetime="2020-12-10T10:28:29.000Z" itemprop="datePublished">2020-12-10</time></p>-->
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <!--<p class="item-category"><a class="article-category-link" href="/categories/Java/">Java</a></p>-->
+                            <p class="item-title fa fa-angle-right"><a href="/2019/05/12/Java 命令工具/" class="title">Java 命令工具</a></p>
+                            <!--<p class="item-date"><time datetime="2019-05-12T19:37:49.000Z" itemprop="datePublished">2019-05-12</time></p>-->
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <!--<p class="item-category"><a class="article-category-link" href="/categories/Web/">Web</a></p>-->
+                            <p class="item-title fa fa-angle-right"><a href="/2019/04/18/关于网约车核心业务-推单相关整理/" class="title">关于网约车核心业务-推单相关设计整理</a></p>
+                            <!--<p class="item-date"><time datetime="2019-04-18T18:20:20.000Z" itemprop="datePublished">2019-04-18</time></p>-->
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <!--<p class="item-category"><a class="article-category-link" href="/categories/Linux/">Linux</a></p>-->
+                            <p class="item-title fa fa-angle-right"><a href="/2019/04/01/Linux 下网络相关的命令/" class="title">Linux 下网络相关的命令</a></p>
+                            <!--<p class="item-date"><time datetime="2019-04-01T08:07:00.000Z" itemprop="datePublished">2019-04-01</time></p>-->
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <!--<p class="item-category"><a class="article-category-link" href="/categories/服务端/">服务端</a></p>-->
+                            <p class="item-title fa fa-angle-right"><a href="/2019/03/23/Elasticsearch 随手记/" class="title">Elasticsearch 随手记</a></p>
+                            <!--<p class="item-date"><time datetime="2019-03-23T13:53:00.000Z" itemprop="datePublished">2019-03-23</time></p>-->
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+    
+        
+<div class="widget-wrap" id="widget-toc">
+    <h3 class="widget-title">
+        文章目录
+    </h3>
+    <div class="widget">
+        <!--toc-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+            <div class="post-toc">
+                <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#yuan获取"><span class="nav-number">1.</span> <span class="nav-text">yuan获取</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#移除"><span class="nav-number">2.</span> <span class="nav-text">移除</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字体"><span class="nav-number">3.</span> <span class="nav-text">字体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Gnome3"><span class="nav-number">4.</span> <span class="nav-text">Gnome3</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">4.1.</span> <span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-安装Gnome3桌面"><span class="nav-number">4.1.1.</span> <span class="nav-text">1.安装Gnome3桌面</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-Gnome3系统"><span class="nav-number">4.1.2.</span> <span class="nav-text">2.Gnome3系统</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#主题"><span class="nav-number">4.2.</span> <span class="nav-text">主题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-Paper"><span class="nav-number">4.2.1.</span> <span class="nav-text">1.Paper</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-Numix-Circle"><span class="nav-number">4.2.2.</span> <span class="nav-text">2.Numix-Circle</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#插件支持"><span class="nav-number">4.3.</span> <span class="nav-text">插件支持</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#壁纸"><span class="nav-number">5.</span> <span class="nav-text">壁纸</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#软件安装"><span class="nav-number">6.</span> <span class="nav-text">软件安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#指令安装"><span class="nav-number">6.1.</span> <span class="nav-text">指令安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#软件包安装"><span class="nav-number">6.2.</span> <span class="nav-text">软件包安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#听起来不错"><span class="nav-number">6.3.</span> <span class="nav-text">听起来不错</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#小技巧"><span class="nav-number">7.</span> <span class="nav-text">小技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#关闭系统检测报告"><span class="nav-number">7.1.</span> <span class="nav-text">关闭系统检测报告</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开机自动开启数字键"><span class="nav-number">7.2.</span> <span class="nav-text">开机自动开启数字键</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#插入鼠标时自动使触摸板失效"><span class="nav-number">7.3.</span> <span class="nav-text">插入鼠标时自动使触摸板失效</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#遇到显示俩个输入法图标情况"><span class="nav-number">7.4.</span> <span class="nav-text">遇到显示俩个输入法图标情况</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#黑屏"><span class="nav-number">7.5.</span> <span class="nav-text">黑屏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Chrome-每次打开都要求输入密码"><span class="nav-number">7.6.</span> <span class="nav-text">Chrome 每次打开都要求输入密码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加源安装后，not-fount-XX"><span class="nav-number">7.7.</span> <span class="nav-text">添加源安装后，not fount XX</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#网卡驱动-Realtek-RTL8723AE-无线网卡驱动"><span class="nav-number">7.8.</span> <span class="nav-text">网卡驱动 Realtek RTL8723AE 无线网卡驱动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#当遇到产品无法输入中文的时候"><span class="nav-number">7.9.</span> <span class="nav-text">当遇到产品无法输入中文的时候</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决LC-CTYPE-cannot-change-locale-en-US-UTF-8-错误"><span class="nav-number">7.10.</span> <span class="nav-text">解决LC_CTYPE: cannot change locale (en_US.UTF-8) 错误</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修复VMware故障，闪退"><span class="nav-number">7.11.</span> <span class="nav-text">修复VMware故障，闪退</span></a></li></ol></li></ol>
+            </div>
+        </section>
+        <!--/toc-->
+    </div>
+</div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">归档</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">十二月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">五月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">四月 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">三月 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">二月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">一月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">十二月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">十一月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">七月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">六月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">十月 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">九月 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">七月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">六月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">五月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">九月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">七月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">四月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">3</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">标签云</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/Android/" style="font-size: 15px;">Android</a> <a href="/tags/CI-CD/" style="font-size: 10px;">CI/CD</a> <a href="/tags/CSS3/" style="font-size: 10px;">CSS3</a> <a href="/tags/Chrome/" style="font-size: 10px;">Chrome</a> <a href="/tags/DevOps/" style="font-size: 10px;">DevOps</a> <a href="/tags/Docker/" style="font-size: 10px;">Docker</a> <a href="/tags/ELK/" style="font-size: 10px;">ELK</a> <a href="/tags/Elasticsearch/" style="font-size: 10px;">Elasticsearch</a> <a href="/tags/GitLab/" style="font-size: 10px;">GitLab</a> <a href="/tags/Gnome/" style="font-size: 10px;">Gnome</a> <a href="/tags/Go/" style="font-size: 10px;">Go</a> <a href="/tags/Google/" style="font-size: 10px;">Google</a> <a href="/tags/HTML5/" style="font-size: 15px;">HTML5</a> <a href="/tags/HTTPS/" style="font-size: 10px;">HTTPS</a> <a href="/tags/Hexo/" style="font-size: 11.25px;">Hexo</a> <a href="/tags/IO/" style="font-size: 10px;">IO</a> <a href="/tags/JAVA/" style="font-size: 10px;">JAVA</a> <a href="/tags/JVM/" style="font-size: 12.5px;">JVM</a> <a href="/tags/Java/" style="font-size: 18.75px;">Java</a> <a href="/tags/JavaScript/" style="font-size: 12.5px;">JavaScript</a> <a href="/tags/K8s/" style="font-size: 10px;">K8s</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Mac/" style="font-size: 12.5px;">Mac</a> <a href="/tags/Maven/" style="font-size: 10px;">Maven</a> <a href="/tags/Nexus/" style="font-size: 10px;">Nexus</a> <a href="/tags/Ngrok/" style="font-size: 10px;">Ngrok</a> <a href="/tags/NodeJS/" style="font-size: 12.5px;">NodeJS</a> <a href="/tags/Objective-C/" style="font-size: 10px;">Objective-C</a> <a href="/tags/Oh-My-ZSH/" style="font-size: 10px;">Oh My ZSH</a> <a href="/tags/OpenWrt/" style="font-size: 16.25px;">OpenWrt</a> <a href="/tags/PHP/" style="font-size: 10px;">PHP</a> <a href="/tags/Pjax/" style="font-size: 10px;">Pjax</a> <a href="/tags/React/" style="font-size: 10px;">React</a> <a href="/tags/Redis/" style="font-size: 10px;">Redis</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/Shell/" style="font-size: 11.25px;">Shell</a> <a href="/tags/Spring/" style="font-size: 10px;">Spring</a> <a href="/tags/Spring-Boot/" style="font-size: 10px;">Spring Boot</a> <a href="/tags/SpringBoot/" style="font-size: 10px;">SpringBoot</a> <a href="/tags/TCP-IP/" style="font-size: 10px;">TCP/IP</a> <a href="/tags/Thymeleaf/" style="font-size: 10px;">Thymeleaf</a> <a href="/tags/Tip/" style="font-size: 10px;">Tip</a> <a href="/tags/Tips/" style="font-size: 20px;">Tips</a> <a href="/tags/Ubuntu/" style="font-size: 17.5px;">Ubuntu</a> <a href="/tags/Web/" style="font-size: 10px;">Web</a> <a href="/tags/Wireshark/" style="font-size: 10px;">Wireshark</a> <a href="/tags/前端/" style="font-size: 11.25px;">前端</a> <a href="/tags/图片墙/" style="font-size: 10px;">图片墙</a> <a href="/tags/多线程/" style="font-size: 13.75px;">多线程</a> <a href="/tags/手机/" style="font-size: 10px;">手机</a> <a href="/tags/数据结构/" style="font-size: 10px;">数据结构</a> <a href="/tags/设计思路/" style="font-size: 12.5px;">设计思路</a> <a href="/tags/语法/" style="font-size: 11.25px;">语法</a> <a href="/tags/锁/" style="font-size: 10px;">锁</a> <a href="/tags/问题/" style="font-size: 12.5px;">问题</a>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">友情连接</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="https://blog.lutty.me/" target="_blank">lutty</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+
+            
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            &copy; 2023&nbsp;
+            <i class="fa fa-heartbeat heartbeat" style="color: #F22E3C;"></i>&nbsp;
+            <a class="me" href="https://hocg.in" target="_blank">hocgin</a>.
+            <p>
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>.
+                Theme by <a href="http://github.com/ppoffice" target="_blank">PPOffice</a>.
+                Made by <a href="https://hocg.in">hocgin</a>
+            </p>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//cdn.jsdelivr.net/gh/xcss/valine@v1.1.6/dist/Valine.min.js"></script>
+    <script>
+        new Valine({
+            el: '#valine-thread' ,
+            notify:false,
+            verify:false,
+            app_id: 'UgznLOt1wcUYIgK8LbBRwXOR-gzGzoHsz',
+            app_key: 'hyCCbbO9B8bTXEBe1KEuJ95K',
+            placeholder: '留言一下呗'
+        });
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+<script src="/js/hocgin.js"></script>
+
+    </div>
+    <script>
+        var xlm_wid='13073';
+        var xlm_url='https://www.xianliao.me/';
+    </script>
+    <script type='text/javascript' charset='UTF-8' src='http://www.xianliao.me/embed.js'></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7086639635704454"
+            crossorigin="anonymous"></script>
+</body>
+</html>

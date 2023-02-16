@@ -1,0 +1,545 @@
+<!--
+   _                     _
+  | |__   ___   ___ __ _(_)_ __
+  | '_ \ / _ \ / __/ _` | | '_ \
+  | | | | (_) | (_| (_| | | | | |
+  |_| |_|\___/ \___\__, |_|_| |_|
+                   |___/
+-->
+<!DOCTYPE html>
+<html lang="zh">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    
+    <title>hexo 功能扩展 | hocgin (๑`灬´๑)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="这是自己参照hexo进行私人订制的教程，也是实战的记录，感觉还不错，成品可参照本博客.. （如果我以后没换的话😶）">
+<meta name="keywords" content="HTML5,Hexo,CSS3">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo 功能扩展">
+<meta property="og:url" content="https://hocg.in/2016/03/26/hexo-功能扩展/index.html">
+<meta property="og:site_name" content="hocgin (๑`灬´๑)">
+<meta property="og:description" content="这是自己参照hexo进行私人订制的教程，也是实战的记录，感觉还不错，成品可参照本博客.. （如果我以后没换的话😶）">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2023-02-16T17:03:24.035Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="hexo 功能扩展">
+<meta name="twitter:description" content="这是自己参照hexo进行私人订制的教程，也是实战的记录，感觉还不错，成品可参照本博客.. （如果我以后没换的话😶）">
+    
+
+    
+        <link rel="alternate" href="/" title="hocgin (๑`灬´๑)" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/favicon.ico">
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/open-sans/styles.css">
+    <link rel="stylesheet" href="/libs/firacode/fira_code.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+        <script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-75635029-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+    
+    
+        <meta name="google-site-verification" content="BIu5FVv0ybO_ceKwrQ-A7znPy4ObYjrCIbLTvcKxqAM">
+    
+    
+
+
+</head>
+</html>
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <!--<i class="logo"></i>-->
+                <span class="site-title">hocgin (๑`灬´๑)</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/.">首页</a>
+                
+                    <a class="main-nav-link" href="/archives">归档</a>
+                
+                    <a class="main-nav-link" href="/categories">分类</a>
+                
+                    <a class="main-nav-link" href="/tags">标签</a>
+                
+            </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="想要查找什么..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/.">首页</a></td>
+                
+                    <td><a class="main-nav-link" href="/archives">归档</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories">分类</a></td>
+                
+                    <td><a class="main-nav-link" href="/tags">标签</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+            <section id="main"><article id="post-hexo-功能扩展"
+         class="article article-type-post "
+         itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+        <header class="article-header">
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2016/03/26/hexo-功能扩展/">
+            <time datetime="2016-03-26T13:44:28.000Z" itemprop="datePublished">2016-03-26</time>
+        </a>
+    </div>
+
+
+                <div>•</div>
+                
+    <div class="article-category">
+        <a class="article-category-link" href="/categories/Web/">Web</a>
+    </div>
+
+            </div>
+            
+    
+        <h1 class="article-title" itemprop="name">
+            hexo 功能扩展
+        </h1>
+    
+
+        </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            
+            
+            <p>这是自己参照hexo进行私人订制的教程，也是实战的记录，感觉还不错，成品可参照本博客.. （如果我以后没换的话😶）<br><a id="more"></a></p>
+<h2 id="须知"><a href="#须知" class="headerlink" title="须知"></a>须知</h2><p><code>站点目录</code>: /<br><code>主题目录</code>: /themes/[主题名]<br><code>主题配置文件</code>: /themes/[主题名]/_config.yml<br><code>站点配置文件</code>: /_config.yml  </p>
+<h2 id="添加微信公众号二维码"><a href="#添加微信公众号二维码" class="headerlink" title="添加微信公众号二维码"></a>添加微信公众号二维码</h2><p>首先，打开<code>主题目录</code>下的 <code>layout/_macro/post.swig</code><br>然后，找到节点<code>footer</code>加入以下代码<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">!</span> <span class="attr">--</span> 添加微信图标 <span class="attr">start</span> <span class="attr">--</span>&gt;</span></span><br><span class="line">      &#123;% if theme.wechat_subscriber.enable %&#125;</span><br><span class="line">        &#123;% if !is_home() %&#125;</span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"hocgin-container"</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"folder"</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"paper"</span>&gt;</span></span><br><span class="line">        	<span class="tag">&lt;<span class="name">img</span> <span class="attr">width</span>=<span class="string">"100%"</span> <span class="attr">src</span>=<span class="string">"&#123;&#123; theme.wechat_subscriber.qcode &#125;&#125;"</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"hocgin-description"</span>&gt;</span>&#123;&#123; theme.wechat_subscriber.description &#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        &#123;% endif %&#125;</span><br><span class="line">      &#123;% endif %&#125;</span><br><span class="line"><span class="tag">&lt;<span class="name">!</span> <span class="attr">--</span> 添加微信图标 <span class="attr">end</span> <span class="attr">--</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>其次，到<code>主题目录</code>下的<code>source/css</code>创建文件夹<code>_hocgin</code>并在它之下创建css文件<code>customize-hocgin.css</code>以下是文件内容：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.hocgin-container</span> *, *<span class="selector-pseudo">:before</span>, *<span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">  <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.hocgin-container</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.hocgin-container</span> &gt; <span class="selector-class">.folder</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">220px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">180px</span>;</span><br><span class="line">  <span class="attribute">left</span>: <span class="built_in">calc</span>(<span class="number">50%</span> - <span class="number">110px</span>);</span><br><span class="line">  <span class="attribute">top</span>: <span class="built_in">calc</span>(<span class="number">70%</span> - <span class="number">90px</span>);</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.hocgin-container</span> &gt; <span class="selector-class">.folder</span> &gt; <span class="selector-class">.paper</span> &#123;</span><br><span class="line">  <span class="attribute">opacity</span>: <span class="number">1</span>;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">overflow</span>: hidden;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">top</span>: <span class="built_in">calc</span>(<span class="number">50%</span> - <span class="number">111px</span>);</span><br><span class="line">  <span class="attribute">left</span>: <span class="built_in">calc</span>(<span class="number">50%</span> - <span class="number">100px</span>);</span><br><span class="line">  <span class="attribute">transition</span>: top <span class="number">0.5s</span>, opacity <span class="number">0.4s</span>;</span><br><span class="line">  <span class="attribute">font-family</span>: Verdana, Tahoma, sans-serif;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">0.1em</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">1em</span>;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#644812</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#fde1ab</span>;</span><br><span class="line">  <span class="attribute">-moz-box-shadow</span>: <span class="number">10px</span> <span class="number">10px</span> <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.2</span>);</span><br><span class="line">  <span class="attribute">-webkit-box-shadow</span>: <span class="number">10px</span> <span class="number">10px</span> <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.2</span>);</span><br><span class="line">  <span class="attribute">box-shadow</span>: <span class="number">10px</span> <span class="number">10px</span> <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.2</span>);</span><br><span class="line">  <span class="attribute">-moz-border-radius</span>: <span class="number">5px</span>;</span><br><span class="line">  <span class="attribute">-webkit-border-radius</span>: <span class="number">5px</span>;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">5px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.hocgin-container</span> &gt; <span class="selector-class">.folder</span><span class="selector-pseudo">:hover</span> &gt; <span class="selector-class">.paper</span> &#123;</span><br><span class="line">  <span class="attribute">top</span>: <span class="built_in">calc</span>(<span class="number">50%</span> - <span class="number">150px</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.hocgin-container</span> &gt; <span class="selector-class">.folder</span><span class="selector-class">.opened</span> &gt; <span class="selector-class">.paper</span> &#123;</span><br><span class="line">  <span class="attribute">top</span>: <span class="built_in">calc</span>(-<span class="number">250px</span>);</span><br><span class="line">  <span class="attribute">opacity</span>: .<span class="number">9</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.hocgin-description</span> &#123;</span><br><span class="line">  <span class="attribute">text-align</span>: center;</span><br><span class="line">  <span class="attribute">margin-top</span>: <span class="number">4px</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>保存后，找到<code>主题目录</code>下<code>source/css/main.styl</code><strong>(注：别的主题可能不一样)</strong> 追加<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// --------------------------------------------------</span><br><span class="line"><span class="keyword">@import</span> <span class="string">"_hocgin/customize-hocgin.css"</span>;</span><br></pre></td></tr></table></figure></p>
+<p>最后，修改<code>主题配置文件</code> 追加<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Customize args -- Hocgin</span><br><span class="line">wechat_subscriber:</span><br><span class="line">  enable: true</span><br><span class="line">  qcode: [url]</span><br><span class="line">  description: 欢迎您扫一扫上面的微信公众号，订阅我的博客！</span><br></pre></td></tr></table></figure></p>
+<h3 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h3><p><a href="http://hocg.in">http://hocg.in</a></p>
+<hr>
+<h2 id="底部加入打赏功能"><a href="#底部加入打赏功能" class="headerlink" title="底部加入打赏功能"></a>底部加入打赏功能</h2><p>首先，打开<code>主题目录</code>下的 <code>layout/_macro/post.swig</code><br>然后，找到节点<code>footer</code>加入以下代码<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">    <span class="tag">&lt;<span class="name">!</span> <span class="attr">--</span> 添加打赏图标 <span class="attr">start</span> <span class="attr">--</span>&gt;</span></span><br><span class="line">    &#123;% if theme.pay_money.enable %&#125;</span><br><span class="line">      &#123;% if !is_home() %&#125;</span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"hocgin-money"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"money-reward"</span>&gt;</span></span><br><span class="line">    赏</span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"money-pay"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">img</span> <span class="attr">width</span>=<span class="string">"100%"</span> <span class="attr">src</span>=<span class="string">"&#123;&#123; theme.pay_money.weixin_qcode &#125;&#125;"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"money-pay"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">img</span> <span class="attr">width</span>=<span class="string">"100%"</span> <span class="attr">src</span>=<span class="string">"&#123;&#123; theme.pay_money.alipay_qcode &#125;&#125;"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">      &#123;% endif %&#125;</span><br><span class="line">    &#123;% endif %&#125;</span><br><span class="line">    <span class="tag">&lt;<span class="name">!</span> <span class="attr">--</span> 添加打赏图标 <span class="attr">end</span> <span class="attr">--</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>其次，到<code>主题目录</code>下的<code>source/css</code>创建文件夹<code>_hocgin</code>并在它之下创建css文件<code>money-customize-hocgin.css</code>以下是文件内容：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.hocgin-money</span> *, *<span class="selector-pseudo">:before</span>, *<span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">    <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.hocgin-money</span> &gt; <span class="selector-class">.money-reward</span> &#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">2.4rem</span>;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">4.6rem</span>;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">4.6rem</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">4.6rem</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">-webkit-user-select</span>: none;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">    <span class="attribute">vertical-align</span>: middle;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#fff</span>;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#f1b60e</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#fccd60</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">-webkit-gradient</span>(linear, left top, left bottom, color-stop(<span class="number">0</span>, #fccd60), <span class="built_in">color-stop</span>(<span class="number">100%</span>, #fbae12), <span class="built_in">color-stop</span>(<span class="number">100%</span>, #<span class="number">2989</span>d8), <span class="built_in">color-stop</span>(<span class="number">100%</span>, #<span class="number">207</span>cca));</span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">-webkit-linear-gradient</span>(top, #fccd60 <span class="number">0</span>, #fbae12 <span class="number">100%</span>, #<span class="number">2989</span>d8 <span class="number">100%</span>, #<span class="number">207</span>cca <span class="number">100%</span>);</span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">linear-gradient</span>(to bottom, #fccd60 <span class="number">0</span>, #fbae12 <span class="number">100%</span>, #<span class="number">2989</span>d8 <span class="number">100%</span>, #<span class="number">207</span>cca <span class="number">100%</span>);</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.hocgin-money</span> &gt; <span class="selector-class">.money-reward</span> &gt; <span class="selector-class">.money-pay</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">overflow</span>: hidden;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">visibility</span>: hidden;</span><br><span class="line">    <span class="attribute">top</span>: <span class="built_in">calc</span>(<span class="number">50%</span> - <span class="number">100px</span>);</span><br><span class="line">    <span class="attribute">left</span>: <span class="built_in">calc</span>(<span class="number">50%</span> - <span class="number">100px</span>);</span><br><span class="line">    <span class="attribute">opacity</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">transition</span>: top <span class="number">0.5s</span>, opacity <span class="number">0.4s</span>;</span><br><span class="line">    <span class="attribute">font-family</span>: Verdana, Tahoma, sans-serif;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">0.1em</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">1em</span>;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#644812</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#fff</span>;</span><br><span class="line">    <span class="attribute">-moz-box-shadow</span>: <span class="number">0</span> <span class="number">1px</span> <span class="number">1px</span> <span class="number">1px</span> <span class="number">#efefef</span>;</span><br><span class="line">    <span class="attribute">-webkit-box-shadow</span>: <span class="number">0</span> <span class="number">1px</span> <span class="number">1px</span> <span class="number">1px</span> <span class="number">#efefef</span>;</span><br><span class="line">    <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">1px</span> <span class="number">1px</span> <span class="number">1px</span> <span class="number">#efefef</span>;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#e6e6e6</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.hocgin-money</span> &gt; <span class="selector-class">.money-reward</span><span class="selector-pseudo">:hover</span> &gt; <span class="selector-class">.money-pay</span> &#123;</span><br><span class="line">    <span class="attribute">visibility</span>: visible;</span><br><span class="line">    <span class="attribute">opacity</span>: <span class="number">1</span>;</span><br><span class="line">    <span class="attribute">z-index</span>: <span class="number">10</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.hocgin-money</span> &gt; <span class="selector-class">.money-reward</span><span class="selector-pseudo">:hover</span> &gt; <span class="selector-class">.money-pay</span><span class="selector-pseudo">:nth-child(1)</span> &#123;</span><br><span class="line">    <span class="attribute">top</span>: <span class="built_in">calc</span>(<span class="number">50%</span> - <span class="number">250px</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.hocgin-money</span> &gt; <span class="selector-class">.money-reward</span><span class="selector-pseudo">:hover</span> &gt; <span class="selector-class">.money-pay</span><span class="selector-pseudo">:nth-child(2)</span> &#123;</span><br><span class="line">    <span class="attribute">top</span>: <span class="built_in">calc</span>(<span class="number">50%</span> + <span class="number">50px</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>保存后，找到<code>主题目录</code>下<code>source/css/main.styl</code><strong>(注：别的主题可能不一样)</strong> 追加<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// --------------------------------------------------</span><br><span class="line"><span class="keyword">@import</span> <span class="string">"_hocgin/money-customize-hocgin.css"</span>;</span><br></pre></td></tr></table></figure></p>
+<p>最后，修改<code>主题配置文件</code> 追加<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Customize args -- Hocgin</span><br><span class="line">pay_money:</span><br><span class="line">  enable: true</span><br><span class="line">  weixin_qcode: http://cdn.hocgin.top/img/un/ali.pay.500.png</span><br><span class="line">  alipay_qcode: http://cdn.hocgin.top/img/un/ali.pay.500.png</span><br></pre></td></tr></table></figure></p>
+<h3 id="已知bug"><a href="#已知bug" class="headerlink" title="已知bug"></a>已知bug</h3><ol>
+<li>因为没使用js(也不想使用)，安卓设备需要<code>长按</code>才能出现效果，而苹果设备无法显示效果，欢迎大家修复。┌|*´∀｀|┘</li>
+</ol>
+<h3 id="效果-1"><a href="#效果-1" class="headerlink" title="效果"></a>效果</h3><p><a href="http://hocg.in">http://hocg.in</a></p>
+<hr>
+<h2 id="防止百度转码"><a href="#防止百度转码" class="headerlink" title="防止百度转码"></a>防止百度转码</h2><p><code>主题目录</code>下 <code>\layout\_partials\head.swig</code><br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">”Cache-Control”</span> <span class="attr">content</span>=<span class="string">”no-transform”</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">”Cache-Control”</span> <span class="attr">content</span>=<span class="string">”no-siteapp”</span> /&gt;</span></span><br></pre></td></tr></table></figure></p>
+<hr>
+<h2 id="添加搜索功能-2016年06月04日"><a href="#添加搜索功能-2016年06月04日" class="headerlink" title="添加搜索功能 2016年06月04日"></a>添加搜索功能 <code>2016年06月04日</code></h2><ol>
+<li>安装hexo数据生成插件</li>
+</ol>
+<blockquote>
+<p>Json格式的，有利于自主编写(暂时只介绍原生支持的，如果想自己编写下面的可以不用看)</p>
+</blockquote>
+<p><a href="https://github.com/alexbruno/hexo-generator-json-content" target="_blank" rel="noopener">hexo-generator-json-content</a><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> npm i -S hexo-generator-json-content</span></span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>NexT 原生支持，不想折腾的可以使用</p>
+</blockquote>
+<p><a href="https://github.com/PaicHyperionDev/hexo-generator-search" target="_blank" rel="noopener">hexo-generator-search</a><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> npm install hexo-generator-search --save</span></span><br></pre></td></tr></table></figure></p>
+<p><code>站点配置文件</code> 新增<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Search</span><br><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br></pre></td></tr></table></figure></p>
+<p>OK！</p>
+<blockquote>
+<p>待续ing</p>
+</blockquote>
+<hr>
+<h2 id="结合服务器，实现自动部署"><a href="#结合服务器，实现自动部署" class="headerlink" title="结合服务器，实现自动部署"></a>结合服务器，实现自动部署</h2><hr>
+<h2 id="多说css美化"><a href="#多说css美化" class="headerlink" title="多说css美化"></a>多说css美化</h2>
+            
+    <div class="article-tag">
+        <a class="tag-link" href="/tags/CSS3/">CSS3</a>, <a class="tag-link" href="/tags/HTML5/">HTML5</a>, <a class="tag-link" href="/tags/Hexo/">Hexo</a>
+    </div>
+
+            
+
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://hocg.in/2016/03/26/hexo-功能扩展/" data-id="cle7cq1bz004594o6ib7g28jw" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+
+        </footer>
+    </div>
+    
+    
+<nav id="article-nav">
+    
+        <a href="/2016/04/25/使用Maven下载jar包-linux版/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">上一篇</strong>
+            <div class="article-nav-title">
+                
+                    使用Maven下载jar包 linux版
+                
+            </div>
+        </a>
+    
+    
+        <a href="/2016/03/20/安装完Ubuntu后-我该做什么/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">下一篇</strong>
+            <div class="article-nav-title">安装完Ubuntu后,我该做什么</div>
+        </a>
+    
+</nav>
+
+
+    
+</article>
+
+
+
+    
+        <section id="comments">
+    <div id="valine-thread"></div>
+</section>
+    
+
+</section>
+            
+                
+<aside id="sidebar">
+   
+        <div class="widget-wrap">
+    <h3 class="widget-title">关注我</h3>
+    <div class="widget">
+        <a class="social" href="https://github.com/hocgin" target="_blank"><i class="fa fa-github fa-2x"></i></a>
+        <a class="social" href="https://hocg.in/atom.xml" target="_blank"><i class="fa fa-rss fa-2x"></i></a>
+        <a class="social" href="https://resume.hocg.in/" target="_blank"><span class="fa-2x">简</span></a>
+        <a class="social" href="https://projects.hocg.in/" target="_blank"><i class="fa fa-2x fa-fire"></i></a>
+        <a class="social" href="https://panda.hocg.in/" target="_blank"><i class="fa fa-2x fa-heart"></i></a>
+        <a class="social" href="https://weibo.com/u/2006617153" target="_blank"><i class="fa fa-weibo fa-2x"></i></a>
+        <a class="social" href="https://www.500px.com/hocgin" target="_blank"><i class="fa fa-500px fa-2x"></i></a>
+    </div>
+</div>
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">近期文章</h3>
+        <div class="widget">
+            <ul id="recent-post" class="no-thumbnail">
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <!--<p class="item-category"><a class="article-category-link" href="/categories/Java/">Java</a></p>-->
+                            <p class="item-title fa fa-angle-right"><a href="/2020/12/10/让你3步搞定单点登陆/" class="title">让你3步搞定单点登陆</a></p>
+                            <!--<p class="item-date"><time datetime="2020-12-10T10:28:29.000Z" itemprop="datePublished">2020-12-10</time></p>-->
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <!--<p class="item-category"><a class="article-category-link" href="/categories/Java/">Java</a></p>-->
+                            <p class="item-title fa fa-angle-right"><a href="/2019/05/12/Java 命令工具/" class="title">Java 命令工具</a></p>
+                            <!--<p class="item-date"><time datetime="2019-05-12T19:37:49.000Z" itemprop="datePublished">2019-05-12</time></p>-->
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <!--<p class="item-category"><a class="article-category-link" href="/categories/Web/">Web</a></p>-->
+                            <p class="item-title fa fa-angle-right"><a href="/2019/04/18/关于网约车核心业务-推单相关整理/" class="title">关于网约车核心业务-推单相关设计整理</a></p>
+                            <!--<p class="item-date"><time datetime="2019-04-18T18:20:20.000Z" itemprop="datePublished">2019-04-18</time></p>-->
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <!--<p class="item-category"><a class="article-category-link" href="/categories/Linux/">Linux</a></p>-->
+                            <p class="item-title fa fa-angle-right"><a href="/2019/04/01/Linux 下网络相关的命令/" class="title">Linux 下网络相关的命令</a></p>
+                            <!--<p class="item-date"><time datetime="2019-04-01T08:07:00.000Z" itemprop="datePublished">2019-04-01</time></p>-->
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <!--<p class="item-category"><a class="article-category-link" href="/categories/服务端/">服务端</a></p>-->
+                            <p class="item-title fa fa-angle-right"><a href="/2019/03/23/Elasticsearch 随手记/" class="title">Elasticsearch 随手记</a></p>
+                            <!--<p class="item-date"><time datetime="2019-03-23T13:53:00.000Z" itemprop="datePublished">2019-03-23</time></p>-->
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+    
+        
+<div class="widget-wrap" id="widget-toc">
+    <h3 class="widget-title">
+        文章目录
+    </h3>
+    <div class="widget">
+        <!--toc-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+            <div class="post-toc">
+                <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#须知"><span class="nav-number">1.</span> <span class="nav-text">须知</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加微信公众号二维码"><span class="nav-number">2.</span> <span class="nav-text">添加微信公众号二维码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#效果"><span class="nav-number">2.1.</span> <span class="nav-text">效果</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#底部加入打赏功能"><span class="nav-number">3.</span> <span class="nav-text">底部加入打赏功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#已知bug"><span class="nav-number">3.1.</span> <span class="nav-text">已知bug</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#效果-1"><span class="nav-number">3.2.</span> <span class="nav-text">效果</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#防止百度转码"><span class="nav-number">4.</span> <span class="nav-text">防止百度转码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加搜索功能-2016年06月04日"><span class="nav-number">5.</span> <span class="nav-text">添加搜索功能 2016年06月04日</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结合服务器，实现自动部署"><span class="nav-number">6.</span> <span class="nav-text">结合服务器，实现自动部署</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多说css美化"><span class="nav-number">7.</span> <span class="nav-text">多说css美化</span></a></li></ol>
+            </div>
+        </section>
+        <!--/toc-->
+    </div>
+</div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">归档</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">十二月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">五月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">四月 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">三月 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">二月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">一月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">十二月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">十一月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">七月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">六月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">十月 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">九月 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">七月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">六月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">五月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">九月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">七月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">四月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">3</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">标签云</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/Android/" style="font-size: 15px;">Android</a> <a href="/tags/CI-CD/" style="font-size: 10px;">CI/CD</a> <a href="/tags/CSS3/" style="font-size: 10px;">CSS3</a> <a href="/tags/Chrome/" style="font-size: 10px;">Chrome</a> <a href="/tags/DevOps/" style="font-size: 10px;">DevOps</a> <a href="/tags/Docker/" style="font-size: 10px;">Docker</a> <a href="/tags/ELK/" style="font-size: 10px;">ELK</a> <a href="/tags/Elasticsearch/" style="font-size: 10px;">Elasticsearch</a> <a href="/tags/GitLab/" style="font-size: 10px;">GitLab</a> <a href="/tags/Gnome/" style="font-size: 10px;">Gnome</a> <a href="/tags/Go/" style="font-size: 10px;">Go</a> <a href="/tags/Google/" style="font-size: 10px;">Google</a> <a href="/tags/HTML5/" style="font-size: 15px;">HTML5</a> <a href="/tags/HTTPS/" style="font-size: 10px;">HTTPS</a> <a href="/tags/Hexo/" style="font-size: 11.25px;">Hexo</a> <a href="/tags/IO/" style="font-size: 10px;">IO</a> <a href="/tags/JAVA/" style="font-size: 10px;">JAVA</a> <a href="/tags/JVM/" style="font-size: 12.5px;">JVM</a> <a href="/tags/Java/" style="font-size: 18.75px;">Java</a> <a href="/tags/JavaScript/" style="font-size: 12.5px;">JavaScript</a> <a href="/tags/K8s/" style="font-size: 10px;">K8s</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Mac/" style="font-size: 12.5px;">Mac</a> <a href="/tags/Maven/" style="font-size: 10px;">Maven</a> <a href="/tags/Nexus/" style="font-size: 10px;">Nexus</a> <a href="/tags/Ngrok/" style="font-size: 10px;">Ngrok</a> <a href="/tags/NodeJS/" style="font-size: 12.5px;">NodeJS</a> <a href="/tags/Objective-C/" style="font-size: 10px;">Objective-C</a> <a href="/tags/Oh-My-ZSH/" style="font-size: 10px;">Oh My ZSH</a> <a href="/tags/OpenWrt/" style="font-size: 16.25px;">OpenWrt</a> <a href="/tags/PHP/" style="font-size: 10px;">PHP</a> <a href="/tags/Pjax/" style="font-size: 10px;">Pjax</a> <a href="/tags/React/" style="font-size: 10px;">React</a> <a href="/tags/Redis/" style="font-size: 10px;">Redis</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/Shell/" style="font-size: 11.25px;">Shell</a> <a href="/tags/Spring/" style="font-size: 10px;">Spring</a> <a href="/tags/Spring-Boot/" style="font-size: 10px;">Spring Boot</a> <a href="/tags/SpringBoot/" style="font-size: 10px;">SpringBoot</a> <a href="/tags/TCP-IP/" style="font-size: 10px;">TCP/IP</a> <a href="/tags/Thymeleaf/" style="font-size: 10px;">Thymeleaf</a> <a href="/tags/Tip/" style="font-size: 10px;">Tip</a> <a href="/tags/Tips/" style="font-size: 20px;">Tips</a> <a href="/tags/Ubuntu/" style="font-size: 17.5px;">Ubuntu</a> <a href="/tags/Web/" style="font-size: 10px;">Web</a> <a href="/tags/Wireshark/" style="font-size: 10px;">Wireshark</a> <a href="/tags/前端/" style="font-size: 11.25px;">前端</a> <a href="/tags/图片墙/" style="font-size: 10px;">图片墙</a> <a href="/tags/多线程/" style="font-size: 13.75px;">多线程</a> <a href="/tags/手机/" style="font-size: 10px;">手机</a> <a href="/tags/数据结构/" style="font-size: 10px;">数据结构</a> <a href="/tags/设计思路/" style="font-size: 12.5px;">设计思路</a> <a href="/tags/语法/" style="font-size: 11.25px;">语法</a> <a href="/tags/锁/" style="font-size: 10px;">锁</a> <a href="/tags/问题/" style="font-size: 12.5px;">问题</a>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">友情连接</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="https://blog.lutty.me/" target="_blank">lutty</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+
+            
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            &copy; 2023&nbsp;
+            <i class="fa fa-heartbeat heartbeat" style="color: #F22E3C;"></i>&nbsp;
+            <a class="me" href="https://hocg.in" target="_blank">hocgin</a>.
+            <p>
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>.
+                Theme by <a href="http://github.com/ppoffice" target="_blank">PPOffice</a>.
+                Made by <a href="https://hocg.in">hocgin</a>
+            </p>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//cdn.jsdelivr.net/gh/xcss/valine@v1.1.6/dist/Valine.min.js"></script>
+    <script>
+        new Valine({
+            el: '#valine-thread' ,
+            notify:false,
+            verify:false,
+            app_id: 'UgznLOt1wcUYIgK8LbBRwXOR-gzGzoHsz',
+            app_key: 'hyCCbbO9B8bTXEBe1KEuJ95K',
+            placeholder: '留言一下呗'
+        });
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+<script src="/js/hocgin.js"></script>
+
+    </div>
+    <script>
+        var xlm_wid='13073';
+        var xlm_url='https://www.xianliao.me/';
+    </script>
+    <script type='text/javascript' charset='UTF-8' src='http://www.xianliao.me/embed.js'></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7086639635704454"
+            crossorigin="anonymous"></script>
+</body>
+</html>

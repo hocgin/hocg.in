@@ -1,0 +1,677 @@
+<!--
+   _                     _
+  | |__   ___   ___ __ _(_)_ __
+  | '_ \ / _ \ / __/ _` | | '_ \
+  | | | | (_) | (_| (_| | | | | |
+  |_| |_|\___/ \___\__, |_|_| |_|
+                   |___/
+-->
+<!DOCTYPE html>
+<html lang="zh">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    
+    <title>Linux 下网络相关的命令 | hocgin (๑`灬´๑)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Linux 下网络相关的命令">
+<meta name="keywords" content="Linux,TCP&#x2F;IP">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux 下网络相关的命令">
+<meta property="og:url" content="https://hocg.in/2019/04/01/Linux 下网络相关的命令/index.html">
+<meta property="og:site_name" content="hocgin (๑`灬´๑)">
+<meta property="og:description" content="Linux 下网络相关的命令">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2023-02-16T17:03:24.031Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Linux 下网络相关的命令">
+<meta name="twitter:description" content="Linux 下网络相关的命令">
+    
+
+    
+        <link rel="alternate" href="/" title="hocgin (๑`灬´๑)" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/favicon.ico">
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/open-sans/styles.css">
+    <link rel="stylesheet" href="/libs/firacode/fira_code.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+        <script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-75635029-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+    
+    
+        <meta name="google-site-verification" content="BIu5FVv0ybO_ceKwrQ-A7znPy4ObYjrCIbLTvcKxqAM">
+    
+    
+
+
+</head>
+</html>
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <!--<i class="logo"></i>-->
+                <span class="site-title">hocgin (๑`灬´๑)</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/.">首页</a>
+                
+                    <a class="main-nav-link" href="/archives">归档</a>
+                
+                    <a class="main-nav-link" href="/categories">分类</a>
+                
+                    <a class="main-nav-link" href="/tags">标签</a>
+                
+            </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="想要查找什么..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/.">首页</a></td>
+                
+                    <td><a class="main-nav-link" href="/archives">归档</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories">分类</a></td>
+                
+                    <td><a class="main-nav-link" href="/tags">标签</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+            <section id="main"><article id="post-Linux 下网络相关的命令"
+         class="article article-type-post "
+         itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+        <header class="article-header">
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2019/04/01/Linux 下网络相关的命令/">
+            <time datetime="2019-04-01T08:07:00.000Z" itemprop="datePublished">2019-04-01</time>
+        </a>
+    </div>
+
+
+                <div>•</div>
+                
+    <div class="article-category">
+        <a class="article-category-link" href="/categories/Linux/">Linux</a>
+    </div>
+
+            </div>
+            
+    
+        <h1 class="article-title" itemprop="name">
+            Linux 下网络相关的命令
+        </h1>
+    
+
+        </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            
+            
+            <p>Linux 下网络相关的命令<br><a id="more"></a></p>
+<h2 id="🔗"><a href="#🔗" class="headerlink" title="🔗"></a>🔗</h2><p><a href="https://linoxide.com/linux-command/use-ip-command-linux/" target="_blank" rel="noopener">Linux-Nettools vs Iproute2</a></p>
+<h2 id="net-tools"><a href="#net-tools" class="headerlink" title="net-tools"></a>net-tools</h2><h3 id="ifconfig"><a href="#ifconfig" class="headerlink" title="ifconfig"></a><code>ifconfig</code></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">enp2s0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500</span><br><span class="line">        inet 192.168.8.23  netmask 255.255.255.0  broadcast 192.168.8.255</span><br><span class="line">        inet6 fe80::794c:57e0:a7ca:518e  prefixlen 64  scopeid 0x20&lt;link&gt;</span><br><span class="line">        ether 50:9a:4c:17:e9:da  txqueuelen 1000  (Ethernet)</span><br><span class="line">        RX packets 4412700  bytes 3603093632 (3.3 GiB)</span><br><span class="line">        RX errors 0  dropped 20  overruns 0  frame 0</span><br><span class="line">        TX packets 1877167  bytes 507480177 (483.9 MiB)</span><br><span class="line">        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0</span><br><span class="line"></span><br><span class="line">lo: flags=73&lt;UP,LOOPBACK,RUNNING&gt;  mtu 65536</span><br><span class="line">        inet 127.0.0.1  netmask 255.0.0.0</span><br><span class="line">        inet6 ::1  prefixlen 128  scopeid 0x10&lt;host&gt;</span><br><span class="line">        loop  txqueuelen 1000  (Local Loopback)</span><br><span class="line">        RX packets 14009901  bytes 2441347518 (2.2 GiB)</span><br><span class="line">        RX errors 0  dropped 0  overruns 0  frame 0</span><br><span class="line">        TX packets 14009901  bytes 2441347518 (2.2 GiB)</span><br><span class="line">        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0</span><br><span class="line"></span><br><span class="line">wlp3s0: flags=4099&lt;UP,BROADCAST,MULTICAST&gt;  mtu 1500</span><br><span class="line">        ether 54:13:79:5b:c3:29  txqueuelen 1000  (Ethernet)</span><br><span class="line">        RX packets 6  bytes 1296 (1.2 KiB)</span><br><span class="line">        RX errors 0  dropped 0  overruns 0  frame 0</span><br><span class="line">        TX packets 34  bytes 5037 (4.9 KiB)</span><br><span class="line">        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0</span><br></pre></td></tr></table></figure>
+<ul>
+<li>enp2s0: 网络设备号</li>
+<li>flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;: 网络设备状态标识</li>
+<li>mtu 1500: mtu</li>
+<li>inet 192.168.8.23  netmask 255.255.255.0  broadcast 192.168.8.255: IPv4 协议</li>
+<li>inet6 fe80::794c:57e0:a7ca:518e: IPv6 协议</li>
+<li>ether 50:9a:4c:17:e9:da </li>
+<li>TX: 发送/上行  </li>
+<li>RX: 接收/下行 <ul>
+<li>packets 4412700: 包总数量</li>
+<li>bytes 2441347518 (2.2 GiB): 流量大小</li>
+<li>errors 0: 错误包数量</li>
+<li>dropped 0: 丢包数量</li>
+<li>overruns 0: 超时包数量</li>
+<li>collisions 0: 冲突包数量</li>
+<li>frame 0: 帧数量</li>
+</ul>
+</li>
+<li>txqueuelen 1000  (Ethernet): 存储传输数据缓存的大小</li>
+<li>prefixlen 64</li>
+<li>scopeid 0x20<link></li>
+</ul>
+<h3 id="route"><a href="#route" class="headerlink" title="route"></a><code>route</code></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Kernel IP routing table</span><br><span class="line">Destination     Gateway         Genmask         Flags Metric Ref    Use Iface</span><br><span class="line">default         192.168.8.1     0.0.0.0         UG    100    0        0 enp2s0</span><br><span class="line">192.168.8.0     0.0.0.0         255.255.255.0   U     100    0        0 enp2s0</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Genmask: 子网掩码</li>
+<li>Destination: 目的地  <code>Destination/Genmask 组成局域网</code><ul>
+<li>default = 0.0.0.0/0.0.0.0</li>
+</ul>
+</li>
+<li>Gateway: 网关</li>
+<li>Flags: 网络标识<ul>
+<li>U (route is up): 路由启动状态</li>
+<li>H (target is a host): 目标是主机</li>
+<li>G (use gateway): 需要使用网关来传输</li>
+<li>R (reinstate route for dynamic routing): </li>
+<li>D (dynamically installed by daemon or redirect): </li>
+<li>M (modified from routing daemon or redirect): </li>
+<li>! (reject route): 拒绝/黑名单</li>
+</ul>
+</li>
+<li>Metric: 目标的距离</li>
+<li>Ref: </li>
+<li>Use: 路线查找计数</li>
+<li>Iface: 接收数据的网络接口 <code>网络出口网卡</code></li>
+</ul>
+<h2 id="iproute2"><a href="#iproute2" class="headerlink" title="iproute2"></a>iproute2</h2><h3 id="ip-link"><a href="#ip-link" class="headerlink" title="ip link"></a><code>ip link</code></h3><blockquote>
+<p>配置网络设备参数<br>OSI 七层协议中, 二层相关信息<br>eg. MTU, MAC, 开关…<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">ip link show</span><br><span class="line">1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000</span><br><span class="line">    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00</span><br><span class="line">2: enp2s0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc pfifo_fast state UP mode DEFAULT group default qlen 1000</span><br><span class="line">    link/ether 50:9a:4c:17:e9:da brd ff:ff:ff:ff:ff:ff</span><br><span class="line">3: wlp3s0: &lt;NO-CARRIER,BROADCAST,MULTICAST,UP&gt; mtu 1500 qdisc noqueue state DOWN mode DORMANT group default qlen 1000</span><br><span class="line">    link/ether 54:13:79:5b:c3:29 brd ff:ff:ff:ff:ff:ff</span><br><span class="line"></span><br><span class="line"># 显示状态详情</span><br><span class="line">ip -s link show</span><br><span class="line">1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000</span><br><span class="line">    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00</span><br><span class="line">    RX: bytes  packets  errors  dropped overrun mcast   </span><br><span class="line">    2507975007 14838472 0       0       0       0       </span><br><span class="line">    TX: bytes  packets  errors  dropped carrier collsns </span><br><span class="line">    2507975007 14838472 0       0       0       0       </span><br><span class="line">2: enp2s0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc pfifo_fast state UP mode DEFAULT group default qlen 1000</span><br><span class="line">    link/ether 50:9a:4c:17:e9:da brd ff:ff:ff:ff:ff:ff</span><br><span class="line">    RX: bytes  packets  errors  dropped overrun mcast   </span><br><span class="line">    3657508487 4607298  0       23      0       154201  </span><br><span class="line">    TX: bytes  packets  errors  dropped carrier collsns </span><br><span class="line">    536627449  1943192  0       0       0       0       </span><br><span class="line">3: wlp3s0: &lt;NO-CARRIER,BROADCAST,MULTICAST,UP&gt; mtu 1500 qdisc noqueue state DOWN mode DORMANT group default qlen 1000</span><br><span class="line">    link/ether 54:13:79:5b:c3:29 brd ff:ff:ff:ff:ff:ff</span><br><span class="line">    RX: bytes  packets  errors  dropped overrun mcast   </span><br><span class="line">    1296       6        0       0       0       0       </span><br><span class="line">    TX: bytes  packets  errors  dropped carrier collsns </span><br><span class="line">    5037       34       0       0       0       0</span><br><span class="line">    </span><br><span class="line"># 操作特定网卡 eg. ip link set eth0 up</span><br><span class="line">ip link set &#123;网络设备&#125; &#123;操作&#125;</span><br><span class="line">- 网络设备: eg. enp2s0</span><br><span class="line">    - 操作</span><br><span class="line">        - up: 开启</span><br><span class="line">        - down: 关闭</span><br><span class="line">        - address: Mac 地址`ff:ff:ff:ff:ff:ff`</span><br><span class="line">        - name: 网络设备名称</span><br><span class="line">        - mtu: mtu值`1500`</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h3 id="ip-addr"><a href="#ip-addr" class="headerlink" title="ip addr"></a><code>ip addr</code></h3><blockquote>
+<p>配置网络相关信息<br>OSI 七层协议中, 三层相关信息<br>eg. 网关, 子网掩码..</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000</span><br><span class="line">    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00</span><br><span class="line">    inet 127.0.0.1/8 scope host lo</span><br><span class="line">       valid_lft forever preferred_lft forever</span><br><span class="line">    inet6 ::1/128 scope host </span><br><span class="line">       valid_lft forever preferred_lft forever</span><br><span class="line">2: enp2s0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc pfifo_fast state UP group default qlen 1000</span><br><span class="line">    link/ether 50:9a:4c:17:e9:da brd ff:ff:ff:ff:ff:ff</span><br><span class="line">    inet 192.168.8.23/24 brd 192.168.8.255 scope global noprefixroute enp2s0</span><br><span class="line">       valid_lft forever preferred_lft forever</span><br><span class="line">    inet6 fe80::794c:57e0:a7ca:518e/64 scope link noprefixroute </span><br><span class="line">       valid_lft forever preferred_lft forever</span><br><span class="line">3: wlp3s0: &lt;NO-CARRIER,BROADCAST,MULTICAST,UP&gt; mtu 1500 qdisc noqueue state DOWN group default qlen 1000</span><br><span class="line">    link/ether 54:13:79:5b:c3:29 brd ff:ff:ff:ff:ff:ff</span><br><span class="line"></span><br><span class="line"># 设定IP相关参数</span><br><span class="line">ip address &#123;add|del&#125; &#123;IP相关配置&#125; &#123;网络设备&#125; &#123;相关参数&#125;</span><br><span class="line">- add|del: 新增或删除</span><br><span class="line">- IP相关配置: eg. 192.168.8.23/24</span><br><span class="line">- 网络设备: eg. enp2s0</span><br><span class="line">- 相关参数:</span><br><span class="line">    - broadcast: 广播地址, &quot;+&quot;为自动计算</span><br><span class="line">    - label: 別名别名</span><br><span class="line">    - scope: 作用域</span><br><span class="line">        - global</span><br><span class="line">        - site  </span><br><span class="line">        - link</span><br><span class="line">        - host</span><br></pre></td></tr></table></figure>
+<ul>
+<li>lo: 网卡label. </li>
+<li>&lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt;: 网络设备状态标识 <ul>
+<li>BROADCAST, MULTICAST: 可以发送广播, 可以发送多播包<ul>
+<li>LOOPBACK: 本地环回</li>
+</ul>
+</li>
+<li>UP: 网络设备状态</li>
+<li>LOWER_UP: 已连线</li>
+</ul>
+</li>
+<li>mtu 65536:  最大传输单元</li>
+<li>qdisc pfifo_fast: 排队规则. <ul>
+<li>noqueue</li>
+<li>pfifo_fast</li>
+</ul>
+</li>
+<li>group default: 所在组. </li>
+<li>inet 127.0.0.1/8: IPv4 地址及子网掩码</li>
+<li>inet6 fe80::794c:57e0:a7ca:518e/64: IPv6 地址及子网掩码</li>
+<li>brd ff:ff:ff:ff:ff:ff: 广播地址</li>
+<li><p>scope global: 作用域. </p>
+<ul>
+<li>global: 允许所有来源</li>
+<li>site: 仅IPv6, 允许仅本机连接 </li>
+<li>link: 仅允许自我连接</li>
+<li>host: 仅允许本主机内部连接</li>
+</ul>
+</li>
+<li><p>noprefixroute enp2s0</p>
+</li>
+<li>preferred_lft forever: </li>
+<li>valid_lft forever: 有效期限</li>
+<li>qlen 1000</li>
+</ul>
+<h3 id="ip-route"><a href="#ip-route" class="headerlink" title="ip route"></a><code>ip route</code></h3><blockquote>
+<p>路由相关设置</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">ip route</span><br><span class="line">default via 192.168.8.1 dev enp2s0 proto static metric 100 </span><br><span class="line">192.168.8.0/24 dev enp2s0 proto kernel scope link src 192.168.8.23 metric 100</span><br><span class="line"></span><br><span class="line"># 设定route相关参数</span><br><span class="line">ip route &#123;add|del&#125; &#123;IP|网络&#125; &#123;via 网关&#125; &#123;网络设备&#125;</span><br><span class="line">- add|del: 新增或删除</span><br><span class="line">- IP|网络: eg. IP 或 192.168.8.23/24</span><br><span class="line">- 网关: 指定出口网关(可选)</span><br><span class="line">- 网络设备: 指定出口网络设备 eg. enp2s0</span><br><span class="line">- mtu: 配置mtu参数</span><br></pre></td></tr></table></figure>
+<ul>
+<li>192.168.8.0/24: 网络</li>
+<li>dev enp2s0: 网络设备</li>
+<li>proto kernel: 路由协议 [redirect, kernel, boot, static, ra]</li>
+<li>scope link: 作用域</li>
+</ul>
+<h2 id="网络侦查"><a href="#网络侦查" class="headerlink" title="网络侦查"></a>网络侦查</h2><h3 id="ping"><a href="#ping" class="headerlink" title="ping"></a>ping</h3><blockquote>
+<p>网络状态</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">➜  ~ ping www.baidu.com -c 5</span><br><span class="line">PING www.a.shifen.com (14.215.177.39) 56(84) bytes of data.</span><br><span class="line">64 bytes from 14.215.177.39 (14.215.177.39): icmp_seq=1 ttl=54 time=20.6 ms</span><br><span class="line">64 bytes from 14.215.177.39 (14.215.177.39): icmp_seq=2 ttl=54 time=20.5 ms</span><br><span class="line">64 bytes from 14.215.177.39 (14.215.177.39): icmp_seq=3 ttl=54 time=20.4 ms</span><br></pre></td></tr></table></figure>
+<ul>
+<li>64 bytes: ICMP封包大小</li>
+<li>icmp_seq=3: 侦测序号</li>
+<li>ttl=54: 默认255, 每经过一个含MAC地址时-1</li>
+<li>time=20.5 ms: 耗时</li>
+</ul>
+<h3 id="traceroute"><a href="#traceroute" class="headerlink" title="traceroute"></a>traceroute</h3><blockquote>
+<p>网路状态<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">➜  ~  traceroute www.baidu.com </span><br><span class="line">traceroute to www.baidu.com (14.215.177.39), 30 hops max, 60 byte packets</span><br><span class="line"> 1  192.168.8.1 (192.168.8.1)  0.784 ms  1.348 ms  1.866 ms</span><br><span class="line"> 2  192.168.5.1 (192.168.5.1)  0.138 ms  0.174 ms  0.217 ms</span><br><span class="line"> 3  1.224.77.125.broad.xm.fj.dynamic.163data.com.cn (125.77.224.1)  1.458 ms  1.486 ms  1.694 ms</span><br><span class="line"> 4  61.154.238.229 (61.154.238.229)  4.692 ms  4.704 ms 61.154.238.225 (61.154.238.225)  2.400 ms</span><br><span class="line"> 5  61.154.238.77 (61.154.238.77)  5.834 ms 117.30.27.185 (117.30.27.185)  1.948 ms 61.154.238.77 (61.154.238.77)  6.106 ms</span><br><span class="line"> 6  * 202.97.40.169 (202.97.40.169)  19.847 ms 202.97.78.37 (202.97.78.37)  19.233 ms</span><br><span class="line"> 7  113.96.4.90 (113.96.4.90)  32.771 ms  28.773 ms 113.96.4.106 (113.96.4.106)  42.485 ms</span><br><span class="line"> 8  * * *</span><br><span class="line"> 9  14.29.117.234 (14.29.117.234)  19.359 ms 14.29.121.182 (14.29.121.182)  17.646 ms 14.29.121.190 (14.29.121.190)  28.106 ms</span><br><span class="line">10  * * *</span><br><span class="line">11  * * *</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<ul>
+<li>每个序号都是同一层进行三次连接的耗时</li>
+<li><code>* * *</code>: 可能是防火墙问题或路由问题</li>
+</ul>
+<h3 id="netstat"><a href="#netstat" class="headerlink" title="netstat"></a>netstat</h3><blockquote>
+<p>查看本机的网络连接<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 目前所有的网络线路状态</span><br><span class="line"># netstat -tulnp</span><br><span class="line">Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    </span><br><span class="line">tcp        0      0 0.0.0.0:8000            0.0.0.0:*               LISTEN      10247/node</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<ul>
+<li>Proto: 网络协议</li>
+<li>Recv-Q: 未使用字节</li>
+<li>Send-Q: 没有确认的字节</li>
+<li>Local Address: 本地地址+端口</li>
+<li>Foreign Address: 目标地址+端口</li>
+<li>stat: 状态<ul>
+<li>ESTABLISED: 已连线</li>
+<li>SYN_SENT: 发送连线确认包</li>
+<li>SYN_RECV: 接收连线确认包</li>
+<li>FIN_WAIT1: 正在断线中-第一步</li>
+<li>FIN_WAIT2: 正在断线中(等待对方确认)-第二步</li>
+<li>TIME_WAIT: 已断线(等待关闭)-第三步</li>
+<li>LISTEN: 正在监听</li>
+</ul>
+</li>
+<li>PID/Program name: 进程和PID</li>
+</ul>
+<h2 id="host-nslookup-dig"><a href="#host-nslookup-dig" class="headerlink" title="host, nslookup, dig"></a>host, nslookup, dig</h2><blockquote>
+<p>域名转IP</p>
+</blockquote>
+<h3 id="host"><a href="#host" class="headerlink" title="host"></a>host</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">➜  ~ host www.baidu.com 114.114.114.114</span><br><span class="line">Using domain server:</span><br><span class="line">Name: 114.114.114.114</span><br><span class="line">Address: 114.114.114.114#53</span><br><span class="line">Aliases: </span><br><span class="line"></span><br><span class="line">www.baidu.com is an alias for www.a.shifen.com.</span><br><span class="line">www.a.shifen.com has address 14.215.177.39</span><br><span class="line">www.a.shifen.com has address 14.215.177.38</span><br></pre></td></tr></table></figure>
+<h3 id="nslookup"><a href="#nslookup" class="headerlink" title="nslookup"></a>nslookup</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">➜  ~ nslookup www.google.com</span><br><span class="line">Server:		218.85.152.99</span><br><span class="line">Address:	218.85.152.99#53</span><br><span class="line"></span><br><span class="line">Non-authoritative answer:</span><br><span class="line">Name:	www.google.com</span><br><span class="line">Address: 75.126.150.210</span><br><span class="line">Name:	www.google.com</span><br><span class="line">Address: 2400:cb00:2048:1::6814:224e</span><br></pre></td></tr></table></figure>
+<h3 id="dig"><a href="#dig" class="headerlink" title="dig"></a>dig</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">➜  ~ dig www.google.com</span><br><span class="line"></span><br><span class="line">; &lt;&lt;&gt;&gt; DiG 9.11.3-1-Debian &lt;&lt;&gt;&gt; www.google.com</span><br><span class="line">;; global options: +cmd</span><br><span class="line">;; Got answer:</span><br><span class="line">;; -&gt;&gt;HEADER&lt;&lt;- opcode: QUERY, status: NOERROR, id: 26052</span><br><span class="line">;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 4, ADDITIONAL: 8</span><br><span class="line"></span><br><span class="line">;; QUESTION SECTION:</span><br><span class="line">;www.google.com.			IN	A</span><br><span class="line"></span><br><span class="line">;; ANSWER SECTION:</span><br><span class="line">www.google.com.		600	IN	A	75.126.150.210</span><br><span class="line"></span><br><span class="line">;; AUTHORITY SECTION:</span><br><span class="line">google.com.		153873	IN	NS	ns2.google.com.</span><br><span class="line">google.com.		153873	IN	NS	ns1.google.com.</span><br><span class="line">google.com.		153873	IN	NS	ns3.google.com.</span><br><span class="line">google.com.		153873	IN	NS	ns4.google.com.</span><br><span class="line"></span><br><span class="line">;; ADDITIONAL SECTION:</span><br><span class="line">ns1.google.com.		340640	IN	A	216.239.32.10</span><br><span class="line">ns1.google.com.		160867	IN	AAAA	2001:4860:4802:32::a</span><br><span class="line">ns2.google.com.		147310	IN	A	216.239.34.10</span><br><span class="line">ns2.google.com.		167153	IN	AAAA	2001:4860:4802:34::a</span><br><span class="line">ns3.google.com.		170088	IN	A	216.239.36.10</span><br><span class="line">ns3.google.com.		343381	IN	AAAA	2001:4860:4802:36::a</span><br><span class="line">ns4.google.com.		342199	IN	A	216.239.38.10</span><br><span class="line">ns4.google.com.		340238	IN	AAAA	2001:4860:4802:38::a</span><br><span class="line"></span><br><span class="line">;; Query time: 3 msec</span><br><span class="line">;; SERVER: 218.85.152.99#53(218.85.152.99)</span><br><span class="line">;; WHEN: Tue Apr 02 11:54:08 CST 2019</span><br><span class="line">;; MSG SIZE  rcvd: 296</span><br></pre></td></tr></table></figure>
+<h2 id="Hook"><a href="#Hook" class="headerlink" title="Hook"></a>Hook</h2><ul>
+<li><p>tcpdump</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">➜  ~ sudo tcpdump -i enp2s0</span><br><span class="line">tcpdump: verbose output suppressed, use -v or -vv for full protocol decode</span><br><span class="line">listening on enp2s0, link-type EN10MB (Ethernet), capture size 262144 bytes</span><br><span class="line">16:03:36.920320 IP 192.168.8.23.32842 &gt; 106.37.75.114.80: Flags [.], ack 1334, win 1134, options [nop,nop,TS val 2465645746 ecr 4170196622], length 0</span><br><span class="line">16:07:25.848706 IP 192.168.8.23.45512 &gt; 203.107.41.32.9015: Flags [P.], seq 858:897, ack 771, win 37440, length 39</span><br><span class="line">15:23:53.248962 IP6 fe80::485c:9c0f:61ce:2886 &gt; ff02::1:ffb6:3f84: ICMP6, neighbor solicitation, who has fe80::32e1:71ff:feb6:3f84, length 32</span><br><span class="line">15:23:53.249199 IP 192.168.8.23.55804 &gt; FJ-DNS.xm.fj.cn.domain: 41679+ PTR? 4.8.f.3.6.b.f.f.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.2.0.f.f.ip6.arpa. (90)</span><br><span class="line">15:23:53.251749 IP FJ-DNS.xm.fj.cn.domain &gt; 192.168.8.23.55804: 41679 NXDomain* 0/1/0 (154)</span><br><span class="line">15:23:53.251809 IP 192.168.8.23.57994 &gt; FJ-DNS.xm.fj.cn.domain: 8140+ PTR? 6.8.8.2.e.c.1.6.f.0.c.9.c.5.8.4.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa. (90)</span><br><span class="line">15:23:53.254241 ARP, Request who-has 192.168.8.250 tell 192.168.8.134, length 46</span><br><span class="line">15:23:53.255081 IP FJ-DNS.xm.fj.cn.domain &gt; 192.168.8.23.57994: 8140 NXDomain* 0/1/0 (139)</span><br><span class="line"></span><br><span class="line"># 指令</span><br><span class="line">tcpdump [-AennqX] [-i 网络接口] [-w 导出文件] [-c 次数] \</span><br><span class="line">                      [-r 导入文件] [过滤规则]</span><br><span class="line">-A： 显示为ASCII码</span><br><span class="line">-e: OSI 二层显示MAC封包</span><br><span class="line">-nn: 解析地址(显示为ip和端口)</span><br><span class="line">-q: 打印简短的信息</span><br><span class="line">-X: 显示16进制及ASCII码</span><br><span class="line">-i: 需要监听的网络接口</span><br><span class="line">-w: 写出存储文件</span><br><span class="line">-r: 读取存储文件</span><br><span class="line">-c: 监听数量</span><br><span class="line">过滤规则: 可以使用 and 和 or 进行组合</span><br><span class="line">    - &apos;host foo&apos;, &apos;host 127.0.0.1&apos; ：监听特定的主机</span><br><span class="line">    - &apos;net 192.168&apos; ：监听特定的网段</span><br><span class="line">    - &apos;src host 127.0.0.1&apos; &apos;dst net 192.168&apos;： 监听特定的来源(src)或目的地(dst)</span><br><span class="line">    - &apos;tcp port 21&apos;：监听特定的协议，如 tcp, udp, arp, ether..</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>15:23:53.248962: 时:分:秒.毫秒</p>
+</li>
+<li>IP: 使用的协议</li>
+<li>192.168.8.23.32842 &gt;: 发起端</li>
+<li>106.37.75.114.80: 接收端</li>
+<li>Flags [.]: 传输标识<ul>
+<li>[.P]: 推送<code>PUSH</code></li>
+</ul>
+</li>
+<li>ack 1334: ack 号</li>
+<li>seq 858:897: 传输资料 858~897 byte</li>
+</ul>
+<h3 id="iptables"><a href="#iptables" class="headerlink" title="iptables"></a>iptables</h3><blockquote>
+<p>访问控制</p>
+</blockquote>
+<h3 id="tc"><a href="#tc" class="headerlink" title="tc"></a>tc</h3><blockquote>
+<p>流量控制  </p>
+</blockquote>
+<h3 id="mtr"><a href="#mtr" class="headerlink" title="mtr"></a>mtr</h3><blockquote>
+<p>显示网络路径的状况</p>
+</blockquote>
+
+            
+    <div class="article-tag">
+        <a class="tag-link" href="/tags/Linux/">Linux</a>, <a class="tag-link" href="/tags/TCP-IP/">TCP/IP</a>
+    </div>
+
+            
+
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://hocg.in/2019/04/01/Linux 下网络相关的命令/" data-id="cle7cq1bq003w94o6bjp27t4y" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+
+        </footer>
+    </div>
+    
+    
+<nav id="article-nav">
+    
+        <a href="/2019/04/18/关于网约车核心业务-推单相关整理/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">上一篇</strong>
+            <div class="article-nav-title">
+                
+                    关于网约车核心业务-推单相关设计整理
+                
+            </div>
+        </a>
+    
+    
+        <a href="/2019/03/23/Elasticsearch 随手记/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">下一篇</strong>
+            <div class="article-nav-title">Elasticsearch 随手记</div>
+        </a>
+    
+</nav>
+
+
+    
+</article>
+
+
+
+    
+        <section id="comments">
+    <div id="valine-thread"></div>
+</section>
+    
+
+</section>
+            
+                
+<aside id="sidebar">
+   
+        <div class="widget-wrap">
+    <h3 class="widget-title">关注我</h3>
+    <div class="widget">
+        <a class="social" href="https://github.com/hocgin" target="_blank"><i class="fa fa-github fa-2x"></i></a>
+        <a class="social" href="https://hocg.in/atom.xml" target="_blank"><i class="fa fa-rss fa-2x"></i></a>
+        <a class="social" href="https://resume.hocg.in/" target="_blank"><span class="fa-2x">简</span></a>
+        <a class="social" href="https://projects.hocg.in/" target="_blank"><i class="fa fa-2x fa-fire"></i></a>
+        <a class="social" href="https://panda.hocg.in/" target="_blank"><i class="fa fa-2x fa-heart"></i></a>
+        <a class="social" href="https://weibo.com/u/2006617153" target="_blank"><i class="fa fa-weibo fa-2x"></i></a>
+        <a class="social" href="https://www.500px.com/hocgin" target="_blank"><i class="fa fa-500px fa-2x"></i></a>
+    </div>
+</div>
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">近期文章</h3>
+        <div class="widget">
+            <ul id="recent-post" class="no-thumbnail">
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <!--<p class="item-category"><a class="article-category-link" href="/categories/Java/">Java</a></p>-->
+                            <p class="item-title fa fa-angle-right"><a href="/2020/12/10/让你3步搞定单点登陆/" class="title">让你3步搞定单点登陆</a></p>
+                            <!--<p class="item-date"><time datetime="2020-12-10T10:28:29.000Z" itemprop="datePublished">2020-12-10</time></p>-->
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <!--<p class="item-category"><a class="article-category-link" href="/categories/Java/">Java</a></p>-->
+                            <p class="item-title fa fa-angle-right"><a href="/2019/05/12/Java 命令工具/" class="title">Java 命令工具</a></p>
+                            <!--<p class="item-date"><time datetime="2019-05-12T19:37:49.000Z" itemprop="datePublished">2019-05-12</time></p>-->
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <!--<p class="item-category"><a class="article-category-link" href="/categories/Web/">Web</a></p>-->
+                            <p class="item-title fa fa-angle-right"><a href="/2019/04/18/关于网约车核心业务-推单相关整理/" class="title">关于网约车核心业务-推单相关设计整理</a></p>
+                            <!--<p class="item-date"><time datetime="2019-04-18T18:20:20.000Z" itemprop="datePublished">2019-04-18</time></p>-->
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <!--<p class="item-category"><a class="article-category-link" href="/categories/Linux/">Linux</a></p>-->
+                            <p class="item-title fa fa-angle-right"><a href="/2019/04/01/Linux 下网络相关的命令/" class="title">Linux 下网络相关的命令</a></p>
+                            <!--<p class="item-date"><time datetime="2019-04-01T08:07:00.000Z" itemprop="datePublished">2019-04-01</time></p>-->
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <!--<p class="item-category"><a class="article-category-link" href="/categories/服务端/">服务端</a></p>-->
+                            <p class="item-title fa fa-angle-right"><a href="/2019/03/23/Elasticsearch 随手记/" class="title">Elasticsearch 随手记</a></p>
+                            <!--<p class="item-date"><time datetime="2019-03-23T13:53:00.000Z" itemprop="datePublished">2019-03-23</time></p>-->
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+    
+        
+<div class="widget-wrap" id="widget-toc">
+    <h3 class="widget-title">
+        文章目录
+    </h3>
+    <div class="widget">
+        <!--toc-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+            <div class="post-toc">
+                <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#🔗"><span class="nav-number">1.</span> <span class="nav-text">🔗</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#net-tools"><span class="nav-number">2.</span> <span class="nav-text">net-tools</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ifconfig"><span class="nav-number">2.1.</span> <span class="nav-text">ifconfig</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#route"><span class="nav-number">2.2.</span> <span class="nav-text">route</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iproute2"><span class="nav-number">3.</span> <span class="nav-text">iproute2</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ip-link"><span class="nav-number">3.1.</span> <span class="nav-text">ip link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ip-addr"><span class="nav-number">3.2.</span> <span class="nav-text">ip addr</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ip-route"><span class="nav-number">3.3.</span> <span class="nav-text">ip route</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网络侦查"><span class="nav-number">4.</span> <span class="nav-text">网络侦查</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ping"><span class="nav-number">4.1.</span> <span class="nav-text">ping</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#traceroute"><span class="nav-number">4.2.</span> <span class="nav-text">traceroute</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#netstat"><span class="nav-number">4.3.</span> <span class="nav-text">netstat</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#host-nslookup-dig"><span class="nav-number">5.</span> <span class="nav-text">host, nslookup, dig</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#host"><span class="nav-number">5.1.</span> <span class="nav-text">host</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nslookup"><span class="nav-number">5.2.</span> <span class="nav-text">nslookup</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#dig"><span class="nav-number">5.3.</span> <span class="nav-text">dig</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hook"><span class="nav-number">6.</span> <span class="nav-text">Hook</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#iptables"><span class="nav-number">6.1.</span> <span class="nav-text">iptables</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tc"><span class="nav-number">6.2.</span> <span class="nav-text">tc</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mtr"><span class="nav-number">6.3.</span> <span class="nav-text">mtr</span></a></li></ol></li></ol>
+            </div>
+        </section>
+        <!--/toc-->
+    </div>
+</div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">归档</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">十二月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">五月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">四月 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">三月 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">二月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">一月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">十二月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">十一月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">七月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">六月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">十月 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">九月 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">七月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">六月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">五月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">九月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">七月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">四月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">3</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">标签云</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/Android/" style="font-size: 15px;">Android</a> <a href="/tags/CI-CD/" style="font-size: 10px;">CI/CD</a> <a href="/tags/CSS3/" style="font-size: 10px;">CSS3</a> <a href="/tags/Chrome/" style="font-size: 10px;">Chrome</a> <a href="/tags/DevOps/" style="font-size: 10px;">DevOps</a> <a href="/tags/Docker/" style="font-size: 10px;">Docker</a> <a href="/tags/ELK/" style="font-size: 10px;">ELK</a> <a href="/tags/Elasticsearch/" style="font-size: 10px;">Elasticsearch</a> <a href="/tags/GitLab/" style="font-size: 10px;">GitLab</a> <a href="/tags/Gnome/" style="font-size: 10px;">Gnome</a> <a href="/tags/Go/" style="font-size: 10px;">Go</a> <a href="/tags/Google/" style="font-size: 10px;">Google</a> <a href="/tags/HTML5/" style="font-size: 15px;">HTML5</a> <a href="/tags/HTTPS/" style="font-size: 10px;">HTTPS</a> <a href="/tags/Hexo/" style="font-size: 11.25px;">Hexo</a> <a href="/tags/IO/" style="font-size: 10px;">IO</a> <a href="/tags/JAVA/" style="font-size: 10px;">JAVA</a> <a href="/tags/JVM/" style="font-size: 12.5px;">JVM</a> <a href="/tags/Java/" style="font-size: 18.75px;">Java</a> <a href="/tags/JavaScript/" style="font-size: 12.5px;">JavaScript</a> <a href="/tags/K8s/" style="font-size: 10px;">K8s</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Mac/" style="font-size: 12.5px;">Mac</a> <a href="/tags/Maven/" style="font-size: 10px;">Maven</a> <a href="/tags/Nexus/" style="font-size: 10px;">Nexus</a> <a href="/tags/Ngrok/" style="font-size: 10px;">Ngrok</a> <a href="/tags/NodeJS/" style="font-size: 12.5px;">NodeJS</a> <a href="/tags/Objective-C/" style="font-size: 10px;">Objective-C</a> <a href="/tags/Oh-My-ZSH/" style="font-size: 10px;">Oh My ZSH</a> <a href="/tags/OpenWrt/" style="font-size: 16.25px;">OpenWrt</a> <a href="/tags/PHP/" style="font-size: 10px;">PHP</a> <a href="/tags/Pjax/" style="font-size: 10px;">Pjax</a> <a href="/tags/React/" style="font-size: 10px;">React</a> <a href="/tags/Redis/" style="font-size: 10px;">Redis</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/Shell/" style="font-size: 11.25px;">Shell</a> <a href="/tags/Spring/" style="font-size: 10px;">Spring</a> <a href="/tags/Spring-Boot/" style="font-size: 10px;">Spring Boot</a> <a href="/tags/SpringBoot/" style="font-size: 10px;">SpringBoot</a> <a href="/tags/TCP-IP/" style="font-size: 10px;">TCP/IP</a> <a href="/tags/Thymeleaf/" style="font-size: 10px;">Thymeleaf</a> <a href="/tags/Tip/" style="font-size: 10px;">Tip</a> <a href="/tags/Tips/" style="font-size: 20px;">Tips</a> <a href="/tags/Ubuntu/" style="font-size: 17.5px;">Ubuntu</a> <a href="/tags/Web/" style="font-size: 10px;">Web</a> <a href="/tags/Wireshark/" style="font-size: 10px;">Wireshark</a> <a href="/tags/前端/" style="font-size: 11.25px;">前端</a> <a href="/tags/图片墙/" style="font-size: 10px;">图片墙</a> <a href="/tags/多线程/" style="font-size: 13.75px;">多线程</a> <a href="/tags/手机/" style="font-size: 10px;">手机</a> <a href="/tags/数据结构/" style="font-size: 10px;">数据结构</a> <a href="/tags/设计思路/" style="font-size: 12.5px;">设计思路</a> <a href="/tags/语法/" style="font-size: 11.25px;">语法</a> <a href="/tags/锁/" style="font-size: 10px;">锁</a> <a href="/tags/问题/" style="font-size: 12.5px;">问题</a>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">友情连接</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="https://blog.lutty.me/" target="_blank">lutty</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+
+            
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            &copy; 2023&nbsp;
+            <i class="fa fa-heartbeat heartbeat" style="color: #F22E3C;"></i>&nbsp;
+            <a class="me" href="https://hocg.in" target="_blank">hocgin</a>.
+            <p>
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>.
+                Theme by <a href="http://github.com/ppoffice" target="_blank">PPOffice</a>.
+                Made by <a href="https://hocg.in">hocgin</a>
+            </p>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//cdn.jsdelivr.net/gh/xcss/valine@v1.1.6/dist/Valine.min.js"></script>
+    <script>
+        new Valine({
+            el: '#valine-thread' ,
+            notify:false,
+            verify:false,
+            app_id: 'UgznLOt1wcUYIgK8LbBRwXOR-gzGzoHsz',
+            app_key: 'hyCCbbO9B8bTXEBe1KEuJ95K',
+            placeholder: '留言一下呗'
+        });
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+<script src="/js/hocgin.js"></script>
+
+    </div>
+    <script>
+        var xlm_wid='13073';
+        var xlm_url='https://www.xianliao.me/';
+    </script>
+    <script type='text/javascript' charset='UTF-8' src='http://www.xianliao.me/embed.js'></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7086639635704454"
+            crossorigin="anonymous"></script>
+</body>
+</html>
