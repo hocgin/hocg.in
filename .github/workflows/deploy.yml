@@ -13,7 +13,7 @@ jobs:
     - name: Checkout Actions
       uses: actions/checkout@v2
 
-    - run: npm i -g hexo && npm install && hexo generate
+    - run: npm i -g hexo@6.3.0 && npm install && hexo generate
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
