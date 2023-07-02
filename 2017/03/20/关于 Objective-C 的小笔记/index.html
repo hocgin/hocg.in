@@ -1,0 +1,650 @@
+<!--
+   _                     _
+  | |__   ___   ___ __ _(_)_ __
+  | '_ \ / _ \ / __/ _` | | '_ \
+  | | | | (_) | (_| (_| | | | | |
+  |_| |_|\___/ \___\__, |_|_| |_|
+                   |___/
+-->
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <meta charset="utf-8">
+    
+    <title>关于 Objective-C 的小笔记 | hocgin (๑`灬´๑)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="之前学 swift3 顺带整理的小笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于 Objective-C 的小笔记">
+<meta property="og:url" content="https://hocg.in/2017/03/20/%E5%85%B3%E4%BA%8E%20Objective-C%20%E7%9A%84%E5%B0%8F%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="hocgin (๑&#96;灬´๑)">
+<meta property="og:description" content="之前学 swift3 顺带整理的小笔记">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://cdn.hocgin.top/%E7%B1%BB%E7%9A%84%E5%AE%9A%E4%B9%89%E8%AF%AD%E6%B3%95.jpg">
+<meta property="og:image" content="http://cdn.hocgin.top/%E5%87%BD%E6%95%B0%E7%9A%84%E5%AE%9A%E4%B9%89%E8%AF%AD%E6%B3%95.jpg">
+<meta property="article:published_time" content="2017-03-20T08:07:00.000Z">
+<meta property="article:modified_time" content="2023-07-02T05:18:54.912Z">
+<meta property="article:author" content="hocgin">
+<meta property="article:tag" content="语法">
+<meta property="article:tag" content="Objective-C">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://cdn.hocgin.top/%E7%B1%BB%E7%9A%84%E5%AE%9A%E4%B9%89%E8%AF%AD%E6%B3%95.jpg">
+    
+
+    
+        <link rel="alternate" href="/" title="hocgin (๑`灬´๑)" type="application/atom+xml" />
+    
+
+    
+        <link rel="icon" href="/favicon.ico" />
+    
+
+    
+<link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/libs/open-sans/styles.css">
+
+    
+<link rel="stylesheet" href="/libs/firacode/fira_code.css">
+
+    
+<link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+<script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+
+    
+    
+        <script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-75635029-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+    
+    
+        <meta name="google-site-verification" content="BIu5FVv0ybO_ceKwrQ-A7znPy4ObYjrCIbLTvcKxqAM" />
+    
+    
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <!--<i class="logo"></i>-->
+                <span class="site-title">hocgin (๑`灬´๑)</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/.">首页</a>
+                
+                    <a class="main-nav-link" href="/archives">归档</a>
+                
+                    <a class="main-nav-link" href="/categories">分类</a>
+                
+                    <a class="main-nav-link" href="/tags">标签</a>
+                
+            </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="想要查找什么..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/.">首页</a></td>
+                
+                    <td><a class="main-nav-link" href="/archives">归档</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories">分类</a></td>
+                
+                    <td><a class="main-nav-link" href="/tags">标签</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+            <section id="main"><article id="post-关于 Objective-C 的小笔记"
+         class="article article-type-post "
+         itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+        <header class="article-header">
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2017/03/20/%E5%85%B3%E4%BA%8E%20Objective-C%20%E7%9A%84%E5%B0%8F%E7%AC%94%E8%AE%B0/">
+            <time datetime="2017-03-20T08:07:00.000Z" itemprop="datePublished">2017-03-20</time>
+        </a>
+    </div>
+
+
+                <div>•</div>
+                
+    <div class="article-category">
+        <a class="article-category-link" href="/categories/Mac/">Mac</a>
+    </div>
+
+            </div>
+            
+    
+        <h1 class="article-title" itemprop="name">
+            关于 Objective-C 的小笔记
+        </h1>
+    
+
+        </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            
+            
+            <p>之前学 <code>swift3</code> 顺带整理的小笔记</p>
+<span id="more"></span>
+<h1 id="Objective-C"><a href="#Objective-C" class="headerlink" title="Objective-C"></a>Objective-C</h1><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><table>
+<thead>
+<tr>
+<th>文件后缀</th>
+<th>文件类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>*.h</code></td>
+<td><strong>头文件</strong>。头文件包含类，类型，函数和常数的声明。</td>
+</tr>
+<tr>
+<td><code>*.m</code></td>
+<td><strong>源代码文件</strong>。这是典型的源代码文件扩展名，可以包含 Objective-C 和 C 代码</td>
+</tr>
+<tr>
+<td><code>*.mm</code></td>
+<td><strong>源代码文件</strong>。带有这种扩展名的源代码文件，除了可以包含Objective-C和C代码以外还可以包含C++代码。仅在你的Objective-C代码中确实需要使用C++类或者特性的时候才用这种扩展名。</td>
+</tr>
+</tbody></table>
+<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><table>
+<thead>
+<tr>
+<th>关键词</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>#import</td>
+<td>引入文件, 并确保相同的文件只会被包含一次</td>
+</tr>
+<tr>
+<td>NSString* say &#x3D; @”Hello World”</td>
+<td>创建NSString对象</td>
+</tr>
+<tr>
+<td>@interface&#x2F;@implementation</td>
+<td>objective-c 一个类是由:定义和实现来构成的, @interface 用于定义, @implementation用于实现细节.</td>
+</tr>
+<tr>
+<td>@property与@synthesize</td>
+<td>@property用于在@interface声明getter与setter函数, @synthesize用于在@implementation实现getter与setter函数, <br/><strong>二者是搭配口味</strong><br/><strong>高版本(Xcode4.5)可省略@synthesize</strong></td>
+</tr>
+</tbody></table>
+<h2 id="基础框架"><a href="#基础框架" class="headerlink" title="基础框架"></a>基础框架</h2><h3 id="lt-Foundation-x2F-Foundation-h-gt"><a href="#lt-Foundation-x2F-Foundation-h-gt" class="headerlink" title="&lt;Foundation&#x2F;Foundation.h&gt;"></a>&lt;Foundation&#x2F;Foundation.h&gt;</h3><ul>
+<li>它包括 NSArray，NSDictionary中的NSSet等扩展数据类型的列表。</li>
+<li>它由一组丰富的操作文件的函数，字符串，等等。</li>
+<li>URL处理它提供的功能，如日期格式，数据处理，错误处理等实用工具</li>
+</ul>
+<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><h3 id="语法速读"><a href="#语法速读" class="headerlink" title="语法速读"></a>语法速读</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">/* 预处理(导包) */</span><br><span class="line">#import &lt;Foundation/Foundation.h&gt;</span><br><span class="line"></span><br><span class="line">/* 定义接口(继承:NSObject) */</span><br><span class="line">@interface SampleClass:NSObject</span><br><span class="line">- (void)sampleMethod;</span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">/* 实现接口(SampleClass) */</span><br><span class="line">@implementation SampleClass</span><br><span class="line"></span><br><span class="line">- (void)sampleMethod&#123;</span><br><span class="line">   NSLog(@&quot;Hello, World!</span><br><span class="line">&quot;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">/* 主函数 */</span><br><span class="line">int main() &#123;</span><br><span class="line">   /* my first program in Objective-C */</span><br><span class="line">   SampleClass *sampleClass = [[SampleClass alloc]init];</span><br><span class="line"></span><br><span class="line">   /* - 调用函数</span><br><span class="line">   C: sampleClass.sampleMethod(args);</span><br><span class="line">   OC: [对象 函数名: 参数]</span><br><span class="line">    */</span><br><span class="line">   [sampleClass sampleMethod: args];</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">   return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="类的语法"><a href="#类的语法" class="headerlink" title="类的语法"></a>类的语法</h3><blockquote>
+<p>类分为: <strong>类的定义(.h)</strong> 和 <strong>类的实现(.m)</strong><br><img src="http://cdn.hocgin.top/%E7%B1%BB%E7%9A%84%E5%AE%9A%E4%B9%89%E8%AF%AD%E6%B3%95.jpg" alt="image"></p>
+</blockquote>
+<h4 id="定义-h"><a href="#定义-h" class="headerlink" title="定义 ( *.h )"></a>定义 ( *.h )</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">@interface MyObject : NSObject</span><br><span class="line">&#123;</span><br><span class="line">    // 此处变量默认为受保护(protected)</span><br><span class="line">    int memberVar1; // 实体变量</span><br><span class="line">    id  memberVar2;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">+(return_type) class_method; // &quot;+&quot; 表示 类方法</span><br><span class="line"></span><br><span class="line">-(return_type) instance_method1; // &quot;-&quot; 表示 实例方法</span><br><span class="line">-(return_type) instance_method2: (int) p1;</span><br><span class="line">// 这里的调用方式为: [obj instance_method3: 1 andPar: 2];</span><br><span class="line">// andPar 相当于外部的另外一个别名</span><br><span class="line">-(return_type) instance_method3: (int) p1 andPar: (int) p2;</span><br><span class="line">@end</span><br></pre></td></tr></table></figure>
+<h4 id="实现-m"><a href="#实现-m" class="headerlink" title="实现 ( *.m )"></a>实现 ( *.m )</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">@implementation MyObject</span><br><span class="line">&#123;</span><br><span class="line">  // 此处变量为私有(private)</span><br><span class="line">  int memberVar3; //私有实体变量</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">+(return_type) class_method &#123;</span><br><span class="line">    .... //method implementation</span><br><span class="line">&#125;</span><br><span class="line">-(return_type) instance_method1 &#123;</span><br><span class="line">     ....</span><br><span class="line">&#125;</span><br><span class="line">-(return_type) instance_method2: (int) p1 &#123;</span><br><span class="line">    ....</span><br><span class="line">&#125;</span><br><span class="line">-(return_type) instance_method3: (int) p1 andPar: (int) p2 &#123;</span><br><span class="line">    ....</span><br><span class="line">&#125;</span><br><span class="line">@end</span><br></pre></td></tr></table></figure>
+<h4 id="创建对象"><a href="#创建对象" class="headerlink" title="创建对象"></a>创建对象</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 注: alloc 与 init 都属于 NSObject 里的函数</span><br><span class="line">MyObject * my = [[MyObject alloc] init];</span><br><span class="line">// 无参构建, 也可采用以下方式 (Objective-C 2.0)</span><br><span class="line">MyObject * my = [MyObject new];</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>Note:</strong> { } 需如文这样标识, 才可表达出准确的语义, 读者自行领悟.</p>
+</blockquote>
+<h3 id="函数语法"><a href="#函数语法" class="headerlink" title="函数语法"></a>函数语法</h3><blockquote>
+<p>函数分为: <strong>类函数</strong> 和 <strong>对象函数</strong><br><img src="http://cdn.hocgin.top/%E5%87%BD%E6%95%B0%E7%9A%84%E5%AE%9A%E4%B9%89%E8%AF%AD%E6%B3%95.jpg" alt="image"></p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">// 如上</span><br><span class="line">// 定义语法: 范围标识 (返回值)函数名:外部形参别名:(参数类型) 形参名 外部形参别名:(参数类型) 形参名</span><br><span class="line">// 注: 第一个 外部形参别名 可省略</span><br><span class="line">- (void)insertObject:(id)anObject atIndex:(NSUInteger) index</span><br><span class="line">+ (void)insertObject:(id)anObject atIndex:(NSUInteger) index</span><br><span class="line"></span><br><span class="line">// 调用</span><br><span class="line">// 对象调用 [对象 函数名: 参数1 外部形参别名: 参数2]</span><br><span class="line">[obj insertObject: arg1 atIndex: arg2]</span><br><span class="line">// 类调用 [类名 函数名: 参数1 外部形参别名: 参数2]</span><br><span class="line">[Object insertObject: arg1 atIndex: arg2]</span><br><span class="line"></span><br><span class="line">// 注:) 类调用 和 对象调用 的形式是一样的</span><br></pre></td></tr></table></figure>
+
+<h3 id="属性语法"><a href="#属性语法" class="headerlink" title="属性语法"></a>属性语法</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line">@interface Person : NSObject</span><br><span class="line">&#123;</span><br><span class="line">/*</span><br><span class="line">相当于 @public 至 @private 之间的属性被暴露出去</span><br><span class="line">可通过实例直接访问, 例如: obj-&gt;name</span><br><span class="line">*/</span><br><span class="line">@public</span><br><span class="line">  NSString *name;</span><br><span class="line">@private</span><br><span class="line">  int age;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/*</span><br><span class="line">  参考: http://justcoding.iteye.com/blog/1444548</span><br><span class="line">  使用范围: @interface, @protocol, @category</span><br><span class="line">  可声明特性:</span><br><span class="line">          读写属性：   （readwrite/readonly）</span><br><span class="line">          setter语意：（assign/retain/copy）</span><br><span class="line">          原子性：    （atomicity/nonatomic）</span><br><span class="line">  使用效果(声明一个setter与getter方法):</span><br><span class="line">    - (NSString*)name;  </span><br><span class="line">    - (void)setName: (NSString*)newName;</span><br><span class="line"> */</span><br><span class="line">@property(copy) NSString *name;</span><br><span class="line">@property(readonly) int age;</span><br><span class="line"></span><br><span class="line">-(id)initWithAge:(int)age;</span><br><span class="line"></span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">@implementation Person</span><br><span class="line">/*</span><br><span class="line">  使用范围: @implementation</span><br><span class="line">  使用效果(自动实现一个setter与getter方法):</span><br><span class="line">    - (NSString*)name &#123;</span><br><span class="line">      return name;</span><br><span class="line">    &#125;  </span><br><span class="line">    - (void)setName: (NSString*)newName &#123;</span><br><span class="line">      name = newName;</span><br><span class="line">    &#125;</span><br><span class="line"> */</span><br><span class="line">@synthesize name;</span><br><span class="line">/* @dynamic 仅仅是告诉编译器这两个方法在运行期会有的，无需产生警告 */</span><br><span class="line">@dynamic age;</span><br><span class="line"></span><br><span class="line">-(id)initWithAge:(int)initAge</span><br><span class="line">&#123;</span><br><span class="line">    age = initAge; // 注意：直接赋给成员变量，而非属性</span><br><span class="line">    return self;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">-(int)age</span><br><span class="line">&#123;</span><br><span class="line">    return 29; // 注意：并非返回真正的年龄</span><br><span class="line">&#125;</span><br><span class="line">@end</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="类或协议的属性可以被动态的读取"><a href="#类或协议的属性可以被动态的读取" class="headerlink" title="类或协议的属性可以被动态的读取"></a>类或协议的属性可以被动态的读取</h4><blockquote>
+<p>类似反射机制 , 略过..</p>
+</blockquote>
+<h3 id="快速枚举"><a href="#快速枚举" class="headerlink" title="快速枚举"></a>快速枚举</h3><blockquote>
+<p>一种省内存的循环遍历 , 略过..</p>
+</blockquote>
+<h3 id="协议语法"><a href="#协议语法" class="headerlink" title="协议语法"></a>协议语法</h3><blockquote>
+<p>类似 Java 中的接口</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">/*定义协议*/</span><br><span class="line">@protocol Locking</span><br><span class="line">- (void)lock;</span><br><span class="line">- (void)unlock;</span><br><span class="line">@end</span><br><span class="line">/*</span><br><span class="line">类的@interface 宣称使用 协议</span><br><span class="line">*/</span><br><span class="line">@interface SomeClass : SomeSuperClass &lt;Locking&gt;</span><br><span class="line">@end</span><br><span class="line">/*</span><br><span class="line">类的@implementation 实现 协议 细节</span><br><span class="line">*/</span><br><span class="line">@implementation SomeClass</span><br><span class="line">- (void)lock &#123;</span><br><span class="line">  // 实现lock方法...</span><br><span class="line">&#125;</span><br><span class="line">- (void)unlock &#123;</span><br><span class="line">  // 实现unlock方法...</span><br><span class="line">&#125;</span><br><span class="line">@end</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="动态类型"><a href="#动态类型" class="headerlink" title="动态类型"></a>动态类型</h3><blockquote>
+<p>id 相当于 Java 中的 Object, 即 任意对象</p>
+</blockquote>
+<h3 id="类别-Category-语法"><a href="#类别-Category-语法" class="headerlink" title="类别 (Category) 语法"></a>类别 (Category) 语法</h3><blockquote>
+<p>分类不仅可以增加类的方法，也可以代替原有的<strong>函数</strong>, <strong>并不能新增变量</strong><br>动态增加和替换函数, 强得一匹</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">/*</span><br><span class="line">  说明: 定义扩展 Integer类 接口, 新增/覆盖 函数 showstars 与 showint</span><br><span class="line">  语法:</span><br><span class="line">    #import &quot;待扩展类接口文件.h&quot;</span><br><span class="line">    @interface 待扩展类(扩展类)</span><br><span class="line">      // 函数定义</span><br><span class="line">    @end</span><br><span class="line">*/</span><br><span class="line">#import &quot;Integer.h&quot;</span><br><span class="line">@interface Integer(Display)</span><br><span class="line">- (id) showstars;</span><br><span class="line">- (id) showint;</span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">/*</span><br><span class="line">  说明: 实现扩展 Integer类 接口, 新增/覆盖 函数 showstars 与 showint</span><br><span class="line">  语法:</span><br><span class="line">    #import &quot;扩展类接口文件.h&quot;</span><br><span class="line">    @implementation 待扩展类(扩展类)</span><br><span class="line">      // 函数实现</span><br><span class="line">    @end</span><br><span class="line">*/</span><br><span class="line">#import &quot;Display.h&quot;</span><br><span class="line">@implementation Integer(Display)</span><br><span class="line">- (id) showstars &#123;</span><br><span class="line">  ..</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (id) showint &#123;</span><br><span class="line">    ..</span><br><span class="line">&#125;</span><br><span class="line">@end</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><strong>NOTE:</strong> 使用时需#import 待扩展类与扩展类的接口文件**(.h)**</p>
+<h2 id="划重点"><a href="#划重点" class="headerlink" title="划重点"></a>划重点</h2><ul>
+<li><code>NSString*</code>&#x2F;<code>NSObject*</code>等 表示对象</li>
+<li><code>self</code> 某种程度相当于 <code>this</code></li>
+<li>nil 基本上等同于 NULL</li>
+<li>调用属性 self-&gt;name</li>
+<li>一般(.h 存放**@interface文件**, .m 存放**@implementation文件**). 进行#import时, 只需#import .h文件</li>
+</ul>
+
+            
+    <div class="article-tag">
+        <a class="tag-link-link" href="/tags/Objective-C/" rel="tag">Objective-C</a>, <a class="tag-link-link" href="/tags/%E8%AF%AD%E6%B3%95/" rel="tag">语法</a>
+    </div>
+
+            
+
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://hocg.in/2017/03/20/%E5%85%B3%E4%BA%8E%20Objective-C%20%E7%9A%84%E5%B0%8F%E7%AC%94%E8%AE%B0/" data-id="cljkzfj250034c2ok3pgwhiii" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+
+        </footer>
+    </div>
+    
+    
+<nav id="article-nav">
+    
+        <a href="/2017/03/26/Vue.js-%E9%A1%B9%E7%9B%AE%E5%AE%9E%E8%B7%B5/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">上一篇</strong>
+            <div class="article-nav-title">
+                
+                    Vue 项目实践 - 持续更新
+                
+            </div>
+        </a>
+    
+    
+        <a href="/2017/03/01/PHP-laravel-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">下一篇</strong>
+            <div class="article-nav-title">PHP Laravel 快速入门</div>
+        </a>
+    
+</nav>
+
+
+    
+</article>
+
+
+
+    
+        <section id="comments">
+    <div id="valine-thread"></div>
+</section>
+    
+
+</section>
+            
+                
+<aside id="sidebar">
+   
+        <div class="widget-wrap">
+    <h3 class="widget-title">关注我</h3>
+    <div class="widget">
+        <a class="social" href="https://github.com/hocgin" target="_blank"><i class="fa fa-github fa-2x"></i></a>
+        <a class="social" href="https://hocg.in/atom.xml" target="_blank"><i class="fa fa-rss fa-2x"></i></a>
+        <a class="social" href="https://resume.hocg.in/" target="_blank"><span class="fa-2x">简</span></a>
+        <a class="social" href="https://projects.hocg.in/" target="_blank"><i class="fa fa-2x fa-fire"></i></a>
+        <a class="social" href="https://panda.hocg.in/" target="_blank"><i class="fa fa-2x fa-heart"></i></a>
+        <a class="social" href="https://weibo.com/u/2006617153" target="_blank"><i class="fa fa-weibo fa-2x"></i></a>
+        <a class="social" href="https://www.500px.com/hocgin" target="_blank"><i class="fa fa-500px fa-2x"></i></a>
+    </div>
+</div>
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">近期文章</h3>
+        <div class="widget">
+            <ul id="recent-post" class="no-thumbnail">
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <!--<p class="item-category"><a class="article-category-link" href="/categories/Java/">Java</a></p>-->
+                            <p class="item-title fa fa-angle-right"><a href="/2020/12/10/%E8%AE%A9%E4%BD%A03%E6%AD%A5%E6%90%9E%E5%AE%9A%E5%8D%95%E7%82%B9%E7%99%BB%E9%99%86/" class="title">让你3步搞定单点登陆</a></p>
+                            <!--<p class="item-date"><time datetime="2020-12-10T10:28:29.000Z" itemprop="datePublished">2020-12-10</time></p>-->
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <!--<p class="item-category"><a class="article-category-link" href="/categories/Java/">Java</a></p>-->
+                            <p class="item-title fa fa-angle-right"><a href="/2019/05/12/Java%20%E5%91%BD%E4%BB%A4%E5%B7%A5%E5%85%B7/" class="title">Java 命令工具</a></p>
+                            <!--<p class="item-date"><time datetime="2019-05-12T19:37:49.000Z" itemprop="datePublished">2019-05-12</time></p>-->
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <!--<p class="item-category"><a class="article-category-link" href="/categories/Web/">Web</a></p>-->
+                            <p class="item-title fa fa-angle-right"><a href="/2019/04/18/%E5%85%B3%E4%BA%8E%E7%BD%91%E7%BA%A6%E8%BD%A6%E6%A0%B8%E5%BF%83%E4%B8%9A%E5%8A%A1-%E6%8E%A8%E5%8D%95%E7%9B%B8%E5%85%B3%E6%95%B4%E7%90%86/" class="title">关于网约车核心业务-推单相关设计整理</a></p>
+                            <!--<p class="item-date"><time datetime="2019-04-18T18:20:20.000Z" itemprop="datePublished">2019-04-18</time></p>-->
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <!--<p class="item-category"><a class="article-category-link" href="/categories/Linux/">Linux</a></p>-->
+                            <p class="item-title fa fa-angle-right"><a href="/2019/04/01/Linux%20%E4%B8%8B%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E7%9A%84%E5%91%BD%E4%BB%A4/" class="title">Linux 下网络相关的命令</a></p>
+                            <!--<p class="item-date"><time datetime="2019-04-01T08:07:00.000Z" itemprop="datePublished">2019-04-01</time></p>-->
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <!--<p class="item-category"><a class="article-category-link" href="/categories/%E6%9C%8D%E5%8A%A1%E7%AB%AF/">服务端</a></p>-->
+                            <p class="item-title fa fa-angle-right"><a href="/2019/03/23/Elasticsearch%20%E9%9A%8F%E6%89%8B%E8%AE%B0/" class="title">Elasticsearch 随手记</a></p>
+                            <!--<p class="item-date"><time datetime="2019-03-23T13:53:00.000Z" itemprop="datePublished">2019-03-23</time></p>-->
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+    
+        
+<div class="widget-wrap" id="widget-toc">
+    <h3 class="widget-title">
+        文章目录
+    </h3>
+    <div class="widget">
+        <!--toc-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+            <div class="post-toc">
+                <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Objective-C"><span class="nav-number">1.</span> <span class="nav-text">Objective-C</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%8B%E7%BB%8D"><span class="nav-number">1.1.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E"><span class="nav-number">1.2.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E6%A1%86%E6%9E%B6"><span class="nav-number">1.3.</span> <span class="nav-text">基础框架</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#lt-Foundation-x2F-Foundation-h-gt"><span class="nav-number">1.3.1.</span> <span class="nav-text">&lt;Foundation&#x2F;Foundation.h&gt;</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%AD%E6%B3%95"><span class="nav-number">1.4.</span> <span class="nav-text">语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%AD%E6%B3%95%E9%80%9F%E8%AF%BB"><span class="nav-number">1.4.1.</span> <span class="nav-text">语法速读</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B1%BB%E7%9A%84%E8%AF%AD%E6%B3%95"><span class="nav-number">1.4.2.</span> <span class="nav-text">类的语法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89-h"><span class="nav-number">1.4.2.1.</span> <span class="nav-text">定义 ( *.h )</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0-m"><span class="nav-number">1.4.2.2.</span> <span class="nav-text">实现 ( *.m )</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1"><span class="nav-number">1.4.2.3.</span> <span class="nav-text">创建对象</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E8%AF%AD%E6%B3%95"><span class="nav-number">1.4.3.</span> <span class="nav-text">函数语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B1%9E%E6%80%A7%E8%AF%AD%E6%B3%95"><span class="nav-number">1.4.4.</span> <span class="nav-text">属性语法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%B1%BB%E6%88%96%E5%8D%8F%E8%AE%AE%E7%9A%84%E5%B1%9E%E6%80%A7%E5%8F%AF%E4%BB%A5%E8%A2%AB%E5%8A%A8%E6%80%81%E7%9A%84%E8%AF%BB%E5%8F%96"><span class="nav-number">1.4.4.1.</span> <span class="nav-text">类或协议的属性可以被动态的读取</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BF%AB%E9%80%9F%E6%9E%9A%E4%B8%BE"><span class="nav-number">1.4.5.</span> <span class="nav-text">快速枚举</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%8F%E8%AE%AE%E8%AF%AD%E6%B3%95"><span class="nav-number">1.4.6.</span> <span class="nav-text">协议语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%A8%E6%80%81%E7%B1%BB%E5%9E%8B"><span class="nav-number">1.4.7.</span> <span class="nav-text">动态类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B1%BB%E5%88%AB-Category-%E8%AF%AD%E6%B3%95"><span class="nav-number">1.4.8.</span> <span class="nav-text">类别 (Category) 语法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%92%E9%87%8D%E7%82%B9"><span class="nav-number">1.5.</span> <span class="nav-text">划重点</span></a></li></ol></li></ol>
+            </div>
+        </section>
+        <!--/toc-->
+    </div>
+</div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">归档</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">十二月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">五月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">四月 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">三月 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">二月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">一月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">十二月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">十一月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">七月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">六月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">十月 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">九月 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">七月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">六月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">五月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">九月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">七月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">四月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">3</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">标签云</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/Android/" style="font-size: 15px;">Android</a> <a href="/tags/CI-CD/" style="font-size: 10px;">CI/CD</a> <a href="/tags/CSS3/" style="font-size: 10px;">CSS3</a> <a href="/tags/Chrome/" style="font-size: 10px;">Chrome</a> <a href="/tags/DevOps/" style="font-size: 10px;">DevOps</a> <a href="/tags/Docker/" style="font-size: 10px;">Docker</a> <a href="/tags/ELK/" style="font-size: 10px;">ELK</a> <a href="/tags/Elasticsearch/" style="font-size: 10px;">Elasticsearch</a> <a href="/tags/GitLab/" style="font-size: 10px;">GitLab</a> <a href="/tags/Gnome/" style="font-size: 10px;">Gnome</a> <a href="/tags/Go/" style="font-size: 10px;">Go</a> <a href="/tags/Google/" style="font-size: 10px;">Google</a> <a href="/tags/HTML5/" style="font-size: 15px;">HTML5</a> <a href="/tags/HTTPS/" style="font-size: 10px;">HTTPS</a> <a href="/tags/Hexo/" style="font-size: 11.25px;">Hexo</a> <a href="/tags/IO/" style="font-size: 10px;">IO</a> <a href="/tags/JAVA/" style="font-size: 10px;">JAVA</a> <a href="/tags/JVM/" style="font-size: 12.5px;">JVM</a> <a href="/tags/Java/" style="font-size: 18.75px;">Java</a> <a href="/tags/JavaScript/" style="font-size: 12.5px;">JavaScript</a> <a href="/tags/K8s/" style="font-size: 10px;">K8s</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Mac/" style="font-size: 12.5px;">Mac</a> <a href="/tags/Maven/" style="font-size: 10px;">Maven</a> <a href="/tags/Nexus/" style="font-size: 10px;">Nexus</a> <a href="/tags/Ngrok/" style="font-size: 10px;">Ngrok</a> <a href="/tags/NodeJS/" style="font-size: 12.5px;">NodeJS</a> <a href="/tags/Objective-C/" style="font-size: 10px;">Objective-C</a> <a href="/tags/Oh-My-ZSH/" style="font-size: 10px;">Oh My ZSH</a> <a href="/tags/OpenWrt/" style="font-size: 16.25px;">OpenWrt</a> <a href="/tags/PHP/" style="font-size: 10px;">PHP</a> <a href="/tags/Pjax/" style="font-size: 10px;">Pjax</a> <a href="/tags/React/" style="font-size: 10px;">React</a> <a href="/tags/Redis/" style="font-size: 10px;">Redis</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/Shell/" style="font-size: 11.25px;">Shell</a> <a href="/tags/Spring/" style="font-size: 10px;">Spring</a> <a href="/tags/Spring-Boot/" style="font-size: 10px;">Spring Boot</a> <a href="/tags/SpringBoot/" style="font-size: 10px;">SpringBoot</a> <a href="/tags/TCP-IP/" style="font-size: 10px;">TCP/IP</a> <a href="/tags/Thymeleaf/" style="font-size: 10px;">Thymeleaf</a> <a href="/tags/Tip/" style="font-size: 10px;">Tip</a> <a href="/tags/Tips/" style="font-size: 20px;">Tips</a> <a href="/tags/Ubuntu/" style="font-size: 17.5px;">Ubuntu</a> <a href="/tags/Web/" style="font-size: 10px;">Web</a> <a href="/tags/Wireshark/" style="font-size: 10px;">Wireshark</a> <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 11.25px;">前端</a> <a href="/tags/%E5%9B%BE%E7%89%87%E5%A2%99/" style="font-size: 10px;">图片墙</a> <a href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" style="font-size: 13.75px;">多线程</a> <a href="/tags/%E6%89%8B%E6%9C%BA/" style="font-size: 10px;">手机</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 10px;">数据结构</a> <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%80%9D%E8%B7%AF/" style="font-size: 12.5px;">设计思路</a> <a href="/tags/%E8%AF%AD%E6%B3%95/" style="font-size: 11.25px;">语法</a> <a href="/tags/%E9%94%81/" style="font-size: 10px;">锁</a> <a href="/tags/%E9%97%AE%E9%A2%98/" style="font-size: 12.5px;">问题</a>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">友情连接</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="https://blog.lutty.me/" target="_blank">lutty</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+
+            
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            &copy; 2023&nbsp;
+            <i class="fa fa-heartbeat heartbeat" style="color: #F22E3C;"></i>&nbsp;
+            <a class="me" href="https://hocg.in" target="_blank">hocgin</a>.
+            <p>
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>.
+                Theme by <a href="http://github.com/ppoffice" target="_blank">PPOffice</a>.
+                Made by <a href="https://hocg.in">hocgin</a>
+            </p>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//cdn.jsdelivr.net/gh/xcss/valine@v1.1.6/dist/Valine.min.js"></script>
+    <script>
+        new Valine({
+            el: '#valine-thread' ,
+            notify:false,
+            verify:false,
+            app_id: 'UgznLOt1wcUYIgK8LbBRwXOR-gzGzoHsz',
+            app_key: 'hyCCbbO9B8bTXEBe1KEuJ95K',
+            placeholder: '留言一下呗'
+        });
+    </script>
+
+
+
+
+    
+        
+<script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-share.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-video.min.js"></script>
+
+    
+    
+        
+<script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+
+    
+    
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+<script src="/js/hocgin.js"></script>
+
+
+    </div>
+    <script>
+        var xlm_wid='13073';
+        var xlm_url='https://www.xianliao.me/';
+    </script>
+    <script type='text/javascript' charset='UTF-8' src='http://www.xianliao.me/embed.js'></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7086639635704454"
+            crossorigin="anonymous"></script>
+</body>
+</html>
