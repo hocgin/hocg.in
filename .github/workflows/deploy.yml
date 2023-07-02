@@ -13,11 +13,10 @@ jobs:
     - name: Checkout Actions
       uses: actions/checkout@v2
 
-    - name: Push
-      uses: JamesIves/github-pages-deploy-action@releases/v2
-      env:
-        ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BASE_BRANCH: master
-        BRANCH: gh-pages
-        FOLDER: public
-        BUILD_SCRIPT: npm i -g hexo && npm install && hexo generate
+    - run: npm i -g hexo && npm install && hexo generate
+
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./public
